@@ -1,0 +1,1133 @@
+timestamp 1643593061
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use contact_17 contact_17_0 1 0 8526 0 1 1239
+use contact_17 contact_17_1 1 0 6310 0 1 3400
+use port_address port_address_0 1 0 0 0 1 3880
+use port_data port_data_0 1 0 6688 0 1 0
+use replica_bitcell_array replica_bitcell_array_0 1 0 6688 0 1 3880
+node "vdd_uq0" 0 50.28 8407 332 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd" 0 50.28 7629 332 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq1" 0 50.28 6851 332 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq2" 0 50.28 13358 1582 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq3" 0 50.28 12898 1582 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq4" 0 50.28 11802 1582 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq5" 0 50.28 11342 1582 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq0" 0 50.28 13358 2528 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd" 0 50.28 12898 2528 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq1" 0 50.28 11802 2528 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq2" 0 50.28 11342 2528 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq6" 0 50.28 7785 2892 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq7" 0 50.28 7007 2892 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq3" 0 50.28 7785 3724 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq4" 0 50.28 7007 3724 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq5" 0 50.28 6368 3850 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq6" 0 50.28 5164 3850 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq7" 0 50.28 1700 3850 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq8" 0 50.28 828 3850 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq8" 0 50.28 6368 5388 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq9" 0 50.28 5164 5364 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq10" 0 50.28 1700 5390 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq11" 0 50.28 828 5390 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq9" 0 50.28 6368 6926 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq10" 0 50.28 5164 6878 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq11" 0 50.28 1700 6930 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq12" 0 50.28 828 6930 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq12" 0 50.28 5164 8392 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq13" 0 50.28 6368 8464 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq14" 0 50.28 1700 8470 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq15" 0 50.28 828 8470 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq13" 0 50.28 5164 9906 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq14" 0 50.28 6368 10002 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq15" 0 50.28 1700 10010 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq16" 0 50.28 828 10010 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq16" 0 50.28 5164 11420 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq17" 0 50.28 6368 11540 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq17" 0 50.28 5164 12934 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq18" 0 50.28 6368 13078 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq19" 0 50.28 1700 13086 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq20" 0 50.28 828 13086 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq18" 0 50.28 5164 14448 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq19" 0 50.28 6368 14616 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq20" 0 50.28 1700 14626 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq21" 0 50.28 828 14626 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq21" 0 50.28 5164 15962 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq22" 0 50.28 6368 16154 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq23" 0 50.28 1700 16166 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq24" 0 50.28 828 16166 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq22" 0 50.28 5164 17476 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq23" 0 50.28 6368 17692 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq24" 0 50.28 1700 17706 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq25" 0 50.28 828 17706 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq25" 0 50.28 5164 18990 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq26" 0 50.28 6368 19230 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq27" 0 50.28 1700 19246 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq28" 0 50.28 828 19246 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq26" 0 50.28 5164 20504 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq27" 0 50.28 6368 20768 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq29" 0 50.28 5164 22018 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq30" 0 50.28 6368 22306 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq31" 0 50.28 1700 22322 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq32" 0 50.28 828 22322 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq28" 0 50.28 5164 23532 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq29" 0 50.28 6368 23844 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq30" 0 50.28 1700 23862 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq31" 0 50.28 828 23862 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq33" 0 50.28 5164 25046 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq34" 0 50.28 6368 25382 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq35" 0 50.28 1700 25402 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq36" 0 50.28 828 25402 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq32" 0 50.28 5164 26560 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq33" 0 50.28 6368 26920 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq34" 0 50.28 1700 26942 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "vdd_uq35" 0 50.28 828 26942 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq37" 0 50.28 5164 28074 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq38" 0 50.28 6368 28458 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq39" 0 50.28 1700 28482 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "gnd_uq40" 0 50.28 828 28482 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3600 240 0 0 0 0 0 0
+node "dout1_1" 1 112.736 11898 2352 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6720 536 0 0 0 0 0 0 0 0
+equiv "dout1_1" "dout0_1"
+node "dout1_0" 1 112.736 11438 2352 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6720 536 0 0 0 0 0 0 0 0
+equiv "dout1_0" "dout0_0"
+node "din0_1" 0 34.2626 7662 3496 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din0_0" 0 34.2626 6884 3496 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "wl_en" 0 23.2932 5194 28474 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 784 112 0 0 0 0 0 0 0 0
+node "addr5" 0 10403.7 438 3880 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 689696 49320 0 0 0 0 0 0 0 0
+node "addr4" 0 10403.7 354 3880 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 689696 49320 0 0 0 0 0 0 0 0
+node "addr3" 0 10403.7 270 3880 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 689696 49320 0 0 0 0 0 0 0 0
+node "addr2" 0 10403.7 186 3880 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 689696 49320 0 0 0 0 0 0 0 0
+node "addr1" 0 10403.7 102 3880 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 689696 49320 0 0 0 0 0 0 0 0
+node "addr0" 0 10403.7 18 3880 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 689696 49320 0 0 0 0 0 0 0 0
+node "p_en_bar" 3 12412.9 7855 1251 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 22116 1574 802720 57352 0 0 0 0 0 0 0 0
+node "w_en" 22 2101.1 6310 3400 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 32784 2336 107536 7696 0 0 0 0 0 0 0 0
+node "m1_6398_4532#" 1 139.084 6398 4532 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8344 652 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_4658#" 1 139.084 6398 4658 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8344 652 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_4884#" 1 139.084 6398 4884 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8344 652 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_5924#" 1 140.796 6398 5924 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8456 660 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_6150#" 1 140.796 6398 6150 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8456 660 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_6276#" 1 140.796 6398 6276 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8456 660 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_7608#" 1 137.371 6398 7608 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8232 644 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_7734#" 1 137.371 6398 7734 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8232 644 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_7960#" 1 137.371 6398 7960 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8232 644 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_9000#" 1 142.509 6398 9000 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8568 668 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_9226#" 1 142.509 6398 9226 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8568 668 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_9352#" 1 142.509 6398 9352 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8568 668 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_10684#" 1 135.658 6398 10684 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8120 636 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_10810#" 1 135.658 6398 10810 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8120 636 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_11036#" 1 135.658 6398 11036 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8120 636 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_12076#" 1 144.222 6398 12076 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8680 676 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_12302#" 1 144.222 6398 12302 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8680 676 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_12428#" 1 144.222 6398 12428 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8680 676 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_13760#" 1 137.371 6398 13760 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8232 644 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_13886#" 1 137.371 6398 13886 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8232 644 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_14112#" 1 137.371 6398 14112 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8232 644 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_15152#" 1 145.935 6398 15152 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8792 684 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_15378#" 1 145.935 6398 15378 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8792 684 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_15504#" 1 145.935 6398 15504 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8792 684 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_16836#" 1 139.084 6398 16836 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8344 652 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_16962#" 1 139.084 6398 16962 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8344 652 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_17188#" 1 139.084 6398 17188 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8344 652 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_18228#" 1 147.648 6398 18228 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8904 692 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_18454#" 1 147.648 6398 18454 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8904 692 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_18580#" 1 147.648 6398 18580 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8904 692 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_19912#" 1 140.796 6398 19912 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8456 660 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_20038#" 1 140.796 6398 20038 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8456 660 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_20264#" 1 140.796 6398 20264 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8456 660 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_21304#" 1 149.36 6398 21304 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9016 700 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_21530#" 1 149.36 6398 21530 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9016 700 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_21656#" 1 149.36 6398 21656 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9016 700 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_22988#" 1 142.509 6398 22988 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8568 668 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_23114#" 1 142.509 6398 23114 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8568 668 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_23340#" 1 142.509 6398 23340 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8568 668 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_24380#" 1 151.073 6398 24380 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9128 708 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_24606#" 1 151.073 6398 24606 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9128 708 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_24732#" 1 151.073 6398 24732 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9128 708 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_26064#" 1 144.222 6398 26064 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8680 676 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_26190#" 1 144.222 6398 26190 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8680 676 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_26416#" 1 144.222 6398 26416 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8680 676 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_27456#" 1 152.786 6398 27456 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9240 716 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_27682#" 1 152.786 6398 27682 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9240 716 0 0 0 0 0 0 0 0 0 0
+node "m1_6398_27808#" 1 152.786 6398 27808 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9240 716 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "m1_6398_21304#" "m1_6398_21656#" 40.704
+cap "m1_6398_15378#" "m1_6398_15152#" 66.7868
+cap "m1_6398_18228#" "m1_6398_18454#" 66.9572
+cap "m1_6398_27808#" "m1_6398_27682#" 142.03
+cap "m1_6398_21304#" "m1_6398_21530#" 67.1358
+cap "addr5" "addr4" 21992.9
+cap "addr3" "addr4" 21992.9
+cap "addr0" "addr2" 8797.14
+cap "m1_6398_18580#" "m1_6398_18454#" 138.306
+cap "m1_6398_9352#" "m1_6398_9000#" 40.4798
+cap "m1_6398_11036#" "m1_6398_10810#" 65.9091
+cap "addr0" "addr5" 3141.84
+cap "addr3" "addr0" 5498.21
+cap "m1_6398_11036#" "m1_6398_10684#" 40.2778
+cap "addr1" "addr2" 21992.9
+cap "m1_6398_20264#" "m1_6398_20038#" 66.3196
+cap "m1_6398_5924#" "m1_6398_6150#" 66.3196
+cap "m1_6398_12076#" "m1_6398_12302#" 66.6241
+cap "m1_6398_27808#" "m1_6398_27456#" 40.8255
+cap "m1_6398_7608#" "m1_6398_7960#" 40.3264
+cap "m1_6398_4658#" "m1_6398_4884#" 66.177
+cap "m1_6398_6150#" "m1_6398_6276#" 134.957
+cap "m1_6398_15504#" "m1_6398_15152#" 40.5889
+cap "addr5" "addr1" 3998.7
+cap "addr3" "addr1" 8797.14
+cap "m1_6398_26064#" "m1_6398_26190#" 136.46
+cap "m1_6398_27682#" "m1_6398_27456#" 67.5201
+cap "m1_6398_7734#" "m1_6398_7960#" 66.0403
+cap "m1_6398_23340#" "m1_6398_23114#" 66.4685
+cap "m1_6398_24732#" "m1_6398_24606#" 140.629
+cap "m1_6398_4532#" "m1_6398_4658#" 134.306
+cap "m1_6398_16836#" "m1_6398_17188#" 40.3762
+cap "addr0" "addr4" 3998.7
+cap "m1_6398_22988#" "m1_6398_23340#" 40.4798
+cap "m1_6398_26416#" "m1_6398_26190#" 66.6241
+cap "m1_6398_16962#" "m1_6398_17188#" 66.177
+cap "m1_6398_20264#" "m1_6398_19912#" 40.4274
+cap "addr1" "addr4" 5498.21
+cap "m1_6398_10684#" "m1_6398_10810#" 133.163
+cap "m1_6398_12076#" "m1_6398_12428#" 40.5336
+cap "m1_6398_18580#" "m1_6398_18228#" 40.6456
+cap "m1_6398_26064#" "m1_6398_26416#" 40.5336
+cap "m1_6398_5924#" "m1_6398_6276#" 40.4274
+cap "addr5" "addr2" 5498.21
+cap "m1_6398_15504#" "m1_6398_15378#" 137.333
+cap "addr3" "addr2" 21992.9
+cap "m1_6398_24732#" "m1_6398_24380#" 40.7639
+cap "m1_6398_9226#" "m1_6398_9000#" 66.4685
+cap "m1_6398_19912#" "m1_6398_20038#" 134.957
+cap "m1_6398_21530#" "m1_6398_21656#" 139.397
+cap "m1_6398_9226#" "m1_6398_9352#" 135.672
+cap "addr0" "addr1" 21992.9
+cap "m1_6398_13760#" "m1_6398_14112#" 40.3264
+cap "m1_6398_12302#" "m1_6398_12428#" 136.46
+cap "m1_6398_13886#" "m1_6398_14112#" 66.0403
+cap "addr3" "addr5" 8797.14
+cap "m1_6398_7608#" "m1_6398_7734#" 133.71
+cap "m1_6398_13886#" "m1_6398_13760#" 133.71
+cap "m1_6398_16836#" "m1_6398_16962#" 134.306
+cap "m1_6398_22988#" "m1_6398_23114#" 135.672
+cap "m1_6398_4532#" "m1_6398_4884#" 40.3762
+cap "addr4" "addr2" 8797.14
+cap "m1_6398_24380#" "m1_6398_24606#" 67.3232
+cap "port_data_0/rbl0_0" "w_en" 13.0326
+subcap "p_en_bar" -11786.6
+cap "port_data_0/precharge_array_multiport_0/rbl0_2" "port_data_0/p_en_bar" 112.527
+cap "port_data_0/precharge_array_multiport_0/rbl1_2" "port_data_0/precharge_array_multiport_0/rbl0_2" 112.527
+cap "port_data_0/precharge_array_multiport_0/rbl1_2" "vdd_uq0" 90.4162
+subcap "vdd_uq4" -423
+subcap "vdd_uq5" -423
+subcap "vdd_uq2" -423
+subcap "vdd_uq3" -423
+subcap "vdd_uq6" -652.435
+subcap "p_en_bar" -12132.8
+subcap "vdd_uq5" -262.546
+subcap "gnd_uq2" -126.372
+subcap "dout1_0" -498.438
+subcap "vdd_uq3" -802.642
+subcap "gnd" -41.6073
+subcap "gnd_uq1" -41.6073
+subcap "gnd_uq2" -41.6073
+subcap "addr5" -10263
+subcap "addr4" -10263
+subcap "addr3" -10263
+subcap "addr2" -10263
+subcap "addr1" -10263
+subcap "addr0" -10551.3
+cap "port_address_0/addr5" "port_address_0/addr2" -71.4286
+cap "port_address_0/addr5" "port_address_0/addr4" -285.714
+cap "port_address_0/addr5" "port_address_0/addr1" -51.9481
+cap "port_address_0/addr2" "port_address_0/addr3" -285.714
+cap "port_address_0/addr1" "port_address_0/addr3" -114.286
+cap "port_address_0/addr4" "port_address_0/addr3" -285.714
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/pinv_1/nmos_m1_w0_420_sli_dli_da_p_0/G" "port_address_0/addr5" -40.8163
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/pinv_1/nmos_m1_w0_420_sli_dli_da_p_0/G" "port_address_0/addr3" -71.4286
+cap "port_address_0/addr2" "port_address_0/addr1" -285.714
+cap "port_address_0/addr2" "port_address_0/addr4" -114.286
+cap "port_address_0/addr4" "port_address_0/addr1" -71.4286
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/pinv_1/nmos_m1_w0_420_sli_dli_da_p_0/G" "port_address_0/addr2" -114.286
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/pinv_1/nmos_m1_w0_420_sli_dli_da_p_0/G" "port_address_0/addr4" -51.9481
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/pinv_1/nmos_m1_w0_420_sli_dli_da_p_0/G" "port_address_0/addr1" -285.714
+cap "port_address_0/addr5" "port_address_0/addr3" -114.286
+subcap "w_en" -1271.45
+cap "port_data_0/write_driver_array_0/write_driver_multiport_1/net1" "gnd_uq4" 8.93622
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/qbar" "gnd_uq4" 4.30992
+cap "port_data_0/write_driver_array_0/write_driver_multiport_1/en" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/q" 1.55639
+cap "gnd_uq4" "port_data_0/write_driver_array_0/write_driver_multiport_1/en" 13.2056
+cap "gnd_uq4" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/q" 4.71429
+cap "gnd_uq4" "din0_0" 11.3741
+cap "gnd_uq4" "port_data_0/write_driver_array_0/write_driver_multiport_1/enb" 17.0333
+cap "port_data_0/write_driver_array_0/write_driver_multiport_1/net1" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/q" 2.49057
+cap "gnd_uq4" "port_address_0/wordline_driver_array_0/wordline_driver_cell_15/rwl1" 1.09392
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/rbl0" "din0_0" 4.00975
+subcap "din0_0" -123.639
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_15/rbl0" "din0_1" 4.00975
+cap "gnd_uq3" "port_data_0/write_driver_array_0/write_driver_multiport_0/enb" 17.0333
+cap "gnd_uq3" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_15/qbar" 33.6848
+cap "gnd_uq3" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/q" 10.5743
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_15/wbl0" "port_data_0/write_driver_array_0/wbl0_1" 29.2381
+cap "port_data_0/write_driver_array_0/write_driver_multiport_0/net1" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_15/q" 3.5283
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_15/q" "port_data_0/w_en" 1.55639
+cap "port_data_0/write_driver_array_0/write_driver_multiport_1/net1" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/q" 1.03774
+cap "gnd_uq3" "port_data_0/write_driver_array_0/write_driver_multiport_1/net1" 1.73684
+cap "gnd_uq3" "port_data_0/write_driver_array_0/wbl0_1" 18.0784
+cap "gnd_uq3" "port_data_0/wbl0_0" 18.0784
+cap "gnd_uq3" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_15/q" 15.2886
+cap "gnd_uq3" "din0_1" 11.3741
+cap "gnd_uq3" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/qbar" 29.3749
+cap "port_data_0/wbl0_0" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/wbl0" 29.2381
+cap "gnd_uq3" "port_data_0/write_driver_array_0/write_driver_multiport_0/net1" 10.6731
+cap "gnd_uq3" "port_data_0/w_en" 69.8918
+subcap "gnd_uq0" -620.766
+subcap "gnd" -620.766
+subcap "addr5" -9824.87
+subcap "addr4" -9824.87
+subcap "addr3" -9824.87
+subcap "addr2" -9824.87
+subcap "addr1" -9824.87
+subcap "addr0" -8189.51
+cap "port_address_0/addr5" "port_address_0/addr4" -1250
+cap "port_address_0/addr5" "port_address_0/addr3" -500
+cap "port_address_0/addr4" "port_address_0/addr2" -500
+cap "port_address_0/addr2" "port_address_0/addr3" -1250
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/in_0" "port_address_0/addr1" -1250
+cap "port_address_0/addr4" "port_address_0/addr3" -1250
+cap "port_address_0/addr5" "port_address_0/addr1" -227.273
+cap "port_address_0/addr2" "port_address_0/addr1" -1250
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/in_0" "port_address_0/addr5" -178.571
+cap "port_address_0/addr4" "port_address_0/addr1" -312.5
+cap "port_address_0/addr1" "port_address_0/addr3" -500
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/in_0" "port_address_0/addr2" -500
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/in_0" "port_address_0/addr4" -227.273
+cap "port_address_0/addr5" "port_address_0/addr2" -312.5
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/in_0" "port_address_0/addr3" -312.5
+subcap "gnd_uq7" -244.379
+subcap "m1_6398_5924#" -94.8195
+cap "port_address_0/rwl1_0" "vdd_uq8" 16.7735
+cap "port_address_0/wwl0_0" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/qbar" -1.34
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/qbar" "port_address_0/rwl1_0" -1.34
+cap "replica_bitcell_array_0/bitcell_array_0/vdd_uq0" "vdd_uq8" 16.5347
+cap "port_address_0/rwl0_0" "port_address_0/wwl0_0" 0.930233
+cap "port_address_0/wwl0_0" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/net3" -1.75
+cap "port_address_0/wwl0_0" "port_address_0/rwl1_0" -7.10543e-15
+cap "port_address_0/rwl1_0" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/net2" 35.1878
+cap "replica_bitcell_array_0/bitcell_array_0/vdd_uq0" "port_address_0/rwl1_0" 0.729282
+cap "port_address_0/rwl0_0" "port_address_0/wordline_driver_array_0/wordline_driver_cell_15/net4" 1.12853
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_15/net1" "p_en_bar" 73.6765
+cap "replica_bitcell_array_0/wwl_0_0" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/net3" -26.255
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_14/net1" "p_en_bar" 2.05882
+cap "replica_bitcell_array_0/wwl_0_0" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/qbar" -21.36
+cap "replica_bitcell_array_0/rwl_1_0" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/qbar" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_14/net1" "p_en_bar" 2.05882
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_15/net1" "p_en_bar" 73.6765
+cap "port_address_0/addr2" "port_address_0/addr5" -312.5
+cap "port_address_0/addr5" "port_address_0/addr4" -1250
+cap "port_address_0/addr2" "port_address_0/addr4" -500
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/in_1" "port_address_0/addr5" -227.273
+cap "port_address_0/addr5" "port_address_0/addr3" -500
+cap "port_address_0/addr2" "port_address_0/addr3" -1250
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/in_1" "port_address_0/addr2" -1250
+cap "port_address_0/addr0" "port_address_0/addr5" -178.571
+cap "port_address_0/addr2" "port_address_0/addr0" -500
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/in_1" "port_address_0/addr4" -312.5
+cap "port_address_0/addr4" "port_address_0/addr3" -1250
+cap "port_address_0/addr0" "port_address_0/addr4" -227.273
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/in_1" "port_address_0/addr3" -500
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/in_1" "port_address_0/addr0" -1250
+cap "port_address_0/addr0" "port_address_0/addr3" -312.5
+cap "port_address_0/rwl1_1" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_30/qbar" -1.34
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_30/q" "port_address_0/wwl0_1" 2.84217e-14
+cap "port_address_0/rwl1_1" "replica_bitcell_array_0/bitcell_array_0/vdd_uq0" 1.09392
+cap "port_address_0/rwl1_1" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_30/net2" 35.1878
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_30/q" "port_address_0/rwl1_1" -1.42109e-14
+cap "port_address_0/wordline_driver_array_0/wordline_driver_cell_14/net6" "port_address_0/wwl0_1" 5.68434e-14
+cap "port_address_0/rwl0_1" "port_address_0/wwl0_1" 1.39535
+cap "port_address_0/rwl1_1" "port_address_0/wwl0_1" 7.10543e-15
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_30/qbar" "port_address_0/wwl0_1" -1.34
+cap "port_address_0/rwl0_1" "port_address_0/rwl1_1" 1.42109e-14
+cap "port_address_0/rwl1_1" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_30/rbl0" 2.84217e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_30/net3" "port_address_0/wwl0_1" -1.75
+cap "port_address_0/wordline_driver_array_0/wordline_driver_cell_14/net4" "port_address_0/rwl0_1" 1.69279
+cap "port_address_0/rwl1_1" "vdd_uq8" 17.5028
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_14/net1" 71.6176
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_30/qbar" "replica_bitcell_array_0/wwl_0_1" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_30/net3" "replica_bitcell_array_0/wwl_0_1" -26.255
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_30/qbar" "replica_bitcell_array_0/rwl_1_1" -21.36
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_14/net1" 71.6176
+subcap "gnd_uq11" -21.0681
+subcap "gnd_uq12" -21.0681
+cap "port_address_0/addr2" "port_address_0/addr5" -312.5
+cap "port_address_0/addr3" "port_address_0/addr1" -500
+cap "port_address_0/addr3" "port_address_0/addr5" -500
+cap "port_address_0/addr4" "port_address_0/addr1" -312.5
+cap "port_address_0/addr0" "port_address_0/addr2" -500
+cap "port_address_0/addr4" "port_address_0/addr5" -1250
+cap "port_address_0/addr3" "port_address_0/addr0" -312.5
+cap "port_address_0/addr1" "port_address_0/addr5" -227.273
+cap "port_address_0/addr4" "port_address_0/addr0" -227.273
+cap "port_address_0/addr0" "port_address_0/addr5" -178.571
+cap "port_address_0/addr1" "port_address_0/addr0" -1250
+cap "port_address_0/addr3" "port_address_0/addr2" -1250
+cap "port_address_0/addr4" "port_address_0/addr2" -500
+cap "port_address_0/addr4" "port_address_0/addr3" -1250
+cap "port_address_0/addr1" "port_address_0/addr2" -1250
+subcap "gnd_uq11" -20.128
+cap "replica_bitcell_array_0/bitcell_array_0/vdd" "port_address_0/rwl1_2" 0.364641
+cap "port_address_0/wwl0_2" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_29/net3" -1.75
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_29/qbar" "port_address_0/wwl0_2" -1.34
+cap "port_address_0/rwl1_2" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_29/rbl0" 2.84217e-14
+cap "port_address_0/rwl0_2" "port_address_0/rwl1_2" 4.26326e-14
+cap "port_address_0/rwl1_2" "gnd_uq9" 18.232
+cap "port_address_0/rwl0_2" "port_address_0/wordline_driver_array_0/wordline_driver_cell_13/net4" 0.564263
+cap "port_address_0/rwl1_2" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_29/q" -1.42109e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_29/qbar" "port_address_0/rwl1_2" -2.68
+cap "port_address_0/wwl0_2" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_29/rbl0" 7.10543e-15
+cap "port_address_0/rwl0_2" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_29/net2" -1.42109e-14
+cap "port_address_0/rwl0_2" "port_address_0/wwl0_2" 0.465116
+cap "port_address_0/rwl1_2" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_29/net2" 35.1878
+cap "port_address_0/wwl0_2" "port_address_0/rwl1_2" -2.84217e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_29/qbar" "replica_bitcell_array_0/wwl_0_2" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_13/net1" "p_en_bar" 73.6765
+cap "replica_bitcell_array_0/wwl_0_2" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_29/net3" -26.255
+cap "replica_bitcell_array_0/rwl_1_2" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_29/qbar" -21.36
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_13/net1" 73.6765
+cap "port_address_0/addr4" "port_address_0/addr5" -1250
+cap "port_address_0/addr1" "port_address_0/addr2" -1250
+cap "port_address_0/addr4" "port_address_0/addr0" -227.273
+cap "port_address_0/addr4" "port_address_0/addr3" -1250
+cap "port_address_0/addr5" "port_address_0/addr0" -178.571
+cap "port_address_0/addr5" "port_address_0/addr3" -500
+cap "port_address_0/addr4" "port_address_0/addr2" -500
+cap "port_address_0/addr0" "port_address_0/addr3" -312.5
+cap "port_address_0/addr4" "port_address_0/addr1" -312.5
+cap "port_address_0/addr5" "port_address_0/addr2" -312.5
+cap "port_address_0/addr5" "port_address_0/addr1" -227.273
+cap "port_address_0/addr0" "port_address_0/addr2" -500
+cap "port_address_0/addr3" "port_address_0/addr2" -1250
+cap "port_address_0/addr0" "port_address_0/addr1" -1250
+cap "port_address_0/addr3" "port_address_0/addr1" -500
+subcap "gnd_uq15" -283.066
+subcap "gnd_uq14" -1050.63
+cap "vdd_uq13" "replica_bitcell_array_0/bitcell_array_0/vdd" 15.914
+cap "port_address_0/rwl1_3" "replica_bitcell_array_0/bitcell_array_0/vdd" 1.45856
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_28/net2" "port_address_0/rwl1_3" 35.1878
+cap "port_address_0/wwl0_3" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_28/net3" -1.75
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_28/qbar" "port_address_0/wwl0_3" -1.34
+cap "port_address_0/rwl1_3" "vdd_uq13" 2.84217e-14
+cap "port_address_0/rwl1_3" "port_address_0/wwl0_3" 2.84217e-14
+cap "port_address_0/rwl1_3" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_28/qbar" -1.34
+cap "port_address_0/rwl0_3" "port_address_0/wordline_driver_array_0/wordline_driver_cell_12/net4" 2.25705
+cap "port_address_0/wwl0_3" "port_address_0/rwl0_3" 1.62791
+cap "port_address_0/rwl1_3" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_28/rbl0" 2.84217e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_28/q" "port_address_0/wwl0_3" 2.84217e-14
+cap "port_address_0/rwl1_3" "port_address_0/rwl0_3" 2.84217e-14
+cap "gnd_uq14" "port_address_0/rwl1_3" 17.1381
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_28/q" "port_address_0/rwl1_3" -1.42109e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_28/net3" "replica_bitcell_array_0/wwl_0_3" -26.255
+cap "replica_bitcell_array_0/rwl_1_3" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_28/qbar" -21.36
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_12/net1" 73.6765
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_28/qbar" "replica_bitcell_array_0/wwl_0_3" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_12/net1" "p_en_bar" 73.6765
+cap "port_address_0/addr1" "port_address_0/addr2" -1250
+cap "port_address_0/addr5" "port_address_0/addr2" -312.5
+cap "port_address_0/addr0" "port_address_0/addr2" -500
+cap "port_address_0/addr2" "port_address_0/addr4" -500
+cap "port_address_0/addr1" "port_address_0/addr5" -227.273
+cap "port_address_0/addr3" "port_address_0/addr2" -1250
+cap "port_address_0/addr0" "port_address_0/addr5" -178.571
+cap "port_address_0/addr1" "port_address_0/addr0" -1250
+cap "port_address_0/addr5" "port_address_0/addr4" -1250
+cap "port_address_0/addr1" "port_address_0/addr4" -312.5
+cap "port_address_0/addr0" "port_address_0/addr4" -227.273
+cap "port_address_0/addr3" "port_address_0/addr5" -500
+cap "port_address_0/addr1" "port_address_0/addr3" -500
+cap "port_address_0/addr3" "port_address_0/addr0" -312.5
+cap "port_address_0/addr3" "port_address_0/addr4" -1250
+subcap "vdd_uq17" -1025.82
+cap "port_address_0/rwl0_4" "port_address_0/wwl0_4" -2.84217e-14
+cap "port_address_0/rwl1_4" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_27/qbar" -1.34
+cap "port_address_0/rwl1_4" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_27/net2" 35.1878
+cap "port_address_0/rwl1_4" "gnd_uq14" 18.5967
+cap "port_address_0/rwl1_4" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_27/q" -1.42109e-14
+cap "port_address_0/rwl1_4" "port_address_0/wwl0_4" -3.55271e-14
+cap "port_address_0/rwl1_4" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_28/rbl0" 2.84217e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_11/net1" "p_en_bar" 56.9118
+cap "replica_bitcell_array_0/rwl_1_4" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_27/qbar" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_27/net3" "replica_bitcell_array_0/wwl_0_4" -26.255
+cap "replica_bitcell_array_0/wwl_0_4" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_27/qbar" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_11/net1" "p_en_bar" 56.9118
+cap "port_address_0/addr5" "port_address_0/addr1" -227.273
+cap "port_address_0/addr5" "port_address_0/addr2" -312.5
+cap "port_address_0/addr2" "port_address_0/addr1" -1250
+cap "port_address_0/addr5" "port_address_0/addr3" -500
+cap "port_address_0/addr4" "port_address_0/addr0" -227.273
+cap "port_address_0/addr3" "port_address_0/addr1" -500
+cap "port_address_0/addr2" "port_address_0/addr3" -1250
+cap "port_address_0/addr5" "port_address_0/addr4" -1250
+cap "port_address_0/addr5" "port_address_0/addr0" -178.571
+cap "port_address_0/addr1" "port_address_0/addr4" -312.5
+cap "port_address_0/addr2" "port_address_0/addr4" -500
+cap "port_address_0/addr1" "port_address_0/addr0" -1250
+cap "port_address_0/addr2" "port_address_0/addr0" -500
+cap "port_address_0/addr3" "port_address_0/addr4" -1250
+cap "port_address_0/addr3" "port_address_0/addr0" -312.5
+subcap "m1_6398_10810#" -656.367
+subcap "m1_6398_11036#" -46.824
+cap "replica_bitcell_array_0/bitcell_array_0/vdd_uq1" "vdd_uq17" 15.2163
+cap "port_address_0/rwl0_5" "port_address_0/wordline_driver_array_0/wordline_driver_cell_10/net4" 2.82132
+cap "port_address_0/rwl0_5" "port_address_0/rwl1_5" 2.84217e-14
+cap "replica_bitcell_array_0/bitcell_array_0/vdd_uq1" "port_address_0/rwl1_5" 1.8232
+cap "port_address_0/rwl1_5" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_26/qbar" -1.34
+cap "port_address_0/wwl0_5" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_26/net3" -1.75
+cap "port_address_0/rwl0_5" "port_address_0/wwl0_5" 1.62791
+cap "port_address_0/rwl1_5" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_26/net2" 35.1878
+cap "port_address_0/wwl0_5" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_26/qbar" -1.34
+cap "port_address_0/wwl0_5" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_26/net2" 1.42109e-14
+cap "port_address_0/wwl0_5" "port_address_0/rwl1_5" -2.84217e-14
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_10/net1" 63.8235
+cap "replica_bitcell_array_0/rwl_1_5" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_26/qbar" -21.36
+cap "replica_bitcell_array_0/wwl_0_5" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_26/qbar" -21.36
+cap "replica_bitcell_array_0/wwl_0_5" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_26/net3" -26.255
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_11/net1" 16.7647
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_10/net1" "p_en_bar" 63.8235
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_11/net1" 16.7647
+cap "port_address_0/addr1" "port_address_0/addr5" -227.273
+cap "port_address_0/addr3" "port_address_0/addr0" -312.5
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_0" "port_address_0/addr4" -500
+cap "port_address_0/addr5" "port_address_0/addr0" -178.571
+cap "port_address_0/addr3" "port_address_0/addr5" -500
+cap "port_address_0/addr1" "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_0" -1250
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_0" "port_address_0/addr0" -500
+cap "port_address_0/addr1" "port_address_0/addr4" -312.5
+cap "port_address_0/addr4" "port_address_0/addr0" -227.273
+cap "port_address_0/addr3" "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_0" -1250
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_0" "port_address_0/addr5" -312.5
+cap "port_address_0/addr3" "port_address_0/addr4" -1250
+cap "port_address_0/addr4" "port_address_0/addr5" -1250
+cap "port_address_0/addr1" "port_address_0/addr0" -1250
+cap "port_address_0/addr3" "port_address_0/addr1" -500
+subcap "m1_6398_12302#" -556.773
+subcap "m1_6398_12428#" -201.866
+cap "port_address_0/rwl1_6" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_25/net2" 23.1547
+cap "port_address_0/wwl0_6" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_25/qbar" -1.34
+cap "port_address_0/wwl0_6" "port_address_0/rwl1_6" -1.42109e-14
+cap "port_address_0/wwl0_6" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_25/net2" 1.42109e-14
+cap "port_address_0/wwl0_6" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_25/net3" -1.75
+cap "port_address_0/rwl1_6" "gnd_uq18" 18.9613
+cap "port_address_0/wordline_driver_array_0/wordline_driver_cell_10/rwl1" "gnd_uq18" 16.7735
+cap "port_address_0/rwl1_6" "port_address_0/rwl0_6" -2.84217e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_25/net2" "port_address_0/rwl0_6" -1.42109e-14
+cap "port_address_0/wwl0_6" "port_address_0/rwl0_6" 0.734694
+cap "replica_bitcell_array_0/wwl_0_6" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_25/qbar" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_25/net3" "replica_bitcell_array_0/wwl_0_6" -26.255
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_9/net1" "p_en_bar" 36.3235
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_10/net1" "p_en_bar" 9.85294
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_9/net1" "p_en_bar" 36.3235
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_10/net1" 9.85294
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_1" "port_address_0/addr1" -500
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_0" "port_address_0/addr5" -312.5
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_0" "port_address_0/addr0" -500
+cap "port_address_0/addr5" "port_address_0/addr4" -1250
+cap "port_address_0/addr4" "port_address_0/addr0" -227.273
+cap "port_address_0/addr5" "port_address_0/addr1" -227.273
+cap "port_address_0/addr1" "port_address_0/addr0" -1250
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_1" "port_address_0/addr5" -500
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_1" "port_address_0/addr0" -312.5
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_0" "port_address_0/addr4" -500
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_0" "port_address_0/addr1" -1250
+cap "port_address_0/addr5" "port_address_0/addr0" -178.571
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_1" "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_0" -1250
+cap "port_address_0/addr1" "port_address_0/addr4" -312.5
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_1" "port_address_0/addr4" -1250
+subcap "m1_6398_13760#" -328.887
+subcap "m1_6398_13886#" -186.11
+subcap "m1_6398_15504#" -153.056
+cap "replica_bitcell_array_0/bitcell_array_0/vdd_uq2" "port_address_0/rwl1_7" 2.18785
+cap "vdd_uq19" "port_address_0/rwl1_6" 2.84217e-14
+cap "port_address_0/rwl1_6" "port_address_0/rwl0_6" -1.42109e-14
+cap "port_address_0/rwl0_7" "port_address_0/wwl0_7" -18.2911
+cap "port_address_0/wordline_driver_array_0/wordline_driver_cell_8/net2" "port_address_0/rwl0_7" -0.47
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_24/qbar" "port_address_0/rwl1_7" -1.34
+cap "port_address_0/rwl1_7" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_24/net2" 19.326
+cap "port_address_0/rwl1_6" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_25/qbar" -2.68
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_25/net2" "port_address_0/rwl1_6" 12.0331
+cap "vdd_uq19" "replica_bitcell_array_0/bitcell_array_0/vdd_uq2" 14.5187
+cap "port_address_0/rwl1_7" "port_address_0/rwl0_7" -10.03
+cap "port_address_0/wwl0_6" "port_address_0/rwl1_6" -1.42109e-14
+cap "port_address_0/rwl1_7" "port_address_0/wwl0_7" -7.10543e-15
+cap "vdd_uq19" "port_address_0/rwl1_7" 2.84217e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_25/qbar" "replica_bitcell_array_0/rwl_1_6" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_9/net1" "p_en_bar" 37.3529
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_8/net1" 43.2353
+cap "replica_bitcell_array_0/rwl_1_7" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_24/qbar" -21.36
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_8/net1" 43.2353
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_9/net1" "p_en_bar" 37.3529
+cap "addr0" "addr1" -1250
+cap "addr4" "addr3" -1250
+cap "addr1" "addr5" -227.273
+cap "addr4" "addr0" -227.273
+cap "addr4" "addr5" -1250
+cap "addr0" "addr3" -312.5
+cap "addr3" "addr5" -500
+cap "addr0" "addr5" -178.571
+cap "addr2" "addr1" -1250
+cap "addr4" "addr2" -500
+cap "addr3" "addr2" -1250
+cap "addr0" "addr2" -500
+cap "addr2" "addr5" -312.5
+cap "addr4" "addr1" -312.5
+cap "addr3" "addr1" -500
+subcap "m1_6398_15152#" -13.6277
+subcap "m1_6398_16962#" -313.638
+cap "port_address_0/wwl0_7" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_24/qbar" -1.34
+cap "gnd_uq22" "port_address_0/rwl1_8" 19.326
+cap "gnd_uq22" "port_address_0/rwl1_7" 16.4088
+cap "port_address_0/wwl0_7" "port_address_0/rwl1_7" 7.10543e-15
+cap "port_address_0/wwl0_7" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_24/net2" 1.42109e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_24/net2" "port_address_0/rwl1_7" 15.8619
+cap "port_address_0/wwl0_7" "port_address_0/rwl0_7" 1.62791
+cap "port_address_0/wwl0_7" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_24/net3" -1.75
+cap "port_address_0/rwl0_7" "port_address_0/rwl1_7" -7.10543e-15
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_24/net2" "port_address_0/rwl0_7" -1.42109e-14
+cap "port_address_0/wordline_driver_array_0/wordline_driver_cell_8/net4" "port_address_0/rwl0_7" 3.38558
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_24/qbar" "replica_bitcell_array_0/wwl_0_7" -21.36
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_7/net1" 15.7353
+cap "replica_bitcell_array_0/wwl_0_7" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_24/net3" -26.255
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_8/net1" 30.4412
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_8/net1" 30.4412
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_7/net1" 15.7353
+cap "port_address_0/addr2" "port_address_0/addr3" -1250
+cap "port_address_0/addr1" "port_address_0/addr4" -312.5
+cap "port_address_0/addr5" "port_address_0/addr4" -1250
+cap "port_address_0/addr5" "port_address_0/addr0" -178.571
+cap "port_address_0/addr1" "port_address_0/addr0" -1250
+cap "port_address_0/addr2" "port_address_0/addr4" -500
+cap "port_address_0/addr4" "port_address_0/addr3" -1250
+cap "port_address_0/addr1" "port_address_0/addr5" -227.273
+cap "port_address_0/addr2" "port_address_0/addr0" -500
+cap "port_address_0/addr0" "port_address_0/addr3" -312.5
+cap "port_address_0/addr1" "port_address_0/addr2" -1250
+cap "port_address_0/addr5" "port_address_0/addr2" -312.5
+cap "port_address_0/addr1" "port_address_0/addr3" -500
+cap "port_address_0/addr5" "port_address_0/addr3" -500
+cap "port_address_0/addr4" "port_address_0/addr0" -227.273
+subcap "m1_6398_18454#" -590.993
+subcap "m1_6398_18580#" -208.163
+cap "port_address_0/wwl0_8" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_23/net3" -1.75
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_23/net2" "port_address_0/wwl0_8" 1.42109e-14
+cap "replica_bitcell_array_0/bitcell_array_0/vdd_uq3" "vdd_uq23" 13.79
+cap "port_address_0/wwl0_8" "port_address_0/rwl1_8" -3.55271e-14
+cap "port_address_0/rwl0_8" "port_address_0/rwl1_8" -2.84217e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_23/qbar" "port_address_0/wwl0_8" -1.34
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_23/net2" "port_address_0/rwl1_8" 35.1878
+cap "replica_bitcell_array_0/bitcell_array_0/vdd_uq3" "port_address_0/rwl1_9" 2.55249
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_23/qbar" "port_address_0/rwl1_8" -2.68
+cap "port_address_0/rwl0_8" "port_address_0/wwl0_8" 1.70195
+cap "replica_bitcell_array_0/rwl_1_8" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_23/qbar" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_23/net3" "replica_bitcell_array_0/wwl_0_8" -26.255
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_23/qbar" "replica_bitcell_array_0/wwl_0_8" -21.36
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_6/net1" 22.6471
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_7/net1" "p_en_bar" 57.9412
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_7/net1" 57.9412
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_6/net1" 22.6471
+cap "port_address_0/addr2" "port_address_0/addr5" -312.5
+cap "port_address_0/addr0" "port_address_0/addr4" -227.273
+cap "port_address_0/addr3" "port_address_0/addr4" -1250
+cap "port_address_0/addr1" "port_address_0/addr4" -312.5
+cap "port_address_0/addr5" "port_address_0/addr4" -1250
+cap "port_address_0/addr0" "port_address_0/addr3" -312.5
+cap "port_address_0/addr1" "port_address_0/addr0" -1250
+cap "port_address_0/addr0" "port_address_0/addr5" -178.571
+cap "port_address_0/addr2" "port_address_0/addr4" -500
+cap "port_address_0/addr1" "port_address_0/addr3" -500
+cap "port_address_0/addr5" "port_address_0/addr3" -500
+cap "port_address_0/addr1" "port_address_0/addr5" -227.273
+cap "port_address_0/addr2" "port_address_0/addr0" -500
+cap "port_address_0/addr2" "port_address_0/addr3" -1250
+cap "port_address_0/addr1" "port_address_0/addr2" -1250
+subcap "m1_6398_19912#" -546.2
+cap "port_address_0/rwl1_9" "gnd_uq26" 16.0442
+cap "port_address_0/wordline_driver_array_0/wordline_driver_cell_6/net4" "port_address_0/rwl0_9" 3.94984
+cap "port_address_0/rwl0_9" "port_address_0/wwl0_9" 1.62791
+cap "port_address_0/wordline_driver_array_0/wordline_driver_cell_5/rwl1" "gnd_uq26" 2.91713
+cap "port_address_0/rwl1_9" "port_address_0/rwl0_9" 5.68434e-14
+cap "port_address_0/rwl1_9" "port_address_0/wwl0_9" -1.42109e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_22/net2" "port_address_0/rwl1_9" 35.1878
+cap "replica_bitcell_array_0/rwl_1_9" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_22/qbar" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_6/net1" "p_en_bar" 51.0294
+cap "replica_bitcell_array_0/wwl_0_9" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_22/net3" -26.255
+cap "replica_bitcell_array_0/wwl_0_9" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_22/qbar" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_6/net1" "p_en_bar" 51.0294
+cap "port_address_0/addr5" "port_address_0/addr3" -500
+cap "port_address_0/addr1" "port_address_0/addr3" -500
+cap "port_address_0/addr2" "port_address_0/addr0" -500
+cap "port_address_0/addr4" "port_address_0/addr2" -500
+cap "port_address_0/addr5" "port_address_0/addr1" -227.273
+cap "port_address_0/addr4" "port_address_0/addr0" -227.273
+cap "port_address_0/addr2" "port_address_0/addr3" -1250
+cap "port_address_0/addr5" "port_address_0/addr2" -312.5
+cap "port_address_0/addr1" "port_address_0/addr2" -1250
+cap "port_address_0/addr3" "port_address_0/addr0" -312.5
+cap "port_address_0/addr4" "port_address_0/addr3" -1250
+cap "port_address_0/addr1" "port_address_0/addr0" -1250
+cap "port_address_0/addr5" "port_address_0/addr0" -178.571
+cap "port_address_0/addr4" "port_address_0/addr1" -312.5
+cap "port_address_0/addr4" "port_address_0/addr5" -1250
+subcap "gnd_uq27" -374.105
+subcap "gnd_uq26" -1645.95
+subcap "m1_6398_21304#" -120.699
+cap "port_address_0/wwl0_10" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_21/qbar" -1.34
+cap "vdd_uq27" "port_address_0/rwl1_10" 2.84217e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_21/rbl0" "port_address_0/rwl1_10" 2.84217e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_21/q" "port_address_0/wwl0_10" 2.84217e-14
+cap "port_address_0/rwl1_10" "port_address_0/wwl0_10" -2.13163e-14
+cap "port_address_0/wwl0_10" "port_address_0/rwl0_10" 2.90176
+cap "port_address_0/rwl1_10" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_21/net2" 35.1878
+cap "port_address_0/rwl1_10" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_21/qbar" -2.68
+cap "port_address_0/wwl0_10" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_21/net3" -1.75
+cap "gnd_uq26" "port_address_0/rwl1_10" 16.7735
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_21/q" "port_address_0/rwl1_10" -1.42109e-14
+cap "port_address_0/rwl1_10" "port_address_0/rwl0_10" -4.26326e-14
+cap "vdd_uq27" "replica_bitcell_array_0/bitcell_array_0/vdd_uq4" 13.0305
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_21/qbar" "replica_bitcell_array_0/rwl_1_10" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_5/net1" "p_en_bar" 73.6765
+cap "replica_bitcell_array_0/wwl_0_10" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_21/qbar" -21.36
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_4/net1" 2.05882
+cap "replica_bitcell_array_0/wwl_0_10" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_21/net3" -26.255
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_4/net1" 2.05882
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_5/net1" 73.6765
+cap "port_address_0/addr4" "port_address_0/addr3" -1250
+cap "port_address_0/addr2" "port_address_0/addr5" -312.5
+cap "port_address_0/addr4" "port_address_0/addr2" -500
+cap "port_address_0/addr1" "port_address_0/addr3" -500
+cap "port_address_0/addr1" "port_address_0/addr2" -1250
+cap "port_address_0/addr3" "port_address_0/addr2" -1250
+cap "port_address_0/addr0" "port_address_0/addr5" -178.571
+cap "port_address_0/addr4" "port_address_0/addr0" -227.273
+cap "port_address_0/addr1" "port_address_0/addr0" -1250
+cap "port_address_0/addr3" "port_address_0/addr0" -312.5
+cap "port_address_0/addr4" "port_address_0/addr5" -1250
+cap "port_address_0/addr0" "port_address_0/addr2" -500
+cap "port_address_0/addr1" "port_address_0/addr5" -227.273
+cap "port_address_0/addr1" "port_address_0/addr4" -312.5
+cap "port_address_0/addr3" "port_address_0/addr5" -500
+cap "port_address_0/rwl1_11" "port_address_0/wwl0_11" 1.42109e-14
+cap "replica_bitcell_array_0/bitcell_array_0/vdd_uq4" "port_address_0/rwl1_11" 2.91713
+cap "gnd_uq30" "port_address_0/rwl1_11" 15.6796
+cap "port_address_0/rwl0_11" "port_address_0/wordline_driver_array_0/wordline_driver_cell_4/net4" 4.51411
+cap "port_address_0/rwl0_11" "port_address_0/wwl0_11" 1.62791
+cap "port_address_0/rwl0_11" "port_address_0/rwl1_11" 8.52651e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_20/net2" "port_address_0/rwl1_11" 35.1878
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_20/net3" "replica_bitcell_array_0/wwl_0_11" -26.255
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_4/net1" 71.6176
+cap "replica_bitcell_array_0/rwl_1_11" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_20/qbar" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_20/qbar" "replica_bitcell_array_0/wwl_0_11" -21.36
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_4/net1" 71.6176
+cap "port_address_0/addr2" "port_address_0/addr3" -1250
+cap "port_address_0/addr1" "port_address_0/addr2" -1250
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_0/in_0" "port_address_0/addr2" -500
+cap "port_address_0/addr5" "port_address_0/addr2" -312.5
+cap "port_address_0/addr1" "port_address_0/addr3" -500
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_0/in_0" "port_address_0/addr3" -1250
+cap "port_address_0/addr5" "port_address_0/addr3" -500
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_0/in_0" "port_address_0/addr1" -312.5
+cap "port_address_0/addr0" "port_address_0/addr2" -500
+cap "port_address_0/addr1" "port_address_0/addr5" -227.273
+cap "port_address_0/addr0" "port_address_0/addr3" -312.5
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_0/in_0" "port_address_0/addr5" -1250
+cap "port_address_0/addr1" "port_address_0/addr0" -1250
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_0/in_0" "port_address_0/addr0" -227.273
+cap "port_address_0/addr5" "port_address_0/addr0" -178.571
+subcap "gnd_uq31" -92.8279
+cap "port_address_0/rwl0_12" "port_address_0/rwl1_12" 2.84217e-14
+cap "port_address_0/rwl0_12" "port_address_0/wwl0_12" 4.10157
+cap "port_address_0/rwl1_12" "gnd_uq30" 20.0552
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_19/q" "port_address_0/rwl1_12" -1.42109e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_19/net2" "port_address_0/rwl1_12" 35.1878
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_19/qbar" "port_address_0/rwl1_12" -2.68
+cap "port_address_0/wwl0_12" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_19/q" 2.84217e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_19/net3" "port_address_0/wwl0_12" -1.75
+cap "port_address_0/wwl0_12" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_19/qbar" -1.34
+cap "port_address_0/wwl0_12" "port_address_0/wordline_driver_array_0/wordline_driver_cell_3/net6" 5.68434e-14
+cap "port_address_0/rwl1_12" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_19/rbl0" 2.84217e-14
+cap "replica_bitcell_array_0/wwl_0_12" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_19/qbar" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_3/net1" "p_en_bar" 73.6765
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_19/net3" "replica_bitcell_array_0/wwl_0_12" -26.255
+cap "replica_bitcell_array_0/rwl_1_12" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_19/qbar" -21.36
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_3/net1" 73.6765
+cap "port_address_0/addr0" "port_address_0/addr4" -227.273
+cap "port_address_0/addr3" "port_address_0/addr0" -312.5
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_0/in_1" "port_address_0/addr0" -178.571
+cap "port_address_0/addr2" "port_address_0/addr0" -500
+cap "port_address_0/addr1" "port_address_0/addr0" -1250
+cap "port_address_0/addr3" "port_address_0/addr4" -1250
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_0/in_1" "port_address_0/addr4" -1250
+cap "port_address_0/addr2" "port_address_0/addr4" -500
+cap "port_address_0/addr1" "port_address_0/addr4" -312.5
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_0/in_1" "port_address_0/addr3" -500
+cap "port_address_0/addr2" "port_address_0/addr3" -1250
+cap "port_address_0/addr1" "port_address_0/addr3" -500
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_0/in_1" "port_address_0/addr2" -312.5
+cap "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_0/in_1" "port_address_0/addr1" -227.273
+cap "port_address_0/addr1" "port_address_0/addr2" -1250
+subcap "gnd_uq35" -256.568
+subcap "gnd_uq34" -952.225
+cap "replica_bitcell_array_0/bitcell_array_0/vdd_uq5" "vdd_uq29" 12.2709
+cap "port_address_0/rwl1_13" "gnd_uq34" 15.3149
+cap "port_address_0/wwl0_13" "port_address_0/rwl0_13" 1.62791
+cap "port_address_0/rwl1_13" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_18/net2" 35.1878
+cap "replica_bitcell_array_0/bitcell_array_0/vdd_uq5" "port_address_0/rwl1_13" 3.28177
+cap "port_address_0/wordline_driver_array_0/wordline_driver_cell_2/net4" "port_address_0/rwl0_13" 5.07837
+cap "port_address_0/rwl1_13" "port_address_0/rwl0_13" 8.52651e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_18/qbar" "replica_bitcell_array_0/rwl_1_13" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_18/net3" "replica_bitcell_array_0/wwl_0_13" -26.255
+cap "replica_bitcell_array_0/wwl_0_13" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_18/qbar" -21.36
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_2/net1" 73.6765
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_2/net1" "p_en_bar" 73.6765
+cap "port_address_0/addr4" "port_address_0/addr1" -312.5
+cap "port_address_0/addr2" "port_address_0/addr4" -500
+cap "port_address_0/addr3" "port_address_0/addr0" -312.5
+cap "port_address_0/addr5" "port_address_0/addr0" -178.571
+cap "port_address_0/addr1" "port_address_0/addr0" -1250
+cap "port_address_0/addr2" "port_address_0/addr0" -500
+cap "port_address_0/addr4" "port_address_0/addr0" -227.273
+cap "port_address_0/addr3" "port_address_0/addr5" -500
+cap "port_address_0/addr3" "port_address_0/addr1" -500
+cap "port_address_0/addr1" "port_address_0/addr5" -227.273
+cap "port_address_0/addr3" "port_address_0/addr2" -1250
+cap "port_address_0/addr2" "port_address_0/addr5" -312.5
+cap "port_address_0/addr3" "port_address_0/addr4" -1250
+cap "port_address_0/addr2" "port_address_0/addr1" -1250
+cap "port_address_0/addr4" "port_address_0/addr5" -1250
+subcap "vdd_uq33" -753.61
+cap "port_address_0/rwl0_14" "port_address_0/wwl0_14" 4.83626
+cap "port_address_0/rwl1_14" "gnd_uq34" 20.4199
+cap "port_address_0/rwl0_14" "port_address_0/rwl1_14" -2.84217e-14
+cap "port_address_0/wwl0_14" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_17/qbar" -1.34
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_17/q" "port_address_0/rwl1_14" -1.42109e-14
+cap "port_address_0/rwl1_14" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_18/rbl0" 2.84217e-14
+cap "port_address_0/rwl1_14" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_17/net2" 35.1878
+cap "port_address_0/rwl1_14" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_17/qbar" -2.68
+cap "port_address_0/wwl0_14" "port_address_0/rwl1_14" -2.84217e-14
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_17/net3" "port_address_0/wwl0_14" -1.75
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_17/qbar" "replica_bitcell_array_0/wwl_0_14" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_17/net3" "replica_bitcell_array_0/wwl_0_14" -26.255
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_1/net1" 56.9118
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_17/qbar" "replica_bitcell_array_0/rwl_1_14" -21.36
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_1/net1" 56.9118
+cap "port_address_0/addr2" "port_address_0/addr0" -500
+cap "port_address_0/addr1" "port_address_0/addr4" -312.5
+cap "port_address_0/addr3" "port_address_0/addr0" -312.5
+cap "port_address_0/addr4" "port_address_0/addr0" -227.273
+cap "port_address_0/addr2" "port_address_0/addr3" -1250
+cap "port_address_0/addr1" "port_address_0/addr5" -227.273
+cap "port_address_0/addr2" "port_address_0/addr4" -500
+cap "port_address_0/addr5" "port_address_0/addr0" -178.571
+cap "port_address_0/addr3" "port_address_0/addr4" -1250
+cap "port_address_0/addr2" "port_address_0/addr5" -312.5
+cap "port_address_0/addr5" "port_address_0/addr3" -500
+cap "port_address_0/addr1" "port_address_0/addr0" -1250
+cap "port_address_0/addr5" "port_address_0/addr4" -1250
+cap "port_address_0/addr1" "port_address_0/addr2" -1250
+cap "port_address_0/addr1" "port_address_0/addr3" -500
+subcap "m1_6398_26416#" -147.61
+cap "port_address_0/rwl1_15" "port_address_0/wwl0_15" -2.84217e-14
+cap "vdd_uq33" "replica_bitcell_array_0/bitcell_array_0/vdd_uq6" 11.5114
+cap "port_address_0/rwl1_15" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_16/net2" 35.1878
+cap "port_address_0/rwl0_15" "port_address_0/wordline_driver_array_0/wordline_driver_cell_0/net4" 5.64263
+cap "port_address_0/rwl1_15" "replica_bitcell_array_0/bitcell_array_0/vdd_uq6" 3.64641
+cap "port_address_0/rwl0_15" "port_address_0/wwl0_15" 1.62791
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_16/qbar" "replica_bitcell_array_0/wwl_0_15" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_16/qbar" "replica_bitcell_array_0/rwl_1_15" -21.36
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_16/net3" "replica_bitcell_array_0/wwl_0_15" -26.255
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_0/net1" 63.8235
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_1/net1" 16.7647
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_1/net1" "p_en_bar" 16.7647
+cap "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_0/net1" "p_en_bar" 63.8235
+cap "port_address_0/addr2" "port_address_0/addr0" -182.857
+cap "port_address_0/addr3" "port_address_0/addr5" -182.857
+cap "port_address_0/addr2" "port_address_0/addr3" -457.143
+cap "port_address_0/addr1" "port_address_0/addr4" -114.286
+cap "port_address_0/addr3" "port_address_0/addr0" -114.286
+cap "port_address_0/addr1" "port_address_0/addr5" -83.1169
+cap "port_address_0/addr2" "port_address_0/addr1" -457.143
+cap "port_address_0/addr5" "port_address_0/addr4" -457.143
+cap "port_address_0/addr2" "port_address_0/addr4" -182.857
+cap "port_address_0/addr0" "port_address_0/addr1" -457.143
+cap "port_address_0/addr3" "port_address_0/addr1" -182.857
+cap "port_address_0/addr0" "port_address_0/addr4" -83.1169
+cap "port_address_0/addr3" "port_address_0/addr4" -457.143
+cap "port_address_0/addr2" "port_address_0/addr5" -114.286
+cap "port_address_0/addr0" "port_address_0/addr5" -65.3061
+subcap "m1_6398_27682#" -498.44
+subcap "m1_6398_27808#" -174.954
+cap "port_address_0/wordline_driver_array_0/wordline_driver_cell_0/rwl1" "gnd_uq38" 14.9503
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_0/net1" 9.85294
+cap "p_en_bar" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_0/net1" 9.85294
+merge "replica_bitcell_array_0/rwl_1_5" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_26/rwl1" -17.2816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_26/rwl1" "port_address_0/rwl1_5"
+merge "port_address_0/rwl1_5" "m1_6398_12076#"
+merge "replica_bitcell_array_0/wwl_0_5" "port_address_0/wwl0_5" -60.1054 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -85216 -112 0 0 0 0 0 0 0 0 0 0
+merge "port_address_0/wwl0_5" "m1_6398_12428#"
+merge "replica_bitcell_array_0/rwl_1_3" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_28/rwl1" -17.2816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_28/rwl1" "port_address_0/rwl1_3"
+merge "port_address_0/rwl1_3" "m1_6398_9000#"
+merge "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_0" "port_address_0/addr2" -10403.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -689696 -49320 0 0 0 0 0 0 0 0
+merge "port_address_0/addr2" "addr2"
+merge "replica_bitcell_array_0/rwl_0_15" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_16/rwl0" -67.9816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -69264 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_16/rwl0" "port_address_0/rwl0_15"
+merge "port_address_0/rwl0_15" "m1_6398_27682#"
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_23/rwl1" "replica_bitcell_array_0/rwl_1_8" -106.857 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -129072 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/rwl_1_8" "port_address_0/rwl1_8"
+merge "port_address_0/rwl1_8" "m1_6398_17188#"
+merge "replica_bitcell_array_0/wwl_0_8" "port_address_0/wwl0_8" -22.8838 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -27952 -112 0 0 0 0 0 0 0 0 0 0
+merge "port_address_0/wwl0_8" "m1_6398_16836#"
+merge "port_address_0/wordline_driver_array_0/wordline_driver_cell_6/wl_en" "port_address_0/gnd_uq19" -43.512 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18960 -240 0 0 0 0 0 0
+merge "port_address_0/gnd_uq19" "gnd_uq25"
+merge "replica_bitcell_array_0/wwl_0_6" "port_address_0/wwl0_6" -94.6438 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -138352 -112 0 0 0 0 0 0 0 0 0 0
+merge "port_address_0/wwl0_6" "m1_6398_13760#"
+merge "port_data_0/precharge_array_multiport_0/precharge_multiport_0_0/pmos_m1_w1_260_sli_dli_2/D" "port_data_0/precharge_array_multiport_0/precharge_multiport_0_0/en_bar" -8671.76 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 116415 -1526 2686096 -46452 0 0 0 0 0 0 0 0
+merge "port_data_0/precharge_array_multiport_0/precharge_multiport_0_0/en_bar" "port_data_0/precharge_array_multiport_0/rbl1_2"
+merge "port_data_0/precharge_array_multiport_0/rbl1_2" "port_data_0/p_en_bar"
+merge "port_data_0/p_en_bar" "p_en_bar"
+merge "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_1/in_1" "port_address_0/addr3" -10403.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -689696 -49320 0 0 0 0 0 0 0 0
+merge "port_address_0/addr3" "addr3"
+merge "port_address_0/addr0" "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/in_0" -10403.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -689696 -49320 0 0 0 0 0 0 0 0
+merge "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/in_0" "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/pinv_1/nmos_m1_w0_420_sli_dli_da_p_0/G"
+merge "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/pinv_1/nmos_m1_w0_420_sli_dli_da_p_0/G" "addr0"
+merge "replica_bitcell_array_0/rwl_1_15" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_16/rwl1" -17.2816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_16/rwl1" "port_address_0/rwl1_15"
+merge "port_address_0/rwl1_15" "m1_6398_27456#"
+merge "port_data_0/vdd_uq0" "port_data_0/vdd" -149.112 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5040 -720 0 0 0 0 0 0
+merge "port_data_0/vdd" "vdd_uq0"
+merge "vdd_uq0" "vdd"
+merge "vdd" "port_data_0/vdd_uq1"
+merge "port_data_0/vdd_uq1" "vdd_uq1"
+merge "replica_bitcell_array_0/rwl_1_10" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_21/rwl1" -17.2816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_21/rwl1" "port_address_0/rwl1_10"
+merge "port_address_0/rwl1_10" "m1_6398_20264#"
+merge "replica_bitcell_array_0/rwl_1_9" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_22/rwl1" -32.5501 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -14754 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_22/rwl1" "port_address_0/rwl1_9"
+merge "port_address_0/rwl1_9" "m1_6398_18228#"
+merge "replica_bitcell_array_0/wwl_0_9" "port_address_0/wwl0_9" 0.9634 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "port_address_0/wwl0_9" "m1_6398_18580#"
+merge "port_address_0/wordline_driver_array_0/wordline_driver_cell_10/wl_en" "port_address_0/gnd_uq11" -724.802 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -284008 -3120 0 0 0 0 0 0
+merge "port_address_0/gnd_uq11" "gnd_uq17"
+merge "gnd_uq17" "port_address_0/wordline_driver_array_0/wordline_driver_cell_11/wl_en"
+merge "port_address_0/wordline_driver_array_0/wordline_driver_cell_11/wl_en" "port_address_0/wordline_driver_array_0/wordline_driver_cell_12/wl_en"
+merge "port_address_0/wordline_driver_array_0/wordline_driver_cell_12/wl_en" "vdd_uq16"
+merge "vdd_uq16" "port_address_0/gnd_uq7"
+merge "port_address_0/gnd_uq7" "gnd_uq13"
+merge "gnd_uq13" "port_address_0/gnd_uq4"
+merge "port_address_0/gnd_uq4" "vdd_uq12"
+merge "vdd_uq12" "port_address_0/gnd_uq3"
+merge "port_address_0/gnd_uq3" "gnd_uq9"
+merge "gnd_uq9" "port_address_0/vdd"
+merge "port_address_0/vdd" "gnd_uq10"
+merge "gnd_uq10" "vdd_uq8"
+merge "vdd_uq8" "vdd_uq9"
+merge "vdd_uq9" "replica_bitcell_array_0/gnd"
+merge "replica_bitcell_array_0/gnd" "port_address_0/gnd_uq0"
+merge "port_address_0/gnd_uq0" "gnd_uq5"
+merge "gnd_uq5" "contact_17_1/gnd"
+merge "contact_17_1/gnd" "port_address_0/gnd"
+merge "port_address_0/gnd" "gnd_uq6"
+merge "gnd_uq6" "contact_17_0/gnd"
+merge "contact_17_0/gnd" "gnd_uq0"
+merge "gnd_uq0" "gnd_uq1"
+merge "gnd_uq1" "port_data_0/gnd_uq2"
+merge "port_data_0/gnd_uq2" "gnd_uq2"
+merge "gnd_uq2" "port_data_0/gnd"
+merge "port_data_0/gnd" "gnd"
+merge "replica_bitcell_array_0/rwl_0_0" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/rwl0" -17.2816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/rwl0" "port_address_0/rwl0_0"
+merge "port_address_0/rwl0_0" "m1_6398_4658#"
+merge "replica_bitcell_array_0/rwl_0_2" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_29/rwl0" -17.2816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_29/rwl0" "port_address_0/rwl0_2"
+merge "port_address_0/rwl0_2" "m1_6398_7734#"
+merge "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_2/in_1" "port_address_0/addr1" -10403.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -689696 -49320 0 0 0 0 0 0 0 0
+merge "port_address_0/addr1" "addr1"
+merge "port_address_0/wordline_driver_array_0/wordline_driver_cell_5/wl_en" "port_address_0/vdd_uq17" -43.512 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18960 -240 0 0 0 0 0 0
+merge "port_address_0/vdd_uq17" "vdd_uq26"
+merge "replica_bitcell_array_0/wwl_0_7" "port_address_0/wwl0_7" -57.4222 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -81088 -112 0 0 0 0 0 0 0 0 0 0
+merge "port_address_0/wwl0_7" "m1_6398_15504#"
+merge "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_0/in_0" "port_address_0/addr4" -10403.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -689696 -49320 0 0 0 0 0 0 0 0
+merge "port_address_0/addr4" "addr4"
+merge "replica_bitcell_array_0/rwl_0_1" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_30/rwl0" -17.2816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_30/rwl0" "port_address_0/rwl0_1"
+merge "port_address_0/rwl0_1" "m1_6398_6150#"
+merge "replica_bitcell_array_0/rwl_1_11" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_20/rwl1" -121.088 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -150966 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_20/rwl1" "port_address_0/rwl1_11"
+merge "port_address_0/rwl1_11" "m1_6398_21304#"
+merge "port_address_0/wordline_driver_array_0/wl_en" "port_address_0/gnd_uq15" -43.512 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18960 -240 0 0 0 0 0 0
+merge "port_address_0/gnd_uq15" "gnd_uq21"
+merge "replica_bitcell_array_0/rwl_1_2" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_29/rwl1" -17.2816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_29/rwl1" "port_address_0/rwl1_2"
+merge "port_address_0/rwl1_2" "m1_6398_7960#"
+merge "replica_bitcell_array_0/rwl_0_12" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_19/rwl0" -17.2816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_19/rwl0" "port_address_0/rwl0_12"
+merge "port_address_0/rwl0_12" "m1_6398_23114#"
+merge "replica_bitcell_array_0/wwl_0_10" "port_address_0/wwl0_10" -148.017 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -220464 -112 0 0 0 0 0 0 0 0 0 0
+merge "port_address_0/wwl0_10" "m1_6398_19912#"
+merge "port_address_0/hierarchical_decoder_0/hierarchical_predecode2x4_0/in_1" "port_address_0/addr5" -10403.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -689696 -49320 0 0 0 0 0 0 0 0
+merge "port_address_0/addr5" "addr5"
+merge "replica_bitcell_array_0/rwl_1_1" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_30/rwl1" -202.637 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -276426 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_30/rwl1" "port_address_0/rwl1_1"
+merge "port_address_0/rwl1_1" "m1_6398_5924#"
+merge "replica_bitcell_array_0/rwl_1_7" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_24/rwl1" -134.73 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -171954 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_24/rwl1" "port_address_0/rwl1_7"
+merge "port_address_0/rwl1_7" "m1_6398_15152#"
+merge "port_data_0/vdd_uq2" "vdd_uq2" -47.004 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7320 -240 0 0 0 0 0 0
+merge "replica_bitcell_array_0/wwl_0_15" "port_address_0/wwl0_15" -24.1838 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -29952 -112 0 0 0 0 0 0 0 0 0 0
+merge "port_address_0/wwl0_15" "m1_6398_27808#"
+merge "port_address_0/wl_en" "wl_en" -302.525 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9800 -112 -125768 -1200 0 0 0 0 0 0
+merge "wl_en" "port_address_0/wordline_driver_array_0/wordline_driver_cell_0/wl_en"
+merge "port_address_0/wordline_driver_array_0/wordline_driver_cell_0/wl_en" "port_address_0/gnd_uq31"
+merge "port_address_0/gnd_uq31" "gnd_uq37"
+merge "gnd_uq37" "port_address_0/wordline_driver_array_0/wordline_driver_cell_1/wl_en"
+merge "port_address_0/wordline_driver_array_0/wordline_driver_cell_1/wl_en" "port_address_0/wordline_driver_array_0/wordline_driver_cell_2/wl_en"
+merge "port_address_0/wordline_driver_array_0/wordline_driver_cell_2/wl_en" "vdd_uq32"
+merge "vdd_uq32" "port_address_0/gnd_uq27"
+merge "port_address_0/gnd_uq27" "gnd_uq33"
+merge "gnd_uq33" "port_address_0/wordline_driver_array_0/wordline_driver_cell_3/wl_en"
+merge "port_address_0/wordline_driver_array_0/wordline_driver_cell_3/wl_en" "port_address_0/wordline_driver_array_0/wordline_driver_cell_4/wl_en"
+merge "port_address_0/wordline_driver_array_0/wordline_driver_cell_4/wl_en" "vdd_uq28"
+merge "vdd_uq28" "port_address_0/gnd_uq23"
+merge "port_address_0/gnd_uq23" "gnd_uq29"
+merge "replica_bitcell_array_0/rwl_1_12" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_19/rwl1" -17.2816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_19/rwl1" "port_address_0/rwl1_12"
+merge "port_address_0/rwl1_12" "m1_6398_23340#"
+merge "replica_bitcell_array_0/wwl_0_11" "port_address_0/wwl0_11" 0.9634 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "port_address_0/wwl0_11" "m1_6398_21656#"
+merge "port_data_0/vdd_uq3" "vdd_uq3" -57.9108 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -29036 -240 0 0 0 0 0 0
+merge "replica_bitcell_array_0/rwl_0_3" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_28/rwl0" -17.2816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_28/rwl0" "port_address_0/rwl0_3"
+merge "port_address_0/rwl0_3" "m1_6398_9226#"
+merge "port_address_0/gnd_uq1" "gnd_uq7" -110.82 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -41400 -480 0 0 0 0 0 0
+merge "gnd_uq7" "gnd_uq8"
+merge "replica_bitcell_array_0/rwl_1_13" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_18/rwl1" -17.2816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_18/rwl1" "port_address_0/rwl1_13"
+merge "port_address_0/rwl1_13" "m1_6398_24380#"
+merge "replica_bitcell_array_0/rwl_0_9" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_22/rwl0" -74.4712 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -79248 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_22/rwl0" "port_address_0/rwl0_9"
+merge "port_address_0/rwl0_9" "m1_6398_18454#"
+merge "replica_bitcell_array_0/wwl_0_12" "port_address_0/wwl0_12" 0.9634 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "port_address_0/wwl0_12" "m1_6398_22988#"
+merge "port_data_0/vdd_uq4" "vdd_uq4" -47.004 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7320 -240 0 0 0 0 0 0
+merge "replica_bitcell_array_0/rwl_0_4" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_27/rwl0" -90.6952 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -104208 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_27/rwl0" "port_address_0/rwl0_4"
+merge "port_address_0/rwl0_4" "m1_6398_10810#"
+merge "replica_bitcell_array_0/rwl_1_14" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_17/rwl1" -143.727 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -185796 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_17/rwl1" "port_address_0/rwl1_14"
+merge "port_address_0/rwl1_14" "m1_6398_26416#"
+merge "replica_bitcell_array_0/wwl_0_13" "port_address_0/wwl0_13" 0.9634 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "port_address_0/wwl0_13" "m1_6398_24732#"
+merge "port_data_0/vdd_uq5" "vdd_uq5" -52.2012 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -10004 -240 0 0 0 0 0 0
+merge "replica_bitcell_array_0/rwl_0_5" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_26/rwl0" -111.448 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -136136 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_26/rwl0" "port_address_0/rwl0_5"
+merge "port_address_0/rwl0_5" "m1_6398_12302#"
+merge "replica_bitcell_array_0/wwl_0_0" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/wwl0" -147.632 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -219872 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/wwl0" "port_address_0/wwl0_0"
+merge "port_address_0/wwl0_0" "m1_6398_4532#"
+merge "replica_bitcell_array_0/wwl_0_14" "port_address_0/wwl0_14" 0.9634 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "port_address_0/wwl0_14" "m1_6398_26064#"
+merge "port_data_0/vdd_uq6" "vdd_uq6" -48.624 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1920 -240 0 0 0 0 0 0
+merge "replica_bitcell_array_0/rwl_0_6" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_25/rwl0" -49.4852 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -40808 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_25/rwl0" "port_address_0/rwl0_6"
+merge "port_address_0/rwl0_6" "m1_6398_13886#"
+merge "port_data_0/vdd_uq7" "vdd_uq7" -48.6912 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1696 -240 0 0 0 0 0 0
+merge "replica_bitcell_array_0/rwl_0_7" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_24/rwl0" -10.9364 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7144 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_24/rwl0" "port_address_0/rwl0_7"
+merge "port_address_0/rwl0_7" "m1_6398_15378#"
+merge "port_address_0/gnd_uq5" "gnd_uq11" -95.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9000 -480 0 0 0 0 0 0
+merge "gnd_uq11" "gnd_uq12"
+merge "port_data_0/dout0_0" "dout1_0" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/wwl_0_3" "port_address_0/wwl0_3" 0.9634 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "port_address_0/wwl0_3" "m1_6398_9352#"
+merge "replica_bitcell_array_0/rwl_0_10" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_21/rwl0" -17.2816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_21/rwl0" "port_address_0/rwl0_10"
+merge "port_address_0/rwl0_10" "m1_6398_20038#"
+merge "replica_bitcell_array_0/rwl_0_8" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_23/rwl0" -80.2796 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -88184 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_23/rwl0" "port_address_0/rwl0_8"
+merge "port_address_0/rwl0_8" "m1_6398_16962#"
+merge "port_data_0/dout0_1" "dout1_1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/rwl_0_11" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_20/rwl0" -17.2816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_20/rwl0" "port_address_0/rwl0_11"
+merge "port_address_0/rwl0_11" "m1_6398_21530#"
+merge "replica_bitcell_array_0/rwl_1_6" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_25/rwl1" -124.347 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -155980 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_25/rwl1" "port_address_0/rwl1_6"
+merge "port_address_0/rwl1_6" "m1_6398_14112#"
+merge "port_address_0/gnd_uq8" "gnd_uq14" -46.644 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8520 -240 0 0 0 0 0 0
+merge "replica_bitcell_array_0/rwl_0_13" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_18/rwl0" -17.2816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_18/rwl0" "port_address_0/rwl0_13"
+merge "port_address_0/rwl0_13" "m1_6398_24606#"
+merge "port_address_0/gnd_uq9" "gnd_uq15" -106.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -27000 -480 0 0 0 0 0 0
+merge "gnd_uq15" "gnd_uq16"
+merge "replica_bitcell_array_0/rwl_0_14" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_17/rwl0" -151.925 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -198408 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_17/rwl0" "port_address_0/rwl0_14"
+merge "port_address_0/rwl0_14" "m1_6398_26190#"
+merge "replica_bitcell_array_0/wwl_0_2" "port_address_0/wwl0_2" 0.9634 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "port_address_0/wwl0_2" "m1_6398_7608#"
+merge "port_address_0/gnd_uq20" "gnd_uq26" -44.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15000 -240 0 0 0 0 0 0
+merge "port_address_0/gnd_uq32" "gnd_uq38" -50.28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3600 -240 0 0 0 0 0 0
+merge "port_address_0/gnd_uq21" "gnd_uq27" -111.036 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -42120 -480 0 0 0 0 0 0
+merge "gnd_uq27" "gnd_uq28"
+merge "port_address_0/vdd_uq20" "vdd_uq29" -49.488 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -960 -240 0 0 0 0 0 0
+merge "replica_bitcell_array_0/rwl_1_0" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/rwl1" -17.2816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_31/rwl1" "port_address_0/rwl1_0"
+merge "port_address_0/rwl1_0" "m1_6398_4884#"
+merge "port_address_0/gnd_uq33" "gnd_uq39" -95.16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10800 -480 0 0 0 0 0 0
+merge "gnd_uq39" "gnd_uq40"
+merge "port_address_0/vdd_uq21" "vdd_uq30" -98.508 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -360 -480 0 0 0 0 0 0
+merge "vdd_uq30" "vdd_uq31"
+merge "port_address_0/vdd_uq10" "vdd_uq19" -50.28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3600 -240 0 0 0 0 0 0
+merge "port_address_0/vdd_uq11" "vdd_uq20" -95.16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10800 -480 0 0 0 0 0 0
+merge "vdd_uq20" "vdd_uq21"
+merge "port_address_0/gnd_uq12" "gnd_uq18" -50.28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3600 -240 0 0 0 0 0 0
+merge "port_data_0/w_en" "port_data_0/write_driver_array_0/write_driver_multiport_1/en" -327.492 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -20664 -1532 0 0 0 0 0 0 0 0 0 0
+merge "port_data_0/write_driver_array_0/write_driver_multiport_1/en" "w_en"
+merge "port_address_0/gnd_uq24" "gnd_uq30" -49.668 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1560 -240 0 0 0 0 0 0
+merge "port_address_0/gnd_uq13" "gnd_uq19" -95.16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10800 -480 0 0 0 0 0 0
+merge "gnd_uq19" "gnd_uq20"
+merge "port_data_0/gnd_uq3" "gnd_uq3" -143.946 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12180 -720 0 0 0 0 0 0
+merge "gnd_uq3" "port_data_0/gnd_uq4"
+merge "port_data_0/gnd_uq4" "gnd_uq4"
+merge "port_address_0/vdd_uq24" "vdd_uq33" -44.52 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15600 -240 0 0 0 0 0 0
+merge "port_address_0/gnd_uq25" "gnd_uq31" -96.132 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7560 -480 0 0 0 0 0 0
+merge "gnd_uq31" "gnd_uq32"
+merge "port_address_0/wordline_driver_array_0/wordline_driver_cell_7/wl_en" "port_address_0/vdd_uq13" -43.512 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18960 -240 0 0 0 0 0 0
+merge "port_address_0/vdd_uq13" "vdd_uq22"
+merge "port_data_0/din0_0" "din0_0" -33.5248 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 224 -164 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/rwl_1_4" "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_27/rwl1" -100.427 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -119180 -112 0 0 0 0 0 0 0 0 0 0
+merge "replica_bitcell_array_0/bitcell_array_0/cell_2r1w_27/rwl1" "port_address_0/rwl1_4"
+merge "port_address_0/rwl1_4" "m1_6398_11036#"
+merge "port_address_0/vdd_uq25" "vdd_uq34" -113.628 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -50760 -480 0 0 0 0 0 0
+merge "vdd_uq34" "vdd_uq35"
+merge "port_address_0/vdd_uq14" "vdd_uq23" -50.28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3600 -240 0 0 0 0 0 0
+merge "replica_bitcell_array_0/wwl_0_1" "port_address_0/wwl0_1" 0.9634 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "port_address_0/wwl0_1" "m1_6398_6276#"
+merge "replica_bitcell_array_0/wwl_0_4" "port_address_0/wwl0_4" 0.9634 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8736 -112 0 0 0 0 0 0 0 0 0 0
+merge "port_address_0/wwl0_4" "m1_6398_10684#"
+merge "port_data_0/din0_1" "din0_1" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "port_address_0/vdd_uq15" "vdd_uq24" -95.16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10800 -480 0 0 0 0 0 0
+merge "vdd_uq24" "vdd_uq25"
+merge "port_address_0/gnd_uq16" "gnd_uq22" -50.28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3600 -240 0 0 0 0 0 0
+merge "port_address_0/gnd_uq28" "gnd_uq34" -47.004 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7320 -240 0 0 0 0 0 0
+merge "port_address_0/gnd_uq17" "gnd_uq23" -95.16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10800 -480 0 0 0 0 0 0
+merge "gnd_uq23" "gnd_uq24"
+merge "port_address_0/vdd_uq1" "vdd_uq10" -103.26 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16200 -480 0 0 0 0 0 0
+merge "vdd_uq10" "vdd_uq11"
+merge "port_address_0/gnd_uq29" "gnd_uq35" -106.068 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -25560 -480 0 0 0 0 0 0
+merge "gnd_uq35" "gnd_uq36"
+merge "port_address_0/vdd_uq18" "vdd_uq27" -47.184 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6720 -240 0 0 0 0 0 0
+merge "port_address_0/vdd_uq4" "vdd_uq13" -49.128 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 240 -240 0 0 0 0 0 0
+merge "port_address_0/vdd_uq5" "vdd_uq14" -98.94 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1800 -480 0 0 0 0 0 0
+merge "vdd_uq14" "vdd_uq15"
+merge "port_address_0/vdd_uq8" "vdd_uq17" -44.16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16800 -240 0 0 0 0 0 0
+merge "port_address_0/wordline_driver_array_0/wordline_driver_cell_9/wl_en" "port_address_0/vdd_uq9" -43.512 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18960 -240 0 0 0 0 0 0
+merge "port_address_0/vdd_uq9" "vdd_uq18"

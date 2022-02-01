@@ -1,0 +1,64 @@
+timestamp 1643671299
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use contact_9 contact_9_0 1 0 1072 0 1 98
+use contact_9 contact_9_1 1 0 968 0 1 98
+use contact_9 contact_9_2 1 0 860 0 1 98
+use contact_9 contact_9_3 1 0 752 0 1 98
+use contact_9 contact_9_4 1 0 644 0 1 98
+use contact_9 contact_9_5 1 0 536 0 1 98
+use contact_9 contact_9_6 1 0 428 0 1 98
+use contact_9 contact_9_7 1 0 320 0 1 98
+use contact_9 contact_9_8 1 0 212 0 1 98
+use contact_9 contact_9_9 1 0 104 0 1 98
+use contact_9 contact_9_10 1 0 0 0 1 98
+parameters sky130_fd_pr__pfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+node "S_uq0" 933 0 1062 0 pdif 0 0 0 0 0 0 0 0 0 0 16620 674 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S" 723 0 846 0 pdif 0 0 0 0 0 0 0 0 0 0 21606 710 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq1" 723 0 630 0 pdif 0 0 0 0 0 0 0 0 0 0 21606 710 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq2" 723 0 414 0 pdif 0 0 0 0 0 0 0 0 0 0 21606 710 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq3" 723 0 198 0 pdif 0 0 0 0 0 0 0 0 0 0 21606 710 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "D" 5846 0 90 0 pdif 0 0 0 0 0 0 0 0 0 0 108030 3550 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 47532 2864 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq4" 933 0 0 0 pdif 0 0 0 0 0 0 0 0 0 0 16620 674 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "G" 6896 974.599 60 -56 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 128760 8644 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_n59_55#" 5523 1425.69 -59 55 nw 0 0 0 0 475230 3250 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "S" "S_uq2" 5.47236
+cap "S" "S_uq0" 12.236
+cap "D" "S_uq3" 144.728
+cap "S_uq2" "S_uq3" 11.967
+cap "S_uq4" "D" 38.7297
+cap "S_uq1" "D" 152.239
+cap "S_uq1" "S" 11.967
+cap "S_uq4" "S_uq2" 5.52792
+cap "S_uq1" "S_uq2" 11.967
+cap "S_uq1" "S_uq0" 5.52792
+cap "D" "G" 143.976
+cap "S" "D" 144.728
+cap "S_uq4" "S_uq3" 12.236
+cap "S_uq1" "S_uq3" 5.47236
+cap "S_uq2" "D" 152.239
+cap "S_uq0" "D" 38.7297
+device msubckt sky130_fd_pr__pfet_01v8 1032 0 1033 1 l=30 w=277 "w_n59_55#" "G" 60 0 "D" 277 0 "S_uq0" 277 0
+device msubckt sky130_fd_pr__pfet_01v8 924 0 925 1 l=30 w=277 "w_n59_55#" "G" 60 0 "S" 277 0 "D" 277 0
+device msubckt sky130_fd_pr__pfet_01v8 816 0 817 1 l=30 w=277 "w_n59_55#" "G" 60 0 "D" 277 0 "S" 277 0
+device msubckt sky130_fd_pr__pfet_01v8 708 0 709 1 l=30 w=277 "w_n59_55#" "G" 60 0 "S_uq1" 277 0 "D" 277 0
+device msubckt sky130_fd_pr__pfet_01v8 600 0 601 1 l=30 w=277 "w_n59_55#" "G" 60 0 "D" 277 0 "S_uq1" 277 0
+device msubckt sky130_fd_pr__pfet_01v8 492 0 493 1 l=30 w=277 "w_n59_55#" "G" 60 0 "S_uq2" 277 0 "D" 277 0
+device msubckt sky130_fd_pr__pfet_01v8 384 0 385 1 l=30 w=277 "w_n59_55#" "G" 60 0 "D" 277 0 "S_uq2" 277 0
+device msubckt sky130_fd_pr__pfet_01v8 276 0 277 1 l=30 w=277 "w_n59_55#" "G" 60 0 "S_uq3" 277 0 "D" 277 0
+device msubckt sky130_fd_pr__pfet_01v8 168 0 169 1 l=30 w=277 "w_n59_55#" "G" 60 0 "D" 277 0 "S_uq3" 277 0
+device msubckt sky130_fd_pr__pfet_01v8 60 0 61 1 l=30 w=277 "w_n59_55#" "G" 60 0 "S_uq4" 277 0 "D" 277 0
+merge "contact_9_0/gnd" "contact_9_1/gnd" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "contact_9_1/gnd" "contact_9_2/gnd"
+merge "contact_9_2/gnd" "contact_9_3/gnd"
+merge "contact_9_3/gnd" "contact_9_4/gnd"
+merge "contact_9_4/gnd" "contact_9_5/gnd"
+merge "contact_9_5/gnd" "contact_9_6/gnd"
+merge "contact_9_6/gnd" "contact_9_7/gnd"
+merge "contact_9_7/gnd" "contact_9_8/gnd"
+merge "contact_9_8/gnd" "contact_9_9/gnd"
+merge "contact_9_9/gnd" "gnd"

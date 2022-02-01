@@ -1,0 +1,113 @@
+|==============================================================================|
+|=========                      OpenRAM v1.1.18                       =========|
+|=========                                                            =========|
+|=========               VLSI Design and Automation Lab               =========|
+|=========        Computer Science and Engineering Department         =========|
+|=========            University of California Santa Cruz             =========|
+|=========                                                            =========|
+|=========          Usage help: openram-user-group@ucsc.edu           =========|
+|=========        Development help: openram-dev-group@ucsc.edu        =========|
+|=========     Temp dir: /tmp/openram_vincenzogiannone_4001_temp/     =========|
+|=========                See LICENSE for license info                =========|
+|==============================================================================|
+** Start: 02/01/2022 00:00:00
+Technology: sky130A
+Total size: 512 bits
+Word size: 16
+Words: 32
+Banks: 1
+Write size: None
+RW ports: 0
+R-only ports: 2
+W-only ports: 1
+DRC/LVS/PEX is only run on the top-level design to save run-time (inline_lvsdrc=True to do inline checking).
+Characterization is disabled (using analytical delay models) (analytical_delay=False to simulate).
+Words per row: 2
+Output files are: 
+/home/vincenzogiannone/Desktop/work_OpenRAM-1.1.18/compiler/macro/sram_0rw2r1w_16_32_sky130A/sram_0rw2r1w_16_32_sky130A.lvs
+/home/vincenzogiannone/Desktop/work_OpenRAM-1.1.18/compiler/macro/sram_0rw2r1w_16_32_sky130A/sram_0rw2r1w_16_32_sky130A.sp
+/home/vincenzogiannone/Desktop/work_OpenRAM-1.1.18/compiler/macro/sram_0rw2r1w_16_32_sky130A/sram_0rw2r1w_16_32_sky130A.v
+/home/vincenzogiannone/Desktop/work_OpenRAM-1.1.18/compiler/macro/sram_0rw2r1w_16_32_sky130A/sram_0rw2r1w_16_32_sky130A.lib
+/home/vincenzogiannone/Desktop/work_OpenRAM-1.1.18/compiler/macro/sram_0rw2r1w_16_32_sky130A/sram_0rw2r1w_16_32_sky130A.py
+/home/vincenzogiannone/Desktop/work_OpenRAM-1.1.18/compiler/macro/sram_0rw2r1w_16_32_sky130A/sram_0rw2r1w_16_32_sky130A.html
+/home/vincenzogiannone/Desktop/work_OpenRAM-1.1.18/compiler/macro/sram_0rw2r1w_16_32_sky130A/sram_0rw2r1w_16_32_sky130A.log
+/home/vincenzogiannone/Desktop/work_OpenRAM-1.1.18/compiler/macro/sram_0rw2r1w_16_32_sky130A/sram_0rw2r1w_16_32_sky130A.lef
+/home/vincenzogiannone/Desktop/work_OpenRAM-1.1.18/compiler/macro/sram_0rw2r1w_16_32_sky130A/sram_0rw2r1w_16_32_sky130A.gds
+** Submodules: 0.8 seconds
+** Placement: 0.0 seconds
+**** Retrieving pins: 0.0 seconds
+**** Analyzing pins: 0.0 seconds
+**** Finding blockages: 0.2 seconds
+**** Converting blockages: 0.0 seconds
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[1] layer=m3 ll=v[62.230000000000004,21.5] ur=v[62.53,21.8])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[2] layer=m3 ll=v[70.01,21.5] ur=v[70.31,21.8])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[3] layer=m3 ll=v[77.79,21.5] ur=v[78.09,21.8])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[4] layer=m3 ll=v[85.57000000000001,21.5] ur=v[85.87,21.8])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[5] layer=m3 ll=v[93.35000000000001,21.5] ur=v[93.65,21.8])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[6] layer=m3 ll=v[101.13,21.5] ur=v[101.43,21.8])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[7] layer=m3 ll=v[108.91,21.5] ur=v[109.21000000000001,21.8])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[8] layer=m3 ll=v[116.69,21.5] ur=v[116.99000000000001,21.8])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[9] layer=m3 ll=v[124.47,21.5] ur=v[124.77,21.8])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[10] layer=m3 ll=v[132.25,21.5] ur=v[132.55,21.8])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (addr1[1] layer=m3 ll=v[-7.205,30.13] ur=v[-6.905,30.43])
+
+**** Converting pins: 0.1 seconds
+**** Separating adjacent pins: 0.0 seconds
+**** Enclosing pins: 0.0 seconds
+*** Finding pins and blockages: 3.2 seconds
+*** Maze routing pins: 30.3 seconds
+**** Retrieving pins: 0.0 seconds
+**** Analyzing pins: 0.0 seconds
+**** Finding blockages: 0.3 seconds
+**** Converting blockages: 0.0 seconds
+WARNING: file pin_group.py: line 654:   Expanding conversion (gnd layer=m3 ll=v[61.83,21.93] ur=v[62.13,22.23])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (gnd layer=m3 ll=v[69.61,21.93] ur=v[69.91,22.23])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (gnd layer=m3 ll=v[77.39,21.93] ur=v[77.69,22.23])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (gnd layer=m3 ll=v[85.17,21.93] ur=v[85.47,22.23])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (gnd layer=m3 ll=v[92.95,21.93] ur=v[93.25,22.23])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (gnd layer=m3 ll=v[100.73,21.93] ur=v[101.03,22.23])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (gnd layer=m3 ll=v[108.51,21.93] ur=v[108.81,22.23])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (gnd layer=m3 ll=v[116.29,21.93] ur=v[116.59,22.23])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (gnd layer=m3 ll=v[124.07000000000001,21.93] ur=v[124.37,22.23])
+
+**** Converting pins: 0.5 seconds
+**** Separating adjacent pins: 0.2 seconds
+**** Enclosing pins: 0.5 seconds
+*** Finding pins and blockages: 4.5 seconds
+*** Maze routing supplies: 56.8 seconds
+** Routing: 134.3 seconds
+WARNING: file magic.py: line 239: DRC Errors sram_0rw2r1w_16_32_sky130A	20681
+
+ERROR: file magic.py: line 348: sram_0rw2r1w_16_32_sky130A	LVS mismatch (results in /tmp/openram_vincenzogiannone_4001_temp/sram_0rw2r1w_16_32_sky130A.lvs.report)
+
+** Verification: 29.3 seconds
+** SRAM creation: 164.5 seconds
+SP: Writing to /home/vincenzogiannone/Desktop/work_OpenRAM-1.1.18/compiler/macro/sram_0rw2r1w_16_32_sky130A/sram_0rw2r1w_16_32_sky130A.sp
+** Spice writing: 0.1 seconds
+GDS: Writing to /home/vincenzogiannone/Desktop/work_OpenRAM-1.1.18/compiler/macro/sram_0rw2r1w_16_32_sky130A/sram_0rw2r1w_16_32_sky130A.gds
+** GDS: 0.1 seconds
+LEF: Writing to /home/vincenzogiannone/Desktop/work_OpenRAM-1.1.18/compiler/macro/sram_0rw2r1w_16_32_sky130A/sram_0rw2r1w_16_32_sky130A.lef
+** LEF: 0.0 seconds
+LVS: Writing to /home/vincenzogiannone/Desktop/work_OpenRAM-1.1.18/compiler/macro/sram_0rw2r1w_16_32_sky130A/sram_0rw2r1w_16_32_sky130A.lvs.sp
+** LVS writing: 0.0 seconds
+LIB: Characterizing... 
+WARNING: file elmore.py: line 38: In analytical mode, all ports have the timing of the first read port.
+

@@ -1,0 +1,81 @@
+timestamp 1643593061
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use write_driver_multiport write_driver_multiport_1 1 0 0 0 1 0
+use contact_22 contact_22_3 1 0 323 0 1 842
+use contact_23 contact_23_3 1 0 319 0 1 844
+use contact_22 contact_22_2 1 0 323 0 1 10
+use contact_23 contact_23_2 1 0 319 0 1 12
+use write_driver_multiport write_driver_multiport_0 1 0 778 0 1 0
+use contact_22 contact_22_1 1 0 1101 0 1 842
+use contact_23 contact_23_1 1 0 1097 0 1 844
+use contact_22 contact_22_0 1 0 1101 0 1 10
+use contact_23 contact_23_0 1 0 1097 0 1 12
+node "din_1" 0 34.2626 974 272 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_0" 0 34.2626 196 272 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "wbl0_1" 3 265.464 1408 322 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17640 1316 0 0 0 0 0 0 0 0
+node "wbl0_0" 3 265.464 630 322 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17640 1316 0 0 0 0 0 0 0 0
+node "gnd_uq0" 0 102.375 1101 10 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3328 232 3136 224 3600 240 0 0 0 0 0 0
+node "gnd" 0 102.375 323 10 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3328 232 3136 224 3600 240 0 0 0 0 0 0
+node "en" 7 643.503 0 356 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 41328 3008 0 0 0 0 0 0 0 0 0 0
+node "vdd_uq0" 0 102.375 1101 842 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3328 232 3136 224 3600 240 0 0 0 0 0 0
+node "vdd" 0 102.375 323 842 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3328 232 3136 224 3600 240 0 0 0 0 0 0
+substrate "gnd" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "vdd" "wbl0_0" 11.0672
+cap "en" "gnd_uq0" 8.29787
+cap "wbl0_1" "vdd_uq0" 11.0672
+cap "en" "wbl0_0" 34.8264
+cap "gnd" "en" 8.29787
+cap "wbl0_1" "en" 34.8264
+subcap "wbl0_1" -220.471
+cap "write_driver_multiport_0/enb" "gnd" 7.37234
+cap "write_driver_multiport_1/enb" "en" 124.044
+cap "write_driver_multiport_0/enb" "write_driver_multiport_1/net1" 3
+cap "write_driver_multiport_0/net1" "wbl0_0" 31.0691
+cap "write_driver_multiport_0/enb" "vdd_uq0" 0.0609947
+cap "write_driver_multiport_0/enb" "en" 122.099
+cap "vdd_uq0" "vdd" 40.0182
+cap "write_driver_multiport_0/enb" "wbl0_0" 124.422
+cap "vdd" "wbl0_0" -1.24345e-14
+cap "gnd" "en" 67.8185
+cap "en" "write_driver_multiport_1/net1" 24.7336
+cap "gnd" "wbl0_0" 21.5672
+cap "din_1" "en" 10.6799
+cap "din_1" "wbl0_0" 26.4169
+cap "write_driver_multiport_0/enb" "write_driver_multiport_1/enb" 12.7398
+cap "vdd" "write_driver_multiport_1/enb" 0.0609947
+cap "gnd" "wbl0_1" 5.5336
+cap "wbl0_0" "en" 117.65
+cap "vdd_uq0" "wbl0_0" 33.75
+cap "en" "wbl0_1" 5.29412
+cap "vdd_uq0" "wbl0_1" 7.99361e-15
+cap "write_driver_multiport_0/enb" "vdd" 23.6968
+cap "write_driver_multiport_0/net1" "en" 19.805
+subcap "gnd_uq0" -202.726
+subcap "vdd_uq0" -154.954
+cap "write_driver_multiport_0/en" "wbl0_1" 96.1026
+cap "wbl0_1" "vdd_uq0" -6.21725e-15
+cap "gnd_uq0" "wbl0_1" 5.5336
+cap "write_driver_multiport_0/en" "gnd_uq0" 12.0423
+merge "contact_23_0/gnd" "contact_22_0/gnd" -489.092 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -19812 -448 0 0 0 0 0 0 0 0 0 0
+merge "contact_22_0/gnd" "contact_23_1/gnd"
+merge "contact_23_1/gnd" "contact_22_1/gnd"
+merge "contact_22_1/gnd" "write_driver_multiport_0/gnd"
+merge "write_driver_multiport_0/gnd" "gnd_uq0"
+merge "gnd_uq0" "contact_23_2/gnd"
+merge "contact_23_2/gnd" "contact_22_2/gnd"
+merge "contact_22_2/gnd" "contact_23_3/gnd"
+merge "contact_23_3/gnd" "contact_22_3/gnd"
+merge "contact_22_3/gnd" "write_driver_multiport_1/gnd"
+merge "write_driver_multiport_1/gnd" "gnd"
+merge "write_driver_multiport_0/vdd" "vdd_uq0" -248.957 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16692 -224 0 0 0 0 0 0 0 0 0 0
+merge "write_driver_multiport_0/din" "din_1" -29.8358 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8904 -164 0 0 0 0 0 0 0 0
+merge "write_driver_multiport_0/en" "write_driver_multiport_1/en" -411.187 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15904 -1688 0 0 0 0 0 0 0 0 0 0
+merge "write_driver_multiport_1/en" "en"
+merge "write_driver_multiport_1/wbl" "wbl0_0" -276.944 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -17640 -1316 0 0 0 0 0 0 0 0
+merge "write_driver_multiport_0/wbl" "wbl0_1" -274.802 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12600 -1316 0 0 0 0 0 0 0 0
+merge "write_driver_multiport_1/din" "din_0" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "write_driver_multiport_1/vdd" "vdd" -240.135 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3120 -224 0 0 0 0 0 0 0 0 0 0

@@ -1,0 +1,34 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1643671299
+<< checkpaint >>
+rect -1296 -1277 3105 2155
+<< locali >>
+rect 0 821 1809 855
+rect 196 497 262 563
+rect 330 390 364 561
+rect 330 356 459 390
+rect 1099 356 1133 390
+rect 96 257 162 323
+rect 0 -17 1809 17
+use pdriver  pdriver_0
+timestamp 1643671299
+transform 1 0 378 0 1 0
+box -36 -17 1467 895
+use pnand2_0  pnand2_0_0
+timestamp 1643671299
+transform 1 0 0 0 1 0
+box -36 -17 414 895
+<< labels >>
+rlabel locali s 1116 373 1116 373 4 Z
+rlabel locali s 129 290 129 290 4 A
+rlabel locali s 229 530 229 530 4 B
+rlabel locali s 904 0 904 0 4 gnd
+rlabel locali s 904 838 904 838 4 vdd
+<< properties >>
+string FIXED_BBOX 0 0 1809 838
+string GDS_FILE sram_0rw2r1w_16_32_sky130A.gds
+string GDS_END 1183476
+string GDS_START 1182344
+<< end >>

@@ -1,0 +1,10 @@
+magic
+tech sky130A
+timestamp 1643671299
+<< checkpaint >>
+rect -630 -630 631 631
+<< properties >>
+string GDS_FILE sram_0rw2r1w_16_32_sky130A.gds
+string GDS_END 777182
+string GDS_START 776730
+<< end >>

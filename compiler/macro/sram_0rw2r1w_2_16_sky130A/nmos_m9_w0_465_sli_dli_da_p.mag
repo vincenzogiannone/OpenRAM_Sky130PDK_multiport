@@ -1,0 +1,164 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1643593061
+<< checkpaint >>
+rect -1260 -1286 2274 1409
+<< scnmos >>
+rect 60 0 90 93
+rect 168 0 198 93
+rect 276 0 306 93
+rect 384 0 414 93
+rect 492 0 522 93
+rect 600 0 630 93
+rect 708 0 738 93
+rect 816 0 846 93
+rect 924 0 954 93
+<< ndiff >>
+rect 0 64 60 93
+rect 0 30 8 64
+rect 42 30 60 64
+rect 0 0 60 30
+rect 90 64 168 93
+rect 90 30 112 64
+rect 146 30 168 64
+rect 90 0 168 30
+rect 198 64 276 93
+rect 198 30 220 64
+rect 254 30 276 64
+rect 198 0 276 30
+rect 306 64 384 93
+rect 306 30 328 64
+rect 362 30 384 64
+rect 306 0 384 30
+rect 414 64 492 93
+rect 414 30 436 64
+rect 470 30 492 64
+rect 414 0 492 30
+rect 522 64 600 93
+rect 522 30 544 64
+rect 578 30 600 64
+rect 522 0 600 30
+rect 630 64 708 93
+rect 630 30 652 64
+rect 686 30 708 64
+rect 630 0 708 30
+rect 738 64 816 93
+rect 738 30 760 64
+rect 794 30 816 64
+rect 738 0 816 30
+rect 846 64 924 93
+rect 846 30 868 64
+rect 902 30 924 64
+rect 846 0 924 30
+rect 954 64 1014 93
+rect 954 30 972 64
+rect 1006 30 1014 64
+rect 954 0 1014 30
+<< ndiffc >>
+rect 8 30 42 64
+rect 112 30 146 64
+rect 220 30 254 64
+rect 328 30 362 64
+rect 436 30 470 64
+rect 544 30 578 64
+rect 652 30 686 64
+rect 760 30 794 64
+rect 868 30 902 64
+rect 972 30 1006 64
+<< poly >>
+rect 60 119 954 149
+rect 60 93 90 119
+rect 168 93 198 119
+rect 276 93 306 119
+rect 384 93 414 119
+rect 492 93 522 119
+rect 600 93 630 119
+rect 708 93 738 119
+rect 816 93 846 119
+rect 924 93 954 119
+rect 60 -26 90 0
+rect 168 -26 198 0
+rect 276 -26 306 0
+rect 384 -26 414 0
+rect 492 -26 522 0
+rect 600 -26 630 0
+rect 708 -26 738 0
+rect 816 -26 846 0
+rect 924 -26 954 0
+<< locali >>
+rect 112 114 1006 148
+rect 8 64 42 80
+rect 8 14 42 30
+rect 112 64 146 114
+rect 112 14 146 30
+rect 220 64 254 80
+rect 220 14 254 30
+rect 328 64 362 114
+rect 328 14 362 30
+rect 436 64 470 80
+rect 436 14 470 30
+rect 544 64 578 114
+rect 544 14 578 30
+rect 652 64 686 80
+rect 652 14 686 30
+rect 760 64 794 114
+rect 760 14 794 30
+rect 868 64 902 80
+rect 868 14 902 30
+rect 972 64 1006 114
+rect 972 14 1006 30
+use contact_8  contact_8_0
+timestamp 1643593061
+transform 1 0 964 0 1 6
+box 0 0 1 1
+use contact_8  contact_8_1
+timestamp 1643593061
+transform 1 0 860 0 1 6
+box 0 0 1 1
+use contact_8  contact_8_2
+timestamp 1643593061
+transform 1 0 752 0 1 6
+box 0 0 1 1
+use contact_8  contact_8_3
+timestamp 1643593061
+transform 1 0 644 0 1 6
+box 0 0 1 1
+use contact_8  contact_8_4
+timestamp 1643593061
+transform 1 0 536 0 1 6
+box 0 0 1 1
+use contact_8  contact_8_5
+timestamp 1643593061
+transform 1 0 428 0 1 6
+box 0 0 1 1
+use contact_8  contact_8_6
+timestamp 1643593061
+transform 1 0 320 0 1 6
+box 0 0 1 1
+use contact_8  contact_8_7
+timestamp 1643593061
+transform 1 0 212 0 1 6
+box 0 0 1 1
+use contact_8  contact_8_8
+timestamp 1643593061
+transform 1 0 104 0 1 6
+box 0 0 1 1
+use contact_8  contact_8_9
+timestamp 1643593061
+transform 1 0 0 0 1 6
+box 0 0 1 1
+<< labels >>
+rlabel mvvaractor s 507 134 507 134 4 G
+rlabel locali s 453 47 453 47 4 S
+rlabel locali s 669 47 669 47 4 S
+rlabel locali s 237 47 237 47 4 S
+rlabel locali s 885 47 885 47 4 S
+rlabel locali s 25 47 25 47 4 S
+rlabel locali s 559 131 559 131 4 D
+<< properties >>
+string FIXED_BBOX -25 -26 1039 149
+string GDS_FILE sram_0rw2r1w_2_16_sky130A.gds
+string GDS_END 567102
+string GDS_START 564706
+<< end >>

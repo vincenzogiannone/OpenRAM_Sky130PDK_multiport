@@ -1,0 +1,1120 @@
+timestamp 1643593061
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use bitcell_array bitcell_array_0 1 0 0 0 1 0
+node "write_bl_0_1" 0 9840.06 1404 0 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 689920 49336 0 0 0 0 0 0 0 0
+node "read_bl_1_1" 0 9840.06 1222 0 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 689920 49336 0 0 0 0 0 0 0 0
+node "read_bl_0_1" 0 9840.06 970 0 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 689920 49336 0 0 0 0 0 0 0 0
+node "write_bl_0_0" 0 9840.06 626 0 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 689920 49336 0 0 0 0 0 0 0 0
+node "read_bl_1_0" 0 9840.06 444 0 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 689920 49336 0 0 0 0 0 0 0 0
+node "read_bl_0_0" 0 9840.06 192 0 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 689920 49336 0 0 0 0 0 0 0 0
+node "wwl_0_0" 7 677.759 0 644 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_0_0" 7 677.759 0 770 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_1_0" 7 677.759 0 996 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_1_1" 7 677.759 0 2056 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_0_1" 7 677.759 0 2282 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "wwl_0_1" 7 677.759 0 2408 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "wwl_0_2" 7 677.759 0 3724 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_0_2" 7 677.759 0 3850 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_1_2" 7 677.759 0 4076 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_1_3" 7 677.759 0 5136 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_0_3" 7 677.759 0 5362 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "wwl_0_3" 7 677.759 0 5488 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "wwl_0_4" 7 677.759 0 6804 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_0_4" 7 677.759 0 6930 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_1_4" 7 677.759 0 7156 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_1_5" 7 677.759 0 8216 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_0_5" 7 677.759 0 8442 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "wwl_0_5" 7 677.759 0 8568 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "wwl_0_6" 7 677.759 0 9884 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_0_6" 7 677.759 0 10010 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_1_6" 7 677.759 0 10236 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_1_7" 7 677.759 0 11296 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_0_7" 7 677.759 0 11522 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "wwl_0_7" 7 677.759 0 11648 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "wwl_0_8" 7 677.759 0 12964 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_0_8" 7 677.759 0 13090 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_1_8" 7 677.759 0 13316 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_1_9" 7 677.759 0 14376 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_0_9" 7 677.759 0 14602 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "wwl_0_9" 7 677.759 0 14728 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "wwl_0_10" 7 677.759 0 16044 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_0_10" 7 677.759 0 16170 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_1_10" 7 677.759 0 16396 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_1_11" 7 677.759 0 17456 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_0_11" 7 677.759 0 17682 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "wwl_0_11" 7 677.759 0 17808 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "wwl_0_12" 7 677.759 0 19124 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_0_12" 7 677.759 0 19250 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_1_12" 7 677.759 0 19476 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_1_13" 7 677.759 0 20536 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_0_13" 7 677.759 0 20762 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "wwl_0_13" 7 677.759 0 20888 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "wwl_0_14" 7 677.759 0 22204 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_0_14" 7 677.759 0 22330 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_1_14" 7 677.759 0 22556 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_1_15" 7 677.759 0 23616 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "rwl_0_15" 7 677.759 0 23842 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+node "wwl_0_15" 7 677.759 0 23968 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43568 3168 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "rwl_1_12" "read_bl_1_1" 34.8264
+cap "write_bl_0_0" "rwl_1_6" 34.8264
+cap "wwl_0_9" "rwl_0_9" 714.49
+cap "write_bl_0_0" "wwl_0_10" 34.8264
+cap "rwl_1_10" "read_bl_1_1" 34.8264
+cap "wwl_0_14" "rwl_1_14" 216.111
+cap "rwl_0_13" "read_bl_1_1" 34.8264
+cap "read_bl_1_0" "wwl_0_1" 34.8264
+cap "write_bl_0_1" "wwl_0_4" 34.8264
+cap "rwl_0_5" "read_bl_0_1" 34.8264
+cap "rwl_0_8" "wwl_0_8" 714.49
+cap "rwl_0_2" "wwl_0_2" 714.49
+cap "rwl_0_2" "read_bl_0_0" 34.8264
+cap "rwl_1_4" "read_bl_0_0" 34.8264
+cap "rwl_1_13" "rwl_0_13" 353.636
+cap "read_bl_1_0" "rwl_1_14" 34.8264
+cap "rwl_1_4" "rwl_0_4" 353.636
+cap "rwl_1_9" "read_bl_0_1" 34.8264
+cap "wwl_0_13" "read_bl_1_1" 34.8264
+cap "write_bl_0_0" "rwl_0_14" 34.8264
+cap "read_bl_1_1" "read_bl_0_1" 5500
+cap "wwl_0_6" "write_bl_0_1" 34.8264
+cap "rwl_1_0" "read_bl_1_1" 34.8264
+cap "write_bl_0_1" "rwl_1_3" 34.8264
+cap "rwl_0_3" "write_bl_0_1" 34.8264
+cap "read_bl_1_0" "rwl_0_7" 34.8264
+cap "rwl_0_9" "read_bl_1_0" 34.8264
+cap "rwl_0_12" "rwl_1_12" 353.636
+cap "rwl_0_1" "read_bl_0_1" 34.8264
+cap "wwl_0_5" "read_bl_0_1" 34.8264
+cap "rwl_1_13" "wwl_0_13" 216.111
+cap "wwl_0_3" "read_bl_0_0" 34.8264
+cap "rwl_1_13" "read_bl_0_1" 34.8264
+cap "wwl_0_7" "read_bl_1_0" 34.8264
+cap "write_bl_0_0" "wwl_0_4" 34.8264
+cap "read_bl_0_0" "rwl_1_5" 34.8264
+cap "wwl_0_15" "read_bl_0_1" 34.8264
+cap "rwl_1_15" "read_bl_0_1" 34.8264
+cap "rwl_0_8" "write_bl_0_1" 34.8264
+cap "wwl_0_9" "read_bl_0_0" 34.8264
+cap "read_bl_1_0" "rwl_1_2" 34.8264
+cap "read_bl_0_0" "rwl_0_0" 34.8264
+cap "read_bl_0_0" "rwl_0_11" 34.8264
+cap "wwl_0_8" "read_bl_0_1" 34.8264
+cap "wwl_0_6" "write_bl_0_0" 34.8264
+cap "wwl_0_12" "read_bl_0_0" 34.8264
+cap "rwl_1_12" "write_bl_0_1" 34.8264
+cap "rwl_1_1" "read_bl_0_1" 34.8264
+cap "read_bl_0_0" "rwl_0_6" 34.8264
+cap "rwl_0_12" "read_bl_0_1" 34.8264
+cap "rwl_1_10" "write_bl_0_1" 34.8264
+cap "write_bl_0_0" "rwl_1_3" 34.8264
+cap "write_bl_0_0" "rwl_0_3" 34.8264
+cap "read_bl_1_0" "rwl_0_10" 34.8264
+cap "rwl_0_5" "read_bl_1_1" 34.8264
+cap "wwl_0_14" "read_bl_0_0" 34.8264
+cap "rwl_0_13" "write_bl_0_1" 34.8264
+cap "rwl_0_6" "rwl_1_6" 353.636
+cap "rwl_1_4" "wwl_0_4" 216.111
+cap "wwl_0_5" "rwl_0_5" 714.49
+cap "rwl_1_9" "read_bl_1_1" 34.8264
+cap "read_bl_1_0" "rwl_1_8" 34.8264
+cap "wwl_0_7" "rwl_0_7" 714.49
+cap "rwl_0_8" "write_bl_0_0" 34.8264
+cap "read_bl_1_0" "read_bl_0_0" 5500
+cap "read_bl_1_0" "wwl_0_2" 34.8264
+cap "wwl_0_11" "read_bl_0_0" 34.8264
+cap "wwl_0_13" "write_bl_0_1" 34.8264
+cap "rwl_0_1" "read_bl_1_1" 34.8264
+cap "read_bl_1_0" "rwl_0_4" 34.8264
+cap "wwl_0_5" "read_bl_1_1" 34.8264
+cap "read_bl_0_1" "wwl_0_0" 34.8264
+cap "rwl_1_0" "write_bl_0_1" 34.8264
+cap "rwl_1_11" "read_bl_0_1" 34.8264
+cap "rwl_1_13" "read_bl_1_1" 34.8264
+cap "read_bl_1_0" "rwl_1_6" 34.8264
+cap "read_bl_1_0" "wwl_0_10" 34.8264
+cap "rwl_1_12" "write_bl_0_0" 34.8264
+cap "rwl_1_0" "wwl_0_0" 216.111
+cap "write_bl_0_0" "rwl_1_10" 34.8264
+cap "wwl_0_15" "read_bl_1_1" 34.8264
+cap "wwl_0_14" "rwl_0_14" 714.49
+cap "rwl_1_15" "read_bl_1_1" 34.8264
+cap "write_bl_0_0" "rwl_0_13" 34.8264
+cap "read_bl_0_0" "wwl_0_1" 34.8264
+cap "wwl_0_8" "read_bl_1_1" 34.8264
+cap "rwl_1_7" "read_bl_0_1" 34.8264
+cap "rwl_1_14" "read_bl_0_0" 34.8264
+cap "rwl_0_15" "read_bl_0_1" 34.8264
+cap "rwl_1_1" "read_bl_1_1" 34.8264
+cap "rwl_0_12" "read_bl_1_1" 34.8264
+cap "wwl_0_3" "rwl_1_3" 216.111
+cap "rwl_0_3" "wwl_0_3" 714.49
+cap "read_bl_1_0" "rwl_0_14" 34.8264
+cap "rwl_1_15" "wwl_0_15" 216.111
+cap "wwl_0_13" "write_bl_0_0" 34.8264
+cap "write_bl_0_0" "read_bl_0_1" 3898.73
+cap "rwl_0_1" "rwl_1_1" 353.636
+cap "rwl_0_7" "read_bl_0_0" 34.8264
+cap "rwl_0_9" "read_bl_0_0" 34.8264
+cap "rwl_1_0" "write_bl_0_0" 34.8264
+cap "rwl_0_5" "write_bl_0_1" 34.8264
+cap "wwl_0_7" "read_bl_0_0" 34.8264
+cap "wwl_0_6" "rwl_0_6" 714.49
+cap "rwl_1_9" "write_bl_0_1" 34.8264
+cap "read_bl_1_0" "wwl_0_4" 34.8264
+cap "read_bl_1_1" "write_bl_0_1" 8000
+cap "rwl_1_2" "wwl_0_2" 216.111
+cap "read_bl_0_0" "rwl_1_2" 34.8264
+cap "rwl_1_14" "rwl_0_14" 353.636
+cap "read_bl_1_1" "wwl_0_0" 34.8264
+cap "rwl_1_11" "read_bl_1_1" 34.8264
+cap "rwl_0_2" "read_bl_0_1" 34.8264
+cap "rwl_0_1" "write_bl_0_1" 34.8264
+cap "wwl_0_5" "write_bl_0_1" 34.8264
+cap "rwl_1_4" "read_bl_0_1" 34.8264
+cap "read_bl_1_0" "wwl_0_6" 34.8264
+cap "rwl_1_13" "write_bl_0_1" 34.8264
+cap "rwl_0_10" "read_bl_0_0" 34.8264
+cap "read_bl_1_0" "rwl_1_3" 34.8264
+cap "read_bl_1_0" "rwl_0_3" 34.8264
+cap "wwl_0_15" "write_bl_0_1" 34.8264
+cap "rwl_1_15" "write_bl_0_1" 34.8264
+cap "write_bl_0_0" "rwl_0_5" 34.8264
+cap "rwl_1_7" "read_bl_1_1" 34.8264
+cap "rwl_0_15" "read_bl_1_1" 34.8264
+cap "wwl_0_10" "rwl_0_10" 714.49
+cap "wwl_0_12" "rwl_1_12" 216.111
+cap "wwl_0_8" "write_bl_0_1" 34.8264
+cap "rwl_1_8" "read_bl_0_0" 34.8264
+cap "wwl_0_3" "read_bl_0_1" 34.8264
+cap "rwl_1_9" "write_bl_0_0" 34.8264
+cap "rwl_1_1" "write_bl_0_1" 34.8264
+cap "read_bl_0_0" "wwl_0_2" 34.8264
+cap "rwl_1_5" "read_bl_0_1" 34.8264
+cap "rwl_0_12" "write_bl_0_1" 34.8264
+cap "rwl_0_8" "read_bl_1_0" 34.8264
+cap "read_bl_0_0" "rwl_0_4" 34.8264
+cap "wwl_0_9" "read_bl_0_1" 34.8264
+cap "rwl_0_15" "wwl_0_15" 714.49
+cap "write_bl_0_0" "rwl_0_1" 34.8264
+cap "read_bl_0_0" "rwl_1_6" 34.8264
+cap "rwl_0_15" "rwl_1_15" 353.636
+cap "rwl_0_0" "read_bl_0_1" 34.8264
+cap "write_bl_0_0" "wwl_0_5" 34.8264
+cap "wwl_0_10" "read_bl_0_0" 34.8264
+cap "read_bl_0_1" "rwl_0_11" 34.8264
+cap "rwl_1_13" "write_bl_0_0" 34.8264
+cap "rwl_1_0" "rwl_0_0" 353.636
+cap "read_bl_1_0" "rwl_1_12" 34.8264
+cap "read_bl_1_0" "rwl_1_10" 34.8264
+cap "wwl_0_12" "read_bl_0_1" 34.8264
+cap "rwl_0_6" "read_bl_0_1" 34.8264
+cap "write_bl_0_0" "rwl_1_15" 34.8264
+cap "write_bl_0_0" "wwl_0_15" 34.8264
+cap "read_bl_1_0" "rwl_0_13" 34.8264
+cap "wwl_0_14" "read_bl_0_1" 34.8264
+cap "rwl_0_2" "read_bl_1_1" 34.8264
+cap "write_bl_0_0" "wwl_0_8" 34.8264
+cap "rwl_1_4" "read_bl_1_1" 34.8264
+cap "write_bl_0_1" "wwl_0_0" 34.8264
+cap "rwl_1_11" "write_bl_0_1" 34.8264
+cap "read_bl_0_0" "rwl_0_14" 34.8264
+cap "write_bl_0_0" "rwl_1_1" 34.8264
+cap "rwl_0_12" "write_bl_0_0" 34.8264
+cap "read_bl_1_0" "wwl_0_13" 34.8264
+cap "wwl_0_11" "read_bl_0_1" 34.8264
+cap "rwl_1_5" "rwl_0_5" 353.636
+cap "rwl_1_0" "read_bl_1_0" 34.8264
+cap "wwl_0_3" "read_bl_1_1" 34.8264
+cap "rwl_1_7" "write_bl_0_1" 34.8264
+cap "rwl_0_15" "write_bl_0_1" 34.8264
+cap "rwl_1_5" "read_bl_1_1" 34.8264
+cap "read_bl_0_0" "wwl_0_4" 34.8264
+cap "wwl_0_9" "rwl_1_9" 216.111
+cap "wwl_0_1" "read_bl_0_1" 34.8264
+cap "rwl_0_4" "wwl_0_4" 714.49
+cap "wwl_0_9" "read_bl_1_1" 34.8264
+cap "rwl_0_0" "read_bl_1_1" 34.8264
+cap "read_bl_1_1" "rwl_0_11" 34.8264
+cap "wwl_0_5" "rwl_1_5" 216.111
+cap "write_bl_0_0" "wwl_0_0" 34.8264
+cap "rwl_1_11" "write_bl_0_0" 34.8264
+cap "rwl_1_14" "read_bl_0_1" 34.8264
+cap "wwl_0_6" "read_bl_0_0" 34.8264
+cap "wwl_0_12" "read_bl_1_1" 34.8264
+cap "rwl_0_6" "read_bl_1_1" 34.8264
+cap "read_bl_0_0" "rwl_1_3" 34.8264
+cap "rwl_0_3" "read_bl_0_0" 34.8264
+cap "wwl_0_14" "read_bl_1_1" 34.8264
+cap "wwl_0_6" "rwl_1_6" 216.111
+cap "read_bl_1_0" "rwl_0_5" 34.8264
+cap "rwl_0_7" "read_bl_0_1" 34.8264
+cap "rwl_0_9" "read_bl_0_1" 34.8264
+cap "write_bl_0_0" "rwl_1_7" 34.8264
+cap "write_bl_0_0" "rwl_0_15" 34.8264
+cap "rwl_0_8" "rwl_1_8" 353.636
+cap "rwl_0_2" "write_bl_0_1" 34.8264
+cap "wwl_0_7" "read_bl_0_1" 34.8264
+cap "rwl_0_10" "rwl_1_10" 353.636
+cap "rwl_1_4" "write_bl_0_1" 34.8264
+cap "rwl_0_8" "read_bl_0_0" 34.8264
+cap "rwl_1_9" "read_bl_1_0" 34.8264
+cap "wwl_0_11" "read_bl_1_1" 34.8264
+cap "rwl_1_2" "read_bl_0_1" 34.8264
+cap "read_bl_1_0" "rwl_0_1" 34.8264
+cap "read_bl_1_0" "wwl_0_5" 34.8264
+cap "wwl_0_12" "rwl_0_12" 714.49
+cap "rwl_1_12" "read_bl_0_0" 34.8264
+cap "rwl_1_13" "read_bl_1_0" 34.8264
+cap "read_bl_0_0" "rwl_1_10" 34.8264
+cap "wwl_0_3" "write_bl_0_1" 34.8264
+cap "wwl_0_1" "read_bl_1_1" 34.8264
+cap "rwl_0_10" "read_bl_0_1" 34.8264
+cap "rwl_0_13" "read_bl_0_0" 34.8264
+cap "read_bl_1_0" "wwl_0_15" 34.8264
+cap "read_bl_1_0" "rwl_1_15" 34.8264
+cap "rwl_1_5" "write_bl_0_1" 34.8264
+cap "wwl_0_10" "rwl_1_10" 216.111
+cap "rwl_1_14" "read_bl_1_1" 34.8264
+cap "rwl_0_2" "write_bl_0_0" 34.8264
+cap "read_bl_1_0" "wwl_0_8" 34.8264
+cap "wwl_0_9" "write_bl_0_1" 34.8264
+cap "rwl_0_1" "wwl_0_1" 714.49
+cap "rwl_0_0" "write_bl_0_1" 34.8264
+cap "rwl_1_4" "write_bl_0_0" 34.8264
+cap "rwl_1_8" "read_bl_0_1" 34.8264
+cap "write_bl_0_1" "rwl_0_11" 34.8264
+cap "rwl_0_0" "wwl_0_0" 714.49
+cap "wwl_0_13" "read_bl_0_0" 34.8264
+cap "read_bl_1_0" "rwl_1_1" 34.8264
+cap "rwl_1_11" "rwl_0_11" 353.636
+cap "rwl_0_12" "read_bl_1_0" 34.8264
+cap "read_bl_0_1" "wwl_0_2" 34.8264
+cap "rwl_1_9" "rwl_0_9" 353.636
+cap "wwl_0_12" "write_bl_0_1" 34.8264
+cap "rwl_0_6" "write_bl_0_1" 34.8264
+cap "rwl_0_7" "read_bl_1_1" 34.8264
+cap "rwl_0_9" "read_bl_1_1" 34.8264
+cap "rwl_1_0" "read_bl_0_0" 34.8264
+cap "read_bl_0_1" "rwl_0_4" 34.8264
+cap "wwl_0_14" "write_bl_0_1" 34.8264
+cap "read_bl_0_1" "rwl_1_6" 34.8264
+cap "wwl_0_7" "read_bl_1_1" 34.8264
+cap "wwl_0_10" "read_bl_0_1" 34.8264
+cap "write_bl_0_0" "wwl_0_3" 34.8264
+cap "rwl_1_1" "wwl_0_1" 216.111
+cap "rwl_1_2" "read_bl_1_1" 34.8264
+cap "write_bl_0_0" "rwl_1_5" 34.8264
+cap "rwl_0_3" "rwl_1_3" 353.636
+cap "wwl_0_9" "write_bl_0_0" 34.8264
+cap "wwl_0_11" "write_bl_0_1" 34.8264
+cap "write_bl_0_0" "rwl_0_0" 34.8264
+cap "write_bl_0_0" "rwl_0_11" 34.8264
+cap "read_bl_1_0" "wwl_0_0" 34.8264
+cap "read_bl_1_0" "rwl_1_11" 34.8264
+cap "wwl_0_11" "rwl_1_11" 216.111
+cap "rwl_0_10" "read_bl_1_1" 34.8264
+cap "read_bl_0_1" "rwl_0_14" 34.8264
+cap "write_bl_0_0" "rwl_0_6" 34.8264
+cap "wwl_0_12" "write_bl_0_0" 34.8264
+cap "read_bl_0_0" "rwl_0_5" 34.8264
+cap "wwl_0_14" "write_bl_0_0" 34.8264
+cap "wwl_0_1" "write_bl_0_1" 34.8264
+cap "rwl_1_8" "read_bl_1_1" 34.8264
+cap "read_bl_1_0" "rwl_1_7" 34.8264
+cap "read_bl_1_0" "rwl_0_15" 34.8264
+cap "rwl_1_14" "write_bl_0_1" 34.8264
+cap "rwl_1_9" "read_bl_0_0" 34.8264
+cap "read_bl_1_1" "wwl_0_2" 34.8264
+cap "read_bl_0_1" "wwl_0_4" 34.8264
+cap "read_bl_1_1" "rwl_0_4" 34.8264
+cap "read_bl_1_0" "write_bl_0_0" 8000
+cap "wwl_0_11" "write_bl_0_0" 34.8264
+cap "rwl_0_1" "read_bl_0_0" 34.8264
+cap "read_bl_1_1" "rwl_1_6" 34.8264
+cap "rwl_0_7" "write_bl_0_1" 34.8264
+cap "wwl_0_5" "read_bl_0_0" 34.8264
+cap "rwl_0_9" "write_bl_0_1" 34.8264
+cap "wwl_0_10" "read_bl_1_1" 34.8264
+cap "rwl_1_13" "read_bl_0_0" 34.8264
+cap "wwl_0_6" "read_bl_0_1" 34.8264
+cap "wwl_0_7" "write_bl_0_1" 34.8264
+cap "read_bl_0_0" "wwl_0_15" 34.8264
+cap "wwl_0_8" "rwl_1_8" 216.111
+cap "read_bl_0_0" "rwl_1_15" 34.8264
+cap "write_bl_0_0" "wwl_0_1" 34.8264
+cap "read_bl_0_1" "rwl_1_3" 34.8264
+cap "rwl_0_3" "read_bl_0_1" 34.8264
+cap "rwl_1_2" "write_bl_0_1" 34.8264
+cap "wwl_0_8" "read_bl_0_0" 34.8264
+cap "rwl_0_2" "read_bl_1_0" 34.8264
+cap "rwl_1_14" "write_bl_0_0" 34.8264
+cap "rwl_1_7" "rwl_0_7" 353.636
+cap "read_bl_1_1" "rwl_0_14" 34.8264
+cap "read_bl_1_0" "rwl_1_4" 34.8264
+cap "rwl_1_1" "read_bl_0_0" 34.8264
+cap "rwl_0_12" "read_bl_0_0" 34.8264
+cap "rwl_0_8" "read_bl_0_1" 34.8264
+cap "wwl_0_7" "rwl_1_7" 216.111
+cap "rwl_0_10" "write_bl_0_1" 34.8264
+cap "write_bl_0_0" "rwl_0_7" 34.8264
+cap "rwl_0_9" "write_bl_0_0" 34.8264
+cap "rwl_1_12" "read_bl_0_1" 34.8264
+cap "wwl_0_7" "write_bl_0_0" 34.8264
+cap "read_bl_1_0" "wwl_0_3" 34.8264
+cap "rwl_1_8" "write_bl_0_1" 34.8264
+cap "rwl_1_10" "read_bl_0_1" 34.8264
+cap "read_bl_1_1" "wwl_0_4" 34.8264
+cap "wwl_0_13" "rwl_0_13" 714.49
+cap "read_bl_1_0" "rwl_1_5" 34.8264
+cap "rwl_0_13" "read_bl_0_1" 34.8264
+cap "wwl_0_2" "write_bl_0_1" 34.8264
+cap "write_bl_0_0" "rwl_1_2" 34.8264
+cap "write_bl_0_1" "rwl_0_4" 34.8264
+cap "wwl_0_9" "read_bl_1_0" 34.8264
+cap "read_bl_0_0" "wwl_0_0" 34.8264
+cap "read_bl_1_0" "rwl_0_0" 34.8264
+cap "rwl_1_11" "read_bl_0_0" 34.8264
+cap "wwl_0_11" "rwl_0_11" 714.49
+cap "read_bl_1_0" "rwl_0_11" 34.8264
+cap "wwl_0_6" "read_bl_1_1" 34.8264
+cap "rwl_1_6" "write_bl_0_1" 34.8264
+cap "wwl_0_10" "write_bl_0_1" 34.8264
+cap "read_bl_1_1" "rwl_1_3" 34.8264
+cap "rwl_0_3" "read_bl_1_1" 34.8264
+cap "read_bl_1_0" "rwl_0_6" 34.8264
+cap "write_bl_0_0" "rwl_0_10" 34.8264
+cap "wwl_0_12" "read_bl_1_0" 34.8264
+cap "wwl_0_13" "read_bl_0_1" 34.8264
+cap "wwl_0_14" "read_bl_1_0" 34.8264
+cap "rwl_1_0" "read_bl_0_1" 34.8264
+cap "rwl_1_7" "read_bl_0_0" 34.8264
+cap "rwl_0_15" "read_bl_0_0" 34.8264
+cap "rwl_0_2" "rwl_1_2" 353.636
+cap "write_bl_0_0" "rwl_1_8" 34.8264
+cap "rwl_0_8" "read_bl_1_1" 34.8264
+cap "rwl_0_14" "write_bl_0_1" 34.8264
+cap "write_bl_0_0" "wwl_0_2" 34.8264
+cap "write_bl_0_0" "rwl_0_4" 34.8264
+cap "read_bl_1_0" "wwl_0_11" 34.8264
+subcap "write_bl_0_1" -9536.74
+subcap "read_bl_1_1" -9821.58
+subcap "read_bl_0_1" -9779.8
+subcap "write_bl_0_0" -9118.65
+subcap "read_bl_1_0" -9821.58
+subcap "read_bl_0_0" -9779.8
+subcap "rwl_0_0" -32.9132
+cap "bitcell_array_0/cell_2r1w_15/rbl1" "bitcell_array_0/cell_2r1w_15/wbl0" -220.455
+cap "rwl_0_0" "bitcell_array_0/cell_2r1w_31/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_31/rbl1" "wwl_0_0" -34.8264
+cap "bitcell_array_0/cell_2r1w_31/rbl0" "rwl_0_0" -34.8264
+cap "rwl_1_0" "bitcell_array_0/cell_2r1w_31/wbl0" -34.8264
+cap "wwl_0_0" "bitcell_array_0/cell_2r1w_31/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_15/rbl0" "bitcell_array_0/cell_2r1w_31/wbl0" -214.873
+cap "rwl_1_0" "bitcell_array_0/cell_2r1w_31/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_31/rbl1" "bitcell_array_0/cell_2r1w_31/wbl0" -440.909
+cap "bitcell_array_0/cell_2r1w_31/rbl0" "wwl_0_0" -34.8264
+cap "bitcell_array_0/cell_2r1w_31/rbl1" "bitcell_array_0/cell_2r1w_31/rbl0" -303.125
+cap "bitcell_array_0/cell_2r1w_15/rbl1" "rwl_0_0" -34.8264
+cap "rwl_1_0" "rwl_0_0" -318.182
+cap "rwl_1_0" "bitcell_array_0/cell_2r1w_15/rbl1" -34.8264
+cap "rwl_0_0" "wwl_0_0" -642.857
+cap "bitcell_array_0/cell_2r1w_15/rbl0" "rwl_0_0" -34.8264
+cap "bitcell_array_0/cell_2r1w_15/rbl1" "wwl_0_0" -34.8264
+cap "bitcell_array_0/cell_2r1w_15/rbl0" "bitcell_array_0/cell_2r1w_15/rbl1" -303.125
+cap "bitcell_array_0/cell_2r1w_31/rbl1" "rwl_0_0" -34.8264
+cap "rwl_1_0" "wwl_0_0" -194.444
+cap "rwl_1_0" "bitcell_array_0/cell_2r1w_15/rbl0" -34.8264
+cap "rwl_1_0" "bitcell_array_0/cell_2r1w_31/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_15/rbl0" "wwl_0_0" -34.8264
+subcap "write_bl_0_1" -9440.46
+subcap "read_bl_1_1" -10013.2
+cap "bitcell_array_0/cell_2r1w_15/wbl0" "bitcell_array_0/cell_2r1w_15/wwl0" -34.8264
+cap "bitcell_array_0/rwl_0_0" "bitcell_array_0/cell_2r1w_15/wwl0" -71.6327
+cap "bitcell_array_0/cell_2r1w_15/rwl1" "bitcell_array_0/cell_2r1w_15/wbl0" -34.8264
+cap "bitcell_array_0/rwl_0_0" "bitcell_array_0/cell_2r1w_15/rwl1" -35.4545
+cap "bitcell_array_0/rwl_0_0" "bitcell_array_0/cell_2r1w_15/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_15/rbl1" "bitcell_array_0/cell_2r1w_15/wbl0" -220.455
+cap "bitcell_array_0/cell_2r1w_15/rwl1" "bitcell_array_0/cell_2r1w_15/wwl0" -21.6667
+subcap "rwl_1_0" -1606.97
+subcap "rwl_0_1" -32.9132
+cap "wwl_0_1" "rwl_0_1" -642.857
+cap "rwl_1_1" "wwl_0_1" -194.444
+cap "rwl_1_1" "rwl_0_1" -318.182
+cap "wwl_0_1" "bitcell_array_0/cell_2r1w_30/rbl1" -34.8264
+cap "rwl_0_1" "bitcell_array_0/cell_2r1w_30/rbl1" -34.8264
+cap "rwl_1_1" "bitcell_array_0/cell_2r1w_30/rbl1" -34.8264
+cap "wwl_0_1" "bitcell_array_0/cell_2r1w_30/wbl0" -34.8264
+cap "rwl_0_1" "bitcell_array_0/cell_2r1w_30/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_14/rbl0" "bitcell_array_0/cell_2r1w_14/rbl1" -312.5
+cap "rwl_1_1" "bitcell_array_0/cell_2r1w_30/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_30/wbl0" "bitcell_array_0/cell_2r1w_30/rbl1" -454.545
+cap "bitcell_array_0/cell_2r1w_14/wbl0" "bitcell_array_0/cell_2r1w_14/rbl1" -227.273
+cap "wwl_0_1" "bitcell_array_0/cell_2r1w_30/rbl0" -34.8264
+cap "rwl_0_1" "bitcell_array_0/cell_2r1w_30/rbl0" -34.8264
+cap "rwl_1_1" "bitcell_array_0/cell_2r1w_30/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_30/rbl0" "bitcell_array_0/cell_2r1w_30/rbl1" -312.5
+cap "wwl_0_1" "bitcell_array_0/cell_2r1w_14/rbl0" -34.8264
+cap "rwl_0_1" "bitcell_array_0/cell_2r1w_14/rbl0" -34.8264
+cap "rwl_1_1" "bitcell_array_0/cell_2r1w_14/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_14/rbl0" "bitcell_array_0/cell_2r1w_30/wbl0" -221.519
+cap "wwl_0_1" "bitcell_array_0/cell_2r1w_14/rbl1" -34.8264
+cap "rwl_0_1" "bitcell_array_0/cell_2r1w_14/rbl1" -34.8264
+cap "rwl_1_1" "bitcell_array_0/cell_2r1w_14/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_14/wbl0" "bitcell_array_0/cell_2r1w_14/rwl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_14/wbl0" "bitcell_array_0/cell_2r1w_14/rbl1" -227.273
+cap "bitcell_array_0/cell_2r1w_14/wwl0" "bitcell_array_0/cell_2r1w_14/wbl0" -34.8264
+cap "bitcell_array_0/rwl_0_1" "bitcell_array_0/cell_2r1w_14/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_14/wwl0" "bitcell_array_0/cell_2r1w_14/rwl1" -21.6667
+cap "bitcell_array_0/rwl_0_1" "bitcell_array_0/cell_2r1w_14/rwl1" -35.4545
+cap "bitcell_array_0/rwl_0_1" "bitcell_array_0/cell_2r1w_14/wwl0" -71.6327
+subcap "wwl_0_1" -1264.39
+subcap "rwl_0_2" -32.9132
+cap "bitcell_array_0/cell_2r1w_30/rbl1" "wwl_0_2" -34.8264
+cap "bitcell_array_0/cell_2r1w_30/wbl0" "wwl_0_2" -34.8264
+cap "rwl_1_2" "bitcell_array_0/cell_2r1w_14/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_30/rbl1" "bitcell_array_0/cell_2r1w_30/wbl0" -454.545
+cap "rwl_1_2" "wwl_0_2" -194.444
+cap "bitcell_array_0/cell_2r1w_30/rbl1" "rwl_1_2" -34.8264
+cap "rwl_1_2" "bitcell_array_0/cell_2r1w_30/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_14/rbl1" "rwl_0_2" -34.8264
+cap "wwl_0_2" "rwl_0_2" -642.857
+cap "bitcell_array_0/cell_2r1w_30/rbl1" "rwl_0_2" -34.8264
+cap "bitcell_array_0/cell_2r1w_30/wbl0" "rwl_0_2" -34.8264
+cap "bitcell_array_0/cell_2r1w_14/rbl0" "bitcell_array_0/cell_2r1w_14/rbl1" -312.5
+cap "bitcell_array_0/cell_2r1w_14/rbl0" "wwl_0_2" -34.8264
+cap "rwl_1_2" "rwl_0_2" -318.182
+cap "wwl_0_2" "bitcell_array_0/cell_2r1w_30/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_14/rbl0" "bitcell_array_0/cell_2r1w_30/wbl0" -221.519
+cap "bitcell_array_0/cell_2r1w_30/rbl1" "bitcell_array_0/cell_2r1w_30/rbl0" -312.5
+cap "rwl_1_2" "bitcell_array_0/cell_2r1w_14/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_14/rbl1" "bitcell_array_0/cell_2r1w_14/wbl0" -227.273
+cap "rwl_1_2" "bitcell_array_0/cell_2r1w_30/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_14/rbl0" "rwl_0_2" -34.8264
+cap "rwl_0_2" "bitcell_array_0/cell_2r1w_30/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_14/rbl1" "wwl_0_2" -34.8264
+cap "bitcell_array_0/cell_2r1w_14/wbl0" "bitcell_array_0/cell_2r1w_13/wwl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_14/wbl0" "bitcell_array_0/rwl_0_2" -34.8264
+cap "bitcell_array_0/cell_2r1w_13/rwl1" "bitcell_array_0/cell_2r1w_13/wwl0" -21.6667
+cap "bitcell_array_0/cell_2r1w_13/rwl1" "bitcell_array_0/rwl_0_2" -35.4545
+cap "bitcell_array_0/cell_2r1w_13/rwl1" "bitcell_array_0/cell_2r1w_14/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_14/wbl0" "bitcell_array_0/cell_2r1w_14/rbl1" -227.273
+cap "bitcell_array_0/rwl_0_2" "bitcell_array_0/cell_2r1w_13/wwl0" -71.6327
+subcap "rwl_0_2" -1455.07
+subcap "rwl_1_2" -886.973
+subcap "rwl_0_3" -32.9132
+cap "rwl_1_3" "bitcell_array_0/cell_2r1w_28/wbl0" -34.8264
+cap "wwl_0_3" "bitcell_array_0/cell_2r1w_12/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_28/wbl0" "bitcell_array_0/cell_2r1w_12/rbl0" -221.519
+cap "wwl_0_3" "bitcell_array_0/cell_2r1w_12/rbl1" -34.8264
+cap "rwl_1_3" "bitcell_array_0/cell_2r1w_12/rbl0" -34.8264
+cap "rwl_0_3" "bitcell_array_0/cell_2r1w_28/rbl1" -34.8264
+cap "rwl_0_3" "bitcell_array_0/cell_2r1w_28/rbl0" -34.8264
+cap "rwl_1_3" "bitcell_array_0/cell_2r1w_12/rbl1" -34.8264
+cap "rwl_0_3" "wwl_0_3" -642.857
+cap "bitcell_array_0/cell_2r1w_28/rbl1" "bitcell_array_0/cell_2r1w_28/rbl0" -312.5
+cap "bitcell_array_0/cell_2r1w_12/wbl0" "bitcell_array_0/cell_2r1w_12/rbl1" -227.273
+cap "rwl_0_3" "bitcell_array_0/cell_2r1w_28/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_12/rbl0" "bitcell_array_0/cell_2r1w_12/rbl1" -312.5
+cap "wwl_0_3" "bitcell_array_0/cell_2r1w_28/rbl1" -34.8264
+cap "rwl_0_3" "rwl_1_3" -318.182
+cap "wwl_0_3" "bitcell_array_0/cell_2r1w_28/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_28/wbl0" "bitcell_array_0/cell_2r1w_28/rbl1" -454.545
+cap "rwl_0_3" "bitcell_array_0/cell_2r1w_12/rbl0" -34.8264
+cap "rwl_1_3" "bitcell_array_0/cell_2r1w_28/rbl1" -34.8264
+cap "rwl_1_3" "bitcell_array_0/cell_2r1w_28/rbl0" -34.8264
+cap "wwl_0_3" "bitcell_array_0/cell_2r1w_28/wbl0" -34.8264
+cap "rwl_0_3" "bitcell_array_0/cell_2r1w_12/rbl1" -34.8264
+cap "wwl_0_3" "rwl_1_3" -194.444
+cap "bitcell_array_0/rwl_0_3" "bitcell_array_0/cell_2r1w_12/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_12/rwl1" "bitcell_array_0/cell_2r1w_12/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_12/wbl0" "bitcell_array_0/cell_2r1w_12/rbl1" -227.273
+cap "bitcell_array_0/cell_2r1w_12/wbl0" "bitcell_array_0/cell_2r1w_12/wwl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_12/rwl1" "bitcell_array_0/rwl_0_3" -35.4545
+cap "bitcell_array_0/rwl_0_3" "bitcell_array_0/cell_2r1w_12/wwl0" -71.6327
+cap "bitcell_array_0/cell_2r1w_12/rwl1" "bitcell_array_0/cell_2r1w_12/wwl0" -21.6667
+subcap "rwl_0_3" -1152.21
+subcap "wwl_0_3" -703.177
+subcap "rwl_0_4" -256.8
+subcap "rwl_1_4" -1174.84
+cap "bitcell_array_0/cell_2r1w_12/rbl0" "bitcell_array_0/cell_2r1w_28/wbl0" -221.519
+cap "bitcell_array_0/cell_2r1w_12/rbl1" "wwl_0_4" -34.8264
+cap "bitcell_array_0/cell_2r1w_12/rbl1" "bitcell_array_0/cell_2r1w_12/rbl0" -312.5
+cap "rwl_1_4" "wwl_0_4" -97.2222
+cap "bitcell_array_0/cell_2r1w_28/rbl1" "bitcell_array_0/cell_2r1w_28/wbl0" -454.545
+cap "rwl_0_4" "wwl_0_4" -642.857
+cap "bitcell_array_0/cell_2r1w_28/rbl0" "wwl_0_4" -34.8264
+cap "rwl_0_4" "bitcell_array_0/cell_2r1w_12/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_12/rbl1" "bitcell_array_0/cell_2r1w_12/wbl0" -227.273
+cap "rwl_0_4" "bitcell_array_0/cell_2r1w_28/wbl0" -34.8264
+cap "rwl_0_4" "bitcell_array_0/cell_2r1w_28/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_28/rbl0" "bitcell_array_0/cell_2r1w_28/rbl1" -312.5
+cap "bitcell_array_0/cell_2r1w_12/rbl1" "rwl_0_4" -34.8264
+cap "wwl_0_4" "bitcell_array_0/cell_2r1w_12/rbl0" -34.8264
+cap "rwl_0_4" "rwl_1_4" -159.091
+cap "rwl_0_4" "bitcell_array_0/cell_2r1w_28/rbl0" -34.8264
+cap "wwl_0_4" "bitcell_array_0/cell_2r1w_28/wbl0" -34.8264
+cap "wwl_0_4" "bitcell_array_0/cell_2r1w_28/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_11/wwl0" "bitcell_array_0/rwl_0_4" -71.6327
+cap "bitcell_array_0/cell_2r1w_11/wwl0" "bitcell_array_0/cell_2r1w_11/rwl1" -10.8333
+cap "bitcell_array_0/cell_2r1w_11/rwl1" "bitcell_array_0/rwl_0_4" -17.7273
+cap "bitcell_array_0/cell_2r1w_11/wwl0" "bitcell_array_0/cell_2r1w_12/wbl0" -34.8264
+cap "bitcell_array_0/rwl_0_4" "bitcell_array_0/cell_2r1w_12/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_12/rbl1" "bitcell_array_0/cell_2r1w_12/wbl0" -227.273
+subcap "wwl_0_4" -888.945
+subcap "rwl_0_4" -249.993
+subcap "rwl_1_4" -22.769
+subcap "rwl_1_5" -36.125
+subcap "rwl_0_5" -862.533
+subcap "wwl_0_5" -1046.26
+cap "bitcell_array_0/cell_2r1w_27/wbl0" "rwl_1_4" -34.8264
+cap "rwl_1_5" "bitcell_array_0/cell_2r1w_27/wbl0" -34.8264
+cap "wwl_0_4" "rwl_1_4" -97.2222
+cap "bitcell_array_0/cell_2r1w_11/rbl0" "rwl_1_4" -34.8264
+cap "bitcell_array_0/cell_2r1w_26/rbl1" "bitcell_array_0/cell_2r1w_27/rbl0" -312.5
+cap "bitcell_array_0/cell_2r1w_10/rbl1" "rwl_1_4" -34.8264
+cap "bitcell_array_0/cell_2r1w_27/rbl0" "rwl_1_4" -34.8264
+cap "rwl_1_4" "rwl_0_4" -159.091
+cap "rwl_1_5" "wwl_0_5" -97.2222
+cap "rwl_1_5" "bitcell_array_0/cell_2r1w_11/rbl0" -34.8264
+cap "rwl_1_5" "bitcell_array_0/cell_2r1w_10/rbl1" -34.8264
+cap "rwl_1_5" "bitcell_array_0/cell_2r1w_27/rbl0" -34.8264
+cap "rwl_1_5" "rwl_0_5" -159.091
+cap "bitcell_array_0/cell_2r1w_11/rbl0" "bitcell_array_0/cell_2r1w_27/wbl0" -221.519
+cap "bitcell_array_0/cell_2r1w_26/rbl1" "rwl_1_4" -34.8264
+cap "bitcell_array_0/cell_2r1w_11/wbl0" "bitcell_array_0/cell_2r1w_10/rbl1" -227.273
+cap "rwl_1_5" "bitcell_array_0/cell_2r1w_26/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_11/rbl0" "bitcell_array_0/cell_2r1w_10/rbl1" -312.5
+cap "bitcell_array_0/cell_2r1w_27/wbl0" "bitcell_array_0/cell_2r1w_26/rbl1" -454.545
+cap "bitcell_array_0/cell_2r1w_10/rwl1" "bitcell_array_0/cell_2r1w_10/wwl0" -10.8333
+cap "bitcell_array_0/cell_2r1w_10/rwl1" "bitcell_array_0/cell_2r1w_11/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_11/wbl0" "bitcell_array_0/cell_2r1w_10/rbl1" -227.273
+cap "bitcell_array_0/cell_2r1w_11/wwl0" "bitcell_array_0/cell_2r1w_11/rwl1" -10.8333
+cap "bitcell_array_0/rwl_0_4" "bitcell_array_0/cell_2r1w_11/rwl1" -17.7273
+cap "bitcell_array_0/cell_2r1w_10/rwl1" "bitcell_array_0/rwl_0_5" -17.7273
+cap "bitcell_array_0/cell_2r1w_11/rwl1" "bitcell_array_0/cell_2r1w_11/wbl0" -34.8264
+subcap "rwl_1_5" -944.718
+subcap "rwl_0_5" -102.817
+subcap "wwl_0_6" -880.875
+subcap "rwl_0_6" -1382.33
+cap "bitcell_array_0/cell_2r1w_26/rbl0" "bitcell_array_0/cell_2r1w_26/rbl1" -312.5
+cap "bitcell_array_0/cell_2r1w_26/rbl0" "rwl_0_5" -34.8264
+cap "bitcell_array_0/cell_2r1w_10/rbl1" "rwl_0_5" -34.8264
+cap "wwl_0_5" "bitcell_array_0/cell_2r1w_10/rbl0" -34.8264
+cap "wwl_0_5" "bitcell_array_0/cell_2r1w_26/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_26/wbl0" "bitcell_array_0/cell_2r1w_26/rbl1" -454.545
+cap "bitcell_array_0/cell_2r1w_26/wbl0" "rwl_0_5" -34.8264
+cap "bitcell_array_0/cell_2r1w_10/rbl1" "bitcell_array_0/cell_2r1w_10/wbl0" -227.273
+cap "bitcell_array_0/cell_2r1w_10/rbl1" "wwl_0_5" -34.8264
+cap "rwl_0_5" "bitcell_array_0/cell_2r1w_26/rbl1" -34.8264
+cap "rwl_1_5" "rwl_0_5" -159.091
+cap "bitcell_array_0/cell_2r1w_10/rbl1" "bitcell_array_0/cell_2r1w_10/rbl0" -312.5
+cap "bitcell_array_0/cell_2r1w_26/wbl0" "wwl_0_5" -34.8264
+cap "wwl_0_5" "bitcell_array_0/cell_2r1w_26/rbl1" -34.8264
+cap "wwl_0_5" "rwl_0_5" -642.857
+cap "bitcell_array_0/cell_2r1w_26/wbl0" "bitcell_array_0/cell_2r1w_10/rbl0" -221.519
+cap "wwl_0_5" "rwl_1_5" -97.2222
+cap "bitcell_array_0/cell_2r1w_10/rbl0" "rwl_0_5" -34.8264
+cap "bitcell_array_0/cell_2r1w_10/rbl1" "bitcell_array_0/cell_2r1w_10/wbl0" -227.273
+cap "bitcell_array_0/cell_2r1w_10/rwl1" "bitcell_array_0/rwl_0_5" -17.7273
+cap "bitcell_array_0/cell_2r1w_10/rwl1" "bitcell_array_0/cell_2r1w_10/wwl0" -10.8333
+cap "bitcell_array_0/cell_2r1w_10/wbl0" "bitcell_array_0/rwl_0_5" -34.8264
+cap "bitcell_array_0/cell_2r1w_10/wbl0" "bitcell_array_0/cell_2r1w_10/wwl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_10/wwl0" "bitcell_array_0/rwl_0_5" -71.6327
+subcap "rwl_0_6" -32.9132
+subcap "rwl_1_7" -1130.45
+subcap "rwl_0_7" -1698.54
+cap "bitcell_array_0/cell_2r1w_25/wbl0" "rwl_0_6" -34.8264
+cap "bitcell_array_0/cell_2r1w_25/wbl0" "bitcell_array_0/cell_2r1w_9/rbl0" -221.519
+cap "bitcell_array_0/cell_2r1w_25/wbl0" "rwl_1_6" -34.8264
+cap "wwl_0_6" "rwl_0_6" -642.857
+cap "wwl_0_6" "bitcell_array_0/cell_2r1w_9/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_25/wbl0" "bitcell_array_0/cell_2r1w_25/rbl1" -454.545
+cap "wwl_0_6" "bitcell_array_0/cell_2r1w_9/rbl1" -34.8264
+cap "wwl_0_6" "rwl_1_6" -194.444
+cap "bitcell_array_0/cell_2r1w_25/rbl0" "wwl_0_6" -34.8264
+cap "wwl_0_6" "bitcell_array_0/cell_2r1w_25/rbl1" -34.8264
+cap "wwl_0_6" "bitcell_array_0/cell_2r1w_25/wbl0" -34.8264
+cap "rwl_0_6" "bitcell_array_0/cell_2r1w_9/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_9/rbl1" "rwl_0_6" -34.8264
+cap "rwl_0_6" "rwl_1_6" -318.182
+cap "bitcell_array_0/cell_2r1w_9/rbl1" "bitcell_array_0/cell_2r1w_9/wbl0" -227.273
+cap "bitcell_array_0/cell_2r1w_9/rbl1" "bitcell_array_0/cell_2r1w_9/rbl0" -312.5
+cap "bitcell_array_0/cell_2r1w_25/rbl0" "rwl_0_6" -34.8264
+cap "rwl_1_6" "bitcell_array_0/cell_2r1w_9/rbl0" -34.8264
+cap "rwl_0_6" "bitcell_array_0/cell_2r1w_25/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_9/rbl1" "rwl_1_6" -34.8264
+cap "bitcell_array_0/cell_2r1w_25/rbl0" "rwl_1_6" -34.8264
+cap "rwl_1_6" "bitcell_array_0/cell_2r1w_25/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_25/rbl0" "bitcell_array_0/cell_2r1w_25/rbl1" -312.5
+cap "bitcell_array_0/cell_2r1w_9/wbl0" "bitcell_array_0/cell_2r1w_9/rwl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_9/wwl0" "bitcell_array_0/rwl_0_6" -71.6327
+cap "bitcell_array_0/cell_2r1w_9/wbl0" "bitcell_array_0/rwl_0_6" -34.8264
+cap "bitcell_array_0/cell_2r1w_9/wbl0" "bitcell_array_0/cell_2r1w_9/rbl1" -227.273
+cap "bitcell_array_0/cell_2r1w_9/rwl1" "bitcell_array_0/rwl_0_6" -35.4545
+cap "bitcell_array_0/cell_2r1w_9/wbl0" "bitcell_array_0/cell_2r1w_9/wwl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_9/wwl0" "bitcell_array_0/cell_2r1w_9/rwl1" -21.6667
+subcap "rwl_0_7" -32.9132
+cap "rwl_1_7" "read_bl_0_0" -34.8264
+cap "rwl_0_7" "wwl_0_7" -642.857
+cap "read_bl_1_0" "rwl_0_7" -34.8264
+cap "rwl_0_7" "rwl_1_7" -318.182
+cap "write_bl_0_0" "wwl_0_7" -34.8264
+cap "rwl_0_7" "read_bl_0_1" -34.8264
+cap "rwl_0_7" "read_bl_1_1" -34.8264
+cap "write_bl_0_0" "read_bl_1_0" -454.545
+cap "read_bl_1_0" "wwl_0_7" -34.8264
+cap "write_bl_0_0" "rwl_1_7" -34.8264
+cap "rwl_0_7" "read_bl_0_0" -34.8264
+cap "write_bl_0_0" "read_bl_0_1" -221.519
+cap "wwl_0_7" "rwl_1_7" -194.444
+cap "write_bl_0_1" "read_bl_1_1" -227.273
+cap "wwl_0_7" "read_bl_0_1" -34.8264
+cap "read_bl_1_1" "wwl_0_7" -34.8264
+cap "read_bl_1_0" "rwl_1_7" -34.8264
+cap "read_bl_0_1" "rwl_1_7" -34.8264
+cap "wwl_0_7" "read_bl_0_0" -34.8264
+cap "read_bl_1_1" "rwl_1_7" -34.8264
+cap "read_bl_1_1" "read_bl_0_1" -312.5
+cap "read_bl_1_0" "read_bl_0_0" -312.5
+cap "write_bl_0_0" "rwl_0_7" -34.8264
+cap "bitcell_array_0/rwl_0_7" "bitcell_array_0/cell_2r1w_8/wwl0" -71.6327
+cap "bitcell_array_0/rwl_0_7" "bitcell_array_0/cell_2r1w_8/rwl1" -35.4545
+cap "write_bl_0_1" "bitcell_array_0/cell_2r1w_8/wwl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_8/rwl1" "write_bl_0_1" -34.8264
+cap "write_bl_0_1" "read_bl_1_1" -227.273
+cap "bitcell_array_0/rwl_0_7" "write_bl_0_1" -34.8264
+cap "bitcell_array_0/cell_2r1w_8/rwl1" "bitcell_array_0/cell_2r1w_8/wwl0" -21.6667
+subcap "rwl_0_8" -32.9132
+cap "rwl_1_8" "read_bl_0_1" -34.8264
+cap "rwl_1_8" "read_bl_0_0" -34.8264
+cap "rwl_1_8" "rwl_0_8" -318.182
+cap "rwl_1_8" "wwl_0_8" -194.444
+cap "read_bl_1_1" "read_bl_0_1" -312.5
+cap "read_bl_1_1" "rwl_0_8" -34.8264
+cap "wwl_0_8" "read_bl_1_1" -34.8264
+cap "read_bl_1_1" "write_bl_0_1" -227.273
+cap "read_bl_0_0" "read_bl_1_0" -312.5
+cap "rwl_0_8" "read_bl_1_0" -34.8264
+cap "rwl_1_8" "write_bl_0_0" -34.8264
+cap "wwl_0_8" "read_bl_1_0" -34.8264
+cap "rwl_0_8" "read_bl_0_1" -34.8264
+cap "wwl_0_8" "read_bl_0_1" -34.8264
+cap "read_bl_0_0" "rwl_0_8" -34.8264
+cap "wwl_0_8" "read_bl_0_0" -34.8264
+cap "wwl_0_8" "rwl_0_8" -642.857
+cap "write_bl_0_0" "read_bl_1_0" -454.545
+cap "write_bl_0_0" "read_bl_0_1" -221.519
+cap "write_bl_0_0" "rwl_0_8" -34.8264
+cap "wwl_0_8" "write_bl_0_0" -34.8264
+cap "rwl_1_8" "read_bl_1_1" -34.8264
+cap "rwl_1_8" "read_bl_1_0" -34.8264
+cap "bitcell_array_0/cell_2r1w_7/rwl1" "bitcell_array_0/cell_2r1w_7/wwl0" -21.6667
+cap "bitcell_array_0/cell_2r1w_7/rwl1" "write_bl_0_1" -34.8264
+cap "bitcell_array_0/cell_2r1w_7/wwl0" "bitcell_array_0/rwl_0_8" -71.6327
+cap "write_bl_0_1" "read_bl_1_1" -227.273
+cap "write_bl_0_1" "bitcell_array_0/rwl_0_8" -34.8264
+cap "bitcell_array_0/cell_2r1w_7/wwl0" "write_bl_0_1" -34.8264
+cap "bitcell_array_0/cell_2r1w_7/rwl1" "bitcell_array_0/rwl_0_8" -35.4545
+subcap "rwl_0_9" -32.9132
+cap "rwl_1_9" "bitcell_array_0/cell_2r1w_22/rbl1" -34.8264
+cap "rwl_0_9" "bitcell_array_0/cell_2r1w_22/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_6/wbl0" "bitcell_array_0/cell_2r1w_6/rbl1" -227.273
+cap "rwl_1_9" "wwl_0_9" -194.444
+cap "wwl_0_9" "bitcell_array_0/cell_2r1w_6/rbl1" -34.8264
+cap "wwl_0_9" "rwl_0_9" -642.857
+cap "rwl_1_9" "bitcell_array_0/cell_2r1w_6/rbl1" -34.8264
+cap "rwl_1_9" "rwl_0_9" -318.182
+cap "rwl_0_9" "bitcell_array_0/cell_2r1w_6/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_22/wbl0" "bitcell_array_0/cell_2r1w_6/rbl0" -221.519
+cap "bitcell_array_0/cell_2r1w_22/wbl0" "bitcell_array_0/cell_2r1w_22/rbl1" -454.545
+cap "bitcell_array_0/cell_2r1w_22/rbl0" "bitcell_array_0/cell_2r1w_22/rbl1" -312.5
+cap "bitcell_array_0/cell_2r1w_22/wbl0" "wwl_0_9" -34.8264
+cap "wwl_0_9" "bitcell_array_0/cell_2r1w_22/rbl0" -34.8264
+cap "wwl_0_9" "bitcell_array_0/cell_2r1w_6/rbl0" -34.8264
+cap "rwl_1_9" "bitcell_array_0/cell_2r1w_22/wbl0" -34.8264
+cap "wwl_0_9" "bitcell_array_0/cell_2r1w_22/rbl1" -34.8264
+cap "rwl_1_9" "bitcell_array_0/cell_2r1w_22/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_22/wbl0" "rwl_0_9" -34.8264
+cap "bitcell_array_0/cell_2r1w_22/rbl0" "rwl_0_9" -34.8264
+cap "rwl_1_9" "bitcell_array_0/cell_2r1w_6/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_6/rbl1" "bitcell_array_0/cell_2r1w_6/rbl0" -312.5
+cap "rwl_0_9" "bitcell_array_0/cell_2r1w_6/rbl0" -34.8264
+cap "bitcell_array_0/rwl_0_9" "bitcell_array_0/cell_2r1w_6/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_6/rwl1" "bitcell_array_0/cell_2r1w_6/wwl0" -21.6667
+cap "bitcell_array_0/rwl_0_9" "bitcell_array_0/cell_2r1w_6/wwl0" -71.6327
+cap "bitcell_array_0/rwl_0_9" "bitcell_array_0/cell_2r1w_6/rwl1" -35.4545
+cap "bitcell_array_0/cell_2r1w_6/rbl1" "bitcell_array_0/cell_2r1w_6/wbl0" -227.273
+cap "bitcell_array_0/cell_2r1w_6/wwl0" "bitcell_array_0/cell_2r1w_6/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_6/rwl1" "bitcell_array_0/cell_2r1w_6/wbl0" -34.8264
+subcap "rwl_0_10" -32.9132
+cap "rwl_1_10" "rwl_0_10" -318.182
+cap "bitcell_array_0/cell_2r1w_21/wbl0" "rwl_1_10" -34.8264
+cap "bitcell_array_0/cell_2r1w_21/wbl0" "rwl_0_10" -34.8264
+cap "bitcell_array_0/cell_2r1w_22/rbl1" "rwl_1_10" -34.8264
+cap "bitcell_array_0/cell_2r1w_22/rbl1" "rwl_0_10" -34.8264
+cap "bitcell_array_0/cell_2r1w_21/wbl0" "bitcell_array_0/cell_2r1w_22/rbl1" -454.545
+cap "bitcell_array_0/cell_2r1w_6/rbl0" "rwl_1_10" -34.8264
+cap "bitcell_array_0/cell_2r1w_6/rbl0" "rwl_0_10" -34.8264
+cap "bitcell_array_0/cell_2r1w_6/rbl1" "wwl_0_10" -34.8264
+cap "bitcell_array_0/cell_2r1w_21/wbl0" "bitcell_array_0/cell_2r1w_6/rbl0" -221.519
+cap "bitcell_array_0/cell_2r1w_22/rbl0" "rwl_1_10" -34.8264
+cap "bitcell_array_0/cell_2r1w_22/rbl0" "rwl_0_10" -34.8264
+cap "rwl_1_10" "wwl_0_10" -194.444
+cap "bitcell_array_0/cell_2r1w_22/rbl0" "bitcell_array_0/cell_2r1w_22/rbl1" -312.5
+cap "rwl_0_10" "wwl_0_10" -642.857
+cap "bitcell_array_0/cell_2r1w_21/wbl0" "wwl_0_10" -34.8264
+cap "bitcell_array_0/cell_2r1w_22/rbl1" "wwl_0_10" -34.8264
+cap "bitcell_array_0/cell_2r1w_5/wbl0" "bitcell_array_0/cell_2r1w_6/rbl1" -227.273
+cap "bitcell_array_0/cell_2r1w_6/rbl0" "wwl_0_10" -34.8264
+cap "rwl_1_10" "bitcell_array_0/cell_2r1w_6/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_6/rbl1" "rwl_0_10" -34.8264
+cap "bitcell_array_0/cell_2r1w_22/rbl0" "wwl_0_10" -34.8264
+cap "bitcell_array_0/cell_2r1w_6/rbl0" "bitcell_array_0/cell_2r1w_6/rbl1" -312.5
+cap "bitcell_array_0/cell_2r1w_5/wwl0" "bitcell_array_0/cell_2r1w_5/wbl0" -34.8264
+cap "bitcell_array_0/rwl_0_10" "bitcell_array_0/cell_2r1w_5/wwl0" -71.6327
+cap "bitcell_array_0/rwl_0_10" "bitcell_array_0/cell_2r1w_5/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_5/wwl0" "bitcell_array_0/cell_2r1w_5/rwl1" -21.6667
+cap "bitcell_array_0/cell_2r1w_5/wbl0" "bitcell_array_0/cell_2r1w_5/rwl1" -34.8264
+cap "bitcell_array_0/rwl_0_10" "bitcell_array_0/cell_2r1w_5/rwl1" -35.4545
+cap "bitcell_array_0/cell_2r1w_6/rbl1" "bitcell_array_0/cell_2r1w_5/wbl0" -227.273
+subcap "rwl_1_10" -1606.97
+subcap "rwl_0_11" -32.9132
+cap "bitcell_array_0/cell_2r1w_20/wbl0" "rwl_1_11" -34.8264
+cap "rwl_1_11" "bitcell_array_0/cell_2r1w_4/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_20/rbl1" "wwl_0_11" -34.8264
+cap "rwl_1_11" "bitcell_array_0/cell_2r1w_4/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_20/wbl0" "rwl_0_11" -34.8264
+cap "bitcell_array_0/cell_2r1w_4/rbl0" "rwl_0_11" -34.8264
+cap "bitcell_array_0/cell_2r1w_4/rbl1" "rwl_0_11" -34.8264
+cap "bitcell_array_0/cell_2r1w_20/wbl0" "bitcell_array_0/cell_2r1w_20/rbl1" -454.545
+cap "bitcell_array_0/cell_2r1w_20/wbl0" "wwl_0_11" -34.8264
+cap "bitcell_array_0/cell_2r1w_4/rbl0" "wwl_0_11" -34.8264
+cap "bitcell_array_0/cell_2r1w_4/rbl1" "wwl_0_11" -34.8264
+cap "rwl_1_11" "bitcell_array_0/cell_2r1w_20/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_20/wbl0" "bitcell_array_0/cell_2r1w_4/rbl0" -221.519
+cap "rwl_1_11" "rwl_0_11" -318.182
+cap "bitcell_array_0/cell_2r1w_4/rbl0" "bitcell_array_0/cell_2r1w_4/rbl1" -312.5
+cap "rwl_1_11" "bitcell_array_0/cell_2r1w_20/rbl1" -34.8264
+cap "rwl_1_11" "wwl_0_11" -194.444
+cap "bitcell_array_0/cell_2r1w_20/rbl0" "rwl_0_11" -34.8264
+cap "bitcell_array_0/cell_2r1w_20/rbl1" "bitcell_array_0/cell_2r1w_20/rbl0" -312.5
+cap "bitcell_array_0/cell_2r1w_20/rbl1" "rwl_0_11" -34.8264
+cap "bitcell_array_0/cell_2r1w_20/rbl0" "wwl_0_11" -34.8264
+cap "wwl_0_11" "rwl_0_11" -642.857
+cap "bitcell_array_0/cell_2r1w_4/wbl0" "bitcell_array_0/cell_2r1w_4/rbl1" -227.273
+cap "bitcell_array_0/rwl_0_11" "bitcell_array_0/cell_2r1w_4/rwl1" -35.4545
+cap "bitcell_array_0/cell_2r1w_4/wbl0" "bitcell_array_0/cell_2r1w_4/rbl1" -227.273
+cap "bitcell_array_0/cell_2r1w_4/wwl0" "bitcell_array_0/cell_2r1w_4/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_4/wbl0" "bitcell_array_0/cell_2r1w_4/rwl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_4/wwl0" "bitcell_array_0/cell_2r1w_4/rwl1" -21.6667
+cap "bitcell_array_0/cell_2r1w_4/wbl0" "bitcell_array_0/rwl_0_11" -34.8264
+cap "bitcell_array_0/cell_2r1w_4/wwl0" "bitcell_array_0/rwl_0_11" -71.6327
+subcap "wwl_0_11" -1264.39
+subcap "rwl_0_12" -32.9132
+cap "bitcell_array_0/cell_2r1w_4/rbl1" "bitcell_array_0/cell_2r1w_4/wbl0" -227.273
+cap "bitcell_array_0/cell_2r1w_20/rbl0" "bitcell_array_0/cell_2r1w_20/rbl1" -312.5
+cap "bitcell_array_0/cell_2r1w_20/wbl0" "rwl_0_12" -34.8264
+cap "wwl_0_12" "rwl_0_12" -642.857
+cap "bitcell_array_0/cell_2r1w_4/rbl1" "wwl_0_12" -34.8264
+cap "bitcell_array_0/cell_2r1w_20/wbl0" "rwl_1_12" -34.8264
+cap "rwl_1_12" "wwl_0_12" -194.444
+cap "bitcell_array_0/cell_2r1w_4/rbl0" "rwl_0_12" -34.8264
+cap "bitcell_array_0/cell_2r1w_20/rbl1" "rwl_0_12" -34.8264
+cap "bitcell_array_0/cell_2r1w_4/rbl1" "bitcell_array_0/cell_2r1w_4/rbl0" -312.5
+cap "bitcell_array_0/cell_2r1w_4/rbl0" "rwl_1_12" -34.8264
+cap "bitcell_array_0/cell_2r1w_20/rbl0" "rwl_0_12" -34.8264
+cap "bitcell_array_0/cell_2r1w_20/rbl1" "rwl_1_12" -34.8264
+cap "bitcell_array_0/cell_2r1w_20/rbl0" "rwl_1_12" -34.8264
+cap "bitcell_array_0/cell_2r1w_20/wbl0" "wwl_0_12" -34.8264
+cap "bitcell_array_0/cell_2r1w_4/rbl1" "rwl_0_12" -34.8264
+cap "bitcell_array_0/cell_2r1w_20/wbl0" "bitcell_array_0/cell_2r1w_4/rbl0" -221.519
+cap "bitcell_array_0/cell_2r1w_20/wbl0" "bitcell_array_0/cell_2r1w_20/rbl1" -454.545
+cap "bitcell_array_0/cell_2r1w_4/rbl0" "wwl_0_12" -34.8264
+cap "rwl_1_12" "rwl_0_12" -318.182
+cap "bitcell_array_0/cell_2r1w_20/rbl1" "wwl_0_12" -34.8264
+cap "bitcell_array_0/cell_2r1w_4/rbl1" "rwl_1_12" -34.8264
+cap "bitcell_array_0/cell_2r1w_20/rbl0" "wwl_0_12" -34.8264
+cap "bitcell_array_0/rwl_0_12" "bitcell_array_0/cell_2r1w_3/wwl0" -71.6327
+cap "bitcell_array_0/cell_2r1w_3/rwl1" "bitcell_array_0/cell_2r1w_3/wwl0" -21.6667
+cap "bitcell_array_0/rwl_0_12" "bitcell_array_0/cell_2r1w_4/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_4/wbl0" "bitcell_array_0/cell_2r1w_3/rwl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_4/rbl1" "bitcell_array_0/cell_2r1w_4/wbl0" -227.273
+cap "bitcell_array_0/rwl_0_12" "bitcell_array_0/cell_2r1w_3/rwl1" -35.4545
+cap "bitcell_array_0/cell_2r1w_4/wbl0" "bitcell_array_0/cell_2r1w_3/wwl0" -34.8264
+subcap "rwl_0_12" -1455.07
+subcap "rwl_1_12" -886.973
+subcap "rwl_0_13" -32.9132
+cap "bitcell_array_0/cell_2r1w_2/rbl0" "bitcell_array_0/cell_2r1w_18/wbl0" -221.519
+cap "bitcell_array_0/cell_2r1w_18/rbl0" "rwl_1_13" -34.8264
+cap "wwl_0_13" "bitcell_array_0/cell_2r1w_2/rbl0" -34.8264
+cap "rwl_1_13" "rwl_0_13" -318.182
+cap "wwl_0_13" "bitcell_array_0/cell_2r1w_18/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_2/rbl0" "bitcell_array_0/cell_2r1w_2/rbl1" -312.5
+cap "rwl_1_13" "bitcell_array_0/cell_2r1w_18/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_18/rbl0" "rwl_0_13" -34.8264
+cap "wwl_0_13" "bitcell_array_0/cell_2r1w_2/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_18/rbl0" "bitcell_array_0/cell_2r1w_18/rbl1" -312.5
+cap "rwl_1_13" "bitcell_array_0/cell_2r1w_2/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_18/rbl1" "rwl_0_13" -34.8264
+cap "rwl_1_13" "bitcell_array_0/cell_2r1w_18/wbl0" -34.8264
+cap "wwl_0_13" "rwl_1_13" -194.444
+cap "bitcell_array_0/cell_2r1w_2/rbl1" "bitcell_array_0/cell_2r1w_2/wbl0" -227.273
+cap "bitcell_array_0/cell_2r1w_2/rbl0" "rwl_0_13" -34.8264
+cap "rwl_1_13" "bitcell_array_0/cell_2r1w_2/rbl1" -34.8264
+cap "rwl_0_13" "bitcell_array_0/cell_2r1w_18/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_18/rbl0" "wwl_0_13" -34.8264
+cap "wwl_0_13" "rwl_0_13" -642.857
+cap "bitcell_array_0/cell_2r1w_18/rbl1" "bitcell_array_0/cell_2r1w_18/wbl0" -454.545
+cap "bitcell_array_0/cell_2r1w_2/rbl1" "rwl_0_13" -34.8264
+cap "wwl_0_13" "bitcell_array_0/cell_2r1w_18/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_2/wbl0" "bitcell_array_0/rwl_0_13" -34.8264
+cap "bitcell_array_0/cell_2r1w_2/wwl0" "bitcell_array_0/cell_2r1w_2/rwl1" -21.6667
+cap "bitcell_array_0/cell_2r1w_2/wbl0" "bitcell_array_0/cell_2r1w_2/rwl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_2/wbl0" "bitcell_array_0/cell_2r1w_2/wwl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_2/rwl1" "bitcell_array_0/rwl_0_13" -35.4545
+cap "bitcell_array_0/cell_2r1w_2/rbl1" "bitcell_array_0/cell_2r1w_2/wbl0" -227.273
+cap "bitcell_array_0/cell_2r1w_2/wwl0" "bitcell_array_0/rwl_0_13" -71.6327
+subcap "rwl_0_13" -1152.21
+subcap "wwl_0_13" -703.177
+subcap "rwl_0_14" -256.8
+subcap "rwl_1_14" -1174.84
+cap "rwl_0_14" "bitcell_array_0/cell_2r1w_2/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_2/rbl1" "bitcell_array_0/cell_2r1w_2/rbl0" -312.5
+cap "rwl_0_14" "rwl_1_14" -159.091
+cap "bitcell_array_0/cell_2r1w_2/rbl0" "bitcell_array_0/cell_2r1w_18/wbl0" -221.519
+cap "rwl_0_14" "bitcell_array_0/cell_2r1w_18/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_2/rbl0" "wwl_0_14" -34.8264
+cap "bitcell_array_0/cell_2r1w_18/rbl1" "bitcell_array_0/cell_2r1w_18/rbl0" -312.5
+cap "rwl_1_14" "wwl_0_14" -97.2222
+cap "wwl_0_14" "bitcell_array_0/cell_2r1w_18/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_18/rbl1" "rwl_0_14" -34.8264
+cap "rwl_0_14" "bitcell_array_0/cell_2r1w_2/rbl1" -34.8264
+cap "rwl_0_14" "bitcell_array_0/cell_2r1w_18/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_18/rbl1" "bitcell_array_0/cell_2r1w_18/wbl0" -454.545
+cap "rwl_0_14" "wwl_0_14" -642.857
+cap "bitcell_array_0/cell_2r1w_18/rbl1" "wwl_0_14" -34.8264
+cap "bitcell_array_0/cell_2r1w_2/rbl1" "wwl_0_14" -34.8264
+cap "bitcell_array_0/cell_2r1w_2/rbl1" "bitcell_array_0/cell_2r1w_2/wbl0" -227.273
+cap "bitcell_array_0/cell_2r1w_18/wbl0" "wwl_0_14" -34.8264
+cap "bitcell_array_0/cell_2r1w_2/wbl0" "bitcell_array_0/cell_2r1w_2/rbl1" -227.273
+cap "bitcell_array_0/cell_2r1w_1/wwl0" "bitcell_array_0/cell_2r1w_2/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_1/wwl0" "bitcell_array_0/cell_2r1w_1/rwl1" -10.8333
+cap "bitcell_array_0/rwl_0_14" "bitcell_array_0/cell_2r1w_1/rwl1" -17.7273
+cap "bitcell_array_0/cell_2r1w_2/wbl0" "bitcell_array_0/rwl_0_14" -34.8264
+cap "bitcell_array_0/cell_2r1w_1/wwl0" "bitcell_array_0/rwl_0_14" -71.6327
+subcap "wwl_0_14" -888.945
+subcap "rwl_0_14" -249.993
+subcap "rwl_1_14" -22.769
+subcap "rwl_1_15" -36.125
+subcap "rwl_0_15" -862.533
+subcap "wwl_0_15" -1046.26
+cap "bitcell_array_0/cell_2r1w_1/rbl0" "bitcell_array_0/cell_2r1w_0/rbl1" -312.5
+cap "rwl_0_15" "rwl_1_15" -159.091
+cap "bitcell_array_0/cell_2r1w_17/wbl0" "bitcell_array_0/cell_2r1w_1/rbl0" -221.519
+cap "bitcell_array_0/cell_2r1w_1/wbl0" "bitcell_array_0/cell_2r1w_0/rbl1" -227.273
+cap "bitcell_array_0/cell_2r1w_0/rbl1" "rwl_1_15" -34.8264
+cap "bitcell_array_0/cell_2r1w_17/rbl0" "rwl_1_15" -34.8264
+cap "rwl_1_14" "bitcell_array_0/cell_2r1w_0/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_17/wbl0" "rwl_1_15" -34.8264
+cap "rwl_1_15" "bitcell_array_0/cell_2r1w_16/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_17/rbl0" "rwl_1_14" -34.8264
+cap "rwl_0_14" "rwl_1_14" -159.091
+cap "bitcell_array_0/cell_2r1w_17/wbl0" "rwl_1_14" -34.8264
+cap "rwl_1_14" "bitcell_array_0/cell_2r1w_16/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_1/rbl0" "rwl_1_15" -34.8264
+cap "bitcell_array_0/cell_2r1w_17/rbl0" "bitcell_array_0/cell_2r1w_16/rbl1" -312.5
+cap "wwl_0_15" "rwl_1_15" -97.2222
+cap "bitcell_array_0/cell_2r1w_17/wbl0" "bitcell_array_0/cell_2r1w_16/rbl1" -454.545
+cap "bitcell_array_0/cell_2r1w_1/rbl0" "rwl_1_14" -34.8264
+cap "wwl_0_14" "rwl_1_14" -97.2222
+cap "bitcell_array_0/cell_2r1w_0/rwl1" "bitcell_array_0/cell_2r1w_1/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_1/wwl0" "bitcell_array_0/cell_2r1w_1/rwl1" -10.8333
+cap "bitcell_array_0/cell_2r1w_0/rwl1" "bitcell_array_0/rwl_0_15" -17.7273
+cap "bitcell_array_0/rwl_0_14" "bitcell_array_0/cell_2r1w_1/rwl1" -17.7273
+cap "bitcell_array_0/cell_2r1w_0/rwl1" "bitcell_array_0/cell_2r1w_0/wwl0" -10.8333
+cap "bitcell_array_0/cell_2r1w_1/wbl0" "bitcell_array_0/cell_2r1w_0/rbl1" -227.273
+cap "bitcell_array_0/cell_2r1w_1/wbl0" "bitcell_array_0/cell_2r1w_1/rwl1" -34.8264
+subcap "rwl_1_15" -944.718
+subcap "rwl_0_15" -102.817
+cap "wwl_0_15" "bitcell_array_0/cell_2r1w_16/rbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_16/rbl1" "bitcell_array_0/cell_2r1w_16/wbl0" -286.364
+cap "bitcell_array_0/cell_2r1w_0/rbl0" "wwl_0_15" -34.8264
+cap "rwl_0_15" "bitcell_array_0/cell_2r1w_16/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_16/rbl1" "bitcell_array_0/cell_2r1w_16/rbl0" -196.875
+cap "rwl_0_15" "bitcell_array_0/cell_2r1w_16/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_0/rbl1" "rwl_0_15" -34.8264
+cap "rwl_0_15" "rwl_1_15" -159.091
+cap "wwl_0_15" "bitcell_array_0/cell_2r1w_16/rbl1" -34.8264
+cap "bitcell_array_0/cell_2r1w_0/rbl1" "bitcell_array_0/cell_2r1w_0/wbl0" -143.182
+cap "bitcell_array_0/cell_2r1w_0/rbl0" "bitcell_array_0/cell_2r1w_16/wbl0" -139.557
+cap "bitcell_array_0/cell_2r1w_0/rbl1" "bitcell_array_0/cell_2r1w_0/rbl0" -196.875
+cap "rwl_0_15" "bitcell_array_0/cell_2r1w_16/rbl0" -34.8264
+cap "rwl_0_15" "bitcell_array_0/cell_2r1w_0/rbl0" -34.8264
+cap "wwl_0_15" "bitcell_array_0/cell_2r1w_16/wbl0" -34.8264
+cap "bitcell_array_0/cell_2r1w_0/rbl1" "wwl_0_15" -34.8264
+cap "wwl_0_15" "rwl_1_15" -97.2222
+cap "rwl_0_15" "wwl_0_15" -642.857
+cap "bitcell_array_0/cell_2r1w_0/wbl0" "bitcell_array_0/rwl_0_15" -34.8264
+cap "bitcell_array_0/cell_2r1w_0/wbl0" "bitcell_array_0/cell_2r1w_0/rbl1" -143.182
+cap "bitcell_array_0/rwl_0_15" "bitcell_array_0/cell_2r1w_0/wwl0" -71.6327
+cap "bitcell_array_0/cell_2r1w_0/rwl1" "bitcell_array_0/cell_2r1w_0/wwl0" -10.8333
+cap "bitcell_array_0/cell_2r1w_0/rwl1" "bitcell_array_0/rwl_0_15" -17.7273
+cap "bitcell_array_0/cell_2r1w_0/wbl0" "bitcell_array_0/cell_2r1w_0/wwl0" -34.8264
+merge "bitcell_array_0/cell_2r1w_3/rwl1" "bitcell_array_0/rwl_1_12" -623.144 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 40456 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_1_12" "rwl_1_12"
+merge "bitcell_array_0/rwl_0_3" "rwl_0_3" -507.844 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 217840 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_12/wwl0" "bitcell_array_0/wwl_0_3" -635.28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21784 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/wwl_0_3" "wwl_0_3"
+merge "bitcell_array_0/cell_2r1w_0/rbl1" "bitcell_array_0/cell_2r1w_2/rbl1" -8269.26 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3006080 -49336 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_2/rbl1" "bitcell_array_0/cell_2r1w_4/rbl1"
+merge "bitcell_array_0/cell_2r1w_4/rbl1" "bitcell_array_0/cell_2r1w_6/rbl1"
+merge "bitcell_array_0/cell_2r1w_6/rbl1" "bitcell_array_0/read_bl_1_1"
+merge "bitcell_array_0/read_bl_1_1" "bitcell_array_0/cell_2r1w_9/rbl1"
+merge "bitcell_array_0/cell_2r1w_9/rbl1" "bitcell_array_0/cell_2r1w_10/rbl1"
+merge "bitcell_array_0/cell_2r1w_10/rbl1" "bitcell_array_0/cell_2r1w_12/rbl1"
+merge "bitcell_array_0/cell_2r1w_12/rbl1" "bitcell_array_0/cell_2r1w_14/rbl1"
+merge "bitcell_array_0/cell_2r1w_14/rbl1" "bitcell_array_0/cell_2r1w_15/rbl1"
+merge "bitcell_array_0/cell_2r1w_15/rbl1" "read_bl_1_1"
+merge "bitcell_array_0/cell_2r1w_16/rbl0" "bitcell_array_0/cell_2r1w_17/rbl0" -9840.06 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -689920 -49336 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_17/rbl0" "bitcell_array_0/cell_2r1w_18/rbl0"
+merge "bitcell_array_0/cell_2r1w_18/rbl0" "bitcell_array_0/cell_2r1w_20/rbl0"
+merge "bitcell_array_0/cell_2r1w_20/rbl0" "bitcell_array_0/cell_2r1w_22/rbl0"
+merge "bitcell_array_0/cell_2r1w_22/rbl0" "bitcell_array_0/read_bl_0_0"
+merge "bitcell_array_0/read_bl_0_0" "bitcell_array_0/cell_2r1w_25/rbl0"
+merge "bitcell_array_0/cell_2r1w_25/rbl0" "bitcell_array_0/cell_2r1w_26/rbl0"
+merge "bitcell_array_0/cell_2r1w_26/rbl0" "bitcell_array_0/cell_2r1w_27/rbl0"
+merge "bitcell_array_0/cell_2r1w_27/rbl0" "bitcell_array_0/cell_2r1w_28/rbl0"
+merge "bitcell_array_0/cell_2r1w_28/rbl0" "bitcell_array_0/cell_2r1w_30/rbl0"
+merge "bitcell_array_0/cell_2r1w_30/rbl0" "bitcell_array_0/cell_2r1w_31/rbl0"
+merge "bitcell_array_0/cell_2r1w_31/rbl0" "read_bl_0_0"
+merge "bitcell_array_0/cell_2r1w_0/wbl0" "bitcell_array_0/cell_2r1w_1/wbl0" -9798.17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -591360 -49336 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_1/wbl0" "bitcell_array_0/cell_2r1w_2/wbl0"
+merge "bitcell_array_0/cell_2r1w_2/wbl0" "bitcell_array_0/cell_2r1w_4/wbl0"
+merge "bitcell_array_0/cell_2r1w_4/wbl0" "bitcell_array_0/cell_2r1w_5/wbl0"
+merge "bitcell_array_0/cell_2r1w_5/wbl0" "bitcell_array_0/cell_2r1w_6/wbl0"
+merge "bitcell_array_0/cell_2r1w_6/wbl0" "bitcell_array_0/write_bl_0_1"
+merge "bitcell_array_0/write_bl_0_1" "bitcell_array_0/cell_2r1w_9/wbl0"
+merge "bitcell_array_0/cell_2r1w_9/wbl0" "bitcell_array_0/cell_2r1w_10/wbl0"
+merge "bitcell_array_0/cell_2r1w_10/wbl0" "bitcell_array_0/cell_2r1w_11/wbl0"
+merge "bitcell_array_0/cell_2r1w_11/wbl0" "bitcell_array_0/cell_2r1w_12/wbl0"
+merge "bitcell_array_0/cell_2r1w_12/wbl0" "bitcell_array_0/cell_2r1w_14/wbl0"
+merge "bitcell_array_0/cell_2r1w_14/wbl0" "bitcell_array_0/cell_2r1w_15/wbl0"
+merge "bitcell_array_0/cell_2r1w_15/wbl0" "write_bl_0_1"
+merge "bitcell_array_0/cell_2r1w_0/rbl0" "bitcell_array_0/cell_2r1w_1/rbl0" -9840.06 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -689920 -49336 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_1/rbl0" "bitcell_array_0/cell_2r1w_2/rbl0"
+merge "bitcell_array_0/cell_2r1w_2/rbl0" "bitcell_array_0/cell_2r1w_4/rbl0"
+merge "bitcell_array_0/cell_2r1w_4/rbl0" "bitcell_array_0/cell_2r1w_6/rbl0"
+merge "bitcell_array_0/cell_2r1w_6/rbl0" "bitcell_array_0/read_bl_0_1"
+merge "bitcell_array_0/read_bl_0_1" "bitcell_array_0/cell_2r1w_9/rbl0"
+merge "bitcell_array_0/cell_2r1w_9/rbl0" "bitcell_array_0/cell_2r1w_10/rbl0"
+merge "bitcell_array_0/cell_2r1w_10/rbl0" "bitcell_array_0/cell_2r1w_11/rbl0"
+merge "bitcell_array_0/cell_2r1w_11/rbl0" "bitcell_array_0/cell_2r1w_12/rbl0"
+merge "bitcell_array_0/cell_2r1w_12/rbl0" "bitcell_array_0/cell_2r1w_14/rbl0"
+merge "bitcell_array_0/cell_2r1w_14/rbl0" "bitcell_array_0/cell_2r1w_15/rbl0"
+merge "bitcell_array_0/cell_2r1w_15/rbl0" "read_bl_0_1"
+merge "bitcell_array_0/cell_2r1w_11/wwl0" "bitcell_array_0/wwl_0_4" -550.323 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 152488 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/wwl_0_4" "wwl_0_4"
+merge "bitcell_array_0/cell_2r1w_16/wbl0" "bitcell_array_0/cell_2r1w_17/wbl0" -9840.06 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -689920 -49336 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_17/wbl0" "bitcell_array_0/cell_2r1w_18/wbl0"
+merge "bitcell_array_0/cell_2r1w_18/wbl0" "bitcell_array_0/cell_2r1w_20/wbl0"
+merge "bitcell_array_0/cell_2r1w_20/wbl0" "bitcell_array_0/cell_2r1w_21/wbl0"
+merge "bitcell_array_0/cell_2r1w_21/wbl0" "bitcell_array_0/cell_2r1w_22/wbl0"
+merge "bitcell_array_0/cell_2r1w_22/wbl0" "bitcell_array_0/write_bl_0_0"
+merge "bitcell_array_0/write_bl_0_0" "bitcell_array_0/cell_2r1w_25/wbl0"
+merge "bitcell_array_0/cell_2r1w_25/wbl0" "bitcell_array_0/cell_2r1w_26/wbl0"
+merge "bitcell_array_0/cell_2r1w_26/wbl0" "bitcell_array_0/cell_2r1w_27/wbl0"
+merge "bitcell_array_0/cell_2r1w_27/wbl0" "bitcell_array_0/cell_2r1w_28/wbl0"
+merge "bitcell_array_0/cell_2r1w_28/wbl0" "bitcell_array_0/cell_2r1w_30/wbl0"
+merge "bitcell_array_0/cell_2r1w_30/wbl0" "bitcell_array_0/cell_2r1w_31/wbl0"
+merge "bitcell_array_0/cell_2r1w_31/wbl0" "write_bl_0_0"
+merge "bitcell_array_0/rwl_0_4" "rwl_0_4" -996.739 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -4724 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_16/rbl1" "bitcell_array_0/cell_2r1w_18/rbl1" -9840.06 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -689920 -49336 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_18/rbl1" "bitcell_array_0/cell_2r1w_20/rbl1"
+merge "bitcell_array_0/cell_2r1w_20/rbl1" "bitcell_array_0/cell_2r1w_22/rbl1"
+merge "bitcell_array_0/cell_2r1w_22/rbl1" "bitcell_array_0/read_bl_1_0"
+merge "bitcell_array_0/read_bl_1_0" "bitcell_array_0/cell_2r1w_25/rbl1"
+merge "bitcell_array_0/cell_2r1w_25/rbl1" "bitcell_array_0/cell_2r1w_26/rbl1"
+merge "bitcell_array_0/cell_2r1w_26/rbl1" "bitcell_array_0/cell_2r1w_28/rbl1"
+merge "bitcell_array_0/cell_2r1w_28/rbl1" "bitcell_array_0/cell_2r1w_30/rbl1"
+merge "bitcell_array_0/cell_2r1w_30/rbl1" "bitcell_array_0/cell_2r1w_31/rbl1"
+merge "bitcell_array_0/cell_2r1w_31/rbl1" "read_bl_1_0"
+merge "bitcell_array_0/cell_2r1w_5/wwl0" "bitcell_array_0/wwl_0_10" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/wwl_0_10" "wwl_0_10"
+merge "bitcell_array_0/rwl_0_5" "rwl_0_5" -592.802 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 87136 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_10/wwl0" "bitcell_array_0/wwl_0_5" -465.365 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 283192 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/wwl_0_5" "wwl_0_5"
+merge "bitcell_array_0/cell_2r1w_6/rwl1" "bitcell_array_0/rwl_1_9" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_1_9" "rwl_1_9"
+merge "bitcell_array_0/cell_2r1w_9/wwl0" "bitcell_array_0/wwl_0_6" -550.323 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 152488 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/wwl_0_6" "wwl_0_6"
+merge "bitcell_array_0/rwl_0_6" "rwl_0_6" -422.886 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 348544 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_0_0" "rwl_0_0" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_8/wwl0" "bitcell_array_0/wwl_0_7" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/wwl_0_7" "wwl_0_7"
+merge "bitcell_array_0/rwl_0_7" "rwl_0_7" -309.61 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 522816 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_4/wwl0" "bitcell_array_0/wwl_0_11" -352.088 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 457464 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/wwl_0_11" "wwl_0_11"
+merge "bitcell_array_0/rwl_0_1" "rwl_0_1" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_10/rwl1" "bitcell_array_0/rwl_1_5" -562.46 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 133816 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_1_5" "rwl_1_5"
+merge "bitcell_array_0/cell_2r1w_7/wwl0" "bitcell_array_0/wwl_0_8" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/wwl_0_8" "wwl_0_8"
+merge "bitcell_array_0/rwl_0_8" "rwl_0_8" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_3/wwl0" "bitcell_array_0/wwl_0_12" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/wwl_0_12" "wwl_0_12"
+merge "bitcell_array_0/cell_2r1w_9/rwl1" "bitcell_array_0/rwl_1_6" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_1_6" "rwl_1_6"
+merge "bitcell_array_0/rwl_0_2" "rwl_0_2" -394.567 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 392112 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_6/wwl0" "bitcell_array_0/wwl_0_9" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/wwl_0_9" "wwl_0_9"
+merge "bitcell_array_0/rwl_0_9" "rwl_0_9" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_2/wwl0" "bitcell_array_0/wwl_0_13" -635.28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21784 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/wwl_0_13" "wwl_0_13"
+merge "bitcell_array_0/rwl_0_10" "rwl_0_10" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_13/rwl1" "bitcell_array_0/rwl_1_2" -623.144 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 40456 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_1_2" "rwl_1_2"
+merge "bitcell_array_0/cell_2r1w_1/wwl0" "bitcell_array_0/wwl_0_14" -550.323 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 152488 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/wwl_0_14" "wwl_0_14"
+merge "bitcell_array_0/cell_2r1w_0/wwl0" "bitcell_array_0/wwl_0_15" -465.365 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 283192 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/wwl_0_15" "wwl_0_15"
+merge "bitcell_array_0/rwl_0_11" "rwl_0_11" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_0_12" "rwl_0_12" -394.567 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 392112 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_15/wwl0" "bitcell_array_0/wwl_0_0" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/wwl_0_0" "wwl_0_0"
+merge "bitcell_array_0/rwl_0_13" "rwl_0_13" -507.844 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 217840 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_0_14" "rwl_0_14" -996.739 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -4724 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_18/rwl1" "bitcell_array_0/cell_2r1w_2/rwl1" -279.268 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 569496 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_2/rwl1" "bitcell_array_0/rwl_1_13"
+merge "bitcell_array_0/rwl_1_13" "rwl_1_13"
+merge "bitcell_array_0/rwl_0_15" "rwl_0_15" -592.802 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 87136 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_15/rwl1" "bitcell_array_0/rwl_1_0" -339.952 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 476136 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_1_0" "rwl_1_0"
+merge "bitcell_array_0/cell_2r1w_5/rwl1" "bitcell_array_0/rwl_1_10" -339.952 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 476136 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_1_10" "rwl_1_10"
+merge "bitcell_array_0/cell_2r1w_14/rwl1" "bitcell_array_0/rwl_1_1" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_1_1" "rwl_1_1"
+merge "bitcell_array_0/cell_2r1w_28/rwl1" "bitcell_array_0/cell_2r1w_12/rwl1" -279.268 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 569496 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_12/rwl1" "bitcell_array_0/rwl_1_3"
+merge "bitcell_array_0/rwl_1_3" "rwl_1_3"
+merge "bitcell_array_0/cell_2r1w_8/rwl1" "bitcell_array_0/rwl_1_7" -538.186 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 171160 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_1_7" "rwl_1_7"
+merge "bitcell_array_0/cell_2r1w_11/rwl1" "bitcell_array_0/rwl_1_4" -477.502 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 264520 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_1_4" "rwl_1_4"
+merge "bitcell_array_0/cell_2r1w_14/wwl0" "bitcell_array_0/wwl_0_1" -352.088 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 457464 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/wwl_0_1" "wwl_0_1"
+merge "bitcell_array_0/cell_2r1w_4/rwl1" "bitcell_array_0/rwl_1_11" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_1_11" "rwl_1_11"
+merge "bitcell_array_0/cell_2r1w_7/rwl1" "bitcell_array_0/rwl_1_8" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_1_8" "rwl_1_8"
+merge "bitcell_array_0/cell_2r1w_1/rwl1" "bitcell_array_0/rwl_1_14" -477.502 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 264520 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_1_14" "rwl_1_14"
+merge "bitcell_array_0/gnd" "gnd" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/cell_2r1w_0/rwl1" "bitcell_array_0/rwl_1_15" -562.46 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 133816 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/rwl_1_15" "rwl_1_15"
+merge "bitcell_array_0/cell_2r1w_13/wwl0" "bitcell_array_0/wwl_0_2" -677.759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43568 -3168 0 0 0 0 0 0 0 0 0 0
+merge "bitcell_array_0/wwl_0_2" "wwl_0_2"

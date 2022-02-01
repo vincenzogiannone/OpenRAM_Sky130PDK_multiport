@@ -1,0 +1,141 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1643678851
+<< checkpaint >>
+rect -1299 -1302 4224 2176
+<< via1 >>
+rect 715 812 767 864
+rect 2197 812 2249 864
+rect 715 -26 767 26
+rect 2197 -26 2249 26
+<< metal2 >>
+rect 721 866 761 872
+rect 2203 866 2243 872
+rect 0 336 28 838
+rect 721 804 761 810
+rect 1482 336 1510 838
+rect 2203 804 2243 810
+rect 0 0 28 280
+rect 180 232 234 260
+rect 1260 228 1314 256
+rect 721 28 761 34
+rect 1482 0 1510 280
+rect 1662 232 1716 260
+rect 2742 228 2796 256
+rect 2203 28 2243 34
+rect 721 -34 761 -28
+rect 2203 -34 2243 -28
+<< via2 >>
+rect 713 864 769 866
+rect 713 812 715 864
+rect 715 812 767 864
+rect 767 812 769 864
+rect 2195 864 2251 866
+rect 713 810 769 812
+rect 2195 812 2197 864
+rect 2197 812 2249 864
+rect 2249 812 2251 864
+rect 2195 810 2251 812
+rect -1 280 55 336
+rect 1481 280 1537 336
+rect 713 26 769 28
+rect 713 -26 715 26
+rect 715 -26 767 26
+rect 767 -26 769 26
+rect 2195 26 2251 28
+rect 713 -28 769 -26
+rect 2195 -26 2197 26
+rect 2197 -26 2249 26
+rect 2249 -26 2251 26
+rect 2195 -28 2251 -26
+<< metal3 >>
+rect 675 866 807 871
+rect 675 810 713 866
+rect 769 810 807 866
+rect 675 805 807 810
+rect 2157 866 2289 871
+rect 2157 810 2195 866
+rect 2251 810 2289 866
+rect 2157 805 2289 810
+rect -39 338 93 341
+rect 1443 338 1575 341
+rect -39 336 2964 338
+rect -39 280 -1 336
+rect 55 280 1481 336
+rect 1537 280 2964 336
+rect -39 278 2964 280
+rect -39 275 93 278
+rect 1443 275 1575 278
+rect 675 28 807 33
+rect 675 -28 713 28
+rect 769 -28 807 28
+rect 675 -33 807 -28
+rect 2157 28 2289 33
+rect 2157 -28 2195 28
+rect 2251 -28 2289 28
+rect 2157 -33 2289 -28
+use contact_18  contact_18_0
+timestamp 1643678851
+transform 1 0 1443 0 1 275
+box 0 0 1 1
+use contact_18  contact_18_1
+timestamp 1643678851
+transform 1 0 -39 0 1 275
+box 0 0 1 1
+use contact_18  contact_18_2
+timestamp 1643678851
+transform 1 0 2157 0 1 -33
+box 0 0 1 1
+use contact_17  contact_17_0
+timestamp 1643678851
+transform 1 0 2208 0 1 -15
+box 0 0 1 1
+use contact_18  contact_18_3
+timestamp 1643678851
+transform 1 0 2157 0 1 805
+box 0 0 1 1
+use contact_17  contact_17_1
+timestamp 1643678851
+transform 1 0 2208 0 1 823
+box 0 0 1 1
+use contact_18  contact_18_4
+timestamp 1643678851
+transform 1 0 675 0 1 -33
+box 0 0 1 1
+use contact_17  contact_17_2
+timestamp 1643678851
+transform 1 0 726 0 1 -15
+box 0 0 1 1
+use contact_18  contact_18_5
+timestamp 1643678851
+transform 1 0 675 0 1 805
+box 0 0 1 1
+use contact_17  contact_17_3
+timestamp 1643678851
+transform 1 0 726 0 1 823
+box 0 0 1 1
+use dff  dff_0
+timestamp 1643678851
+transform 1 0 1482 0 1 0
+box 0 -42 1482 916
+use dff  dff_1
+timestamp 1643678851
+transform 1 0 0 0 1 0
+box 0 -42 1482 916
+<< labels >>
+rlabel metal3 s 2157 805 2289 871 4 vdd
+rlabel metal3 s 675 805 807 871 4 vdd
+rlabel metal3 s 2157 -33 2289 33 4 gnd
+rlabel metal3 s 675 -33 807 33 4 gnd
+rlabel metal2 s 180 232 234 260 4 din_0
+rlabel metal2 s 1260 228 1314 256 4 dout_0
+rlabel metal2 s 1662 232 1716 260 4 din_1
+rlabel metal2 s 2742 228 2796 256 4 dout_1
+rlabel metal3 s 0 278 2964 338 4 clk
+<< properties >>
+string FIXED_BBOX 2157 -33 2289 0
+string GDS_FILE sram_0rw2r1w_16_128_sky130A.gds
+string GDS_END 2153048
+string GDS_START 2150382
+<< end >>

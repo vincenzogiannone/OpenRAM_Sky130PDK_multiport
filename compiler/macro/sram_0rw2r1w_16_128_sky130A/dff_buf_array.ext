@@ -1,0 +1,89 @@
+timestamp 1643678852
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use contact_17 contact_17_3 1 0 -15 0 1 823
+use contact_18 contact_18_3 1 0 -66 0 1 805
+use contact_17 contact_17_2 1 0 -15 0 1 -15
+use contact_18 contact_18_2 1 0 -66 0 1 -33
+use contact_17 contact_17_1 1 0 -15 0 1 823
+use contact_18 contact_18_1 1 0 -66 0 1 805
+use contact_17 contact_17_0 1 0 -15 0 1 1661
+use contact_18 contact_18_0 1 0 -66 0 1 1643
+use dff_buf_0 dff_buf_0_1 1 0 0 0 1 0
+use dff_buf_0 dff_buf_0_0 1 0 0 0 -1 1676
+node "dout_0" 0 23.2932 2629 227 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 784 112 0 0 0 0 0 0 0 0
+node "din_0" 0 34.2626 180 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "dout_bar_0" 0 23.2932 2164 499 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 784 112 0 0 0 0 0 0 0 0
+node "dout_bar_1" 0 23.2932 2164 1149 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 784 112 0 0 0 0 0 0 0 0
+node "dout_1" 0 23.2932 2629 1421 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 784 112 0 0 0 0 0 0 0 0
+node "din_1" 0 34.2626 180 1416 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "clk" 27 4964.66 -26 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 533616 18168 54160 3712 26136 1188 0 0 0 0 0 0
+equiv "clk" "gnd"
+equiv "clk" "gnd"
+equiv "clk" "vdd"
+equiv "clk" "vdd"
+substrate "gnd" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "din_1" "clk" 9.21053
+cap "din_0" "clk" 9.21053
+cap "din_0" "din_1" 4.92857
+cap "dff_buf_0_1/dff_0/net7" "vdd" 5.82645e-13
+cap "dff_buf_0_0/dff_0/net1" "vdd" 2.84217e-14
+cap "dff_buf_0_0/dff_0/net7" "vdd" 1.7053e-13
+cap "dff_buf_0_1/dff_0/Q" "vdd" -4.26326e-14
+cap "dff_buf_0_1/dff_0/net3" "vdd" 3.72581
+cap "dff_buf_0_1/dff_0/clkb" "vdd" 1.13687e-13
+cap "dff_buf_0_0/dff_0/clkb" "dff_buf_0_1/dff_0/clkb" 20.5134
+cap "vdd" "dff_buf_0_1/dff_0/net2" 5.68434e-14
+cap "dff_buf_0_0/dff_0/net1" "dff_buf_0_1/dff_0/net1" 10.6562
+cap "dff_buf_0_1/dff_0/net3" "dff_buf_0_0/dff_0/net3" 15.5848
+cap "dff_buf_0_1/dff_0/net7" "dff_buf_0_0/dff_0/net7" 15.5848
+cap "dff_buf_0_0/dff_0/net2" "dff_buf_0_1/dff_0/net2" 15.5848
+cap "dff_buf_0_0/dff_0/net6" "vdd" -5.68434e-14
+cap "dff_buf_0_0/dff_0/clkb" "vdd" 1.13687e-13
+cap "din_0" "vdd" -9.21053
+cap "dff_buf_0_0/dff_0/net2" "vdd" -4.26326e-14
+cap "vdd" "dff_buf_0_0/dff_0/net3" 3.72581
+cap "vdd" "dff_buf_0_1/dff_0/net6" -1.7053e-13
+cap "dff_buf_0_1/dff_0/net1" "vdd" 1.13687e-13
+cap "dff_buf_0_0/dff_0/net6" "dff_buf_0_1/dff_0/net6" 15.5848
+cap "dff_buf_0_1/vdd" "dff_buf_0_1/pinv_3_0/vdd" -436.833
+cap "dff_buf_0_0/pinv_2_0/A" "dff_buf_0_1/pinv_2_0/A" 38.2563
+cap "dff_buf_0_1/dff_0/net7" "dff_buf_0_0/dff_0/net7" 4.92857
+cap "dout_0" "dout_1" 7.79167
+cap "dout_bar_0" "dout_bar_1" 58.6358
+subcap "dout_0" -158.278
+cap "dff_buf_0_1/pinv_3_0/A" "dff_buf_0_0/pinv_3_0/A" 0.46
+cap "dff_buf_0_1/vdd" "dff_buf_0_1/pinv_3_0/vdd" 91.9996
+cap "dff_buf_0_0/dff_0/net2" "gnd" -2.84217e-14
+cap "gnd" "din_1" -9.21053
+cap "gnd" "dff_buf_0_0/dff_0/Q" 4.08562e-14
+cap "gnd" "dff_buf_0_0/dff_0/net1" -1.42109e-14
+cap "gnd" "dff_buf_0_0/dff_0/net6" 2.84217e-14
+cap "gnd" "dff_buf_0_0/dff_0/clkb" -6.82121e-13
+cap "gnd" "dff_buf_0_0/dff_0/net7" -3.19744e-14
+merge "dff_buf_0_0/clk" "clk" -5584.49 0 0 0 0 -231192 -3276 0 0 16200 -1560 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 31824 -1040 181008 -24016 -13548 -984 0 0 0 0 0 0 0 0
+merge "clk" "dff_buf_0_0/gnd"
+merge "dff_buf_0_0/gnd" "dff_buf_0_0/vdd"
+merge "dff_buf_0_0/vdd" "dff_buf_0_1/clk"
+merge "dff_buf_0_1/clk" "dff_buf_0_1/gnd"
+merge "dff_buf_0_1/gnd" "dff_buf_0_1/vdd"
+merge "dff_buf_0_1/vdd" "vdd"
+merge "vdd" "contact_18_0/gnd"
+merge "contact_18_0/gnd" "contact_17_0/gnd"
+merge "contact_17_0/gnd" "contact_18_1/gnd"
+merge "contact_18_1/gnd" "contact_17_1/gnd"
+merge "contact_17_1/gnd" "contact_18_2/gnd"
+merge "contact_18_2/gnd" "contact_17_2/gnd"
+merge "contact_17_2/gnd" "contact_18_3/gnd"
+merge "contact_18_3/gnd" "contact_17_3/gnd"
+merge "contact_17_3/gnd" "gnd"
+merge "dff_buf_0_0/D" "din_1" -32.9315 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1620 -164 0 0 0 0 0 0 0 0
+merge "dff_buf_0_1/Q" "dout_0" -22.3769 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1372 -112 0 0 0 0 0 0 0 0
+merge "dff_buf_0_0/Q" "dout_1" -23.6889 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1715 -112 0 0 0 0 0 0 0 0
+merge "dff_buf_0_0/Qb" "dout_bar_1" -21.1393 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4284 -112 0 0 0 0 0 0 0 0
+merge "dff_buf_0_1/D" "din_0" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "dff_buf_0_0/pinv_3_0/vdd" "dff_buf_0_1/pinv_3_0/vdd" -1054.85 0 0 0 0 -137484 -2640 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -38556 -2336 0 0 0 0 0 0 0 0 0 0 0 0
+merge "dff_buf_0_1/Qb" "dout_bar_0" -23.2932 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -784 -112 0 0 0 0 0 0 0 0

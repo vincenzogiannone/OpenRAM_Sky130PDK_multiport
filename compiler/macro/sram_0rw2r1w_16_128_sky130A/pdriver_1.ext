@@ -1,0 +1,104 @@
+timestamp 1643678852
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use pinv_10 pinv_10_0 1 0 3699 0 1 0
+use pinv_9 pinv_9_0 1 0 1944 0 1 0
+use pinv_8 pinv_8_0 1 0 1161 0 1 0
+use pinv_7 pinv_7_0 1 0 702 0 1 0
+use pinv_0 pinv_0_0 1 0 351 0 1 0
+use pinv_0 pinv_0_1 1 0 0 0 1 0
+node "gnd" 2965 4822.64 0 -17 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 280908 16592 0 0 0 0 0 0 0 0 0 0 0 0
+node "Z" 12 38.4693 5934 352 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_2775_352#" 361 603.057 2775 352 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 34170 2078 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_1558_354#" 168 290.237 1558 354 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15878 1002 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_902_360#" 122 216.393 902 360 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11560 748 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_547_360#" 85 155.922 547 360 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8024 540 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_196_360#" 85 155.922 196 360 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8024 540 0 0 0 0 0 0 0 0 0 0 0 0
+node "A" 12 76.1409 48 344 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4356 264 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 2965 4562.8 0 821 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 280908 16592 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_n36_402#" 28738 12326 -36 402 nw 0 0 0 0 4108662 17654 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "gnd" "li_1558_354#" 45.73
+cap "gnd" "Z" 3.34925
+cap "li_547_360#" "li_196_360#" 9.75652
+cap "gnd" "li_2775_352#" 99
+cap "A" "li_196_360#" 13.6829
+cap "vdd" "w_n36_402#" 259.84
+cap "gnd" "li_902_360#" 32.7114
+cap "A" "w_n36_402#" 0.4884
+cap "li_547_360#" "li_902_360#" 9.42857
+cap "gnd" "li_547_360#" 22.7055
+cap "gnd" "A" 6.66055
+cap "li_1558_354#" "li_902_360#" 2.92405
+cap "gnd" "li_196_360#" 22.7055
+subcap "gnd" -3972.93
+subcap "li_1558_354#" -428.837
+subcap "vdd" -1721.76
+subcap "w_n36_402#" -9484.95
+cap "pinv_8_0/gnd" "A" -6.66055
+cap "pinv_8_0/vdd" "A" -0.4884
+cap "pinv_8_0/A" "pinv_8_0/gnd" 14.8864
+cap "pinv_8_0/A" "pinv_8_0/Z" -1.46203
+cap "pinv_8_0/A" "pinv_8_0/vdd" 15.0972
+cap "pinv_0_0/A" "A" 23.6326
+cap "A" "pinv_7_0/A" 5.45865
+cap "pinv_8_0/A" "pinv_7_0/A" 70.8733
+cap "pinv_8_0/gnd" "pinv_8_0/Z" 16.6698
+cap "pinv_8_0/vdd" "pinv_8_0/Z" 6.78505
+cap "pinv_8_0/gnd" "pinv_0_0/A" 6.7297
+cap "pinv_8_0/gnd" "pinv_7_0/A" 16.8001
+cap "pinv_8_0/vdd" "pinv_0_0/A" 13.5541
+cap "pinv_8_0/vdd" "pinv_7_0/A" 13.5541
+cap "pinv_0_0/A" "pinv_7_0/A" 90.0196
+subcap "li_2775_352#" -338.836
+cap "pinv_9_0/gnd" "pinv_9_0/Z" 8.97235
+cap "pinv_9_0/Z" "pinv_9_0/A" 25.0841
+cap "pinv_9_0/A" "pinv_8_0/A" 6.8495
+cap "pinv_9_0/vdd" "pinv_9_0/A" 20.9015
+cap "pinv_9_0/gnd" "pinv_9_0/A" 7.57946
+cap "pinv_9_0/vdd" "pinv_9_0/Z" 1.13687e-13
+cap "pinv_10_0/nmos_m40_w0_495_sli_dli_da_p_0/D" "gnd" 15.5025
+cap "pinv_10_0/A" "pinv_9_0/nmos_m14_w0_480_sli_dli_da_p_0/G" 5.66044
+cap "pinv_10_0/A" "gnd" 8.89425
+cap "pinv_10_0/A" "pinv_9_0/pmos_m14_w1_440_sli_dli_da_p_0/G" 5.30218
+cap "pinv_10_0/A" "vdd" 30.6632
+cap "vdd" "pinv_10_0/pmos_m40_w1_480_sli_dli_da_p_0/D" 6.37383
+cap "w_n36_402#" "vdd" -44.03
+cap "Z" "pinv_10_0/gnd" -3.34925
+cap "w_n36_402#" "pinv_10_0/vdd" -44.03
+merge "pinv_10_0/pmos_m40_w1_480_sli_dli_da_p_0/S" "pinv_10_0/pmos_m40_w1_480_sli_dli_da_p_0/S_uq9" -21402.5 0 0 0 0 -5584211 -28904 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -274006 -16932 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pinv_10_0/pmos_m40_w1_480_sli_dli_da_p_0/S_uq9" "pinv_10_0/pmos_m40_w1_480_sli_dli_da_p_0/S_uq16"
+merge "pinv_10_0/pmos_m40_w1_480_sli_dli_da_p_0/S_uq16" "pinv_10_0/vdd"
+merge "pinv_10_0/vdd" "pinv_7_0/pmos_m2_w1_260_sli_dli_da_p_0/S_uq0"
+merge "pinv_7_0/pmos_m2_w1_260_sli_dli_da_p_0/S_uq0" "pinv_9_0/vdd"
+merge "pinv_9_0/vdd" "pinv_0_1/vdd"
+merge "pinv_0_1/vdd" "pinv_0_0/vdd"
+merge "pinv_0_0/vdd" "pinv_7_0/vdd"
+merge "pinv_7_0/vdd" "pinv_8_0/vdd"
+merge "pinv_8_0/vdd" "vdd"
+merge "vdd" "w_n36_402#"
+merge "pinv_10_0/nmos_m40_w0_495_sli_dli_da_p_0/S" "pinv_10_0/nmos_m40_w0_495_sli_dli_da_p_0/S_uq9" -4909.76 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -274006 -16932 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pinv_10_0/nmos_m40_w0_495_sli_dli_da_p_0/S_uq9" "pinv_10_0/gnd"
+merge "pinv_10_0/gnd" "pinv_10_0/nmos_m40_w0_495_sli_dli_da_p_0/S_uq16"
+merge "pinv_10_0/nmos_m40_w0_495_sli_dli_da_p_0/S_uq16" "pinv_7_0/nmos_m2_w0_420_sli_dli_da_p_0/S_uq0"
+merge "pinv_7_0/nmos_m2_w0_420_sli_dli_da_p_0/S_uq0" "pinv_9_0/gnd"
+merge "pinv_9_0/gnd" "pinv_0_1/gnd"
+merge "pinv_0_1/gnd" "pinv_0_0/gnd"
+merge "pinv_0_0/gnd" "pinv_7_0/gnd"
+merge "pinv_7_0/gnd" "pinv_8_0/gnd"
+merge "pinv_8_0/gnd" "gnd"
+merge "pinv_0_0/Z" "pinv_7_0/A" -66.4725 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1700 -236 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pinv_7_0/A" "li_547_360#"
+merge "pinv_0_1/A" "A" -76.1409 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4356 -264 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pinv_7_0/Z" "pinv_8_0/A" -62.6356 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2448 -236 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pinv_8_0/A" "li_902_360#"
+merge "pinv_10_0/Z" "Z" -26.8328 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11424 -136 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pinv_0_1/Z" "pinv_0_0/A" -66.4725 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1700 -236 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pinv_0_0/A" "li_196_360#"
+merge "pinv_10_0/A" "pinv_9_0/Z" -63.9029 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11186 -270 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pinv_9_0/Z" "li_2775_352#"
+merge "pinv_9_0/A" "pinv_8_0/Z" -70.1615 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4420 -270 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pinv_8_0/Z" "li_1558_354#"

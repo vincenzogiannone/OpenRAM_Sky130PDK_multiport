@@ -1,0 +1,113 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1643678851
+<< checkpaint >>
+rect -1296 -1277 1747 2155
+<< nwell >>
+rect -36 402 487 895
+<< pwell >>
+rect 358 51 408 133
+<< pdiffc >>
+rect 212 535 214 555
+rect 244 535 246 555
+<< psubdiff >>
+rect 358 109 408 133
+rect 358 75 366 109
+rect 400 75 408 109
+rect 358 51 408 75
+<< nsubdiff >>
+rect 358 763 408 787
+rect 358 729 366 763
+rect 400 729 408 763
+rect 358 705 408 729
+<< psubdiffcont >>
+rect 366 75 400 109
+<< nsubdiffcont >>
+rect 366 729 400 763
+<< poly >>
+rect 196 555 262 571
+rect 196 521 212 555
+rect 246 521 262 555
+rect 114 323 144 509
+rect 196 505 262 521
+rect 96 307 162 323
+rect 96 273 112 307
+rect 146 273 162 307
+rect 96 257 162 273
+rect 114 245 144 257
+rect 214 245 244 505
+<< polycont >>
+rect 214 535 244 555
+rect 212 521 246 535
+rect 112 273 146 307
+<< locali >>
+rect 0 821 451 855
+rect 62 628 96 821
+rect 262 628 296 821
+rect 366 763 400 821
+rect 366 713 400 729
+rect 162 578 196 628
+rect 162 555 364 578
+rect 162 544 214 555
+rect 196 535 214 544
+rect 244 544 364 555
+rect 244 535 262 544
+rect 196 521 212 535
+rect 246 521 262 535
+rect 196 505 262 521
+rect 96 307 162 323
+rect 96 273 112 307
+rect 146 273 162 307
+rect 96 257 162 273
+rect 330 253 364 544
+rect 262 219 364 253
+rect 262 168 296 219
+rect 366 109 400 125
+rect 62 17 96 102
+rect 366 17 400 75
+rect 0 -17 451 17
+use contact_12  contact_12_0
+timestamp 1643678851
+transform 1 0 196 0 1 505
+box 0 0 1 1
+use contact_12  contact_12_1
+timestamp 1643678851
+transform 1 0 96 0 1 257
+box 0 0 1 1
+use contact_11  contact_11_0
+timestamp 1643678851
+transform 1 0 358 0 1 51
+box 0 0 1 1
+use contact_10  contact_10_0
+timestamp 1643678851
+transform 1 0 358 0 1 705
+box 0 0 1 1
+use nmos_m1_w0_840_sactive_dli  nmos_m1_w0_840_sactive_dli_0
+timestamp 1643678851
+transform 1 0 154 0 1 51
+box 0 -26 150 194
+use nmos_m1_w0_840_sli_dactive  nmos_m1_w0_840_sli_dactive_0
+timestamp 1643678851
+transform 1 0 54 0 1 51
+box 0 -26 150 194
+use pmos_m1_w1_260_sli_dli  pmos_m1_w1_260_sli_dli_0
+timestamp 1643678851
+transform 1 0 154 0 1 535
+box -59 -54 209 306
+use pmos_m1_w1_260_sli_dli  pmos_m1_w1_260_sli_dli_1
+timestamp 1643678851
+transform 1 0 54 0 1 535
+box -59 -54 209 306
+<< labels >>
+rlabel locali s 347 561 347 561 4 Z
+rlabel locali s 225 0 225 0 4 gnd
+rlabel locali s 225 838 225 838 4 vdd
+rlabel locali s 129 290 129 290 4 A
+rlabel locali s 229 538 229 538 4 B
+<< properties >>
+string FIXED_BBOX 0 0 451 662
+string GDS_FILE sram_0rw2r1w_16_128_sky130A.gds
+string GDS_END 2122472
+string GDS_START 2120080
+<< end >>

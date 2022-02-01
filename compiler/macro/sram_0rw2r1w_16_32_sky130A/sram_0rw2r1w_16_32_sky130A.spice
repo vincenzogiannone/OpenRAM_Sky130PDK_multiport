@@ -1,0 +1,2214 @@
+* NGSPICE file created from sram_0rw2r1w_16_32_sky130A.ext - technology: sky130A
+
+.subckt dff clk vdd gnd D Q
+X0 net3 net2 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X1 gnd net7 a_922_96# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X2 vdd clk clkb vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X3 net3 net2 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X4 vdd net3 net4 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X5 gnd net3 a_474_96# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X6 gnd clk clkb gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X7 a_922_96# clkb net6 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X8 a_474_96# clk net2 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X9 net4 clkb net2 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X10 net6 clk net3 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X11 net2 clkb net1 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X12 net7 net6 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X13 net8 clk net6 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X14 net2 clk net1 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X15 net1 D gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X16 vdd net7 net8 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X17 net1 D vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X18 net6 clkb net3 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X19 Q net7 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X20 net7 net6 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X21 Q net7 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+.ends
+
+.subckt nmos_m2_w0_420_sli_dli_da_p S S_uq0 gnd D G
+X0 D G S gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X1 S_uq0 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+.ends
+
+.subckt pmos_m2_w1_260_sli_dli_da_p w_n59_42# S S_uq0 gnd D G
+X0 S_uq0 G D w_n59_42# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.26e+06u l=150000u
+X1 D G S w_n59_42# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.26e+06u l=150000u
+.ends
+
+.subckt pinv_1 Z gnd vdd A
+Xnmos_m2_w0_420_sli_dli_da_p_0 gnd gnd gnd Z A nmos_m2_w0_420_sli_dli_da_p
+Xpmos_m2_w1_260_sli_dli_da_p_0 vdd vdd vdd gnd Z A pmos_m2_w1_260_sli_dli_da_p
+.ends
+
+.subckt nmos_m4_w0_420_sli_dli_da_p S S_uq0 S_uq1 gnd D G
+X0 D G S_uq1 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X1 D G S gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X2 S G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X3 S_uq0 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+.ends
+
+.subckt pmos_m4_w1_260_sli_dli_da_p w_n59_42# S S_uq0 S_uq1 gnd D G
+X0 D G S w_n59_42# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.26e+06u l=150000u
+X1 S G D w_n59_42# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.26e+06u l=150000u
+X2 S_uq0 G D w_n59_42# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.26e+06u l=150000u
+X3 D G S_uq1 w_n59_42# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.26e+06u l=150000u
+.ends
+
+.subckt pinv_2 vdd Z gnd A
+Xnmos_m4_w0_420_sli_dli_da_p_0 gnd gnd gnd gnd Z A nmos_m4_w0_420_sli_dli_da_p
+Xpmos_m4_w1_260_sli_dli_da_p_0 vdd vdd vdd vdd gnd Z A pmos_m4_w1_260_sli_dli_da_p
+.ends
+
+.subckt dff_buf_0 pinv_2_0/vdd clk gnd Q Qb vdd D
+Xdff_0 clk vdd gnd D dff_0/Q dff
+Xpinv_1_0 Qb gnd pinv_2_0/vdd dff_0/Q pinv_1
+Xpinv_2_0 pinv_2_0/vdd Q gnd Qb pinv_2
+.ends
+
+.subckt dff_buf_array dff_buf_0_1/pinv_2_0/vdd vdd dout_0 dout_1 dout_bar_0 dout_bar_1
++ din_0 din_1
+Xdff_buf_0_1 dff_buf_0_1/pinv_2_0/vdd vdd vdd dout_0 dout_bar_0 vdd din_0 dff_buf_0
+Xdff_buf_0_0 dff_buf_0_1/pinv_2_0/vdd vdd vdd dout_1 dout_bar_1 vdd din_1 dff_buf_0
+.ends
+
+.subckt nmos_m10_w0_460_sli_dli_da_p S S_uq0 S_uq1 S_uq3 S_uq2 S_uq4 gnd D G
+X0 S_uq1 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X1 D G S_uq4 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X2 D G S_uq3 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X3 D G S gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X4 S_uq3 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X5 S G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X6 S_uq0 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X7 D G S_uq2 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X8 D G S_uq1 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X9 S_uq2 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+.ends
+
+.subckt pmos_m10_w1_385_sli_dli_da_p S S_uq0 S_uq1 S_uq3 S_uq2 S_uq4 gnd w_n59_55#
++ D G
+X0 D G S_uq3 w_n59_55# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.385e+06u l=150000u
+X1 D G S w_n59_55# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.385e+06u l=150000u
+X2 S_uq3 G D w_n59_55# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.385e+06u l=150000u
+X3 S G D w_n59_55# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.385e+06u l=150000u
+X4 S_uq0 G D w_n59_55# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.385e+06u l=150000u
+X5 D G S_uq2 w_n59_55# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.385e+06u l=150000u
+X6 D G S_uq1 w_n59_55# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.385e+06u l=150000u
+X7 S_uq2 G D w_n59_55# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.385e+06u l=150000u
+X8 S_uq1 G D w_n59_55# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.385e+06u l=150000u
+X9 D G S_uq4 w_n59_55# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.385e+06u l=150000u
+.ends
+
+.subckt pinv_13 gnd vdd Z A
+Xnmos_m10_w0_460_sli_dli_da_p_0 gnd gnd gnd gnd gnd gnd gnd Z A nmos_m10_w0_460_sli_dli_da_p
+Xpmos_m10_w1_385_sli_dli_da_p_0 vdd vdd vdd vdd vdd vdd gnd vdd Z A pmos_m10_w1_385_sli_dli_da_p
+.ends
+
+.subckt nmos_m1_w0_420_sli_dli_da_p S gnd D G
+X0 D G S gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+.ends
+
+.subckt pmos_m1_w1_260_sli_dli_da_p w_n59_42# S gnd D G
+X0 D G S w_n59_42# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.26e+06u l=150000u
+.ends
+
+.subckt pinv_6 A Z gnd vdd
+Xnmos_m1_w0_420_sli_dli_da_p_0 gnd gnd Z A nmos_m1_w0_420_sli_dli_da_p
+Xpmos_m1_w1_260_sli_dli_da_p_0 vdd vdd gnd Z A pmos_m1_w1_260_sli_dli_da_p
+.ends
+
+.subckt pinv_12 Z gnd vdd A
+Xnmos_m4_w0_420_sli_dli_da_p_0 gnd gnd gnd gnd Z A nmos_m4_w0_420_sli_dli_da_p
+Xpmos_m4_w1_260_sli_dli_da_p_0 vdd vdd vdd vdd gnd Z A pmos_m4_w1_260_sli_dli_da_p
+.ends
+
+.subckt pdriver_3 vdd Z gnd A
+Xpinv_13_0 gnd vdd Z pinv_13_0/A pinv_13
+Xpinv_6_0 pinv_6_1/Z pinv_6_0/Z gnd vdd pinv_6
+Xpinv_6_1 A pinv_6_1/Z gnd vdd pinv_6
+Xpinv_12_0 pinv_13_0/A gnd vdd pinv_6_0/Z pinv_12
+.ends
+
+.subckt pmos_m1_w1_260_sli_dli w_n59_42# S gnd D G
+X0 D G S w_n59_42# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.26e+06u l=150000u
+.ends
+
+.subckt nmos_m1_w0_840_sli_dactive S gnd G a_90_0#
+X0 a_90_0# G S gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
+.ends
+
+.subckt nmos_m1_w0_840_sactive_dli a_0_0# gnd D G
+X0 D G a_0_0# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
+.ends
+
+.subckt pnand2_0 w_n36_402# Z gnd A
+Xpmos_m1_w1_260_sli_dli_0 w_n36_402# Z gnd Z Z pmos_m1_w1_260_sli_dli
+Xpmos_m1_w1_260_sli_dli_1 w_n36_402# Z gnd Z A pmos_m1_w1_260_sli_dli
+Xnmos_m1_w0_840_sli_dactive_0 gnd gnd A nmos_m1_w0_840_sactive_dli_0/a_0_0# nmos_m1_w0_840_sli_dactive
+Xnmos_m1_w0_840_sactive_dli_0 nmos_m1_w0_840_sactive_dli_0/a_0_0# gnd Z Z nmos_m1_w0_840_sactive_dli
+.ends
+
+.subckt pmos_m21_w1_440_sli_dli_da_p w_n59_60# S S_uq0 S_uq1 S_uq3 S_uq2 S_uq4 S_uq5
++ S_uq6 S_uq7 S_uq8 S_uq9 gnd D G
+X0 D G S_uq8 w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X1 S_uq1 G D w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X2 D G S_uq5 w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X3 S_uq8 G D w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X4 D G S_uq4 w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X5 D G S_uq2 w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X6 D G S_uq0 w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X7 S_uq5 G D w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X8 S_uq2 G D w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X9 S G D w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X10 S_uq4 G D w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X11 S_uq0 G D w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X12 D G S_uq7 w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X13 D G S_uq6 w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X14 D G S_uq3 w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X15 D G S_uq1 w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X16 D G S w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X17 S_uq7 G D w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X18 S_uq6 G D w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X19 D G S_uq9 w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+X20 S_uq3 G D w_n59_60# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.44e+06u l=150000u
+.ends
+
+.subckt nmos_m21_w0_480_sli_dli_da_p S S_uq0 S_uq1 S_uq3 S_uq2 S_uq4 S_uq5 S_uq6 S_uq7
++ S_uq8 S_uq9 gnd D G
+X0 S_uq6 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X1 D G S_uq9 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X2 S_uq3 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X3 S_uq1 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X4 D G S_uq8 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X5 D G S_uq5 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X6 S_uq8 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X7 D G S_uq4 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X8 D G S_uq2 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X9 D G S_uq0 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X10 S_uq5 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X11 S G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X12 S_uq4 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X13 S_uq2 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X14 S_uq0 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X15 D G S_uq7 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X16 D G S_uq6 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X17 D G S_uq3 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X18 D G S_uq1 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X19 D G S gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+X20 S_uq7 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=480000u l=150000u
+.ends
+
+.subckt pinv_11 gnd Z vdd A
+Xpmos_m21_w1_440_sli_dli_da_p_0 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd gnd
++ Z A pmos_m21_w1_440_sli_dli_da_p
+Xnmos_m21_w0_480_sli_dli_da_p_0 gnd gnd gnd gnd gnd gnd gnd gnd gnd gnd gnd gnd Z
++ A nmos_m21_w0_480_sli_dli_da_p
+.ends
+
+.subckt pdriver_2 gnd vdd Z A
+Xpinv_11_0 gnd Z vdd A pinv_11
+.ends
+
+.subckt pand2_0 B gnd Z A
+Xpnand2_0_0 B B gnd A pnand2_0
+Xpdriver_2_0 gnd B Z B pdriver_2
+.ends
+
+.subckt pinv_7 Z gnd vdd A
+Xnmos_m2_w0_420_sli_dli_da_p_0 gnd gnd gnd Z A nmos_m2_w0_420_sli_dli_da_p
+Xpmos_m2_w1_260_sli_dli_da_p_0 vdd vdd vdd gnd Z A pmos_m2_w1_260_sli_dli_da_p
+.ends
+
+.subckt nmos_m5_w0_420_sli_dli_da_p S S_uq0 S_uq1 gnd D G
+X0 D G S_uq1 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X1 D G S gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X2 S G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X3 D G S_uq0 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X4 S_uq0 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+.ends
+
+.subckt pmos_m5_w1_260_sli_dli_da_p w_n59_42# S S_uq0 S_uq1 gnd D G
+X0 D G S w_n59_42# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.26e+06u l=150000u
+X1 S G D w_n59_42# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.26e+06u l=150000u
+X2 D G S_uq0 w_n59_42# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.26e+06u l=150000u
+X3 S_uq0 G D w_n59_42# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.26e+06u l=150000u
+X4 D G S_uq1 w_n59_42# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.26e+06u l=150000u
+.ends
+
+.subckt pinv_8 Z gnd vdd A
+Xnmos_m5_w0_420_sli_dli_da_p_0 gnd gnd gnd gnd Z A nmos_m5_w0_420_sli_dli_da_p
+Xpmos_m5_w1_260_sli_dli_da_p_0 vdd vdd vdd vdd gnd Z A pmos_m5_w1_260_sli_dli_da_p
+.ends
+
+.subckt pdriver_1 Z gnd vdd A
+Xpinv_7_0 pinv_8_0/A gnd vdd pinv_7_0/A pinv_7
+Xpinv_8_0 Z gnd vdd pinv_8_0/A pinv_8
+Xpinv_6_0 pinv_6_1/Z pinv_7_0/A gnd vdd pinv_6
+Xpinv_6_1 A pinv_6_1/Z gnd vdd pinv_6
+.ends
+
+.subckt pmos_m11_w1_375_sli_dli_da_p S S_uq0 S_uq1 S_uq3 S_uq2 S_uq4 gnd w_n59_53#
++ D G
+X0 D G S_uq3 w_n59_53# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.375e+06u l=150000u
+X1 D G S w_n59_53# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.375e+06u l=150000u
+X2 S_uq3 G D w_n59_53# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.375e+06u l=150000u
+X3 D G S_uq0 w_n59_53# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.375e+06u l=150000u
+X4 S G D w_n59_53# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.375e+06u l=150000u
+X5 S_uq0 G D w_n59_53# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.375e+06u l=150000u
+X6 D G S_uq2 w_n59_53# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.375e+06u l=150000u
+X7 D G S_uq1 w_n59_53# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.375e+06u l=150000u
+X8 S_uq2 G D w_n59_53# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.375e+06u l=150000u
+X9 S_uq1 G D w_n59_53# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.375e+06u l=150000u
+X10 D G S_uq4 w_n59_53# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.375e+06u l=150000u
+.ends
+
+.subckt nmos_m11_w0_460_sli_dli_da_p S S_uq0 S_uq1 S_uq3 S_uq2 S_uq4 gnd D G
+X0 S_uq1 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X1 D G S_uq4 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X2 D G S_uq3 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X3 D G S gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X4 S_uq3 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X5 D G S_uq0 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X6 S G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X7 S_uq0 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X8 D G S_uq2 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X9 D G S_uq1 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+X10 S_uq2 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
+.ends
+
+.subckt pinv_3 vdd Z gnd A
+Xpmos_m11_w1_375_sli_dli_da_p_0 vdd vdd vdd vdd vdd vdd gnd vdd Z A pmos_m11_w1_375_sli_dli_da_p
+Xnmos_m11_w0_460_sli_dli_da_p_0 gnd gnd gnd gnd gnd gnd gnd Z A nmos_m11_w0_460_sli_dli_da_p
+.ends
+
+.subckt pdriver gnd vdd Z A
+Xpinv_3_0 vdd Z gnd A pinv_3
+.ends
+
+.subckt pand2 B gnd Z A
+Xpnand2_0_0 B B gnd A pnand2_0
+Xpdriver_0 gnd B Z B pdriver
+.ends
+
+.subckt pnand2_1 Z gnd A
+Xpmos_m1_w1_260_sli_dli_0 Z Z gnd Z Z pmos_m1_w1_260_sli_dli
+Xpmos_m1_w1_260_sli_dli_1 Z Z gnd Z A pmos_m1_w1_260_sli_dli
+Xnmos_m1_w0_840_sli_dactive_0 gnd gnd A nmos_m1_w0_840_sactive_dli_0/a_0_0# nmos_m1_w0_840_sli_dactive
+Xnmos_m1_w0_840_sactive_dli_0 nmos_m1_w0_840_sactive_dli_0/a_0_0# gnd Z Z nmos_m1_w0_840_sactive_dli
+.ends
+
+.subckt pmos_m12_w1_470_sli_dli_da_p w_n59_63# S S_uq0 S_uq1 S_uq3 S_uq2 S_uq4 S_uq5
++ gnd D G
+X0 D G S_uq4 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X1 D G S_uq1 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X2 S_uq4 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X3 D G S w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X4 S_uq1 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X5 S G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X6 D G S_uq3 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X7 D G S_uq2 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X8 S_uq3 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X9 S_uq2 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X10 D G S_uq5 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X11 S_uq0 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+.ends
+
+.subckt nmos_m12_w0_490_sli_dli_da_p S S_uq0 S_uq1 S_uq3 S_uq2 S_uq4 S_uq5 gnd D G
+X0 S_uq2 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X1 D G S_uq5 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X2 S_uq0 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X3 D G S_uq4 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X4 D G S_uq1 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X5 S_uq4 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X6 D G S gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X7 S_uq1 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X8 S G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X9 D G S_uq3 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X10 D G S_uq2 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X11 S_uq3 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+.ends
+
+.subckt pinv_9 Z vdd gnd A
+Xpmos_m12_w1_470_sli_dli_da_p_0 vdd vdd vdd vdd vdd vdd vdd vdd gnd Z A pmos_m12_w1_470_sli_dli_da_p
+Xnmos_m12_w0_490_sli_dli_da_p_0 gnd gnd gnd gnd gnd gnd gnd gnd Z A nmos_m12_w0_490_sli_dli_da_p
+.ends
+
+.subckt pmos_m36_w1_470_sli_dli_da_p w_n59_63# S S_uq0 S_uq1 S_uq3 S_uq2 S_uq4 S_uq10
++ S_uq5 S_uq11 S_uq6 S_uq13 S_uq12 S_uq7 S_uq14 S_uq8 S_uq15 S_uq9 S_uq16 S_uq17 gnd
++ D G
+X0 D G S_uq16 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X1 S_uq9 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X2 S_uq4 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X3 S_uq0 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X4 D G S_uq13 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X5 D G S_uq3 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X6 D G S w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X7 S_uq16 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X8 D G S_uq12 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X9 D G S_uq10 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X10 D G S_uq7 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X11 D G S_uq5 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X12 D G S_uq2 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X13 S_uq13 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X14 S_uq10 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X15 S_uq8 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X16 S_uq5 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X17 S_uq3 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X18 S G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X19 S_uq12 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X20 S_uq7 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X21 D G S_uq15 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X22 D G S_uq14 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X23 D G S_uq11 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X24 D G S_uq9 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X25 D G S_uq8 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X26 D G S_uq6 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X27 D G S_uq4 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X28 D G S_uq1 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X29 S_uq15 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X30 S_uq14 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X31 S_uq2 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X32 S_uq1 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X33 D G S_uq17 w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X34 S_uq11 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+X35 S_uq6 G D w_n59_63# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.47e+06u l=150000u
+.ends
+
+.subckt nmos_m36_w0_490_sli_dli_da_p S S_uq0 S_uq1 S_uq3 S_uq2 S_uq4 S_uq10 S_uq5
++ S_uq11 S_uq6 S_uq13 S_uq12 S_uq7 S_uq14 S_uq8 S_uq15 S_uq9 S_uq16 S_uq17 gnd D G
+X0 S_uq14 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X1 S_uq2 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X2 D G S_uq17 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X3 S_uq11 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X4 S_uq6 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X5 S_uq1 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X6 S_uq9 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X7 S_uq4 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X8 S_uq0 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X9 D G S_uq16 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X10 D G S_uq13 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X11 D G S_uq3 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X12 S_uq16 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X13 D G S_uq12 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X14 D G S_uq10 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X15 D G S_uq7 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X16 D G S_uq5 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X17 D G S_uq2 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X18 D G S gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X19 S_uq13 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X20 S_uq8 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X21 S_uq5 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X22 S_uq3 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X23 S G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X24 S_uq12 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X25 S_uq10 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X26 S_uq7 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X27 D G S_uq15 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X28 D G S_uq14 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X29 D G S_uq11 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X30 D G S_uq9 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X31 D G S_uq8 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X32 D G S_uq6 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X33 D G S_uq4 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X34 D G S_uq1 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+X35 S_uq15 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=490000u l=150000u
+.ends
+
+.subckt pinv_10 vdd gnd Z A
+Xpmos_m36_w1_470_sli_dli_da_p_0 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd
++ vdd vdd vdd vdd vdd vdd vdd gnd Z A pmos_m36_w1_470_sli_dli_da_p
+Xnmos_m36_w0_490_sli_dli_da_p_0 gnd gnd gnd gnd gnd gnd gnd gnd gnd gnd gnd gnd gnd
++ gnd gnd gnd gnd gnd gnd gnd Z A nmos_m36_w0_490_sli_dli_da_p
+.ends
+
+.subckt pdriver_0 vdd Z gnd A
+Xpinv_9_0 pinv_9_0/Z vdd gnd pinv_9_0/A pinv_9
+Xpinv_7_0 pinv_8_0/A gnd vdd pinv_7_0/A pinv_7
+Xpinv_8_0 pinv_9_0/A gnd vdd pinv_8_0/A pinv_8
+Xpinv_6_0 pinv_6_1/Z pinv_7_0/A gnd vdd pinv_6
+Xpinv_6_1 A pinv_6_1/Z gnd vdd pinv_6
+Xpinv_10_0 vdd gnd Z pinv_9_0/Z pinv_10
+.ends
+
+.subckt pinv_0 Z gnd vdd A
+Xnmos_m1_w0_420_sli_dli_da_p_0 gnd gnd Z A nmos_m1_w0_420_sli_dli_da_p
+Xpmos_m1_w1_260_sli_dli_da_p_0 vdd vdd gnd Z A pmos_m1_w1_260_sli_dli_da_p
+.ends
+
+.subckt control_logic_multiport vdd dff_buf_array_0/dff_buf_0_1/pinv_2_0/vdd pand2_1/Z
++ p_en_bar clk pnand2_1_0/Z web csb wl_en w_en
+Xdff_buf_array_0 dff_buf_array_0/dff_buf_0_1/pinv_2_0/vdd vdd dff_buf_array_0/dout_0
++ dff_buf_array_0/dout_1 pand2_0_0/A pand2_1/Z web csb dff_buf_array
+Xpdriver_3_0 pnand2_1_0/Z p_en_bar vdd pnand2_1_0/Z pdriver_3
+Xpand2_0_0 pand2_1/Z vdd w_en pand2_0_0/A pand2_0
+Xpdriver_1_0 wl_en vdd pnand2_1_0/Z pand2_1/Z pdriver_1
+Xpand2_0 pand2_1/Z vdd pand2_0/Z vdd pand2
+Xpand2_1 pand2_1/Z vdd pand2_1/Z pand2_1/A pand2
+Xpnand2_1_0 pnand2_1_0/Z vdd pand2_0/Z pnand2_1
+Xpdriver_0_0 pand2_1/Z vdd vdd clk pdriver_0
+Xpinv_0_0 pand2_1/A vdd pand2_1/Z vdd pinv_0
+.ends
+
+.subckt data_dff din_7 clk din_8 vdd gnd din_9 din_10 din_11 din_12 din_13 din_14
++ din_15 din_0 din_1 din_2 din_3 din_4 din_5 din_6
+Xdff_0 clk vdd gnd din_15 dout_15 dff
+Xdff_1 clk vdd gnd din_14 dout_14 dff
+Xdff_2 clk vdd gnd din_13 dout_13 dff
+Xdff_3 clk vdd gnd din_12 dout_12 dff
+Xdff_4 clk vdd gnd din_11 dout_11 dff
+Xdff_5 clk vdd gnd din_10 dout_10 dff
+Xdff_6 clk vdd gnd din_9 dout_9 dff
+Xdff_7 clk vdd gnd din_8 dout_8 dff
+Xdff_8 clk vdd gnd din_7 dout_7 dff
+Xdff_9 clk vdd gnd din_6 dout_6 dff
+Xdff_10 clk vdd gnd din_5 dout_5 dff
+Xdff_11 clk vdd gnd din_4 dout_4 dff
+Xdff_12 clk vdd gnd din_3 dout_3 dff
+Xdff_13 clk vdd gnd din_2 dout_2 dff
+Xdff_14 clk vdd gnd din_1 dout_1 dff
+Xdff_15 clk vdd gnd din_0 dout_0 dff
+.ends
+
+.subckt col_addr_dff clk gnd vdd din_0
+Xdff_0 clk vdd gnd din_0 dout_0 dff
+.ends
+
+.subckt row_addr_dff vdd_uq0 vdd_uq1 din_1 vdd_uq2 clk vdd dout_0 dout_1 dout_3 dout_2
++ gnd dout_4 dout_5 din_0 din_2 din_3 din_4 din_5
+Xdff_0 clk vdd_uq2 gnd din_7 dout_7 dff
+Xdff_1 clk vdd_uq2 gnd din_6 dout_6 dff
+Xdff_2 clk vdd_uq1 gnd din_5 dout_5 dff
+Xdff_3 clk vdd_uq1 gnd din_4 dout_4 dff
+Xdff_4 clk vdd gnd din_3 dout_3 dff
+Xdff_5 clk vdd gnd din_2 dout_2 dff
+Xdff_6 clk vdd_uq0 gnd din_1 dout_1 dff
+Xdff_7 clk vdd_uq0 gnd din_0 dout_0 dff
+.ends
+
+.subckt sense_amp_multiport vdd gnd rbl dout
+X0 dout rbl gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X1 dout rbl vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=2.7e+06u l=150000u
+.ends
+
+.subckt sense_amp_array gnd vdd_uq0 vdd_uq6 vdd_uq1 vdd_uq2 vdd_uq3 data_10 vdd_uq4
++ data_11 vdd_uq5 data_12 data_13 data_14 vdd_uq7 vdd_uq8 data_15 vdd_uq9 vdd_uq30
++ vdd_uq20 data_0 vdd_uq21 vdd_uq10 data_1 vdd_uq22 vdd_uq11 data_2 vdd_uq23 vdd_uq12
++ data_3 vdd_uq24 vdd_uq13 vdd data_4 vdd_uq25 vdd_uq14 data_5 vdd_uq15 vdd_uq26 data_6
++ vdd_uq16 vdd_uq27 data_7 vdd_uq28 vdd_uq17 data_8 vdd_uq29 vdd_uq18 data_9 vdd_uq19
+Xsense_amp_multiport_30 vdd_uq29 gnd rbl_1 data_1 sense_amp_multiport
+Xsense_amp_multiport_0 vdd_uq0 gnd rbl_31 data_31 sense_amp_multiport
+Xsense_amp_multiport_31 vdd_uq30 gnd rbl_0 data_0 sense_amp_multiport
+Xsense_amp_multiport_20 vdd_uq19 gnd rbl_11 data_11 sense_amp_multiport
+Xsense_amp_multiport_10 vdd_uq9 gnd rbl_21 data_21 sense_amp_multiport
+Xsense_amp_multiport_21 vdd_uq20 gnd rbl_10 data_10 sense_amp_multiport
+Xsense_amp_multiport_1 vdd gnd rbl_30 data_30 sense_amp_multiport
+Xsense_amp_multiport_2 vdd_uq1 gnd rbl_29 data_29 sense_amp_multiport
+Xsense_amp_multiport_11 vdd_uq10 gnd rbl_20 data_20 sense_amp_multiport
+Xsense_amp_multiport_22 vdd_uq21 gnd rbl_9 data_9 sense_amp_multiport
+Xsense_amp_multiport_23 vdd_uq22 gnd rbl_8 data_8 sense_amp_multiport
+Xsense_amp_multiport_12 vdd_uq11 gnd rbl_19 data_19 sense_amp_multiport
+Xsense_amp_multiport_3 vdd_uq2 gnd rbl_28 data_28 sense_amp_multiport
+Xsense_amp_multiport_24 vdd_uq23 gnd rbl_7 data_7 sense_amp_multiport
+Xsense_amp_multiport_13 vdd_uq12 gnd rbl_18 data_18 sense_amp_multiport
+Xsense_amp_multiport_4 vdd_uq3 gnd rbl_27 data_27 sense_amp_multiport
+Xsense_amp_multiport_25 vdd_uq24 gnd rbl_6 data_6 sense_amp_multiport
+Xsense_amp_multiport_14 vdd_uq13 gnd rbl_17 data_17 sense_amp_multiport
+Xsense_amp_multiport_5 vdd_uq4 gnd rbl_26 data_26 sense_amp_multiport
+Xsense_amp_multiport_26 vdd_uq25 gnd rbl_5 data_5 sense_amp_multiport
+Xsense_amp_multiport_15 vdd_uq14 gnd rbl_16 data_16 sense_amp_multiport
+Xsense_amp_multiport_6 vdd_uq5 gnd rbl_25 data_25 sense_amp_multiport
+Xsense_amp_multiport_7 vdd_uq6 gnd rbl_24 data_24 sense_amp_multiport
+Xsense_amp_multiport_27 vdd_uq26 gnd rbl_4 data_4 sense_amp_multiport
+Xsense_amp_multiport_16 vdd_uq15 gnd rbl_15 data_15 sense_amp_multiport
+Xsense_amp_multiport_28 vdd_uq27 gnd rbl_3 data_3 sense_amp_multiport
+Xsense_amp_multiport_17 vdd_uq16 gnd rbl_14 data_14 sense_amp_multiport
+Xsense_amp_multiport_8 vdd_uq7 gnd rbl_23 data_23 sense_amp_multiport
+Xsense_amp_multiport_9 vdd_uq8 gnd rbl_22 data_22 sense_amp_multiport
+Xsense_amp_multiport_29 vdd_uq28 gnd rbl_2 data_2 sense_amp_multiport
+Xsense_amp_multiport_18 vdd_uq17 gnd rbl_13 data_13 sense_amp_multiport
+Xsense_amp_multiport_19 vdd_uq18 gnd rbl_12 data_12 sense_amp_multiport
+.ends
+
+.subckt nmos_m1_w3_360_sli_dli S gnd D G
+X0 D G S gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=3.36e+06u l=150000u
+.ends
+
+.subckt column_mux_multiport rbl1_out sel rbl0_out gnd rbl0 rbl1
+Xnmos_m1_w3_360_sli_dli_0 nmos_m1_w3_360_sli_dli_0/S gnd rbl0 sel nmos_m1_w3_360_sli_dli
+Xnmos_m1_w3_360_sli_dli_1 rbl1_out gnd nmos_m1_w3_360_sli_dli_1/D sel nmos_m1_w3_360_sli_dli
+.ends
+
+.subckt column_mux_array_multiport rbl0_0 sel_1 rbl0_1 sel_0 rbl0_2 rbl0_30 rbl0_3
++ rbl0_31 rbl0_20 rbl0_4 rbl0_21 rbl0_10 rbl0_5 rbl0_22 rbl0_11 rbl0_6 rbl0_23 rbl0_12
++ rbl0_7 rbl0_24 rbl0_13 rbl0_8 rbl0_25 rbl0_14 rbl0_9 rbl0_26 rbl0_15 rbl0_27 rbl0_16
++ rbl0_28 rbl0_17 rbl0_29 rbl0_18 rbl0_19 rbl1_30 rbl1_31 rbl1_20 rbl1_0 rbl1_21 rbl1_10
++ rbl1_1 gnd rbl1_22 rbl1_11 rbl1_2 rbl1_23 rbl1_12 rbl1_3 rbl1_24 rbl1_13 rbl1_4
++ rbl1_25 rbl1_14 rbl1_5 rbl1_26 rbl1_15 rbl1_6 rbl1_27 rbl1_16 rbl1_7 rbl1_28 rbl1_17
++ rbl1_8 rbl1_29 rbl1_18 rbl1_9 rbl1_19
+Xcolumn_mux_multiport_0 rbl1_out_15 sel_1 rbl0_out_15 gnd rbl0_31 rbl1_31 column_mux_multiport
+Xcolumn_mux_multiport_1 rbl1_out_15 sel_0 rbl0_out_15 gnd rbl0_30 rbl1_30 column_mux_multiport
+Xcolumn_mux_multiport_2 rbl1_out_14 sel_1 rbl0_out_14 gnd rbl0_29 rbl1_29 column_mux_multiport
+Xcolumn_mux_multiport_30 rbl1_out_0 sel_1 rbl0_out_0 gnd rbl0_1 rbl1_1 column_mux_multiport
+Xcolumn_mux_multiport_3 rbl1_out_14 sel_0 rbl0_out_14 gnd rbl0_28 rbl1_28 column_mux_multiport
+Xcolumn_mux_multiport_31 rbl1_out_0 sel_0 rbl0_out_0 gnd rbl0_0 rbl1_0 column_mux_multiport
+Xcolumn_mux_multiport_20 rbl1_out_5 sel_1 rbl0_out_5 gnd rbl0_11 rbl1_11 column_mux_multiport
+Xcolumn_mux_multiport_4 rbl1_out_13 sel_1 rbl0_out_13 gnd rbl0_27 rbl1_27 column_mux_multiport
+Xcolumn_mux_multiport_10 rbl1_out_10 sel_1 rbl0_out_10 gnd rbl0_21 rbl1_21 column_mux_multiport
+Xcolumn_mux_multiport_21 rbl1_out_5 sel_0 rbl0_out_5 gnd rbl0_10 rbl1_10 column_mux_multiport
+Xcolumn_mux_multiport_5 rbl1_out_13 sel_0 rbl0_out_13 gnd rbl0_26 rbl1_26 column_mux_multiport
+Xcolumn_mux_multiport_11 rbl1_out_10 sel_0 rbl0_out_10 gnd rbl0_20 rbl1_20 column_mux_multiport
+Xcolumn_mux_multiport_22 rbl1_out_4 sel_1 rbl0_out_4 gnd rbl0_9 rbl1_9 column_mux_multiport
+Xcolumn_mux_multiport_6 rbl1_out_12 sel_1 rbl0_out_12 gnd rbl0_25 rbl1_25 column_mux_multiport
+Xcolumn_mux_multiport_23 rbl1_out_4 sel_0 rbl0_out_4 gnd rbl0_8 rbl1_8 column_mux_multiport
+Xcolumn_mux_multiport_12 rbl1_out_9 sel_1 rbl0_out_9 gnd rbl0_19 rbl1_19 column_mux_multiport
+Xcolumn_mux_multiport_7 rbl1_out_12 sel_0 rbl0_out_12 gnd rbl0_24 rbl1_24 column_mux_multiport
+Xcolumn_mux_multiport_24 rbl1_out_3 sel_1 rbl0_out_3 gnd rbl0_7 rbl1_7 column_mux_multiport
+Xcolumn_mux_multiport_13 rbl1_out_9 sel_0 rbl0_out_9 gnd rbl0_18 rbl1_18 column_mux_multiport
+Xcolumn_mux_multiport_8 rbl1_out_11 sel_1 rbl0_out_11 gnd rbl0_23 rbl1_23 column_mux_multiport
+Xcolumn_mux_multiport_25 rbl1_out_3 sel_0 rbl0_out_3 gnd rbl0_6 rbl1_6 column_mux_multiport
+Xcolumn_mux_multiport_14 rbl1_out_8 sel_1 rbl0_out_8 gnd rbl0_17 rbl1_17 column_mux_multiport
+Xcolumn_mux_multiport_9 rbl1_out_11 sel_0 rbl0_out_11 gnd rbl0_22 rbl1_22 column_mux_multiport
+Xcolumn_mux_multiport_26 rbl1_out_2 sel_1 rbl0_out_2 gnd rbl0_5 rbl1_5 column_mux_multiport
+Xcolumn_mux_multiport_15 rbl1_out_8 sel_0 rbl0_out_8 gnd rbl0_16 rbl1_16 column_mux_multiport
+Xcolumn_mux_multiport_27 rbl1_out_2 sel_0 rbl0_out_2 gnd rbl0_4 rbl1_4 column_mux_multiport
+Xcolumn_mux_multiport_16 rbl1_out_7 sel_1 rbl0_out_7 gnd rbl0_15 rbl1_15 column_mux_multiport
+Xcolumn_mux_multiport_28 rbl1_out_1 sel_1 rbl0_out_1 gnd rbl0_3 rbl1_3 column_mux_multiport
+Xcolumn_mux_multiport_17 rbl1_out_7 sel_0 rbl0_out_7 gnd rbl0_14 rbl1_14 column_mux_multiport
+Xcolumn_mux_multiport_29 rbl1_out_1 sel_0 rbl0_out_1 gnd rbl0_2 rbl1_2 column_mux_multiport
+Xcolumn_mux_multiport_18 rbl1_out_6 sel_1 rbl0_out_6 gnd rbl0_13 rbl1_13 column_mux_multiport
+Xcolumn_mux_multiport_19 rbl1_out_6 sel_0 rbl0_out_6 gnd rbl0_12 rbl1_12 column_mux_multiport
+.ends
+
+.subckt write_driver_multiport din vdd gnd en wbl
+X0 net2 net1 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X1 net1 din gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X2 wbl en a_478_138# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X3 gnd en enb gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X4 a_478_138# net1 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X5 net1 din vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X6 wbl enb net2 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X7 vdd en enb vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+.ends
+
+.subckt write_driver_array din_7 din_8 vdd_uq6 vdd_uq0 din_9 vdd_uq1 en vdd_uq2 vdd_uq3
++ vdd_uq5 vdd_uq4 vdd_uq14 vdd_uq7 vdd_uq8 vdd_uq9 wbl0_0 gnd wbl0_1 vdd_uq13 din_10
++ din_11 din_12 din_13 din_14 vdd_uq10 din_15 vdd_uq12 vdd_uq11 vdd din_0 din_1 din_2
++ din_3 din_4 din_5 din_6
+Xwrite_driver_multiport_10 din_5 vdd_uq9 gnd en wbl0_5 write_driver_multiport
+Xwrite_driver_multiport_11 din_4 vdd_uq10 gnd en wbl0_4 write_driver_multiport
+Xwrite_driver_multiport_12 din_3 vdd_uq11 gnd en wbl0_3 write_driver_multiport
+Xwrite_driver_multiport_0 din_15 vdd_uq0 gnd en wbl0_15 write_driver_multiport
+Xwrite_driver_multiport_1 din_14 vdd gnd en wbl0_14 write_driver_multiport
+Xwrite_driver_multiport_13 din_2 vdd_uq12 gnd en wbl0_2 write_driver_multiport
+Xwrite_driver_multiport_2 din_13 vdd_uq1 gnd en wbl0_13 write_driver_multiport
+Xwrite_driver_multiport_14 din_1 vdd_uq13 gnd en wbl0_1 write_driver_multiport
+Xwrite_driver_multiport_15 din_0 vdd_uq14 gnd en wbl0_0 write_driver_multiport
+Xwrite_driver_multiport_3 din_12 vdd_uq2 gnd en wbl0_12 write_driver_multiport
+Xwrite_driver_multiport_4 din_11 vdd_uq3 gnd en wbl0_11 write_driver_multiport
+Xwrite_driver_multiport_5 din_10 vdd_uq4 gnd en wbl0_10 write_driver_multiport
+Xwrite_driver_multiport_6 din_9 vdd_uq5 gnd en wbl0_9 write_driver_multiport
+Xwrite_driver_multiport_7 din_8 vdd_uq6 gnd en wbl0_8 write_driver_multiport
+Xwrite_driver_multiport_8 din_7 vdd_uq7 gnd en wbl0_7 write_driver_multiport
+Xwrite_driver_multiport_9 din_6 vdd_uq8 gnd en wbl0_6 write_driver_multiport
+.ends
+
+.subckt precharge_multiport_0 en_bar gnd rbl1 vdd
+Xpmos_m1_w1_260_sli_dli_0 vdd vdd gnd rbl1 en_bar pmos_m1_w1_260_sli_dli
+Xpmos_m1_w1_260_sli_dli_1 vdd rbl1 gnd vdd en_bar pmos_m1_w1_260_sli_dli
+Xpmos_m1_w1_260_sli_dli_2 vdd rbl1 gnd rbl1 en_bar pmos_m1_w1_260_sli_dli
+.ends
+
+.subckt precharge_array_multiport rbl1_0 en_bar rbl1_1 vdd rbl1_2 rbl1_30 rbl1_3 rbl1_31
++ rbl1_20 rbl1_4 rbl1_32 rbl1_21 rbl1_10 rbl1_5 rbl1_22 rbl1_11 rbl1_6 rbl1_23 rbl1_12
++ rbl1_7 rbl1_24 rbl1_13 rbl1_8 rbl1_25 rbl1_14 rbl1_9 rbl1_26 rbl1_15 rbl1_27 rbl1_16
++ rbl1_28 rbl1_17 rbl1_29 rbl1_18 rbl1_19 gnd
+Xprecharge_multiport_0_1 en_bar gnd rbl1_31 vdd precharge_multiport_0
+Xprecharge_multiport_0_2 en_bar gnd rbl1_30 vdd precharge_multiport_0
+Xprecharge_multiport_0_3 en_bar gnd rbl1_29 vdd precharge_multiport_0
+Xprecharge_multiport_0_4 en_bar gnd rbl1_28 vdd precharge_multiport_0
+Xprecharge_multiport_0_5 en_bar gnd rbl1_27 vdd precharge_multiport_0
+Xprecharge_multiport_0_6 en_bar gnd rbl1_26 vdd precharge_multiport_0
+Xprecharge_multiport_0_7 en_bar gnd rbl1_25 vdd precharge_multiport_0
+Xprecharge_multiport_0_8 en_bar gnd rbl1_24 vdd precharge_multiport_0
+Xprecharge_multiport_0_30 en_bar gnd rbl1_2 vdd precharge_multiport_0
+Xprecharge_multiport_0_9 en_bar gnd rbl1_23 vdd precharge_multiport_0
+Xprecharge_multiport_0_20 en_bar gnd rbl1_12 vdd precharge_multiport_0
+Xprecharge_multiport_0_31 en_bar gnd rbl1_1 vdd precharge_multiport_0
+Xprecharge_multiport_0_10 en_bar gnd rbl1_22 vdd precharge_multiport_0
+Xprecharge_multiport_0_21 en_bar gnd rbl1_11 vdd precharge_multiport_0
+Xprecharge_multiport_0_32 en_bar gnd rbl1_0 vdd precharge_multiport_0
+Xprecharge_multiport_0_11 en_bar gnd rbl1_21 vdd precharge_multiport_0
+Xprecharge_multiport_0_22 en_bar gnd rbl1_10 vdd precharge_multiport_0
+Xprecharge_multiport_0_12 en_bar gnd rbl1_20 vdd precharge_multiport_0
+Xprecharge_multiport_0_13 en_bar gnd rbl1_19 vdd precharge_multiport_0
+Xprecharge_multiport_0_23 en_bar gnd rbl1_9 vdd precharge_multiport_0
+Xprecharge_multiport_0_24 en_bar gnd rbl1_8 vdd precharge_multiport_0
+Xprecharge_multiport_0_14 en_bar gnd rbl1_18 vdd precharge_multiport_0
+Xprecharge_multiport_0_25 en_bar gnd rbl1_7 vdd precharge_multiport_0
+Xprecharge_multiport_0_15 en_bar gnd rbl1_17 vdd precharge_multiport_0
+Xprecharge_multiport_0_26 en_bar gnd rbl1_6 vdd precharge_multiport_0
+Xprecharge_multiport_0_16 en_bar gnd rbl1_16 vdd precharge_multiport_0
+Xprecharge_multiport_0_27 en_bar gnd rbl1_5 vdd precharge_multiport_0
+Xprecharge_multiport_0_17 en_bar gnd rbl1_15 vdd precharge_multiport_0
+Xprecharge_multiport_0_28 en_bar gnd rbl1_4 vdd precharge_multiport_0
+Xprecharge_multiport_0_18 en_bar gnd rbl1_14 vdd precharge_multiport_0
+Xprecharge_multiport_0_29 en_bar gnd rbl1_3 vdd precharge_multiport_0
+Xprecharge_multiport_0_19 en_bar gnd rbl1_13 vdd precharge_multiport_0
+Xprecharge_multiport_0_0 en_bar gnd rbl1_32 vdd precharge_multiport_0
+.ends
+
+.subckt port_data p_en_bar din0_15 gnd din0_6 din0_7 din0_8 vdd din0_9 dout1_10 vdd_uq71
++ dout1_11 dout1_12 w_en dout1_13 dout1_14 vdd_uq79 dout1_15 dout1_0 dout1_1 sel_0
++ dout1_2 precharge_array_multiport_0/rbl1_32 dout1_3 dout1_4 dout1_5 vdd_uq70 dout1_6
++ dout1_7 dout1_8 dout1_9 vdd_uq78 vdd_uq60 vdd_uq72 vdd_uq50 vdd_uq61 sel_1 vdd_uq73
++ vdd_uq40 vdd_uq51 vdd_uq62 vdd_uq74 vdd_uq63 vdd_uq41 vdd_uq52 vdd_uq75 vdd_uq64
++ vdd_uq42 vdd_uq53 vdd_uq76 vdd_uq65 vdd_uq32 vdd_uq43 vdd_uq54 vdd_uq45 vdd_uq69
++ vdd_uq77 vdd_uq66 vdd_uq33 vdd_uq44 vdd_uq55 vdd_uq67 vdd_uq34 vdd_uq56 vdd_uq57
++ vdd_uq68 vdd_uq35 vdd_uq46 vdd_uq48 vdd_uq36 vdd_uq47 vdd_uq58 vdd_uq37 vdd_uq59
++ din0_0 din0_10 vdd_uq38 vdd_uq49 din0_1 vdd_uq39 din0_11 din0_2 din0_12 din0_3 din0_13
++ din0_4 din0_14 din0_5
+Xsense_amp_array_0 gnd vdd_uq32 vdd_uq39 vdd_uq34 vdd_uq35 vdd_uq36 dout1_10 vdd_uq37
++ dout1_11 vdd_uq38 dout1_12 dout1_13 dout1_14 vdd_uq40 vdd_uq41 dout1_15 vdd_uq42
++ vdd_uq63 vdd_uq53 dout1_0 vdd_uq54 vdd_uq43 dout1_1 vdd_uq55 vdd_uq44 dout1_2 vdd_uq56
++ vdd_uq45 dout1_3 vdd_uq57 vdd_uq46 vdd_uq33 dout1_4 vdd_uq58 vdd_uq47 dout1_5 vdd_uq48
++ vdd_uq59 dout1_6 vdd_uq49 vdd_uq60 dout1_7 vdd_uq61 vdd_uq50 dout1_8 vdd_uq62 vdd_uq51
++ dout1_9 vdd_uq52 sense_amp_array
+Xcolumn_mux_array_multiport_0 rbl1_0 sel_1 rbl1_1 sel_0 rbl1_2 rbl1_30 rbl1_3 rbl1_31
++ rbl1_20 rbl1_4 rbl1_21 rbl1_10 rbl1_5 rbl1_22 rbl1_11 rbl1_6 rbl1_23 rbl1_12 rbl1_7
++ rbl1_24 rbl1_13 rbl1_8 rbl1_25 rbl1_14 rbl1_9 rbl1_26 rbl1_15 rbl1_27 rbl1_16 rbl1_28
++ rbl1_17 rbl1_29 rbl1_18 rbl1_19 rbl1_30 rbl1_31 rbl1_20 rbl1_0 rbl1_21 rbl1_10 rbl1_1
++ gnd rbl1_22 rbl1_11 rbl1_2 rbl1_23 rbl1_12 rbl1_3 rbl1_24 rbl1_13 rbl1_4 rbl1_25
++ rbl1_14 rbl1_5 rbl1_26 rbl1_15 rbl1_6 rbl1_27 rbl1_16 rbl1_7 rbl1_28 rbl1_17 rbl1_8
++ rbl1_29 rbl1_18 rbl1_9 rbl1_19 column_mux_array_multiport
+Xwrite_driver_array_0 din0_7 din0_8 vdd_uq71 vdd_uq64 din0_9 vdd_uq66 w_en vdd_uq67
++ vdd_uq68 vdd_uq70 vdd_uq69 vdd_uq79 vdd_uq72 vdd_uq73 vdd_uq74 wbl0_0 gnd wbl0_1
++ vdd_uq78 din0_10 din0_11 din0_12 din0_13 din0_14 vdd_uq75 din0_15 vdd_uq77 vdd_uq76
++ vdd_uq65 din0_0 din0_1 din0_2 din0_3 din0_4 din0_5 din0_6 write_driver_array
+Xprecharge_array_multiport_0 rbl1_0 p_en_bar rbl1_1 vdd rbl1_2 rbl1_30 rbl1_3 rbl1_31
++ rbl1_20 rbl1_4 precharge_array_multiport_0/rbl1_32 rbl1_21 rbl1_10 rbl1_5 rbl1_22
++ rbl1_11 rbl1_6 rbl1_23 rbl1_12 rbl1_7 rbl1_24 rbl1_13 rbl1_8 rbl1_25 rbl1_14 rbl1_9
++ rbl1_26 rbl1_15 rbl1_27 rbl1_16 rbl1_28 rbl1_17 rbl1_29 rbl1_18 rbl1_19 gnd precharge_array_multiport
+.ends
+
+.subckt pinvbuf gnd pinv_2_0/A vdd Zb Z A
+Xpinv_1_0 pinv_2_1/A gnd vdd pinv_2_0/A pinv_1
+Xpinv_2_0 vdd Z gnd pinv_2_0/A pinv_2
+Xpinv_2_1 vdd Zb gnd pinv_2_1/A pinv_2
+Xpinv_0_0 pinv_2_0/A gnd vdd A pinv_0
+.ends
+
+.subckt pinv Z A gnd vdd
+Xnmos_m1_w0_420_sli_dli_da_p_0 gnd gnd Z A nmos_m1_w0_420_sli_dli_da_p
+Xpmos_m1_w1_260_sli_dli_da_p_0 vdd vdd gnd Z A pmos_m1_w1_260_sli_dli_da_p
+.ends
+
+.subckt pnand2 Z gnd vdd A B
+Xpmos_m1_w1_260_sli_dli_0 vdd Z gnd vdd B pmos_m1_w1_260_sli_dli
+Xpmos_m1_w1_260_sli_dli_1 vdd vdd gnd Z A pmos_m1_w1_260_sli_dli
+Xnmos_m1_w0_840_sli_dactive_0 gnd gnd A nmos_m1_w0_840_sactive_dli_0/a_0_0# nmos_m1_w0_840_sli_dactive
+Xnmos_m1_w0_840_sactive_dli_0 nmos_m1_w0_840_sactive_dli_0/a_0_0# gnd Z B nmos_m1_w0_840_sactive_dli
+.ends
+
+.subckt and2_dec Z gnd vdd A B
+Xpinv_0 Z pinv_0/A gnd vdd pinv
+Xpnand2_0 pinv_0/A gnd vdd A B pnand2
+.ends
+
+.subckt hierarchical_predecode2x4 vdd_uq0 in_1 vdd out_0 out_1 out_2 out_3 in_0 gnd
+Xand2_dec_0 out_3 gnd vdd in_0 in_1 and2_dec
+Xand2_dec_1 out_2 gnd vdd pinv_1/Z in_1 and2_dec
+Xpinv_0 pinv_0/Z in_1 gnd vdd_uq0 pinv
+Xand2_dec_2 out_1 gnd vdd_uq0 in_0 pinv_0/Z and2_dec
+Xpinv_1 pinv_1/Z in_0 gnd vdd_uq0 pinv
+Xand2_dec_3 out_0 gnd vdd_uq0 pinv_1/Z pinv_0/Z and2_dec
+.ends
+
+.subckt dec_cell3_2r1w A0 B0 C0 A1 B1 C1 A2 B2 C2 OUT1 OUT0 OUT2 vdd gnd a_124_230#
++ a_808_230# a_412_230# net3 net6 a_220_230# net9 a_904_230# a_508_230#
+X0 a_124_230# A0 net3 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X1 net6 A1 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X2 OUT2 net9 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X3 vdd C0 net3 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X4 OUT2 net9 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X5 net6 C1 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X6 vdd C2 net9 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X7 OUT1 net6 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X8 vdd B1 net6 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X9 vdd A0 net3 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X10 net9 B2 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X11 vdd net3 OUT0 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X12 a_220_230# B0 a_124_230# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X13 OUT1 net6 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X14 gnd C0 a_220_230# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X15 a_412_230# A1 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X16 net6 C1 a_508_230# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X17 gnd net3 OUT0 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X18 a_508_230# B1 a_412_230# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X19 net3 B0 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X20 a_904_230# B2 a_808_230# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X21 gnd C2 a_904_230# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X22 a_808_230# A2 net9 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X23 vdd A2 net9 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+.ends
+
+.subckt hierarchical_decoder addr_0 decode0_6 decode2_9 decode1_10 addr_1 decode0_7
++ decode1_11 vdd addr_2 vdd_uq13 vdd_uq2 decode0_8 decode1_12 addr_3 decode0_9 decode1_13
++ addr_4 vdd_uq4 decode1_14 vdd_uq16 addr_5 decode1_15 vdd_uq6 vdd_uq8 vdd_uq9 decode1_0
++ decode1_1 decode2_10 decode1_2 vdd_uq18 decode1_3 decode2_11 decode2_12 decode1_4
++ decode1_5 decode2_13 vdd_uq12 decode2_14 decode1_6 decode2_15 decode1_7 decode1_8
++ vdd_uq15 decode1_9 decode0_10 vdd_uq14 decode0_11 decode0_12 vdd_uq17 decode2_0
++ decode0_13 decode2_1 decode0_14 decode0_15 decode2_2 decode0_0 decode2_3 decode2_4
++ decode0_1 decode0_2 decode2_5 decode2_6 decode0_3 decode0_4 decode2_7 decode2_8
++ decode0_5
+Xhierarchical_predecode2x4_0 vdd_uq8 addr_5 vdd_uq9 vdd predecode_9 vdd predecode_11
++ addr_4 vdd hierarchical_predecode2x4
+Xhierarchical_predecode2x4_1 vdd_uq4 addr_3 vdd_uq6 vdd predecode_5 predecode_6 vdd
++ addr_2 vdd hierarchical_predecode2x4
+Xhierarchical_predecode2x4_2 vdd addr_1 vdd_uq2 vdd vdd predecode_2 vdd addr_0 vdd
++ hierarchical_predecode2x4
+Xdec_cell3_2r1w_40 vdd predecode_5 predecode_9 vdd predecode_5 predecode_9 predecode_2
++ predecode_5 predecode_9 decode1_7 decode0_7 decode2_7 vdd_uq14 vdd dec_cell3_2r1w_40/a_124_230#
++ dec_cell3_2r1w_40/a_808_230# dec_cell3_2r1w_40/a_412_230# dec_cell3_2r1w_40/net3
++ dec_cell3_2r1w_40/net6 dec_cell3_2r1w_40/a_220_230# dec_cell3_2r1w_40/net9 dec_cell3_2r1w_40/a_904_230#
++ dec_cell3_2r1w_40/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_30 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_41 vdd vdd predecode_9 predecode_2 vdd predecode_9 vdd vdd predecode_9
++ decode1_6 decode0_6 decode2_6 vdd_uq14 vdd dec_cell3_2r1w_41/a_124_230# dec_cell3_2r1w_41/a_808_230#
++ dec_cell3_2r1w_41/a_412_230# dec_cell3_2r1w_41/net3 dec_cell3_2r1w_41/net6 dec_cell3_2r1w_41/a_220_230#
++ dec_cell3_2r1w_41/net9 dec_cell3_2r1w_41/a_904_230# dec_cell3_2r1w_41/a_508_230#
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_0 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_20 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_31 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_42 predecode_2 vdd vdd vdd vdd vdd vdd vdd predecode_9 decode1_5 decode0_5
++ decode2_5 vdd_uq13 vdd dec_cell3_2r1w_42/a_124_230# dec_cell3_2r1w_42/a_808_230#
++ dec_cell3_2r1w_42/a_412_230# dec_cell3_2r1w_42/net3 dec_cell3_2r1w_42/net6 dec_cell3_2r1w_42/a_220_230#
++ dec_cell3_2r1w_42/net9 dec_cell3_2r1w_42/a_904_230# dec_cell3_2r1w_42/a_508_230#
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_1 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_32 vdd vdd vdd vdd vdd vdd predecode_2 vdd vdd decode1_15 decode0_15
++ decode2_15 vdd_uq18 vdd dec_cell3_2r1w_32/a_124_230# dec_cell3_2r1w_32/a_808_230#
++ dec_cell3_2r1w_32/a_412_230# dec_cell3_2r1w_32/net3 dec_cell3_2r1w_32/net6 dec_cell3_2r1w_32/a_220_230#
++ dec_cell3_2r1w_32/net9 dec_cell3_2r1w_32/a_904_230# dec_cell3_2r1w_32/a_508_230#
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_43 vdd predecode_6 vdd vdd vdd vdd vdd vdd vdd decode1_4 decode0_4
++ decode2_4 vdd_uq13 vdd dec_cell3_2r1w_43/a_124_230# dec_cell3_2r1w_43/a_808_230#
++ dec_cell3_2r1w_43/a_412_230# dec_cell3_2r1w_43/net3 dec_cell3_2r1w_43/net6 dec_cell3_2r1w_43/a_220_230#
++ dec_cell3_2r1w_43/net9 dec_cell3_2r1w_43/a_904_230# dec_cell3_2r1w_43/a_508_230#
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_10 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_21 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_2 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_33 vdd predecode_6 vdd predecode_2 predecode_6 vdd vdd predecode_6
++ vdd decode1_14 decode0_14 decode2_14 vdd_uq18 vdd dec_cell3_2r1w_33/a_124_230# dec_cell3_2r1w_33/a_808_230#
++ dec_cell3_2r1w_33/a_412_230# dec_cell3_2r1w_33/net3 dec_cell3_2r1w_33/net6 dec_cell3_2r1w_33/a_220_230#
++ dec_cell3_2r1w_33/net9 dec_cell3_2r1w_33/a_904_230# dec_cell3_2r1w_33/a_508_230#
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_44 vdd predecode_6 vdd vdd predecode_6 vdd predecode_2 predecode_6
++ vdd decode1_3 decode0_3 decode2_3 vdd_uq12 vdd dec_cell3_2r1w_44/a_124_230# dec_cell3_2r1w_44/a_808_230#
++ dec_cell3_2r1w_44/a_412_230# dec_cell3_2r1w_44/net3 dec_cell3_2r1w_44/net6 dec_cell3_2r1w_44/a_220_230#
++ dec_cell3_2r1w_44/net9 dec_cell3_2r1w_44/a_904_230# dec_cell3_2r1w_44/a_508_230#
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_11 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_22 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_3 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_34 predecode_2 predecode_5 vdd vdd predecode_5 vdd vdd predecode_6
++ vdd decode1_13 decode0_13 decode2_13 vdd_uq17 vdd dec_cell3_2r1w_34/a_124_230# dec_cell3_2r1w_34/a_808_230#
++ dec_cell3_2r1w_34/a_412_230# dec_cell3_2r1w_34/net3 dec_cell3_2r1w_34/net6 dec_cell3_2r1w_34/a_220_230#
++ dec_cell3_2r1w_34/net9 dec_cell3_2r1w_34/a_904_230# dec_cell3_2r1w_34/a_508_230#
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_45 vdd predecode_5 vdd predecode_2 predecode_5 vdd vdd predecode_5
++ vdd decode1_2 decode0_2 decode2_2 vdd_uq12 vdd dec_cell3_2r1w_45/a_124_230# dec_cell3_2r1w_45/a_808_230#
++ dec_cell3_2r1w_45/a_412_230# dec_cell3_2r1w_45/net3 dec_cell3_2r1w_45/net6 dec_cell3_2r1w_45/a_220_230#
++ dec_cell3_2r1w_45/net9 dec_cell3_2r1w_45/a_904_230# dec_cell3_2r1w_45/a_508_230#
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_12 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_23 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_4 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_13 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_24 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_46 predecode_2 vdd vdd vdd vdd vdd vdd predecode_5 vdd decode1_1 decode0_1
++ decode2_1 vdd vdd dec_cell3_2r1w_46/a_124_230# dec_cell3_2r1w_46/a_808_230# dec_cell3_2r1w_46/a_412_230#
++ dec_cell3_2r1w_46/net3 dec_cell3_2r1w_46/net6 dec_cell3_2r1w_46/a_220_230# dec_cell3_2r1w_46/net9
++ dec_cell3_2r1w_46/a_904_230# dec_cell3_2r1w_46/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_35 vdd vdd vdd vdd predecode_5 vdd vdd predecode_5 vdd decode1_12
++ decode0_12 decode2_12 vdd_uq17 vdd dec_cell3_2r1w_35/a_124_230# dec_cell3_2r1w_35/a_808_230#
++ dec_cell3_2r1w_35/a_412_230# dec_cell3_2r1w_35/net3 dec_cell3_2r1w_35/net6 dec_cell3_2r1w_35/a_220_230#
++ dec_cell3_2r1w_35/net9 dec_cell3_2r1w_35/a_904_230# dec_cell3_2r1w_35/a_508_230#
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_5 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_14 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_25 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_47 vdd vdd vdd vdd vdd vdd vdd vdd vdd decode1_0 decode0_0 decode2_0
++ vdd vdd vdd dec_cell3_2r1w_47/a_808_230# vdd vdd vdd vdd dec_cell3_2r1w_47/net9
++ dec_cell3_2r1w_47/a_904_230# vdd dec_cell3_2r1w
+Xdec_cell3_2r1w_36 vdd vdd vdd vdd vdd vdd predecode_2 vdd vdd decode1_11 decode0_11
++ decode2_11 vdd_uq16 vdd dec_cell3_2r1w_36/a_124_230# dec_cell3_2r1w_36/a_808_230#
++ dec_cell3_2r1w_36/a_412_230# dec_cell3_2r1w_36/net3 dec_cell3_2r1w_36/net6 dec_cell3_2r1w_36/a_220_230#
++ dec_cell3_2r1w_36/net9 dec_cell3_2r1w_36/a_904_230# dec_cell3_2r1w_36/a_508_230#
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_6 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_15 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_26 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_37 vdd vdd predecode_9 predecode_2 vdd predecode_9 vdd vdd predecode_9
++ decode1_10 decode0_10 decode2_10 vdd_uq16 vdd dec_cell3_2r1w_37/a_124_230# dec_cell3_2r1w_37/a_808_230#
++ dec_cell3_2r1w_37/a_412_230# dec_cell3_2r1w_37/net3 dec_cell3_2r1w_37/net6 dec_cell3_2r1w_37/a_220_230#
++ dec_cell3_2r1w_37/net9 dec_cell3_2r1w_37/a_904_230# dec_cell3_2r1w_37/a_508_230#
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_7 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_16 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_27 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_38 predecode_2 predecode_6 predecode_9 vdd predecode_6 predecode_9
++ vdd vdd predecode_9 decode1_9 decode0_9 decode2_9 vdd_uq15 vdd dec_cell3_2r1w_38/a_124_230#
++ dec_cell3_2r1w_38/a_808_230# dec_cell3_2r1w_38/a_412_230# dec_cell3_2r1w_38/net3
++ dec_cell3_2r1w_38/net6 dec_cell3_2r1w_38/a_220_230# dec_cell3_2r1w_38/net9 dec_cell3_2r1w_38/a_904_230#
++ dec_cell3_2r1w_38/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_8 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_17 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_28 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_39 vdd predecode_5 predecode_9 vdd predecode_6 predecode_9 vdd predecode_6
++ predecode_9 decode1_8 decode0_8 decode2_8 vdd_uq15 vdd dec_cell3_2r1w_39/a_124_230#
++ dec_cell3_2r1w_39/a_808_230# dec_cell3_2r1w_39/a_412_230# dec_cell3_2r1w_39/net3
++ dec_cell3_2r1w_39/net6 dec_cell3_2r1w_39/a_220_230# dec_cell3_2r1w_39/net9 dec_cell3_2r1w_39/a_904_230#
++ dec_cell3_2r1w_39/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_9 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_18 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_29 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xdec_cell3_2r1w_19 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd dec_cell3_2r1w_9/a_124_230#
++ dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230# vdd vdd dec_cell3_2r1w_9/a_220_230#
++ vdd vdd dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+.ends
+
+.subckt wordline_driver_cell A0 vdd gnd wl_en A1 A2 rwl0 wwl0 rwl1
+X0 gnd wl_en a_124_308# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=550000u l=150000u
+X1 net4 wl_en a_316_308# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=550000u l=150000u
+X2 a_316_308# A1 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=550000u l=150000u
+X3 vdd wl_en net4 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X4 vdd net4 rwl0 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X5 a_616_308# A2 net6 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=550000u l=150000u
+X6 gnd wl_en a_616_308# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=550000u l=150000u
+X7 wwl0 net6 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X8 net4 A1 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X9 vdd wl_en net6 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X10 a_124_308# A0 net2 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=550000u l=150000u
+X11 net6 A2 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X12 wwl0 net6 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X13 gnd net4 rwl0 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X14 net2 A0 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X15 rwl1 net2 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X16 vdd wl_en net2 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X17 rwl1 net2 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+.ends
+
+.subckt wordline_driver_array vdd_uq3 vdd wwl0_0 rwl1_0 rwl1_11 rwl1_1 wwl0_1 rwl1_12
++ vdd_uq0 wwl0_2 rwl1_2 vdd_uq1 wl_en rwl1_13 vdd_uq2 rwl1_3 wwl0_3 in2_10 rwl1_14
++ in2_11 wwl0_4 rwl1_4 rwl1_15 rwl1_5 wwl0_5 in2_12 vdd_uq4 in1_0 in2_13 vdd_uq5 wwl0_6
++ rwl1_6 in1_1 rwl1_7 vdd_uq6 in2_14 wwl0_7 in1_2 in2_15 wwl0_8 rwl1_8 in1_3 rwl1_9
++ wwl0_9 in1_4 in1_5 in1_6 in1_7 in1_8 in1_9 in0_10 in0_11 in0_12 wwl0_10 gnd in0_13
++ wwl0_11 in0_14 wwl0_12 in0_15 rwl0_0 wwl0_13 wwl0_14 rwl0_1 rwl0_2 wwl0_15 in2_0
++ rwl0_3 in2_1 rwl0_10 rwl0_4 in2_2 rwl0_11 rwl0_5 in0_0 in2_3 rwl0_12 in2_4 rwl0_6
++ in0_1 rwl0_13 rwl0_7 in2_5 in1_10 rwl0_14 in0_2 in2_6 rwl0_8 in1_11 in0_3 rwl0_15
++ rwl0_9 in1_12 in2_7 in0_4 in1_13 in0_5 in2_8 in1_14 in2_9 in0_6 in1_15 in0_7 in0_8
++ in0_9 rwl1_10
+Xwordline_driver_cell_0 in0_15 vdd_uq6 gnd wl_en in1_15 in2_15 rwl0_15 wwl0_15 rwl1_15
++ wordline_driver_cell
+Xwordline_driver_cell_1 in0_14 vdd_uq6 gnd wl_en in1_14 in2_14 rwl0_14 wwl0_14 rwl1_14
++ wordline_driver_cell
+Xwordline_driver_cell_2 in0_13 vdd_uq5 gnd wl_en in1_13 in2_13 rwl0_13 wwl0_13 rwl1_13
++ wordline_driver_cell
+Xwordline_driver_cell_3 in0_12 vdd_uq5 gnd wl_en in1_12 in2_12 rwl0_12 wwl0_12 rwl1_12
++ wordline_driver_cell
+Xwordline_driver_cell_4 in0_11 vdd_uq4 gnd wl_en in1_11 in2_11 rwl0_11 wwl0_11 rwl1_11
++ wordline_driver_cell
+Xwordline_driver_cell_5 in0_10 vdd_uq4 gnd wl_en in1_10 in2_10 rwl0_10 wwl0_10 rwl1_10
++ wordline_driver_cell
+Xwordline_driver_cell_6 in0_9 vdd_uq3 gnd wl_en in1_9 in2_9 rwl0_9 wwl0_9 rwl1_9 wordline_driver_cell
+Xwordline_driver_cell_7 in0_8 vdd_uq3 gnd wl_en in1_8 in2_8 rwl0_8 wwl0_8 rwl1_8 wordline_driver_cell
+Xwordline_driver_cell_10 in0_5 vdd_uq1 gnd wl_en in1_5 in2_5 rwl0_5 wwl0_5 rwl1_5
++ wordline_driver_cell
+Xwordline_driver_cell_8 in0_7 vdd_uq2 gnd wl_en in1_7 in2_7 rwl0_7 wwl0_7 rwl1_7 wordline_driver_cell
+Xwordline_driver_cell_11 in0_4 vdd_uq1 gnd wl_en in1_4 in2_4 rwl0_4 wwl0_4 rwl1_4
++ wordline_driver_cell
+Xwordline_driver_cell_12 in0_3 vdd gnd wl_en in1_3 in2_3 rwl0_3 wwl0_3 rwl1_3 wordline_driver_cell
+Xwordline_driver_cell_9 in0_6 vdd_uq2 gnd wl_en in1_6 in2_6 rwl0_6 wwl0_6 rwl1_6 wordline_driver_cell
+Xwordline_driver_cell_13 in0_2 vdd gnd wl_en in1_2 in2_2 rwl0_2 wwl0_2 rwl1_2 wordline_driver_cell
+Xwordline_driver_cell_14 in0_1 vdd_uq0 gnd wl_en in1_1 in2_1 rwl0_1 wwl0_1 rwl1_1
++ wordline_driver_cell
+Xwordline_driver_cell_15 in0_0 vdd_uq0 gnd wl_en in1_0 in2_0 rwl0_0 wwl0_0 rwl1_0
++ wordline_driver_cell
+.ends
+
+.subckt port_address addr2 wwl0_0 rwl1_0 rwl1_11 addr3 rwl1_1 wwl0_1 rwl1_12 vdd addr4
++ wwl0_2 rwl1_2 rwl1_13 addr5 rwl1_3 wwl0_3 rwl1_14 wwl0_4 rwl1_4 rwl1_15 wwl0_5 rwl1_5
++ vdd_uq4 vdd_uq24 rwl1_6 wwl0_6 vdd_uq6 rwl1_7 wwl0_7 rwl1_8 wwl0_8 wwl0_9 rwl1_9
++ vdd_uq8 vdd_uq12 vdd_uq14 wwl0_10 vdd_uq16 wwl0_11 wwl0_12 vdd_uq20 rwl0_0 wwl0_13
++ wwl0_14 rwl0_1 rwl0_2 wwl0_15 rwl0_3 rwl0_10 addr1 rwl0_4 rwl0_11 vdd_uq10 vdd_uq22
++ rwl0_5 rwl0_12 rwl0_6 rwl0_13 rwl0_7 rwl0_14 rwl0_8 rwl0_15 vdd_uq26 rwl0_9 addr0
++ vdd_uq18 rwl1_10
+Xhierarchical_decoder_0 addr0 wordline_driver_array_0/in1_6 wordline_driver_array_0/in2_9
++ wordline_driver_array_0/in1_10 addr1 wordline_driver_array_0/in2_7 wordline_driver_array_0/in2_11
++ vdd addr2 vdd vdd_uq6 wordline_driver_array_0/in1_8 wordline_driver_array_0/in1_12
++ addr3 wordline_driver_array_0/in2_9 wordline_driver_array_0/in2_13 addr4 vdd_uq12
++ wordline_driver_array_0/in1_14 vdd addr5 wordline_driver_array_0/in2_15 vdd_uq16
++ vdd_uq22 vdd_uq26 wordline_driver_array_0/in1_0 wordline_driver_array_0/in1_1 wordline_driver_array_0/in2_10
++ wordline_driver_array_0/in1_2 vdd wordline_driver_array_0/in2_3 wordline_driver_array_0/in2_11
++ wordline_driver_array_0/in2_12 wordline_driver_array_0/in1_4 wordline_driver_array_0/in2_5
++ wordline_driver_array_0/in2_13 vdd wordline_driver_array_0/in2_14 wordline_driver_array_0/in1_6
++ wordline_driver_array_0/in2_15 wordline_driver_array_0/in2_7 wordline_driver_array_0/in1_8
++ vdd wordline_driver_array_0/in2_9 wordline_driver_array_0/in1_10 vdd wordline_driver_array_0/in2_11
++ wordline_driver_array_0/in1_12 vdd wordline_driver_array_0/in2_0 wordline_driver_array_0/in2_13
++ wordline_driver_array_0/in2_1 wordline_driver_array_0/in1_14 wordline_driver_array_0/in2_15
++ wordline_driver_array_0/in2_2 wordline_driver_array_0/in1_0 wordline_driver_array_0/in2_3
++ wordline_driver_array_0/in2_4 wordline_driver_array_0/in1_1 wordline_driver_array_0/in1_2
++ wordline_driver_array_0/in2_5 wordline_driver_array_0/in2_6 wordline_driver_array_0/in2_3
++ wordline_driver_array_0/in1_4 wordline_driver_array_0/in2_7 wordline_driver_array_0/in2_8
++ wordline_driver_array_0/in2_5 hierarchical_decoder
+Xwordline_driver_array_0 vdd_uq14 vdd_uq4 wwl0_0 rwl1_0 rwl1_11 rwl1_1 wwl0_1 rwl1_12
++ vdd wwl0_2 rwl1_2 vdd_uq8 vdd rwl1_13 vdd_uq10 rwl1_3 wwl0_3 wordline_driver_array_0/in2_10
++ rwl1_14 wordline_driver_array_0/in2_11 wwl0_4 rwl1_4 rwl1_15 rwl1_5 wwl0_5 wordline_driver_array_0/in2_12
++ vdd_uq18 wordline_driver_array_0/in1_0 wordline_driver_array_0/in2_13 vdd_uq20 wwl0_6
++ rwl1_6 wordline_driver_array_0/in1_1 rwl1_7 vdd_uq24 wordline_driver_array_0/in2_14
++ wwl0_7 wordline_driver_array_0/in1_2 wordline_driver_array_0/in2_15 wwl0_8 rwl1_8
++ wordline_driver_array_0/in2_3 rwl1_9 wwl0_9 wordline_driver_array_0/in1_4 wordline_driver_array_0/in2_5
++ wordline_driver_array_0/in1_6 wordline_driver_array_0/in2_7 wordline_driver_array_0/in1_8
++ wordline_driver_array_0/in2_9 wordline_driver_array_0/in1_10 wordline_driver_array_0/in2_11
++ wordline_driver_array_0/in1_12 wwl0_10 vdd wordline_driver_array_0/in2_13 wwl0_11
++ wordline_driver_array_0/in1_14 wwl0_12 wordline_driver_array_0/in2_15 rwl0_0 wwl0_13
++ wwl0_14 rwl0_1 rwl0_2 wwl0_15 wordline_driver_array_0/in2_0 rwl0_3 wordline_driver_array_0/in2_1
++ rwl0_10 rwl0_4 wordline_driver_array_0/in2_2 rwl0_11 rwl0_5 wordline_driver_array_0/in1_0
++ wordline_driver_array_0/in2_3 rwl0_12 wordline_driver_array_0/in2_4 rwl0_6 wordline_driver_array_0/in1_1
++ rwl0_13 rwl0_7 wordline_driver_array_0/in2_5 wordline_driver_array_0/in1_10 rwl0_14
++ wordline_driver_array_0/in1_2 wordline_driver_array_0/in2_6 rwl0_8 wordline_driver_array_0/in2_11
++ wordline_driver_array_0/in2_3 rwl0_15 rwl0_9 wordline_driver_array_0/in1_12 wordline_driver_array_0/in2_7
++ wordline_driver_array_0/in1_4 wordline_driver_array_0/in2_13 wordline_driver_array_0/in2_5
++ wordline_driver_array_0/in2_8 wordline_driver_array_0/in1_14 wordline_driver_array_0/in2_9
++ wordline_driver_array_0/in1_6 wordline_driver_array_0/in2_15 wordline_driver_array_0/in2_7
++ wordline_driver_array_0/in1_8 wordline_driver_array_0/in2_9 rwl1_10 wordline_driver_array
+.ends
+
+.subckt cell_2r1w vdd gnd rbl0 rbl1 wbl0 wwl0 rwl1 rwl0
+X0 q qbar vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
+X1 net2 q gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
+X2 gnd qbar q gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X3 wbl0 wwl0 q gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
+X4 net1 wwl0 qbar gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
+X5 rbl1 rwl1 net3 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
+X6 vdd q qbar vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
+X7 rbl0 rwl0 net2 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
+X8 gnd q net3 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
+X9 net1 wbl0 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
+X10 qbar q gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X11 net1 wbl0 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+.ends
+
+.subckt bitcell_array write_bl_0_0 rwl_0_0 read_bl_0_19 write_bl_0_20 read_bl_0_9
++ wwl_0_15 read_bl_0_29 vdd_uq0 read_bl_1_6 rwl_0_3 wwl_0_1 read_bl_0_31 write_bl_0_11
++ rwl_1_3 read_bl_0_8 read_bl_0_28 write_bl_0_31 write_bl_0_1 read_bl_1_5 rwl_1_8
++ write_bl_0_19 write_bl_0_9 write_bl_0_29 read_bl_1_3 wwl_0_9 write_bl_0_17 rwl_0_9
++ read_bl_0_20 read_bl_0_6 rwl_1_13 wwl_0_2 write_bl_0_16 write_bl_0_27 write_bl_0_7
++ read_bl_1_15 read_bl_1_23 read_bl_0_4 wwl_0_14 rwl_1_5 read_bl_1_21 write_bl_0_6
++ rwl_1_15 wwl_0_3 read_bl_0_25 read_bl_0_15 read_bl_0_26 rwl_1_14 write_bl_0_4 rwl_0_6
++ read_bl_0_14 rwl_1_0 rwl_0_15 vdd_uq2 read_bl_0_22 read_bl_1_19 read_bl_1_29 read_bl_1_9
++ rwl_0_14 rwl_0_8 wwl_0_7 write_bl_0_23 write_bl_0_14 rwl_0_4 read_bl_1_31 read_bl_1_8
++ read_bl_1_28 rwl_0_10 wwl_0_10 write_bl_0_22 read_bl_0_11 vdd_uq4 read_bl_0_10 read_bl_0_1
++ rwl_1_9 read_bl_0_18 read_bl_0_21 wwl_0_11 write_bl_0_2 read_bl_1_4 rwl_0_7 wwl_0_12
++ read_bl_1_25 read_bl_1_26 rwl_1_6 read_bl_0_5 rwl_0_5 read_bl_1_22 wwl_0_13 rwl_0_1
++ read_bl_0_16 write_bl_0_5 wwl_0_6 read_bl_0_24 rwl_1_10 read_bl_1_1 rwl_0_2 write_bl_0_24
++ rwl_0_12 read_bl_1_18 vdd_uq1 write_bl_0_12 write_bl_0_3 rwl_1_7 wwl_0_5 read_bl_1_16
++ rwl_1_1 write_bl_0_8 write_bl_0_28 wwl_0_8 rwl_0_11 read_bl_0_7 read_bl_0_27 rwl_1_12
++ rwl_1_2 wwl_0_0 read_bl_0_23 read_bl_0_12 rwl_0_13 rwl_1_4 read_bl_1_11 write_bl_0_15
++ write_bl_0_26 wwl_0_4 read_bl_0_2 vdd_uq3 write_bl_0_13 read_bl_0_30 read_bl_0_0
++ write_bl_0_10 write_bl_0_30 write_bl_0_18 rwl_1_11 read_bl_1_7 read_bl_1_27 read_bl_0_13
++ vdd read_bl_1_14 read_bl_0_17 read_bl_1_2 write_bl_0_25 read_bl_1_17 read_bl_1_24
++ read_bl_1_12 read_bl_0_3 read_bl_1_0 read_bl_1_20 vdd_uq5 write_bl_0_21 vdd_uq6
++ read_bl_1_30 read_bl_1_10 read_bl_1_13 gnd
+Xcell_2r1w_403 vdd_uq5 gnd read_bl_0_6 read_bl_1_6 write_bl_0_6 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_414 vdd_uq0 gnd read_bl_0_6 read_bl_1_6 write_bl_0_6 wwl_0_1 rwl_1_1 rwl_0_1
++ cell_2r1w
+Xcell_2r1w_447 vdd_uq0 gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_0 rwl_1_0 rwl_0_0
++ cell_2r1w
+Xcell_2r1w_458 vdd_uq1 gnd read_bl_0_3 read_bl_1_3 write_bl_0_3 wwl_0_5 rwl_1_5 rwl_0_5
++ cell_2r1w
+Xcell_2r1w_425 vdd_uq2 gnd read_bl_0_5 read_bl_1_5 write_bl_0_5 wwl_0_6 rwl_1_6 rwl_0_6
++ cell_2r1w
+Xcell_2r1w_469 vdd_uq4 gnd read_bl_0_2 read_bl_1_2 write_bl_0_2 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_436 vdd_uq4 gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_82 vdd_uq5 gnd read_bl_0_26 read_bl_1_26 write_bl_0_26 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_60 vdd gnd read_bl_0_28 read_bl_1_28 write_bl_0_28 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_71 vdd_uq3 gnd read_bl_0_27 read_bl_1_27 write_bl_0_27 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_288 vdd_uq6 gnd read_bl_0_13 read_bl_1_13 write_bl_0_13 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_211 vdd_uq5 gnd read_bl_0_18 read_bl_1_18 write_bl_0_18 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_93 vdd gnd read_bl_0_26 read_bl_1_26 write_bl_0_26 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_222 vdd_uq0 gnd read_bl_0_18 read_bl_1_18 write_bl_0_18 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_255 vdd_uq0 gnd read_bl_0_16 read_bl_1_16 write_bl_0_16 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_299 vdd_uq1 gnd read_bl_0_13 read_bl_1_13 write_bl_0_13 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_266 vdd_uq1 gnd read_bl_0_15 read_bl_1_15 write_bl_0_15 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_233 vdd_uq2 gnd read_bl_0_17 read_bl_1_17 write_bl_0_17 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_200 vdd_uq2 gnd read_bl_0_19 read_bl_1_19 write_bl_0_19 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_277 vdd_uq4 gnd read_bl_0_14 read_bl_1_14 write_bl_0_14 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_244 vdd_uq4 gnd read_bl_0_16 read_bl_1_16 write_bl_0_16 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_448 vdd_uq6 gnd read_bl_0_3 read_bl_1_3 write_bl_0_3 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_415 vdd_uq0 gnd read_bl_0_6 read_bl_1_6 write_bl_0_6 wwl_0_0 rwl_1_0 rwl_0_0
++ cell_2r1w
+Xcell_2r1w_459 vdd_uq1 gnd read_bl_0_3 read_bl_1_3 write_bl_0_3 wwl_0_4 rwl_1_4 rwl_0_4
++ cell_2r1w
+Xcell_2r1w_426 vdd_uq1 gnd read_bl_0_5 read_bl_1_5 write_bl_0_5 wwl_0_5 rwl_1_5 rwl_0_5
++ cell_2r1w
+Xcell_2r1w_437 vdd_uq4 gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_404 vdd_uq4 gnd read_bl_0_6 read_bl_1_6 write_bl_0_6 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_256 vdd_uq6 gnd read_bl_0_15 read_bl_1_15 write_bl_0_15 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_50 vdd_uq5 gnd read_bl_0_28 read_bl_1_28 write_bl_0_28 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_289 vdd_uq6 gnd read_bl_0_13 read_bl_1_13 write_bl_0_13 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_83 vdd_uq5 gnd read_bl_0_26 read_bl_1_26 write_bl_0_26 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_61 vdd gnd read_bl_0_28 read_bl_1_28 write_bl_0_28 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_94 vdd_uq0 gnd read_bl_0_26 read_bl_1_26 write_bl_0_26 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_223 vdd_uq0 gnd read_bl_0_18 read_bl_1_18 write_bl_0_18 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_267 vdd_uq1 gnd read_bl_0_15 read_bl_1_15 write_bl_0_15 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_234 vdd_uq1 gnd read_bl_0_17 read_bl_1_17 write_bl_0_17 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_201 vdd_uq2 gnd read_bl_0_19 read_bl_1_19 write_bl_0_19 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_72 vdd_uq2 gnd read_bl_0_27 read_bl_1_27 write_bl_0_27 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_278 vdd_uq3 gnd read_bl_0_14 read_bl_1_14 write_bl_0_14 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_245 vdd_uq4 gnd read_bl_0_16 read_bl_1_16 write_bl_0_16 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_212 vdd_uq4 gnd read_bl_0_18 read_bl_1_18 write_bl_0_18 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_416 vdd_uq6 gnd read_bl_0_5 read_bl_1_5 write_bl_0_5 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_449 vdd_uq6 gnd read_bl_0_3 read_bl_1_3 write_bl_0_3 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_427 vdd_uq1 gnd read_bl_0_5 read_bl_1_5 write_bl_0_5 wwl_0_4 rwl_1_4 rwl_0_4
++ cell_2r1w
+Xcell_2r1w_438 vdd_uq3 gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_9 rwl_1_9 rwl_0_9
++ cell_2r1w
+Xcell_2r1w_405 vdd_uq4 gnd read_bl_0_6 read_bl_1_6 write_bl_0_6 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_224 vdd_uq6 gnd read_bl_0_17 read_bl_1_17 write_bl_0_17 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_257 vdd_uq6 gnd read_bl_0_15 read_bl_1_15 write_bl_0_15 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_51 vdd_uq5 gnd read_bl_0_28 read_bl_1_28 write_bl_0_28 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_62 vdd_uq0 gnd read_bl_0_28 read_bl_1_28 write_bl_0_28 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_95 vdd_uq0 gnd read_bl_0_26 read_bl_1_26 write_bl_0_26 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_268 vdd gnd read_bl_0_15 read_bl_1_15 write_bl_0_15 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_235 vdd_uq1 gnd read_bl_0_17 read_bl_1_17 write_bl_0_17 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_202 vdd_uq1 gnd read_bl_0_19 read_bl_1_19 write_bl_0_19 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_73 vdd_uq2 gnd read_bl_0_27 read_bl_1_27 write_bl_0_27 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_40 vdd_uq2 gnd read_bl_0_29 read_bl_1_29 write_bl_0_29 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_246 vdd_uq3 gnd read_bl_0_16 read_bl_1_16 write_bl_0_16 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_213 vdd_uq4 gnd read_bl_0_18 read_bl_1_18 write_bl_0_18 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_84 vdd_uq4 gnd read_bl_0_26 read_bl_1_26 write_bl_0_26 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_279 vdd_uq3 gnd read_bl_0_14 read_bl_1_14 write_bl_0_14 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_417 vdd_uq6 gnd read_bl_0_5 read_bl_1_5 write_bl_0_5 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_428 vdd gnd read_bl_0_5 read_bl_1_5 write_bl_0_5 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_439 vdd_uq3 gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_8 rwl_1_8 rwl_0_8
++ cell_2r1w
+Xcell_2r1w_406 vdd_uq3 gnd read_bl_0_6 read_bl_1_6 write_bl_0_6 wwl_0_9 rwl_1_9 rwl_0_9
++ cell_2r1w
+Xcell_2r1w_96 vdd_uq6 gnd read_bl_0_25 read_bl_1_25 write_bl_0_25 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_30 vdd_uq0 gnd read_bl_0_30 read_bl_1_30 write_bl_0_30 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_63 vdd_uq0 gnd read_bl_0_28 read_bl_1_28 write_bl_0_28 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_74 vdd_uq1 gnd read_bl_0_27 read_bl_1_27 write_bl_0_27 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_41 vdd_uq2 gnd read_bl_0_29 read_bl_1_29 write_bl_0_29 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_85 vdd_uq4 gnd read_bl_0_26 read_bl_1_26 write_bl_0_26 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_52 vdd_uq4 gnd read_bl_0_28 read_bl_1_28 write_bl_0_28 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_225 vdd_uq6 gnd read_bl_0_17 read_bl_1_17 write_bl_0_17 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_258 vdd_uq5 gnd read_bl_0_15 read_bl_1_15 write_bl_0_15 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_269 vdd gnd read_bl_0_15 read_bl_1_15 write_bl_0_15 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_236 vdd gnd read_bl_0_17 read_bl_1_17 write_bl_0_17 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_203 vdd_uq1 gnd read_bl_0_19 read_bl_1_19 write_bl_0_19 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_247 vdd_uq3 gnd read_bl_0_16 read_bl_1_16 write_bl_0_16 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_214 vdd_uq3 gnd read_bl_0_18 read_bl_1_18 write_bl_0_18 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_418 vdd_uq5 gnd read_bl_0_5 read_bl_1_5 write_bl_0_5 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_429 vdd gnd read_bl_0_5 read_bl_1_5 write_bl_0_5 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_407 vdd_uq3 gnd read_bl_0_6 read_bl_1_6 write_bl_0_6 wwl_0_8 rwl_1_8 rwl_0_8
++ cell_2r1w
+Xcell_2r1w_64 vdd_uq6 gnd read_bl_0_27 read_bl_1_27 write_bl_0_27 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_97 vdd_uq6 gnd read_bl_0_25 read_bl_1_25 write_bl_0_25 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_31 vdd_uq0 gnd read_bl_0_30 read_bl_1_30 write_bl_0_30 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_75 vdd_uq1 gnd read_bl_0_27 read_bl_1_27 write_bl_0_27 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_42 vdd_uq1 gnd read_bl_0_29 read_bl_1_29 write_bl_0_29 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_86 vdd_uq3 gnd read_bl_0_26 read_bl_1_26 write_bl_0_26 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_53 vdd_uq4 gnd read_bl_0_28 read_bl_1_28 write_bl_0_28 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_20 vdd_uq4 gnd read_bl_0_30 read_bl_1_30 write_bl_0_30 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_226 vdd_uq5 gnd read_bl_0_17 read_bl_1_17 write_bl_0_17 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_259 vdd_uq5 gnd read_bl_0_15 read_bl_1_15 write_bl_0_15 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_237 vdd gnd read_bl_0_17 read_bl_1_17 write_bl_0_17 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_204 vdd gnd read_bl_0_19 read_bl_1_19 write_bl_0_19 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_248 vdd_uq2 gnd read_bl_0_16 read_bl_1_16 write_bl_0_16 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_215 vdd_uq3 gnd read_bl_0_18 read_bl_1_18 write_bl_0_18 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_419 vdd_uq5 gnd read_bl_0_5 read_bl_1_5 write_bl_0_5 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_408 vdd_uq2 gnd read_bl_0_6 read_bl_1_6 write_bl_0_6 wwl_0_7 rwl_1_7 rwl_0_7
++ cell_2r1w
+Xcell_2r1w_32 vdd_uq6 gnd read_bl_0_29 read_bl_1_29 write_bl_0_29 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_65 vdd_uq6 gnd read_bl_0_27 read_bl_1_27 write_bl_0_27 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_98 vdd_uq5 gnd read_bl_0_25 read_bl_1_25 write_bl_0_25 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_76 vdd gnd read_bl_0_27 read_bl_1_27 write_bl_0_27 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_43 vdd_uq1 gnd read_bl_0_29 read_bl_1_29 write_bl_0_29 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_10 vdd_uq1 gnd read_bl_0_31 read_bl_1_31 write_bl_0_31 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_87 vdd_uq3 gnd read_bl_0_26 read_bl_1_26 write_bl_0_26 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_54 vdd_uq3 gnd read_bl_0_28 read_bl_1_28 write_bl_0_28 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_21 vdd_uq4 gnd read_bl_0_30 read_bl_1_30 write_bl_0_30 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_227 vdd_uq5 gnd read_bl_0_17 read_bl_1_17 write_bl_0_17 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_205 vdd gnd read_bl_0_19 read_bl_1_19 write_bl_0_19 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_238 vdd_uq0 gnd read_bl_0_17 read_bl_1_17 write_bl_0_17 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_249 vdd_uq2 gnd read_bl_0_16 read_bl_1_16 write_bl_0_16 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_216 vdd_uq2 gnd read_bl_0_18 read_bl_1_18 write_bl_0_18 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_0 vdd_uq6 gnd read_bl_0_31 read_bl_1_31 write_bl_0_31 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_409 vdd_uq2 gnd read_bl_0_6 read_bl_1_6 write_bl_0_6 wwl_0_6 rwl_1_6 rwl_0_6
++ cell_2r1w
+Xcell_2r1w_33 vdd_uq6 gnd read_bl_0_29 read_bl_1_29 write_bl_0_29 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_66 vdd_uq5 gnd read_bl_0_27 read_bl_1_27 write_bl_0_27 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_99 vdd_uq5 gnd read_bl_0_25 read_bl_1_25 write_bl_0_25 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_77 vdd gnd read_bl_0_27 read_bl_1_27 write_bl_0_27 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_206 vdd_uq0 gnd read_bl_0_19 read_bl_1_19 write_bl_0_19 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_239 vdd_uq0 gnd read_bl_0_17 read_bl_1_17 write_bl_0_17 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_44 vdd gnd read_bl_0_29 read_bl_1_29 write_bl_0_29 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_11 vdd_uq1 gnd read_bl_0_31 read_bl_1_31 write_bl_0_31 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_217 vdd_uq2 gnd read_bl_0_18 read_bl_1_18 write_bl_0_18 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_88 vdd_uq2 gnd read_bl_0_26 read_bl_1_26 write_bl_0_26 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_55 vdd_uq3 gnd read_bl_0_28 read_bl_1_28 write_bl_0_28 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_22 vdd_uq3 gnd read_bl_0_30 read_bl_1_30 write_bl_0_30 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_228 vdd_uq4 gnd read_bl_0_17 read_bl_1_17 write_bl_0_17 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_1 vdd_uq6 gnd read_bl_0_31 read_bl_1_31 write_bl_0_31 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_34 vdd_uq5 gnd read_bl_0_29 read_bl_1_29 write_bl_0_29 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_67 vdd_uq5 gnd read_bl_0_27 read_bl_1_27 write_bl_0_27 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_45 vdd gnd read_bl_0_29 read_bl_1_29 write_bl_0_29 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_78 vdd_uq0 gnd read_bl_0_27 read_bl_1_27 write_bl_0_27 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_207 vdd_uq0 gnd read_bl_0_19 read_bl_1_19 write_bl_0_19 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_12 vdd gnd read_bl_0_31 read_bl_1_31 write_bl_0_31 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_218 vdd_uq1 gnd read_bl_0_18 read_bl_1_18 write_bl_0_18 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_89 vdd_uq2 gnd read_bl_0_26 read_bl_1_26 write_bl_0_26 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_56 vdd_uq2 gnd read_bl_0_28 read_bl_1_28 write_bl_0_28 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_23 vdd_uq3 gnd read_bl_0_30 read_bl_1_30 write_bl_0_30 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_229 vdd_uq4 gnd read_bl_0_17 read_bl_1_17 write_bl_0_17 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_2 vdd_uq5 gnd read_bl_0_31 read_bl_1_31 write_bl_0_31 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_390 vdd_uq3 gnd read_bl_0_7 read_bl_1_7 write_bl_0_7 wwl_0_9 rwl_1_9 rwl_0_9
++ cell_2r1w
+Xcell_2r1w_35 vdd_uq5 gnd read_bl_0_29 read_bl_1_29 write_bl_0_29 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_13 vdd gnd read_bl_0_31 read_bl_1_31 write_bl_0_31 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_46 vdd_uq0 gnd read_bl_0_29 read_bl_1_29 write_bl_0_29 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_79 vdd_uq0 gnd read_bl_0_27 read_bl_1_27 write_bl_0_27 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_57 vdd_uq2 gnd read_bl_0_28 read_bl_1_28 write_bl_0_28 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_24 vdd_uq2 gnd read_bl_0_30 read_bl_1_30 write_bl_0_30 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_68 vdd_uq4 gnd read_bl_0_27 read_bl_1_27 write_bl_0_27 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_208 vdd_uq6 gnd read_bl_0_18 read_bl_1_18 write_bl_0_18 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_219 vdd_uq1 gnd read_bl_0_18 read_bl_1_18 write_bl_0_18 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_3 vdd_uq5 gnd read_bl_0_31 read_bl_1_31 write_bl_0_31 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_380 vdd gnd read_bl_0_8 read_bl_1_8 write_bl_0_8 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_391 vdd_uq3 gnd read_bl_0_7 read_bl_1_7 write_bl_0_7 wwl_0_8 rwl_1_8 rwl_0_8
++ cell_2r1w
+Xcell_2r1w_14 vdd_uq0 gnd read_bl_0_31 read_bl_1_31 write_bl_0_31 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_47 vdd_uq0 gnd read_bl_0_29 read_bl_1_29 write_bl_0_29 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_58 vdd_uq1 gnd read_bl_0_28 read_bl_1_28 write_bl_0_28 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_25 vdd_uq2 gnd read_bl_0_30 read_bl_1_30 write_bl_0_30 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_69 vdd_uq4 gnd read_bl_0_27 read_bl_1_27 write_bl_0_27 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_36 vdd_uq4 gnd read_bl_0_29 read_bl_1_29 write_bl_0_29 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_209 vdd_uq6 gnd read_bl_0_18 read_bl_1_18 write_bl_0_18 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_4 vdd_uq4 gnd read_bl_0_31 read_bl_1_31 write_bl_0_31 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_370 vdd_uq5 gnd read_bl_0_8 read_bl_1_8 write_bl_0_8 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_381 vdd gnd read_bl_0_8 read_bl_1_8 write_bl_0_8 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_392 vdd_uq2 gnd read_bl_0_7 read_bl_1_7 write_bl_0_7 wwl_0_7 rwl_1_7 rwl_0_7
++ cell_2r1w
+Xcell_2r1w_48 vdd_uq6 gnd read_bl_0_28 read_bl_1_28 write_bl_0_28 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_15 vdd_uq0 gnd read_bl_0_31 read_bl_1_31 write_bl_0_31 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_59 vdd_uq1 gnd read_bl_0_28 read_bl_1_28 write_bl_0_28 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_26 vdd_uq1 gnd read_bl_0_30 read_bl_1_30 write_bl_0_30 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_37 vdd_uq4 gnd read_bl_0_29 read_bl_1_29 write_bl_0_29 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_5 vdd_uq4 gnd read_bl_0_31 read_bl_1_31 write_bl_0_31 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_371 vdd_uq5 gnd read_bl_0_8 read_bl_1_8 write_bl_0_8 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_382 vdd_uq0 gnd read_bl_0_8 read_bl_1_8 write_bl_0_8 wwl_0_1 rwl_1_1 rwl_0_1
++ cell_2r1w
+Xcell_2r1w_393 vdd_uq2 gnd read_bl_0_7 read_bl_1_7 write_bl_0_7 wwl_0_6 rwl_1_6 rwl_0_6
++ cell_2r1w
+Xcell_2r1w_360 vdd_uq2 gnd read_bl_0_9 read_bl_1_9 write_bl_0_9 wwl_0_7 rwl_1_7 rwl_0_7
++ cell_2r1w
+Xcell_2r1w_190 vdd_uq0 gnd read_bl_0_20 read_bl_1_20 write_bl_0_20 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_16 vdd_uq6 gnd read_bl_0_30 read_bl_1_30 write_bl_0_30 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_49 vdd_uq6 gnd read_bl_0_28 read_bl_1_28 write_bl_0_28 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_27 vdd_uq1 gnd read_bl_0_30 read_bl_1_30 write_bl_0_30 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_38 vdd_uq3 gnd read_bl_0_29 read_bl_1_29 write_bl_0_29 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_6 vdd_uq3 gnd read_bl_0_31 read_bl_1_31 write_bl_0_31 wwl_0_9 rwl_1_9 rwl_0_9
++ cell_2r1w
+Xcell_2r1w_350 vdd_uq0 gnd read_bl_0_10 read_bl_1_10 write_bl_0_10 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_361 vdd_uq2 gnd read_bl_0_9 read_bl_1_9 write_bl_0_9 wwl_0_6 rwl_1_6 rwl_0_6
++ cell_2r1w
+Xcell_2r1w_372 vdd_uq4 gnd read_bl_0_8 read_bl_1_8 write_bl_0_8 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_383 vdd_uq0 gnd read_bl_0_8 read_bl_1_8 write_bl_0_8 wwl_0_0 rwl_1_0 rwl_0_0
++ cell_2r1w
+Xcell_2r1w_394 vdd_uq1 gnd read_bl_0_7 read_bl_1_7 write_bl_0_7 wwl_0_5 rwl_1_5 rwl_0_5
++ cell_2r1w
+Xcell_2r1w_191 vdd_uq0 gnd read_bl_0_20 read_bl_1_20 write_bl_0_20 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_180 vdd_uq4 gnd read_bl_0_20 read_bl_1_20 write_bl_0_20 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_17 vdd_uq6 gnd read_bl_0_30 read_bl_1_30 write_bl_0_30 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_28 vdd gnd read_bl_0_30 read_bl_1_30 write_bl_0_30 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_39 vdd_uq3 gnd read_bl_0_29 read_bl_1_29 write_bl_0_29 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_7 vdd_uq3 gnd read_bl_0_31 read_bl_1_31 write_bl_0_31 wwl_0_8 rwl_1_8 rwl_0_8
++ cell_2r1w
+Xcell_2r1w_510 vdd_uq0 gnd read_bl_0_0 read_bl_1_0 write_bl_0_0 wwl_0_1 rwl_1_1 rwl_0_1
++ cell_2r1w
+Xcell_2r1w_384 vdd_uq6 gnd read_bl_0_7 read_bl_1_7 write_bl_0_7 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_351 vdd_uq0 gnd read_bl_0_10 read_bl_1_10 write_bl_0_10 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_395 vdd_uq1 gnd read_bl_0_7 read_bl_1_7 write_bl_0_7 wwl_0_4 rwl_1_4 rwl_0_4
++ cell_2r1w
+Xcell_2r1w_362 vdd_uq1 gnd read_bl_0_9 read_bl_1_9 write_bl_0_9 wwl_0_5 rwl_1_5 rwl_0_5
++ cell_2r1w
+Xcell_2r1w_373 vdd_uq4 gnd read_bl_0_8 read_bl_1_8 write_bl_0_8 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_340 vdd_uq4 gnd read_bl_0_10 read_bl_1_10 write_bl_0_10 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_192 vdd_uq6 gnd read_bl_0_19 read_bl_1_19 write_bl_0_19 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_170 vdd_uq1 gnd read_bl_0_21 read_bl_1_21 write_bl_0_21 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_181 vdd_uq4 gnd read_bl_0_20 read_bl_1_20 write_bl_0_20 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_18 vdd_uq5 gnd read_bl_0_30 read_bl_1_30 write_bl_0_30 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_29 vdd gnd read_bl_0_30 read_bl_1_30 write_bl_0_30 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_8 vdd_uq2 gnd read_bl_0_31 read_bl_1_31 write_bl_0_31 wwl_0_7 rwl_1_7 rwl_0_7
++ cell_2r1w
+Xcell_2r1w_511 vdd_uq0 gnd read_bl_0_0 read_bl_1_0 write_bl_0_0 wwl_0_0 rwl_1_0 rwl_0_0
++ cell_2r1w
+Xcell_2r1w_500 vdd_uq4 gnd read_bl_0_0 read_bl_1_0 write_bl_0_0 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_352 vdd_uq6 gnd read_bl_0_9 read_bl_1_9 write_bl_0_9 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_385 vdd_uq6 gnd read_bl_0_7 read_bl_1_7 write_bl_0_7 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_396 vdd gnd read_bl_0_7 read_bl_1_7 write_bl_0_7 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_363 vdd_uq1 gnd read_bl_0_9 read_bl_1_9 write_bl_0_9 wwl_0_4 rwl_1_4 rwl_0_4
++ cell_2r1w
+Xcell_2r1w_330 vdd_uq1 gnd read_bl_0_11 read_bl_1_11 write_bl_0_11 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_374 vdd_uq3 gnd read_bl_0_8 read_bl_1_8 write_bl_0_8 wwl_0_9 rwl_1_9 rwl_0_9
++ cell_2r1w
+Xcell_2r1w_341 vdd_uq4 gnd read_bl_0_10 read_bl_1_10 write_bl_0_10 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_160 vdd_uq6 gnd read_bl_0_21 read_bl_1_21 write_bl_0_21 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_193 vdd_uq6 gnd read_bl_0_19 read_bl_1_19 write_bl_0_19 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_171 vdd_uq1 gnd read_bl_0_21 read_bl_1_21 write_bl_0_21 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_182 vdd_uq3 gnd read_bl_0_20 read_bl_1_20 write_bl_0_20 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_19 vdd_uq5 gnd read_bl_0_30 read_bl_1_30 write_bl_0_30 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_9 vdd_uq2 gnd read_bl_0_31 read_bl_1_31 write_bl_0_31 wwl_0_6 rwl_1_6 rwl_0_6
++ cell_2r1w
+Xcell_2r1w_501 vdd_uq4 gnd read_bl_0_0 read_bl_1_0 write_bl_0_0 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_320 vdd_uq6 gnd read_bl_0_11 read_bl_1_11 write_bl_0_11 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_353 vdd_uq6 gnd read_bl_0_9 read_bl_1_9 write_bl_0_9 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_386 vdd_uq5 gnd read_bl_0_7 read_bl_1_7 write_bl_0_7 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_397 vdd gnd read_bl_0_7 read_bl_1_7 write_bl_0_7 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_364 vdd gnd read_bl_0_9 read_bl_1_9 write_bl_0_9 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_331 vdd_uq1 gnd read_bl_0_11 read_bl_1_11 write_bl_0_11 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_375 vdd_uq3 gnd read_bl_0_8 read_bl_1_8 write_bl_0_8 wwl_0_8 rwl_1_8 rwl_0_8
++ cell_2r1w
+Xcell_2r1w_342 vdd_uq3 gnd read_bl_0_10 read_bl_1_10 write_bl_0_10 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_161 vdd_uq6 gnd read_bl_0_21 read_bl_1_21 write_bl_0_21 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_194 vdd_uq5 gnd read_bl_0_19 read_bl_1_19 write_bl_0_19 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_172 vdd gnd read_bl_0_21 read_bl_1_21 write_bl_0_21 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_183 vdd_uq3 gnd read_bl_0_20 read_bl_1_20 write_bl_0_20 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_150 vdd_uq3 gnd read_bl_0_22 read_bl_1_22 write_bl_0_22 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_502 vdd_uq3 gnd read_bl_0_0 read_bl_1_0 write_bl_0_0 wwl_0_9 rwl_1_9 rwl_0_9
++ cell_2r1w
+Xcell_2r1w_321 vdd_uq6 gnd read_bl_0_11 read_bl_1_11 write_bl_0_11 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_354 vdd_uq5 gnd read_bl_0_9 read_bl_1_9 write_bl_0_9 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_387 vdd_uq5 gnd read_bl_0_7 read_bl_1_7 write_bl_0_7 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_365 vdd gnd read_bl_0_9 read_bl_1_9 write_bl_0_9 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_398 vdd_uq0 gnd read_bl_0_7 read_bl_1_7 write_bl_0_7 wwl_0_1 rwl_1_1 rwl_0_1
++ cell_2r1w
+Xcell_2r1w_332 vdd gnd read_bl_0_11 read_bl_1_11 write_bl_0_11 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_376 vdd_uq2 gnd read_bl_0_8 read_bl_1_8 write_bl_0_8 wwl_0_7 rwl_1_7 rwl_0_7
++ cell_2r1w
+Xcell_2r1w_343 vdd_uq3 gnd read_bl_0_10 read_bl_1_10 write_bl_0_10 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_310 vdd_uq3 gnd read_bl_0_12 read_bl_1_12 write_bl_0_12 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_162 vdd_uq5 gnd read_bl_0_21 read_bl_1_21 write_bl_0_21 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_195 vdd_uq5 gnd read_bl_0_19 read_bl_1_19 write_bl_0_19 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_173 vdd gnd read_bl_0_21 read_bl_1_21 write_bl_0_21 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_140 vdd gnd read_bl_0_23 read_bl_1_23 write_bl_0_23 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_184 vdd_uq2 gnd read_bl_0_20 read_bl_1_20 write_bl_0_20 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_151 vdd_uq3 gnd read_bl_0_22 read_bl_1_22 write_bl_0_22 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_503 vdd_uq3 gnd read_bl_0_0 read_bl_1_0 write_bl_0_0 wwl_0_8 rwl_1_8 rwl_0_8
++ cell_2r1w
+Xcell_2r1w_322 vdd_uq5 gnd read_bl_0_11 read_bl_1_11 write_bl_0_11 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_355 vdd_uq5 gnd read_bl_0_9 read_bl_1_9 write_bl_0_9 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_333 vdd gnd read_bl_0_11 read_bl_1_11 write_bl_0_11 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_366 vdd_uq0 gnd read_bl_0_9 read_bl_1_9 write_bl_0_9 wwl_0_1 rwl_1_1 rwl_0_1
++ cell_2r1w
+Xcell_2r1w_300 vdd gnd read_bl_0_13 read_bl_1_13 write_bl_0_13 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_377 vdd_uq2 gnd read_bl_0_8 read_bl_1_8 write_bl_0_8 wwl_0_6 rwl_1_6 rwl_0_6
++ cell_2r1w
+Xcell_2r1w_344 vdd_uq2 gnd read_bl_0_10 read_bl_1_10 write_bl_0_10 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_311 vdd_uq3 gnd read_bl_0_12 read_bl_1_12 write_bl_0_12 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_399 vdd_uq0 gnd read_bl_0_7 read_bl_1_7 write_bl_0_7 wwl_0_0 rwl_1_0 rwl_0_0
++ cell_2r1w
+Xcell_2r1w_388 vdd_uq4 gnd read_bl_0_7 read_bl_1_7 write_bl_0_7 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_130 vdd_uq5 gnd read_bl_0_23 read_bl_1_23 write_bl_0_23 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_163 vdd_uq5 gnd read_bl_0_21 read_bl_1_21 write_bl_0_21 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_141 vdd gnd read_bl_0_23 read_bl_1_23 write_bl_0_23 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_174 vdd_uq0 gnd read_bl_0_21 read_bl_1_21 write_bl_0_21 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_185 vdd_uq2 gnd read_bl_0_20 read_bl_1_20 write_bl_0_20 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_152 vdd_uq2 gnd read_bl_0_22 read_bl_1_22 write_bl_0_22 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_196 vdd_uq4 gnd read_bl_0_19 read_bl_1_19 write_bl_0_19 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_504 vdd_uq2 gnd read_bl_0_0 read_bl_1_0 write_bl_0_0 wwl_0_7 rwl_1_7 rwl_0_7
++ cell_2r1w
+Xcell_2r1w_323 vdd_uq5 gnd read_bl_0_11 read_bl_1_11 write_bl_0_11 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_301 vdd gnd read_bl_0_13 read_bl_1_13 write_bl_0_13 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_334 vdd_uq0 gnd read_bl_0_11 read_bl_1_11 write_bl_0_11 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_367 vdd_uq0 gnd read_bl_0_9 read_bl_1_9 write_bl_0_9 wwl_0_0 rwl_1_0 rwl_0_0
++ cell_2r1w
+Xcell_2r1w_378 vdd_uq1 gnd read_bl_0_8 read_bl_1_8 write_bl_0_8 wwl_0_5 rwl_1_5 rwl_0_5
++ cell_2r1w
+Xcell_2r1w_345 vdd_uq2 gnd read_bl_0_10 read_bl_1_10 write_bl_0_10 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_312 vdd_uq2 gnd read_bl_0_12 read_bl_1_12 write_bl_0_12 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_389 vdd_uq4 gnd read_bl_0_7 read_bl_1_7 write_bl_0_7 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_356 vdd_uq4 gnd read_bl_0_9 read_bl_1_9 write_bl_0_9 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_131 vdd_uq5 gnd read_bl_0_23 read_bl_1_23 write_bl_0_23 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_142 vdd_uq0 gnd read_bl_0_23 read_bl_1_23 write_bl_0_23 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_175 vdd_uq0 gnd read_bl_0_21 read_bl_1_21 write_bl_0_21 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_186 vdd_uq1 gnd read_bl_0_20 read_bl_1_20 write_bl_0_20 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_153 vdd_uq2 gnd read_bl_0_22 read_bl_1_22 write_bl_0_22 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_120 vdd_uq2 gnd read_bl_0_24 read_bl_1_24 write_bl_0_24 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_197 vdd_uq4 gnd read_bl_0_19 read_bl_1_19 write_bl_0_19 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_164 vdd_uq4 gnd read_bl_0_21 read_bl_1_21 write_bl_0_21 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_505 vdd_uq2 gnd read_bl_0_0 read_bl_1_0 write_bl_0_0 wwl_0_6 rwl_1_6 rwl_0_6
++ cell_2r1w
+Xcell_2r1w_368 vdd_uq6 gnd read_bl_0_8 read_bl_1_8 write_bl_0_8 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_302 vdd_uq0 gnd read_bl_0_13 read_bl_1_13 write_bl_0_13 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_335 vdd_uq0 gnd read_bl_0_11 read_bl_1_11 write_bl_0_11 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_379 vdd_uq1 gnd read_bl_0_8 read_bl_1_8 write_bl_0_8 wwl_0_4 rwl_1_4 rwl_0_4
++ cell_2r1w
+Xcell_2r1w_346 vdd_uq1 gnd read_bl_0_10 read_bl_1_10 write_bl_0_10 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_313 vdd_uq2 gnd read_bl_0_12 read_bl_1_12 write_bl_0_12 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_357 vdd_uq4 gnd read_bl_0_9 read_bl_1_9 write_bl_0_9 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_324 vdd_uq4 gnd read_bl_0_11 read_bl_1_11 write_bl_0_11 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_110 vdd_uq0 gnd read_bl_0_25 read_bl_1_25 write_bl_0_25 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_143 vdd_uq0 gnd read_bl_0_23 read_bl_1_23 write_bl_0_23 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_121 vdd_uq2 gnd read_bl_0_24 read_bl_1_24 write_bl_0_24 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_132 vdd_uq4 gnd read_bl_0_23 read_bl_1_23 write_bl_0_23 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_176 vdd_uq6 gnd read_bl_0_20 read_bl_1_20 write_bl_0_20 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_187 vdd_uq1 gnd read_bl_0_20 read_bl_1_20 write_bl_0_20 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_154 vdd_uq1 gnd read_bl_0_22 read_bl_1_22 write_bl_0_22 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_198 vdd_uq3 gnd read_bl_0_19 read_bl_1_19 write_bl_0_19 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_165 vdd_uq4 gnd read_bl_0_21 read_bl_1_21 write_bl_0_21 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_506 vdd_uq1 gnd read_bl_0_0 read_bl_1_0 write_bl_0_0 wwl_0_5 rwl_1_5 rwl_0_5
++ cell_2r1w
+Xcell_2r1w_336 vdd_uq6 gnd read_bl_0_10 read_bl_1_10 write_bl_0_10 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_369 vdd_uq6 gnd read_bl_0_8 read_bl_1_8 write_bl_0_8 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_303 vdd_uq0 gnd read_bl_0_13 read_bl_1_13 write_bl_0_13 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_347 vdd_uq1 gnd read_bl_0_10 read_bl_1_10 write_bl_0_10 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_314 vdd_uq1 gnd read_bl_0_12 read_bl_1_12 write_bl_0_12 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_358 vdd_uq3 gnd read_bl_0_9 read_bl_1_9 write_bl_0_9 wwl_0_9 rwl_1_9 rwl_0_9
++ cell_2r1w
+Xcell_2r1w_325 vdd_uq4 gnd read_bl_0_11 read_bl_1_11 write_bl_0_11 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_144 vdd_uq6 gnd read_bl_0_22 read_bl_1_22 write_bl_0_22 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_177 vdd_uq6 gnd read_bl_0_20 read_bl_1_20 write_bl_0_20 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_111 vdd_uq0 gnd read_bl_0_25 read_bl_1_25 write_bl_0_25 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_188 vdd gnd read_bl_0_20 read_bl_1_20 write_bl_0_20 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_155 vdd_uq1 gnd read_bl_0_22 read_bl_1_22 write_bl_0_22 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_122 vdd_uq1 gnd read_bl_0_24 read_bl_1_24 write_bl_0_24 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_199 vdd_uq3 gnd read_bl_0_19 read_bl_1_19 write_bl_0_19 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_166 vdd_uq3 gnd read_bl_0_21 read_bl_1_21 write_bl_0_21 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_133 vdd_uq4 gnd read_bl_0_23 read_bl_1_23 write_bl_0_23 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_100 vdd_uq4 gnd read_bl_0_25 read_bl_1_25 write_bl_0_25 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_507 vdd_uq1 gnd read_bl_0_0 read_bl_1_0 write_bl_0_0 wwl_0_4 rwl_1_4 rwl_0_4
++ cell_2r1w
+Xcell_2r1w_304 vdd_uq6 gnd read_bl_0_12 read_bl_1_12 write_bl_0_12 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_337 vdd_uq6 gnd read_bl_0_10 read_bl_1_10 write_bl_0_10 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_348 vdd gnd read_bl_0_10 read_bl_1_10 write_bl_0_10 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_315 vdd_uq1 gnd read_bl_0_12 read_bl_1_12 write_bl_0_12 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_359 vdd_uq3 gnd read_bl_0_9 read_bl_1_9 write_bl_0_9 wwl_0_8 rwl_1_8 rwl_0_8
++ cell_2r1w
+Xcell_2r1w_326 vdd_uq3 gnd read_bl_0_11 read_bl_1_11 write_bl_0_11 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_112 vdd_uq6 gnd read_bl_0_24 read_bl_1_24 write_bl_0_24 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_145 vdd_uq6 gnd read_bl_0_22 read_bl_1_22 write_bl_0_22 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_178 vdd_uq5 gnd read_bl_0_20 read_bl_1_20 write_bl_0_20 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_189 vdd gnd read_bl_0_20 read_bl_1_20 write_bl_0_20 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_156 vdd gnd read_bl_0_22 read_bl_1_22 write_bl_0_22 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_123 vdd_uq1 gnd read_bl_0_24 read_bl_1_24 write_bl_0_24 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_167 vdd_uq3 gnd read_bl_0_21 read_bl_1_21 write_bl_0_21 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_134 vdd_uq3 gnd read_bl_0_23 read_bl_1_23 write_bl_0_23 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_101 vdd_uq4 gnd read_bl_0_25 read_bl_1_25 write_bl_0_25 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_508 vdd gnd read_bl_0_0 read_bl_1_0 write_bl_0_0 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_305 vdd_uq6 gnd read_bl_0_12 read_bl_1_12 write_bl_0_12 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_338 vdd_uq5 gnd read_bl_0_10 read_bl_1_10 write_bl_0_10 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_349 vdd gnd read_bl_0_10 read_bl_1_10 write_bl_0_10 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_316 vdd gnd read_bl_0_12 read_bl_1_12 write_bl_0_12 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_327 vdd_uq3 gnd read_bl_0_11 read_bl_1_11 write_bl_0_11 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_113 vdd_uq6 gnd read_bl_0_24 read_bl_1_24 write_bl_0_24 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_146 vdd_uq5 gnd read_bl_0_22 read_bl_1_22 write_bl_0_22 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_179 vdd_uq5 gnd read_bl_0_20 read_bl_1_20 write_bl_0_20 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_157 vdd gnd read_bl_0_22 read_bl_1_22 write_bl_0_22 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_124 vdd gnd read_bl_0_24 read_bl_1_24 write_bl_0_24 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_168 vdd_uq2 gnd read_bl_0_21 read_bl_1_21 write_bl_0_21 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_135 vdd_uq3 gnd read_bl_0_23 read_bl_1_23 write_bl_0_23 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_102 vdd_uq3 gnd read_bl_0_25 read_bl_1_25 write_bl_0_25 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_509 vdd gnd read_bl_0_0 read_bl_1_0 write_bl_0_0 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_306 vdd_uq5 gnd read_bl_0_12 read_bl_1_12 write_bl_0_12 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_339 vdd_uq5 gnd read_bl_0_10 read_bl_1_10 write_bl_0_10 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_317 vdd gnd read_bl_0_12 read_bl_1_12 write_bl_0_12 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_328 vdd_uq2 gnd read_bl_0_11 read_bl_1_11 write_bl_0_11 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_114 vdd_uq5 gnd read_bl_0_24 read_bl_1_24 write_bl_0_24 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_147 vdd_uq5 gnd read_bl_0_22 read_bl_1_22 write_bl_0_22 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_125 vdd gnd read_bl_0_24 read_bl_1_24 write_bl_0_24 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_158 vdd_uq0 gnd read_bl_0_22 read_bl_1_22 write_bl_0_22 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_169 vdd_uq2 gnd read_bl_0_21 read_bl_1_21 write_bl_0_21 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_136 vdd_uq2 gnd read_bl_0_23 read_bl_1_23 write_bl_0_23 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_103 vdd_uq3 gnd read_bl_0_25 read_bl_1_25 write_bl_0_25 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_307 vdd_uq5 gnd read_bl_0_12 read_bl_1_12 write_bl_0_12 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_318 vdd_uq0 gnd read_bl_0_12 read_bl_1_12 write_bl_0_12 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_329 vdd_uq2 gnd read_bl_0_11 read_bl_1_11 write_bl_0_11 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_115 vdd_uq5 gnd read_bl_0_24 read_bl_1_24 write_bl_0_24 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_126 vdd_uq0 gnd read_bl_0_24 read_bl_1_24 write_bl_0_24 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_159 vdd_uq0 gnd read_bl_0_22 read_bl_1_22 write_bl_0_22 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_137 vdd_uq2 gnd read_bl_0_23 read_bl_1_23 write_bl_0_23 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_104 vdd_uq2 gnd read_bl_0_25 read_bl_1_25 write_bl_0_25 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_148 vdd_uq4 gnd read_bl_0_22 read_bl_1_22 write_bl_0_22 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_490 vdd_uq1 gnd read_bl_0_1 read_bl_1_1 write_bl_0_1 wwl_0_5 rwl_1_5 rwl_0_5
++ cell_2r1w
+Xcell_2r1w_319 vdd_uq0 gnd read_bl_0_12 read_bl_1_12 write_bl_0_12 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_308 vdd_uq4 gnd read_bl_0_12 read_bl_1_12 write_bl_0_12 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_127 vdd_uq0 gnd read_bl_0_24 read_bl_1_24 write_bl_0_24 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_138 vdd_uq1 gnd read_bl_0_23 read_bl_1_23 write_bl_0_23 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_105 vdd_uq2 gnd read_bl_0_25 read_bl_1_25 write_bl_0_25 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_149 vdd_uq4 gnd read_bl_0_22 read_bl_1_22 write_bl_0_22 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_116 vdd_uq4 gnd read_bl_0_24 read_bl_1_24 write_bl_0_24 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_480 vdd_uq6 gnd read_bl_0_1 read_bl_1_1 write_bl_0_1 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_491 vdd_uq1 gnd read_bl_0_1 read_bl_1_1 write_bl_0_1 wwl_0_4 rwl_1_4 rwl_0_4
++ cell_2r1w
+Xcell_2r1w_309 vdd_uq4 gnd read_bl_0_12 read_bl_1_12 write_bl_0_12 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_128 vdd_uq6 gnd read_bl_0_23 read_bl_1_23 write_bl_0_23 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_139 vdd_uq1 gnd read_bl_0_23 read_bl_1_23 write_bl_0_23 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_106 vdd_uq1 gnd read_bl_0_25 read_bl_1_25 write_bl_0_25 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_117 vdd_uq4 gnd read_bl_0_24 read_bl_1_24 write_bl_0_24 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_481 vdd_uq6 gnd read_bl_0_1 read_bl_1_1 write_bl_0_1 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_470 vdd_uq3 gnd read_bl_0_2 read_bl_1_2 write_bl_0_2 wwl_0_9 rwl_1_9 rwl_0_9
++ cell_2r1w
+Xcell_2r1w_492 vdd gnd read_bl_0_1 read_bl_1_1 write_bl_0_1 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_129 vdd_uq6 gnd read_bl_0_23 read_bl_1_23 write_bl_0_23 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_107 vdd_uq1 gnd read_bl_0_25 read_bl_1_25 write_bl_0_25 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_118 vdd_uq3 gnd read_bl_0_24 read_bl_1_24 write_bl_0_24 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_482 vdd_uq5 gnd read_bl_0_1 read_bl_1_1 write_bl_0_1 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_493 vdd gnd read_bl_0_1 read_bl_1_1 write_bl_0_1 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_460 vdd gnd read_bl_0_3 read_bl_1_3 write_bl_0_3 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_471 vdd_uq3 gnd read_bl_0_2 read_bl_1_2 write_bl_0_2 wwl_0_8 rwl_1_8 rwl_0_8
++ cell_2r1w
+Xcell_2r1w_290 vdd_uq5 gnd read_bl_0_13 read_bl_1_13 write_bl_0_13 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_108 vdd gnd read_bl_0_25 read_bl_1_25 write_bl_0_25 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_119 vdd_uq3 gnd read_bl_0_24 read_bl_1_24 write_bl_0_24 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_450 vdd_uq5 gnd read_bl_0_3 read_bl_1_3 write_bl_0_3 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_483 vdd_uq5 gnd read_bl_0_1 read_bl_1_1 write_bl_0_1 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_461 vdd gnd read_bl_0_3 read_bl_1_3 write_bl_0_3 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_494 vdd_uq0 gnd read_bl_0_1 read_bl_1_1 write_bl_0_1 wwl_0_1 rwl_1_1 rwl_0_1
++ cell_2r1w
+Xcell_2r1w_472 vdd_uq2 gnd read_bl_0_2 read_bl_1_2 write_bl_0_2 wwl_0_7 rwl_1_7 rwl_0_7
++ cell_2r1w
+Xcell_2r1w_291 vdd_uq5 gnd read_bl_0_13 read_bl_1_13 write_bl_0_13 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_280 vdd_uq2 gnd read_bl_0_14 read_bl_1_14 write_bl_0_14 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_109 vdd gnd read_bl_0_25 read_bl_1_25 write_bl_0_25 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_451 vdd_uq5 gnd read_bl_0_3 read_bl_1_3 write_bl_0_3 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_462 vdd_uq0 gnd read_bl_0_3 read_bl_1_3 write_bl_0_3 wwl_0_1 rwl_1_1 rwl_0_1
++ cell_2r1w
+Xcell_2r1w_495 vdd_uq0 gnd read_bl_0_1 read_bl_1_1 write_bl_0_1 wwl_0_0 rwl_1_0 rwl_0_0
++ cell_2r1w
+Xcell_2r1w_473 vdd_uq2 gnd read_bl_0_2 read_bl_1_2 write_bl_0_2 wwl_0_6 rwl_1_6 rwl_0_6
++ cell_2r1w
+Xcell_2r1w_440 vdd_uq2 gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_7 rwl_1_7 rwl_0_7
++ cell_2r1w
+Xcell_2r1w_484 vdd_uq4 gnd read_bl_0_1 read_bl_1_1 write_bl_0_1 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_270 vdd_uq0 gnd read_bl_0_15 read_bl_1_15 write_bl_0_15 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_281 vdd_uq2 gnd read_bl_0_14 read_bl_1_14 write_bl_0_14 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_292 vdd_uq4 gnd read_bl_0_13 read_bl_1_13 write_bl_0_13 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_496 vdd_uq6 gnd read_bl_0_0 read_bl_1_0 write_bl_0_0 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_430 vdd_uq0 gnd read_bl_0_5 read_bl_1_5 write_bl_0_5 wwl_0_1 rwl_1_1 rwl_0_1
++ cell_2r1w
+Xcell_2r1w_463 vdd_uq0 gnd read_bl_0_3 read_bl_1_3 write_bl_0_3 wwl_0_0 rwl_1_0 rwl_0_0
++ cell_2r1w
+Xcell_2r1w_474 vdd_uq1 gnd read_bl_0_2 read_bl_1_2 write_bl_0_2 wwl_0_5 rwl_1_5 rwl_0_5
++ cell_2r1w
+Xcell_2r1w_441 vdd_uq2 gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_6 rwl_1_6 rwl_0_6
++ cell_2r1w
+Xcell_2r1w_485 vdd_uq4 gnd read_bl_0_1 read_bl_1_1 write_bl_0_1 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_452 vdd_uq4 gnd read_bl_0_3 read_bl_1_3 write_bl_0_3 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_271 vdd_uq0 gnd read_bl_0_15 read_bl_1_15 write_bl_0_15 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_282 vdd_uq1 gnd read_bl_0_14 read_bl_1_14 write_bl_0_14 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_293 vdd_uq4 gnd read_bl_0_13 read_bl_1_13 write_bl_0_13 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_260 vdd_uq4 gnd read_bl_0_15 read_bl_1_15 write_bl_0_15 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_464 vdd_uq6 gnd read_bl_0_2 read_bl_1_2 write_bl_0_2 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_497 vdd_uq6 gnd read_bl_0_0 read_bl_1_0 write_bl_0_0 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_431 vdd_uq0 gnd read_bl_0_5 read_bl_1_5 write_bl_0_5 wwl_0_0 rwl_1_0 rwl_0_0
++ cell_2r1w
+Xcell_2r1w_475 vdd_uq1 gnd read_bl_0_2 read_bl_1_2 write_bl_0_2 wwl_0_4 rwl_1_4 rwl_0_4
++ cell_2r1w
+Xcell_2r1w_442 vdd_uq1 gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_5 rwl_1_5 rwl_0_5
++ cell_2r1w
+Xcell_2r1w_486 vdd_uq3 gnd read_bl_0_1 read_bl_1_1 write_bl_0_1 wwl_0_9 rwl_1_9 rwl_0_9
++ cell_2r1w
+Xcell_2r1w_453 vdd_uq4 gnd read_bl_0_3 read_bl_1_3 write_bl_0_3 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_420 vdd_uq4 gnd read_bl_0_5 read_bl_1_5 write_bl_0_5 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_272 vdd_uq6 gnd read_bl_0_14 read_bl_1_14 write_bl_0_14 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_283 vdd_uq1 gnd read_bl_0_14 read_bl_1_14 write_bl_0_14 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_250 vdd_uq1 gnd read_bl_0_16 read_bl_1_16 write_bl_0_16 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_294 vdd_uq3 gnd read_bl_0_13 read_bl_1_13 write_bl_0_13 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_261 vdd_uq4 gnd read_bl_0_15 read_bl_1_15 write_bl_0_15 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_432 vdd_uq6 gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_465 vdd_uq6 gnd read_bl_0_2 read_bl_1_2 write_bl_0_2 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_498 vdd_uq5 gnd read_bl_0_0 read_bl_1_0 write_bl_0_0 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_476 vdd gnd read_bl_0_2 read_bl_1_2 write_bl_0_2 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_443 vdd_uq1 gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_4 rwl_1_4 rwl_0_4
++ cell_2r1w
+Xcell_2r1w_410 vdd_uq1 gnd read_bl_0_6 read_bl_1_6 write_bl_0_6 wwl_0_5 rwl_1_5 rwl_0_5
++ cell_2r1w
+Xcell_2r1w_487 vdd_uq3 gnd read_bl_0_1 read_bl_1_1 write_bl_0_1 wwl_0_8 rwl_1_8 rwl_0_8
++ cell_2r1w
+Xcell_2r1w_454 vdd_uq3 gnd read_bl_0_3 read_bl_1_3 write_bl_0_3 wwl_0_9 rwl_1_9 rwl_0_9
++ cell_2r1w
+Xcell_2r1w_421 vdd_uq4 gnd read_bl_0_5 read_bl_1_5 write_bl_0_5 wwl_0_10 rwl_1_10
++ rwl_0_10 cell_2r1w
+Xcell_2r1w_240 vdd_uq6 gnd read_bl_0_16 read_bl_1_16 write_bl_0_16 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_273 vdd_uq6 gnd read_bl_0_14 read_bl_1_14 write_bl_0_14 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_284 vdd gnd read_bl_0_14 read_bl_1_14 write_bl_0_14 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_251 vdd_uq1 gnd read_bl_0_16 read_bl_1_16 write_bl_0_16 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_295 vdd_uq3 gnd read_bl_0_13 read_bl_1_13 write_bl_0_13 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_262 vdd_uq3 gnd read_bl_0_15 read_bl_1_15 write_bl_0_15 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_400 vdd_uq6 gnd read_bl_0_6 read_bl_1_6 write_bl_0_6 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_433 vdd_uq6 gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_466 vdd_uq5 gnd read_bl_0_2 read_bl_1_2 write_bl_0_2 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_499 vdd_uq5 gnd read_bl_0_0 read_bl_1_0 write_bl_0_0 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_477 vdd gnd read_bl_0_2 read_bl_1_2 write_bl_0_2 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_444 vdd gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_411 vdd_uq1 gnd read_bl_0_6 read_bl_1_6 write_bl_0_6 wwl_0_4 rwl_1_4 rwl_0_4
++ cell_2r1w
+Xcell_2r1w_488 vdd_uq2 gnd read_bl_0_1 read_bl_1_1 write_bl_0_1 wwl_0_7 rwl_1_7 rwl_0_7
++ cell_2r1w
+Xcell_2r1w_455 vdd_uq3 gnd read_bl_0_3 read_bl_1_3 write_bl_0_3 wwl_0_8 rwl_1_8 rwl_0_8
++ cell_2r1w
+Xcell_2r1w_422 vdd_uq3 gnd read_bl_0_5 read_bl_1_5 write_bl_0_5 wwl_0_9 rwl_1_9 rwl_0_9
++ cell_2r1w
+Xcell_2r1w_241 vdd_uq6 gnd read_bl_0_16 read_bl_1_16 write_bl_0_16 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_252 vdd gnd read_bl_0_16 read_bl_1_16 write_bl_0_16 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_90 vdd_uq1 gnd read_bl_0_26 read_bl_1_26 write_bl_0_26 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_263 vdd_uq3 gnd read_bl_0_15 read_bl_1_15 write_bl_0_15 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_230 vdd_uq3 gnd read_bl_0_17 read_bl_1_17 write_bl_0_17 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_274 vdd_uq5 gnd read_bl_0_14 read_bl_1_14 write_bl_0_14 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_285 vdd gnd read_bl_0_14 read_bl_1_14 write_bl_0_14 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_296 vdd_uq2 gnd read_bl_0_13 read_bl_1_13 write_bl_0_13 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_401 vdd_uq6 gnd read_bl_0_6 read_bl_1_6 write_bl_0_6 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_434 vdd_uq5 gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_467 vdd_uq5 gnd read_bl_0_2 read_bl_1_2 write_bl_0_2 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_445 vdd gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_478 vdd_uq0 gnd read_bl_0_2 read_bl_1_2 write_bl_0_2 wwl_0_1 rwl_1_1 rwl_0_1
++ cell_2r1w
+Xcell_2r1w_412 vdd gnd read_bl_0_6 read_bl_1_6 write_bl_0_6 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_489 vdd_uq2 gnd read_bl_0_1 read_bl_1_1 write_bl_0_1 wwl_0_6 rwl_1_6 rwl_0_6
++ cell_2r1w
+Xcell_2r1w_456 vdd_uq2 gnd read_bl_0_3 read_bl_1_3 write_bl_0_3 wwl_0_7 rwl_1_7 rwl_0_7
++ cell_2r1w
+Xcell_2r1w_423 vdd_uq3 gnd read_bl_0_5 read_bl_1_5 write_bl_0_5 wwl_0_8 rwl_1_8 rwl_0_8
++ cell_2r1w
+Xcell_2r1w_80 vdd_uq6 gnd read_bl_0_26 read_bl_1_26 write_bl_0_26 wwl_0_15 rwl_1_15
++ rwl_0_15 cell_2r1w
+Xcell_2r1w_91 vdd_uq1 gnd read_bl_0_26 read_bl_1_26 write_bl_0_26 wwl_0_4 rwl_1_4
++ rwl_0_4 cell_2r1w
+Xcell_2r1w_242 vdd_uq5 gnd read_bl_0_16 read_bl_1_16 write_bl_0_16 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_275 vdd_uq5 gnd read_bl_0_14 read_bl_1_14 write_bl_0_14 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_253 vdd gnd read_bl_0_16 read_bl_1_16 write_bl_0_16 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_286 vdd_uq0 gnd read_bl_0_14 read_bl_1_14 write_bl_0_14 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_220 vdd gnd read_bl_0_18 read_bl_1_18 write_bl_0_18 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_297 vdd_uq2 gnd read_bl_0_13 read_bl_1_13 write_bl_0_13 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_264 vdd_uq2 gnd read_bl_0_15 read_bl_1_15 write_bl_0_15 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_231 vdd_uq3 gnd read_bl_0_17 read_bl_1_17 write_bl_0_17 wwl_0_8 rwl_1_8
++ rwl_0_8 cell_2r1w
+Xcell_2r1w_402 vdd_uq5 gnd read_bl_0_6 read_bl_1_6 write_bl_0_6 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_435 vdd_uq5 gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_413 vdd gnd read_bl_0_6 read_bl_1_6 write_bl_0_6 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_446 vdd_uq0 gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_1 rwl_1_1 rwl_0_1
++ cell_2r1w
+Xcell_2r1w_479 vdd_uq0 gnd read_bl_0_2 read_bl_1_2 write_bl_0_2 wwl_0_0 rwl_1_0 rwl_0_0
++ cell_2r1w
+Xcell_2r1w_457 vdd_uq2 gnd read_bl_0_3 read_bl_1_3 write_bl_0_3 wwl_0_6 rwl_1_6 rwl_0_6
++ cell_2r1w
+Xcell_2r1w_424 vdd_uq2 gnd read_bl_0_5 read_bl_1_5 write_bl_0_5 wwl_0_7 rwl_1_7 rwl_0_7
++ cell_2r1w
+Xcell_2r1w_468 vdd_uq4 gnd read_bl_0_2 read_bl_1_2 write_bl_0_2 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+Xcell_2r1w_81 vdd_uq6 gnd read_bl_0_26 read_bl_1_26 write_bl_0_26 wwl_0_14 rwl_1_14
++ rwl_0_14 cell_2r1w
+Xcell_2r1w_92 vdd gnd read_bl_0_26 read_bl_1_26 write_bl_0_26 wwl_0_3 rwl_1_3 rwl_0_3
++ cell_2r1w
+Xcell_2r1w_70 vdd_uq3 gnd read_bl_0_27 read_bl_1_27 write_bl_0_27 wwl_0_9 rwl_1_9
++ rwl_0_9 cell_2r1w
+Xcell_2r1w_210 vdd_uq5 gnd read_bl_0_18 read_bl_1_18 write_bl_0_18 wwl_0_13 rwl_1_13
++ rwl_0_13 cell_2r1w
+Xcell_2r1w_243 vdd_uq5 gnd read_bl_0_16 read_bl_1_16 write_bl_0_16 wwl_0_12 rwl_1_12
++ rwl_0_12 cell_2r1w
+Xcell_2r1w_221 vdd gnd read_bl_0_18 read_bl_1_18 write_bl_0_18 wwl_0_2 rwl_1_2 rwl_0_2
++ cell_2r1w
+Xcell_2r1w_254 vdd_uq0 gnd read_bl_0_16 read_bl_1_16 write_bl_0_16 wwl_0_1 rwl_1_1
++ rwl_0_1 cell_2r1w
+Xcell_2r1w_287 vdd_uq0 gnd read_bl_0_14 read_bl_1_14 write_bl_0_14 wwl_0_0 rwl_1_0
++ rwl_0_0 cell_2r1w
+Xcell_2r1w_298 vdd_uq1 gnd read_bl_0_13 read_bl_1_13 write_bl_0_13 wwl_0_5 rwl_1_5
++ rwl_0_5 cell_2r1w
+Xcell_2r1w_265 vdd_uq2 gnd read_bl_0_15 read_bl_1_15 write_bl_0_15 wwl_0_6 rwl_1_6
++ rwl_0_6 cell_2r1w
+Xcell_2r1w_232 vdd_uq2 gnd read_bl_0_17 read_bl_1_17 write_bl_0_17 wwl_0_7 rwl_1_7
++ rwl_0_7 cell_2r1w
+Xcell_2r1w_276 vdd_uq4 gnd read_bl_0_14 read_bl_1_14 write_bl_0_14 wwl_0_11 rwl_1_11
++ rwl_0_11 cell_2r1w
+.ends
+
+.subckt replica_bitcell_array bitcell_array_0/vdd_uq2 bitcell_array_0/vdd_uq4 rwl_0_5
++ rwl_1_5 wwl_0_10 bitcell_array_0/vdd_uq3 rwl_0_2 rwl_0_7 wwl_0_11 bitcell_array_0/vdd_uq0
++ rwl_1_2 wwl_0_12 wwl_0_13 wwl_0_14 bitcell_array_0/vdd_uq6 rwl_0_14 wwl_0_15 wwl_0_0
++ bitcell_array_0/vdd_uq1 rwl_1_14 rwl_0_9 rwl_1_9 rwl_0_6 bitcell_array_0/vdd bitcell_array_0/vdd_uq5
++ rwl_1_6 rwl_0_3 rwl_1_3 rwl_0_15 rwl_0_0 rwl_1_15 rwl_1_0 rwl_0_10 rwl_0_12 rwl_1_10
++ rwl_1_12 gnd rwl_1_7 rwl_0_4 rwl_1_4 wwl_0_1 wwl_0_2 wwl_0_3 rwl_0_1 wwl_0_4 rwl_1_1
++ wwl_0_5 rwl_0_11 rwl_1_11 wwl_0_6 rwl_0_13 wwl_0_7 rwl_1_13 rwl_0_8 wwl_0_8 rwl_1_8
++ wwl_0_9
+Xbitcell_array_0 write_bl_0_0 rwl_0_0 read_bl_0_19 write_bl_0_20 read_bl_0_9 wwl_0_15
++ read_bl_0_29 bitcell_array_0/vdd_uq0 read_bl_1_6 rwl_0_3 wwl_0_1 read_bl_0_31 write_bl_0_11
++ rwl_1_3 read_bl_0_8 read_bl_0_28 write_bl_0_31 write_bl_0_1 read_bl_1_5 rwl_1_8
++ write_bl_0_19 write_bl_0_9 write_bl_0_29 read_bl_1_3 wwl_0_9 write_bl_0_17 rwl_0_9
++ read_bl_0_20 read_bl_0_6 rwl_1_13 wwl_0_2 write_bl_0_16 write_bl_0_27 write_bl_0_7
++ read_bl_1_15 read_bl_1_23 read_bl_0_4 wwl_0_14 rwl_1_5 read_bl_1_21 write_bl_0_6
++ rwl_1_15 wwl_0_3 read_bl_0_25 read_bl_0_15 read_bl_0_26 rwl_1_14 write_bl_0_4 rwl_0_6
++ read_bl_0_14 rwl_1_0 rwl_0_15 bitcell_array_0/vdd_uq2 read_bl_0_22 read_bl_1_19
++ read_bl_1_29 read_bl_1_9 rwl_0_14 rwl_0_8 wwl_0_7 write_bl_0_23 write_bl_0_14 rwl_0_4
++ read_bl_1_31 read_bl_1_8 read_bl_1_28 rwl_0_10 wwl_0_10 write_bl_0_22 read_bl_0_11
++ bitcell_array_0/vdd_uq4 read_bl_0_10 read_bl_0_1 rwl_1_9 read_bl_0_18 read_bl_0_21
++ wwl_0_11 write_bl_0_2 read_bl_1_4 rwl_0_7 wwl_0_12 read_bl_1_25 read_bl_1_26 rwl_1_6
++ read_bl_0_5 rwl_0_5 read_bl_1_22 wwl_0_13 rwl_0_1 read_bl_0_16 write_bl_0_5 wwl_0_6
++ read_bl_0_24 rwl_1_10 read_bl_1_1 rwl_0_2 write_bl_0_24 rwl_0_12 read_bl_1_18 bitcell_array_0/vdd_uq1
++ write_bl_0_12 write_bl_0_3 rwl_1_7 wwl_0_5 read_bl_1_16 rwl_1_1 write_bl_0_8 write_bl_0_28
++ wwl_0_8 rwl_0_11 read_bl_0_7 read_bl_0_27 rwl_1_12 rwl_1_2 wwl_0_0 read_bl_0_23
++ read_bl_0_12 rwl_0_13 rwl_1_4 read_bl_1_11 write_bl_0_15 write_bl_0_26 wwl_0_4 read_bl_0_2
++ bitcell_array_0/vdd_uq3 write_bl_0_13 read_bl_0_30 read_bl_0_0 write_bl_0_10 write_bl_0_30
++ write_bl_0_18 rwl_1_11 read_bl_1_7 read_bl_1_27 read_bl_0_13 bitcell_array_0/vdd
++ read_bl_1_14 read_bl_0_17 read_bl_1_2 write_bl_0_25 read_bl_1_17 read_bl_1_24 read_bl_1_12
++ read_bl_0_3 read_bl_1_0 read_bl_1_20 bitcell_array_0/vdd_uq5 write_bl_0_21 bitcell_array_0/vdd_uq6
++ read_bl_1_30 read_bl_1_10 read_bl_1_13 gnd bitcell_array
+.ends
+
+.subckt bank addr2 gnd replica_bitcell_array_0/bitcell_array_0/vdd_uq2 vdd_uq91 replica_bitcell_array_0/bitcell_array_0/vdd_uq4
++ vdd_uq36 replica_bitcell_array_0/bitcell_array_0/vdd_uq0 addr1 addr3 vdd_uq79 vdd_uq93
++ vdd addr4 replica_bitcell_array_0/bitcell_array_0/vdd_uq3 p_en_bar addr5 vdd_uq39
++ replica_bitcell_array_0/bitcell_array_0/vdd dout1_10 addr6 dout1_11 vdd_uq97 dout1_12
++ dout1_13 dout1_14 vdd_uq89 vdd_uq99 dout1_15 dout1_0 dout1_1 vdd_uq69 dout1_2 dout1_3
++ vdd_uq78 vdd_uq72 replica_bitcell_array_0/bitcell_array_0/vdd_uq5 dout1_4 dout1_5
++ dout1_6 w_en dout1_7 vdd_uq105 vdd_uq63 vdd_uq54 vdd_uq45 dout1_8 dout1_9 vdd_uq70
++ vdd_uq57 vdd_uq60 vdd_uq71 vdd_uq48 vdd_uq61 vdd_uq50 vdd_uq62 vdd_uq51 vdd_uq40
++ vdd_uq73 vdd_uq95 vdd_uq101 vdd_uq85 vdd_uq52 vdd_uq41 vdd_uq74 vdd_uq103 replica_bitcell_array_0/bitcell_array_0/vdd_uq1
++ vdd_uq53 vdd_uq42 vdd_uq64 vdd_uq75 vdd_uq87 vdd_uq43 vdd_uq32 vdd_uq65 vdd_uq76
++ vdd_uq55 vdd_uq44 vdd_uq33 vdd_uq66 vdd_uq77 vdd_uq56 vdd_uq34 vdd_uq67 vdd_uq107
++ vdd_uq108 vdd_uq46 vdd_uq35 vdd_uq68 replica_bitcell_array_0/bitcell_array_0/vdd_uq6
++ vdd_uq58 vdd_uq47 vdd_uq59 vdd_uq37 vdd_uq49 vdd_uq38
+Xport_data_0 p_en_bar din0_15 gnd din0_6 din0_7 din0_8 vdd din0_9 dout1_10 vdd_uq71
++ dout1_11 dout1_12 w_en dout1_13 dout1_14 vdd_uq79 dout1_15 dout1_0 dout1_1 gnd dout1_2
++ p_en_bar dout1_3 dout1_4 dout1_5 vdd_uq70 dout1_6 dout1_7 dout1_8 dout1_9 vdd_uq78
++ vdd_uq60 vdd_uq72 vdd_uq50 vdd_uq61 gnd vdd_uq73 vdd_uq40 vdd_uq51 vdd_uq62 vdd_uq74
++ vdd_uq63 vdd_uq41 vdd_uq52 vdd_uq75 vdd_uq64 vdd_uq42 vdd_uq53 vdd_uq76 vdd_uq65
++ vdd_uq32 vdd_uq43 vdd_uq54 vdd_uq45 vdd_uq69 vdd_uq77 vdd_uq66 vdd_uq33 vdd_uq44
++ vdd_uq55 vdd_uq67 vdd_uq34 vdd_uq56 vdd_uq57 vdd_uq68 vdd_uq35 vdd_uq46 vdd_uq48
++ vdd_uq36 vdd_uq47 vdd_uq58 vdd_uq37 vdd_uq59 din0_0 din0_10 vdd_uq38 vdd_uq49 din0_1
++ vdd_uq39 din0_11 din0_2 din0_12 din0_3 din0_13 din0_4 din0_14 din0_5 port_data
+Xpinvbuf_0 gnd gnd vdd_uq108 gnd gnd addr0 pinvbuf
+Xport_address_0 addr3 port_address_0/wwl0_0 port_address_0/rwl1_0 port_address_0/rwl1_11
++ addr4 port_address_0/rwl1_1 port_address_0/wwl0_1 port_address_0/rwl1_12 gnd addr5
++ port_address_0/wwl0_2 port_address_0/rwl1_2 port_address_0/rwl1_13 addr6 port_address_0/rwl1_3
++ port_address_0/wwl0_3 port_address_0/rwl1_14 port_address_0/wwl0_4 port_address_0/rwl1_4
++ port_address_0/rwl1_15 port_address_0/wwl0_5 port_address_0/rwl1_5 vdd_uq85 vdd_uq105
++ port_address_0/rwl1_6 port_address_0/wwl0_6 vdd_uq87 port_address_0/rwl1_7 port_address_0/wwl0_7
++ port_address_0/rwl1_8 port_address_0/wwl0_8 port_address_0/wwl0_9 port_address_0/rwl1_9
++ vdd_uq89 vdd_uq93 vdd_uq95 port_address_0/wwl0_10 vdd_uq97 port_address_0/wwl0_11
++ port_address_0/wwl0_12 vdd_uq101 port_address_0/rwl0_0 port_address_0/wwl0_13 port_address_0/wwl0_14
++ port_address_0/rwl0_1 port_address_0/rwl0_2 port_address_0/wwl0_15 port_address_0/rwl0_3
++ port_address_0/rwl0_10 addr2 port_address_0/rwl0_4 port_address_0/rwl0_11 vdd_uq91
++ vdd_uq103 port_address_0/rwl0_5 port_address_0/rwl0_12 port_address_0/rwl0_6 port_address_0/rwl0_13
++ port_address_0/rwl0_7 port_address_0/rwl0_14 port_address_0/rwl0_8 port_address_0/rwl0_15
++ vdd_uq107 port_address_0/rwl0_9 addr1 vdd_uq99 port_address_0/rwl1_10 port_address
+Xreplica_bitcell_array_0 replica_bitcell_array_0/bitcell_array_0/vdd_uq2 replica_bitcell_array_0/bitcell_array_0/vdd_uq4
++ port_address_0/rwl0_5 port_address_0/rwl1_5 port_address_0/wwl0_10 replica_bitcell_array_0/bitcell_array_0/vdd_uq3
++ port_address_0/rwl0_2 port_address_0/rwl0_7 port_address_0/wwl0_11 replica_bitcell_array_0/bitcell_array_0/vdd_uq0
++ port_address_0/rwl1_2 port_address_0/wwl0_12 port_address_0/wwl0_13 port_address_0/wwl0_14
++ replica_bitcell_array_0/bitcell_array_0/vdd_uq6 port_address_0/rwl0_14 port_address_0/wwl0_15
++ port_address_0/wwl0_0 replica_bitcell_array_0/bitcell_array_0/vdd_uq1 port_address_0/rwl1_14
++ port_address_0/rwl0_9 port_address_0/rwl1_9 port_address_0/rwl0_6 replica_bitcell_array_0/bitcell_array_0/vdd
++ replica_bitcell_array_0/bitcell_array_0/vdd_uq5 port_address_0/rwl1_6 port_address_0/rwl0_3
++ port_address_0/rwl1_3 port_address_0/rwl0_15 port_address_0/rwl0_0 port_address_0/rwl1_15
++ port_address_0/rwl1_0 port_address_0/rwl0_10 port_address_0/rwl0_12 port_address_0/rwl1_10
++ port_address_0/rwl1_12 gnd port_address_0/rwl1_7 port_address_0/rwl0_4 port_address_0/rwl1_4
++ port_address_0/wwl0_1 port_address_0/wwl0_2 port_address_0/wwl0_3 port_address_0/rwl0_1
++ port_address_0/wwl0_4 port_address_0/rwl1_1 port_address_0/wwl0_5 port_address_0/rwl0_11
++ port_address_0/rwl1_11 port_address_0/wwl0_6 port_address_0/rwl0_13 port_address_0/wwl0_7
++ port_address_0/rwl1_13 port_address_0/rwl0_8 port_address_0/wwl0_8 port_address_0/rwl1_8
++ port_address_0/wwl0_9 replica_bitcell_array
+.ends
+
+.subckt sram_0rw2r1w_16_32_sky130A
+Xcontrol_logic_multiport_0 vdd vdd vdd vdd clk vdd web csb vdd vdd control_logic_multiport
+Xdata_dff_0 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd
++ vdd data_dff
+Xcol_addr_dff_0 vdd vdd vdd vdd col_addr_dff
+Xrow_addr_dff_0 vdd vdd addr1[2] vdd vdd vdd vdd bank_0/addr2 bank_0/addr4 bank_0/addr3
++ vdd bank_0/addr5 bank_0/addr6 vdd addr1[3] addr1[4] addr1[5] addr1[6] row_addr_dff
+Xbank_0 bank_0/addr2 vdd vdd vdd vdd vdd vdd vdd bank_0/addr3 vdd vdd vdd bank_0/addr4
++ vdd vdd bank_0/addr5 vdd vdd dout1[10] bank_0/addr6 dout1[11] vdd dout1[12] dout1[13]
++ dout1[14] vdd vdd dout1[15] dout1[0] dout1[1] vdd dout1[2] dout1[3] vdd vdd vdd
++ dout1[4] dout1[5] dout1[6] vdd dout1[7] vdd vdd vdd vdd dout1[8] dout1[9] vdd vdd
++ vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd
++ vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd
++ vdd vdd vdd vdd vdd vdd bank
+.ends
+

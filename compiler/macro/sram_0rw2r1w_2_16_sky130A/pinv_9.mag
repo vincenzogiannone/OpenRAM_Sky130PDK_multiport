@@ -1,0 +1,88 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1643593061
+<< checkpaint >>
+rect -1296 -1277 2528 2155
+<< nwell >>
+rect -36 402 1268 895
+<< pwell >>
+rect 1122 51 1172 133
+<< psubdiff >>
+rect 1122 109 1172 133
+rect 1122 75 1130 109
+rect 1164 75 1172 109
+rect 1122 51 1172 75
+<< nsubdiff >>
+rect 1122 763 1172 787
+rect 1122 729 1130 763
+rect 1164 729 1172 763
+rect 1122 705 1172 729
+<< psubdiffcont >>
+rect 1130 75 1164 109
+<< nsubdiffcont >>
+rect 1130 729 1164 763
+<< poly >>
+rect 114 406 144 451
+rect 48 390 144 406
+rect 48 356 64 390
+rect 98 356 144 390
+rect 48 340 144 356
+rect 114 200 144 340
+<< polycont >>
+rect 64 356 98 390
+<< locali >>
+rect 0 821 1232 855
+rect 62 614 96 821
+rect 274 614 308 821
+rect 490 614 524 821
+rect 706 614 740 821
+rect 922 614 956 821
+rect 1130 763 1164 821
+rect 1130 713 1164 729
+rect 48 390 114 406
+rect 48 356 64 390
+rect 98 356 114 390
+rect 48 340 114 356
+rect 596 390 630 580
+rect 596 356 647 390
+rect 596 165 630 356
+rect 1130 109 1164 125
+rect 62 17 96 65
+rect 274 17 308 65
+rect 490 17 524 65
+rect 706 17 740 65
+rect 922 17 956 65
+rect 1130 17 1164 75
+rect 0 -17 1232 17
+use contact_12  contact_12_0
+timestamp 1643593061
+transform 1 0 48 0 1 340
+box 0 0 1 1
+use contact_11  contact_11_0
+timestamp 1643593061
+transform 1 0 1122 0 1 51
+box 0 0 1 1
+use contact_10  contact_10_0
+timestamp 1643593061
+transform 1 0 1122 0 1 705
+box 0 0 1 1
+use nmos_m9_w0_465_sli_dli_da_p  nmos_m9_w0_465_sli_dli_da_p_0
+timestamp 1643593061
+transform 1 0 54 0 1 51
+box 0 -26 1014 149
+use pmos_m9_w1_400_sli_dli_da_p  pmos_m9_w1_400_sli_dli_da_p_0
+timestamp 1643593061
+transform 1 0 54 0 1 507
+box -59 -56 1073 334
+<< labels >>
+rlabel locali s 81 373 81 373 4 A
+rlabel locali s 630 373 630 373 4 Z
+rlabel locali s 616 0 616 0 4 gnd
+rlabel locali s 616 838 616 838 4 vdd
+<< properties >>
+string FIXED_BBOX 0 0 1232 838
+string GDS_FILE sram_0rw2r1w_2_16_sky130A.gds
+string GDS_END 562126
+string GDS_START 560122
+<< end >>

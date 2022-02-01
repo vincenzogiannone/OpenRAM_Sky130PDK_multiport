@@ -1,0 +1,95 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1643593061
+<< checkpaint >>
+rect -1260 -1302 4272 2176
+<< locali >>
+rect 2169 528 2170 545
+rect 2169 394 2203 528
+rect 2008 360 2365 394
+rect 2592 360 2693 394
+rect 2659 226 2693 360
+<< viali >>
+rect 2170 528 2204 562
+rect 1872 360 1906 394
+rect 2659 192 2693 226
+<< metal1 >>
+rect 0 808 2976 868
+rect 2154 519 2160 571
+rect 2212 519 2219 571
+rect 1857 351 1863 403
+rect 1915 351 1921 403
+rect 2644 183 2650 235
+rect 2702 183 2708 235
+rect 0 -30 2976 30
+<< via1 >>
+rect 2160 562 2212 571
+rect 2160 528 2170 562
+rect 2170 528 2204 562
+rect 2204 528 2212 562
+rect 2160 519 2212 528
+rect 1863 394 1915 403
+rect 1863 360 1872 394
+rect 1872 360 1906 394
+rect 1906 360 1915 394
+rect 1863 351 1915 360
+rect 2650 226 2702 235
+rect 2650 192 2659 226
+rect 2659 192 2693 226
+rect 2693 192 2702 226
+rect 2650 183 2702 192
+<< metal2 >>
+rect 0 322 54 350
+rect 180 232 234 260
+rect 1875 256 1903 351
+rect 1287 228 1903 256
+use contact_17  contact_17_0
+timestamp 1643593061
+transform 1 0 2154 0 1 519
+box 0 0 1 1
+use contact_13  contact_13_0
+timestamp 1643593061
+transform 1 0 2158 0 1 522
+box 0 0 1 1
+use contact_17  contact_17_1
+timestamp 1643593061
+transform 1 0 2644 0 1 183
+box 0 0 1 1
+use contact_13  contact_13_1
+timestamp 1643593061
+transform 1 0 2647 0 1 186
+box 0 0 1 1
+use contact_17  contact_17_2
+timestamp 1643593061
+transform 1 0 1857 0 1 351
+box 0 0 1 1
+use contact_13  contact_13_2
+timestamp 1643593061
+transform 1 0 1860 0 1 354
+box 0 0 1 1
+use pinv_1  pinv_1_0
+timestamp 1643593061
+transform 1 0 2284 0 1 0
+box -36 -17 728 895
+use pinv_0  pinv_0_0
+timestamp 1643593061
+transform 1 0 1808 0 1 0
+box -36 -17 512 895
+use dff  dff_0
+timestamp 1643593061
+transform 1 0 0 0 1 0
+box 0 -42 1482 916
+<< labels >>
+rlabel metal1 s 0 808 2976 868 4 vdd
+rlabel metal1 s 0 -30 2976 30 4 gnd
+rlabel metal2 s 0 322 54 350 4 clk
+rlabel metal2 s 180 232 234 260 4 D
+rlabel metal2 s 2662 195 2690 223 4 Q
+rlabel metal2 s 2172 531 2200 559 4 Qb
+<< properties >>
+string FIXED_BBOX 0 0 2976 838
+string GDS_FILE sram_0rw2r1w_2_16_sky130A.gds
+string GDS_END 494470
+string GDS_START 492114
+<< end >>

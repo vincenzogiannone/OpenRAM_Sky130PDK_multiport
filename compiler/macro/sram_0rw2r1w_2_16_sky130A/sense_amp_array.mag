@@ -1,0 +1,218 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1643593061
+<< checkpaint >>
+rect 3288 -1260 8096 2310
+<< metal1 >>
+rect 4652 954 4658 1006
+rect 4710 954 4716 1006
+rect 5112 954 5118 1006
+rect 5170 954 5176 1006
+rect 6208 954 6214 1006
+rect 6266 954 6272 1006
+rect 6668 954 6674 1006
+rect 6726 954 6732 1006
+rect 4652 8 4658 60
+rect 4710 8 4716 60
+rect 5112 8 5118 60
+rect 5170 8 5176 60
+rect 6208 8 6214 60
+rect 6266 8 6272 60
+rect 6668 8 6674 60
+rect 6726 8 6732 60
+<< via1 >>
+rect 4658 954 4710 1006
+rect 5118 954 5170 1006
+rect 6214 954 6266 1006
+rect 6674 954 6726 1006
+rect 4658 8 4710 60
+rect 5118 8 5170 60
+rect 6214 8 6266 60
+rect 6674 8 6726 60
+<< metal2 >>
+rect 4562 0 4590 240
+rect 4750 0 4778 240
+rect 5022 0 5050 240
+rect 5210 0 5238 240
+rect 6118 0 6146 240
+rect 6306 0 6334 240
+rect 6578 0 6606 240
+rect 6766 0 6794 240
+<< via2 >>
+rect 4656 1006 4712 1008
+rect 4656 954 4658 1006
+rect 4658 954 4710 1006
+rect 4710 954 4712 1006
+rect 4656 952 4712 954
+rect 5116 1006 5172 1008
+rect 5116 954 5118 1006
+rect 5118 954 5170 1006
+rect 5170 954 5172 1006
+rect 5116 952 5172 954
+rect 6212 1006 6268 1008
+rect 6212 954 6214 1006
+rect 6214 954 6266 1006
+rect 6266 954 6268 1006
+rect 6212 952 6268 954
+rect 6672 1006 6728 1008
+rect 6672 954 6674 1006
+rect 6674 954 6726 1006
+rect 6726 954 6728 1006
+rect 6672 952 6728 954
+rect 4656 60 4712 62
+rect 4656 8 4658 60
+rect 4658 8 4710 60
+rect 4710 8 4712 60
+rect 4656 6 4712 8
+rect 5116 60 5172 62
+rect 5116 8 5118 60
+rect 5118 8 5170 60
+rect 5170 8 5172 60
+rect 5116 6 5172 8
+rect 6212 60 6268 62
+rect 6212 8 6214 60
+rect 6214 8 6266 60
+rect 6266 8 6268 60
+rect 6212 6 6268 8
+rect 6672 60 6728 62
+rect 6672 8 6674 60
+rect 6674 8 6726 60
+rect 6726 8 6728 60
+rect 6672 6 6728 8
+<< metal3 >>
+rect 4654 1008 4714 1010
+rect 4654 952 4656 1008
+rect 4712 952 4714 1008
+rect 4654 950 4714 952
+rect 5114 1008 5174 1010
+rect 5114 952 5116 1008
+rect 5172 952 5174 1008
+rect 5114 950 5174 952
+rect 6210 1008 6270 1010
+rect 6210 952 6212 1008
+rect 6268 952 6270 1008
+rect 6210 950 6270 952
+rect 6670 1008 6730 1010
+rect 6670 952 6672 1008
+rect 6728 952 6730 1008
+rect 6670 950 6730 952
+rect 4654 62 4714 64
+rect 4654 6 4656 62
+rect 4712 6 4714 62
+rect 4654 4 4714 6
+rect 5114 62 5174 64
+rect 5114 6 5116 62
+rect 5172 6 5174 62
+rect 5114 4 5174 6
+rect 6210 62 6270 64
+rect 6210 6 6212 62
+rect 6268 6 6270 62
+rect 6210 4 6270 6
+rect 6670 62 6730 64
+rect 6670 6 6672 62
+rect 6728 6 6730 62
+rect 6670 4 6730 6
+use contact_18  contact_18_0
+timestamp 1643593061
+transform 1 0 6670 0 1 950
+box 0 0 1 1
+use contact_17  contact_17_0
+timestamp 1643593061
+transform 1 0 6668 0 1 954
+box 0 0 1 1
+use contact_18  contact_18_1
+timestamp 1643593061
+transform 1 0 6670 0 1 4
+box 0 0 1 1
+use contact_17  contact_17_1
+timestamp 1643593061
+transform 1 0 6668 0 1 8
+box 0 0 1 1
+use contact_18  contact_18_2
+timestamp 1643593061
+transform 1 0 6210 0 1 950
+box 0 0 1 1
+use contact_17  contact_17_2
+timestamp 1643593061
+transform 1 0 6208 0 1 954
+box 0 0 1 1
+use contact_18  contact_18_3
+timestamp 1643593061
+transform 1 0 6210 0 1 4
+box 0 0 1 1
+use contact_17  contact_17_3
+timestamp 1643593061
+transform 1 0 6208 0 1 8
+box 0 0 1 1
+use contact_18  contact_18_4
+timestamp 1643593061
+transform 1 0 5114 0 1 950
+box 0 0 1 1
+use contact_17  contact_17_4
+timestamp 1643593061
+transform 1 0 5112 0 1 954
+box 0 0 1 1
+use contact_18  contact_18_5
+timestamp 1643593061
+transform 1 0 5114 0 1 4
+box 0 0 1 1
+use contact_17  contact_17_5
+timestamp 1643593061
+transform 1 0 5112 0 1 8
+box 0 0 1 1
+use contact_18  contact_18_6
+timestamp 1643593061
+transform 1 0 4654 0 1 950
+box 0 0 1 1
+use contact_17  contact_17_6
+timestamp 1643593061
+transform 1 0 4652 0 1 954
+box 0 0 1 1
+use contact_18  contact_18_7
+timestamp 1643593061
+transform 1 0 4654 0 1 4
+box 0 0 1 1
+use contact_17  contact_17_7
+timestamp 1643593061
+transform 1 0 4652 0 1 8
+box 0 0 1 1
+use sense_amp_multiport  sense_amp_multiport_0
+timestamp 1643593061
+transform 1 0 6564 0 1 0
+box 0 0 272 1050
+use sense_amp_multiport  sense_amp_multiport_1
+timestamp 1643593061
+transform 1 0 6104 0 1 0
+box 0 0 272 1050
+use sense_amp_multiport  sense_amp_multiport_2
+timestamp 1643593061
+transform 1 0 5008 0 1 0
+box 0 0 272 1050
+use sense_amp_multiport  sense_amp_multiport_3
+timestamp 1643593061
+transform 1 0 4548 0 1 0
+box 0 0 272 1050
+<< labels >>
+rlabel metal3 s 4654 4 4714 64 4 gnd
+rlabel metal3 s 6670 4 6730 64 4 gnd
+rlabel metal3 s 5114 4 5174 64 4 gnd
+rlabel metal3 s 6210 4 6270 64 4 gnd
+rlabel metal3 s 6670 950 6730 1010 4 vdd
+rlabel metal3 s 6210 950 6270 1010 4 vdd
+rlabel metal3 s 4654 950 4714 1010 4 vdd
+rlabel metal3 s 5114 950 5174 1010 4 vdd
+rlabel metal2 s 4562 0 4590 240 4 rbl_0
+rlabel metal2 s 4750 0 4778 240 4 data_0
+rlabel metal2 s 5022 0 5050 240 4 rbl_1
+rlabel metal2 s 5210 0 5238 240 4 data_1
+rlabel metal2 s 6118 0 6146 240 4 rbl_2
+rlabel metal2 s 6306 0 6334 240 4 data_2
+rlabel metal2 s 6578 0 6606 240 4 rbl_3
+rlabel metal2 s 6766 0 6794 240 4 data_3
+<< properties >>
+string FIXED_BBOX 0 0 6836 1050
+string GDS_FILE sram_0rw2r1w_2_16_sky130A.gds
+string GDS_END 256174
+string GDS_START 251698
+<< end >>

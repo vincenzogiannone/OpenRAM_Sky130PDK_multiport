@@ -1,0 +1,31 @@
+timestamp 1643678852
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use contact_8 contact_8_0 1 0 532 0 1 1
+use contact_8 contact_8_1 1 0 428 0 1 1
+use contact_8 contact_8_2 1 0 320 0 1 1
+use contact_8 contact_8_3 1 0 212 0 1 1
+use contact_8 contact_8_4 1 0 104 0 1 1
+use contact_8 contact_8_5 1 0 0 0 1 1
+parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+node "S_uq0" 153 0 414 0 ndif 0 0 0 0 0 0 0 0 6552 324 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S" 153 0 198 0 ndif 0 0 0 0 0 0 0 0 6552 324 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "D" 1470 250.15 90 0 ndif 0 0 0 0 0 0 0 0 18144 936 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25908 1592 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq1" 192 0 0 0 ndif 0 0 0 0 0 0 0 0 5040 288 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "G" 1835 470.999 60 -26 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 34260 2344 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "S" "D" 99.4802
+cap "S_uq0" "D" 101.057
+cap "S_uq0" "S" 11.967
+cap "S_uq1" "D" 38.7297
+cap "S_uq1" "S" 12.236
+cap "S_uq1" "S_uq0" 5.52792
+cap "G" "D" 160.437
+device msubckt sky130_fd_pr__nfet_01v8 492 0 493 1 l=30 w=84 "gnd" "G" 60 0 "S_uq0" 84 0 "D" 84 0
+device msubckt sky130_fd_pr__nfet_01v8 384 0 385 1 l=30 w=84 "gnd" "G" 60 0 "D" 84 0 "S_uq0" 84 0
+device msubckt sky130_fd_pr__nfet_01v8 276 0 277 1 l=30 w=84 "gnd" "G" 60 0 "S" 84 0 "D" 84 0
+device msubckt sky130_fd_pr__nfet_01v8 168 0 169 1 l=30 w=84 "gnd" "G" 60 0 "D" 84 0 "S" 84 0
+device msubckt sky130_fd_pr__nfet_01v8 60 0 61 1 l=30 w=84 "gnd" "G" 60 0 "S_uq1" 84 0 "D" 84 0

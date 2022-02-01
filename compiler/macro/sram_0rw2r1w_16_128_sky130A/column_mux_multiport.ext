@@ -1,0 +1,64 @@
+timestamp 1643678851
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use contact_18 contact_18_0 1 0 712 0 1 726
+use contact_17 contact_17_0 1 0 763 0 1 744
+use contact_13 contact_13_0 1 0 749 0 1 736
+use contact_25 contact_25_0 1 0 753 0 1 718
+use contact_13 contact_13_1 1 0 410 0 1 367
+use contact_13 contact_13_2 1 0 310 0 1 1093
+use contact_13 contact_13_3 1 0 695 0 1 33
+use contact_17 contact_17_1 1 0 709 0 1 41
+use contact_13 contact_13_4 1 0 53 0 1 1429
+use contact_17 contact_17_2 1 0 67 0 1 1437
+use nmos_m1_w3_360_sli_dli nmos_m1_w3_360_sli_dli_0 1 0 314 0 1 780
+use nmos_m1_w3_360_sli_dli nmos_m1_w3_360_sli_dli_1 1 0 314 0 1 54
+node "rbl0_out" 0 29.3664 68 0 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1568 168 0 0 0 0 0 0 0 0
+node "rbl1" 0 29.3664 710 1452 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1568 168 0 0 0 0 0 0 0 0
+node "li_422_373#" 18 656.925 422 373 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 39740 2856 0 0 0 0 0 0 0 0 0 0
+node "rbl1_out" 265 523.34 322 39 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25024 1540 4340 300 3544 268 0 0 0 0 0 0 0 0
+node "li_322_1099#" 18 642.087 322 1099 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 38900 2796 0 0 0 0 0 0 0 0 0 0
+node "rbl0" 255 516.889 65 1435 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 24140 1488 4340 300 3544 268 0 0 0 0 0 0 0 0
+node "sel" 56 32.867 374 28 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 780 112 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_374_726#" 87 50.493 374 726 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1620 168 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 753 718 pw 0 0 4100 264 0 0 0 0 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 2980 220 3616 248 8712 396 0 0 0 0 0 0
+cap "rbl1" "li_422_373#" 16.1
+cap "li_322_1099#" "rbl0_out" 16.1
+cap "li_322_1099#" "li_422_373#" 353.135
+cap "rbl0" "li_322_1099#" 12.2152
+cap "rbl1_out" "li_422_373#" 12.24
+cap "rbl1_out" "sel" 16.3575
+subcap "li_422_373#" -428.775
+subcap "rbl1_out" -231.09
+subcap "li_322_1099#" -334.362
+cap "nmos_m1_w3_360_sli_dli_0/D" "nmos_m1_w3_360_sli_dli_1/D" 78.3606
+cap "rbl1_out" "nmos_m1_w3_360_sli_dli_1/D" 9.2652
+cap "rbl1_out" "sel" 5.3895
+cap "nmos_m1_w3_360_sli_dli_0/D" "nmos_m1_w3_360_sli_dli_0/S" -8.5
+cap "rbl1_out" "nmos_m1_w3_360_sli_dli_0/S" 126.319
+subcap "li_322_1099#" -704.685
+subcap "rbl0" -258.026
+cap "nmos_m1_w3_360_sli_dli_0/G" "rbl0" 22.247
+cap "nmos_m1_w3_360_sli_dli_0/S" "rbl0" 17.5474
+merge "contact_13_4/gnd" "contact_17_2/gnd" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "contact_17_2/gnd" "contact_13_2/gnd"
+merge "contact_13_2/gnd" "nmos_m1_w3_360_sli_dli_0/gnd"
+merge "nmos_m1_w3_360_sli_dli_0/gnd" "contact_18_0/gnd"
+merge "contact_18_0/gnd" "contact_17_0/gnd"
+merge "contact_17_0/gnd" "contact_13_0/gnd"
+merge "contact_13_0/gnd" "contact_25_0/gnd"
+merge "contact_25_0/gnd" "contact_13_3/gnd"
+merge "contact_13_3/gnd" "contact_17_1/gnd"
+merge "contact_17_1/gnd" "contact_13_1/gnd"
+merge "contact_13_1/gnd" "nmos_m1_w3_360_sli_dli_1/gnd"
+merge "nmos_m1_w3_360_sli_dli_1/gnd" "gnd"
+merge "nmos_m1_w3_360_sli_dli_1/S" "rbl1_out" -231.09 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1122 -134 0 0 0 0 0 0 0 0 0 0 0 0
+merge "nmos_m1_w3_360_sli_dli_0/D" "rbl0" -93.93 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7514 -128 0 0 0 0 0 0 0 0 0 0 0 0
+merge "nmos_m1_w3_360_sli_dli_0/G" "nmos_m1_w3_360_sli_dli_1/G" -98.601 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2340 -336 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "nmos_m1_w3_360_sli_dli_1/G" "sel"
+merge "sel" "a_374_726#"
+merge "nmos_m1_w3_360_sli_dli_0/S" "li_322_1099#" -329.411 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7922 -136 0 0 0 0 0 0 0 0 0 0 0 0
+merge "nmos_m1_w3_360_sli_dli_1/D" "li_422_373#" -317.856 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1156 -136 -1456 -132 0 0 0 0 0 0 0 0 0 0

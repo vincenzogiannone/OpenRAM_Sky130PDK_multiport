@@ -1,0 +1,823 @@
+timestamp 1643671299
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use dff dff_15 1 0 0 0 1 0
+use contact_17 contact_17_31 1 0 726 0 1 823
+use contact_18 contact_18_47 1 0 711 0 1 808
+use contact_17 contact_17_30 1 0 726 0 1 -15
+use contact_18 contact_18_46 1 0 711 0 1 -30
+use contact_18 contact_18_15 1 0 -3 0 1 270
+use contact_18 contact_18_14 1 0 1479 0 1 270
+use dff dff_14 1 0 1482 0 1 0
+use contact_17 contact_17_29 1 0 2208 0 1 823
+use contact_18 contact_18_45 1 0 2193 0 1 808
+use contact_17 contact_17_28 1 0 2208 0 1 -15
+use contact_18 contact_18_44 1 0 2193 0 1 -30
+use contact_18 contact_18_13 1 0 2961 0 1 270
+use dff dff_13 1 0 2964 0 1 0
+use contact_17 contact_17_27 1 0 3690 0 1 823
+use contact_18 contact_18_43 1 0 3675 0 1 808
+use contact_17 contact_17_26 1 0 3690 0 1 -15
+use contact_18 contact_18_42 1 0 3675 0 1 -30
+use contact_18 contact_18_12 1 0 4443 0 1 270
+use dff dff_12 1 0 4446 0 1 0
+use dff dff_11 1 0 5928 0 1 0
+use contact_17 contact_17_25 1 0 5172 0 1 823
+use contact_18 contact_18_41 1 0 5157 0 1 808
+use contact_17 contact_17_24 1 0 5172 0 1 -15
+use contact_18 contact_18_40 1 0 5157 0 1 -30
+use contact_18 contact_18_11 1 0 5925 0 1 270
+use dff dff_10 1 0 7410 0 1 0
+use contact_17 contact_17_23 1 0 6654 0 1 823
+use contact_18 contact_18_39 1 0 6639 0 1 808
+use contact_17 contact_17_22 1 0 6654 0 1 -15
+use contact_18 contact_18_38 1 0 6639 0 1 -30
+use contact_18 contact_18_10 1 0 7407 0 1 270
+use dff dff_9 1 0 8892 0 1 0
+use contact_17 contact_17_21 1 0 8136 0 1 823
+use contact_18 contact_18_37 1 0 8121 0 1 808
+use contact_17 contact_17_20 1 0 8136 0 1 -15
+use contact_18 contact_18_36 1 0 8121 0 1 -30
+use contact_18 contact_18_9 1 0 8889 0 1 270
+use dff dff_8 1 0 10374 0 1 0
+use contact_17 contact_17_19 1 0 9618 0 1 823
+use contact_18 contact_18_35 1 0 9603 0 1 808
+use contact_17 contact_17_18 1 0 9618 0 1 -15
+use contact_18 contact_18_34 1 0 9603 0 1 -30
+use contact_18 contact_18_8 1 0 10371 0 1 270
+use dff dff_7 1 0 11856 0 1 0
+use contact_17 contact_17_17 1 0 11100 0 1 823
+use contact_18 contact_18_33 1 0 11085 0 1 808
+use contact_17 contact_17_16 1 0 11100 0 1 -15
+use contact_18 contact_18_32 1 0 11085 0 1 -30
+use contact_18 contact_18_7 1 0 11853 0 1 270
+use dff dff_6 1 0 13338 0 1 0
+use contact_17 contact_17_15 1 0 12582 0 1 823
+use contact_18 contact_18_31 1 0 12567 0 1 808
+use contact_17 contact_17_14 1 0 12582 0 1 -15
+use contact_18 contact_18_30 1 0 12567 0 1 -30
+use contact_18 contact_18_6 1 0 13335 0 1 270
+use dff dff_5 1 0 14820 0 1 0
+use contact_17 contact_17_13 1 0 14064 0 1 823
+use contact_18 contact_18_29 1 0 14049 0 1 808
+use contact_17 contact_17_12 1 0 14064 0 1 -15
+use contact_18 contact_18_28 1 0 14049 0 1 -30
+use contact_18 contact_18_5 1 0 14817 0 1 270
+use dff dff_4 1 0 16302 0 1 0
+use contact_17 contact_17_11 1 0 15546 0 1 823
+use contact_18 contact_18_27 1 0 15531 0 1 808
+use contact_17 contact_17_10 1 0 15546 0 1 -15
+use contact_18 contact_18_26 1 0 15531 0 1 -30
+use contact_18 contact_18_4 1 0 16299 0 1 270
+use dff dff_3 1 0 17784 0 1 0
+use contact_17 contact_17_9 1 0 17028 0 1 823
+use contact_18 contact_18_25 1 0 17013 0 1 808
+use contact_17 contact_17_8 1 0 17028 0 1 -15
+use contact_18 contact_18_24 1 0 17013 0 1 -30
+use contact_18 contact_18_3 1 0 17781 0 1 270
+use dff dff_2 1 0 19266 0 1 0
+use contact_17 contact_17_7 1 0 18510 0 1 823
+use contact_18 contact_18_23 1 0 18495 0 1 808
+use contact_17 contact_17_6 1 0 18510 0 1 -15
+use contact_18 contact_18_22 1 0 18495 0 1 -30
+use contact_18 contact_18_2 1 0 19263 0 1 270
+use dff dff_1 1 0 20748 0 1 0
+use contact_17 contact_17_5 1 0 19992 0 1 823
+use contact_18 contact_18_21 1 0 19977 0 1 808
+use contact_17 contact_17_4 1 0 19992 0 1 -15
+use contact_18 contact_18_20 1 0 19977 0 1 -30
+use contact_18 contact_18_1 1 0 20745 0 1 270
+use dff dff_0 1 0 22230 0 1 0
+use contact_17 contact_17_3 1 0 21474 0 1 823
+use contact_18 contact_18_19 1 0 21459 0 1 808
+use contact_17 contact_17_2 1 0 21474 0 1 -15
+use contact_18 contact_18_18 1 0 21459 0 1 -30
+use contact_18 contact_18_0 1 0 22227 0 1 270
+use contact_17 contact_17_1 1 0 22956 0 1 823
+use contact_18 contact_18_17 1 0 22941 0 1 808
+use contact_17 contact_17_0 1 0 22956 0 1 -15
+use contact_18 contact_18_16 1 0 22941 0 1 -30
+node "dout_15" 0 34.2626 23490 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_15" 0 34.2626 22410 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "dout_14" 0 34.2626 22008 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_14" 0 34.2626 20928 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "dout_13" 0 34.2626 20526 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_13" 0 34.2626 19446 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "dout_12" 0 34.2626 19044 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_12" 0 34.2626 17964 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "dout_11" 0 34.2626 17562 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_11" 0 34.2626 16482 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "dout_10" 0 34.2626 16080 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_10" 0 34.2626 15000 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "dout_9" 0 34.2626 14598 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_9" 0 34.2626 13518 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "dout_8" 0 34.2626 13116 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_8" 0 34.2626 12036 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "dout_7" 0 34.2626 11634 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_7" 0 34.2626 10554 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "dout_6" 0 34.2626 10152 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_6" 0 34.2626 9072 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "dout_5" 0 34.2626 8670 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_5" 0 34.2626 7590 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "dout_4" 0 34.2626 7188 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_4" 0 34.2626 6108 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "dout_3" 0 34.2626 5706 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_3" 0 34.2626 4626 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "dout_2" 0 34.2626 4224 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_2" 0 34.2626 3144 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "dout_1" 0 34.2626 2742 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_1" 0 34.2626 1662 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "dout_0" 0 34.2626 1260 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "din_0" 0 34.2626 180 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
+node "clk" 64 16010.2 -1 272 v2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 400512 28608 1422900 47550 0 0 0 0 0 0
+node "gnd_uq0" 0 128.516 22945 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "gnd" 0 128.516 21463 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "gnd_uq1" 0 128.516 19981 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "gnd_uq2" 0 128.516 18499 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "gnd_uq3" 0 128.516 17017 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "gnd_uq4" 0 128.516 15535 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "gnd_uq5" 0 128.516 14053 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "gnd_uq6" 0 128.516 12571 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "gnd_uq7" 0 128.516 11089 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "gnd_uq8" 0 128.516 9607 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "gnd_uq9" 0 128.516 8125 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "gnd_uq10" 0 128.516 6643 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "gnd_uq11" 0 128.516 5161 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "gnd_uq12" 0 128.516 3679 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "gnd_uq13" 0 128.516 2197 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "gnd_uq14" 0 128.516 715 -26 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "vdd_uq0" 0 128.516 22945 812 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "vdd" 0 128.516 21463 812 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "vdd_uq1" 0 128.516 19981 812 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "vdd_uq2" 0 128.516 18499 812 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "vdd_uq3" 0 128.516 17017 812 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "vdd_uq4" 0 128.516 15535 812 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "vdd_uq5" 0 128.516 14053 812 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "vdd_uq6" 0 128.516 12571 812 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "vdd_uq7" 0 128.516 11089 812 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "vdd_uq8" 0 128.516 9607 812 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "vdd_uq9" 0 128.516 8125 812 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "vdd_uq10" 0 128.516 6643 812 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "vdd_uq11" 0 128.516 5161 812 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "vdd_uq12" 0 128.516 3679 812 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "vdd_uq13" 0 128.516 2197 812 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+node "vdd_uq14" 0 128.516 715 812 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2704 208 3616 248 3600 240 0 0 0 0 0 0
+substrate "gnd" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "dout_2" "din_3" 3.44828
+cap "dout_9" "clk" 8.33333
+cap "gnd_uq5" "clk" 15.75
+cap "din_9" "dout_8" 3.44828
+cap "gnd_uq2" "clk" 15.75
+cap "clk" "din_0" 9.21053
+cap "din_7" "clk" 9.21053
+cap "din_14" "clk" 9.21053
+cap "din_1" "dout_0" 3.44828
+cap "gnd_uq1" "clk" 15.75
+cap "dout_7" "din_8" 3.44828
+cap "din_2" "dout_1" 3.44828
+cap "din_6" "clk" 9.21053
+cap "din_2" "clk" 9.21053
+cap "dout_1" "clk" 8.33333
+cap "din_13" "dout_12" 3.44828
+cap "dout_14" "clk" 8.33333
+cap "dout_13" "din_14" 3.44828
+cap "gnd_uq9" "clk" 15.75
+cap "clk" "gnd_uq3" 15.75
+cap "dout_13" "clk" 8.33333
+cap "clk" "din_15" 9.21053
+cap "clk" "din_12" 9.21053
+cap "dout_11" "clk" 8.33333
+cap "gnd_uq14" "clk" 15.75
+cap "din_11" "clk" 9.21053
+cap "clk" "dout_10" 8.33333
+cap "clk" "gnd_uq6" 15.75
+cap "dout_14" "din_15" 3.44828
+cap "dout_7" "clk" 8.33333
+cap "dout_3" "din_4" 3.44828
+cap "clk" "gnd_uq12" 15.75
+cap "clk" "gnd_uq7" 15.75
+cap "din_7" "dout_6" 3.44828
+cap "din_13" "clk" 9.21053
+cap "din_9" "clk" 9.21053
+cap "gnd_uq13" "clk" 15.75
+cap "din_1" "clk" 9.21053
+cap "clk" "din_3" 9.21053
+cap "dout_2" "clk" 8.33333
+cap "gnd_uq8" "clk" 15.75
+cap "dout_6" "clk" 8.33333
+cap "clk" "gnd" 15.75
+cap "gnd_uq0" "clk" 15.75
+cap "dout_4" "din_5" 3.44828
+cap "dout_11" "din_12" 3.44828
+cap "din_11" "dout_10" 3.44828
+cap "dout_0" "clk" 8.33333
+cap "clk" "dout_8" 8.33333
+cap "gnd_uq10" "clk" 15.75
+cap "clk" "gnd_uq11" 15.75
+cap "dout_3" "clk" 8.33333
+cap "dout_9" "din_10" 3.44828
+cap "dout_12" "clk" 8.33333
+cap "clk" "din_8" 9.21053
+cap "clk" "dout_4" 8.33333
+cap "clk" "din_10" 9.21053
+cap "dout_5" "din_6" 3.44828
+cap "clk" "din_4" 9.21053
+cap "gnd_uq4" "clk" 15.75
+cap "dout_5" "clk" 8.33333
+cap "clk" "din_5" 9.21053
+subcap "din_1" -418.427
+subcap "clk" -14920.8
+cap "gnd_uq14" "dout_0" 3.54077
+cap "dff_14/net1" "dout_0" 12.0522
+cap "din_1" "dout_0" 8.07736
+cap "dff_15/clk" "gnd_uq14" 52.3648
+cap "dout_0" "dff_14/clkb" 33.4924
+cap "dff_15/clk" "din_0" 92.7336
+cap "dff_15/clk" "dout_0" 57.9607
+cap "dff_15/net7" "dff_14/net1" 2.88095
+cap "dff_15/net7" "din_1" 12.3824
+cap "dff_15/clk" "dff_15/clkb" 275.075
+cap "dff_15/clk" "dff_15/net1" 26.051
+cap "vdd_uq14" "dff_14/clkb" 24.212
+cap "vdd_uq14" "dout_0" 11.897
+cap "dff_15/clk" "vdd_uq14" 38.8592
+cap "dff_15/net7" "dff_14/clkb" 36.3362
+cap "dff_15/clk" "dff_15/net2" 141.484
+cap "dff_15/clk" "dff_15/net6" 144.669
+cap "dff_15/net7" "dff_15/clk" 91.7303
+cap "dff_15/clk" "dff_15/net3" 45.059
+cap "gnd_uq14" "dff_14/clkb" 7.53261
+subcap "din_2" -526.081
+cap "dff_14/net1" "dff_15/net7" 2.88095
+cap "dff_14/net7" "dff_14/clk" 48.665
+cap "dff_14/clkb" "dff_15/net7" 36.3362
+cap "vdd_uq13" "dff_14/clk" 48.9092
+cap "dout_0" "din_1" 15.6745
+cap "dout_1" "dff_13/clkb" 2.42857
+cap "dout_0" "dff_14/clk" 84.7068
+cap "dff_14/net1" "dff_14/clk" 26.051
+cap "dff_15/net6" "dff_14/clk" 3.76699
+cap "dff_15/net7" "din_1" 12.3824
+cap "dff_14/clkb" "dff_14/clk" 275.075
+cap "dout_0" "gnd_uq13" 15.0652
+cap "dff_14/clkb" "gnd_uq13" 7.53261
+cap "dff_15/net7" "dff_14/clk" 27.3513
+cap "dout_1" "dff_14/clk" 57.9607
+cap "dff_13/clkb" "gnd_uq13" 4.06404
+cap "dff_14/clk" "din_1" 92.7336
+cap "dff_14/net2" "dff_14/clk" 141.484
+cap "dff_14/net6" "dff_14/clk" 144.669
+cap "dff_14/net3" "dff_14/clk" 45.059
+cap "dff_14/clk" "gnd_uq13" 62.4148
+cap "din_2" "dout_1" 7.60878
+cap "dout_0" "vdd_uq13" 48.4239
+cap "dff_14/net7" "dff_13/clkb" 30.8754
+cap "vdd_uq13" "dff_14/clkb" 24.212
+cap "dout_0" "dff_14/net1" 72.0203
+cap "dout_0" "dff_14/clkb" 251.927
+cap "vdd_uq13" "dff_13/clkb" 13.6552
+subcap "dout_2" -180.317
+cap "din_2" "dff_13/clk" 92.7336
+cap "dff_13/clkb" "dff_13/clk" 275.075
+cap "dout_1" "gnd_uq12" 15.0652
+cap "dff_13/net2" "dff_13/clk" 141.484
+cap "din_2" "dout_1" 15.6745
+cap "dff_13/net3" "dff_13/clk" 45.059
+cap "dout_1" "dff_13/clkb" 251.927
+cap "dff_14/net6" "dff_13/clk" 3.76699
+cap "dff_14/net7" "dff_13/net1" 5.7619
+cap "dff_13/net6" "dff_13/clk" 144.669
+cap "dout_1" "dff_13/clk" 84.7068
+cap "dff_13/net7" "dff_13/clk" 48.665
+cap "vdd_uq12" "gnd_uq12" -4.44089e-16
+cap "dff_12/clkb" "dff_13/net7" 30.8754
+cap "din_2" "dff_14/net7" 24.7647
+cap "dff_14/net7" "dff_13/clkb" 41.797
+cap "vdd_uq12" "dff_13/clkb" 48.4239
+cap "gnd_uq12" "dff_13/clkb" 15.0652
+cap "dff_13/net1" "dff_13/clk" 26.051
+cap "dff_14/net7" "dff_13/clk" 70.4167
+cap "vdd_uq12" "dff_13/clk" 48.9092
+cap "gnd_uq12" "dff_13/clk" 62.4148
+cap "dout_1" "dff_13/net1" 72.0203
+cap "vdd_uq12" "dout_1" 48.4239
+subcap "dout_3" -262.768
+cap "dff_13/net7" "dff_12/clk" 70.4167
+cap "dff_12/clk" "dff_12/net2" 141.484
+cap "gnd_uq11" "dff_12/clkb" 15.0652
+cap "dff_12/clk" "dff_12/net1" 26.051
+cap "din_3" "dout_2" 21.7119
+cap "dff_12/net1" "dout_2" 72.0203
+cap "din_3" "dff_12/clk" 92.7336
+cap "dff_13/net7" "dff_12/net1" 5.7619
+cap "dff_13/net7" "din_3" 24.7647
+cap "vdd_uq11" "dff_12/clkb" 48.4239
+cap "dout_2" "dff_12/clkb" 251.927
+cap "dff_12/clk" "dff_12/clkb" 275.075
+cap "dff_13/net7" "dff_12/clkb" 41.797
+cap "dff_12/net7" "dff_12/clk" 19.008
+cap "gnd_uq11" "dff_12/clk" 62.4148
+cap "gnd_uq11" "dout_2" 15.0652
+cap "dff_12/net3" "dff_12/clk" 45.059
+cap "dff_13/net6" "dff_12/clk" 3.76699
+cap "dff_12/clk" "dff_12/net6" 144.669
+cap "vdd_uq11" "dff_12/clk" 48.9092
+cap "vdd_uq11" "dout_2" 48.4239
+cap "dff_12/clk" "dout_2" 142.668
+subcap "dout_4" -345.219
+cap "vdd_uq10" "gnd_uq10" -3.55271e-15
+cap "dff_11/clkb" "dff_11/clk" 275.075
+cap "dout_3" "dff_11/clk" 142.668
+cap "dff_11/net2" "dff_11/clk" 141.484
+cap "din_4" "dff_11/clk" 92.7336
+cap "vdd_uq10" "dff_11/clk" 48.9092
+cap "dff_11/clk" "dff_11/net1" 26.051
+cap "dff_11/clk" "dff_12/net7" 100.074
+cap "dout_3" "dff_11/clkb" 251.927
+cap "dout_3" "din_4" 21.7119
+cap "dff_11/net6" "dff_11/clk" 75.4888
+cap "dout_3" "dff_11/net1" 72.0203
+cap "vdd_uq10" "dff_11/clkb" 48.4239
+cap "gnd_uq10" "dff_11/clk" 62.4148
+cap "vdd_uq10" "dout_3" 48.4239
+cap "dff_11/clkb" "dff_12/net7" 72.6725
+cap "dff_11/net3" "dff_11/clk" 45.059
+cap "din_4" "dff_12/net7" 24.7647
+cap "dff_12/net6" "dff_11/clk" 3.76699
+cap "dff_12/net7" "dff_11/net1" 5.7619
+cap "dff_11/net7" "dff_11/clk" 19.008
+cap "gnd_uq10" "dff_11/clkb" 15.0652
+cap "dout_3" "gnd_uq10" 15.0652
+subcap "dout_5" -88.5613
+cap "dff_10/clk" "dff_11/net6" -267.133
+cap "dff_10/net1" "dff_10/clk" 26.051
+cap "din_5" "dff_10/clk" 92.7336
+cap "din_5" "dout_4" 21.7119
+cap "dff_10/clk" "dff_10/net3" 45.059
+cap "dff_10/net1" "dout_4" 72.0203
+cap "dff_10/clk" "dff_10/net2" 141.484
+cap "vdd_uq9" "dff_10/clk" 48.9092
+cap "vdd_uq9" "dout_4" 48.4239
+cap "din_5" "dff_11/net7" 24.7647
+cap "dff_10/net1" "dff_11/net7" 5.7619
+cap "dff_10/clk" "dout_4" 142.668
+cap "vdd_uq9" "gnd_uq9" 1.77636e-15
+cap "gnd_uq9" "dff_10/clk" 62.4148
+cap "vdd_uq9" "dff_10/clkb" 48.4239
+cap "gnd_uq9" "dout_4" 15.0652
+cap "dff_10/clk" "dff_10/clkb" 275.075
+cap "dff_10/clkb" "dout_4" 251.927
+cap "dff_10/clk" "dff_11/net7" 100.074
+cap "gnd_uq9" "dff_10/clkb" 15.0652
+cap "dff_11/net7" "dff_10/clkb" 72.6725
+cap "dff_10/net6" "dff_10/clk" 36.6495
+subcap "dout_6" -103.961
+cap "dff_9/net1" "dff_10/net7" 5.7619
+cap "dff_10/net7" "din_6" 24.7647
+cap "dff_10/net7" "dff_9/clkb" 72.6725
+cap "dff_9/net3" "dff_9/clk" 45.059
+cap "din_6" "dout_5" 21.7119
+cap "dff_9/net1" "dout_5" 72.0203
+cap "dout_5" "dff_9/clkb" 251.927
+cap "dff_10/net6" "dff_9/clk" -222.144
+cap "dff_9/net1" "dff_9/clk" 26.051
+cap "din_6" "dff_9/clk" 92.7336
+cap "dff_9/clk" "dff_9/clkb" 201.726
+cap "gnd_uq8" "dff_9/clkb" 15.0652
+cap "vdd_uq8" "dff_9/clkb" 48.4239
+cap "dff_10/net7" "dff_9/clk" 119.082
+cap "dout_5" "dff_9/clk" 142.668
+cap "gnd_uq8" "dout_5" 15.0652
+cap "dff_9/net2" "dff_9/clk" 141.484
+cap "vdd_uq8" "dout_5" 48.4239
+cap "gnd_uq8" "dff_9/clk" 62.4148
+cap "vdd_uq8" "dff_9/clk" 48.9092
+cap "dff_9/net6" "dff_9/clk" -1.7393
+cap "dff_8/clk" "dff_8/net2" 141.484
+cap "dff_8/clk" "dff_8/net1" 26.051
+cap "dff_8/clk" "vdd_uq7" 48.9092
+cap "gnd_uq7" "dff_8/clk" 62.4148
+cap "dff_8/clkb" "dff_8/clk" 142.049
+cap "dff_9/net7" "dff_8/net1" 5.7619
+cap "dout_6" "dff_8/net1" 72.0203
+cap "dff_8/clk" "din_7" 92.7336
+cap "dout_6" "vdd_uq7" 48.4239
+cap "dff_8/net3" "dff_8/clk" 45.059
+cap "gnd_uq7" "dout_6" 15.0652
+cap "dout_6" "dff_8/clkb" 251.927
+cap "dout_6" "din_7" 21.7119
+cap "dff_8/clkb" "dff_9/net7" 72.6725
+cap "dff_9/net7" "din_7" 24.7647
+cap "dout_6" "dff_8/clk" 142.668
+cap "dff_9/clkb" "dff_8/clk" -192.021
+cap "dff_8/clk" "dff_9/net7" 119.082
+cap "dff_8/clk" "dff_9/net6" -177.605
+cap "dff_8/clkb" "vdd_uq7" 48.4239
+cap "gnd_uq7" "dff_8/clkb" 15.0652
+cap "dff_7/net1" "clk" 26.051
+cap "clk" "gnd_uq6" 50.7144
+cap "clk" "dff_7/net2" 141.484
+cap "dff_7/net1" "dout_7" 72.0203
+cap "dff_7/net1" "dff_8/net7" 5.7619
+cap "dff_7/clkb" "clk" 155.902
+cap "clk" "din_8" 92.7336
+cap "clk" "dff_8/clk" 49.612
+cap "gnd_uq6" "dout_7" 15.0652
+cap "clk" "vdd_uq6" 48.9092
+cap "din_8" "dout_7" 21.7119
+cap "dff_7/clkb" "dout_7" 251.927
+cap "dff_7/clkb" "dff_8/net7" 72.6725
+cap "din_8" "dff_8/net7" 24.7647
+cap "vdd_uq6" "dout_7" 48.4239
+cap "clk" "dff_7/net3" 39.7575
+cap "clk" "dff_8/clkb" -132.344
+cap "clk" "dout_7" 142.668
+cap "clk" "dff_8/net7" 119.082
+cap "clk" "dff_8/net6" 148.436
+cap "dff_7/clkb" "gnd_uq6" 15.0652
+cap "dff_7/clkb" "vdd_uq6" 48.4239
+cap "din_9" "dout_8" 21.7119
+cap "dff_6/clkb" "dff_7/net7" 72.6725
+cap "dff_6/net2" "dff_6/clk" 100.065
+cap "dff_6/net1" "dff_7/net7" 5.7619
+cap "dff_6/clkb" "vdd_uq5" 48.4239
+cap "vdd_uq5" "dout_8" 48.4239
+cap "din_9" "dff_6/clk" 92.7336
+cap "gnd_uq5" "dff_6/clkb" 15.0652
+cap "gnd_uq5" "dout_8" 15.0652
+cap "dff_6/net3" "dff_6/clk" 19.008
+cap "dff_7/net7" "dff_6/clk" 119.082
+cap "gnd_uq5" "dff_7/clk" 11.7004
+cap "vdd_uq5" "dff_6/clk" 48.9092
+cap "dff_7/clkb" "dff_6/clk" 119.172
+cap "gnd_uq5" "dff_6/clk" 39.014
+cap "dff_6/clkb" "dout_8" 251.927
+cap "dff_6/net1" "dout_8" 72.0203
+cap "dout_8" "dff_6/clk" 142.668
+cap "dff_6/clkb" "dff_6/clk" 155.902
+cap "din_9" "dff_7/net7" 24.7647
+cap "dff_6/clk" "dff_7/net3" -285.128
+cap "dff_6/net1" "dff_6/clk" 26.051
+cap "dff_7/clk" "dff_6/clk" 97.7061
+cap "dff_7/net6" "dff_6/clk" 148.436
+cap "dff_5/net1" "dout_9" 72.0203
+cap "dout_9" "dff_5/clk" 142.668
+cap "dff_5/clk" "dff_5/net3" 11.0106
+cap "gnd_uq4" "dff_5/clk" 39.014
+cap "dff_5/net2" "dff_5/clk" 55.2299
+cap "vdd_uq4" "dff_5/clk" 48.9092
+cap "dff_5/clkb" "dout_9" 251.927
+cap "dff_5/clk" "din_10" 92.7336
+cap "dff_5/clkb" "gnd_uq4" 15.0652
+cap "din_10" "dff_6/net7" 24.7647
+cap "dff_5/clkb" "vdd_uq4" 48.4239
+cap "dff_6/net3" "dff_5/clk" 26.051
+cap "dff_5/clk" "dff_6/clk" 97.7061
+cap "dff_6/clkb" "dff_5/clk" 119.172
+cap "dout_9" "gnd_uq4" 15.0652
+cap "dff_5/net1" "dff_5/clk" 26.051
+cap "dout_9" "vdd_uq4" 48.4239
+cap "dff_6/net2" "dff_5/clk" -931.906
+cap "dout_9" "din_10" 21.7119
+cap "dff_5/net1" "dff_6/net7" 5.7619
+cap "dff_5/clk" "dff_6/net7" 119.082
+cap "dff_5/clkb" "dff_5/clk" 155.902
+cap "dff_5/clkb" "dff_6/net7" 72.6725
+cap "gnd_uq4" "dff_6/clk" 23.4008
+cap "dff_6/net6" "dff_5/clk" 148.436
+subcap "din_10" -479.03
+cap "dout_10" "dff_4/clk" 142.668
+cap "dout_10" "dff_4/net1" 72.0203
+cap "dff_5/net2" "dff_4/clk" -250.526
+cap "dff_5/clk" "dff_4/clk" 97.7061
+cap "dout_10" "vdd_uq3" 48.4239
+cap "dff_4/net2" "dff_4/clk" 16.3906
+cap "dout_10" "dff_4/clkb" 251.927
+cap "din_11" "dff_4/clk" 92.7336
+cap "dout_10" "gnd_uq3" 15.0652
+cap "dff_5/clk" "gnd_uq3" 23.4008
+cap "din_11" "dff_5/net7" 24.7647
+cap "dff_4/net1" "dff_4/clk" 26.051
+cap "vdd_uq3" "dff_4/clk" 48.9092
+cap "dff_5/net6" "dff_4/clk" 148.436
+cap "dff_4/clkb" "dff_4/clk" 155.902
+cap "dff_4/net1" "dff_5/net7" 5.7619
+cap "dff_5/net7" "dff_4/clk" 119.082
+cap "vdd_uq3" "dff_4/clkb" 48.4239
+cap "gnd_uq3" "dff_4/clk" 39.014
+cap "dout_10" "din_11" 21.7119
+cap "dff_5/net7" "dff_4/clkb" 72.6725
+cap "dff_5/net3" "dff_4/clk" -235.607
+cap "dff_5/clkb" "dff_4/clk" 119.172
+cap "gnd_uq3" "dff_4/clkb" 15.0652
+subcap "din_11" -371.377
+cap "gnd_uq2" "dff_3/clk" 39.014
+cap "gnd_uq2" "dff_4/clk" 23.4008
+cap "dff_4/clkb" "dff_3/clk" 119.172
+cap "dff_3/clk" "dff_4/net2" -205.537
+cap "dff_3/clkb" "dff_3/clk" 92.4298
+cap "dff_3/net1" "dff_3/clk" 26.051
+cap "dff_4/net7" "dff_3/clk" 119.082
+cap "dff_4/net7" "din_12" 24.7647
+cap "gnd_uq2" "dout_11" 15.0652
+cap "dff_3/clkb" "dout_11" 251.927
+cap "dff_3/net1" "dout_11" 72.0203
+cap "vdd_uq2" "dff_3/clk" 48.9092
+cap "dff_3/clk" "dff_4/net6" 148.436
+cap "dff_3/net2" "dff_3/clk" -31.117
+cap "dff_3/clkb" "gnd_uq2" 15.0652
+cap "dff_3/clk" "dff_4/clk" -141.226
+cap "dff_3/clk" "din_12" 92.7336
+cap "dff_4/net7" "dff_3/clkb" 72.6725
+cap "vdd_uq2" "dout_11" 48.4239
+cap "dff_4/net7" "dff_3/net1" 5.7619
+cap "dff_3/clk" "dff_4/net3" 45.059
+cap "dff_3/clk" "dout_11" 142.668
+cap "dout_11" "din_12" 21.7119
+cap "vdd_uq2" "dff_3/clkb" 48.4239
+subcap "din_12" -263.723
+cap "dff_3/clk" "gnd_uq2" 62.4148
+cap "dff_3/net7" "dff_2/net1" 5.7619
+cap "dff_3/net7" "din_13" 24.7647
+cap "vdd_uq2" "dff_2/clkb" 48.4239
+cap "dff_3/clk" "dff_3/net3" 45.059
+cap "dout_12" "dff_2/net1" 72.0203
+cap "gnd_uq2" "dff_2/clkb" 15.0652
+cap "dout_12" "din_13" 21.7119
+cap "vdd_uq2" "dout_12" 48.4239
+cap "gnd_uq2" "dout_12" 15.0652
+cap "dff_3/clk" "dff_2/clkb" 27.2704
+cap "dff_3/clk" "dff_3/net7" 119.082
+cap "dff_3/clk" "dout_12" 142.668
+cap "dff_3/clk" "dff_3/net2" -75.8994
+cap "dff_3/net7" "dff_2/clkb" 72.6725
+cap "dff_3/clk" "dff_3/clkb" 23.635
+cap "dout_12" "dff_2/clkb" 251.927
+cap "dff_3/clk" "dff_2/net1" 26.051
+cap "dff_3/clk" "din_13" 92.7336
+cap "dff_3/clk" "vdd_uq2" 48.9092
+cap "dff_3/clk" "dff_3/net6" 148.436
+subcap "din_13" -156.069
+cap "dff_2/clk" "dff_1/clkb" 38.451
+cap "dff_2/clk" "vdd_uq1" 48.9092
+cap "gnd_uq1" "dout_13" 15.0652
+cap "din_14" "dff_2/net7" 24.7647
+cap "din_14" "dout_13" 21.7119
+cap "dff_2/net7" "dff_1/clkb" 72.6725
+cap "dff_1/net1" "dff_2/net7" 2.88095
+cap "dff_1/net1" "dout_13" 36.0101
+cap "dout_13" "dff_1/clkb" 248.951
+cap "vdd_uq1" "dout_13" 48.4239
+cap "dff_2/clk" "dff_2/net3" 45.059
+cap "dff_2/clk" "dff_3/Q" 2.9673
+cap "dff_2/clk" "dff_2/clkb" -84.7256
+cap "gnd_uq1" "dff_1/clkb" 15.0652
+cap "dff_2/clk" "dff_2/net7" 119.082
+cap "dff_2/clk" "dout_13" 139.692
+cap "dff_2/clk" "dff_2/net1" -10.66
+cap "vdd_uq1" "dff_1/clkb" 48.4239
+cap "dff_3/Q" "dff_2/clkb" 2.9673
+cap "dff_2/clk" "dff_2/net6" 148.436
+cap "dff_2/clk" "gnd_uq1" 62.4148
+cap "dff_2/clk" "dff_2/net2" 141.484
+cap "dff_2/clk" "din_14" 89.3896
+subcap "din_15" -87.5889
+cap "dout_14" "dff_1/clk" 139.692
+cap "dff_1/clk" "dff_2/Q" 2.97541
+cap "dff_2/Q" "dff_1/net1" 36.0101
+cap "dff_1/clk" "dff_1/net2" 141.484
+cap "dff_1/clk" "dff_1/net3" 45.059
+cap "vdd" "gnd" 3.55271e-15
+cap "dff_0/clkb" "vdd" 48.4239
+cap "dff_1/clk" "dff_1/clkb" 219.204
+cap "dff_1/clk" "vdd" 48.9092
+cap "din_15" "dout_14" 10.8559
+cap "dout_14" "dff_0/net1" 36.0101
+cap "dff_2/net7" "dff_1/net1" 2.88095
+cap "dff_0/clkb" "gnd" 15.0652
+cap "dff_1/clk" "gnd" 62.4148
+cap "dff_0/clkb" "dff_1/net7" 72.6725
+cap "dff_1/clk" "dff_1/net7" 119.082
+cap "dff_2/net7" "din_14" 9.98599
+cap "dff_1/clk" "dff_0/clkb" 38.451
+cap "dff_1/clk" "dff_1/net1" 26.051
+cap "dff_1/clk" "din_14" -187.426
+cap "dff_1/net6" "dff_1/clk" 148.436
+cap "dout_14" "vdd" 48.4239
+cap "dff_1/clkb" "dff_2/Q" 2.97541
+cap "din_15" "dff_1/net7" 12.3824
+cap "dff_0/net1" "dff_1/net7" 2.88095
+cap "din_15" "dff_1/clk" -4.59296
+cap "dout_14" "gnd" 15.0652
+cap "dout_14" "dff_0/clkb" 248.951
+subcap "dout_14" -268.944
+cap "din_15" "dout_14" 10.8559
+cap "dff_0/clk" "dff_0/clkb" 219.204
+cap "dff_0/net1" "dout_14" 36.0101
+cap "dff_0/net2" "dff_0/clk" 141.484
+cap "dout_15" "dff_0/clk" 78.6546
+cap "dout_14" "dff_0/clk" 2.97541
+cap "dout_14" "dff_0/clkb" 2.97541
+cap "dff_1/net7" "din_15" 12.3824
+cap "dff_1/net7" "dff_0/net1" 2.88095
+cap "dff_0/net3" "dff_0/clk" 45.059
+cap "gnd_uq0" "dff_0/clk" 0.780766
+cap "dout_14" "vdd_uq0" 13.6552
+cap "din_15" "dff_0/clk" 97.3265
+cap "gnd_uq0" "dout_14" 4.06404
+cap "dff_0/net1" "dff_0/clk" 26.051
+cap "dff_0/net6" "dff_0/clk" 140.902
+cap "dff_0/clk" "dff_0/net7" 64.379
+merge "contact_18_16/gnd" "contact_17_0/gnd" -3019.12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -47324 -5128 0 0 0 0 0 0 0 0 0 0
+merge "contact_17_0/gnd" "contact_18_17/gnd"
+merge "contact_18_17/gnd" "contact_17_1/gnd"
+merge "contact_17_1/gnd" "contact_18_0/gnd"
+merge "contact_18_0/gnd" "gnd_uq0"
+merge "gnd_uq0" "contact_18_18/gnd"
+merge "contact_18_18/gnd" "contact_17_2/gnd"
+merge "contact_17_2/gnd" "contact_18_19/gnd"
+merge "contact_18_19/gnd" "contact_17_3/gnd"
+merge "contact_17_3/gnd" "dff_0/gnd"
+merge "dff_0/gnd" "contact_18_1/gnd"
+merge "contact_18_1/gnd" "dff_1/gnd"
+merge "dff_1/gnd" "contact_18_20/gnd"
+merge "contact_18_20/gnd" "contact_17_4/gnd"
+merge "contact_17_4/gnd" "contact_18_21/gnd"
+merge "contact_18_21/gnd" "contact_17_5/gnd"
+merge "contact_17_5/gnd" "contact_18_2/gnd"
+merge "contact_18_2/gnd" "dff_2/gnd"
+merge "dff_2/gnd" "gnd_uq1"
+merge "gnd_uq1" "contact_18_22/gnd"
+merge "contact_18_22/gnd" "contact_17_6/gnd"
+merge "contact_17_6/gnd" "contact_18_23/gnd"
+merge "contact_18_23/gnd" "contact_17_7/gnd"
+merge "contact_17_7/gnd" "contact_18_3/gnd"
+merge "contact_18_3/gnd" "dff_3/gnd"
+merge "dff_3/gnd" "gnd_uq2"
+merge "gnd_uq2" "contact_18_24/gnd"
+merge "contact_18_24/gnd" "contact_17_8/gnd"
+merge "contact_17_8/gnd" "contact_18_25/gnd"
+merge "contact_18_25/gnd" "contact_17_9/gnd"
+merge "contact_17_9/gnd" "contact_18_4/gnd"
+merge "contact_18_4/gnd" "dff_4/gnd"
+merge "dff_4/gnd" "gnd_uq3"
+merge "gnd_uq3" "contact_18_26/gnd"
+merge "contact_18_26/gnd" "contact_17_10/gnd"
+merge "contact_17_10/gnd" "contact_18_27/gnd"
+merge "contact_18_27/gnd" "contact_17_11/gnd"
+merge "contact_17_11/gnd" "contact_18_5/gnd"
+merge "contact_18_5/gnd" "dff_5/gnd"
+merge "dff_5/gnd" "gnd_uq4"
+merge "gnd_uq4" "contact_18_28/gnd"
+merge "contact_18_28/gnd" "contact_17_12/gnd"
+merge "contact_17_12/gnd" "contact_18_29/gnd"
+merge "contact_18_29/gnd" "contact_17_13/gnd"
+merge "contact_17_13/gnd" "contact_18_6/gnd"
+merge "contact_18_6/gnd" "dff_6/gnd"
+merge "dff_6/gnd" "gnd_uq5"
+merge "gnd_uq5" "contact_18_30/gnd"
+merge "contact_18_30/gnd" "contact_17_14/gnd"
+merge "contact_17_14/gnd" "contact_18_31/gnd"
+merge "contact_18_31/gnd" "contact_17_15/gnd"
+merge "contact_17_15/gnd" "contact_18_7/gnd"
+merge "contact_18_7/gnd" "dff_7/gnd"
+merge "dff_7/gnd" "gnd_uq6"
+merge "gnd_uq6" "contact_18_32/gnd"
+merge "contact_18_32/gnd" "contact_17_16/gnd"
+merge "contact_17_16/gnd" "contact_18_33/gnd"
+merge "contact_18_33/gnd" "contact_17_17/gnd"
+merge "contact_17_17/gnd" "contact_18_8/gnd"
+merge "contact_18_8/gnd" "dff_8/gnd"
+merge "dff_8/gnd" "gnd_uq7"
+merge "gnd_uq7" "contact_18_34/gnd"
+merge "contact_18_34/gnd" "contact_17_18/gnd"
+merge "contact_17_18/gnd" "contact_18_35/gnd"
+merge "contact_18_35/gnd" "contact_17_19/gnd"
+merge "contact_17_19/gnd" "contact_18_9/gnd"
+merge "contact_18_9/gnd" "dff_9/gnd"
+merge "dff_9/gnd" "gnd_uq8"
+merge "gnd_uq8" "contact_18_36/gnd"
+merge "contact_18_36/gnd" "contact_17_20/gnd"
+merge "contact_17_20/gnd" "contact_18_37/gnd"
+merge "contact_18_37/gnd" "contact_17_21/gnd"
+merge "contact_17_21/gnd" "contact_18_10/gnd"
+merge "contact_18_10/gnd" "dff_10/gnd"
+merge "dff_10/gnd" "gnd_uq9"
+merge "gnd_uq9" "contact_18_38/gnd"
+merge "contact_18_38/gnd" "contact_17_22/gnd"
+merge "contact_17_22/gnd" "contact_18_39/gnd"
+merge "contact_18_39/gnd" "contact_17_23/gnd"
+merge "contact_17_23/gnd" "contact_18_11/gnd"
+merge "contact_18_11/gnd" "gnd_uq10"
+merge "gnd_uq10" "contact_18_40/gnd"
+merge "contact_18_40/gnd" "contact_17_24/gnd"
+merge "contact_17_24/gnd" "contact_18_41/gnd"
+merge "contact_18_41/gnd" "contact_17_25/gnd"
+merge "contact_17_25/gnd" "dff_11/gnd"
+merge "dff_11/gnd" "dff_12/gnd"
+merge "dff_12/gnd" "gnd_uq11"
+merge "gnd_uq11" "contact_18_12/gnd"
+merge "contact_18_12/gnd" "contact_18_42/gnd"
+merge "contact_18_42/gnd" "contact_17_26/gnd"
+merge "contact_17_26/gnd" "contact_18_43/gnd"
+merge "contact_18_43/gnd" "contact_17_27/gnd"
+merge "contact_17_27/gnd" "dff_13/gnd"
+merge "dff_13/gnd" "gnd_uq12"
+merge "gnd_uq12" "contact_18_13/gnd"
+merge "contact_18_13/gnd" "contact_18_44/gnd"
+merge "contact_18_44/gnd" "contact_17_28/gnd"
+merge "contact_17_28/gnd" "contact_18_45/gnd"
+merge "contact_18_45/gnd" "contact_17_29/gnd"
+merge "contact_17_29/gnd" "dff_14/gnd"
+merge "dff_14/gnd" "gnd_uq13"
+merge "gnd_uq13" "contact_18_14/gnd"
+merge "contact_18_14/gnd" "contact_18_15/gnd"
+merge "contact_18_15/gnd" "contact_18_46/gnd"
+merge "contact_18_46/gnd" "contact_17_30/gnd"
+merge "contact_17_30/gnd" "contact_18_47/gnd"
+merge "contact_18_47/gnd" "contact_17_31/gnd"
+merge "contact_17_31/gnd" "dff_15/gnd"
+merge "dff_15/gnd" "gnd"
+merge "gnd" "gnd_uq14"
+merge "dff_8/D" "din_7" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "dff_3/Q" "dout_12" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "dff_0/clk" "dff_1/clk" -8506.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 293800 -8704 0 0 0 0 0 0 0 0
+merge "dff_1/clk" "dff_2/clk"
+merge "dff_2/clk" "dff_3/clk"
+merge "dff_3/clk" "dff_4/clk"
+merge "dff_4/clk" "dff_5/clk"
+merge "dff_5/clk" "dff_6/clk"
+merge "dff_6/clk" "dff_7/clk"
+merge "dff_7/clk" "dff_8/clk"
+merge "dff_8/clk" "dff_9/clk"
+merge "dff_9/clk" "dff_10/clk"
+merge "dff_10/clk" "dff_11/clk"
+merge "dff_11/clk" "dff_12/clk"
+merge "dff_12/clk" "dff_13/clk"
+merge "dff_13/clk" "dff_14/clk"
+merge "dff_14/clk" "dff_15/clk"
+merge "dff_15/clk" "clk"
+merge "dff_5/Q" "dout_10" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "dff_7/D" "din_8" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "dff_2/Q" "dout_13" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "dff_0/vdd" "vdd_uq0" -745.361 0 0 0 0 757920 -14400 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -47324 -5128 0 0 0 0 0 0 0 0 0 0
+merge "vdd_uq0" "dff_1/vdd"
+merge "dff_1/vdd" "vdd"
+merge "vdd" "dff_2/vdd"
+merge "dff_2/vdd" "vdd_uq1"
+merge "vdd_uq1" "dff_3/vdd"
+merge "dff_3/vdd" "vdd_uq2"
+merge "vdd_uq2" "dff_4/vdd"
+merge "dff_4/vdd" "vdd_uq3"
+merge "vdd_uq3" "dff_5/vdd"
+merge "dff_5/vdd" "vdd_uq4"
+merge "vdd_uq4" "dff_6/vdd"
+merge "dff_6/vdd" "vdd_uq5"
+merge "vdd_uq5" "dff_7/vdd"
+merge "dff_7/vdd" "vdd_uq6"
+merge "vdd_uq6" "dff_8/vdd"
+merge "dff_8/vdd" "vdd_uq7"
+merge "vdd_uq7" "dff_9/vdd"
+merge "dff_9/vdd" "vdd_uq8"
+merge "vdd_uq8" "dff_10/vdd"
+merge "dff_10/vdd" "vdd_uq9"
+merge "vdd_uq9" "dff_11/vdd"
+merge "dff_11/vdd" "vdd_uq10"
+merge "vdd_uq10" "dff_12/vdd"
+merge "dff_12/vdd" "vdd_uq11"
+merge "vdd_uq11" "dff_13/vdd"
+merge "dff_13/vdd" "vdd_uq12"
+merge "vdd_uq12" "dff_14/vdd"
+merge "dff_14/vdd" "vdd_uq13"
+merge "vdd_uq13" "dff_15/vdd"
+merge "dff_15/vdd" "vdd_uq14"
+merge "dff_13/D" "din_2" -30.1333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8204 -164 0 0 0 0 0 0 0 0
+merge "dff_10/Q" "dout_5" -31.0139 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6132 -164 0 0 0 0 0 0 0 0
+merge "dff_6/D" "din_9" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "dff_1/Q" "dout_14" -30.2761 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7868 -164 0 0 0 0 0 0 0 0
+merge "dff_0/Q" "dout_15" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "dff_11/D" "din_4" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "dff_4/D" "din_11" -31.1567 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5796 -164 0 0 0 0 0 0 0 0
+merge "dff_2/D" "din_13" -33.1083 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1204 -164 0 0 0 0 0 0 0 0
+merge "dff_15/Q" "dout_0" -33.2749 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 812 -164 0 0 0 0 0 0 0 0
+merge "dff_0/D" "din_15" -34.1079 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1148 -164 0 0 0 0 0 0 0 0
+merge "dff_8/Q" "dout_7" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "dff_14/Q" "dout_1" -34.2507 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1484 -164 0 0 0 0 0 0 0 0
+merge "dff_13/Q" "dout_2" -33.9413 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -756 -164 0 0 0 0 0 0 0 0
+merge "dff_12/Q" "dout_3" -32.9655 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1540 -164 0 0 0 0 0 0 0 0
+merge "dff_6/Q" "dout_9" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "dff_9/D" "din_6" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "dff_11/Q" "dout_4" -31.9897 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3836 -164 0 0 0 0 0 0 0 0
+merge "dff_14/D" "din_1" -31.1091 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5908 -164 0 0 0 0 0 0 0 0
+merge "dff_5/D" "din_10" -30.1809 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8092 -164 0 0 0 0 0 0 0 0
+merge "dff_9/Q" "dout_6" -30.0381 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8428 -164 0 0 0 0 0 0 0 0
+merge "dff_4/Q" "dout_11" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "dff_12/D" "din_3" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "dff_3/D" "din_12" -32.1325 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3500 -164 0 0 0 0 0 0 0 0
+merge "dff_7/Q" "dout_8" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "dff_1/D" "din_14" -34.0841 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1092 -164 0 0 0 0 0 0 0 0
+merge "dff_10/D" "din_5" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "dff_15/D" "din_0" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
