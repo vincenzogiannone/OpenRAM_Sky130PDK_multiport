@@ -195,7 +195,7 @@ class pnand2(pgate.pgate):
                                      "A",
                                      position="center")
 
-        self.inputB_yoffset = self.inputA_yoffset + 2 * self.m3_pitch
+        self.inputB_yoffset = self.inputA_yoffset + self.m3_pitch#+ 2 * self.m3_pitch
         # # active contact metal to poly contact metal spacing
         # active_contact_to_poly_contact = self.output_yoffset - self.route_layer_space - 0.5 * contact.poly_contact.second_layer_height
         # active_bottom = self.pmos1_inst.by()

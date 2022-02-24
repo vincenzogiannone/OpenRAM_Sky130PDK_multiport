@@ -60,9 +60,9 @@ class bitcell_base_array(design.design):
         else:
             for col in range(self.column_size):
                 for port in range(OPTS.num_w_ports):
-                    self.write_bitline_names[port].extend(["write_bl_{0}_{1}".format(port, col)])
+                    self.write_bitline_names[port].extend(["wbl{0}_{1}".format(port, col)])
                 for port in range(OPTS.num_r_ports):
-                    self.read_bitline_names[port].extend(["read_bl_{0}_{1}".format(port, col)]) 
+                    self.read_bitline_names[port].extend(["rbl{0}_{1}".format(port, col)]) 
             self.bitline_names = self.read_bitline_names + self.write_bitline_names
         # Make a flat list too
         self.all_bitline_names = [x for sl in zip(*self.bitline_names) for x in sl]
@@ -79,9 +79,9 @@ class bitcell_base_array(design.design):
         else:
             for row in range(row_size):
                 for port in range(OPTS.num_w_ports):
-                    self.write_wordline_names[port].append("wwl_{0}_{1}".format(port, row))
+                    self.write_wordline_names[port].append("wwl{0}_{1}".format(port, row))
                 for port in range(OPTS.num_r_ports):
-                    self.read_wordline_names[port].append("rwl_{0}_{1}".format(port, row)) 
+                    self.read_wordline_names[port].append("rwl{0}_{1}".format(port, row)) 
             self.wordline_names = self.read_wordline_names + self.write_wordline_names
         self.all_wordline_names = [x for sl in zip(*self.wordline_names) for x in sl]
         self.all_write_wordline_names = [x for sl in zip(*self.write_wordline_names) for x in sl]
@@ -273,14 +273,14 @@ class bitcell_base_array(design.design):
             for col in range(self.column_size):
                 for port in range(OPTS.num_r_ports):
                     rbl_pin = self.cell_inst[0, col].get_pin(read_bitline_names[port])
-                    self.add_layout_pin(text="read_bl_{0}_{1}".format(port, col),
+                    self.add_layout_pin(text="rbl{0}_{1}".format(port, col),
                                         layer=rbl_pin.layer,
                                         offset=rbl_pin.ll().scale(1, 0),
                                         width=rbl_pin.width(),
                                         height=self.height)
                 for port in range(OPTS.num_w_ports):    
                     wbl_pin = self.cell_inst[0, col].get_pin(write_bitline_names[port])
-                    self.add_layout_pin(text="write_bl_{0}_{1}".format(port, col),
+                    self.add_layout_pin(text="wbl{0}_{1}".format(port, col),
                                         layer=wbl_pin.layer,
                                         offset=wbl_pin.ll().scale(1, 0),
                                         width=wbl_pin.width(),
@@ -303,14 +303,14 @@ class bitcell_base_array(design.design):
             for row in range(self.row_size):
                 for port in range(OPTS.num_r_ports):
                     rwl_pin = self.cell_inst[row, 0].get_pin(read_wl_names[port])
-                    self.add_layout_pin(text="rwl_{0}_{1}".format(port, row),
+                    self.add_layout_pin(text="rwl{0}_{1}".format(port, row),
                                         layer=rwl_pin.layer,
                                         offset=rwl_pin.ll().scale(0, 1),
                                         width=self.width,
                                         height=rwl_pin.height())
                 for port in range(OPTS.num_w_ports):
                     wwl_pin = self.cell_inst[row, 0].get_pin(write_wl_names[port])
-                    self.add_layout_pin(text="wwl_{0}_{1}".format(port, row),
+                    self.add_layout_pin(text="wwl{0}_{1}".format(port, row),
                                         layer=wwl_pin.layer,
                                         offset=wwl_pin.ll().scale(0, 1),
                                         width=self.width,

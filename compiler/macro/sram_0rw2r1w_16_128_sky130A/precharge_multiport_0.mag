@@ -1,222 +1,215 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1643678851
+timestamp 1644951705
 << checkpaint >>
-rect -1260 -1284 2038 2264
+rect -1260 -1268 2038 2312
 << nwell >>
-rect 0 0 778 990
+rect 0 0 778 1038
 << nsubdiff >>
-rect 168 897 218 921
-rect 168 863 176 897
-rect 210 863 218 897
-rect 168 839 218 863
+rect 168 945 218 969
+rect 168 911 176 945
+rect 210 911 218 945
+rect 168 887 218 911
 << nsubdiffcont >>
-rect 176 863 210 897
+rect 176 911 210 945
 << poly >>
-rect 128 454 258 484
-rect 128 400 158 454
-rect 128 42 158 96
-rect 125 26 191 42
-rect 125 -8 141 26
-rect 175 -8 191 26
-rect 125 -24 191 -8
+rect 128 502 258 532
+rect 128 416 158 502
+rect 128 58 158 112
+rect 125 42 191 58
+rect 125 8 141 42
+rect 175 8 191 42
+rect 125 -8 191 8
 << polycont >>
-rect 141 -8 175 26
+rect 141 8 175 42
 << locali >>
-rect 176 897 210 913
-rect 176 847 210 863
-rect 125 26 191 42
-rect 125 -8 141 26
-rect 175 -8 191 26
-rect 125 -24 191 -8
+rect 176 945 210 961
+rect 176 895 210 911
+rect 125 42 191 58
+rect 125 8 141 42
+rect 175 8 191 42
+rect 125 -8 191 8
 << viali >>
-rect 176 863 210 897
-rect 76 619 110 653
-rect 176 619 210 653
-rect 276 619 310 653
-rect 76 231 110 265
-rect 176 231 210 265
-rect 141 -8 175 26
+rect 176 911 210 945
+rect 76 667 110 701
+rect 176 667 210 701
+rect 276 667 310 701
+rect 76 247 110 281
+rect 176 247 210 281
+rect 141 8 175 42
 << metal1 >>
-rect 0 976 778 1004
-rect 179 906 207 976
-rect 164 895 167 903
-rect 138 865 167 895
-rect 164 857 167 865
-rect 219 895 222 903
-rect 219 865 249 895
-rect 219 857 222 865
-rect 179 665 207 854
-rect 70 662 116 665
-rect 38 621 67 651
-rect 170 653 216 665
-rect 270 662 316 665
-rect 119 621 149 651
-rect 170 619 176 653
-rect 210 619 216 653
-rect 238 621 267 651
-rect 70 607 116 610
-rect 170 607 216 619
-rect 319 621 349 651
-rect 270 607 316 610
-rect 70 274 116 277
-rect 170 274 216 277
-rect 38 233 67 263
-rect 119 233 167 263
-rect 219 233 249 263
-rect 70 219 116 222
-rect 170 219 216 222
-rect 129 26 187 32
-rect 129 23 141 26
-rect 0 -5 141 23
-rect 129 -8 141 -5
-rect 175 23 187 26
-rect 175 -5 778 23
-rect 175 -8 187 -5
-rect 129 -14 187 -8
+rect 0 1024 778 1052
+rect 179 960 207 1024
+rect 167 954 219 960
+rect 161 902 167 954
+rect 219 902 225 954
+rect 167 896 219 902
+rect 67 710 119 716
+rect 179 713 207 896
+rect 67 652 119 658
+rect 170 701 216 713
+rect 170 667 176 701
+rect 210 667 216 701
+rect 170 655 216 667
+rect 267 710 319 716
+rect 267 652 319 658
+rect 67 290 119 296
+rect 67 232 119 238
+rect 167 290 219 296
+rect 167 232 219 238
+rect 129 42 187 48
+rect 129 39 141 42
+rect 0 11 141 39
+rect 129 8 141 11
+rect 175 39 187 42
+rect 175 11 778 39
+rect 175 8 187 11
+rect 129 2 187 8
 << via1 >>
-rect 167 897 219 906
-rect 167 863 176 897
-rect 176 863 210 897
-rect 210 863 219 897
-rect 167 854 219 863
-rect 67 653 119 662
-rect 67 619 76 653
-rect 76 619 110 653
-rect 110 619 119 653
-rect 67 610 119 619
-rect 267 653 319 662
-rect 267 619 276 653
-rect 276 619 310 653
-rect 310 619 319 653
-rect 267 610 319 619
-rect 67 265 119 274
-rect 67 231 76 265
-rect 76 231 110 265
-rect 110 231 119 265
-rect 167 265 219 274
-rect 67 222 119 231
-rect 167 231 176 265
-rect 176 231 210 265
-rect 210 231 219 265
-rect 167 222 219 231
+rect 167 945 219 954
+rect 167 911 176 945
+rect 176 911 210 945
+rect 210 911 219 945
+rect 167 902 219 911
+rect 67 701 119 710
+rect 67 667 76 701
+rect 76 667 110 701
+rect 110 667 119 701
+rect 67 658 119 667
+rect 267 701 319 710
+rect 267 667 276 701
+rect 276 667 310 701
+rect 310 667 319 701
+rect 267 658 319 667
+rect 67 281 119 290
+rect 67 247 76 281
+rect 76 247 110 281
+rect 110 247 119 281
+rect 67 238 119 247
+rect 167 281 219 290
+rect 167 247 176 281
+rect 176 247 210 281
+rect 210 247 219 281
+rect 167 238 219 247
 << metal2 >>
-rect 54 669 82 990
-rect 173 908 213 914
-rect 173 846 213 852
-rect 532 669 560 990
-rect 54 662 93 669
-rect 293 662 560 669
-rect 54 610 67 662
-rect 319 610 560 662
-rect 54 603 93 610
-rect 293 603 560 610
-rect 54 281 82 603
-rect 532 281 560 603
-rect 54 274 93 281
-rect 193 274 560 281
-rect 54 222 67 274
-rect 219 222 560 274
-rect 54 215 93 222
-rect 193 215 560 222
-rect 54 0 82 215
-rect 532 0 560 215
+rect 70 716 98 1038
+rect 165 956 221 965
+rect 165 891 221 900
+rect 532 717 560 1038
+rect 293 716 560 717
+rect 67 710 119 716
+rect 67 652 119 658
+rect 267 710 560 716
+rect 319 658 560 710
+rect 267 652 560 658
+rect 70 296 98 652
+rect 293 651 560 652
+rect 532 297 560 651
+rect 193 296 560 297
+rect 67 290 119 296
+rect 67 232 119 238
+rect 167 290 560 296
+rect 219 238 560 290
+rect 167 232 560 238
+rect 70 0 98 232
+rect 193 231 560 232
+rect 532 0 560 231
 << via2 >>
-rect 165 906 221 908
-rect 165 854 167 906
-rect 167 854 219 906
-rect 219 854 221 906
-rect 165 852 221 854
+rect 165 954 221 956
+rect 165 902 167 954
+rect 167 902 219 954
+rect 219 902 221 954
+rect 165 900 221 902
 << metal3 >>
-rect 160 908 226 946
-rect 160 852 165 908
-rect 221 852 226 908
-rect 160 814 226 852
+rect 160 956 226 994
+rect 160 900 165 956
+rect 221 900 226 956
+rect 160 862 226 900
 use contact_22  contact_22_0
-timestamp 1643678851
-transform 1 0 278 0 1 621
+timestamp 1644951705
+transform 1 0 267 0 1 652
 box 0 0 1 1
 use contact_24  contact_24_0
-timestamp 1643678851
-transform 1 0 270 0 1 607
+timestamp 1644951705
+transform 1 0 270 0 1 655
 box 0 0 1 1
 use contact_22  contact_22_1
-timestamp 1643678851
-transform 1 0 78 0 1 621
+timestamp 1644951705
+transform 1 0 67 0 1 652
 box 0 0 1 1
 use contact_24  contact_24_1
-timestamp 1643678851
-transform 1 0 70 0 1 607
+timestamp 1644951705
+transform 1 0 70 0 1 655
 box 0 0 1 1
 use contact_22  contact_22_2
-timestamp 1643678851
-transform 1 0 178 0 1 233
+timestamp 1644951705
+transform 1 0 167 0 1 232
 box 0 0 1 1
 use contact_24  contact_24_2
-timestamp 1643678851
-transform 1 0 170 0 1 219
+timestamp 1644951705
+transform 1 0 170 0 1 235
 box 0 0 1 1
 use contact_22  contact_22_3
-timestamp 1643678851
-transform 1 0 78 0 1 233
+timestamp 1644951705
+transform 1 0 67 0 1 232
 box 0 0 1 1
 use contact_24  contact_24_3
-timestamp 1643678851
-transform 1 0 70 0 1 219
+timestamp 1644951705
+transform 1 0 70 0 1 235
 box 0 0 1 1
 use contact_24  contact_24_4
-timestamp 1643678851
-transform 1 0 170 0 1 607
+timestamp 1644951705
+transform 1 0 170 0 1 655
 box 0 0 1 1
 use contact_23  contact_23_0
-timestamp 1643678851
-transform 1 0 160 0 1 814
+timestamp 1644951705
+transform 1 0 160 0 1 862
 box 0 0 1 1
 use contact_22  contact_22_4
-timestamp 1643678851
-transform 1 0 178 0 1 865
+timestamp 1644951705
+transform 1 0 167 0 1 896
 box 0 0 1 1
 use contact_17  contact_17_0
-timestamp 1643678851
-transform 1 0 178 0 1 865
+timestamp 1644951705
+transform 1 0 161 0 1 896
 box 0 0 1 1
 use contact_13  contact_13_0
-timestamp 1643678851
-transform 1 0 164 0 1 857
+timestamp 1644951705
+transform 1 0 164 0 1 905
 box 0 0 1 1
 use contact_21  contact_21_0
-timestamp 1643678851
-transform 1 0 168 0 1 839
+timestamp 1644951705
+transform 1 0 168 0 1 887
 box 0 0 1 1
 use contact_13  contact_13_1
-timestamp 1643678851
-transform 1 0 129 0 1 -14
+timestamp 1644951705
+transform 1 0 129 0 1 2
 box 0 0 1 1
 use contact_12  contact_12_0
-timestamp 1643678851
-transform 1 0 125 0 1 -24
+timestamp 1644951705
+transform 1 0 125 0 1 -8
 box 0 0 1 1
 use pmos_m1_w1_260_sli_dli  pmos_m1_w1_260_sli_dli_0
-timestamp 1643678851
-transform 1 0 168 0 1 510
+timestamp 1644951705
+transform 1 0 168 0 1 558
 box -59 -54 209 306
 use pmos_m1_w1_260_sli_dli  pmos_m1_w1_260_sli_dli_1
-timestamp 1643678851
-transform 1 0 68 0 1 510
+timestamp 1644951705
+transform 1 0 68 0 1 558
 box -59 -54 209 306
 use pmos_m1_w1_260_sli_dli  pmos_m1_w1_260_sli_dli_2
-timestamp 1643678851
-transform 1 0 68 0 1 122
+timestamp 1644951705
+transform 1 0 68 0 1 138
 box -59 -54 209 306
 << labels >>
-rlabel metal1 s 0 -4 778 22 4 en_bar
-rlabel metal3 s 160 814 226 946 4 vdd
-rlabel metal2 s 54 0 82 990 4 rbl0
-rlabel metal2 s 532 0 560 990 4 rbl1
+rlabel metal1 s 0 10 778 38 4 en_bar
+rlabel metal3 s 160 862 226 994 4 vdd
+rlabel metal2 s 70 0 98 1038 4 rbl0
+rlabel metal2 s 532 0 560 1038 4 rbl1
 << properties >>
-string FIXED_BBOX 115 -34 201 0
+string FIXED_BBOX 115 -18 201 0
 string GDS_FILE sram_0rw2r1w_16_128_sky130A.gds
-string GDS_END 1481676
-string GDS_START 1478722
+string GDS_END 1450812
+string GDS_START 1447858
 << end >>

@@ -1,4 +1,4 @@
-timestamp 1643678851
+timestamp 1644951705
 version 8.3
 tech sky130A
 style ngspice()
@@ -26,44 +26,44 @@ node "D" 1131 328.792 180 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "clk" 3841 1338.28 0 322 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 70368 4636 0 0 11220 1000 32436 2200 45816 3140 0 0 0 0 0 0 0 0
 node "vdd" 12052 2915.84 0 808 m1 0 0 0 0 711360 3924 0 0 30240 1560 85860 2796 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 92628 4184 88920 3084 0 0 0 0 0 0 0 0 0 0
 substrate "gnd" 0 0 0 -30 m1 0 0 30240 1560 0 0 0 0 26712 1308 30240 1560 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 46500 2696 88920 3084 0 0 0 0 0 0 0 0 0 0
-cap "clk" "clkb" 1340.71
 cap "clk" "net7" 119.268
-cap "net2" "vdd" 126.401
 cap "clk" "net1" 161.667
-cap "vdd" "Q" 220.943
-cap "clkb" "net7" 92.3563
-cap "clkb" "net1" 306.283
-cap "net2" "net6" 48.1551
-cap "D" "clk" 355.155
-cap "clk" "net3" 302.228
-cap "net6" "Q" 11.2548
-cap "D" "clkb" 207.988
-cap "clkb" "net3" 374.802
-cap "clk" "vdd" 47.1048
-cap "net3" "net7" 42.1244
-cap "D" "net1" 60.5
-cap "net1" "net3" 38.2716
-cap "clkb" "vdd" 223.388
-cap "clk" "net6" 303.126
-cap "D" "net3" 25.8562
-cap "net6" "clkb" 266.399
-cap "vdd" "net7" 431.639
-cap "vdd" "net1" 211.85
-cap "clk" "net2" 335.081
-cap "net6" "net7" 450.256
+cap "clk" "clkb" 1340.71
+cap "net3" "vdd" 325.564
 cap "D" "vdd" 3.4375
-cap "clk" "Q" 8.30905
-cap "vdd" "net3" 325.564
-cap "net2" "clkb" 402.706
-cap "clk" "a_474_96#" 17.7858
-cap "clkb" "Q" 12.8901
-cap "net6" "net3" 332.641
+cap "Q" "vdd" 220.943
+cap "net6" "net2" 48.1551
 cap "net2" "net7" 25.8562
 cap "net2" "net1" 328.383
+cap "net2" "clkb" 402.706
+cap "net6" "net3" 332.641
+cap "net3" "net7" 42.1244
+cap "net3" "net1" 38.2716
+cap "net3" "clkb" 374.802
+cap "clk" "net2" 335.081
+cap "D" "net1" 60.5
+cap "D" "clkb" 207.988
+cap "net6" "Q" 11.2548
 cap "Q" "net7" 217.542
+cap "Q" "clkb" 12.8901
 cap "net6" "vdd" 149.247
-cap "D" "net2" 16.3909
+cap "clk" "net3" 302.228
+cap "net7" "vdd" 431.639
+cap "net1" "vdd" 211.85
+cap "clkb" "vdd" 223.388
+cap "clk" "D" 355.155
+cap "clk" "Q" 8.30905
+cap "clk" "a_474_96#" 17.7858
+cap "clk" "vdd" 47.1048
 cap "net2" "net3" 397.719
+cap "net6" "net7" 450.256
+cap "net6" "clkb" 266.399
+cap "net2" "D" 16.3909
+cap "net7" "clkb" 92.3563
+cap "net1" "clkb" 306.283
+cap "D" "net3" 25.8562
+cap "net2" "vdd" 126.401
+cap "clk" "net6" 303.126
 device msubckt sky130_fd_pr__nfet_01v8 1344 96 1345 97 l=30 w=84 "gnd" "net7" 60 0 "gnd" 84 0 "Q" 84 0
 device msubckt sky130_fd_pr__nfet_01v8 1116 96 1117 97 l=30 w=84 "gnd" "net6" 60 0 "gnd" 84 0 "net7" 84 0
 device msubckt sky130_fd_pr__nfet_01v8 1004 96 1005 97 l=30 w=84 "gnd" "net7" 60 0 "a_922_96#" 84 0 "gnd" 84 0

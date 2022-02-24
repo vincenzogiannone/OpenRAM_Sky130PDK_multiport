@@ -32,7 +32,7 @@ class pgate(design.design):
             self.height = height
         elif not height:
             # By default, something simple
-            self.height = 14 * self.m1_pitch
+            self.height = 10 * self.m1_pitch
         self.add_wells = add_wells
 
         if "li" in layer:

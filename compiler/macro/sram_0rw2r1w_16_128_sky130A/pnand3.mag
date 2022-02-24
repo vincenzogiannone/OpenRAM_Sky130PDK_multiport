@@ -1,32 +1,32 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1643678851
+timestamp 1644951705
 << checkpaint >>
-rect -1296 -1277 1905 2857
+rect -1296 -1277 1944 2857
 << nwell >>
-rect -36 739 645 1597
+rect -36 739 684 1597
 << pwell >>
-rect 516 51 566 133
+rect 538 51 588 133
 << scnmos >>
 rect 214 51 244 219
 << ndiff >>
 rect 154 51 214 219
 rect 244 51 304 219
 << psubdiff >>
-rect 516 109 566 133
-rect 516 75 524 109
-rect 558 75 566 109
-rect 516 51 566 75
+rect 538 109 588 133
+rect 538 75 546 109
+rect 580 75 588 109
+rect 538 51 588 75
 << nsubdiff >>
-rect 516 1465 566 1489
-rect 516 1431 524 1465
-rect 558 1431 566 1465
-rect 516 1407 566 1431
+rect 538 1465 588 1489
+rect 538 1431 546 1465
+rect 580 1431 588 1465
+rect 538 1407 588 1431
 << psubdiffcont >>
-rect 524 75 558 109
+rect 546 75 580 109
 << nsubdiffcont >>
-rect 524 1431 558 1465
+rect 546 1431 580 1465
 << poly >>
 rect 114 323 144 1211
 rect 214 447 244 1211
@@ -52,12 +52,12 @@ rect 345 521 379 555
 rect 212 397 246 431
 rect 79 273 113 307
 << locali >>
-rect 0 1523 609 1557
+rect 0 1523 648 1557
 rect 62 1330 96 1523
 rect 162 1296 196 1363
 rect 262 1330 296 1523
-rect 524 1465 558 1523
-rect 524 1415 558 1431
+rect 546 1465 580 1523
+rect 546 1415 580 1431
 rect 362 1296 396 1363
 rect 162 1262 464 1296
 rect 329 555 395 571
@@ -74,52 +74,52 @@ rect 113 273 129 307
 rect 63 257 129 273
 rect 430 168 464 1262
 rect 379 102 464 168
-rect 524 109 558 125
+rect 546 109 580 125
 rect 62 17 96 102
-rect 524 17 558 75
-rect 0 -17 609 17
+rect 546 17 580 75
+rect 0 -17 648 17
 use contact_12  contact_12_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 329 0 1 505
 box 0 0 1 1
 use contact_12  contact_12_1
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 196 0 1 381
 box 0 0 1 1
 use contact_12  contact_12_2
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 63 0 1 257
 box 0 0 1 1
 use contact_11  contact_11_0
-timestamp 1643678851
-transform 1 0 516 0 1 51
+timestamp 1644951705
+transform 1 0 538 0 1 51
 box 0 0 1 1
 use contact_10  contact_10_0
-timestamp 1643678851
-transform 1 0 516 0 1 1407
+timestamp 1644951705
+transform 1 0 538 0 1 1407
 box 0 0 1 1
 use nmos_m1_w0_840_sactive_dli  nmos_m1_w0_840_sactive_dli_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 254 0 1 51
 box 0 -26 150 194
 use nmos_m1_w0_840_sactive_dactive  nmos_m1_w0_840_sactive_dactive_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 154 0 1 51
 box 25 84 125 85
 use nmos_m1_w0_840_sli_dactive  nmos_m1_w0_840_sli_dactive_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 54 0 1 51
 box 0 -26 150 194
 use pmos_m1_w1_260_sli_dli  pmos_m1_w1_260_sli_dli_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 254 0 1 1237
 box -59 -54 209 306
 use pmos_m1_w1_260_sli_dli  pmos_m1_w1_260_sli_dli_1
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 154 0 1 1237
 box -59 -54 209 306
 use pmos_m1_w1_260_sli_dli  pmos_m1_w1_260_sli_dli_2
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 54 0 1 1237
 box -59 -54 209 306
 << labels >>
@@ -127,11 +127,11 @@ rlabel locali s 96 290 96 290 4 A
 rlabel locali s 229 414 229 414 4 B
 rlabel locali s 362 538 362 538 4 C
 rlabel locali s 447 1279 447 1279 4 Z
-rlabel locali s 304 0 304 0 4 gnd
-rlabel locali s 304 1540 304 1540 4 vdd
+rlabel locali s 324 0 324 0 4 gnd
+rlabel locali s 324 1540 324 1540 4 vdd
 << properties >>
-string FIXED_BBOX 0 0 609 1364
+string FIXED_BBOX 0 0 648 1540
 string GDS_FILE sram_0rw2r1w_16_128_sky130A.gds
-string GDS_END 1882192
-string GDS_START 1879400
+string GDS_END 1817102
+string GDS_START 1814310
 << end >>

@@ -751,11 +751,12 @@ class sram_base(design, verilog, lef):
 
     def create_bank(self, bank_num):
         """ Create a bank  """
-        self.bank_insts.append(self.add_inst(name="bank{0}".format(bank_num),
-                                             mod=self.bank))
+        
 
         temp = []
         if OPTS.RF_mode == False:
+            self.bank_insts.append(self.add_inst(name="bank{0}".format(bank_num),
+                                             mod=self.bank))
             for port in self.read_ports:
                 for bit in range(self.word_size + self.num_spare_cols):
                     temp.append("dout{0}[{1}]".format(port, bit))
@@ -786,6 +787,8 @@ class sram_base(design, verilog, lef):
             self.connect_inst(temp)
             return self.bank_insts[-1]
         else:
+            self.bank_insts = self.add_inst(name="bank{0}".format(bank_num),
+                                             mod=self.bank)
             for bit in range(self.word_size + self.num_spare_cols):
                 for port in range(OPTS.num_r_ports):
                     temp.append("dout{0}_{1}".format(port, bit))
@@ -806,7 +809,7 @@ class sram_base(design, verilog, lef):
             temp.append("wl_en")
             temp.extend(self.ext_supplies)
             self.connect_inst(temp)
-            return self.bank_insts[-1]
+            return self.bank_insts
 
     def place_bank(self, bank_inst, position, x_flip, y_flip):
         """ Place a bank at the given position with orientations """
@@ -1009,8 +1012,7 @@ class sram_base(design, verilog, lef):
                 self.connect_inst(temp)
             return ctrl_insts
         else:
-            mod = self.control_logic_multiport
-            ctrl_insts.append(self.add_inst(name="control", mod=mod))
+            ctrl_inst=self.add_inst(name="control", mod=self.control_logic_multiport)
             temp = ["csb"]
             temp.append("web")
             temp.append("clk")
@@ -1018,7 +1020,7 @@ class sram_base(design, verilog, lef):
             temp.append("p_en_bar")
             temp.extend(["wl_en", "clk_buf"] + self.ext_supplies)
             self.connect_inst(temp)
-        return ctrl_insts[-1]
+        return ctrl_inst
 
     def sp_write(self, sp_name, lvs=False, trim=False):
         # Write the entire spice of the object to the file

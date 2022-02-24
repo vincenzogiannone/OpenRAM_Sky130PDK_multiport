@@ -88,6 +88,8 @@ class functional(simulation):
             debug.info(2, "bl:\t{0}".format(self.bl_name))
             debug.info(2, "br:\t{0}".format(self.br_name))
         else:
+            self.rbl_names = ["rbl0", "rbl1"]
+            self.wbl_names = ["wbl0"]
             for port in range(OPTS.num_r_ports):
                 debug.info(2, "rbl{0}:\t{1}".format(port, self.rbl_names[port]))
             for port in range(OPTS.num_w_ports):

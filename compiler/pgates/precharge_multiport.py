@@ -121,7 +121,7 @@ class precharge_multiport(design.design):
 
         self.add_power_pin("vdd",
                            self.well_contact_pos,
-                           directions=("V", "V"))
+                           directions=("H", "H"))
 
         self.add_via_stack_center(from_layer=pmos_pin.layer,
                                   to_layer=self.en_layer,

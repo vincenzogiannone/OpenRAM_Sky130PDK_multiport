@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1643678851
+timestamp 1644951705
 << checkpaint >>
 rect -630 -651 1019 1438
 << nwell >>
@@ -841,6 +841,6 @@ rlabel metal1 s 194 0 194 0 4 gnd
 << properties >>
 string FIXED_BBOX 0 0 778 1540
 string GDS_FILE sram_0rw2r1w_16_128_sky130A.gds
-string GDS_END 1315550
-string GDS_START 1294746
+string GDS_END 1284686
+string GDS_START 1263882
 << end >>

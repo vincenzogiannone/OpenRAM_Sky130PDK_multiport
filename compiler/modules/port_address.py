@@ -193,9 +193,9 @@ class port_address(design.design):
                                             offset=en_pos) 
 
     def add_modules(self):
-    
         self.row_decoder = factory.create(module_type="decoder",
                                           num_outputs=self.num_rows)
+        
         self.add_mod(self.row_decoder)
 
         self.wordline_driver_array = factory.create(module_type="wordline_driver_array",
@@ -295,7 +295,7 @@ class port_address(design.design):
             for row in range(int(self.num_rows/OPTS.num_all_ports)):
                 for port in range(OPTS.num_r_ports):
                     temp.append("rwl{}_{}".format(port, row))
-                for port in range(OPTS.num_r_ports, OPTS.num_all_ports):
+                for port in range(OPTS.num_w_ports):
                     temp.append("wwl{}_{}".format(port, row))
             temp.append("wl_en")
             temp.append("vdd")
@@ -335,7 +335,7 @@ class port_address(design.design):
             row_decoder_offset = vector(0, 0)
             self.row_decoder_inst.place(row_decoder_offset)
 
-            wordline_driver_array_offset = vector(self.row_decoder_inst.rx(), 0)
+            wordline_driver_array_offset = vector(self.row_decoder_inst.rx() + 4*self.m2_pitch, 0)
             self.wordline_driver_array_inst.place(wordline_driver_array_offset)
 
         # The wordline driver also had an extra gap on the right, so use this offset

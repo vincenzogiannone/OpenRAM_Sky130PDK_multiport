@@ -80,10 +80,10 @@ class col_cap_array(bitcell_base_array):
         else:
             bitcell_pins = []
             for port in range(OPTS.num_r_ports):
-                bitcell_pins.append = ["read_bl_{0}_{1}".format(port, row)]
-                bitcell_pins.append = ["read_bl_{0}_{1}".format(port, row)]
+                bitcell_pins.append = ["rbl_{0}_{1}".format(port, row)]
+                bitcell_pins.append = ["rbl_{0}_{1}".format(port, row)]
             for port in range(OPTS.num_w_ports):
-                bitcell_pins.append = ["write_bl_{0}_{0}".format(port, row)]
+                bitcell_pins.append = ["wbl_{0}_{0}".format(port, row)]
             bitcell_pins.append = ["gnd"]
         return bitcell_pins
 

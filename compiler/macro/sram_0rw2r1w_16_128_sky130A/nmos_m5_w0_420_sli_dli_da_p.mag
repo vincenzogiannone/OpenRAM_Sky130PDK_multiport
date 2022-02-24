@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1643678851
+timestamp 1644951705
 << checkpaint >>
 rect -1260 -1286 1842 1403
 << scnmos >>
@@ -69,38 +69,38 @@ rect 436 9 470 25
 rect 540 59 574 109
 rect 540 9 574 25
 use contact_8  contact_8_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 532 0 1 1
 box 0 0 1 1
 use contact_8  contact_8_1
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 428 0 1 1
 box 0 0 1 1
 use contact_8  contact_8_2
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 320 0 1 1
 box 0 0 1 1
 use contact_8  contact_8_3
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 212 0 1 1
 box 0 0 1 1
 use contact_8  contact_8_4
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 104 0 1 1
 box 0 0 1 1
 use contact_8  contact_8_5
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 0 0 1 1
 box 0 0 1 1
 << labels >>
 rlabel mvvaractor s 291 125 291 125 4 G
-rlabel locali s 237 42 237 42 4 S
 rlabel locali s 25 42 25 42 4 S
+rlabel locali s 237 42 237 42 4 S
 rlabel locali s 453 42 453 42 4 S
 rlabel locali s 343 126 343 126 4 D
 << properties >>
 string FIXED_BBOX -25 -26 607 143
 string GDS_FILE sram_0rw2r1w_16_128_sky130A.gds
-string GDS_END 2054100
-string GDS_START 2052488
+string GDS_END 1989074
+string GDS_START 1987462
 << end >>

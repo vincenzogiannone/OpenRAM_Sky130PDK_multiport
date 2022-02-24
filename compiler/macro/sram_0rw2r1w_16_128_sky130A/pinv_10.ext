@@ -1,4 +1,4 @@
-timestamp 1643678852
+timestamp 1644951706
 version 8.3
 tech sky130A
 style ngspice()
@@ -11,33 +11,33 @@ use nmos_m40_w0_495_sli_dli_da_p nmos_m40_w0_495_sli_dli_da_p_0 1 0 54 0 1 51
 use pmos_m40_w1_480_sli_dli_da_p pmos_m40_w1_480_sli_dli_da_p_0 1 0 54 0 1 491
 node "Z" 151 271.62 2218 167 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14348 912 0 0 0 0 0 0 0 0 0 0 0 0
 node "A" 363 270.43 48 336 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11226 650 0 0 4356 264 0 0 0 0 0 0 0 0 0 0 0 0
-node "vdd" 19476 11876.1 -36 402 nw 0 0 0 0 2285055 10256 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 312324 18440 0 0 0 0 0 0 0 0 0 0 0 0
-substrate "gnd" 0 0 4470 51 pw 0 0 4100 264 0 0 0 0 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 194514 11510 0 0 0 0 0 0 0 0 0 0 0 0
-cap "Z" "vdd" 38.3465
+node "vdd" 19540 11910.6 -36 402 nw 0 0 0 0 2293436 10290 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 312902 18474 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 4470 51 pw 0 0 4100 264 0 0 0 0 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 195092 11544 0 0 0 0 0 0 0 0 0 0 0 0
 cap "vdd" "A" 5.5
-subcap "vdd" -9805.51
-cap "nmos_m40_w0_495_sli_dli_da_p_0/S_uq12" "A" 1.35609
-cap "pmos_m40_w1_480_sli_dli_da_p_0/D" "pmos_m40_w1_480_sli_dli_da_p_0/S_uq12" 153.061
-cap "nmos_m40_w0_495_sli_dli_da_p_0/S_uq12" "nmos_m40_w0_495_sli_dli_da_p_0/D" 313.72
+cap "Z" "vdd" 38.3465
+subcap "vdd" -9840.01
 cap "pmos_m40_w1_480_sli_dli_da_p_0/D" "nmos_m40_w0_495_sli_dli_da_p_0/D" 117.312
-cap "pmos_m40_w1_480_sli_dli_da_p_0/S_uq12" "pmos_m40_w1_480_sli_dli_da_p_0/w_n59_64#" -35.8289
-cap "vdd" "Z" 158.982
-cap "pmos_m40_w1_480_sli_dli_da_p_0/G" "nmos_m40_w0_495_sli_dli_da_p_0/G" 140.611
-cap "pmos_m40_w1_480_sli_dli_da_p_0/G" "Z" 26.497
-cap "gnd" "Z" 339.02
-cap "vdd" "Z" -3.49095
-cap "vdd" "vdd" -38.1729
+cap "nmos_m40_w0_495_sli_dli_da_p_0/D" "nmos_m40_w0_495_sli_dli_da_p_0/S_uq12" 313.72
+cap "A" "nmos_m40_w0_495_sli_dli_da_p_0/S_uq12" 1.35609
+cap "pmos_m40_w1_480_sli_dli_da_p_0/D" "pmos_m40_w1_480_sli_dli_da_p_0/S_uq12" 153.061
+cap "pmos_m40_w1_480_sli_dli_da_p_0/w_n59_64#" "pmos_m40_w1_480_sli_dli_da_p_0/S_uq12" -35.8289
+cap "Z" "vdd" -3.49095
+cap "Z" "vdd" 158.982
+cap "Z" "gnd" 339.02
 cap "nmos_m40_w0_495_sli_dli_da_p_0/G" "Z" -1.5905
-subcap "gnd" -2466.44
-cap "pmos_m40_w1_480_sli_dli_da_p_0/S" "pmos_m40_w1_480_sli_dli_da_p_0/D" 178.877
-cap "pmos_m40_w1_480_sli_dli_da_p_0/D" "nmos_m40_w0_495_sli_dli_da_p_0/D" 137.092
-cap "nmos_m40_w0_495_sli_dli_da_p_0/S" "nmos_m40_w0_495_sli_dli_da_p_0/D" 367.214
 cap "nmos_m40_w0_495_sli_dli_da_p_0/G" "pmos_m40_w1_480_sli_dli_da_p_0/G" 140.611
+cap "Z" "pmos_m40_w1_480_sli_dli_da_p_0/G" 26.497
+cap "vdd" "vdd" -38.1729
+subcap "gnd" -2476.32
+cap "nmos_m40_w0_495_sli_dli_da_p_0/D" "nmos_m40_w0_495_sli_dli_da_p_0/S" 367.214
+cap "pmos_m40_w1_480_sli_dli_da_p_0/D" "pmos_m40_w1_480_sli_dli_da_p_0/S" 178.877
+cap "nmos_m40_w0_495_sli_dli_da_p_0/G" "pmos_m40_w1_480_sli_dli_da_p_0/G" 140.611
+cap "pmos_m40_w1_480_sli_dli_da_p_0/D" "nmos_m40_w0_495_sli_dli_da_p_0/D" 137.092
 subcap "gnd" -3089.52
-cap "pmos_m40_w1_480_sli_dli_da_p_0/G" "nmos_m40_w0_495_sli_dli_da_p_0/G" 19.2838
-cap "nmos_m40_w0_495_sli_dli_da_p_0/D" "nmos_m40_w0_495_sli_dli_da_p_0/S" 52.1738
-cap "pmos_m40_w1_480_sli_dli_da_p_0/S" "pmos_m40_w1_480_sli_dli_da_p_0/D" 17.3374
-cap "nmos_m40_w0_495_sli_dli_da_p_0/D" "pmos_m40_w1_480_sli_dli_da_p_0/D" 13.7092
+cap "nmos_m40_w0_495_sli_dli_da_p_0/G" "pmos_m40_w1_480_sli_dli_da_p_0/G" 19.2838
+cap "pmos_m40_w1_480_sli_dli_da_p_0/D" "pmos_m40_w1_480_sli_dli_da_p_0/S" 17.3374
+cap "nmos_m40_w0_495_sli_dli_da_p_0/S" "nmos_m40_w0_495_sli_dli_da_p_0/D" 52.1738
+cap "pmos_m40_w1_480_sli_dli_da_p_0/D" "nmos_m40_w0_495_sli_dli_da_p_0/D" 13.7092
 merge "pmos_m40_w1_480_sli_dli_da_p_0/D" "nmos_m40_w0_495_sli_dli_da_p_0/D" -102.427 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2312 -272 0 0 0 0 0 0 0 0 0 0 0 0
 merge "nmos_m40_w0_495_sli_dli_da_p_0/D" "Z"
 merge "nmos_m40_w0_495_sli_dli_da_p_0/S_uq0" "nmos_m40_w0_495_sli_dli_da_p_0/S" -373.017 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1428 0 0 0 0 0 0 0 0 0 0 0 0

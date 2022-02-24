@@ -1,0 +1,36 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1644969367
+<< checkpaint >>
+rect -1260 -1286 1410 1454
+<< scnmos >>
+rect 60 0 90 168
+<< ndiff >>
+rect 0 0 60 168
+rect 90 101 150 168
+rect 90 67 108 101
+rect 142 67 150 101
+rect 90 0 150 67
+<< ndiffc >>
+rect 108 67 142 101
+<< poly >>
+rect 60 168 90 194
+rect 60 -26 90 0
+<< locali >>
+rect 108 101 142 117
+rect 108 51 142 67
+use contact_8  contact_8_0
+timestamp 1644969367
+transform 1 0 100 0 1 43
+box 0 0 1 1
+<< labels >>
+rlabel mvvaractor s 75 84 75 84 4 G
+rlabel mvpsubdiff s 25 84 25 84 4 S
+rlabel locali s 125 84 125 84 4 D
+<< properties >>
+string FIXED_BBOX -25 -26 175 194
+string GDS_FILE sram_0rw2r1w_32_128_sky130A.gds
+string GDS_END 3073888
+string GDS_START 3073164
+<< end >>

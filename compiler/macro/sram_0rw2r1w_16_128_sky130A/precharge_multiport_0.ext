@@ -1,42 +1,48 @@
-timestamp 1643678851
+timestamp 1644951705
 version 8.3
 tech sky130A
 style ngspice()
 scale 1000 1 500000
 resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
-use pmos_m1_w1_260_sli_dli pmos_m1_w1_260_sli_dli_2 1 0 68 0 1 122
-use contact_12 contact_12_0 1 0 125 0 1 -24
-use contact_13 contact_13_1 1 0 129 0 1 -14
-use contact_24 contact_24_3 1 0 70 0 1 219
-use contact_22 contact_22_3 1 0 78 0 1 233
-use contact_24 contact_24_2 1 0 170 0 1 219
-use contact_22 contact_22_2 1 0 178 0 1 233
-use pmos_m1_w1_260_sli_dli pmos_m1_w1_260_sli_dli_1 1 0 68 0 1 510
-use pmos_m1_w1_260_sli_dli pmos_m1_w1_260_sli_dli_0 1 0 168 0 1 510
-use contact_24 contact_24_4 1 0 170 0 1 607
-use contact_24 contact_24_1 1 0 70 0 1 607
-use contact_22 contact_22_1 1 0 78 0 1 621
-use contact_24 contact_24_0 1 0 270 0 1 607
-use contact_22 contact_22_0 1 0 278 0 1 621
-use contact_21 contact_21_0 1 0 168 0 1 839
-use contact_13 contact_13_0 1 0 164 0 1 857
-use contact_17 contact_17_0 1 0 178 0 1 865
-use contact_22 contact_22_4 1 0 178 0 1 865
-use contact_23 contact_23_0 1 0 160 0 1 814
-node "rbl1" 181 1400.51 76 231 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4624 544 18670 1270 100448 5480 0 0 0 0 0 0 0 0
-equiv "rbl1" "rbl0"
-node "en_bar" 185 453.76 125 -24 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5976 372 0 0 4356 264 22828 1648 0 0 0 0 0 0 0 0 0 0
-node "a_128_400#" 296 132.328 128 400 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5520 428 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "vdd" 2441 2901.26 0 0 nw 0 0 0 0 770220 3536 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3400 336 36274 2552 3616 248 8712 396 0 0 0 0 0 0
+use pmos_m1_w1_260_sli_dli pmos_m1_w1_260_sli_dli_2 1 0 68 0 1 138
+use contact_12 contact_12_0 1 0 125 0 1 -8
+use contact_13 contact_13_1 1 0 129 0 1 2
+use contact_24 contact_24_3 1 0 70 0 1 235
+use contact_22 contact_22_3 1 0 67 0 1 232
+use contact_24 contact_24_2 1 0 170 0 1 235
+use contact_22 contact_22_2 1 0 167 0 1 232
+use pmos_m1_w1_260_sli_dli pmos_m1_w1_260_sli_dli_1 1 0 68 0 1 558
+use pmos_m1_w1_260_sli_dli pmos_m1_w1_260_sli_dli_0 1 0 168 0 1 558
+use contact_24 contact_24_4 1 0 170 0 1 655
+use contact_24 contact_24_1 1 0 70 0 1 655
+use contact_22 contact_22_1 1 0 67 0 1 652
+use contact_24 contact_24_0 1 0 270 0 1 655
+use contact_22 contact_22_0 1 0 267 0 1 652
+use contact_21 contact_21_0 1 0 168 0 1 887
+use contact_13 contact_13_0 1 0 164 0 1 905
+use contact_17 contact_17_0 1 0 161 0 1 896
+use contact_22 contact_22_4 1 0 167 0 1 896
+use contact_23 contact_23_0 1 0 160 0 1 862
+node "rbl1" 77 842.32 176 247 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2312 272 6656 464 70540 3392 0 0 0 0 0 0 0 0
+node "rbl0" 76 603.7 76 247 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2312 272 6656 464 32136 2228 0 0 0 0 0 0 0 0
+node "en_bar" 185 451.446 125 -8 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5976 372 0 0 4356 264 22828 1648 0 0 0 0 0 0 0 0 0 0
+node "a_128_416#" 347 152.472 128 416 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6480 492 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 2545 3021.08 0 0 nw 0 0 0 0 807564 3632 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3400 336 35320 2458 4144 260 8712 396 0 0 0 0 0 0
 substrate "gnd" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "en_bar" "rbl1" 117.303
-cap "vdd" "en_bar" 10.6444
-cap "a_128_400#" "en_bar" 2.26974
-cap "vdd" "rbl1" 452.324
-subcap "rbl1" -614.95
+cap "rbl1" "rbl0" 193.072
+cap "vdd" "rbl0" 188.092
+cap "en_bar" "a_128_416#" 2.26974
+cap "rbl1" "vdd" 189.922
+cap "en_bar" "rbl0" 46.9508
+cap "en_bar" "rbl1" 49.7979
+cap "en_bar" "vdd" 12.9584
+subcap "rbl1" -254.38
+subcap "rbl0" -380.66
 subcap "vdd" -123.91
-cap "vdd" "rbl0" -50.4091
-cap "en_bar" "rbl0" 50.1085
+cap "vdd" "rbl0" -31.8806
+cap "rbl1" "rbl0" -10.6386
+cap "rbl1" "vdd" -21.7112
+cap "rbl1" "en_bar" 0.242224
 merge "contact_23_0/gnd" "contact_22_4/gnd" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 merge "contact_22_4/gnd" "contact_17_0/gnd"
 merge "contact_17_0/gnd" "contact_13_0/gnd"
@@ -61,11 +67,11 @@ merge "pmos_m1_w1_260_sli_dli_0/w_n59_42#" "pmos_m1_w1_260_sli_dli_1/D"
 merge "pmos_m1_w1_260_sli_dli_1/D" "pmos_m1_w1_260_sli_dli_1/w_n59_42#"
 merge "pmos_m1_w1_260_sli_dli_1/w_n59_42#" "pmos_m1_w1_260_sli_dli_2/w_n59_42#"
 merge "pmos_m1_w1_260_sli_dli_2/w_n59_42#" "vdd"
-merge "pmos_m1_w1_260_sli_dli_2/D" "pmos_m1_w1_260_sli_dli_2/S" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-merge "pmos_m1_w1_260_sli_dli_2/S" "rbl1"
+merge "pmos_m1_w1_260_sli_dli_1/S" "pmos_m1_w1_260_sli_dli_2/S" -380.66 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2312 -272 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pmos_m1_w1_260_sli_dli_2/S" "rbl0"
 merge "pmos_m1_w1_260_sli_dli_0/G" "pmos_m1_w1_260_sli_dli_1/G" -66 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -240 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 merge "pmos_m1_w1_260_sli_dli_1/G" "pmos_m1_w1_260_sli_dli_2/G"
 merge "pmos_m1_w1_260_sli_dli_2/G" "en_bar"
-merge "en_bar" "a_128_400#"
-merge "pmos_m1_w1_260_sli_dli_0/D" "pmos_m1_w1_260_sli_dli_1/S" -614.95 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4624 -544 0 0 0 0 0 0 0 0 0 0 0 0
-merge "pmos_m1_w1_260_sli_dli_1/S" "rbl0"
+merge "en_bar" "a_128_416#"
+merge "pmos_m1_w1_260_sli_dli_0/D" "pmos_m1_w1_260_sli_dli_2/D" -254.38 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2312 -272 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pmos_m1_w1_260_sli_dli_2/D" "rbl1"

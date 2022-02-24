@@ -1,4 +1,4 @@
-timestamp 1643678852
+timestamp 1644951706
 version 8.3
 tech sky130A
 style ngspice()
@@ -11,21 +11,21 @@ use nmos_m14_w0_480_sli_dli_da_p nmos_m14_w0_480_sli_dli_da_p_0 1 0 54 0 1 51
 use pmos_m14_w1_440_sli_dli_da_p pmos_m14_w1_440_sli_dli_da_p_0 1 0 54 0 1 499
 node "Z" 153 270.702 814 166 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14518 922 0 0 0 0 0 0 0 0 0 0 0 0
 node "A" 380 277.288 48 338 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11556 672 0 0 4356 264 0 0 0 0 0 0 0 0 0 0 0 0
-node "vdd" 7771 4623.83 -36 402 nw 0 0 0 0 900711 4640 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 120734 7170 0 0 0 0 0 0 0 0 0 0 0 0
-substrate "gnd" 0 0 1662 51 pw 0 0 4100 264 0 0 0 0 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 76670 4578 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 7836 4658.33 -36 402 nw 0 0 0 0 909092 4674 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 121312 7204 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 1662 51 pw 0 0 4100 264 0 0 0 0 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 77248 4612 0 0 0 0 0 0 0 0 0 0 0 0
 cap "vdd" "A" 5.4466
-cap "vdd" "Z" 10.0519
-subcap "vdd" -1774.58
-subcap "gnd" -431.271
+cap "Z" "vdd" 10.0519
+subcap "vdd" -1809.07
+subcap "gnd" -441.156
 cap "A" "Z" 23.7067
 cap "A" "gnd" 1.3216
-cap "vdd" "Z" 148.124
 cap "Z" "gnd" 312.636
+cap "Z" "vdd" 148.124
 subcap "gnd" -1025.88
-cap "pmos_m14_w1_440_sli_dli_da_p_0/D" "nmos_m14_w0_480_sli_dli_da_p_0/D" 12.7368
-cap "nmos_m14_w0_480_sli_dli_da_p_0/S" "nmos_m14_w0_480_sli_dli_da_p_0/D" 52.973
-cap "pmos_m14_w1_440_sli_dli_da_p_0/G" "nmos_m14_w0_480_sli_dli_da_p_0/G" 17.6333
-cap "pmos_m14_w1_440_sli_dli_da_p_0/D" "pmos_m14_w1_440_sli_dli_da_p_0/S" 17.7053
+cap "pmos_m14_w1_440_sli_dli_da_p_0/S" "pmos_m14_w1_440_sli_dli_da_p_0/D" 17.7053
+cap "nmos_m14_w0_480_sli_dli_da_p_0/D" "nmos_m14_w0_480_sli_dli_da_p_0/S" 52.973
+cap "nmos_m14_w0_480_sli_dli_da_p_0/D" "pmos_m14_w1_440_sli_dli_da_p_0/D" 12.7368
+cap "nmos_m14_w0_480_sli_dli_da_p_0/G" "pmos_m14_w1_440_sli_dli_da_p_0/G" 17.6333
 merge "pmos_m14_w1_440_sli_dli_da_p_0/S_uq0" "pmos_m14_w1_440_sli_dli_da_p_0/S" -2799.69 0 0 0 0 -659832 -4136 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8052 -1600 0 0 0 0 0 0 0 0 0 0 0 0
 merge "pmos_m14_w1_440_sli_dli_da_p_0/S" "pmos_m14_w1_440_sli_dli_da_p_0/S_uq1"
 merge "pmos_m14_w1_440_sli_dli_da_p_0/S_uq1" "pmos_m14_w1_440_sli_dli_da_p_0/S_uq2"

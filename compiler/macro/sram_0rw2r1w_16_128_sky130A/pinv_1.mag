@@ -1,11 +1,11 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1643678851
+timestamp 1644951705
 << checkpaint >>
-rect -1296 -1277 1647 2155
+rect -1296 -1277 1664 2155
 << nwell >>
-rect -36 402 387 895
+rect -36 402 404 895
 << pwell >>
 rect 258 51 308 133
 << psubdiff >>
@@ -32,7 +32,7 @@ rect 114 161 144 344
 << polycont >>
 rect 64 360 98 394
 << locali >>
-rect 0 821 351 855
+rect 0 821 368 855
 rect 62 628 96 821
 rect 266 763 300 821
 rect 266 713 300 729
@@ -46,35 +46,35 @@ rect 162 60 196 360
 rect 266 109 300 125
 rect 62 17 96 60
 rect 266 17 300 75
-rect 0 -17 351 17
+rect 0 -17 368 17
 use contact_12  contact_12_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 48 0 1 344
 box 0 0 1 1
 use contact_11  contact_11_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 258 0 1 51
 box 0 0 1 1
 use contact_10  contact_10_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 258 0 1 705
 box 0 0 1 1
 use nmos_m1_w0_420_sli_dli_da_p  nmos_m1_w0_420_sli_dli_da_p_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 54 0 1 51
 box 0 -26 150 110
 use pmos_m1_w1_260_sli_dli_da_p  pmos_m1_w1_260_sli_dli_da_p_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 54 0 1 535
 box -59 -54 209 306
 << labels >>
 rlabel locali s 81 377 81 377 4 A
 rlabel locali s 196 377 196 377 4 Z
-rlabel locali s 175 0 175 0 4 gnd
-rlabel locali s 175 838 175 838 4 vdd
+rlabel locali s 184 0 184 0 4 gnd
+rlabel locali s 184 838 184 838 4 vdd
 << properties >>
-string FIXED_BBOX 0 0 351 662
+string FIXED_BBOX 0 0 368 838
 string GDS_FILE sram_0rw2r1w_16_128_sky130A.gds
-string GDS_END 1995380
-string GDS_START 1993888
+string GDS_END 1930354
+string GDS_START 1928862
 << end >>

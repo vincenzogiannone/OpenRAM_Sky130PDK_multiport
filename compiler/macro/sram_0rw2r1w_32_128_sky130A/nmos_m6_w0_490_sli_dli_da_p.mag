@@ -1,0 +1,121 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1644969367
+<< checkpaint >>
+rect -1260 -1286 1950 1414
+<< scnmos >>
+rect 60 0 90 98
+rect 168 0 198 98
+rect 276 0 306 98
+rect 384 0 414 98
+rect 492 0 522 98
+rect 600 0 630 98
+<< ndiff >>
+rect 0 66 60 98
+rect 0 32 8 66
+rect 42 32 60 66
+rect 0 0 60 32
+rect 90 66 168 98
+rect 90 32 112 66
+rect 146 32 168 66
+rect 90 0 168 32
+rect 198 66 276 98
+rect 198 32 220 66
+rect 254 32 276 66
+rect 198 0 276 32
+rect 306 66 384 98
+rect 306 32 328 66
+rect 362 32 384 66
+rect 306 0 384 32
+rect 414 66 492 98
+rect 414 32 436 66
+rect 470 32 492 66
+rect 414 0 492 32
+rect 522 66 600 98
+rect 522 32 544 66
+rect 578 32 600 66
+rect 522 0 600 32
+rect 630 66 690 98
+rect 630 32 648 66
+rect 682 32 690 66
+rect 630 0 690 32
+<< ndiffc >>
+rect 8 32 42 66
+rect 112 32 146 66
+rect 220 32 254 66
+rect 328 32 362 66
+rect 436 32 470 66
+rect 544 32 578 66
+rect 648 32 682 66
+<< poly >>
+rect 60 124 630 154
+rect 60 98 90 124
+rect 168 98 198 124
+rect 276 98 306 124
+rect 384 98 414 124
+rect 492 98 522 124
+rect 600 98 630 124
+rect 60 -26 90 0
+rect 168 -26 198 0
+rect 276 -26 306 0
+rect 384 -26 414 0
+rect 492 -26 522 0
+rect 600 -26 630 0
+<< locali >>
+rect 112 116 578 150
+rect 8 66 42 82
+rect 8 16 42 32
+rect 112 66 146 116
+rect 112 16 146 32
+rect 220 66 254 82
+rect 220 16 254 32
+rect 328 66 362 116
+rect 328 16 362 32
+rect 436 66 470 82
+rect 436 16 470 32
+rect 544 66 578 116
+rect 544 16 578 32
+rect 648 66 682 82
+rect 648 16 682 32
+use contact_8  contact_8_0
+timestamp 1644969367
+transform 1 0 640 0 1 8
+box 0 0 1 1
+use contact_8  contact_8_1
+timestamp 1644969367
+transform 1 0 536 0 1 8
+box 0 0 1 1
+use contact_8  contact_8_2
+timestamp 1644969367
+transform 1 0 428 0 1 8
+box 0 0 1 1
+use contact_8  contact_8_3
+timestamp 1644969367
+transform 1 0 320 0 1 8
+box 0 0 1 1
+use contact_8  contact_8_4
+timestamp 1644969367
+transform 1 0 212 0 1 8
+box 0 0 1 1
+use contact_8  contact_8_5
+timestamp 1644969367
+transform 1 0 104 0 1 8
+box 0 0 1 1
+use contact_8  contact_8_6
+timestamp 1644969367
+transform 1 0 0 0 1 8
+box 0 0 1 1
+<< labels >>
+rlabel mvvaractor s 345 139 345 139 4 G
+rlabel locali s 453 49 453 49 4 S
+rlabel locali s 237 49 237 49 4 S
+rlabel locali s 25 49 25 49 4 S
+rlabel locali s 665 49 665 49 4 S
+rlabel locali s 345 133 345 133 4 D
+<< properties >>
+string FIXED_BBOX -25 -26 715 154
+string GDS_FILE sram_0rw2r1w_32_128_sky130A.gds
+string GDS_END 3381340
+string GDS_START 3379504
+<< end >>

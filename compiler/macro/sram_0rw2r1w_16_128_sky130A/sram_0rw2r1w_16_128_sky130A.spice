@@ -82,11 +82,11 @@ X0 a_90_0# G S gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=1
 X0 D G a_0_0# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
 .ends
 
-.subckt pnand2_0 w_n36_402# Z gnd A
-Xpmos_m1_w1_260_sli_dli_0 w_n36_402# Z gnd Z Z pmos_m1_w1_260_sli_dli
-Xpmos_m1_w1_260_sli_dli_1 w_n36_402# Z gnd Z A pmos_m1_w1_260_sli_dli
+.subckt pnand2_0 w_n36_402# Z gnd A vdd B
+Xpmos_m1_w1_260_sli_dli_0 w_n36_402# Z gnd vdd B pmos_m1_w1_260_sli_dli
+Xpmos_m1_w1_260_sli_dli_1 w_n36_402# vdd gnd Z A pmos_m1_w1_260_sli_dli
 Xnmos_m1_w0_840_sli_dactive_0 gnd gnd A nmos_m1_w0_840_sactive_dli_0/a_0_0# nmos_m1_w0_840_sli_dactive
-Xnmos_m1_w0_840_sactive_dli_0 nmos_m1_w0_840_sactive_dli_0/a_0_0# gnd Z Z nmos_m1_w0_840_sactive_dli
+Xnmos_m1_w0_840_sactive_dli_0 nmos_m1_w0_840_sactive_dli_0/a_0_0# gnd Z B nmos_m1_w0_840_sactive_dli
 .ends
 
 .subckt pmos_m11_w1_375_sli_dli_da_p S S_uq0 S_uq1 S_uq3 S_uq2 S_uq4 gnd w_n59_53#
@@ -118,18 +118,18 @@ X9 D G S_uq1 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150
 X10 S_uq2 G D gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=460000u l=150000u
 .ends
 
-.subckt pinv_4 vdd gnd Z A
+.subckt pinv_4 gnd vdd Z A
 Xpmos_m11_w1_375_sli_dli_da_p_0 vdd vdd vdd vdd vdd vdd gnd vdd Z A pmos_m11_w1_375_sli_dli_da_p
 Xnmos_m11_w0_460_sli_dli_da_p_0 gnd gnd gnd gnd gnd gnd gnd Z A nmos_m11_w0_460_sli_dli_da_p
 .ends
 
 .subckt pdriver_0 gnd vdd Z A
-Xpinv_4_0 vdd gnd Z A pinv_4
+Xpinv_4_0 gnd vdd Z A pinv_4
 .ends
 
-.subckt pand2_0 B gnd Z A
-Xpnand2_0_0 B B gnd A pnand2_0
-Xpdriver_0_0 gnd B Z B pdriver_0
+.subckt pand2_0 vdd Z gnd A B
+Xpnand2_0_0 vdd pnand2_0_0/Z gnd A vdd B pnand2_0
+Xpdriver_0_0 gnd vdd Z pnand2_0_0/Z pdriver_0
 .ends
 
 .subckt pmos_m14_w1_440_sli_dli_da_p w_n59_60# S S_uq0 S_uq1 S_uq3 S_uq2 S_uq4 S_uq5
@@ -173,7 +173,7 @@ Xpmos_m14_w1_440_sli_dli_da_p_0 vdd vdd vdd vdd vdd vdd vdd vdd vdd gnd Z A pmos
 Xnmos_m14_w0_480_sli_dli_da_p_0 gnd gnd gnd gnd gnd gnd gnd gnd gnd Z A nmos_m14_w0_480_sli_dli_da_p
 .ends
 
-.subckt pinv_7 Z gnd vdd A
+.subckt pinv_7 vdd Z gnd A
 Xnmos_m2_w0_420_sli_dli_da_p_0 gnd gnd gnd Z A nmos_m2_w0_420_sli_dli_da_p
 Xpmos_m2_w1_260_sli_dli_da_p_0 vdd vdd vdd gnd Z A pmos_m2_w1_260_sli_dli_da_p
 .ends
@@ -309,16 +309,16 @@ Xnmos_m1_w0_420_sli_dli_da_p_0 gnd gnd Z A nmos_m1_w0_420_sli_dli_da_p
 Xpmos_m1_w1_260_sli_dli_da_p_0 vdd vdd gnd Z A pmos_m1_w1_260_sli_dli_da_p
 .ends
 
-.subckt pdriver_1 vdd Z gnd A
+.subckt pdriver_1 vdd A Z gnd
 Xpinv_9_0 pinv_9_0/Z vdd gnd pinv_9_0/A pinv_9
-Xpinv_7_0 pinv_8_0/A gnd vdd pinv_7_0/A pinv_7
+Xpinv_7_0 vdd pinv_8_0/A gnd pinv_7_0/A pinv_7
 Xpinv_8_0 pinv_9_0/A gnd vdd pinv_8_0/A pinv_8
 Xpinv_10_0 Z gnd vdd pinv_9_0/Z pinv_10
 Xpinv_0_0 pinv_0_1/Z pinv_7_0/A gnd vdd pinv_0
 Xpinv_0_1 A pinv_0_1/Z gnd vdd pinv_0
 .ends
 
-.subckt pinv_1 Z gnd vdd A
+.subckt pinv_1 A Z gnd vdd
 Xnmos_m1_w0_420_sli_dli_da_p_0 gnd gnd Z A nmos_m1_w0_420_sli_dli_da_p
 Xpmos_m1_w1_260_sli_dli_da_p_0 vdd vdd gnd Z A pmos_m1_w1_260_sli_dli_da_p
 .ends
@@ -396,14 +396,14 @@ Xpmos_m6_w1_470_sli_dli_da_p_0 vdd vdd vdd vdd vdd gnd Z A pmos_m6_w1_470_sli_dl
 Xnmos_m6_w0_490_sli_dli_da_p_0 gnd gnd gnd gnd gnd Z A nmos_m6_w0_490_sli_dli_da_p
 .ends
 
-.subckt pdriver_4 Z A gnd vdd
-Xpinv_7_0 pinv_7_0/Z gnd vdd pinv_7_0/A pinv_7
+.subckt pdriver_4 gnd vdd Z A
+Xpinv_7_0 vdd pinv_7_0/Z gnd pinv_7_0/A pinv_7
 Xpinv_15_0 Z gnd vdd pinv_15_0/A pinv_15
 Xpinv_14_0 pinv_15_0/A gnd vdd pinv_7_0/Z pinv_14
 Xpinv_0_0 A pinv_7_0/A gnd vdd pinv_0
 .ends
 
-.subckt pinv_11 Z gnd vdd A
+.subckt pinv_11 vdd Z gnd A
 Xnmos_m4_w0_420_sli_dli_da_p_0 gnd gnd gnd gnd Z A nmos_m4_w0_420_sli_dli_da_p
 Xpmos_m4_w1_260_sli_dli_da_p_0 vdd vdd vdd vdd gnd Z A pmos_m4_w1_260_sli_dli_da_p
 .ends
@@ -440,18 +440,18 @@ Xnmos_m10_w0_460_sli_dli_da_p_0 gnd gnd gnd gnd gnd gnd gnd Z A nmos_m10_w0_460_
 Xpmos_m10_w1_385_sli_dli_da_p_0 vdd vdd vdd vdd vdd vdd gnd vdd Z A pmos_m10_w1_385_sli_dli_da_p
 .ends
 
-.subckt pdriver_2 vdd Z gnd A
-Xpinv_11_0 pinv_12_0/A gnd vdd pinv_0_0/Z pinv_11
+.subckt pdriver_2 vdd A Z gnd
+Xpinv_11_0 vdd pinv_12_0/A gnd pinv_0_0/Z pinv_11
 Xpinv_12_0 gnd vdd Z pinv_12_0/A pinv_12
 Xpinv_0_0 pinv_0_1/Z pinv_0_0/Z gnd vdd pinv_0
 Xpinv_0_1 A pinv_0_1/Z gnd vdd pinv_0
 .ends
 
-.subckt pnand2_1 Z gnd A
-Xpmos_m1_w1_260_sli_dli_0 Z Z gnd Z Z pmos_m1_w1_260_sli_dli
-Xpmos_m1_w1_260_sli_dli_1 Z Z gnd Z A pmos_m1_w1_260_sli_dli
+.subckt pnand2_1 Z gnd vdd A
+Xpmos_m1_w1_260_sli_dli_0 vdd Z gnd vdd B pmos_m1_w1_260_sli_dli
+Xpmos_m1_w1_260_sli_dli_1 vdd vdd gnd Z A pmos_m1_w1_260_sli_dli
 Xnmos_m1_w0_840_sli_dactive_0 gnd gnd A nmos_m1_w0_840_sactive_dli_0/a_0_0# nmos_m1_w0_840_sli_dactive
-Xnmos_m1_w0_840_sactive_dli_0 nmos_m1_w0_840_sactive_dli_0/a_0_0# gnd Z Z nmos_m1_w0_840_sactive_dli
+Xnmos_m1_w0_840_sactive_dli_0 nmos_m1_w0_840_sactive_dli_0/a_0_0# gnd Z B nmos_m1_w0_840_sactive_dli
 .ends
 
 .subckt pmos_m21_w1_440_sli_dli_da_p w_n59_60# S S_uq0 S_uq1 S_uq3 S_uq2 S_uq4 S_uq5
@@ -515,26 +515,26 @@ Xnmos_m21_w0_480_sli_dli_da_p_0 gnd gnd gnd gnd gnd gnd gnd gnd gnd gnd gnd gnd 
 Xpinv_13_0 gnd Z vdd A pinv_13
 .ends
 
-.subckt pand2_1 gnd B Z A
-Xpdriver_3_0 B gnd Z B pdriver_3
-Xpnand2_0_0 B B gnd A pnand2_0
+.subckt pand2_1 gnd vdd Z A B
+Xpdriver_3_0 vdd gnd Z pnand2_0_0/Z pdriver_3
+Xpnand2_0_0 vdd pnand2_0_0/Z gnd A vdd B pnand2_0
 .ends
 
 .subckt control_logic_multiport vdd p_en_bar clk web csb wl_en w_en
-Xdff_buf_array_0 vdd dff_buf_array_0/dout_0 dff_buf_array_0/dout_1 pand2_1_0/A pand2_1_0/B
+Xdff_buf_array_0 vdd dff_buf_array_0/dout_0 dff_buf_array_0/dout_1 pand2_1_0/A pand2_0_1/B
 + web csb dff_buf_array
-Xpand2_0_0 pand2_1_0/B vdd pand2_0_0/Z vdd pand2_0
-Xpdriver_1_0 pand2_1_0/B vdd vdd clk pdriver_1
-Xpand2_0_1 pand2_1_0/B vdd pand2_1_0/B pinv_1_0/Z pand2_0
-Xpinv_1_0 pinv_1_0/Z vdd pand2_1_0/B vdd pinv_1
-Xpdriver_4_0 p_en_bar pnand2_1_0/Z vdd pnand2_1_0/Z pdriver_4
-Xpdriver_2_0 pnand2_1_0/Z wl_en vdd pand2_1_0/B pdriver_2
-Xpnand2_1_0 pnand2_1_0/Z vdd pand2_0_0/Z pnand2_1
-Xpand2_1_0 vdd pand2_1_0/B w_en pand2_1_0/A pand2_1
+Xpand2_0_0 pand2_1_0/vdd pand2_0_0/Z vdd vdd pand2_0_1/B pand2_0
+Xpdriver_1_0 pinv_1_0/vdd clk vdd vdd pdriver_1
+Xpand2_0_1 pinv_1_0/vdd pand2_1_0/B vdd pinv_1_0/Z pand2_0_1/B pand2_0
+Xpinv_1_0 vdd pinv_1_0/Z vdd pinv_1_0/vdd pinv_1
+Xpdriver_4_0 vdd pnand2_1_0/vdd p_en_bar pnand2_1_0/Z pdriver_4
+Xpdriver_2_0 pnand2_1_0/vdd pand2_1_0/B wl_en vdd pdriver_2
+Xpnand2_1_0 pnand2_1_0/Z vdd pnand2_1_0/vdd pand2_0_0/Z pnand2_1
+Xpand2_1_0 vdd pand2_1_0/vdd w_en pand2_1_0/A pand2_1_0/B pand2_1
 .ends
 
-.subckt data_dff clk din_7 din_8 vdd din_9 gnd din_10 din_11 din_12 din_13 din_14
-+ din_15 din_0 din_1 din_2 din_3 din_4 din_5 din_6
+.subckt data_dff clk din_7 din_8 gnd vdd din_9 din_10 din_11 din_12 din_13 din_5 din_14
++ din_15 din_0 din_1 din_2 din_3 din_4 din_6
 Xdff_0 clk vdd gnd din_15 dout_15 dff
 Xdff_1 clk vdd gnd din_14 dout_14 dff
 Xdff_2 clk vdd gnd din_13 dout_13 dff
@@ -559,7 +559,7 @@ Xdff_1 clk vdd gnd din_0 dout_0 dff
 .ends
 
 .subckt row_addr_dff vdd_uq0 vdd_uq1 vdd_uq2 clk vdd_uq3 dout_0 dout_1 dout_3 dout_2
-+ gnd dout_4 dout_5 dout_6 din_1 vdd din_0 din_2 din_3 din_4 din_5 din_6
++ gnd dout_4 dout_5 dout_6 vdd din_0 din_1 din_2 din_3 din_4 din_5 din_6
 Xdff_0 clk vdd_uq3 gnd din_8 dout_8 dff
 Xdff_1 clk vdd_uq2 gnd din_7 dout_7 dff
 Xdff_2 clk vdd_uq2 gnd din_6 dout_6 dff
@@ -576,42 +576,41 @@ X0 dout rbl gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=
 X1 dout rbl vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=2.7e+06u l=150000u
 .ends
 
-.subckt sense_amp_array vdd_uq0 vdd_uq1 vdd_uq2 vdd_uq3 data_10 vdd_uq4 data_11 vdd_uq5
-+ data_12 vdd_uq6 data_13 data_14 vdd_uq7 vdd_uq8 data_15 vdd_uq9 gnd vdd_uq30 vdd_uq20
-+ data_0 vdd_uq21 vdd_uq10 data_1 vdd_uq22 vdd_uq11 data_2 vdd_uq23 vdd_uq12 data_3
-+ vdd_uq24 vdd_uq13 vdd data_4 vdd_uq25 vdd_uq14 data_5 vdd_uq26 vdd_uq15 data_6 vdd_uq16
-+ vdd_uq27 data_7 vdd_uq28 vdd_uq17 data_8 vdd_uq29 vdd_uq18 data_9 vdd_uq19
-Xsense_amp_multiport_30 vdd_uq29 gnd rbl_1 data_1 sense_amp_multiport
-Xsense_amp_multiport_0 vdd_uq0 gnd rbl_31 data_31 sense_amp_multiport
+.subckt sense_amp_array vdd vdd_uq2 vdd_uq4 data_10 data_11 vdd_uq6 data_12 data_13
++ data_14 vdd_uq8 data_15 vdd_uq9 gnd vdd_uq20 data_0 vdd_uq22 data_1 vdd_uq12 data_2
++ vdd_uq24 data_3 vdd_uq14 data_4 vdd_uq26 data_5 vdd_uq16 data_6 vdd_uq28 data_7
++ vdd_uq18 data_8 vdd_uq30 data_9
+Xsense_amp_multiport_30 vdd_uq30 gnd rbl_1 data_1 sense_amp_multiport
+Xsense_amp_multiport_0 vdd gnd rbl_31 data_31 sense_amp_multiport
 Xsense_amp_multiport_31 vdd_uq30 gnd rbl_0 data_0 sense_amp_multiport
-Xsense_amp_multiport_20 vdd_uq19 gnd rbl_11 data_11 sense_amp_multiport
+Xsense_amp_multiport_20 vdd_uq20 gnd rbl_11 data_11 sense_amp_multiport
 Xsense_amp_multiport_10 vdd_uq9 gnd rbl_21 data_21 sense_amp_multiport
 Xsense_amp_multiport_21 vdd_uq20 gnd rbl_10 data_10 sense_amp_multiport
 Xsense_amp_multiport_1 vdd gnd rbl_30 data_30 sense_amp_multiport
-Xsense_amp_multiport_2 vdd_uq1 gnd rbl_29 data_29 sense_amp_multiport
-Xsense_amp_multiport_11 vdd_uq10 gnd rbl_20 data_20 sense_amp_multiport
-Xsense_amp_multiport_22 vdd_uq21 gnd rbl_9 data_9 sense_amp_multiport
+Xsense_amp_multiport_2 vdd_uq2 gnd rbl_29 data_29 sense_amp_multiport
+Xsense_amp_multiport_11 vdd_uq9 gnd rbl_20 data_20 sense_amp_multiport
+Xsense_amp_multiport_22 vdd_uq22 gnd rbl_9 data_9 sense_amp_multiport
 Xsense_amp_multiport_23 vdd_uq22 gnd rbl_8 data_8 sense_amp_multiport
-Xsense_amp_multiport_12 vdd_uq11 gnd rbl_19 data_19 sense_amp_multiport
+Xsense_amp_multiport_12 vdd_uq12 gnd rbl_19 data_19 sense_amp_multiport
 Xsense_amp_multiport_3 vdd_uq2 gnd rbl_28 data_28 sense_amp_multiport
-Xsense_amp_multiport_24 vdd_uq23 gnd rbl_7 data_7 sense_amp_multiport
+Xsense_amp_multiport_24 vdd_uq24 gnd rbl_7 data_7 sense_amp_multiport
 Xsense_amp_multiport_13 vdd_uq12 gnd rbl_18 data_18 sense_amp_multiport
-Xsense_amp_multiport_4 vdd_uq3 gnd rbl_27 data_27 sense_amp_multiport
+Xsense_amp_multiport_4 vdd_uq4 gnd rbl_27 data_27 sense_amp_multiport
 Xsense_amp_multiport_25 vdd_uq24 gnd rbl_6 data_6 sense_amp_multiport
-Xsense_amp_multiport_14 vdd_uq13 gnd rbl_17 data_17 sense_amp_multiport
+Xsense_amp_multiport_14 vdd_uq14 gnd rbl_17 data_17 sense_amp_multiport
 Xsense_amp_multiport_5 vdd_uq4 gnd rbl_26 data_26 sense_amp_multiport
-Xsense_amp_multiport_26 vdd_uq25 gnd rbl_5 data_5 sense_amp_multiport
+Xsense_amp_multiport_26 vdd_uq26 gnd rbl_5 data_5 sense_amp_multiport
 Xsense_amp_multiport_15 vdd_uq14 gnd rbl_16 data_16 sense_amp_multiport
-Xsense_amp_multiport_6 vdd_uq5 gnd rbl_25 data_25 sense_amp_multiport
+Xsense_amp_multiport_6 vdd_uq6 gnd rbl_25 data_25 sense_amp_multiport
 Xsense_amp_multiport_7 vdd_uq6 gnd rbl_24 data_24 sense_amp_multiport
 Xsense_amp_multiport_27 vdd_uq26 gnd rbl_4 data_4 sense_amp_multiport
-Xsense_amp_multiport_16 vdd_uq15 gnd rbl_15 data_15 sense_amp_multiport
-Xsense_amp_multiport_28 vdd_uq27 gnd rbl_3 data_3 sense_amp_multiport
+Xsense_amp_multiport_16 vdd_uq16 gnd rbl_15 data_15 sense_amp_multiport
+Xsense_amp_multiport_28 vdd_uq28 gnd rbl_3 data_3 sense_amp_multiport
 Xsense_amp_multiport_17 vdd_uq16 gnd rbl_14 data_14 sense_amp_multiport
-Xsense_amp_multiport_8 vdd_uq7 gnd rbl_23 data_23 sense_amp_multiport
+Xsense_amp_multiport_8 vdd_uq8 gnd rbl_23 data_23 sense_amp_multiport
 Xsense_amp_multiport_9 vdd_uq8 gnd rbl_22 data_22 sense_amp_multiport
 Xsense_amp_multiport_29 vdd_uq28 gnd rbl_2 data_2 sense_amp_multiport
-Xsense_amp_multiport_18 vdd_uq17 gnd rbl_13 data_13 sense_amp_multiport
+Xsense_amp_multiport_18 vdd_uq18 gnd rbl_13 data_13 sense_amp_multiport
 Xsense_amp_multiport_19 vdd_uq18 gnd rbl_12 data_12 sense_amp_multiport
 .ends
 
@@ -632,8 +631,8 @@ Xnmos_m1_w3_360_sli_dli_1 rbl1_out gnd nmos_m1_w3_360_sli_dli_1/D sel nmos_m1_w3
 + rbl0_58 rbl0_9 rbl0_15 rbl0_26 rbl0_37 rbl0_59 rbl0_48 rbl0_16 rbl0_27 rbl0_38 rbl0_49
 + rbl0_17 rbl0_28 rbl0_39 rbl1_60 rbl0_18 rbl0_29 rbl1_61 rbl1_50 rbl0_19 rbl1_40
 + rbl1_62 rbl1_51 rbl1_30 rbl1_41 rbl1_63 rbl1_52 rbl1_20 rbl1_31 rbl1_42 rbl1_53
-+ rbl1_0 rbl1_10 rbl1_21 rbl1_32 rbl1_43 rbl1_54 rbl1_1 rbl1_11 rbl1_22 rbl1_33 rbl1_44
-+ rbl1_55 rbl1_2 gnd rbl1_12 rbl1_23 rbl1_34 rbl1_45 rbl1_56 rbl1_3 rbl1_13 rbl1_24
++ rbl1_0 rbl1_10 rbl1_21 rbl1_32 rbl1_43 rbl1_54 rbl1_1 gnd rbl1_11 rbl1_22 rbl1_33
++ rbl1_44 rbl1_55 rbl1_2 rbl1_12 rbl1_23 rbl1_34 rbl1_45 rbl1_56 rbl1_3 rbl1_13 rbl1_24
 + rbl1_35 rbl1_46 rbl1_57 rbl1_4 rbl1_14 rbl1_25 rbl1_36 rbl1_47 rbl1_58 rbl1_5 rbl1_15
 + rbl1_26 rbl1_37 rbl1_59 rbl1_48 rbl1_6 rbl1_16 rbl1_27 rbl1_38 rbl1_49 rbl1_7 rbl1_17
 + rbl1_28 rbl1_39 rbl1_8 rbl1_18 rbl1_29 rbl1_9 rbl1_19
@@ -715,9 +714,9 @@ X7 vdd en enb vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=
 .ends
 
 .subckt write_driver_array din_7 din_8 vdd_uq0 din_9 vdd_uq1 en vdd_uq2 vdd_uq3 vdd_uq5
-+ vdd_uq4 vdd_uq6 vdd_uq7 vdd_uq8 vdd_uq9 wbl0_0 din_1 gnd wbl0_1 wbl0_2 wbl0_3 din_10
-+ din_11 din_12 din_13 din_14 vdd_uq10 din_15 vdd_uq12 vdd_uq11 vdd_uq13 vdd_uq14
-+ vdd din_0 din_2 din_3 din_4 din_5 din_6
++ vdd_uq4 vdd_uq6 vdd_uq7 vdd_uq8 vdd_uq9 wbl0_0 gnd wbl0_1 wbl0_2 wbl0_3 din_10 din_11
++ din_12 din_13 din_14 vdd_uq10 din_15 vdd_uq12 vdd_uq11 vdd_uq13 vdd_uq14 vdd din_0
++ din_1 din_2 din_3 din_4 din_5 din_6
 Xwrite_driver_multiport_10 din_5 vdd_uq9 gnd en wbl0_5 write_driver_multiport
 Xwrite_driver_multiport_11 din_4 vdd_uq10 gnd en wbl0_4 write_driver_multiport
 Xwrite_driver_multiport_12 din_3 vdd_uq11 gnd en wbl0_3 write_driver_multiport
@@ -736,146 +735,153 @@ Xwrite_driver_multiport_8 din_7 vdd_uq7 gnd en wbl0_7 write_driver_multiport
 Xwrite_driver_multiport_9 din_6 vdd_uq8 gnd en wbl0_6 write_driver_multiport
 .ends
 
-.subckt precharge_multiport_0 en_bar gnd rbl1 vdd
+.subckt precharge_multiport_0 en_bar rbl1 gnd rbl0 vdd
 Xpmos_m1_w1_260_sli_dli_0 vdd vdd gnd rbl1 en_bar pmos_m1_w1_260_sli_dli
-Xpmos_m1_w1_260_sli_dli_1 vdd rbl1 gnd vdd en_bar pmos_m1_w1_260_sli_dli
-Xpmos_m1_w1_260_sli_dli_2 vdd rbl1 gnd rbl1 en_bar pmos_m1_w1_260_sli_dli
+Xpmos_m1_w1_260_sli_dli_1 vdd rbl0 gnd vdd en_bar pmos_m1_w1_260_sli_dli
+Xpmos_m1_w1_260_sli_dli_2 vdd rbl0 gnd rbl1 en_bar pmos_m1_w1_260_sli_dli
 .ends
 
-.subckt precharge_array_multiport rbl1_0 rbl1_60 en_bar rbl1_61 rbl1_50 rbl1_1 vdd
-+ rbl1_2 rbl1_40 rbl1_62 rbl1_51 rbl1_30 rbl1_41 rbl1_63 rbl1_52 rbl1_3 rbl1_4 rbl1_20
-+ rbl1_31 rbl1_42 rbl1_64 rbl1_53 rbl1_10 rbl1_21 rbl1_32 rbl1_43 rbl1_54 rbl1_5 rbl1_6
-+ rbl1_11 rbl1_22 rbl1_33 rbl1_44 rbl1_55 rbl1_12 rbl1_23 rbl1_34 rbl1_45 rbl1_56
-+ rbl1_7 rbl1_8 rbl1_13 rbl1_24 rbl1_35 rbl1_46 rbl1_57 rbl1_14 rbl1_25 rbl1_36 rbl1_47
-+ rbl1_58 rbl1_9 rbl1_15 rbl1_26 rbl1_37 rbl1_48 rbl1_59 rbl1_16 rbl1_27 rbl1_38 rbl1_49
-+ rbl1_17 rbl1_28 rbl1_39 rbl1_18 rbl1_29 rbl1_19 gnd
-Xprecharge_multiport_0_1 en_bar gnd rbl1_63 vdd precharge_multiport_0
-Xprecharge_multiport_0_2 en_bar gnd rbl1_62 vdd precharge_multiport_0
-Xprecharge_multiport_0_3 en_bar gnd rbl1_61 vdd precharge_multiport_0
-Xprecharge_multiport_0_4 en_bar gnd rbl1_60 vdd precharge_multiport_0
-Xprecharge_multiport_0_60 en_bar gnd rbl1_4 vdd precharge_multiport_0
-Xprecharge_multiport_0_5 en_bar gnd rbl1_59 vdd precharge_multiport_0
-Xprecharge_multiport_0_50 en_bar gnd rbl1_14 vdd precharge_multiport_0
-Xprecharge_multiport_0_61 en_bar gnd rbl1_3 vdd precharge_multiport_0
-Xprecharge_multiport_0_6 en_bar gnd rbl1_58 vdd precharge_multiport_0
-Xprecharge_multiport_0_7 en_bar gnd rbl1_57 vdd precharge_multiport_0
-Xprecharge_multiport_0_40 en_bar gnd rbl1_24 vdd precharge_multiport_0
-Xprecharge_multiport_0_51 en_bar gnd rbl1_13 vdd precharge_multiport_0
-Xprecharge_multiport_0_62 en_bar gnd rbl1_2 vdd precharge_multiport_0
-Xprecharge_multiport_0_8 en_bar gnd rbl1_56 vdd precharge_multiport_0
-Xprecharge_multiport_0_30 en_bar gnd rbl1_34 vdd precharge_multiport_0
-Xprecharge_multiport_0_41 en_bar gnd rbl1_23 vdd precharge_multiport_0
-Xprecharge_multiport_0_52 en_bar gnd rbl1_12 vdd precharge_multiport_0
-Xprecharge_multiport_0_63 en_bar gnd rbl1_1 vdd precharge_multiport_0
-Xprecharge_multiport_0_9 en_bar gnd rbl1_55 vdd precharge_multiport_0
-Xprecharge_multiport_0_20 en_bar gnd rbl1_44 vdd precharge_multiport_0
-Xprecharge_multiport_0_31 en_bar gnd rbl1_33 vdd precharge_multiport_0
-Xprecharge_multiport_0_42 en_bar gnd rbl1_22 vdd precharge_multiport_0
-Xprecharge_multiport_0_53 en_bar gnd rbl1_11 vdd precharge_multiport_0
-Xprecharge_multiport_0_64 en_bar gnd rbl1_0 vdd precharge_multiport_0
-Xprecharge_multiport_0_10 en_bar gnd rbl1_54 vdd precharge_multiport_0
-Xprecharge_multiport_0_21 en_bar gnd rbl1_43 vdd precharge_multiport_0
-Xprecharge_multiport_0_32 en_bar gnd rbl1_32 vdd precharge_multiport_0
-Xprecharge_multiport_0_43 en_bar gnd rbl1_21 vdd precharge_multiport_0
-Xprecharge_multiport_0_54 en_bar gnd rbl1_10 vdd precharge_multiport_0
-Xprecharge_multiport_0_11 en_bar gnd rbl1_53 vdd precharge_multiport_0
-Xprecharge_multiport_0_22 en_bar gnd rbl1_42 vdd precharge_multiport_0
-Xprecharge_multiport_0_33 en_bar gnd rbl1_31 vdd precharge_multiport_0
-Xprecharge_multiport_0_44 en_bar gnd rbl1_20 vdd precharge_multiport_0
-Xprecharge_multiport_0_55 en_bar gnd rbl1_9 vdd precharge_multiport_0
-Xprecharge_multiport_0_12 en_bar gnd rbl1_52 vdd precharge_multiport_0
-Xprecharge_multiport_0_13 en_bar gnd rbl1_51 vdd precharge_multiport_0
-Xprecharge_multiport_0_23 en_bar gnd rbl1_41 vdd precharge_multiport_0
-Xprecharge_multiport_0_24 en_bar gnd rbl1_40 vdd precharge_multiport_0
-Xprecharge_multiport_0_34 en_bar gnd rbl1_30 vdd precharge_multiport_0
-Xprecharge_multiport_0_35 en_bar gnd rbl1_29 vdd precharge_multiport_0
-Xprecharge_multiport_0_45 en_bar gnd rbl1_19 vdd precharge_multiport_0
-Xprecharge_multiport_0_46 en_bar gnd rbl1_18 vdd precharge_multiport_0
-Xprecharge_multiport_0_56 en_bar gnd rbl1_8 vdd precharge_multiport_0
-Xprecharge_multiport_0_57 en_bar gnd rbl1_7 vdd precharge_multiport_0
-Xprecharge_multiport_0_14 en_bar gnd rbl1_50 vdd precharge_multiport_0
-Xprecharge_multiport_0_25 en_bar gnd rbl1_39 vdd precharge_multiport_0
-Xprecharge_multiport_0_36 en_bar gnd rbl1_28 vdd precharge_multiport_0
-Xprecharge_multiport_0_47 en_bar gnd rbl1_17 vdd precharge_multiport_0
-Xprecharge_multiport_0_58 en_bar gnd rbl1_6 vdd precharge_multiport_0
-Xprecharge_multiport_0_15 en_bar gnd rbl1_49 vdd precharge_multiport_0
-Xprecharge_multiport_0_26 en_bar gnd rbl1_38 vdd precharge_multiport_0
-Xprecharge_multiport_0_37 en_bar gnd rbl1_27 vdd precharge_multiport_0
-Xprecharge_multiport_0_48 en_bar gnd rbl1_16 vdd precharge_multiport_0
-Xprecharge_multiport_0_59 en_bar gnd rbl1_5 vdd precharge_multiport_0
-Xprecharge_multiport_0_16 en_bar gnd rbl1_48 vdd precharge_multiport_0
-Xprecharge_multiport_0_27 en_bar gnd rbl1_37 vdd precharge_multiport_0
-Xprecharge_multiport_0_38 en_bar gnd rbl1_26 vdd precharge_multiport_0
-Xprecharge_multiport_0_49 en_bar gnd rbl1_15 vdd precharge_multiport_0
-Xprecharge_multiport_0_17 en_bar gnd rbl1_47 vdd precharge_multiport_0
-Xprecharge_multiport_0_28 en_bar gnd rbl1_36 vdd precharge_multiport_0
-Xprecharge_multiport_0_39 en_bar gnd rbl1_25 vdd precharge_multiport_0
-Xprecharge_multiport_0_18 en_bar gnd rbl1_46 vdd precharge_multiport_0
-Xprecharge_multiport_0_29 en_bar gnd rbl1_35 vdd precharge_multiport_0
-Xprecharge_multiport_0_19 en_bar gnd rbl1_45 vdd precharge_multiport_0
-Xprecharge_multiport_0_0 en_bar gnd rbl1_64 vdd precharge_multiport_0
-.ends
-
-.subckt port_data din0_15 sel_3 din0_6 p_en_bar din0_7 w_en sel_1 din0_8 din0_9 vdd
-+ dout1_10 gnd dout1_11 dout1_12 dout1_13 dout1_14 dout1_15 dout1_0 dout1_1 dout1_2
-+ precharge_array_multiport_0/rbl1_64 dout1_3 dout1_4 dout1_5 dout1_6 dout1_7 vdd_uq64
-+ vdd_uq90 dout1_8 din0_1 vdd_uq80 vdd_uq91 dout1_9 vdd_uq70 vdd_uq81 vdd_uq92 vdd_uq71
-+ vdd_uq82 vdd_uq93 vdd_uq110 vdd_uq72 vdd_uq83 vdd_uq94 vdd_uq100 vdd_uq111 vdd_uq73
-+ vdd_uq84 vdd_uq95 vdd_uq101 vdd_uq74 vdd_uq85 vdd_uq96 vdd_uq102 din0_10 vdd_uq75
-+ vdd_uq86 vdd_uq97 vdd_uq103 vdd_uq65 vdd_uq76 vdd_uq87 vdd_uq98 vdd_uq104 vdd_uq66
-+ vdd_uq77 vdd_uq88 vdd_uq99 vdd_uq105 vdd_uq67 vdd_uq78 vdd_uq89 vdd_uq106 sel_0
-+ vdd_uq68 vdd_uq79 vdd_uq107 vdd_uq69 vdd_uq108 vdd_uq109 din0_0 din0_11 din0_2 din0_12
-+ din0_3 din0_13 din0_4 din0_14 sel_2 din0_5
-Xsense_amp_array_0 vdd_uq64 vdd_uq66 vdd_uq67 vdd_uq68 dout1_10 vdd_uq69 dout1_11
-+ vdd_uq70 dout1_12 vdd_uq71 dout1_13 dout1_14 vdd_uq72 vdd_uq73 dout1_15 vdd_uq74
-+ gnd vdd_uq95 vdd_uq85 dout1_0 vdd_uq86 vdd_uq75 dout1_1 vdd_uq87 vdd_uq76 dout1_2
-+ vdd_uq88 vdd_uq77 dout1_3 vdd_uq89 vdd_uq78 vdd_uq65 dout1_4 vdd_uq90 vdd_uq79 dout1_5
-+ vdd_uq91 vdd_uq80 dout1_6 vdd_uq81 vdd_uq92 dout1_7 vdd_uq93 vdd_uq82 dout1_8 vdd_uq94
-+ vdd_uq83 dout1_9 vdd_uq84 sense_amp_array
-Xcolumn_mux_array_multiport_0 rbl1_0 rbl1_60 sel_1 sel_3 rbl1_61 rbl1_50 rbl1_1 sel_2
-+ sel_0 rbl1_2 rbl1_40 rbl1_62 rbl1_51 rbl1_30 rbl1_41 rbl1_63 rbl1_52 rbl1_3 rbl1_4
-+ rbl1_20 rbl1_31 rbl1_42 rbl1_53 rbl1_10 rbl1_21 rbl1_32 rbl1_43 rbl1_54 rbl1_5 rbl1_6
-+ rbl1_11 rbl1_22 rbl1_33 rbl1_44 rbl1_55 rbl1_12 rbl1_23 rbl1_34 rbl1_45 rbl1_56
-+ rbl1_7 rbl1_8 rbl1_13 rbl1_24 rbl1_35 rbl1_46 rbl1_57 rbl1_14 rbl1_25 rbl1_36 rbl1_47
-+ rbl1_58 rbl1_9 rbl1_15 rbl1_26 rbl1_37 rbl1_59 rbl1_48 rbl1_16 rbl1_27 rbl1_38 rbl1_49
-+ rbl1_17 rbl1_28 rbl1_39 rbl1_60 rbl1_18 rbl1_29 rbl1_61 rbl1_50 rbl1_19 rbl1_40
-+ rbl1_62 rbl1_51 rbl1_30 rbl1_41 rbl1_63 rbl1_52 rbl1_20 rbl1_31 rbl1_42 rbl1_53
+.subckt precharge_array_multiport rbl0_0 rbl0_60 en_bar rbl0_61 rbl0_50 rbl0_1 vdd
++ rbl0_2 rbl0_40 rbl0_62 rbl0_51 rbl0_30 rbl0_41 rbl0_63 rbl0_52 rbl0_3 rbl0_4 rbl0_20
++ rbl0_31 rbl0_42 rbl0_53 rbl0_10 rbl0_21 rbl0_32 rbl0_43 rbl0_54 rbl0_5 rbl0_6 rbl0_11
++ rbl0_22 rbl0_33 rbl0_44 rbl0_55 rbl0_12 rbl0_23 rbl0_34 rbl0_45 rbl0_56 rbl0_7 rbl0_8
++ rbl0_13 rbl0_24 rbl0_35 rbl0_46 rbl0_57 rbl0_14 rbl0_25 rbl0_36 rbl0_47 rbl0_58
++ rbl0_9 rbl0_15 rbl0_26 rbl0_37 rbl0_48 rbl0_59 rbl0_16 rbl0_27 rbl0_38 rbl0_49 rbl0_17
++ rbl0_28 rbl0_39 rbl1_60 rbl0_18 rbl0_29 rbl1_61 rbl1_50 rbl0_19 rbl1_40 rbl1_62
++ rbl1_51 rbl1_30 rbl1_41 rbl1_63 rbl1_52 rbl1_20 rbl1_31 rbl1_42 rbl1_64 rbl1_53
 + rbl1_0 rbl1_10 rbl1_21 rbl1_32 rbl1_43 rbl1_54 rbl1_1 rbl1_11 rbl1_22 rbl1_33 rbl1_44
-+ rbl1_55 rbl1_2 gnd rbl1_12 rbl1_23 rbl1_34 rbl1_45 rbl1_56 rbl1_3 rbl1_13 rbl1_24
++ rbl1_55 rbl1_2 rbl1_12 rbl1_23 rbl1_34 rbl1_45 rbl1_56 rbl1_3 rbl1_13 rbl1_24 rbl1_35
++ rbl1_46 rbl1_57 rbl1_4 rbl1_14 rbl1_25 rbl1_36 rbl1_47 rbl1_58 rbl1_5 rbl1_15 rbl1_26
++ rbl1_37 rbl1_48 rbl1_59 rbl1_6 rbl1_16 rbl1_27 rbl1_38 rbl1_49 rbl1_7 gnd rbl1_17
++ rbl1_28 rbl1_39 rbl1_8 rbl1_18 rbl1_29 rbl1_9 rbl1_19
+Xprecharge_multiport_0_1 en_bar rbl1_63 gnd rbl0_63 vdd precharge_multiport_0
+Xprecharge_multiport_0_2 en_bar rbl1_62 gnd rbl0_62 vdd precharge_multiport_0
+Xprecharge_multiport_0_3 en_bar rbl1_61 gnd rbl0_61 vdd precharge_multiport_0
+Xprecharge_multiport_0_4 en_bar rbl1_60 gnd rbl0_60 vdd precharge_multiport_0
+Xprecharge_multiport_0_60 en_bar rbl1_4 gnd rbl0_4 vdd precharge_multiport_0
+Xprecharge_multiport_0_5 en_bar rbl1_59 gnd rbl0_59 vdd precharge_multiport_0
+Xprecharge_multiport_0_50 en_bar rbl1_14 gnd rbl0_14 vdd precharge_multiport_0
+Xprecharge_multiport_0_61 en_bar rbl1_3 gnd rbl0_3 vdd precharge_multiport_0
+Xprecharge_multiport_0_6 en_bar rbl1_58 gnd rbl0_58 vdd precharge_multiport_0
+Xprecharge_multiport_0_7 en_bar rbl1_57 gnd rbl0_57 vdd precharge_multiport_0
+Xprecharge_multiport_0_40 en_bar rbl1_24 gnd rbl0_24 vdd precharge_multiport_0
+Xprecharge_multiport_0_51 en_bar rbl1_13 gnd rbl0_13 vdd precharge_multiport_0
+Xprecharge_multiport_0_62 en_bar rbl1_2 gnd rbl0_2 vdd precharge_multiport_0
+Xprecharge_multiport_0_8 en_bar rbl1_56 gnd rbl0_56 vdd precharge_multiport_0
+Xprecharge_multiport_0_30 en_bar rbl1_34 gnd rbl0_34 vdd precharge_multiport_0
+Xprecharge_multiport_0_41 en_bar rbl1_23 gnd rbl0_23 vdd precharge_multiport_0
+Xprecharge_multiport_0_52 en_bar rbl1_12 gnd rbl0_12 vdd precharge_multiport_0
+Xprecharge_multiport_0_63 en_bar rbl1_1 gnd rbl0_1 vdd precharge_multiport_0
+Xprecharge_multiport_0_9 en_bar rbl1_55 gnd rbl0_55 vdd precharge_multiport_0
+Xprecharge_multiport_0_20 en_bar rbl1_44 gnd rbl0_44 vdd precharge_multiport_0
+Xprecharge_multiport_0_31 en_bar rbl1_33 gnd rbl0_33 vdd precharge_multiport_0
+Xprecharge_multiport_0_42 en_bar rbl1_22 gnd rbl0_22 vdd precharge_multiport_0
+Xprecharge_multiport_0_53 en_bar rbl1_11 gnd rbl0_11 vdd precharge_multiport_0
+Xprecharge_multiport_0_64 en_bar rbl1_0 gnd rbl0_0 vdd precharge_multiport_0
+Xprecharge_multiport_0_10 en_bar rbl1_54 gnd rbl0_54 vdd precharge_multiport_0
+Xprecharge_multiport_0_21 en_bar rbl1_43 gnd rbl0_43 vdd precharge_multiport_0
+Xprecharge_multiport_0_32 en_bar rbl1_32 gnd rbl0_32 vdd precharge_multiport_0
+Xprecharge_multiport_0_43 en_bar rbl1_21 gnd rbl0_21 vdd precharge_multiport_0
+Xprecharge_multiport_0_54 en_bar rbl1_10 gnd rbl0_10 vdd precharge_multiport_0
+Xprecharge_multiport_0_11 en_bar rbl1_53 gnd rbl0_53 vdd precharge_multiport_0
+Xprecharge_multiport_0_22 en_bar rbl1_42 gnd rbl0_42 vdd precharge_multiport_0
+Xprecharge_multiport_0_33 en_bar rbl1_31 gnd rbl0_31 vdd precharge_multiport_0
+Xprecharge_multiport_0_44 en_bar rbl1_20 gnd rbl0_20 vdd precharge_multiport_0
+Xprecharge_multiport_0_55 en_bar rbl1_9 gnd rbl0_9 vdd precharge_multiport_0
+Xprecharge_multiport_0_12 en_bar rbl1_52 gnd rbl0_52 vdd precharge_multiport_0
+Xprecharge_multiport_0_13 en_bar rbl1_51 gnd rbl0_51 vdd precharge_multiport_0
+Xprecharge_multiport_0_23 en_bar rbl1_41 gnd rbl0_41 vdd precharge_multiport_0
+Xprecharge_multiport_0_24 en_bar rbl1_40 gnd rbl0_40 vdd precharge_multiport_0
+Xprecharge_multiport_0_34 en_bar rbl1_30 gnd rbl0_30 vdd precharge_multiport_0
+Xprecharge_multiport_0_35 en_bar rbl1_29 gnd rbl0_29 vdd precharge_multiport_0
+Xprecharge_multiport_0_45 en_bar rbl1_19 gnd rbl0_19 vdd precharge_multiport_0
+Xprecharge_multiport_0_46 en_bar rbl1_18 gnd rbl0_18 vdd precharge_multiport_0
+Xprecharge_multiport_0_56 en_bar rbl1_8 gnd rbl0_8 vdd precharge_multiport_0
+Xprecharge_multiport_0_57 en_bar rbl1_7 gnd rbl0_7 vdd precharge_multiport_0
+Xprecharge_multiport_0_14 en_bar rbl1_50 gnd rbl0_50 vdd precharge_multiport_0
+Xprecharge_multiport_0_25 en_bar rbl1_39 gnd rbl0_39 vdd precharge_multiport_0
+Xprecharge_multiport_0_36 en_bar rbl1_28 gnd rbl0_28 vdd precharge_multiport_0
+Xprecharge_multiport_0_47 en_bar rbl1_17 gnd rbl0_17 vdd precharge_multiport_0
+Xprecharge_multiport_0_58 en_bar rbl1_6 gnd rbl0_6 vdd precharge_multiport_0
+Xprecharge_multiport_0_15 en_bar rbl1_49 gnd rbl0_49 vdd precharge_multiport_0
+Xprecharge_multiport_0_26 en_bar rbl1_38 gnd rbl0_38 vdd precharge_multiport_0
+Xprecharge_multiport_0_37 en_bar rbl1_27 gnd rbl0_27 vdd precharge_multiport_0
+Xprecharge_multiport_0_48 en_bar rbl1_16 gnd rbl0_16 vdd precharge_multiport_0
+Xprecharge_multiport_0_59 en_bar rbl1_5 gnd rbl0_5 vdd precharge_multiport_0
+Xprecharge_multiport_0_16 en_bar rbl1_48 gnd rbl0_48 vdd precharge_multiport_0
+Xprecharge_multiport_0_27 en_bar rbl1_37 gnd rbl0_37 vdd precharge_multiport_0
+Xprecharge_multiport_0_38 en_bar rbl1_26 gnd rbl0_26 vdd precharge_multiport_0
+Xprecharge_multiport_0_49 en_bar rbl1_15 gnd rbl0_15 vdd precharge_multiport_0
+Xprecharge_multiport_0_17 en_bar rbl1_47 gnd rbl0_47 vdd precharge_multiport_0
+Xprecharge_multiport_0_28 en_bar rbl1_36 gnd rbl0_36 vdd precharge_multiport_0
+Xprecharge_multiport_0_39 en_bar rbl1_25 gnd rbl0_25 vdd precharge_multiport_0
+Xprecharge_multiport_0_18 en_bar rbl1_46 gnd rbl0_46 vdd precharge_multiport_0
+Xprecharge_multiport_0_29 en_bar rbl1_35 gnd rbl0_35 vdd precharge_multiport_0
+Xprecharge_multiport_0_19 en_bar rbl1_45 gnd rbl0_45 vdd precharge_multiport_0
+Xprecharge_multiport_0_0 en_bar rbl1_64 gnd rbl0_64 vdd precharge_multiport_0
+.ends
+
+.subckt port_data p_en_bar din0_15 sel_3 din0_6 din0_7 w_en vdd din0_8 gnd din0_9
++ dout1_10 dout1_11 dout1_12 dout1_13 dout1_14 dout1_15 dout1_0 dout1_1 dout1_2 dout1_3
++ dout1_4 dout1_5 dout1_6 vdd_uq96 dout1_7 vdd_uq91 dout1_8 vdd_uq81 dout1_9 vdd_uq71
++ vdd_uq93 vdd_uq69 vdd_uq83 vdd_uq110 vdd_uq73 vdd_uq95 vdd_uq100 vdd_uq111 precharge_array_multiport_0/rbl1_64
++ vdd_uq85 vdd_uq101 vdd_uq104 vdd_uq75 vdd_uq102 vdd_uq105 din0_10 vdd_uq65 vdd_uq87
++ vdd_uq97 vdd_uq103 vdd_uq77 vdd_uq98 vdd_uq67 vdd_uq89 vdd_uq99 vdd_uq79 vdd_uq106
++ sel_0 vdd_uq107 vdd_uq108 vdd_uq109 din0_0 din0_1 din0_11 din0_2 din0_12 din0_3
++ din0_13 sel_1 din0_4 din0_14 sel_2 din0_5
+Xsense_amp_array_0 vdd_uq65 vdd_uq67 vdd_uq69 dout1_10 dout1_11 vdd_uq71 dout1_12
++ dout1_13 dout1_14 vdd_uq73 dout1_15 vdd_uq75 gnd vdd_uq85 dout1_0 vdd_uq87 dout1_1
++ vdd_uq77 dout1_2 vdd_uq89 dout1_3 vdd_uq79 dout1_4 vdd_uq91 dout1_5 vdd_uq81 dout1_6
++ vdd_uq93 dout1_7 vdd_uq83 dout1_8 vdd_uq95 dout1_9 sense_amp_array
+Xcolumn_mux_array_multiport_0 rbl0_0 rbl0_60 sel_1 sel_3 rbl0_61 rbl0_50 rbl0_1 sel_2
++ sel_0 rbl0_2 rbl0_40 rbl0_62 rbl0_51 rbl0_30 rbl0_41 rbl0_63 rbl0_52 rbl0_3 rbl0_4
++ rbl0_20 rbl0_31 rbl0_42 rbl0_53 rbl0_10 rbl0_21 rbl0_32 rbl0_43 rbl0_54 rbl0_5 rbl0_6
++ rbl0_11 rbl0_22 rbl0_33 rbl0_44 rbl0_55 rbl0_12 rbl0_23 rbl0_34 rbl0_45 rbl0_56
++ rbl0_7 rbl0_8 rbl0_13 rbl0_24 rbl0_35 rbl0_46 rbl0_57 rbl0_14 rbl0_25 rbl0_36 rbl0_47
++ rbl0_58 rbl0_9 rbl0_15 rbl0_26 rbl0_37 rbl0_59 rbl0_48 rbl0_16 rbl0_27 rbl0_38 rbl0_49
++ rbl0_17 rbl0_28 rbl0_39 rbl1_60 rbl0_18 rbl0_29 rbl1_61 rbl1_50 rbl0_19 rbl1_40
++ rbl1_62 rbl1_51 rbl1_30 rbl1_41 rbl1_63 rbl1_52 rbl1_20 rbl1_31 rbl1_42 rbl1_53
++ rbl1_0 rbl1_10 rbl1_21 rbl1_32 rbl1_43 rbl1_54 rbl1_1 gnd rbl1_11 rbl1_22 rbl1_33
++ rbl1_44 rbl1_55 rbl1_2 rbl1_12 rbl1_23 rbl1_34 rbl1_45 rbl1_56 rbl1_3 rbl1_13 rbl1_24
 + rbl1_35 rbl1_46 rbl1_57 rbl1_4 rbl1_14 rbl1_25 rbl1_36 rbl1_47 rbl1_58 rbl1_5 rbl1_15
 + rbl1_26 rbl1_37 rbl1_59 rbl1_48 rbl1_6 rbl1_16 rbl1_27 rbl1_38 rbl1_49 rbl1_7 rbl1_17
 + rbl1_28 rbl1_39 rbl1_8 rbl1_18 rbl1_29 rbl1_9 rbl1_19 column_mux_array_multiport
 Xwrite_driver_array_0 din0_7 din0_8 vdd_uq96 din0_9 vdd_uq98 w_en vdd_uq99 vdd_uq100
-+ vdd_uq102 vdd_uq101 vdd_uq103 vdd_uq104 vdd_uq105 vdd_uq106 wbl0_0 din0_1 gnd wbl0_1
-+ wbl0_2 wbl0_3 din0_10 din0_11 din0_12 din0_13 din0_14 vdd_uq107 din0_15 vdd_uq109
-+ vdd_uq108 vdd_uq110 vdd_uq111 vdd_uq97 din0_0 din0_2 din0_3 din0_4 din0_5 din0_6
-+ write_driver_array
-Xprecharge_array_multiport_0 rbl1_0 rbl1_60 p_en_bar rbl1_61 rbl1_50 rbl1_1 vdd rbl1_2
-+ rbl1_40 rbl1_62 rbl1_51 rbl1_30 rbl1_41 rbl1_63 rbl1_52 rbl1_3 rbl1_4 rbl1_20 rbl1_31
-+ rbl1_42 precharge_array_multiport_0/rbl1_64 rbl1_53 rbl1_10 rbl1_21 rbl1_32 rbl1_43
-+ rbl1_54 rbl1_5 rbl1_6 rbl1_11 rbl1_22 rbl1_33 rbl1_44 rbl1_55 rbl1_12 rbl1_23 rbl1_34
-+ rbl1_45 rbl1_56 rbl1_7 rbl1_8 rbl1_13 rbl1_24 rbl1_35 rbl1_46 rbl1_57 rbl1_14 rbl1_25
-+ rbl1_36 rbl1_47 rbl1_58 rbl1_9 rbl1_15 rbl1_26 rbl1_37 rbl1_48 rbl1_59 rbl1_16 rbl1_27
-+ rbl1_38 rbl1_49 rbl1_17 rbl1_28 rbl1_39 rbl1_18 rbl1_29 rbl1_19 gnd precharge_array_multiport
++ vdd_uq102 vdd_uq101 vdd_uq103 vdd_uq104 vdd_uq105 vdd_uq106 wbl0_0 gnd wbl0_1 wbl0_2
++ wbl0_3 din0_10 din0_11 din0_12 din0_13 din0_14 vdd_uq107 din0_15 vdd_uq109 vdd_uq108
++ vdd_uq110 vdd_uq111 vdd_uq97 din0_0 din0_1 din0_2 din0_3 din0_4 din0_5 din0_6 write_driver_array
+Xprecharge_array_multiport_0 rbl0_0 rbl0_60 p_en_bar rbl0_61 rbl0_50 rbl0_1 vdd rbl0_2
++ rbl0_40 rbl0_62 rbl0_51 rbl0_30 rbl0_41 rbl0_63 rbl0_52 rbl0_3 rbl0_4 rbl0_20 rbl0_31
++ rbl0_42 rbl0_53 rbl0_10 rbl0_21 rbl0_32 rbl0_43 rbl0_54 rbl0_5 rbl0_6 rbl0_11 rbl0_22
++ rbl0_33 rbl0_44 rbl0_55 rbl0_12 rbl0_23 rbl0_34 rbl0_45 rbl0_56 rbl0_7 rbl0_8 rbl0_13
++ rbl0_24 rbl0_35 rbl0_46 rbl0_57 rbl0_14 rbl0_25 rbl0_36 rbl0_47 rbl0_58 rbl0_9 rbl0_15
++ rbl0_26 rbl0_37 rbl0_48 rbl0_59 rbl0_16 rbl0_27 rbl0_38 rbl0_49 rbl0_17 rbl0_28
++ rbl0_39 rbl1_60 rbl0_18 rbl0_29 rbl1_61 rbl1_50 rbl0_19 rbl1_40 rbl1_62 rbl1_51
++ rbl1_30 rbl1_41 rbl1_63 rbl1_52 rbl1_20 rbl1_31 rbl1_42 precharge_array_multiport_0/rbl1_64
++ rbl1_53 rbl1_0 rbl1_10 rbl1_21 rbl1_32 rbl1_43 rbl1_54 rbl1_1 rbl1_11 rbl1_22 rbl1_33
++ rbl1_44 rbl1_55 rbl1_2 rbl1_12 rbl1_23 rbl1_34 rbl1_45 rbl1_56 rbl1_3 rbl1_13 rbl1_24
++ rbl1_35 rbl1_46 rbl1_57 rbl1_4 rbl1_14 rbl1_25 rbl1_36 rbl1_47 rbl1_58 rbl1_5 rbl1_15
++ rbl1_26 rbl1_37 rbl1_48 rbl1_59 rbl1_6 rbl1_16 rbl1_27 rbl1_38 rbl1_49 rbl1_7 gnd
++ rbl1_17 rbl1_28 rbl1_39 rbl1_8 rbl1_18 rbl1_29 rbl1_9 rbl1_19 precharge_array_multiport
 .ends
 
 .subckt pdriver Z gnd vdd A
 Xpinv_0_0 A Z gnd vdd pinv_0
 .ends
 
-.subckt pand2 B Z gnd A
-Xpnand2_0_0 B B gnd A pnand2_0
-Xpdriver_0 Z gnd B B pdriver
+.subckt pand2 vdd Z gnd A B
+Xpnand2_0_0 vdd pdriver_0/A gnd A vdd B pnand2_0
+Xpdriver_0 Z gnd vdd pdriver_0/A pdriver
 .ends
 
-.subckt hierarchical_predecode2x4_0 vdd_uq0 out_0 out_1 out_2 out_3 pand2_3/A in_0
-+ gnd vdd
-Xpinv_1_0 vdd_uq0 gnd vdd_uq0 vdd pinv_1
-Xpinv_1_1 pand2_3/A gnd vdd_uq0 in_0 pinv_1
-Xpand2_0 vdd out_3 gnd in_0 pand2
-Xpand2_1 vdd out_2 gnd pand2_3/A pand2
-Xpand2_2 vdd_uq0 out_1 gnd in_0 pand2
-Xpand2_3 vdd_uq0 out_0 gnd pand2_3/A pand2
+.subckt hierarchical_predecode2x4_0 pand2_3/B vdd_uq0 in_0 in_1 out_0 out_1 out_2
++ out_3 pand2_3/A gnd vdd
+Xpinv_1_0 in_1 pand2_3/B gnd vdd_uq0 pinv_1
+Xpinv_1_1 in_0 pand2_3/A gnd vdd_uq0 pinv_1
+Xpand2_0 vdd out_3 gnd in_0 in_1 pand2
+Xpand2_1 vdd out_2 gnd pand2_3/A in_1 pand2
+Xpand2_2 vdd_uq0 out_1 gnd in_0 pand2_3/B pand2
+Xpand2_3 vdd_uq0 out_0 gnd pand2_3/A pand2_3/B pand2
 .ends
 
 .subckt pinv Z A gnd vdd
@@ -895,7 +901,7 @@ Xpinv_0 Z pinv_0/A gnd vdd pinv
 Xpnand2_0 pinv_0/A gnd vdd A B pnand2
 .ends
 
-.subckt hierarchical_predecode2x4 in_1 vdd_uq0 out_0 out_1 out_2 out_3 in_0 gnd vdd
+.subckt hierarchical_predecode2x4 in_1 vdd_uq0 gnd out_0 out_1 out_2 out_3 in_0 vdd
 Xand2_dec_0 out_3 gnd vdd in_0 in_1 and2_dec
 Xand2_dec_1 out_2 gnd vdd pinv_1/Z in_1 and2_dec
 Xpinv_0 pinv_0/Z in_1 gnd vdd_uq0 pinv
@@ -904,35 +910,34 @@ Xpinv_1 pinv_1/Z in_0 gnd vdd_uq0 pinv
 Xand2_dec_3 out_0 gnd vdd_uq0 pinv_1/Z pinv_0/Z and2_dec
 .ends
 
-.subckt dec_cell3_2r1w A0 B0 C0 A1 B1 C1 A2 B2 C2 OUT1 OUT0 OUT2 vdd gnd a_124_230#
-+ a_808_230# a_412_230# net3 net6 a_220_230# net9 a_904_230# a_508_230#
-X0 a_124_230# A0 net3 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
-X1 net6 A1 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
-X2 OUT2 net9 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
-X3 vdd C0 net3 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+.subckt dec_cell3_2r1w A0 B0 C0 A1 B1 C1 A2 B2 C2 OUT2 vdd gnd OUT0 OUT1
+X0 vdd A2 net9 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X1 a_124_132# A0 net3 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X2 net6 A1 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X3 OUT2 net9 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
 X4 OUT2 net9 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
-X5 net6 C1 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
-X6 vdd C2 net9 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
-X7 OUT1 net6 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
-X8 vdd B1 net6 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
-X9 vdd A0 net3 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
-X10 net9 B2 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
-X11 vdd net3 OUT0 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
-X12 a_220_230# B0 a_124_230# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
-X13 OUT1 net6 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
-X14 gnd C0 a_220_230# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
-X15 a_412_230# A1 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
-X16 net6 C1 a_508_230# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
-X17 gnd net3 OUT0 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
-X18 a_508_230# B1 a_412_230# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
-X19 net3 B0 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
-X20 a_904_230# B2 a_808_230# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
-X21 gnd C2 a_904_230# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
-X22 a_808_230# A2 net9 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
-X23 vdd A2 net9 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X5 vdd C0 net3 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X6 net6 C1 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X7 vdd C2 net9 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X8 OUT0 net6 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X9 a_220_132# B0 a_124_132# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X10 a_412_132# A1 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X11 gnd net3 OUT1 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X12 OUT0 net6 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X13 gnd C0 a_220_132# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X14 a_508_132# B1 a_412_132# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X15 net6 C1 a_508_132# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X16 vdd B1 net6 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X17 vdd A0 net3 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X18 net9 B2 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X19 vdd net3 OUT1 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
+X20 a_808_132# A2 net9 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X21 a_904_132# B2 a_808_132# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X22 gnd C2 a_904_132# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X23 net3 B0 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
 .ends
 
-.subckt pnand3 Z gnd vdd A B C
+.subckt pnand3 gnd Z vdd A B C
 Xpmos_m1_w1_260_sli_dli_0 vdd vdd gnd Z C pmos_m1_w1_260_sli_dli
 Xpmos_m1_w1_260_sli_dli_1 vdd Z gnd vdd B pmos_m1_w1_260_sli_dli
 Xpmos_m1_w1_260_sli_dli_2 vdd vdd gnd Z A pmos_m1_w1_260_sli_dli
@@ -941,531 +946,139 @@ Xnmos_m1_w0_840_sactive_dli_0 a_244_51# gnd Z C nmos_m1_w0_840_sactive_dli
 X0 a_244_51# B a_154_51# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
 .ends
 
-.subckt and3_dec Z vdd gnd A B C
+.subckt and3_dec Z gnd vdd A B C
 Xpinv_0 Z pinv_0/A gnd vdd pinv
-Xpnand3_0 pinv_0/A gnd vdd A B C pnand3
+Xpnand3_0 gnd pinv_0/A vdd A B C pnand3
 .ends
 
-.subckt hierarchical_predecode3x8 vdd_uq0 vdd_uq1 vdd_uq2 out_0 out_1 out_2 out_3
-+ out_4 out_5 out_7 out_6 in_0 gnd in_1 in_2 vdd
-Xand3_dec_1 out_6 vdd_uq2 gnd pinv_2/Z in_1 in_2 and3_dec
-Xand3_dec_2 out_5 vdd_uq1 gnd in_0 pinv_1/Z in_2 and3_dec
+.subckt hierarchical_predecode3x8 vdd_uq0 gnd vdd_uq1 vdd_uq2 out_0 out_1 out_2 out_3
++ out_4 out_5 out_7 out_6 in_0 in_1 in_2 vdd
+Xand3_dec_1 out_6 gnd vdd_uq2 pinv_2/Z in_1 in_2 and3_dec
+Xand3_dec_2 out_5 gnd vdd_uq1 in_0 pinv_1/Z in_2 and3_dec
 Xpinv_0 pinv_0/Z in_2 gnd vdd pinv
-Xand3_dec_3 out_4 vdd_uq1 gnd pinv_2/Z pinv_1/Z in_2 and3_dec
+Xand3_dec_3 out_4 gnd vdd_uq1 pinv_2/Z pinv_1/Z in_2 and3_dec
 Xpinv_1 pinv_1/Z in_1 gnd vdd_uq0 pinv
-Xand3_dec_4 out_3 vdd gnd in_0 in_1 pinv_0/Z and3_dec
+Xand3_dec_4 out_3 gnd vdd in_0 in_1 pinv_0/Z and3_dec
 Xpinv_2 pinv_2/Z in_0 gnd vdd_uq0 pinv
-Xand3_dec_5 out_2 vdd gnd pinv_2/Z in_1 pinv_0/Z and3_dec
-Xand3_dec_6 out_1 vdd_uq0 gnd in_0 pinv_1/Z pinv_0/Z and3_dec
-Xand3_dec_7 out_0 vdd_uq0 gnd pinv_2/Z pinv_1/Z pinv_0/Z and3_dec
-Xand3_dec_0 out_7 vdd_uq2 gnd in_0 in_1 in_2 and3_dec
+Xand3_dec_5 out_2 gnd vdd pinv_2/Z in_1 pinv_0/Z and3_dec
+Xand3_dec_6 out_1 gnd vdd_uq0 in_0 pinv_1/Z pinv_0/Z and3_dec
+Xand3_dec_7 out_0 gnd vdd_uq0 pinv_2/Z pinv_1/Z pinv_0/Z and3_dec
+Xand3_dec_0 out_7 gnd vdd_uq2 in_0 in_1 in_2 and3_dec
 .ends
 
 .subckt hierarchical_decoder addr_0 decode0_6 decode2_9 decode1_21 decode1_10 addr_1
-+ gnd decode1_22 decode0_7 decode1_11 addr_2 decode1_23 vdd_uq2 decode0_8 decode1_12
-+ addr_3 decode1_24 decode1_13 decode0_9 addr_4 decode1_25 decode1_14 vdd_uq4 addr_5
-+ decode1_26 decode1_15 addr_6 decode1_27 decode1_16 vdd_uq6 decode1_28 decode1_17
-+ decode1_29 decode1_18 vdd_uq8 decode1_19 decode2_30 vdd_uq9 decode1_0 decode2_31
-+ decode2_20 decode1_1 decode2_21 decode2_10 decode1_2 decode2_22 decode1_3 decode2_11
-+ decode2_23 decode2_12 decode1_4 decode2_24 decode2_13 decode1_5 decode2_25 decode2_14
-+ decode1_6 decode2_26 decode2_15 decode1_7 decode2_27 decode2_16 decode1_8 decode2_28
-+ decode2_17 decode1_9 decode2_29 decode2_18 vdd decode2_19 decode0_30 vdd_uq30 decode0_31
-+ decode0_20 vdd_uq20 decode0_21 decode0_10 vdd_uq21 decode0_22 decode0_11 vdd_uq22
-+ vdd_uq12 decode0_23 decode0_12 vdd_uq23 decode0_24 decode0_13 decode2_0 vdd_uq24
-+ vdd_uq14 decode0_25 decode0_14 decode2_1 vdd_uq25 decode0_26 decode0_15 decode2_2
-+ vdd_uq26 decode0_27 decode0_16 decode0_0 decode2_3 vdd_uq16 vdd_uq27 decode0_28
++ decode1_22 decode0_7 decode1_11 addr_2 decode1_23 vdd_uq2 decode0_8 decode1_12 addr_3
++ decode1_24 decode1_13 decode0_9 addr_4 decode1_25 decode1_14 vdd_uq4 addr_5 decode1_26
++ decode1_15 addr_6 decode1_27 decode1_16 vdd_uq6 decode1_28 decode1_17 decode1_29
++ decode1_18 vdd_uq8 decode1_19 decode2_30 vdd_uq9 decode1_0 gnd decode2_31 decode2_20
++ decode1_1 decode2_21 decode2_10 decode1_2 decode2_22 decode1_3 decode2_11 decode2_23
++ decode2_12 decode1_4 decode2_24 decode2_13 decode1_5 decode2_25 decode2_14 decode1_6
++ decode2_26 decode2_15 decode1_7 decode2_27 decode2_16 decode1_8 decode2_28 decode2_17
++ decode1_9 decode2_29 decode2_18 decode2_19 decode0_30 vdd_uq30 decode0_31 decode0_20
++ vdd_uq20 decode0_21 decode0_10 vdd_uq21 decode0_22 decode0_11 vdd_uq22 vdd_uq12
++ decode0_23 decode0_12 vdd_uq23 decode0_24 decode0_13 decode2_0 vdd_uq24 vdd_uq14
++ decode0_25 decode0_14 vdd decode2_1 vdd_uq25 decode0_26 decode0_15 decode2_2 vdd_uq26
++ vdd_uq15 decode0_27 decode0_16 decode0_0 decode2_3 vdd_uq16 vdd_uq27 decode0_28
 + decode0_17 decode2_4 decode0_1 vdd_uq28 vdd_uq17 decode0_29 decode0_18 decode0_2
 + decode2_5 vdd_uq29 vdd_uq18 decode0_19 decode2_6 decode0_3 vdd_uq19 decode0_4 decode2_7
 + decode1_30 decode2_8 decode1_31 decode1_20 decode0_5
-Xhierarchical_predecode2x4_0 addr_3 vdd_uq4 predecode_8 predecode_5 predecode_6 predecode_8
-+ addr_2 gnd vdd_uq6 hierarchical_predecode2x4
-Xhierarchical_predecode2x4_1 addr_1 vdd predecode_8 predecode_8 predecode_2 predecode_8
-+ addr_0 gnd vdd_uq2 hierarchical_predecode2x4
-Xdec_cell3_2r1w_90 predecode_2 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_9 decode1_5 decode0_5 decode2_5 vdd_uq17 gnd dec_cell3_2r1w_90/a_124_230#
-+ dec_cell3_2r1w_90/a_808_230# dec_cell3_2r1w_90/a_412_230# dec_cell3_2r1w_90/net3
-+ dec_cell3_2r1w_90/net6 dec_cell3_2r1w_90/a_220_230# dec_cell3_2r1w_90/net9 dec_cell3_2r1w_90/a_904_230#
-+ dec_cell3_2r1w_90/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_80 predecode_8 predecode_8 predecode_10 predecode_8 predecode_8 predecode_10
-+ predecode_2 predecode_8 predecode_10 decode1_15 decode0_15 decode2_15 vdd_uq22 gnd
-+ dec_cell3_2r1w_80/a_124_230# dec_cell3_2r1w_80/a_808_230# dec_cell3_2r1w_80/a_412_230#
-+ dec_cell3_2r1w_80/net3 dec_cell3_2r1w_80/net6 dec_cell3_2r1w_80/a_220_230# dec_cell3_2r1w_80/net9
-+ dec_cell3_2r1w_80/a_904_230# dec_cell3_2r1w_80/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_91 predecode_8 predecode_6 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 decode1_4 decode0_4 decode2_4 vdd_uq17 gnd dec_cell3_2r1w_91/a_124_230#
-+ dec_cell3_2r1w_91/a_808_230# dec_cell3_2r1w_91/a_412_230# dec_cell3_2r1w_91/net3
-+ dec_cell3_2r1w_91/net6 dec_cell3_2r1w_91/a_220_230# dec_cell3_2r1w_91/net9 dec_cell3_2r1w_91/a_904_230#
-+ dec_cell3_2r1w_91/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_70 predecode_2 predecode_6 predecode_12 predecode_8 predecode_6 predecode_12
-+ predecode_8 predecode_8 predecode_12 decode1_25 decode0_25 decode2_25 vdd_uq27 gnd
-+ dec_cell3_2r1w_70/a_124_230# dec_cell3_2r1w_70/a_808_230# dec_cell3_2r1w_70/a_412_230#
-+ dec_cell3_2r1w_70/net3 dec_cell3_2r1w_70/net6 dec_cell3_2r1w_70/a_220_230# dec_cell3_2r1w_70/net9
-+ dec_cell3_2r1w_70/a_904_230# dec_cell3_2r1w_70/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_81 predecode_8 predecode_6 predecode_10 predecode_2 predecode_6 predecode_10
-+ predecode_8 predecode_6 predecode_10 decode1_14 decode0_14 decode2_14 vdd_uq22 gnd
-+ dec_cell3_2r1w_81/a_124_230# dec_cell3_2r1w_81/a_808_230# dec_cell3_2r1w_81/a_412_230#
-+ dec_cell3_2r1w_81/net3 dec_cell3_2r1w_81/net6 dec_cell3_2r1w_81/a_220_230# dec_cell3_2r1w_81/net9
-+ dec_cell3_2r1w_81/a_904_230# dec_cell3_2r1w_81/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_92 predecode_8 predecode_6 predecode_8 predecode_8 predecode_6 predecode_8
-+ predecode_2 predecode_6 predecode_8 decode1_3 decode0_3 decode2_3 vdd_uq16 gnd dec_cell3_2r1w_92/a_124_230#
-+ dec_cell3_2r1w_92/a_808_230# dec_cell3_2r1w_92/a_412_230# dec_cell3_2r1w_92/net3
-+ dec_cell3_2r1w_92/net6 dec_cell3_2r1w_92/a_220_230# dec_cell3_2r1w_92/net9 dec_cell3_2r1w_92/a_904_230#
-+ dec_cell3_2r1w_92/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_71 predecode_8 predecode_5 predecode_12 predecode_8 predecode_6 predecode_12
-+ predecode_8 predecode_6 predecode_12 decode1_24 decode0_24 decode2_24 vdd_uq27 gnd
-+ dec_cell3_2r1w_71/a_124_230# dec_cell3_2r1w_71/a_808_230# dec_cell3_2r1w_71/a_412_230#
-+ dec_cell3_2r1w_71/net3 dec_cell3_2r1w_71/net6 dec_cell3_2r1w_71/a_220_230# dec_cell3_2r1w_71/net9
-+ dec_cell3_2r1w_71/a_904_230# dec_cell3_2r1w_71/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_82 predecode_2 predecode_5 predecode_10 predecode_8 predecode_5 predecode_10
-+ predecode_8 predecode_6 predecode_10 decode1_13 decode0_13 decode2_13 vdd_uq21 gnd
-+ dec_cell3_2r1w_82/a_124_230# dec_cell3_2r1w_82/a_808_230# dec_cell3_2r1w_82/a_412_230#
-+ dec_cell3_2r1w_82/net3 dec_cell3_2r1w_82/net6 dec_cell3_2r1w_82/a_220_230# dec_cell3_2r1w_82/net9
-+ dec_cell3_2r1w_82/a_904_230# dec_cell3_2r1w_82/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_60 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_93 predecode_8 predecode_5 predecode_8 predecode_2 predecode_5 predecode_8
-+ predecode_8 predecode_5 predecode_8 decode1_2 decode0_2 decode2_2 vdd_uq16 gnd dec_cell3_2r1w_93/a_124_230#
-+ dec_cell3_2r1w_93/a_808_230# dec_cell3_2r1w_93/a_412_230# dec_cell3_2r1w_93/net3
-+ dec_cell3_2r1w_93/net6 dec_cell3_2r1w_93/a_220_230# dec_cell3_2r1w_93/net9 dec_cell3_2r1w_93/a_904_230#
-+ dec_cell3_2r1w_93/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_72 predecode_8 predecode_5 predecode_12 predecode_8 predecode_5 predecode_12
-+ predecode_2 predecode_5 predecode_12 decode1_23 decode0_23 decode2_23 vdd_uq26 gnd
-+ dec_cell3_2r1w_72/a_124_230# dec_cell3_2r1w_72/a_808_230# dec_cell3_2r1w_72/a_412_230#
-+ dec_cell3_2r1w_72/net3 dec_cell3_2r1w_72/net6 dec_cell3_2r1w_72/a_220_230# dec_cell3_2r1w_72/net9
-+ dec_cell3_2r1w_72/a_904_230# dec_cell3_2r1w_72/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_83 predecode_8 predecode_8 predecode_10 predecode_8 predecode_5 predecode_10
-+ predecode_8 predecode_5 predecode_10 decode1_12 decode0_12 decode2_12 vdd_uq21 gnd
-+ dec_cell3_2r1w_83/a_124_230# dec_cell3_2r1w_83/a_808_230# dec_cell3_2r1w_83/a_412_230#
-+ dec_cell3_2r1w_83/net3 dec_cell3_2r1w_83/net6 dec_cell3_2r1w_83/a_220_230# dec_cell3_2r1w_83/net9
-+ dec_cell3_2r1w_83/a_904_230# dec_cell3_2r1w_83/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_50 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_61 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_94 predecode_2 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_5 predecode_8 decode1_1 decode0_1 decode2_1 vdd gnd dec_cell3_2r1w_94/a_124_230#
-+ dec_cell3_2r1w_94/a_808_230# dec_cell3_2r1w_94/a_412_230# dec_cell3_2r1w_94/net3
-+ dec_cell3_2r1w_94/net6 dec_cell3_2r1w_94/a_220_230# dec_cell3_2r1w_94/net9 dec_cell3_2r1w_94/a_904_230#
-+ dec_cell3_2r1w_94/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_73 predecode_8 predecode_8 predecode_12 predecode_2 predecode_8 predecode_12
-+ predecode_8 predecode_8 predecode_12 decode1_22 decode0_22 decode2_22 vdd_uq26 gnd
-+ dec_cell3_2r1w_73/a_124_230# dec_cell3_2r1w_73/a_808_230# dec_cell3_2r1w_73/a_412_230#
-+ dec_cell3_2r1w_73/net3 dec_cell3_2r1w_73/net6 dec_cell3_2r1w_73/a_220_230# dec_cell3_2r1w_73/net9
-+ dec_cell3_2r1w_73/a_904_230# dec_cell3_2r1w_73/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_84 predecode_8 predecode_8 predecode_10 predecode_8 predecode_8 predecode_10
-+ predecode_2 predecode_8 predecode_10 decode1_11 decode0_11 decode2_11 vdd_uq20 gnd
-+ dec_cell3_2r1w_84/a_124_230# dec_cell3_2r1w_84/a_808_230# dec_cell3_2r1w_84/a_412_230#
-+ dec_cell3_2r1w_84/net3 dec_cell3_2r1w_84/net6 dec_cell3_2r1w_84/a_220_230# dec_cell3_2r1w_84/net9
-+ dec_cell3_2r1w_84/a_904_230# dec_cell3_2r1w_84/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_40 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_51 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_62 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_95 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 decode1_0 decode0_0 decode2_0 vdd gnd gnd dec_cell3_2r1w_95/a_808_230#
-+ dec_cell3_2r1w_95/a_412_230# predecode_8 dec_cell3_2r1w_95/net6 predecode_8 dec_cell3_2r1w_95/net9
-+ dec_cell3_2r1w_95/a_904_230# dec_cell3_2r1w_95/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_74 predecode_2 predecode_8 predecode_11 predecode_8 predecode_8 predecode_11
-+ predecode_8 predecode_8 predecode_12 decode1_21 decode0_21 decode2_21 vdd_uq25 gnd
-+ dec_cell3_2r1w_74/a_124_230# dec_cell3_2r1w_74/a_808_230# dec_cell3_2r1w_74/a_412_230#
-+ dec_cell3_2r1w_74/net3 dec_cell3_2r1w_74/net6 dec_cell3_2r1w_74/a_220_230# dec_cell3_2r1w_74/net9
-+ dec_cell3_2r1w_74/a_904_230# dec_cell3_2r1w_74/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_85 predecode_8 predecode_8 predecode_9 predecode_2 predecode_8 predecode_9
-+ predecode_8 predecode_8 predecode_9 decode1_10 decode0_10 decode2_10 vdd_uq20 gnd
-+ dec_cell3_2r1w_85/a_124_230# dec_cell3_2r1w_85/a_808_230# dec_cell3_2r1w_85/a_412_230#
-+ dec_cell3_2r1w_85/net3 dec_cell3_2r1w_85/net6 dec_cell3_2r1w_85/a_220_230# dec_cell3_2r1w_85/net9
-+ dec_cell3_2r1w_85/a_904_230# dec_cell3_2r1w_85/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_30 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_41 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_52 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_63 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_0 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_20 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_31 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_42 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_53 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_64 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_2 predecode_8 predecode_8 decode1_31 decode0_31 decode2_31 vdd_uq30 gnd
-+ dec_cell3_2r1w_64/a_124_230# dec_cell3_2r1w_64/a_808_230# dec_cell3_2r1w_64/a_412_230#
-+ dec_cell3_2r1w_64/net3 dec_cell3_2r1w_64/net6 dec_cell3_2r1w_64/a_220_230# dec_cell3_2r1w_64/net9
-+ dec_cell3_2r1w_64/a_904_230# dec_cell3_2r1w_64/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_75 predecode_8 predecode_6 predecode_11 predecode_8 predecode_8 predecode_11
-+ predecode_8 predecode_8 predecode_11 decode1_20 decode0_20 decode2_20 vdd_uq25 gnd
-+ dec_cell3_2r1w_75/a_124_230# dec_cell3_2r1w_75/a_808_230# dec_cell3_2r1w_75/a_412_230#
-+ dec_cell3_2r1w_75/net3 dec_cell3_2r1w_75/net6 dec_cell3_2r1w_75/a_220_230# dec_cell3_2r1w_75/net9
-+ dec_cell3_2r1w_75/a_904_230# dec_cell3_2r1w_75/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_86 predecode_2 predecode_6 predecode_9 predecode_8 predecode_6 predecode_9
-+ predecode_8 predecode_8 predecode_9 decode1_9 decode0_9 decode2_9 vdd_uq19 gnd dec_cell3_2r1w_86/a_124_230#
-+ dec_cell3_2r1w_86/a_808_230# dec_cell3_2r1w_86/a_412_230# dec_cell3_2r1w_86/net3
-+ dec_cell3_2r1w_86/net6 dec_cell3_2r1w_86/a_220_230# dec_cell3_2r1w_86/net9 dec_cell3_2r1w_86/a_904_230#
-+ dec_cell3_2r1w_86/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_1 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_65 predecode_8 predecode_6 predecode_8 predecode_2 predecode_6 predecode_8
-+ predecode_8 predecode_6 predecode_8 decode1_30 decode0_30 decode2_30 vdd_uq30 gnd
-+ dec_cell3_2r1w_65/a_124_230# dec_cell3_2r1w_65/a_808_230# dec_cell3_2r1w_65/a_412_230#
-+ dec_cell3_2r1w_65/net3 dec_cell3_2r1w_65/net6 dec_cell3_2r1w_65/a_220_230# dec_cell3_2r1w_65/net9
-+ dec_cell3_2r1w_65/a_904_230# dec_cell3_2r1w_65/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_76 predecode_8 predecode_6 predecode_11 predecode_8 predecode_6 predecode_11
-+ predecode_2 predecode_6 predecode_11 decode1_19 decode0_19 decode2_19 vdd_uq24 gnd
-+ dec_cell3_2r1w_76/a_124_230# dec_cell3_2r1w_76/a_808_230# dec_cell3_2r1w_76/a_412_230#
-+ dec_cell3_2r1w_76/net3 dec_cell3_2r1w_76/net6 dec_cell3_2r1w_76/a_220_230# dec_cell3_2r1w_76/net9
-+ dec_cell3_2r1w_76/a_904_230# dec_cell3_2r1w_76/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_10 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_21 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_32 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_43 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_54 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_87 predecode_8 predecode_5 predecode_9 predecode_8 predecode_6 predecode_9
-+ predecode_8 predecode_6 predecode_9 decode1_8 decode0_8 decode2_8 vdd_uq19 gnd dec_cell3_2r1w_87/a_124_230#
-+ dec_cell3_2r1w_87/a_808_230# dec_cell3_2r1w_87/a_412_230# dec_cell3_2r1w_87/net3
-+ dec_cell3_2r1w_87/net6 dec_cell3_2r1w_87/a_220_230# dec_cell3_2r1w_87/net9 dec_cell3_2r1w_87/a_904_230#
-+ dec_cell3_2r1w_87/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_2 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_66 predecode_2 predecode_5 predecode_8 predecode_8 predecode_5 predecode_8
-+ predecode_8 predecode_6 predecode_8 decode1_29 decode0_29 decode2_29 vdd_uq29 gnd
-+ dec_cell3_2r1w_66/a_124_230# dec_cell3_2r1w_66/a_808_230# dec_cell3_2r1w_66/a_412_230#
-+ dec_cell3_2r1w_66/net3 dec_cell3_2r1w_66/net6 dec_cell3_2r1w_66/a_220_230# dec_cell3_2r1w_66/net9
-+ dec_cell3_2r1w_66/a_904_230# dec_cell3_2r1w_66/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_77 predecode_8 predecode_5 predecode_11 predecode_2 predecode_5 predecode_11
-+ predecode_8 predecode_5 predecode_11 decode1_18 decode0_18 decode2_18 vdd_uq24 gnd
-+ dec_cell3_2r1w_77/a_124_230# dec_cell3_2r1w_77/a_808_230# dec_cell3_2r1w_77/a_412_230#
-+ dec_cell3_2r1w_77/net3 dec_cell3_2r1w_77/net6 dec_cell3_2r1w_77/a_220_230# dec_cell3_2r1w_77/net9
-+ dec_cell3_2r1w_77/a_904_230# dec_cell3_2r1w_77/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_11 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_22 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_33 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_44 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_55 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_88 predecode_8 predecode_5 predecode_9 predecode_8 predecode_5 predecode_9
-+ predecode_2 predecode_5 predecode_9 decode1_7 decode0_7 decode2_7 vdd_uq18 gnd dec_cell3_2r1w_88/a_124_230#
-+ dec_cell3_2r1w_88/a_808_230# dec_cell3_2r1w_88/a_412_230# dec_cell3_2r1w_88/net3
-+ dec_cell3_2r1w_88/net6 dec_cell3_2r1w_88/a_220_230# dec_cell3_2r1w_88/net9 dec_cell3_2r1w_88/a_904_230#
-+ dec_cell3_2r1w_88/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_3 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_67 predecode_8 predecode_8 predecode_8 predecode_8 predecode_5 predecode_8
-+ predecode_8 predecode_5 predecode_8 decode1_28 decode0_28 decode2_28 vdd_uq29 gnd
-+ dec_cell3_2r1w_67/a_124_230# dec_cell3_2r1w_67/a_808_230# dec_cell3_2r1w_67/a_412_230#
-+ dec_cell3_2r1w_67/net3 dec_cell3_2r1w_67/net6 dec_cell3_2r1w_67/a_220_230# dec_cell3_2r1w_67/net9
-+ dec_cell3_2r1w_67/a_904_230# dec_cell3_2r1w_67/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_78 predecode_2 predecode_8 predecode_11 predecode_8 predecode_8 predecode_11
-+ predecode_8 predecode_5 predecode_11 decode1_17 decode0_17 decode2_17 vdd_uq23 gnd
-+ dec_cell3_2r1w_78/a_124_230# dec_cell3_2r1w_78/a_808_230# dec_cell3_2r1w_78/a_412_230#
-+ dec_cell3_2r1w_78/net3 dec_cell3_2r1w_78/net6 dec_cell3_2r1w_78/a_220_230# dec_cell3_2r1w_78/net9
-+ dec_cell3_2r1w_78/a_904_230# dec_cell3_2r1w_78/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_12 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_23 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_34 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_45 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_56 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_89 predecode_8 predecode_8 predecode_9 predecode_2 predecode_8 predecode_9
-+ predecode_8 predecode_8 predecode_9 decode1_6 decode0_6 decode2_6 vdd_uq18 gnd dec_cell3_2r1w_89/a_124_230#
-+ dec_cell3_2r1w_89/a_808_230# dec_cell3_2r1w_89/a_412_230# dec_cell3_2r1w_89/net3
-+ dec_cell3_2r1w_89/net6 dec_cell3_2r1w_89/a_220_230# dec_cell3_2r1w_89/net9 dec_cell3_2r1w_89/a_904_230#
-+ dec_cell3_2r1w_89/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_4 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_68 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_2 predecode_8 predecode_8 decode1_27 decode0_27 decode2_27 vdd_uq28 gnd
-+ dec_cell3_2r1w_68/a_124_230# dec_cell3_2r1w_68/a_808_230# dec_cell3_2r1w_68/a_412_230#
-+ dec_cell3_2r1w_68/net3 dec_cell3_2r1w_68/net6 dec_cell3_2r1w_68/a_220_230# dec_cell3_2r1w_68/net9
-+ dec_cell3_2r1w_68/a_904_230# dec_cell3_2r1w_68/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_79 predecode_8 predecode_8 predecode_10 predecode_8 predecode_8 predecode_11
-+ predecode_8 predecode_8 predecode_11 decode1_16 decode0_16 decode2_16 vdd_uq23 gnd
-+ dec_cell3_2r1w_79/a_124_230# dec_cell3_2r1w_79/a_808_230# dec_cell3_2r1w_79/a_412_230#
-+ dec_cell3_2r1w_79/net3 dec_cell3_2r1w_79/net6 dec_cell3_2r1w_79/a_220_230# dec_cell3_2r1w_79/net9
-+ dec_cell3_2r1w_79/a_904_230# dec_cell3_2r1w_79/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_13 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_24 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_35 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_46 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_57 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_5 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_69 predecode_8 predecode_8 predecode_12 predecode_2 predecode_8 predecode_12
-+ predecode_8 predecode_8 predecode_12 decode1_26 decode0_26 decode2_26 vdd_uq28 gnd
-+ dec_cell3_2r1w_69/a_124_230# dec_cell3_2r1w_69/a_808_230# dec_cell3_2r1w_69/a_412_230#
-+ dec_cell3_2r1w_69/net3 dec_cell3_2r1w_69/net6 dec_cell3_2r1w_69/a_220_230# dec_cell3_2r1w_69/net9
-+ dec_cell3_2r1w_69/a_904_230# dec_cell3_2r1w_69/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_14 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_25 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_36 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_47 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_58 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_6 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_15 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_26 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_37 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_48 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_59 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_7 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xhierarchical_predecode3x8_0 vdd_uq8 vdd_uq12 vdd_uq14 predecode_8 predecode_9 predecode_10
-+ predecode_11 predecode_12 predecode_8 predecode_15 predecode_14 addr_4 gnd addr_5
-+ addr_6 vdd_uq9 hierarchical_predecode3x8
-Xdec_cell3_2r1w_16 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_27 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_38 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_49 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_17 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_28 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_39 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_9 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_18 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_29 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
-Xdec_cell3_2r1w_19 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8
-+ predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 predecode_8 vdd gnd
-+ dec_cell3_2r1w_9/a_124_230# dec_cell3_2r1w_9/a_808_230# dec_cell3_2r1w_9/a_412_230#
-+ predecode_8 predecode_8 dec_cell3_2r1w_9/a_220_230# predecode_8 dec_cell3_2r1w_9/a_904_230#
-+ dec_cell3_2r1w_9/a_508_230# dec_cell3_2r1w
+Xhierarchical_predecode2x4_0 addr_3 vdd_uq4 gnd predecode_4 predecode_5 predecode_6
++ predecode_7 addr_2 vdd_uq6 hierarchical_predecode2x4
+Xhierarchical_predecode2x4_1 addr_1 vdd gnd predecode_0 predecode_1 predecode_2 predecode_3
++ addr_0 vdd_uq2 hierarchical_predecode2x4
+Xdec_cell3_2r1w_30 predecode_2 predecode_4 predecode_8 predecode_3 predecode_4 predecode_8
++ predecode_0 predecode_5 predecode_8 decode2_1 vdd_uq15 gnd decode0_1 decode1_1 dec_cell3_2r1w
+Xdec_cell3_2r1w_0 predecode_0 predecode_7 predecode_13 predecode_1 predecode_7 predecode_13
++ predecode_2 predecode_7 predecode_13 decode2_31 vdd_uq30 gnd decode0_31 decode1_31
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_31 dec_cell3_2r1w_31/A0 dec_cell3_2r1w_31/B0 dec_cell3_2r1w_31/C0
++ predecode_0 predecode_4 predecode_8 predecode_1 predecode_4 predecode_8 decode2_0
++ vdd_uq15 gnd decode0_0 decode1_0 dec_cell3_2r1w
+Xdec_cell3_2r1w_20 predecode_0 predecode_4 predecode_10 predecode_1 predecode_4 predecode_10
++ predecode_2 predecode_4 predecode_10 decode2_11 vdd_uq20 gnd decode0_11 decode1_11
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_1 predecode_1 predecode_6 predecode_13 predecode_2 predecode_6 predecode_13
++ predecode_3 predecode_6 predecode_13 decode2_30 vdd_uq30 gnd decode0_30 decode1_30
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_21 predecode_1 predecode_7 predecode_9 predecode_2 predecode_7 predecode_9
++ predecode_3 predecode_7 predecode_9 decode2_10 vdd_uq20 gnd decode0_10 decode1_10
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_10 predecode_2 predecode_7 predecode_11 predecode_3 predecode_7 predecode_11
++ predecode_0 predecode_4 predecode_12 decode2_21 vdd_uq25 gnd decode0_21 decode1_21
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_2 predecode_2 predecode_5 predecode_13 predecode_3 predecode_5 predecode_13
++ predecode_0 predecode_6 predecode_13 decode2_29 vdd_uq29 gnd decode0_29 decode1_29
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_22 predecode_2 predecode_6 predecode_9 predecode_3 predecode_6 predecode_9
++ predecode_0 predecode_7 predecode_9 decode2_9 vdd_uq19 gnd decode0_9 decode1_9 dec_cell3_2r1w
+Xdec_cell3_2r1w_11 predecode_3 predecode_6 predecode_11 predecode_0 predecode_7 predecode_11
++ predecode_1 predecode_7 predecode_11 decode2_20 vdd_uq25 gnd decode0_20 decode1_20
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_3 predecode_3 predecode_4 predecode_13 predecode_0 predecode_5 predecode_13
++ predecode_1 predecode_5 predecode_13 decode2_28 vdd_uq29 gnd decode0_28 decode1_28
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_23 predecode_3 predecode_5 predecode_9 predecode_0 predecode_6 predecode_9
++ predecode_1 predecode_6 predecode_9 decode2_8 vdd_uq19 gnd decode0_8 decode1_8 dec_cell3_2r1w
+Xdec_cell3_2r1w_12 predecode_0 predecode_6 predecode_11 predecode_1 predecode_6 predecode_11
++ predecode_2 predecode_6 predecode_11 decode2_19 vdd_uq24 gnd decode0_19 decode1_19
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_4 predecode_0 predecode_4 predecode_13 predecode_1 predecode_4 predecode_13
++ predecode_2 predecode_4 predecode_13 decode2_27 vdd_uq28 gnd decode0_27 decode1_27
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_24 predecode_0 predecode_5 predecode_9 predecode_1 predecode_5 predecode_9
++ predecode_2 predecode_5 predecode_9 decode2_7 vdd_uq18 gnd decode0_7 decode1_7 dec_cell3_2r1w
+Xdec_cell3_2r1w_13 predecode_1 predecode_5 predecode_11 predecode_2 predecode_5 predecode_11
++ predecode_3 predecode_5 predecode_11 decode2_18 vdd_uq24 gnd decode0_18 decode1_18
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_5 predecode_1 predecode_7 predecode_12 predecode_2 predecode_7 predecode_12
++ predecode_3 predecode_7 predecode_12 decode2_26 vdd_uq28 gnd decode0_26 decode1_26
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_25 predecode_1 predecode_4 predecode_9 predecode_2 predecode_4 predecode_9
++ predecode_3 predecode_4 predecode_9 decode2_6 vdd_uq18 gnd decode0_6 decode1_6 dec_cell3_2r1w
+Xdec_cell3_2r1w_14 predecode_2 predecode_4 predecode_11 predecode_3 predecode_4 predecode_11
++ predecode_0 predecode_5 predecode_11 decode2_17 vdd_uq23 gnd decode0_17 decode1_17
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_6 predecode_2 predecode_6 predecode_12 predecode_3 predecode_6 predecode_12
++ predecode_0 predecode_7 predecode_12 decode2_25 vdd_uq27 gnd decode0_25 decode1_25
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_26 predecode_2 predecode_7 predecode_8 predecode_3 predecode_7 predecode_8
++ predecode_0 predecode_4 predecode_9 decode2_5 vdd_uq17 gnd decode0_5 decode1_5 dec_cell3_2r1w
+Xdec_cell3_2r1w_15 predecode_3 predecode_7 predecode_10 predecode_0 predecode_4 predecode_11
++ predecode_1 predecode_4 predecode_11 decode2_16 vdd_uq23 gnd decode0_16 decode1_16
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_7 predecode_3 predecode_5 predecode_12 predecode_0 predecode_6 predecode_12
++ predecode_1 predecode_6 predecode_12 decode2_24 vdd_uq27 gnd decode0_24 decode1_24
++ dec_cell3_2r1w
+Xhierarchical_predecode3x8_0 vdd_uq8 gnd vdd_uq12 vdd_uq14 predecode_8 predecode_9
++ predecode_10 predecode_11 predecode_12 predecode_13 predecode_15 predecode_14 addr_4
++ addr_5 addr_6 vdd_uq9 hierarchical_predecode3x8
+Xdec_cell3_2r1w_27 predecode_3 predecode_6 predecode_8 predecode_0 predecode_7 predecode_8
++ predecode_1 predecode_7 predecode_8 decode2_4 vdd_uq17 gnd decode0_4 decode1_4 dec_cell3_2r1w
+Xdec_cell3_2r1w_16 predecode_0 predecode_7 predecode_10 predecode_1 predecode_7 predecode_10
++ predecode_2 predecode_7 predecode_10 decode2_15 vdd_uq22 gnd decode0_15 decode1_15
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_8 predecode_0 predecode_5 predecode_12 predecode_1 predecode_5 predecode_12
++ predecode_2 predecode_5 predecode_12 decode2_23 vdd_uq26 gnd decode0_23 decode1_23
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_28 predecode_0 predecode_6 predecode_8 predecode_1 predecode_6 predecode_8
++ predecode_2 predecode_6 predecode_8 decode2_3 vdd_uq16 gnd decode0_3 decode1_3 dec_cell3_2r1w
+Xdec_cell3_2r1w_17 predecode_1 predecode_6 predecode_10 predecode_2 predecode_6 predecode_10
++ predecode_3 predecode_6 predecode_10 decode2_14 vdd_uq22 gnd decode0_14 decode1_14
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_9 predecode_1 predecode_4 predecode_12 predecode_2 predecode_4 predecode_12
++ predecode_3 predecode_4 predecode_12 decode2_22 vdd_uq26 gnd decode0_22 decode1_22
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_29 predecode_1 predecode_5 predecode_8 predecode_2 predecode_5 predecode_8
++ predecode_3 predecode_5 predecode_8 decode2_2 vdd_uq16 gnd decode0_2 decode1_2 dec_cell3_2r1w
+Xdec_cell3_2r1w_18 predecode_2 predecode_5 predecode_10 predecode_3 predecode_5 predecode_10
++ predecode_0 predecode_6 predecode_10 decode2_13 vdd_uq21 gnd decode0_13 decode1_13
++ dec_cell3_2r1w
+Xdec_cell3_2r1w_19 predecode_3 predecode_4 predecode_10 predecode_0 predecode_5 predecode_10
++ predecode_1 predecode_5 predecode_10 decode2_12 vdd_uq21 gnd decode0_12 decode1_12
++ dec_cell3_2r1w
 .ends
 
-.subckt wordline_driver_cell A0 vdd gnd wl_en A1 A2 rwl0 wwl0 rwl1 net2
+.subckt wordline_driver_cell A0 vdd gnd wl_en A1 A2 rwl0 wwl0 rwl1
 X0 gnd wl_en a_124_308# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=550000u l=150000u
 X1 net4 wl_en a_316_308# gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=550000u l=150000u
 X2 a_316_308# A1 gnd gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=550000u l=150000u
@@ -1486,174 +1099,178 @@ X16 vdd wl_en net2 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u
 X17 rwl1 net2 vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.35e+06u l=150000u
 .ends
 
-.subckt wordline_driver_array wl_en in1_19 vdd_uq0 wwl0_0 rwl1_0 rwl1_22 rwl1_11 in2_30
-+ rwl1_1 wwl0_1 rwl1_23 rwl1_12 in2_31 in2_20 wwl0_2 rwl1_2 vdd_uq1 rwl1_24 rwl1_13
-+ rwl1_3 wwl0_3 in2_21 in2_10 vdd_uq2 rwl1_25 rwl1_14 gnd in2_22 in2_11 vdd_uq3 wwl0_4
-+ rwl1_4 wordline_driver_cell_4/net2 rwl1_26 rwl1_15 wordline_driver_cell_14/net2
-+ rwl1_5 wwl0_5 in2_23 in2_12 vdd_uq4 rwl1_27 rwl1_16 in1_0 in2_24 in2_13 vdd_uq5
-+ wwl0_6 rwl1_6 rwl1_28 rwl1_17 in1_1 rwl1_7 in2_25 vdd_uq6 in2_14 wwl0_7 rwl1_29
-+ rwl1_18 in1_2 in2_26 in2_15 wwl0_8 rwl1_8 rwl1_19 vdd_uq7 in1_3 in2_27 vdd_uq8 in2_16
-+ wwl0_9 rwl1_9 in1_4 in2_28 in2_17 vdd_uq9 in1_5 vdd_uq12 in2_29 in2_18 in1_6 in2_19
-+ in1_7 wordline_driver_cell_0/net2 in0_30 wordline_driver_cell_10/net2 in1_8 in0_31
-+ in0_20 in1_9 wwl0_30 in0_21 in0_10 in0_22 in0_11 wwl0_31 wwl0_20 in0_23 wwl0_21
-+ in0_12 wwl0_10 in0_24 in0_13 wwl0_22 wwl0_11 wordline_driver_cell_6/net2 in0_25
-+ wwl0_23 in0_14 wwl0_12 vdd_uq14 in0_26 in0_15 rwl0_0 wwl0_24 wwl0_13 in0_27 wwl0_25
-+ in0_16 wwl0_14 rwl0_1 rwl0_30 in0_28 in0_17 rwl0_2 wwl0_26 wwl0_15 in2_0 rwl0_31
-+ rwl0_20 in0_29 wwl0_27 in0_18 wwl0_16 rwl0_3 in2_1 rwl0_21 rwl0_10 rwl0_4 wwl0_28
-+ in0_19 wwl0_17 in2_2 rwl0_22 rwl0_11 vdd_uq10 wwl0_18 rwl0_5 in1_30 wwl0_29 in0_0
-+ in2_3 rwl0_23 rwl0_12 vdd_uq11 wwl0_19 in2_4 rwl0_6 in1_31 in1_20 in0_1 rwl0_24
-+ rwl0_13 wordline_driver_cell_2/net2 rwl0_7 wordline_driver_cell_12/net2 in1_21 in1_10
-+ in2_5 rwl0_25 rwl0_14 in0_2 vdd_uq13 vdd in2_6 rwl0_8 in1_22 in1_11 in0_3 rwl0_26
-+ rwl0_15 rwl0_9 in1_23 in1_12 in2_7 rwl0_27 rwl0_16 in0_4 in1_24 in1_13 in0_5 in2_8
-+ rwl0_28 rwl0_17 in1_25 in1_14 in2_9 rwl0_29 rwl0_18 in0_6 wordline_driver_cell_8/net2
-+ in1_26 in1_15 in0_7 rwl0_19 in1_27 in1_16 in0_8 rwl1_30 in1_28 in1_17 in0_9 rwl1_31
-+ rwl1_20 in1_29 in1_18 rwl1_21 rwl1_10
-Xwordline_driver_cell_29 in0_2 vdd gnd wl_en in1_2 in2_2 rwl0_2 wwl0_2 rwl1_2 wordline_driver_cell_29/net2
-+ wordline_driver_cell
+.subckt wordline_driver_array wl_en in1_19 wwl0_0 rwl1_0 rwl1_22 rwl1_11 in2_30 rwl1_1
++ wwl0_1 rwl1_23 rwl1_12 vdd_uq0 in2_31 in2_20 wwl0_2 rwl1_2 vdd_uq1 rwl1_24 rwl1_13
++ rwl1_3 wwl0_3 in2_21 in2_10 vdd_uq2 rwl1_25 rwl1_14 in2_22 in2_11 vdd_uq3 wwl0_4
++ rwl1_4 rwl1_26 rwl1_15 rwl1_5 wwl0_5 in2_23 in2_12 vdd_uq4 rwl1_27 rwl1_16 in1_0
++ in2_24 in2_13 vdd_uq5 wwl0_6 rwl1_6 rwl1_28 rwl1_17 in1_1 rwl1_7 in2_25 vdd_uq6
++ in2_14 wwl0_7 rwl1_29 rwl1_18 in1_2 in2_26 in2_15 wwl0_8 rwl1_8 rwl1_19 vdd_uq7
++ in1_3 in2_27 vdd_uq8 in2_16 wwl0_9 rwl1_9 in1_4 in2_28 in2_17 vdd_uq9 in1_5 in2_29
++ in2_18 in1_6 in2_19 in1_7 in0_30 in1_8 in0_31 in0_20 in1_9 wwl0_30 in0_21 in0_10
++ in0_22 in0_11 wwl0_31 wwl0_20 in0_23 wwl0_21 in0_12 wwl0_10 gnd in0_24 in0_13 wwl0_22
++ wwl0_11 in0_25 wwl0_23 in0_14 wwl0_12 in0_26 in0_15 rwl0_0 wwl0_24 wwl0_13 in0_27
++ wwl0_25 in0_16 wwl0_14 rwl0_1 rwl0_30 in0_28 in0_17 rwl0_2 wwl0_26 wwl0_15 in2_0
++ rwl0_31 rwl0_20 in0_29 wwl0_27 in0_18 wwl0_16 rwl0_3 in2_1 rwl0_21 rwl0_10 rwl0_4
++ wwl0_28 in0_19 wwl0_17 in2_2 rwl0_22 rwl0_11 vdd_uq10 wwl0_18 rwl0_5 in1_30 wwl0_29
++ in0_0 in2_3 rwl0_23 rwl0_12 vdd_uq11 wwl0_19 in2_4 rwl0_6 in1_31 in1_20 in0_1 vdd_uq12
++ rwl0_24 rwl0_13 rwl0_7 in1_21 in1_10 in2_5 rwl0_25 rwl0_14 in0_2 vdd_uq13 vdd in2_6
++ rwl0_8 in1_22 in1_11 in0_3 vdd_uq14 rwl0_26 rwl0_15 rwl0_9 in1_23 in1_12 in2_7 rwl0_27
++ rwl0_16 in0_4 in1_24 in1_13 in0_5 in2_8 rwl0_28 rwl0_17 in1_25 in1_14 in2_9 rwl0_29
++ rwl0_18 in0_6 in1_26 in1_15 in0_7 rwl0_19 in1_27 in1_16 in0_8 rwl1_30 in1_28 in1_17
++ in0_9 rwl1_31 rwl1_20 in1_29 in1_18 rwl1_21 rwl1_10
+Xwordline_driver_cell_29 in0_2 vdd gnd wl_en in1_2 in2_2 rwl0_2 wwl0_2 rwl1_2 wordline_driver_cell
 Xwordline_driver_cell_18 in0_13 vdd_uq5 gnd wl_en in1_13 in2_13 rwl0_13 wwl0_13 rwl1_13
-+ wordline_driver_cell_18/net2 wordline_driver_cell
-Xwordline_driver_cell_19 in0_12 vdd_uq5 gnd wl_en in1_12 in2_12 rwl0_12 wwl0_12 rwl1_12
-+ wordline_driver_cell_19/net2 wordline_driver_cell
-Xwordline_driver_cell_0 in0_31 vdd_uq14 gnd wl_en in1_31 in2_31 rwl0_31 wwl0_31 rwl1_31
-+ wordline_driver_cell_0/net2 wordline_driver_cell
-Xwordline_driver_cell_1 in0_30 vdd_uq14 gnd wl_en in1_30 in2_30 rwl0_30 wwl0_30 rwl1_30
-+ wordline_driver_cell_1/net2 wordline_driver_cell
-Xwordline_driver_cell_2 in0_29 vdd_uq13 gnd wl_en in1_29 in2_29 rwl0_29 wwl0_29 rwl1_29
-+ wordline_driver_cell_2/net2 wordline_driver_cell
-Xwordline_driver_cell_3 in0_28 vdd_uq13 gnd wl_en in1_28 in2_28 rwl0_28 wwl0_28 rwl1_28
-+ wordline_driver_cell_3/net2 wordline_driver_cell
-Xwordline_driver_cell_4 in0_27 vdd_uq12 gnd wl_en in1_27 in2_27 rwl0_27 wwl0_27 rwl1_27
-+ wordline_driver_cell_4/net2 wordline_driver_cell
-Xwordline_driver_cell_30 in0_1 vdd_uq0 gnd wl_en in1_1 in2_1 rwl0_1 wwl0_1 rwl1_1
-+ wordline_driver_cell_30/net2 wordline_driver_cell
-Xwordline_driver_cell_5 in0_26 vdd_uq12 gnd wl_en in1_26 in2_26 rwl0_26 wwl0_26 rwl1_26
-+ wordline_driver_cell_5/net2 wordline_driver_cell
-Xwordline_driver_cell_31 in0_0 vdd_uq0 gnd wl_en in1_0 in2_0 rwl0_0 wwl0_0 rwl1_0
-+ wordline_driver_cell_31/net2 wordline_driver_cell
-Xwordline_driver_cell_20 in0_11 vdd_uq4 gnd wl_en in1_11 in2_11 rwl0_11 wwl0_11 rwl1_11
-+ wordline_driver_cell_20/net2 wordline_driver_cell
-Xwordline_driver_cell_6 in0_25 vdd_uq11 gnd wl_en in1_25 in2_25 rwl0_25 wwl0_25 rwl1_25
-+ wordline_driver_cell_6/net2 wordline_driver_cell
-Xwordline_driver_cell_10 in0_21 vdd_uq9 gnd wl_en in1_21 in2_21 rwl0_21 wwl0_21 rwl1_21
-+ wordline_driver_cell_10/net2 wordline_driver_cell
-Xwordline_driver_cell_21 in0_10 vdd_uq4 gnd wl_en in1_10 in2_10 rwl0_10 wwl0_10 rwl1_10
-+ wordline_driver_cell_21/net2 wordline_driver_cell
-Xwordline_driver_cell_7 in0_24 vdd_uq11 gnd wl_en in1_24 in2_24 rwl0_24 wwl0_24 rwl1_24
-+ wordline_driver_cell_7/net2 wordline_driver_cell
-Xwordline_driver_cell_11 in0_20 vdd_uq9 gnd wl_en in1_20 in2_20 rwl0_20 wwl0_20 rwl1_20
-+ wordline_driver_cell_11/net2 wordline_driver_cell
-Xwordline_driver_cell_22 in0_9 vdd_uq3 gnd wl_en in1_9 in2_9 rwl0_9 wwl0_9 rwl1_9
-+ wordline_driver_cell_22/net2 wordline_driver_cell
-Xwordline_driver_cell_8 in0_23 vdd_uq10 gnd wl_en in1_23 in2_23 rwl0_23 wwl0_23 rwl1_23
-+ wordline_driver_cell_8/net2 wordline_driver_cell
-Xwordline_driver_cell_23 in0_8 vdd_uq3 gnd wl_en in1_8 in2_8 rwl0_8 wwl0_8 rwl1_8
-+ wordline_driver_cell_23/net2 wordline_driver_cell
-Xwordline_driver_cell_12 in0_19 vdd_uq8 gnd wl_en in1_19 in2_19 rwl0_19 wwl0_19 rwl1_19
-+ wordline_driver_cell_12/net2 wordline_driver_cell
-Xwordline_driver_cell_9 in0_22 vdd_uq10 gnd wl_en in1_22 in2_22 rwl0_22 wwl0_22 rwl1_22
-+ wordline_driver_cell_9/net2 wordline_driver_cell
-Xwordline_driver_cell_24 in0_7 vdd_uq2 gnd wl_en in1_7 in2_7 rwl0_7 wwl0_7 rwl1_7
-+ wordline_driver_cell_24/net2 wordline_driver_cell
-Xwordline_driver_cell_13 in0_18 vdd_uq8 gnd wl_en in1_18 in2_18 rwl0_18 wwl0_18 rwl1_18
-+ wordline_driver_cell_13/net2 wordline_driver_cell
-Xwordline_driver_cell_25 in0_6 vdd_uq2 gnd wl_en in1_6 in2_6 rwl0_6 wwl0_6 rwl1_6
-+ wordline_driver_cell_25/net2 wordline_driver_cell
-Xwordline_driver_cell_14 in0_17 vdd_uq7 gnd wl_en in1_17 in2_17 rwl0_17 wwl0_17 rwl1_17
-+ wordline_driver_cell_14/net2 wordline_driver_cell
-Xwordline_driver_cell_26 in0_5 vdd_uq1 gnd wl_en in1_5 in2_5 rwl0_5 wwl0_5 rwl1_5
-+ wordline_driver_cell_26/net2 wordline_driver_cell
-Xwordline_driver_cell_15 in0_16 vdd_uq7 gnd wl_en in1_16 in2_16 rwl0_16 wwl0_16 rwl1_16
-+ wordline_driver_cell_15/net2 wordline_driver_cell
-Xwordline_driver_cell_27 in0_4 vdd_uq1 gnd wl_en in1_4 in2_4 rwl0_4 wwl0_4 rwl1_4
-+ wordline_driver_cell_27/net2 wordline_driver_cell
-Xwordline_driver_cell_16 in0_15 vdd_uq6 gnd wl_en in1_15 in2_15 rwl0_15 wwl0_15 rwl1_15
-+ wordline_driver_cell_16/net2 wordline_driver_cell
-Xwordline_driver_cell_28 in0_3 vdd gnd wl_en in1_3 in2_3 rwl0_3 wwl0_3 rwl1_3 wordline_driver_cell_28/net2
 + wordline_driver_cell
+Xwordline_driver_cell_19 in0_12 vdd_uq5 gnd wl_en in1_12 in2_12 rwl0_12 wwl0_12 rwl1_12
++ wordline_driver_cell
+Xwordline_driver_cell_0 in0_31 vdd_uq14 gnd wl_en in1_31 in2_31 rwl0_31 wwl0_31 rwl1_31
++ wordline_driver_cell
+Xwordline_driver_cell_1 in0_30 vdd_uq14 gnd wl_en in1_30 in2_30 rwl0_30 wwl0_30 rwl1_30
++ wordline_driver_cell
+Xwordline_driver_cell_2 in0_29 vdd_uq13 gnd wl_en in1_29 in2_29 rwl0_29 wwl0_29 rwl1_29
++ wordline_driver_cell
+Xwordline_driver_cell_3 in0_28 vdd_uq13 gnd wl_en in1_28 in2_28 rwl0_28 wwl0_28 rwl1_28
++ wordline_driver_cell
+Xwordline_driver_cell_4 in0_27 vdd_uq12 gnd wl_en in1_27 in2_27 rwl0_27 wwl0_27 rwl1_27
++ wordline_driver_cell
+Xwordline_driver_cell_30 in0_1 vdd_uq0 gnd wl_en in1_1 in2_1 rwl0_1 wwl0_1 rwl1_1
++ wordline_driver_cell
+Xwordline_driver_cell_5 in0_26 vdd_uq12 gnd wl_en in1_26 in2_26 rwl0_26 wwl0_26 rwl1_26
++ wordline_driver_cell
+Xwordline_driver_cell_31 in0_0 vdd_uq0 gnd wl_en in1_0 in2_0 rwl0_0 wwl0_0 rwl1_0
++ wordline_driver_cell
+Xwordline_driver_cell_20 in0_11 vdd_uq4 gnd wl_en in1_11 in2_11 rwl0_11 wwl0_11 rwl1_11
++ wordline_driver_cell
+Xwordline_driver_cell_6 in0_25 vdd_uq11 gnd wl_en in1_25 in2_25 rwl0_25 wwl0_25 rwl1_25
++ wordline_driver_cell
+Xwordline_driver_cell_10 in0_21 vdd_uq9 gnd wl_en in1_21 in2_21 rwl0_21 wwl0_21 rwl1_21
++ wordline_driver_cell
+Xwordline_driver_cell_21 in0_10 vdd_uq4 gnd wl_en in1_10 in2_10 rwl0_10 wwl0_10 rwl1_10
++ wordline_driver_cell
+Xwordline_driver_cell_7 in0_24 vdd_uq11 gnd wl_en in1_24 in2_24 rwl0_24 wwl0_24 rwl1_24
++ wordline_driver_cell
+Xwordline_driver_cell_11 in0_20 vdd_uq9 gnd wl_en in1_20 in2_20 rwl0_20 wwl0_20 rwl1_20
++ wordline_driver_cell
+Xwordline_driver_cell_22 in0_9 vdd_uq3 gnd wl_en in1_9 in2_9 rwl0_9 wwl0_9 rwl1_9
++ wordline_driver_cell
+Xwordline_driver_cell_8 in0_23 vdd_uq10 gnd wl_en in1_23 in2_23 rwl0_23 wwl0_23 rwl1_23
++ wordline_driver_cell
+Xwordline_driver_cell_23 in0_8 vdd_uq3 gnd wl_en in1_8 in2_8 rwl0_8 wwl0_8 rwl1_8
++ wordline_driver_cell
+Xwordline_driver_cell_12 in0_19 vdd_uq8 gnd wl_en in1_19 in2_19 rwl0_19 wwl0_19 rwl1_19
++ wordline_driver_cell
+Xwordline_driver_cell_9 in0_22 vdd_uq10 gnd wl_en in1_22 in2_22 rwl0_22 wwl0_22 rwl1_22
++ wordline_driver_cell
+Xwordline_driver_cell_24 in0_7 vdd_uq2 gnd wl_en in1_7 in2_7 rwl0_7 wwl0_7 rwl1_7
++ wordline_driver_cell
+Xwordline_driver_cell_13 in0_18 vdd_uq8 gnd wl_en in1_18 in2_18 rwl0_18 wwl0_18 rwl1_18
++ wordline_driver_cell
+Xwordline_driver_cell_25 in0_6 vdd_uq2 gnd wl_en in1_6 in2_6 rwl0_6 wwl0_6 rwl1_6
++ wordline_driver_cell
+Xwordline_driver_cell_14 in0_17 vdd_uq7 gnd wl_en in1_17 in2_17 rwl0_17 wwl0_17 rwl1_17
++ wordline_driver_cell
+Xwordline_driver_cell_26 in0_5 vdd_uq1 gnd wl_en in1_5 in2_5 rwl0_5 wwl0_5 rwl1_5
++ wordline_driver_cell
+Xwordline_driver_cell_15 in0_16 vdd_uq7 gnd wl_en in1_16 in2_16 rwl0_16 wwl0_16 rwl1_16
++ wordline_driver_cell
+Xwordline_driver_cell_27 in0_4 vdd_uq1 gnd wl_en in1_4 in2_4 rwl0_4 wwl0_4 rwl1_4
++ wordline_driver_cell
+Xwordline_driver_cell_16 in0_15 vdd_uq6 gnd wl_en in1_15 in2_15 rwl0_15 wwl0_15 rwl1_15
++ wordline_driver_cell
+Xwordline_driver_cell_28 in0_3 vdd gnd wl_en in1_3 in2_3 rwl0_3 wwl0_3 rwl1_3 wordline_driver_cell
 Xwordline_driver_cell_17 in0_14 vdd_uq6 gnd wl_en in1_14 in2_14 rwl0_14 wwl0_14 rwl1_14
-+ wordline_driver_cell_17/net2 wordline_driver_cell
++ wordline_driver_cell
 .ends
 
-.subckt port_address addr2 vdd rwl1_0 wwl0_0 rwl1_22 rwl1_11 addr3 vdd_uq8 wwl0_1
-+ rwl1_1 rwl1_23 rwl1_12 addr4 vdd_uq10 rwl1_2 wwl0_2 rwl1_24 rwl1_13 addr5 vdd_uq14
-+ wwl0_3 rwl1_3 rwl1_25 rwl1_14 addr6 vdd_uq18 rwl1_4 wwl0_4 rwl1_26 rwl1_15 vdd_uq20
-+ wwl0_5 rwl1_5 addr0 vdd_uq4 rwl1_27 rwl1_16 vdd_uq24 rwl1_6 wwl0_6 vdd_uq6 addr1
-+ rwl1_28 rwl1_17 vdd_uq28 rwl1_7 wwl0_7 rwl1_29 rwl1_18 vdd_uq32 vdd_uq12 rwl1_8
-+ wwl0_8 rwl1_19 vdd_uq36 wwl0_9 rwl1_9 vdd_uq38 vdd_uq40 vdd_uq42 wwl0_30 vdd_uq44
-+ wwl0_31 wwl0_20 vdd_uq46 wwl0_21 wwl0_10 wwl0_22 wwl0_11 wwl0_23 wwl0_12 rwl0_0
-+ wwl0_24 wwl0_13 wwl0_25 wwl0_14 rwl0_1 rwl0_30 rwl0_2 wwl0_26 wwl0_15 rwl0_31 rwl0_20
-+ wwl0_27 wwl0_16 rwl0_3 rwl0_21 rwl0_10 rwl0_4 wwl0_28 wwl0_17 rwl0_22 rwl0_11 vdd_uq22
-+ wwl0_18 rwl0_5 wwl0_29 rwl0_23 rwl0_12 vdd_uq34 wwl0_19 rwl0_6 rwl0_24 rwl0_13 rwl0_7
-+ rwl0_25 rwl0_14 rwl0_8 rwl0_26 rwl0_15 vdd_uq26 rwl0_9 rwl0_27 rwl0_16 vdd_uq16
-+ rwl0_28 rwl0_17 rwl0_29 rwl0_18 rwl0_19 vdd_uq30 rwl1_30 rwl1_31 rwl1_20 rwl1_21
-+ rwl1_10
-Xhierarchical_decoder_0 addr0 wordline_driver_array_0/in1_6 wordline_driver_array_0/in2_9
-+ wordline_driver_array_0/in2_21 wordline_driver_array_0/in1_10 addr1 vdd wordline_driver_array_0/in1_22
-+ wordline_driver_array_0/in2_7 wordline_driver_array_0/in2_11 addr2 wordline_driver_array_0/in2_23
-+ vdd_uq6 wordline_driver_array_0/in1_8 wordline_driver_array_0/in1_12 addr3 wordline_driver_array_0/in1_24
-+ wordline_driver_array_0/in2_13 wordline_driver_array_0/in2_9 addr4 wordline_driver_array_0/in2_25
-+ wordline_driver_array_0/in1_14 vdd_uq12 addr5 vdd wordline_driver_array_0/in2_15
-+ addr6 vdd_uq42 wordline_driver_array_0/in1_16 vdd_uq16 vdd wordline_driver_array_0/in2_17
-+ vdd_uq44 wordline_driver_array_0/in1_18 vdd_uq22 wordline_driver_array_0/in2_19
-+ vdd vdd_uq26 wordline_driver_array_0/in1_0 vdd_uq46 wordline_driver_array_0/in2_20
+.subckt port_address addr2 rwl1_0 wwl0_0 rwl1_22 rwl1_11 addr3 wwl0_1 rwl1_1 rwl1_23
++ rwl1_12 vdd_uq0 addr4 rwl1_2 wwl0_2 vdd_uq2 rwl1_24 rwl1_13 addr5 wwl0_3 rwl1_3
++ rwl1_25 rwl1_14 addr6 rwl1_4 wwl0_4 vdd_uq3 rwl1_26 rwl1_15 wwl0_5 rwl1_5 addr0
++ vdd_uq4 rwl1_27 rwl1_16 rwl1_6 wwl0_6 vdd_uq6 addr1 rwl1_28 rwl1_17 rwl1_7 wwl0_7
++ rwl1_29 rwl1_18 gnd rwl1_8 wwl0_8 rwl1_19 vdd_uq7 wwl0_9 rwl1_9 vdd_uq8 wl_en vdd_uq9
++ wwl0_30 wwl0_31 wwl0_20 wwl0_21 wwl0_10 wwl0_22 wwl0_11 wwl0_23 wwl0_12 rwl0_0 wwl0_24
++ wwl0_13 wwl0_25 wwl0_14 rwl0_1 rwl0_30 rwl0_2 vdd_uq40 wwl0_26 wwl0_15 rwl0_31 rwl0_20
++ vdd_uq30 vdd_uq41 wwl0_27 wwl0_16 rwl0_3 rwl0_21 rwl0_10 rwl0_4 vdd_uq20 vdd_uq31
++ vdd_uq42 wwl0_28 wwl0_17 rwl0_22 rwl0_11 vdd_uq43 vdd_uq10 vdd_uq22 vdd_uq32 wwl0_18
++ rwl0_5 wwl0_29 rwl0_23 rwl0_12 vdd_uq44 vdd_uq12 vdd_uq34 wwl0_19 rwl0_6 rwl0_24
++ rwl0_13 vdd_uq45 vdd_uq23 rwl0_7 rwl0_25 rwl0_14 vdd_uq46 vdd_uq13 vdd_uq24 vdd_uq35
++ rwl0_8 vdd rwl0_26 rwl0_15 vdd_uq14 vdd_uq26 vdd_uq36 rwl0_9 rwl0_27 rwl0_16 vdd_uq16
++ vdd_uq37 rwl0_28 rwl0_17 vdd_uq27 vdd_uq38 rwl0_29 rwl0_18 vdd_uq17 vdd_uq28 vdd_uq39
++ rwl0_19 vdd_uq18 rwl1_30 vdd_uq19 rwl1_31 rwl1_20 rwl1_21 rwl1_10
+Xhierarchical_decoder_0 addr0 wordline_driver_array_0/in0_6 wordline_driver_array_0/in2_9
++ wordline_driver_array_0/in1_21 wordline_driver_array_0/in1_10 addr1 wordline_driver_array_0/in1_22
++ wordline_driver_array_0/in0_7 wordline_driver_array_0/in1_11 addr2 wordline_driver_array_0/in1_23
++ vdd_uq6 wordline_driver_array_0/in0_8 wordline_driver_array_0/in1_12 addr3 wordline_driver_array_0/in1_24
++ wordline_driver_array_0/in1_13 wordline_driver_array_0/in0_9 addr4 wordline_driver_array_0/in1_25
++ wordline_driver_array_0/in1_14 vdd_uq12 addr5 wordline_driver_array_0/in1_26 wordline_driver_array_0/in1_15
++ addr6 wordline_driver_array_0/in1_27 wordline_driver_array_0/in1_16 vdd_uq16 wordline_driver_array_0/in1_28
++ wordline_driver_array_0/in1_17 wordline_driver_array_0/in1_29 wordline_driver_array_0/in1_18
++ vdd_uq22 wordline_driver_array_0/in1_19 wordline_driver_array_0/in2_30 vdd_uq26
++ wordline_driver_array_0/in1_0 gnd wordline_driver_array_0/in2_31 wordline_driver_array_0/in2_20
 + wordline_driver_array_0/in1_1 wordline_driver_array_0/in2_21 wordline_driver_array_0/in2_10
-+ wordline_driver_array_0/in1_2 wordline_driver_array_0/in2_22 wordline_driver_array_0/in2_3
++ wordline_driver_array_0/in1_2 wordline_driver_array_0/in2_22 wordline_driver_array_0/in1_3
 + wordline_driver_array_0/in2_11 wordline_driver_array_0/in2_23 wordline_driver_array_0/in2_12
-+ wordline_driver_array_0/in1_4 vdd wordline_driver_array_0/in2_13 wordline_driver_array_0/in2_5
-+ wordline_driver_array_0/in2_25 wordline_driver_array_0/in2_14 wordline_driver_array_0/in1_6
-+ vdd wordline_driver_array_0/in2_15 wordline_driver_array_0/in2_7 vdd_uq42 wordline_driver_array_0/in2_16
-+ wordline_driver_array_0/in1_8 vdd wordline_driver_array_0/in2_17 wordline_driver_array_0/in2_9
-+ vdd_uq44 wordline_driver_array_0/in2_18 vdd wordline_driver_array_0/in2_19 vdd vdd
-+ vdd_uq46 wordline_driver_array_0/in1_20 vdd wordline_driver_array_0/in2_21 wordline_driver_array_0/in1_10
-+ vdd wordline_driver_array_0/in1_22 wordline_driver_array_0/in2_11 vdd vdd_uq30 wordline_driver_array_0/in2_23
-+ wordline_driver_array_0/in1_12 vdd wordline_driver_array_0/in1_24 wordline_driver_array_0/in2_13
-+ wordline_driver_array_0/in2_0 vdd vdd_uq34 wordline_driver_array_0/in2_25 wordline_driver_array_0/in1_14
-+ wordline_driver_array_0/in2_1 vdd vdd wordline_driver_array_0/in2_15 wordline_driver_array_0/in2_2
-+ vdd vdd_uq42 wordline_driver_array_0/in1_16 wordline_driver_array_0/in1_0 wordline_driver_array_0/in2_3
-+ vdd vdd vdd wordline_driver_array_0/in2_17 wordline_driver_array_0/in2_4 wordline_driver_array_0/in1_1
-+ vdd vdd vdd_uq44 wordline_driver_array_0/in1_18 wordline_driver_array_0/in1_2 wordline_driver_array_0/in2_5
-+ vdd vdd wordline_driver_array_0/in2_19 wordline_driver_array_0/in2_6 wordline_driver_array_0/in2_3
-+ vdd wordline_driver_array_0/in1_4 wordline_driver_array_0/in2_7 vdd wordline_driver_array_0/in2_8
-+ vdd_uq46 wordline_driver_array_0/in1_20 wordline_driver_array_0/in2_5 hierarchical_decoder
-Xwordline_driver_array_0 vdd wordline_driver_array_0/in2_19 vdd wwl0_0 rwl1_0 rwl1_22
-+ rwl1_11 vdd rwl1_1 wwl0_1 rwl1_23 rwl1_12 vdd_uq46 wordline_driver_array_0/in2_20
-+ wwl0_2 rwl1_2 vdd_uq8 rwl1_24 rwl1_13 rwl1_3 wwl0_3 wordline_driver_array_0/in2_21
-+ wordline_driver_array_0/in2_10 vdd_uq10 rwl1_25 rwl1_14 vdd wordline_driver_array_0/in2_22
-+ wordline_driver_array_0/in2_11 vdd_uq14 wwl0_4 rwl1_4 vdd_uq42 rwl1_26 rwl1_15 wordline_driver_array_0/in2_17
-+ rwl1_5 wwl0_5 wordline_driver_array_0/in2_23 wordline_driver_array_0/in2_12 vdd_uq18
-+ rwl1_27 rwl1_16 wordline_driver_array_0/in1_0 vdd wordline_driver_array_0/in2_13
-+ vdd_uq20 wwl0_6 rwl1_6 rwl1_28 rwl1_17 wordline_driver_array_0/in1_1 rwl1_7 wordline_driver_array_0/in2_25
-+ vdd_uq24 wordline_driver_array_0/in2_14 wwl0_7 rwl1_29 rwl1_18 wordline_driver_array_0/in1_2
-+ vdd wordline_driver_array_0/in2_15 wwl0_8 rwl1_8 rwl1_19 vdd_uq28 wordline_driver_array_0/in2_3
-+ vdd_uq42 vdd_uq32 wordline_driver_array_0/in2_16 wwl0_9 rwl1_9 wordline_driver_array_0/in1_4
-+ vdd wordline_driver_array_0/in2_17 vdd_uq36 wordline_driver_array_0/in2_5 vdd_uq42
-+ vdd_uq44 wordline_driver_array_0/in2_18 wordline_driver_array_0/in1_6 wordline_driver_array_0/in2_19
-+ wordline_driver_array_0/in2_7 vdd_uq46 vdd wordline_driver_array_0/in2_21 wordline_driver_array_0/in1_8
-+ vdd_uq46 wordline_driver_array_0/in1_20 wordline_driver_array_0/in2_9 wwl0_30 wordline_driver_array_0/in2_21
-+ wordline_driver_array_0/in1_10 wordline_driver_array_0/in1_22 wordline_driver_array_0/in2_11
-+ wwl0_31 wwl0_20 wordline_driver_array_0/in2_23 wwl0_21 wordline_driver_array_0/in1_12
-+ wwl0_10 wordline_driver_array_0/in1_24 wordline_driver_array_0/in2_13 wwl0_22 wwl0_11
-+ wordline_driver_array_0/in2_25 wordline_driver_array_0/in2_25 wwl0_23 wordline_driver_array_0/in1_14
-+ wwl0_12 vdd_uq46 vdd wordline_driver_array_0/in2_15 rwl0_0 wwl0_24 wwl0_13 vdd_uq42
-+ wwl0_25 wordline_driver_array_0/in1_16 wwl0_14 rwl0_1 rwl0_30 vdd wordline_driver_array_0/in2_17
-+ rwl0_2 wwl0_26 wwl0_15 wordline_driver_array_0/in2_0 rwl0_31 rwl0_20 vdd_uq44 wwl0_27
-+ wordline_driver_array_0/in1_18 wwl0_16 rwl0_3 wordline_driver_array_0/in2_1 rwl0_21
-+ rwl0_10 rwl0_4 wwl0_28 wordline_driver_array_0/in2_19 wwl0_17 wordline_driver_array_0/in2_2
-+ rwl0_22 rwl0_11 vdd_uq38 wwl0_18 rwl0_5 vdd wwl0_29 wordline_driver_array_0/in1_0
-+ wordline_driver_array_0/in2_3 rwl0_23 rwl0_12 vdd_uq40 wwl0_19 wordline_driver_array_0/in2_4
-+ rwl0_6 vdd_uq46 wordline_driver_array_0/in1_20 wordline_driver_array_0/in1_1 rwl0_24
-+ rwl0_13 vdd_uq44 rwl0_7 wordline_driver_array_0/in2_19 wordline_driver_array_0/in2_21
-+ wordline_driver_array_0/in1_10 wordline_driver_array_0/in2_5 rwl0_25 rwl0_14 wordline_driver_array_0/in1_2
-+ vdd_uq44 vdd_uq4 wordline_driver_array_0/in2_6 rwl0_8 wordline_driver_array_0/in1_22
-+ wordline_driver_array_0/in2_11 wordline_driver_array_0/in2_3 rwl0_26 rwl0_15 rwl0_9
-+ wordline_driver_array_0/in2_23 wordline_driver_array_0/in1_12 wordline_driver_array_0/in2_7
-+ rwl0_27 rwl0_16 wordline_driver_array_0/in1_4 wordline_driver_array_0/in1_24 wordline_driver_array_0/in2_13
-+ wordline_driver_array_0/in2_5 wordline_driver_array_0/in2_8 rwl0_28 rwl0_17 wordline_driver_array_0/in2_25
-+ wordline_driver_array_0/in1_14 wordline_driver_array_0/in2_9 rwl0_29 rwl0_18 wordline_driver_array_0/in1_6
-+ wordline_driver_array_0/in2_23 vdd wordline_driver_array_0/in2_15 wordline_driver_array_0/in2_7
-+ rwl0_19 vdd_uq42 wordline_driver_array_0/in1_16 wordline_driver_array_0/in1_8 rwl1_30
-+ vdd wordline_driver_array_0/in2_17 wordline_driver_array_0/in2_9 rwl1_31 rwl1_20
-+ vdd_uq44 wordline_driver_array_0/in1_18 rwl1_21 rwl1_10 wordline_driver_array
++ wordline_driver_array_0/in1_4 wordline_driver_array_0/in2_24 wordline_driver_array_0/in2_13
++ wordline_driver_array_0/in1_5 wordline_driver_array_0/in2_25 wordline_driver_array_0/in2_14
++ wordline_driver_array_0/in1_6 wordline_driver_array_0/in2_26 wordline_driver_array_0/in2_15
++ wordline_driver_array_0/in1_7 wordline_driver_array_0/in2_27 wordline_driver_array_0/in2_16
++ wordline_driver_array_0/in1_8 wordline_driver_array_0/in2_28 wordline_driver_array_0/in2_17
++ wordline_driver_array_0/in1_9 wordline_driver_array_0/in2_29 wordline_driver_array_0/in2_18
++ wordline_driver_array_0/in2_19 wordline_driver_array_0/in0_30 vdd_uq46 wordline_driver_array_0/in0_31
++ wordline_driver_array_0/in0_20 vdd_uq18 wordline_driver_array_0/in0_21 wordline_driver_array_0/in0_10
++ vdd_uq20 wordline_driver_array_0/in0_22 wordline_driver_array_0/in0_11 vdd_uq24
++ vdd_uq30 wordline_driver_array_0/in0_23 wordline_driver_array_0/in0_12 vdd_uq28
++ wordline_driver_array_0/in0_24 wordline_driver_array_0/in0_13 wordline_driver_array_0/in2_0
++ vdd_uq32 vdd_uq34 wordline_driver_array_0/in0_25 wordline_driver_array_0/in0_14
++ vdd_uq2 wordline_driver_array_0/in2_1 vdd_uq36 wordline_driver_array_0/in0_26 wordline_driver_array_0/in0_15
++ wordline_driver_array_0/in2_2 vdd_uq38 vdd wordline_driver_array_0/in0_27 wordline_driver_array_0/in0_16
++ wordline_driver_array_0/in0_0 wordline_driver_array_0/in2_3 vdd_uq4 vdd_uq40 wordline_driver_array_0/in0_28
++ wordline_driver_array_0/in0_17 wordline_driver_array_0/in2_4 wordline_driver_array_0/in0_1
++ vdd_uq42 vdd_uq8 wordline_driver_array_0/in0_29 wordline_driver_array_0/in0_18 wordline_driver_array_0/in0_2
++ wordline_driver_array_0/in2_5 vdd_uq44 vdd_uq10 wordline_driver_array_0/in0_19 wordline_driver_array_0/in2_6
++ wordline_driver_array_0/in0_3 vdd_uq14 wordline_driver_array_0/in0_4 wordline_driver_array_0/in2_7
++ wordline_driver_array_0/in1_30 wordline_driver_array_0/in2_8 wordline_driver_array_0/in1_31
++ wordline_driver_array_0/in1_20 wordline_driver_array_0/in0_5 hierarchical_decoder
+Xwordline_driver_array_0 wl_en wordline_driver_array_0/in1_19 wwl0_0 rwl1_0 rwl1_22
++ rwl1_11 wordline_driver_array_0/in2_30 rwl1_1 wwl0_1 rwl1_23 rwl1_12 vdd_uq0 wordline_driver_array_0/in2_31
++ wordline_driver_array_0/in2_20 wwl0_2 rwl1_2 vdd_uq7 rwl1_24 rwl1_13 rwl1_3 wwl0_3
++ wordline_driver_array_0/in2_21 wordline_driver_array_0/in2_10 vdd_uq9 rwl1_25 rwl1_14
++ wordline_driver_array_0/in2_22 wordline_driver_array_0/in2_11 vdd_uq13 wwl0_4 rwl1_4
++ rwl1_26 rwl1_15 rwl1_5 wwl0_5 wordline_driver_array_0/in2_23 wordline_driver_array_0/in2_12
++ vdd_uq17 rwl1_27 rwl1_16 wordline_driver_array_0/in1_0 wordline_driver_array_0/in2_24
++ wordline_driver_array_0/in2_13 vdd_uq19 wwl0_6 rwl1_6 rwl1_28 rwl1_17 wordline_driver_array_0/in1_1
++ rwl1_7 wordline_driver_array_0/in2_25 vdd_uq23 wordline_driver_array_0/in2_14 wwl0_7
++ rwl1_29 rwl1_18 wordline_driver_array_0/in1_2 wordline_driver_array_0/in2_26 wordline_driver_array_0/in2_15
++ wwl0_8 rwl1_8 rwl1_19 vdd_uq27 wordline_driver_array_0/in1_3 wordline_driver_array_0/in2_27
++ vdd_uq31 wordline_driver_array_0/in2_16 wwl0_9 rwl1_9 wordline_driver_array_0/in1_4
++ wordline_driver_array_0/in2_28 wordline_driver_array_0/in2_17 vdd_uq35 wordline_driver_array_0/in1_5
++ wordline_driver_array_0/in2_29 wordline_driver_array_0/in2_18 wordline_driver_array_0/in1_6
++ wordline_driver_array_0/in2_19 wordline_driver_array_0/in1_7 wordline_driver_array_0/in0_30
++ wordline_driver_array_0/in1_8 wordline_driver_array_0/in0_31 wordline_driver_array_0/in0_20
++ wordline_driver_array_0/in1_9 wwl0_30 wordline_driver_array_0/in0_21 wordline_driver_array_0/in0_10
++ wordline_driver_array_0/in0_22 wordline_driver_array_0/in0_11 wwl0_31 wwl0_20 wordline_driver_array_0/in0_23
++ wwl0_21 wordline_driver_array_0/in0_12 wwl0_10 gnd wordline_driver_array_0/in0_24
++ wordline_driver_array_0/in0_13 wwl0_22 wwl0_11 wordline_driver_array_0/in0_25 wwl0_23
++ wordline_driver_array_0/in0_14 wwl0_12 wordline_driver_array_0/in0_26 wordline_driver_array_0/in0_15
++ rwl0_0 wwl0_24 wwl0_13 wordline_driver_array_0/in0_27 wwl0_25 wordline_driver_array_0/in0_16
++ wwl0_14 rwl0_1 rwl0_30 wordline_driver_array_0/in0_28 wordline_driver_array_0/in0_17
++ rwl0_2 wwl0_26 wwl0_15 wordline_driver_array_0/in2_0 rwl0_31 rwl0_20 wordline_driver_array_0/in0_29
++ wwl0_27 wordline_driver_array_0/in0_18 wwl0_16 rwl0_3 wordline_driver_array_0/in2_1
++ rwl0_21 rwl0_10 rwl0_4 wwl0_28 wordline_driver_array_0/in0_19 wwl0_17 wordline_driver_array_0/in2_2
++ rwl0_22 rwl0_11 vdd_uq37 wwl0_18 rwl0_5 wordline_driver_array_0/in1_30 wwl0_29 wordline_driver_array_0/in0_0
++ wordline_driver_array_0/in2_3 rwl0_23 rwl0_12 vdd_uq39 wwl0_19 wordline_driver_array_0/in2_4
++ rwl0_6 wordline_driver_array_0/in1_31 wordline_driver_array_0/in1_20 wordline_driver_array_0/in0_1
++ vdd_uq41 rwl0_24 rwl0_13 rwl0_7 wordline_driver_array_0/in1_21 wordline_driver_array_0/in1_10
++ wordline_driver_array_0/in2_5 rwl0_25 rwl0_14 wordline_driver_array_0/in0_2 vdd_uq43
++ vdd_uq3 wordline_driver_array_0/in2_6 rwl0_8 wordline_driver_array_0/in1_22 wordline_driver_array_0/in1_11
++ wordline_driver_array_0/in0_3 vdd_uq45 rwl0_26 rwl0_15 rwl0_9 wordline_driver_array_0/in1_23
++ wordline_driver_array_0/in1_12 wordline_driver_array_0/in2_7 rwl0_27 rwl0_16 wordline_driver_array_0/in0_4
++ wordline_driver_array_0/in1_24 wordline_driver_array_0/in1_13 wordline_driver_array_0/in0_5
++ wordline_driver_array_0/in2_8 rwl0_28 rwl0_17 wordline_driver_array_0/in1_25 wordline_driver_array_0/in1_14
++ wordline_driver_array_0/in2_9 rwl0_29 rwl0_18 wordline_driver_array_0/in0_6 wordline_driver_array_0/in1_26
++ wordline_driver_array_0/in1_15 wordline_driver_array_0/in0_7 rwl0_19 wordline_driver_array_0/in1_27
++ wordline_driver_array_0/in1_16 wordline_driver_array_0/in0_8 rwl1_30 wordline_driver_array_0/in1_28
++ wordline_driver_array_0/in1_17 wordline_driver_array_0/in0_9 rwl1_31 rwl1_20 wordline_driver_array_0/in1_29
++ wordline_driver_array_0/in1_18 rwl1_21 rwl1_10 wordline_driver_array
 .ends
 
 .subckt cell_2r1w vdd gnd rbl0 rbl1 wbl0 wwl0 rwl1 rwl0
@@ -5810,12 +5427,12 @@ Xcell_2r1w_1902 vdd_uq7 gnd read_bl_0_4 read_bl_1_4 write_bl_0_4 wwl_0_17 rwl_1_
 .ends
 
 .subckt replica_bitcell_array rwl_1_8 rwl_1_31 rwl_0_18 wwl_0_30 rwl_1_18 rwl_0_28
-+ wwl_0_31 wwl_0_20 rwl_1_28 wwl_0_21 wwl_0_10 rwl_0_6 rwl_0_5 wwl_0_22 wwl_0_11 rwl_1_5
-+ rwl_0_15 wwl_0_23 wwl_0_12 rwl_1_15 rwl_0_25 rwl_0_2 wwl_0_24 wwl_0_13 rwl_1_25
-+ rwl_1_2 rwl_0_12 wwl_0_25 wwl_0_14 wwl_0_26 wwl_0_15 rwl_1_12 rwl_0_22 wwl_0_0 wwl_0_27
-+ wwl_0_16 rwl_1_22 rwl_0_9 wwl_0_28 wwl_0_17 rwl_1_9 rwl_0_19 wwl_0_29 wwl_0_18 rwl_0_26
-+ wwl_0_19 rwl_1_19 rwl_0_29 rwl_0_16 rwl_1_29 rwl_1_6 rwl_1_16 rwl_0_3 rwl_1_26 rwl_1_3
-+ rwl_0_13 rwl_1_13 rwl_0_23 rwl_0_0 rwl_1_23 rwl_1_0 rwl_0_10 rwl_1_10 rwl_0_20 rwl_1_20
++ rwl_0_5 wwl_0_31 wwl_0_20 rwl_1_28 wwl_0_21 wwl_0_10 wwl_0_22 wwl_0_11 rwl_1_5 rwl_0_15
++ wwl_0_23 wwl_0_12 rwl_1_15 rwl_0_25 rwl_0_2 wwl_0_24 wwl_0_13 rwl_1_25 rwl_1_2 rwl_0_12
++ wwl_0_25 wwl_0_14 wwl_0_26 wwl_0_15 rwl_1_12 rwl_0_22 wwl_0_0 wwl_0_27 wwl_0_16
++ rwl_1_22 rwl_0_9 wwl_0_28 wwl_0_17 rwl_1_9 rwl_0_19 wwl_0_29 wwl_0_18 wwl_0_19 rwl_1_19
++ rwl_0_29 rwl_1_29 rwl_0_6 rwl_1_6 rwl_0_16 rwl_1_16 rwl_0_26 rwl_0_3 rwl_1_26 rwl_1_3
++ rwl_0_13 rwl_1_13 rwl_0_23 rwl_0_0 rwl_1_0 rwl_1_23 rwl_0_10 rwl_1_10 rwl_0_20 rwl_1_20
 + rwl_0_30 gnd rwl_1_30 rwl_0_7 rwl_1_7 rwl_0_17 wwl_0_1 rwl_1_17 rwl_0_27 rwl_0_4
 + wwl_0_2 rwl_1_27 rwl_1_4 rwl_0_14 wwl_0_3 rwl_1_14 wwl_0_4 rwl_0_24 rwl_0_1 wwl_0_5
 + rwl_1_24 rwl_1_1 rwl_0_11 wwl_0_6 rwl_1_11 rwl_0_21 wwl_0_7 rwl_1_21 wwl_0_8 rwl_0_31
@@ -5862,72 +5479,73 @@ Xbitcell_array_0 write_bl_0_48 write_bl_0_25 wwl_0_25 read_bl_0_38 wwl_0_11 writ
 + read_bl_1_43 read_bl_0_58 gnd bitcell_array
 .ends
 
-.subckt bank addr2 gnd addr3 vdd addr4 vdd_uq123 p_en_bar addr5 dout1_10 addr6 dout1_11
-+ addr7 dout1_12 addr8 dout1_13 dout1_14 dout1_15 vdd_uq129 dout1_0 dout1_1 dout1_2
-+ dout1_3 dout1_4 vdd_uq133 dout1_5 dout1_6 w_en vdd_uq151 vdd_uq161 dout1_7 vdd_uq90
-+ dout1_8 vdd_uq80 vdd_uq91 vdd_uq141 vdd_uq163 dout1_9 vdd_uq70 vdd_uq81 vdd_uq92
-+ vdd_uq131 vdd_uq143 vdd_uq153 vdd_uq71 vdd_uq82 vdd_uq93 vdd_uq110 vdd_uq121 vdd_uq72
-+ vdd_uq83 vdd_uq94 vdd_uq100 vdd_uq111 vdd_uq155 vdd_uq73 vdd_uq84 vdd_uq95 vdd_uq101
-+ vdd_uq112 vdd_uq145 vdd_uq74 vdd_uq85 vdd_uq96 vdd_uq102 vdd_uq113 vdd_uq135 vdd_uq147
-+ vdd_uq157 vdd_uq75 vdd_uq86 vdd_uq97 vdd_uq103 vdd_uq114 vdd_uq125 vdd_uq76 vdd_uq87
-+ vdd_uq104 vdd_uq115 vdd_uq137 vdd_uq159 vdd_uq66 vdd_uq77 vdd_uq88 vdd_uq105 vdd_uq127
-+ vdd_uq139 vdd_uq149 vdd_uq67 vdd_uq78 vdd_uq89 vdd_uq106 vdd_uq68 vdd_uq79 vdd_uq107
-+ vdd_uq69 vdd_uq108 vdd_uq109
-Xport_data_0 din0_15 gnd din0_6 p_en_bar din0_7 w_en gnd din0_8 din0_9 vdd dout1_10
-+ gnd dout1_11 dout1_12 dout1_13 dout1_14 dout1_15 dout1_0 dout1_1 dout1_2 p_en_bar
-+ dout1_3 dout1_4 dout1_5 dout1_6 dout1_7 vdd_uq66 vdd_uq92 dout1_8 din0_1 vdd_uq82
-+ vdd_uq93 dout1_9 vdd_uq72 vdd_uq83 vdd_uq94 vdd_uq73 vdd_uq84 vdd_uq95 vdd_uq114
-+ vdd_uq74 vdd_uq85 vdd_uq96 vdd_uq104 vdd_uq115 vdd_uq75 vdd_uq86 vdd_uq97 vdd_uq105
-+ vdd_uq76 vdd_uq87 vdd_uq100 vdd_uq106 din0_10 vdd_uq77 vdd_uq88 vdd_uq101 vdd_uq107
-+ vdd_uq67 vdd_uq78 vdd_uq89 vdd_uq102 vdd_uq108 vdd_uq68 vdd_uq79 vdd_uq90 vdd_uq103
-+ vdd_uq109 vdd_uq69 vdd_uq80 vdd_uq91 vdd_uq110 addr0 vdd_uq70 vdd_uq81 vdd_uq111
-+ vdd_uq71 vdd_uq112 vdd_uq113 din0_0 din0_11 din0_2 din0_12 din0_3 din0_13 din0_4
-+ din0_14 gnd din0_5 port_data
-Xhierarchical_predecode2x4_0_0 gnd addr0 gnd gnd gnd addr0 addr0 gnd gnd hierarchical_predecode2x4_0
-Xport_address_0 addr4 gnd port_address_0/rwl1_0 port_address_0/wwl0_0 port_address_0/rwl1_22
-+ port_address_0/rwl1_11 addr5 vdd_uq125 port_address_0/wwl0_1 port_address_0/rwl1_1
-+ port_address_0/rwl1_23 port_address_0/rwl1_12 addr6 vdd_uq127 port_address_0/rwl1_2
-+ port_address_0/wwl0_2 port_address_0/rwl1_24 port_address_0/rwl1_13 addr7 vdd_uq131
-+ port_address_0/wwl0_3 port_address_0/rwl1_3 port_address_0/rwl1_25 port_address_0/rwl1_14
-+ addr8 vdd_uq135 port_address_0/rwl1_4 port_address_0/wwl0_4 port_address_0/rwl1_26
-+ port_address_0/rwl1_15 vdd_uq137 port_address_0/wwl0_5 port_address_0/rwl1_5 addr2
-+ vdd_uq121 port_address_0/rwl1_27 port_address_0/rwl1_16 vdd_uq141 port_address_0/rwl1_6
-+ port_address_0/wwl0_6 vdd_uq123 addr3 port_address_0/rwl1_28 port_address_0/rwl1_17
-+ vdd_uq145 port_address_0/rwl1_7 port_address_0/wwl0_7 port_address_0/rwl1_29 port_address_0/rwl1_18
-+ vdd_uq149 vdd_uq129 port_address_0/rwl1_8 port_address_0/wwl0_8 port_address_0/rwl1_19
-+ vdd_uq153 port_address_0/wwl0_9 port_address_0/rwl1_9 vdd_uq155 vdd_uq157 vdd_uq159
-+ port_address_0/wwl0_30 vdd_uq161 port_address_0/wwl0_31 port_address_0/wwl0_20 vdd_uq163
-+ port_address_0/wwl0_21 port_address_0/wwl0_10 port_address_0/wwl0_22 port_address_0/wwl0_11
-+ port_address_0/wwl0_23 port_address_0/wwl0_12 port_address_0/rwl0_0 port_address_0/wwl0_24
-+ port_address_0/wwl0_13 port_address_0/wwl0_25 port_address_0/wwl0_14 port_address_0/rwl0_1
-+ port_address_0/rwl0_30 port_address_0/rwl0_2 port_address_0/wwl0_26 port_address_0/wwl0_15
-+ port_address_0/rwl0_31 port_address_0/rwl0_20 port_address_0/wwl0_27 port_address_0/wwl0_16
+.subckt bank addr2 vdd_uq89 gnd wl_en vdd_uq71 addr3 vdd addr4 p_en_bar addr5 dout1_10
++ addr6 dout1_11 addr7 dout1_12 addr8 dout1_13 dout1_14 dout1_15 dout1_0 dout1_1 vdd_uq100
++ dout1_2 dout1_3 dout1_4 dout1_5 vdd_uq160 dout1_6 w_en vdd_uq151 vdd_uq161 dout1_7
++ vdd_uq91 vdd_uq140 vdd_uq162 dout1_8 vdd_uq81 vdd_uq130 vdd_uq141 vdd_uq152 vdd_uq163
++ dout1_9 vdd_uq93 vdd_uq120 vdd_uq131 vdd_uq143 vdd_uq153 vdd_uq109 vdd_uq83 vdd_uq110
++ vdd_uq121 vdd_uq133 vdd_uq154 vdd_uq73 vdd_uq95 vdd_uq111 vdd_uq123 vdd_uq144 vdd_uq155
++ vdd_uq85 vdd_uq101 vdd_uq112 vdd_uq134 vdd_uq145 vdd_uq156 vdd_uq75 vdd_uq97 vdd_uq102
++ vdd_uq113 vdd_uq124 vdd_uq135 vdd_uq147 vdd_uq157 vdd_uq65 vdd_uq87 vdd_uq103 vdd_uq114
++ vdd_uq125 vdd_uq136 vdd_uq158 vdd_uq77 vdd_uq99 vdd_uq104 vdd_uq115 vdd_uq126 vdd_uq137
++ vdd_uq148 vdd_uq159 vdd_uq67 vdd_uq105 vdd_uq116 vdd_uq127 vdd_uq139 vdd_uq149 vdd_uq79
++ vdd_uq106 vdd_uq117 vdd_uq129 vdd_uq69 vdd_uq107 vdd_uq119 vdd_uq108
+Xport_data_0 p_en_bar din0_15 addr1 din0_6 din0_7 w_en vdd din0_8 gnd din0_9 dout1_10
++ dout1_11 dout1_12 dout1_13 dout1_14 dout1_15 dout1_0 dout1_1 dout1_2 dout1_3 dout1_4
++ dout1_5 dout1_6 vdd_uq100 dout1_7 vdd_uq93 dout1_8 vdd_uq83 dout1_9 vdd_uq73 vdd_uq95
++ vdd_uq71 vdd_uq85 vdd_uq114 vdd_uq75 vdd_uq97 vdd_uq104 vdd_uq115 p_en_bar vdd_uq87
++ vdd_uq105 vdd_uq108 vdd_uq77 vdd_uq106 vdd_uq109 din0_10 vdd_uq67 vdd_uq89 vdd_uq101
++ vdd_uq107 vdd_uq79 vdd_uq102 vdd_uq69 vdd_uq91 vdd_uq103 vdd_uq81 vdd_uq110 addr1
++ vdd_uq111 vdd_uq112 vdd_uq113 din0_0 din0_1 din0_11 din0_2 din0_12 din0_3 din0_13
++ addr1 din0_4 din0_14 addr1 din0_5 port_data
+Xhierarchical_predecode2x4_0_0 addr1 vdd_uq65 addr1 addr1 addr1 addr1 addr1 addr1
++ addr1 gnd vdd_uq99 hierarchical_predecode2x4_0
+Xport_address_0 addr4 port_address_0/rwl1_0 port_address_0/wwl0_0 port_address_0/rwl1_22
++ port_address_0/rwl1_11 addr5 port_address_0/wwl0_1 port_address_0/rwl1_1 port_address_0/rwl1_23
++ port_address_0/rwl1_12 vdd_uq116 addr6 port_address_0/rwl1_2 port_address_0/wwl0_2
++ vdd_uq119 port_address_0/rwl1_24 port_address_0/rwl1_13 addr7 port_address_0/wwl0_3
++ port_address_0/rwl1_3 port_address_0/rwl1_25 port_address_0/rwl1_14 addr8 port_address_0/rwl1_4
++ port_address_0/wwl0_4 vdd_uq120 port_address_0/rwl1_26 port_address_0/rwl1_15 port_address_0/wwl0_5
++ port_address_0/rwl1_5 addr2 vdd_uq121 port_address_0/rwl1_27 port_address_0/rwl1_16
++ port_address_0/rwl1_6 port_address_0/wwl0_6 vdd_uq123 addr3 port_address_0/rwl1_28
++ port_address_0/rwl1_17 port_address_0/rwl1_7 port_address_0/wwl0_7 port_address_0/rwl1_29
++ port_address_0/rwl1_18 gnd port_address_0/rwl1_8 port_address_0/wwl0_8 port_address_0/rwl1_19
++ vdd_uq124 port_address_0/wwl0_9 port_address_0/rwl1_9 vdd_uq125 wl_en vdd_uq126
++ port_address_0/wwl0_30 port_address_0/wwl0_31 port_address_0/wwl0_20 port_address_0/wwl0_21
++ port_address_0/wwl0_10 port_address_0/wwl0_22 port_address_0/wwl0_11 port_address_0/wwl0_23
++ port_address_0/wwl0_12 port_address_0/rwl0_0 port_address_0/wwl0_24 port_address_0/wwl0_13
++ port_address_0/wwl0_25 port_address_0/wwl0_14 port_address_0/rwl0_1 port_address_0/rwl0_30
++ port_address_0/rwl0_2 vdd_uq157 port_address_0/wwl0_26 port_address_0/wwl0_15 port_address_0/rwl0_31
++ port_address_0/rwl0_20 vdd_uq147 vdd_uq158 port_address_0/wwl0_27 port_address_0/wwl0_16
 + port_address_0/rwl0_3 port_address_0/rwl0_21 port_address_0/rwl0_10 port_address_0/rwl0_4
-+ port_address_0/wwl0_28 port_address_0/wwl0_17 port_address_0/rwl0_22 port_address_0/rwl0_11
-+ vdd_uq139 port_address_0/wwl0_18 port_address_0/rwl0_5 port_address_0/wwl0_29 port_address_0/rwl0_23
-+ port_address_0/rwl0_12 vdd_uq151 port_address_0/wwl0_19 port_address_0/rwl0_6 port_address_0/rwl0_24
-+ port_address_0/rwl0_13 port_address_0/rwl0_7 port_address_0/rwl0_25 port_address_0/rwl0_14
-+ port_address_0/rwl0_8 port_address_0/rwl0_26 port_address_0/rwl0_15 vdd_uq143 port_address_0/rwl0_9
-+ port_address_0/rwl0_27 port_address_0/rwl0_16 vdd_uq133 port_address_0/rwl0_28 port_address_0/rwl0_17
-+ port_address_0/rwl0_29 port_address_0/rwl0_18 port_address_0/rwl0_19 vdd_uq147 port_address_0/rwl1_30
-+ port_address_0/rwl1_31 port_address_0/rwl1_20 port_address_0/rwl1_21 port_address_0/rwl1_10
-+ port_address
++ vdd_uq137 vdd_uq148 vdd_uq159 port_address_0/wwl0_28 port_address_0/wwl0_17 port_address_0/rwl0_22
++ port_address_0/rwl0_11 vdd_uq160 vdd_uq127 vdd_uq139 vdd_uq149 port_address_0/wwl0_18
++ port_address_0/rwl0_5 port_address_0/wwl0_29 port_address_0/rwl0_23 port_address_0/rwl0_12
++ vdd_uq161 vdd_uq129 vdd_uq151 port_address_0/wwl0_19 port_address_0/rwl0_6 port_address_0/rwl0_24
++ port_address_0/rwl0_13 vdd_uq162 vdd_uq140 port_address_0/rwl0_7 port_address_0/rwl0_25
++ port_address_0/rwl0_14 vdd_uq163 vdd_uq130 vdd_uq141 vdd_uq152 port_address_0/rwl0_8
++ vdd_uq117 port_address_0/rwl0_26 port_address_0/rwl0_15 vdd_uq131 vdd_uq143 vdd_uq153
++ port_address_0/rwl0_9 port_address_0/rwl0_27 port_address_0/rwl0_16 vdd_uq133 vdd_uq154
++ port_address_0/rwl0_28 port_address_0/rwl0_17 vdd_uq144 vdd_uq155 port_address_0/rwl0_29
++ port_address_0/rwl0_18 vdd_uq134 vdd_uq145 vdd_uq156 port_address_0/rwl0_19 vdd_uq135
++ port_address_0/rwl1_30 vdd_uq136 port_address_0/rwl1_31 port_address_0/rwl1_20 port_address_0/rwl1_21
++ port_address_0/rwl1_10 port_address
 Xreplica_bitcell_array_0 port_address_0/rwl1_8 port_address_0/rwl1_31 port_address_0/rwl0_18
-+ port_address_0/wwl0_30 port_address_0/rwl1_18 port_address_0/rwl0_28 port_address_0/wwl0_31
-+ port_address_0/wwl0_20 port_address_0/rwl1_28 port_address_0/wwl0_21 port_address_0/wwl0_10
-+ port_address_0/rwl0_6 port_address_0/rwl0_5 port_address_0/wwl0_22 port_address_0/wwl0_11
-+ port_address_0/rwl1_5 port_address_0/rwl0_15 port_address_0/wwl0_23 port_address_0/wwl0_12
-+ port_address_0/rwl1_15 port_address_0/rwl0_25 port_address_0/rwl0_2 port_address_0/wwl0_24
-+ port_address_0/wwl0_13 port_address_0/rwl1_25 port_address_0/rwl1_2 port_address_0/rwl0_12
-+ port_address_0/wwl0_25 port_address_0/wwl0_14 port_address_0/wwl0_26 port_address_0/wwl0_15
-+ port_address_0/rwl1_12 port_address_0/rwl0_22 port_address_0/wwl0_0 port_address_0/wwl0_27
-+ port_address_0/wwl0_16 port_address_0/rwl1_22 port_address_0/rwl0_9 port_address_0/wwl0_28
-+ port_address_0/wwl0_17 port_address_0/rwl1_9 port_address_0/rwl0_19 port_address_0/wwl0_29
-+ port_address_0/wwl0_18 port_address_0/rwl0_26 port_address_0/wwl0_19 port_address_0/rwl1_19
-+ port_address_0/rwl0_29 port_address_0/rwl0_16 port_address_0/rwl1_29 port_address_0/rwl1_6
-+ port_address_0/rwl1_16 port_address_0/rwl0_3 port_address_0/rwl1_26 port_address_0/rwl1_3
++ port_address_0/wwl0_30 port_address_0/rwl1_18 port_address_0/rwl0_28 port_address_0/rwl0_5
++ port_address_0/wwl0_31 port_address_0/wwl0_20 port_address_0/rwl1_28 port_address_0/wwl0_21
++ port_address_0/wwl0_10 port_address_0/wwl0_22 port_address_0/wwl0_11 port_address_0/rwl1_5
++ port_address_0/rwl0_15 port_address_0/wwl0_23 port_address_0/wwl0_12 port_address_0/rwl1_15
++ port_address_0/rwl0_25 port_address_0/rwl0_2 port_address_0/wwl0_24 port_address_0/wwl0_13
++ port_address_0/rwl1_25 port_address_0/rwl1_2 port_address_0/rwl0_12 port_address_0/wwl0_25
++ port_address_0/wwl0_14 port_address_0/wwl0_26 port_address_0/wwl0_15 port_address_0/rwl1_12
++ port_address_0/rwl0_22 port_address_0/wwl0_0 port_address_0/wwl0_27 port_address_0/wwl0_16
++ port_address_0/rwl1_22 port_address_0/rwl0_9 port_address_0/wwl0_28 port_address_0/wwl0_17
++ port_address_0/rwl1_9 port_address_0/rwl0_19 port_address_0/wwl0_29 port_address_0/wwl0_18
++ port_address_0/wwl0_19 port_address_0/rwl1_19 port_address_0/rwl0_29 port_address_0/rwl1_29
++ port_address_0/rwl0_6 port_address_0/rwl1_6 port_address_0/rwl0_16 port_address_0/rwl1_16
++ port_address_0/rwl0_26 port_address_0/rwl0_3 port_address_0/rwl1_26 port_address_0/rwl1_3
 + port_address_0/rwl0_13 port_address_0/rwl1_13 port_address_0/rwl0_23 port_address_0/rwl0_0
-+ port_address_0/rwl1_23 port_address_0/rwl1_0 port_address_0/rwl0_10 port_address_0/rwl1_10
++ port_address_0/rwl1_0 port_address_0/rwl1_23 port_address_0/rwl0_10 port_address_0/rwl1_10
 + port_address_0/rwl0_20 port_address_0/rwl1_20 port_address_0/rwl0_30 gnd port_address_0/rwl1_30
 + port_address_0/rwl0_7 port_address_0/rwl1_7 port_address_0/rwl0_17 port_address_0/wwl0_1
 + port_address_0/rwl1_17 port_address_0/rwl0_27 port_address_0/rwl0_4 port_address_0/wwl0_2
@@ -5945,13 +5563,13 @@ Xdata_dff_0 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd 
 + vdd data_dff
 Xcol_addr_dff_0 vdd vdd vdd vdd vdd col_addr_dff
 Xrow_addr_dff_0 vdd vdd vdd vdd vdd bank_0/addr2 bank_0/addr3 bank_0/addr5 bank_0/addr4
-+ vdd bank_0/addr6 bank_0/addr7 bank_0/addr8 addr1[3] vdd vdd addr1[4] addr1[5] addr1[6]
++ vdd bank_0/addr6 bank_0/addr7 bank_0/addr8 vdd vdd addr1[3] addr1[4] addr1[5] addr1[6]
 + addr1[7] addr1[8] row_addr_dff
-Xbank_0 bank_0/addr2 vdd bank_0/addr3 vdd bank_0/addr4 vdd vdd bank_0/addr5 vdd bank_0/addr6
-+ vdd bank_0/addr7 vdd bank_0/addr8 vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd
+Xbank_0 bank_0/addr2 vdd vdd vdd vdd bank_0/addr3 vdd bank_0/addr4 vdd bank_0/addr5
++ vdd bank_0/addr6 vdd bank_0/addr7 vdd bank_0/addr8 vdd vdd vdd vdd vdd vdd vdd vdd
 + vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd
 + vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd
 + vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd
-+ vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd bank
++ vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd vdd bank
 .ends
 

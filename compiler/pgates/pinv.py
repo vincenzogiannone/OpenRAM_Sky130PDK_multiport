@@ -105,15 +105,14 @@ class pinv(pgate.pgate):
                               width=drc("minwidth_tx"),
                               tx_type="pmos")
         tx_height = nmos.poly_height + pmos.poly_height
-        
         # rotated m1 pitch or poly to active spacing
         min_channel = max(contact.poly_contact.width + self.m1_space,
                           contact.poly_contact.width + 2 * self.poly_to_active)
-        
-        total_height = (tx_height + min_channel + 2 * self.top_bottom_space) 
-        #debug.check(self.height > total_height,
-        #            "Cell height {0} too small for simple min height {1}.".format(self.height,
-        #total_height))
+
+        total_height = tx_height + min_channel + 2 * self.top_bottom_space
+        # debug.check(self.height > total_height,
+        #             "Cell height {0} too small for simple min height {1}.".format(self.height,
+        # total_height))
         if total_height > self.height:
             msg = "Cell height {0} too small for simple min height {1}.".format(self.height, total_height)
             raise drc_error(msg)
@@ -135,7 +134,6 @@ class pinv(pgate.pgate):
         # Determine the number of mults for each to fit width
         # into available space
         if not cell_props.ptx.bin_spice_models:
-            
             self.nmos_width = self.nmos_size * drc("minwidth_tx")
             self.pmos_width = self.pmos_size * drc("minwidth_tx")
             nmos_required_mults = max(int(ceil(self.nmos_width / nmos_height_available)), 1)
@@ -153,7 +151,6 @@ class pinv(pgate.pgate):
             # debug.check(self.nmos_width >= drc("minwidth_tx"),
             #            "Cannot finger NMOS transistors to fit cell height.")
             if self.nmos_width < drc("minwidth_tx"):
-                
                 raise drc_error("Cannot finger NMOS transistors to fit cell height.")
 
             self.pmos_width = round_to_grid(self.pmos_width / self.tx_mults)

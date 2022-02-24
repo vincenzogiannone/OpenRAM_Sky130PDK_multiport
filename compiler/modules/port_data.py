@@ -161,14 +161,14 @@ class port_data(design.design):
         else:
             for bit in range(self.num_cols):
                 for port in range(OPTS.num_r_ports):
-                    self.add_pin("read_bl_{0}_{1}".format(port, bit), "INOUT")
+                    self.add_pin("rbl_{0}_{1}".format(port, bit), "INOUT")
                 for port in range(OPTS.num_w_ports):
-                    self.add_pin("write_bl_{0}_{1}".format(port, bit), "INPUT")
+                    self.add_pin("wbl_{0}_{1}".format(port, bit), "INPUT")
             for bit in range(self.num_spare_cols):
                 for port in range(OPTS.num_r_ports):
-                    self.add_pin("spare_read_bl_{0}_{1}".format(port, bit), "INOUT")
+                    self.add_pin("spare_rbl_{0}_{1}".format(port, bit), "INOUT")
                 for port in range(OPTS.num_w_ports):
-                    self.add_pin("spare_write_bl_{0}_{1}".format(port, bit), "INPUT")
+                    self.add_pin("spare_wbl_{0}_{1}".format(port, bit), "INPUT")
             for bit in range(self.word_size + self.num_spare_cols):
                 for x in range(OPTS.num_r_ports):
                     self.add_pin("dout_{0}_{1}".format(x, bit), "OUTPUT")
@@ -288,16 +288,10 @@ class port_data(design.design):
             else:
                 self.sense_amp_array = None
         else:
-            sense_amp_offsets = [[] for i in range(OPTS.num_r_ports*self.num_cols + self.num_spare_cols)]
-            for i in range(OPTS.num_r_ports*self.num_cols + self.num_spare_cols):
-                if i % 2 == True:
-                    sense_amp_offsets[i] = i*cell.width + cell.width/2 - 1.59/2
-                else:
-                    sense_amp_offsets[i] = i*cell.width + cell.width/2 + 1.59/2
                  
             self.sense_amp_array = factory.create(module_type="sense_amp_array",
                                                      word_size=self.word_size,
-                                                     offsets=sense_amp_offsets,
+                                                     offsets=None,
                                                      words_per_row=self.words_per_row,
                                                      num_spare_cols=self.num_spare_cols)
             self.add_mod(self.sense_amp_array)
@@ -335,7 +329,7 @@ class port_data(design.design):
             self.write_driver_array = factory.create(module_type="write_driver_array",
                                                          columns=self.num_cols,
                                                          word_size=self.word_size,
-                                                         offsets=self.bit_offsets,
+                                                         offsets=None,
                                                          write_size=self.write_size,
                                                          num_spare_cols=self.num_spare_cols)
             self.add_mod(self.write_driver_array)
@@ -443,11 +437,15 @@ class port_data(design.design):
             for col in range(self.num_cols):
                 for port in range(OPTS.num_r_ports):
                     temp.append("rbl{0}_{1}".format(port, col))
+                for port in range(OPTS.num_w_ports):
+                    temp.append("wbl{0}_{1}".format(port, col)) 
             for word in range(self.words_per_row):
                 temp.append("sel_{}".format(word))
             for bit in range(self.word_size):
                 for port in range(OPTS.num_r_ports):
                     temp.append("rbl_out{0}_{1}".format(port, bit))
+                for port in range(OPTS.num_w_ports):
+                    temp.append("wbl_out{0}_{1}".format(port, bit))
         else:
             for col in range(self.num_cols):
                 temp.append("bl_{0}".format(col))
@@ -618,8 +616,12 @@ class port_data(design.design):
                 continue
             self.height += (p.height + self.m2_gap)
             self.width = max(self.width, p.width)
-            vertical_port_offsets[i] = vector(0, self.height)
+            if OPTS.RF_mode == False:
+                vertical_port_offsets[i] = vector(0, self.height)
+            else:
+                vertical_port_offsets[i] = vector(0, self.height + 3*self.m2_pitch)
         # Reversed order
+        
         self.write_mask_and_offset = vertical_port_offsets[4]
         self.write_driver_offset = vertical_port_offsets[3]
         self.sense_amp_offset = vertical_port_offsets[2]

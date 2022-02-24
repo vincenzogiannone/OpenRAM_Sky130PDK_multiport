@@ -1,4 +1,4 @@
-timestamp 1643678852
+timestamp 1644951706
 version 8.3
 tech sky130A
 style ngspice()
@@ -18,12 +18,12 @@ node "G" 2522 370.279 60 -56 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_n59_42#" 2898 633.6 -59 42 nw 0 0 0 0 211200 1904 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 substrate "gnd" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 cap "S_uq1" "S_uq0" 5.58462
-cap "D" "G" 35.994
-cap "S" "D" 137.218
 cap "S" "S_uq0" 12.236
-cap "S_uq0" "D" 38.7297
-cap "S_uq1" "S" 12.236
-cap "S_uq1" "D" 38.7297
+cap "S" "S_uq1" 12.236
+cap "D" "S_uq0" 38.7297
+cap "D" "S_uq1" 38.7297
+cap "D" "S" 137.218
+cap "D" "G" 35.994
 device msubckt sky130_fd_pr__pfet_01v8 384 0 385 1 l=30 w=252 "w_n59_42#" "G" 60 0 "D" 252 0 "S_uq0" 252 0
 device msubckt sky130_fd_pr__pfet_01v8 276 0 277 1 l=30 w=252 "w_n59_42#" "G" 60 0 "S" 252 0 "D" 252 0
 device msubckt sky130_fd_pr__pfet_01v8 168 0 169 1 l=30 w=252 "w_n59_42#" "G" 60 0 "D" 252 0 "S" 252 0

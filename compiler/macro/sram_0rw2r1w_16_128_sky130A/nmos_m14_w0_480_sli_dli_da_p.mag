@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1643678851
+timestamp 1644951705
 << checkpaint >>
 rect -1260 -1286 2814 1412
 << scnmos >>
@@ -159,79 +159,79 @@ rect 1408 15 1442 31
 rect 1512 65 1546 81
 rect 1512 15 1546 31
 use contact_8  contact_8_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 1504 0 1 7
 box 0 0 1 1
 use contact_8  contact_8_1
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 1400 0 1 7
 box 0 0 1 1
 use contact_8  contact_8_2
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 1292 0 1 7
 box 0 0 1 1
 use contact_8  contact_8_3
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 1184 0 1 7
 box 0 0 1 1
 use contact_8  contact_8_4
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 1076 0 1 7
 box 0 0 1 1
 use contact_8  contact_8_5
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 968 0 1 7
 box 0 0 1 1
 use contact_8  contact_8_6
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 860 0 1 7
 box 0 0 1 1
 use contact_8  contact_8_7
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 752 0 1 7
 box 0 0 1 1
 use contact_8  contact_8_8
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 644 0 1 7
 box 0 0 1 1
 use contact_8  contact_8_9
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 536 0 1 7
 box 0 0 1 1
 use contact_8  contact_8_10
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 428 0 1 7
 box 0 0 1 1
 use contact_8  contact_8_11
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 320 0 1 7
 box 0 0 1 1
 use contact_8  contact_8_12
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 212 0 1 7
 box 0 0 1 1
 use contact_8  contact_8_13
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 104 0 1 7
 box 0 0 1 1
 use contact_8  contact_8_14
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 0 0 1 7
 box 0 0 1 1
 << labels >>
 rlabel mvvaractor s 777 137 777 137 4 G
-rlabel locali s 237 48 237 48 4 S
-rlabel locali s 1529 48 1529 48 4 S
-rlabel locali s 1101 48 1101 48 4 S
-rlabel locali s 1317 48 1317 48 4 S
-rlabel locali s 669 48 669 48 4 S
 rlabel locali s 885 48 885 48 4 S
-rlabel locali s 25 48 25 48 4 S
+rlabel locali s 237 48 237 48 4 S
 rlabel locali s 453 48 453 48 4 S
+rlabel locali s 25 48 25 48 4 S
+rlabel locali s 1101 48 1101 48 4 S
+rlabel locali s 669 48 669 48 4 S
+rlabel locali s 1317 48 1317 48 4 S
+rlabel locali s 1529 48 1529 48 4 S
 rlabel locali s 777 132 777 132 4 D
 << properties >>
 string FIXED_BBOX -25 -26 1579 152
 string GDS_FILE sram_0rw2r1w_16_128_sky130A.gds
-string GDS_END 2063518
-string GDS_START 2060114
+string GDS_END 1998492
+string GDS_START 1995088
 << end >>

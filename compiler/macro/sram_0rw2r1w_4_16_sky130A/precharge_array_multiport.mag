@@ -1,0 +1,68 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1644949024
+<< checkpaint >>
+rect -1260 -1268 5150 2312
+<< metal1 >>
+rect 0 11 3890 39
+<< metal2 >>
+rect 70 0 98 1038
+rect 532 0 560 1038
+rect 848 0 876 1038
+rect 1310 0 1338 1038
+rect 1626 0 1654 1038
+rect 2088 0 2116 1038
+rect 2404 0 2432 1038
+rect 2866 0 2894 1038
+rect 3182 0 3210 1038
+rect 3644 0 3672 1038
+<< metal3 >>
+rect 160 862 226 994
+rect 938 862 1004 994
+rect 1716 862 1782 994
+rect 2494 862 2560 994
+rect 3272 862 3338 994
+use precharge_multiport_0  precharge_multiport_0_0
+timestamp 1644949024
+transform 1 0 3112 0 1 0
+box 0 -8 778 1052
+use precharge_multiport_0  precharge_multiport_0_1
+timestamp 1644949024
+transform 1 0 2334 0 1 0
+box 0 -8 778 1052
+use precharge_multiport_0  precharge_multiport_0_2
+timestamp 1644949024
+transform 1 0 1556 0 1 0
+box 0 -8 778 1052
+use precharge_multiport_0  precharge_multiport_0_3
+timestamp 1644949024
+transform 1 0 778 0 1 0
+box 0 -8 778 1052
+use precharge_multiport_0  precharge_multiport_0_4
+timestamp 1644949024
+transform 1 0 0 0 1 0
+box 0 -8 778 1052
+<< labels >>
+rlabel metal1 s 0 10 3890 38 4 en_bar
+rlabel metal3 s 2494 862 2560 994 4 vdd
+rlabel metal3 s 938 862 1004 994 4 vdd
+rlabel metal3 s 160 862 226 994 4 vdd
+rlabel metal3 s 3272 862 3338 994 4 vdd
+rlabel metal3 s 1716 862 1782 994 4 vdd
+rlabel metal2 s 70 0 98 1038 4 rbl0_0
+rlabel metal2 s 532 0 560 1038 4 rbl1_0
+rlabel metal2 s 848 0 876 1038 4 rbl0_1
+rlabel metal2 s 1310 0 1338 1038 4 rbl1_1
+rlabel metal2 s 1626 0 1654 1038 4 rbl0_2
+rlabel metal2 s 2088 0 2116 1038 4 rbl1_2
+rlabel metal2 s 2404 0 2432 1038 4 rbl0_3
+rlabel metal2 s 2866 0 2894 1038 4 rbl1_3
+rlabel metal2 s 3182 0 3210 1038 4 rbl0_4
+rlabel metal2 s 3644 0 3672 1038 4 rbl1_4
+<< properties >>
+string FIXED_BBOX 0 0 3890 1038
+string GDS_FILE sram_0rw2r1w_4_16_sky130A.gds
+string GDS_END 194080
+string GDS_START 190370
+<< end >>

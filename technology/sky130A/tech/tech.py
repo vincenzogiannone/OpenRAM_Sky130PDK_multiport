@@ -351,12 +351,12 @@ drc.add_layer("via1",
 drc.add_enclosure("m1",
                   layer="li_contact",
                   enclosure=0.030,
-                  extension=0.06)
+                  extension=0.060)
 
 drc.add_enclosure("m1",
                   layer="via1",
-                  enclosure=0, #0.085 
-                  extension=0) #0.055
+                  enclosure=0.055, 
+                  extension=0.085) 
 
 # 9.1 Minimum width
 # 9.2 Minimum spacing
@@ -367,13 +367,13 @@ drc.add_layer("m2",
 # 9.3 Minimum overlap of via
 drc.add_enclosure("m2",
                   layer = "via1",
-                  enclosure = 0, #0.055
-                  extension = 0) #0.085
+                  enclosure = 0.055, 
+                  extension = 0.085) 
 # 14.3 Minimum overlap by m2
 drc.add_enclosure("m2",
                   layer = "via2",
-                  enclosure = 0, #0.04
-                  extension = 0) #0.085
+                  enclosure = 0.04, #0.04
+                  extension = 0.085) #0.085
 
 # 14.1 Exact size
 # 14.2 Minimum spacing
@@ -392,7 +392,7 @@ drc.add_layer("m3",
 drc.add_enclosure("m3",
                   layer = "via2",
                   enclosure = 0.065,
-                  extension = 0.23)
+                  extension = 0.26)
 
 # 21.3 Minimum overlap by m3
 drc.add_enclosure("m3",

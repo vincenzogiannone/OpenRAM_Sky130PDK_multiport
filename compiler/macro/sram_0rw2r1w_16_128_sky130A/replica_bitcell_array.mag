@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1643678851
+timestamp 1644951705
 << checkpaint >>
 rect -630 -651 25526 25291
 << metal1 >>
@@ -294,7 +294,7 @@ rect 24603 0 24617 24640
 rect 24729 0 24743 24640
 rect 24820 0 24834 24640
 use bitcell_array  bitcell_array_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 0 0 1 0
 box 0 -21 24896 24661
 << labels >>
@@ -589,6 +589,6 @@ rlabel metal2 s 24820 0 24834 24640 4 write_bl_0_63
 << properties >>
 string FIXED_BBOX 0 0 49792 49280
 string GDS_FILE sram_0rw2r1w_16_128_sky130A.gds
-string GDS_END 395154
-string GDS_START 339382
+string GDS_END 364290
+string GDS_START 308518
 << end >>

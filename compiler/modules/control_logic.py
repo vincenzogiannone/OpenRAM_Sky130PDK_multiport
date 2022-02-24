@@ -703,7 +703,7 @@ class control_logic(design.design):
             self.w_en_gate_inst = self.add_inst(name="w_en_and",
                                                mod=self.wen_and)
         # Only drive the writes in the second half of the clock cycle during a write operation.
-            self.connect_inst([input_name, "gated_clk_bar", "we", "vdd", "gnd"])
+            self.connect_inst([input_name, "gated_clk_bar", "w_en", "vdd", "gnd"])
     def place_wen_row(self, row):
         x_offset = self.control_x_offset
 

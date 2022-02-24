@@ -1,43 +1,43 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1643678851
+timestamp 1644951705
 << checkpaint >>
-rect -1296 -1277 5184 2155
+rect -1296 -1277 5252 2155
 << nwell >>
-rect -36 402 3924 895
+rect -36 402 3992 895
 << locali >>
-rect 0 821 3888 855
+rect 0 821 3956 855
 rect 48 344 114 410
-rect 196 360 432 394
-rect 534 353 891 387
-rect 1226 353 1782 387
-rect 2748 353 2782 387
-rect 0 -17 3888 17
+rect 196 360 449 394
+rect 551 353 925 387
+rect 1260 353 1833 387
+rect 2799 353 2833 387
+rect 0 -17 3956 17
 use pinv_15  pinv_15_0
-timestamp 1643678851
-transform 1 0 1701 0 1 0
-box -36 -17 2223 895
+timestamp 1644951705
+transform 1 0 1752 0 1 0
+box -36 -17 2240 895
 use pinv_14  pinv_14_0
-timestamp 1643678851
-transform 1 0 810 0 1 0
-box -36 -17 927 895
+timestamp 1644951705
+transform 1 0 844 0 1 0
+box -36 -17 944 895
 use pinv_7  pinv_7_0
-timestamp 1643678851
-transform 1 0 351 0 1 0
-box -36 -17 495 895
+timestamp 1644951705
+transform 1 0 368 0 1 0
+box -36 -17 512 895
 use pinv_0  pinv_0_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 0 0 1 0
-box -36 -17 387 895
+box -36 -17 404 895
 << labels >>
-rlabel locali s 2765 370 2765 370 4 Z
+rlabel locali s 2816 370 2816 370 4 Z
 rlabel locali s 81 377 81 377 4 A
-rlabel locali s 1944 0 1944 0 4 gnd
-rlabel locali s 1944 838 1944 838 4 vdd
+rlabel locali s 1978 0 1978 0 4 gnd
+rlabel locali s 1978 838 1978 838 4 vdd
 << properties >>
-string FIXED_BBOX 0 0 3888 838
+string FIXED_BBOX 0 0 3956 838
 string GDS_FILE sram_0rw2r1w_16_128_sky130A.gds
-string GDS_END 2123790
-string GDS_START 2122514
+string GDS_END 2058764
+string GDS_START 2057488
 << end >>

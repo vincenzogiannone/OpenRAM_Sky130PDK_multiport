@@ -1,4 +1,4 @@
-timestamp 1643678852
+timestamp 1644951706
 version 8.3
 tech sky130A
 style ngspice()
@@ -11,16 +11,17 @@ use nmos_m10_w0_460_sli_dli_da_p nmos_m10_w0_460_sli_dli_da_p_0 1 0 54 0 1 51
 use pmos_m10_w1_385_sli_dli_da_p pmos_m10_w1_385_sli_dli_da_p_0 1 0 54 0 1 510
 node "Z" 156 275.257 598 164 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14790 938 0 0 0 0 0 0 0 0 0 0 0 0
 node "A" 404 286.65 48 340 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12006 702 0 0 4356 264 0 0 0 0 0 0 0 0 0 0 0 0
-node "vdd" 5962 3495.4 -36 402 nw 0 0 0 0 687735 3776 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 90474 5390 0 0 0 0 0 0 0 0 0 0 0 0
-substrate "gnd" 0 0 1230 51 pw 0 0 4100 264 0 0 0 0 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 58242 3494 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 6027 3529.9 -36 402 nw 0 0 0 0 696116 3810 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 91052 5424 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 1230 51 pw 0 0 4100 264 0 0 0 0 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 58820 3528 0 0 0 0 0 0 0 0 0 0 0 0
 cap "vdd" "Z" 10.3556
 cap "A" "vdd" 5.34286
-subcap "vdd" -620.4
+subcap "vdd" -638.148
 subcap "gnd" -101.453
-cap "Z" "A" 22.5069
 cap "gnd" "A" 1.27764
-cap "Z" "vdd" 114.198
-cap "Z" "gnd" 261.358
+cap "gnd" "Z" 261.358
+cap "vdd" "Z" 114.198
+cap "Z" "A" 22.5069
+subcap "gnd" -1002.66
 merge "pmos_m10_w1_385_sli_dli_da_p_0/gnd" "nmos_m10_w0_460_sli_dli_da_p_0/gnd" -101.453 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -408 0 0 0 0 0 0 0 0 0 0 0 0
 merge "nmos_m10_w0_460_sli_dli_da_p_0/gnd" "nmos_m10_w0_460_sli_dli_da_p_0/S_uq0"
 merge "nmos_m10_w0_460_sli_dli_da_p_0/S_uq0" "nmos_m10_w0_460_sli_dli_da_p_0/S"
@@ -32,7 +33,7 @@ merge "nmos_m10_w0_460_sli_dli_da_p_0/S_uq4" "contact_10_0/gnd"
 merge "contact_10_0/gnd" "contact_11_0/gnd"
 merge "contact_11_0/gnd" "contact_12_0/gnd"
 merge "contact_12_0/gnd" "gnd"
-merge "pmos_m10_w1_385_sli_dli_da_p_0/S_uq0" "pmos_m10_w1_385_sli_dli_da_p_0/S" -2046.09 0 0 0 0 -475230 -3250 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13464 -1200 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pmos_m10_w1_385_sli_dli_da_p_0/S_uq0" "pmos_m10_w1_385_sli_dli_da_p_0/S" -1881.87 0 0 0 0 -424480 -3250 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -528 -1200 0 0 0 0 0 0 0 0 0 0 0 0
 merge "pmos_m10_w1_385_sli_dli_da_p_0/S" "pmos_m10_w1_385_sli_dli_da_p_0/S_uq1"
 merge "pmos_m10_w1_385_sli_dli_da_p_0/S_uq1" "pmos_m10_w1_385_sli_dli_da_p_0/S_uq2"
 merge "pmos_m10_w1_385_sli_dli_da_p_0/S_uq2" "pmos_m10_w1_385_sli_dli_da_p_0/S_uq3"

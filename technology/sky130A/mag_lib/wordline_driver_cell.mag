@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1643284214
+timestamp 1643766773
 << nwell >>
 rect 0 488 602 808
 << nmos >>
@@ -658,5 +658,5 @@ port 21 nsew
 flabel metal1 595 509 595 509 0 FreeSans 80 0 0 0 rwl1
 port 22 nsew
 << properties >>
-string FIXED_BBOX 0 -21 602 769
+string FIXED_BBOX 0 0 602 769
 << end >>

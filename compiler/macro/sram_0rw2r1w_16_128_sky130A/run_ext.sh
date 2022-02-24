@@ -1,5 +1,5 @@
 #!/bin/sh
-export OPENRAM_TECH="/home/vincenzogiannone/Desktop/work_OpenRAM-1.1.18/technology"
+export OPENRAM_TECH="/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/technology"
 echo "$(date): Starting GDS to MAG using Magic /usr/local/bin/magic"
 
 /usr/local/bin/magic -dnull -noconsole << EOF

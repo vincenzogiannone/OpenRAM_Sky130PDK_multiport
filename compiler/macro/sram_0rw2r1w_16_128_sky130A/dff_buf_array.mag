@@ -1,38 +1,41 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1643678851
+timestamp 1644951705
 << checkpaint >>
-rect -1326 -1302 4238 2978
+rect -1326 -1302 4272 2978
 << metal1 >>
-rect 0 1702 2942 1706
-rect 26 1650 2942 1702
-rect 0 1646 2942 1650
-rect 0 864 2942 868
-rect 26 812 2942 864
-rect 0 808 2942 812
-rect 0 26 2942 30
-rect 26 -26 2942 26
-rect 0 -30 2942 -26
+rect 0 1702 2976 1706
+rect -32 1650 -26 1702
+rect 26 1650 2976 1702
+rect 0 1646 2976 1650
+rect 0 864 2976 868
+rect -32 812 -26 864
+rect 26 812 2976 864
+rect 0 808 2976 812
+rect 0 26 2976 30
+rect -32 -26 -26 26
+rect 26 -26 2976 26
+rect 0 -30 2976 -26
 << via1 >>
 rect -26 1650 26 1702
 rect -26 812 26 864
 rect -26 -26 26 26
 << metal2 >>
-rect -20 1704 20 1710
-rect -20 1642 28 1648
-rect 0 872 28 1642
+rect -28 1704 28 1713
+rect -28 1639 28 1648
+rect 0 875 28 1639
+rect 2680 1489 2708 1517
 rect 180 1416 234 1444
-rect 2629 1421 2657 1449
-rect 2164 1149 2192 1177
-rect -20 866 28 872
-rect -20 804 28 810
-rect 0 34 28 804
-rect 2164 499 2192 527
+rect 2172 1081 2200 1109
+rect -28 866 28 875
+rect -28 801 28 810
+rect 0 37 28 801
+rect 2172 567 2200 595
 rect 180 232 234 260
-rect 2629 227 2657 255
-rect -20 28 28 34
-rect -20 -34 20 -28
+rect 2680 159 2708 187
+rect -28 28 28 37
+rect -28 -37 28 -28
 << via2 >>
 rect -28 1702 28 1704
 rect -28 1650 -26 1702
@@ -50,73 +53,73 @@ rect -26 -26 26 26
 rect 26 -26 28 26
 rect -28 -28 28 -26
 << metal3 >>
-rect -66 1704 66 1709
+rect -66 1704 66 1713
 rect -66 1648 -28 1704
 rect 28 1648 66 1704
-rect -66 1643 66 1648
-rect -66 866 66 871
+rect -66 1639 66 1648
+rect -66 866 66 875
 rect -66 810 -28 866
 rect 28 810 66 866
-rect -66 805 66 810
-rect -66 28 66 33
+rect -66 801 66 810
+rect -66 28 66 37
 rect -66 -28 -28 28
 rect 28 -28 66 28
-rect -66 -33 66 -28
+rect -66 -37 66 -28
 use contact_18  contact_18_0
-timestamp 1643678851
-transform 1 0 -66 0 1 1643
+timestamp 1644951705
+transform 1 0 -66 0 1 1639
 box 0 0 1 1
 use contact_17  contact_17_0
-timestamp 1643678851
-transform 1 0 -15 0 1 1661
+timestamp 1644951705
+transform 1 0 -32 0 1 1644
 box 0 0 1 1
 use contact_18  contact_18_1
-timestamp 1643678851
-transform 1 0 -66 0 1 805
+timestamp 1644951705
+transform 1 0 -66 0 1 801
 box 0 0 1 1
 use contact_17  contact_17_1
-timestamp 1643678851
-transform 1 0 -15 0 1 823
+timestamp 1644951705
+transform 1 0 -32 0 1 806
 box 0 0 1 1
 use contact_18  contact_18_2
-timestamp 1643678851
-transform 1 0 -66 0 1 -33
+timestamp 1644951705
+transform 1 0 -66 0 1 -37
 box 0 0 1 1
 use contact_17  contact_17_2
-timestamp 1643678851
-transform 1 0 -15 0 1 -15
+timestamp 1644951705
+transform 1 0 -32 0 1 -32
 box 0 0 1 1
 use contact_18  contact_18_3
-timestamp 1643678851
-transform 1 0 -66 0 1 805
+timestamp 1644951705
+transform 1 0 -66 0 1 801
 box 0 0 1 1
 use contact_17  contact_17_3
-timestamp 1643678851
-transform 1 0 -15 0 1 823
+timestamp 1644951705
+transform 1 0 -32 0 1 806
 box 0 0 1 1
 use dff_buf_0  dff_buf_0_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 0 0 -1 1676
-box 0 -42 2978 916
+box 0 -42 3012 916
 use dff_buf_0  dff_buf_0_1
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 0 0 1 0
-box 0 -42 2978 916
+box 0 -42 3012 916
 << labels >>
-rlabel metal3 s -66 805 66 871 4 vdd
+rlabel metal3 s -66 801 66 875 4 vdd
 rlabel metal3 s 0 838 0 838 4 vdd
-rlabel metal3 s -66 1643 66 1709 4 gnd
-rlabel metal3 s -66 -33 66 33 4 gnd
+rlabel metal3 s -66 1639 66 1713 4 gnd
+rlabel metal3 s -66 -37 66 37 4 gnd
 rlabel metal2 s 180 232 234 260 4 din_0
-rlabel metal2 s 2629 227 2657 255 4 dout_0
-rlabel metal2 s 2164 499 2192 527 4 dout_bar_0
+rlabel metal2 s 2680 159 2708 187 4 dout_0
+rlabel metal2 s 2172 567 2200 595 4 dout_bar_0
 rlabel metal2 s 180 1416 234 1444 4 din_1
-rlabel metal2 s 2629 1421 2657 1449 4 dout_1
-rlabel metal2 s 2164 1149 2192 1177 4 dout_bar_1
+rlabel metal2 s 2680 1489 2708 1517 4 dout_1
+rlabel metal2 s 2172 1081 2200 1109 4 dout_bar_1
 rlabel metal2 s 0 0 28 1676 4 clk
 << properties >>
-string FIXED_BBOX -66 -33 66 0
+string FIXED_BBOX -66 -37 66 0
 string GDS_FILE sram_0rw2r1w_16_128_sky130A.gds
-string GDS_END 2013114
-string GDS_START 2010004
+string GDS_END 1948088
+string GDS_START 1944978
 << end >>

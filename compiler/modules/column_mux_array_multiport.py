@@ -20,7 +20,7 @@ class column_mux_array_multiport(design.design):
     Array of column mux to read the bitlines through the 6T.
     """
 
-    def __init__(self, name, columns, word_size, offsets=None, bitcell_rbl0=None, bitcell_rbl1=None, column_offset=0):
+    def __init__(self, name, columns, word_size, offsets=None, bitcell_rbl0=None, bitcell_rbl1=None, bitcell_wbl0=None, column_offset=0):
         super().__init__(name)
         debug.info(1, "Creating {0}".format(self.name))
         self.add_comment("cols: {0} word_size: {1} bl: {2} br: {3}".format(columns, word_size, bitcell_rbl0, bitcell_rbl1))
@@ -38,9 +38,15 @@ class column_mux_array_multiport(design.design):
         else:
             self.bitcell_rbl0 = self.cell.get_read_bl_names[0]
             self.bitcell_rbl1 = self.cell.get_read_bl_names[1]
+        if bitcell_wbl0:
+            self.bitcell_wbl0 = bitcell_wbl0
+        else:
+            self.bitcell_wbl0 = self.cell.get_write_bl_names
         self.bitcell_rbl = []
         self.bitcell_rbl.append(self.bitcell_rbl0)
         self.bitcell_rbl.append(self.bitcell_rbl1)
+        self.bitcell_wbl = []
+        self.bitcell_wbl.append(self.bitcell_wbl0)
         self.sel_layer = layer_props.column_mux_array.select_layer
         self.sel_pitch = getattr(self, self.sel_layer + "_pitch")
         self.bitline_layer = layer_props.column_mux_array.bitline_layer
@@ -57,6 +63,10 @@ class column_mux_array_multiport(design.design):
     def get_rbl_name(self):
         rbl_name = self.mux.get_rbl_names()
         return rbl_name
+        
+    def get_wbl_name(self):
+        wbl_name = self.mux.get_wbl_names()
+        return wbl_name
 
     def create_netlist(self):
         self.add_modules()
@@ -80,16 +90,21 @@ class column_mux_array_multiport(design.design):
         for i in range(self.columns):
             for port in range(OPTS.num_r_ports):
                 self.add_pin("rbl{0}_{1}".format(port, i))
+            for port in range(OPTS.num_w_ports):
+                self.add_pin("wbl{0}_{1}".format(port, i))
         for i in range(self.words_per_row):
             self.add_pin("sel_{}".format(i))
         for i in range(self.word_size):
             for port in range(OPTS.num_r_ports):
                 self.add_pin("rbl{0}_out_{1}".format(port, i))
+            for port in range(OPTS.num_w_ports):
+                self.add_pin("wbl{0}_out_{1}".format(port, i))
         self.add_pin("gnd")
 
     def add_modules(self):
         self.mux = factory.create(module_type="column_mux_multiport",
-                                  bitcell_rbl=self.bitcell_rbl)
+                                  bitcell_rbl=self.bitcell_rbl,
+                                  bitcell_wbl=self.bitcell_wbl)
                                   
         self.add_mod(self.mux)
 
@@ -112,8 +127,10 @@ class column_mux_array_multiport(design.design):
 
             self.connect_inst(["rbl0_{}".format(col_num),
                                "rbl1_{}".format(col_num),
+                               "wbl0_{}".format(col_num),
                                "rbl0_out_{}".format(int(col_num / self.words_per_row)),
                                "rbl1_out_{}".format(int(col_num / self.words_per_row)),
+                               "wbl0_out_{}".format(int(col_num / self.words_per_row)),
                                "sel_{}".format(col_num % self.words_per_row),
                                "gnd"])
 
@@ -149,6 +166,12 @@ class column_mux_array_multiport(design.design):
             offset = rbl1_pin.ll()
             self.add_layout_pin(text="rbl1_{}".format(col_num),
                                 layer=rbl1_pin.layer,
+                                offset=offset,
+                                height=self.height - offset.y)
+            wbl0_pin = mux_inst.get_pin("wbl0")
+            offset = wbl0_pin.ll()
+            self.add_layout_pin(text="wbl0_{}".format(col_num),
+                                layer=wbl0_pin.layer,
                                 offset=offset,
                                 height=self.height - offset.y)
 
@@ -195,19 +218,24 @@ class column_mux_array_multiport(design.design):
 
             rbl0_offset_begin = self.mux_inst[j].get_pin("rbl0_out").bc()
             rbl1_offset_begin = self.mux_inst[j].get_pin("rbl1_out").bc()
+            wbl0_offset_begin = self.mux_inst[j].get_pin("wbl0_out").bc()
 
             rbl0_out_offset_begin = rbl0_offset_begin - vector(0, (self.words_per_row + 1) * self.sel_pitch)
             rbl1_out_offset_begin = rbl1_offset_begin - vector(0, (self.words_per_row + 2) * self.sel_pitch)
+            wbl0_out_offset_begin = wbl0_offset_begin - vector(0, (self.words_per_row + 3) * self.sel_pitch)
 
             # Add the horizontal wires for the first bit
             if j % self.words_per_row == 0:
                 rbl0_offset_end = self.mux_inst[j + self.words_per_row - 1].get_pin("rbl0_out").bc()
                 rbl1_offset_end = self.mux_inst[j + self.words_per_row - 1].get_pin("rbl1_out").bc()
+                wbl0_offset_end = self.mux_inst[j + self.words_per_row - 1].get_pin("wbl0_out").bc()
                 rbl0_out_offset_end = rbl0_offset_end - vector(0, (self.words_per_row + 1) * self.sel_pitch)
                 rbl1_out_offset_end = rbl1_offset_end - vector(0, (self.words_per_row + 2) * self.sel_pitch)
+                wbl0_out_offset_end = wbl0_offset_end - vector(0, (self.words_per_row + 3) * self.sel_pitch)
 
                 self.add_path(self.sel_layer, [rbl0_out_offset_begin, rbl0_out_offset_end])
                 self.add_path(self.sel_layer, [rbl1_out_offset_begin, rbl1_out_offset_end])
+                self.add_path(self.sel_layer, [wbl0_out_offset_begin, wbl0_out_offset_end])
 
                 # Extend the bitline output rails and gnd downward on the first bit of each n-way mux
                 self.add_layout_pin_segment_center(text="rbl0_out_{}".format(int(j / self.words_per_row)),
@@ -218,10 +246,15 @@ class column_mux_array_multiport(design.design):
                                                    layer=self.bitline_layer,
                                                    start=rbl1_offset_begin,
                                                    end=rbl1_out_offset_begin)
+                self.add_layout_pin_segment_center(text="wbl0_out_{}".format(int(j / self.words_per_row)),
+                                                   layer=self.bitline_layer,
+                                                   start=wbl0_offset_begin,
+                                                   end=wbl0_out_offset_begin)
 
             else:
                 self.add_path(self.bitline_layer, [rbl0_out_offset_begin, rbl0_offset_begin])
                 self.add_path(self.bitline_layer, [rbl1_out_offset_begin, rbl1_offset_begin])
+                self.add_path(self.bitline_layer, [wbl0_out_offset_begin, wbl0_offset_begin])
 
             # This via is on the right of the wire
             self.add_via_stack_center(from_layer=self.bitline_layer,
@@ -233,6 +266,11 @@ class column_mux_array_multiport(design.design):
             self.add_via_stack_center(from_layer=self.bitline_layer,
                                       to_layer=self.sel_layer,
                                       offset=rbl1_out_offset_begin,
+                                      directions=self.via_directions)
+              
+            self.add_via_stack_center(from_layer=self.bitline_layer,
+                                      to_layer=self.sel_layer,
+                                      offset=wbl0_out_offset_begin,
                                       directions=self.via_directions)
 
     def graph_exclude_columns(self, column_include_num):

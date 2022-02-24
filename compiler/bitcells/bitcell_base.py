@@ -217,9 +217,9 @@ class bitcell_base(design.design):
         else:
             col_pins = []
             for port in range(OPTS.num_r_ports):
-                col_pins.append("read_bl{0}".format(port))
+                col_pins.append("rbl{0}".format(port))
             for port in range(OPTS.num_w_ports):
-                col_pins.append("write_bl{0}".format(port))
+                col_pins.append("wbl{0}".format(port))
         return col_pins
 
     def get_all_bl_names(self):
@@ -241,14 +241,17 @@ class bitcell_base(design.design):
     def get_bl_name(self, port=0):
         """Get bl name"""
         debug.check(port in range(3), "One port for bitcell only.")
-        if OPTS.RF_mode == False:
-            return "bl"
-        else:
-            if port in self.read_ports:
-                return ["read_bl{0}".format(port)]
-            else:
-                return ["write_bl{0}".format(port)]
-                
+        return "bl"
+    
+    def get_read_bl_name(self, port=0):
+        """Get rbl name"""
+        debug.check(port in range(3), "One port for bitcell only.")
+        return "rbl"
+        
+    def get_write_bl_name(self, port=0):
+        """Get wbl name"""
+        debug.check(port in range(3), "One port for bitcell only.")
+        return "wbl"
 
     def get_br_name(self, port=0):
         """Get br name"""
@@ -258,11 +261,16 @@ class bitcell_base(design.design):
     def get_wl_name(self, port=0):
         """Get wl name"""
         debug.check(port in range(3), "One port for bitcell only.")
-        if OPTS.RF_mode == False:
-            return "wl"
-        else:
-            if port in self.read_ports:
-                return ["rwl{0}".format(port)]
-            else:
-                return ["wwl{0}".format(port)]
+        return "wl"
+        
+    def get_read_wl_name(self, port=0):
+        """Get rwl name"""
+        debug.check(port in range(3), "One port for bitcell only.")
+        return "rwl"
+        
+    def get_write_wl_name(self, port=0):
+        """Get wwl name"""
+        debug.check(port in range(3), "One port for bitcell only.")
+        return "wwl"
+      
 

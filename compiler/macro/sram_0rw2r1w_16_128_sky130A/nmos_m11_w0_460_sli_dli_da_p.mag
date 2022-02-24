@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1643678851
+timestamp 1644951705
 << checkpaint >>
 rect -1260 -1286 2490 1408
 << scnmos >>
@@ -129,65 +129,65 @@ rect 1084 13 1118 29
 rect 1188 63 1222 113
 rect 1188 13 1222 29
 use contact_8  contact_8_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 1180 0 1 5
 box 0 0 1 1
 use contact_8  contact_8_1
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 1076 0 1 5
 box 0 0 1 1
 use contact_8  contact_8_2
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 968 0 1 5
 box 0 0 1 1
 use contact_8  contact_8_3
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 860 0 1 5
 box 0 0 1 1
 use contact_8  contact_8_4
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 752 0 1 5
 box 0 0 1 1
 use contact_8  contact_8_5
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 644 0 1 5
 box 0 0 1 1
 use contact_8  contact_8_6
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 536 0 1 5
 box 0 0 1 1
 use contact_8  contact_8_7
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 428 0 1 5
 box 0 0 1 1
 use contact_8  contact_8_8
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 320 0 1 5
 box 0 0 1 1
 use contact_8  contact_8_9
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 212 0 1 5
 box 0 0 1 1
 use contact_8  contact_8_10
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 104 0 1 5
 box 0 0 1 1
 use contact_8  contact_8_11
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 0 0 1 5
 box 0 0 1 1
 << labels >>
 rlabel mvvaractor s 615 133 615 133 4 G
-rlabel locali s 669 46 669 46 4 S
+rlabel locali s 885 46 885 46 4 S
+rlabel locali s 453 46 453 46 4 S
 rlabel locali s 1101 46 1101 46 4 S
 rlabel locali s 25 46 25 46 4 S
-rlabel locali s 453 46 453 46 4 S
+rlabel locali s 669 46 669 46 4 S
 rlabel locali s 237 46 237 46 4 S
-rlabel locali s 885 46 885 46 4 S
 rlabel locali s 667 130 667 130 4 D
 << properties >>
 string FIXED_BBOX -25 -26 1255 148
 string GDS_FILE sram_0rw2r1w_16_128_sky130A.gds
-string GDS_END 2094784
-string GDS_START 2091996
+string GDS_END 2029758
+string GDS_START 2026970
 << end >>

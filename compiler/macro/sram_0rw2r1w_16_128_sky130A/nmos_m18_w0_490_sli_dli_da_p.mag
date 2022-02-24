@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1643678851
+timestamp 1644951705
 << checkpaint >>
 rect -1260 -1286 3246 1414
 << scnmos >>
@@ -199,97 +199,97 @@ rect 1840 16 1874 32
 rect 1944 66 1978 82
 rect 1944 16 1978 32
 use contact_8  contact_8_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 1936 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_1
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 1832 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_2
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 1724 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_3
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 1616 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_4
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 1508 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_5
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 1400 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_6
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 1292 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_7
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 1184 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_8
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 1076 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_9
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 968 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_10
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 860 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_11
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 752 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_12
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 644 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_13
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 536 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_14
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 428 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_15
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 320 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_16
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 212 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_17
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 104 0 1 8
 box 0 0 1 1
 use contact_8  contact_8_18
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 0 0 1 8
 box 0 0 1 1
 << labels >>
 rlabel mvvaractor s 993 139 993 139 4 G
-rlabel locali s 453 49 453 49 4 S
 rlabel locali s 885 49 885 49 4 S
+rlabel locali s 1101 49 1101 49 4 S
+rlabel locali s 25 49 25 49 4 S
 rlabel locali s 237 49 237 49 4 S
 rlabel locali s 1533 49 1533 49 4 S
 rlabel locali s 1961 49 1961 49 4 S
+rlabel locali s 453 49 453 49 4 S
 rlabel locali s 1317 49 1317 49 4 S
-rlabel locali s 1101 49 1101 49 4 S
 rlabel locali s 1749 49 1749 49 4 S
-rlabel locali s 25 49 25 49 4 S
 rlabel locali s 669 49 669 49 4 S
 rlabel locali s 993 133 993 133 4 D
 << properties >>
 string FIXED_BBOX -25 -26 2011 154
 string GDS_FILE sram_0rw2r1w_16_128_sky130A.gds
-string GDS_END 2140806
-string GDS_START 2136618
+string GDS_END 2075780
+string GDS_START 2071592
 << end >>

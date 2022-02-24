@@ -34,8 +34,8 @@ class ptx(design.design):
                  width=drc("minwidth_tx"),
                  mults=1,
                  tx_type="nmos",
-                 add_source_contact=None,
-                 add_drain_contact=None,
+                 add_source_contact="li",
+                 add_drain_contact="li",
                  series_devices=False,
                  connect_drain_active=False,
                  connect_source_active=False,
@@ -54,7 +54,7 @@ class ptx(design.design):
         # Default contacts are the lowest layer
         if not add_drain_contact:
             add_drain_contact = self.route_layer
-        
+
         # We need to keep unique names because outputting to GDSII
         # will use the last record with a given name. I.e., you will
         # over-write a design in GDS if one has and the other doesn't
@@ -221,8 +221,6 @@ class ptx(design.design):
         self.active_height = self.tx_width
 
         # Poly height must include poly extension over active
-        #print(self.tx_width)
-        #print(self.poly_extend_active)
         self.poly_height = self.tx_width + 2 * self.poly_extend_active
 
         self.active_offset = vector([self.well_enclose_active] * 2)
@@ -429,7 +427,7 @@ class ptx(design.design):
             self.source_contacts.append(contact)
         else:
             self.add_layout_pin_rect_center(text=label,
-                                            layer="active",
+                                            layer="contact",
                                             offset=pos)
         source_positions.append(pos)
 
@@ -454,7 +452,7 @@ class ptx(design.design):
                     self.drain_contacts.append(contact)
                 else:
                     self.add_layout_pin_rect_center(text=label,
-                                                    layer="active",
+                                                    layer="contact",
                                                     offset=pos)
 
         pos = vector(self.active_offset.x + self.active_width - 0.5 * self.active_contact.width,
@@ -475,7 +473,7 @@ class ptx(design.design):
             self.drain_contacts.append(contact)
         else:
             self.add_layout_pin_rect_center(text=label,
-                                            layer="active",
+                                            layer="contact",
                                             offset=pos)
 
         if self.connect_source_active:

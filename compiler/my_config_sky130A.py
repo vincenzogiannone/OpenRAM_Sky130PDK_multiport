@@ -1,5 +1,5 @@
-word_size = 16
-num_words = 128
+word_size = 8
+num_words = 64
 
 num_rw_ports = 0
 num_r_ports = 2

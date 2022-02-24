@@ -1,0 +1,209 @@
+|==============================================================================|
+|=========                      OpenRAM v1.1.18                       =========|
+|=========                                                            =========|
+|=========               VLSI Design and Automation Lab               =========|
+|=========        Computer Science and Engineering Department         =========|
+|=========            University of California Santa Cruz             =========|
+|=========                                                            =========|
+|=========          Usage help: openram-user-group@ucsc.edu           =========|
+|=========        Development help: openram-dev-group@ucsc.edu        =========|
+|=========    Temp dir: /tmp/openram_vincenzogiannone_17563_temp/     =========|
+|=========                See LICENSE for license info                =========|
+|==============================================================================|
+** Start: 02/16/2022 00:46:23
+Technology: sky130A
+Total size: 4096 bits
+Word size: 32
+Words: 128
+Banks: 1
+Write size: None
+RW ports: 0
+R-only ports: 2
+W-only ports: 1
+DRC/LVS/PEX is only run on the top-level design to save run-time (inline_lvsdrc=True to do inline checking).
+Characterization is disabled (using analytical delay models) (analytical_delay=False to simulate).
+Words per row: 2
+Output files are: 
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_0rw2r1w_32_128_sky130A/sram_0rw2r1w_32_128_sky130A.lvs
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_0rw2r1w_32_128_sky130A/sram_0rw2r1w_32_128_sky130A.sp
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_0rw2r1w_32_128_sky130A/sram_0rw2r1w_32_128_sky130A.v
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_0rw2r1w_32_128_sky130A/sram_0rw2r1w_32_128_sky130A.lib
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_0rw2r1w_32_128_sky130A/sram_0rw2r1w_32_128_sky130A.py
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_0rw2r1w_32_128_sky130A/sram_0rw2r1w_32_128_sky130A.html
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_0rw2r1w_32_128_sky130A/sram_0rw2r1w_32_128_sky130A.log
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_0rw2r1w_32_128_sky130A/sram_0rw2r1w_32_128_sky130A.lef
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_0rw2r1w_32_128_sky130A/sram_0rw2r1w_32_128_sky130A.gds
+** Submodules: 2.4 seconds
+** Placement: 0.0 seconds
+**** Retrieving pins: 0.0 seconds
+**** Analyzing pins: 0.0 seconds
+**** Finding blockages: 1.0 seconds
+**** Converting blockages: 0.0 seconds
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[0] layer=m3 ll=v[14.685,-14.125] ur=v[15.345,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[1] layer=m3 ll=v[22.095,-14.125] ur=v[22.755,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[2] layer=m3 ll=v[29.505,-14.125] ur=v[30.165,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[3] layer=m3 ll=v[36.915,-14.125] ur=v[37.575,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[4] layer=m3 ll=v[44.325,-14.125] ur=v[44.985,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[5] layer=m3 ll=v[51.735,-14.125] ur=v[52.395,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[6] layer=m3 ll=v[59.145,-14.125] ur=v[59.805,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[7] layer=m3 ll=v[66.555,-14.125] ur=v[67.215,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[8] layer=m3 ll=v[73.965,-14.125] ur=v[74.625,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[9] layer=m3 ll=v[81.375,-14.125] ur=v[82.035,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[10] layer=m3 ll=v[88.785,-14.125] ur=v[89.44500000000001,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[11] layer=m3 ll=v[96.19500000000001,-14.125] ur=v[96.855,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[12] layer=m3 ll=v[103.605,-14.125] ur=v[104.265,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[13] layer=m3 ll=v[111.015,-14.125] ur=v[111.675,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[14] layer=m3 ll=v[118.425,-14.125] ur=v[119.08500000000001,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[15] layer=m3 ll=v[125.83500000000001,-14.125] ur=v[126.495,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[16] layer=m3 ll=v[133.245,-14.125] ur=v[133.905,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[17] layer=m3 ll=v[140.655,-14.125] ur=v[141.315,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[18] layer=m3 ll=v[148.065,-14.125] ur=v[148.725,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[19] layer=m3 ll=v[155.475,-14.125] ur=v[156.135,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[20] layer=m3 ll=v[162.885,-14.125] ur=v[163.54500000000002,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[21] layer=m3 ll=v[170.29500000000002,-14.125] ur=v[170.955,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[22] layer=m3 ll=v[177.705,-14.125] ur=v[178.365,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[23] layer=m3 ll=v[185.115,-14.125] ur=v[185.775,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[24] layer=m3 ll=v[192.525,-14.125] ur=v[193.185,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[25] layer=m3 ll=v[199.935,-14.125] ur=v[200.595,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[26] layer=m3 ll=v[207.345,-14.125] ur=v[208.005,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[27] layer=m3 ll=v[214.755,-14.125] ur=v[215.415,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[28] layer=m3 ll=v[222.165,-14.125] ur=v[222.82500000000002,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[29] layer=m3 ll=v[229.57500000000002,-14.125] ur=v[230.235,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[30] layer=m3 ll=v[236.985,-14.125] ur=v[237.645,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[31] layer=m3 ll=v[244.395,-14.125] ur=v[245.055,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[0] layer=m3 ll=v[42.815,24.235] ur=v[43.475,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[1] layer=m3 ll=v[44.175000000000004,24.235] ur=v[44.835,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[2] layer=m3 ll=v[50.595,24.235] ur=v[51.255,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[3] layer=m3 ll=v[51.955,24.235] ur=v[52.615,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[4] layer=m3 ll=v[58.375,24.235] ur=v[59.035000000000004,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[5] layer=m3 ll=v[59.735,24.235] ur=v[60.395,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[6] layer=m3 ll=v[66.155,24.235] ur=v[66.815,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[7] layer=m3 ll=v[67.515,24.235] ur=v[68.175,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[8] layer=m3 ll=v[73.935,24.235] ur=v[74.595,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[9] layer=m3 ll=v[75.295,24.235] ur=v[75.955,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[10] layer=m3 ll=v[81.715,24.235] ur=v[82.375,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[11] layer=m3 ll=v[83.075,24.235] ur=v[83.735,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[12] layer=m3 ll=v[89.495,24.235] ur=v[90.155,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[13] layer=m3 ll=v[90.855,24.235] ur=v[91.515,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[14] layer=m3 ll=v[97.275,24.235] ur=v[97.935,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[15] layer=m3 ll=v[98.635,24.235] ur=v[99.295,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[16] layer=m3 ll=v[105.055,24.235] ur=v[105.715,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[17] layer=m3 ll=v[106.415,24.235] ur=v[107.075,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[18] layer=m3 ll=v[112.83500000000001,24.235] ur=v[113.495,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[19] layer=m3 ll=v[114.19500000000001,24.235] ur=v[114.855,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[20] layer=m3 ll=v[120.61500000000001,24.235] ur=v[121.275,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[21] layer=m3 ll=v[121.97500000000001,24.235] ur=v[122.635,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[22] layer=m3 ll=v[128.395,24.235] ur=v[129.055,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[23] layer=m3 ll=v[129.755,24.235] ur=v[130.415,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[24] layer=m3 ll=v[136.175,24.235] ur=v[136.835,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[25] layer=m3 ll=v[137.535,24.235] ur=v[138.195,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[26] layer=m3 ll=v[143.955,24.235] ur=v[144.615,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[27] layer=m3 ll=v[145.315,24.235] ur=v[145.975,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[28] layer=m3 ll=v[151.735,24.235] ur=v[152.395,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[29] layer=m3 ll=v[153.095,24.235] ur=v[153.755,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[30] layer=m3 ll=v[159.51500000000001,24.235] ur=v[160.175,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (dout0[31] layer=m3 ll=v[160.875,24.235] ur=v[161.535,24.605])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (addr0 layer=m3 ll=v[7.275,-14.125] ur=v[7.9350000000000005,-13.755])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (addr1[1] layer=m3 ll=v[-7.545,33.765] ur=v[-6.885,34.135])
+
+**** Converting pins: 0.4 seconds
+**** Separating adjacent pins: 0.0 seconds
+**** Enclosing pins: 0.0 seconds
+*** Finding pins and blockages: 16.6 seconds
+*** Maze routing pins: 39.9 seconds
+**** Retrieving pins: 0.0 seconds
+**** Analyzing pins: 0.7 seconds
+**** Finding blockages: 2.2 seconds
+**** Converting blockages: 0.0 seconds
+**** Converting pins: 1.1 seconds
+**** Separating adjacent pins: 0.4 seconds
+**** Enclosing pins: 1.4 seconds
+*** Finding pins and blockages: 22.1 seconds
+WARNING: file supply_tree_router.py: line 174: Unblocking supply self blockages to improve access (may cause DRC errors):
+gnd
+{(layer=m3 ll=v[-4.875,32.535000000000004] ur=v[-4.215,32.905])})
+
+*** Maze routing supplies: 39.8 seconds
+** Routing: 226.9 seconds
+WARNING: file magic.py: line 239: DRC Errors sram_0rw2r1w_32_128_sky130A	216
+
+ERROR: file magic.py: line 348: sram_0rw2r1w_32_128_sky130A	LVS mismatch (results in /tmp/openram_vincenzogiannone_17563_temp/sram_0rw2r1w_32_128_sky130A.lvs.report)
+
+** Verification: 225.1 seconds
+** SRAM creation: 454.5 seconds
+SP: Writing to /home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_0rw2r1w_32_128_sky130A/sram_0rw2r1w_32_128_sky130A.sp
+** Spice writing: 0.1 seconds
+GDS: Writing to /home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_0rw2r1w_32_128_sky130A/sram_0rw2r1w_32_128_sky130A.gds
+** GDS: 0.4 seconds
+LEF: Writing to /home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_0rw2r1w_32_128_sky130A/sram_0rw2r1w_32_128_sky130A.lef
+** LEF: 0.0 seconds
+LVS: Writing to /home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_0rw2r1w_32_128_sky130A/sram_0rw2r1w_32_128_sky130A.lvs.sp
+** LVS writing: 0.0 seconds
+LIB: Characterizing... 
+WARNING: file elmore.py: line 38: In analytical mode, all ports have the timing of the first read port.
+

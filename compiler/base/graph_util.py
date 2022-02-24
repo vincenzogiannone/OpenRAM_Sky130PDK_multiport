@@ -38,9 +38,9 @@ class timing_graph():
 
     def get_all_paths(self, src_node, dest_node, remove_rail_nodes=True, reduce_paths=True):
         """Traverse all paths from source to destination"""
-
         src_node = src_node.lower()
         dest_node = dest_node.lower()
+        
         # Remove vdd and gnd by default
         # Will require edits if separate supplies are implemented.
         if remove_rail_nodes:
@@ -58,7 +58,6 @@ class timing_graph():
         # Call the recursive helper function to print all paths
         self.get_all_paths_util(src_node, dest_node, visited, path)
         debug.info(2, "Paths found={}".format(len(self.all_paths)))
-
         if reduce_paths:
             self.reduce_paths()
         return self.all_paths
@@ -70,10 +69,12 @@ class timing_graph():
 
     def get_all_paths_util(self, cur_node, dest_node, visited, path):
         """Recursive function to find all paths in a Depth First Search manner"""
-
+        #print(path)
+        #print(cur_node)
         # Mark the current node as visited and store in path
         visited.add(cur_node)
         path.append(cur_node)
+
         # If current vertex is same as destination, then print
         # current path[]
         if cur_node == dest_node:
@@ -98,7 +99,7 @@ class timing_graph():
         delays = []
         cur_slew = slew
         for i in range(len(path) - 1):
-
+            print(path)
             path_edge_mod = self.edge_mods[(path[i], path[i + 1])]
 
             # On the output of the current stage, get COUT from all other mods connected

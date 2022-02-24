@@ -1,0 +1,90 @@
+timestamp 1644949024
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use contact_9 contact_9_0 1 0 1720 0 1 101
+use contact_9 contact_9_1 1 0 1616 0 1 101
+use contact_9 contact_9_2 1 0 1508 0 1 101
+use contact_9 contact_9_3 1 0 1400 0 1 101
+use contact_9 contact_9_4 1 0 1292 0 1 101
+use contact_9 contact_9_5 1 0 1184 0 1 101
+use contact_9 contact_9_6 1 0 1076 0 1 101
+use contact_9 contact_9_7 1 0 968 0 1 101
+use contact_9 contact_9_8 1 0 860 0 1 101
+use contact_9 contact_9_9 1 0 752 0 1 101
+use contact_9 contact_9_10 1 0 644 0 1 101
+use contact_9 contact_9_11 1 0 536 0 1 101
+use contact_9 contact_9_12 1 0 428 0 1 101
+use contact_9 contact_9_13 1 0 320 0 1 101
+use contact_9 contact_9_14 1 0 212 0 1 101
+use contact_9 contact_9_15 1 0 104 0 1 101
+use contact_9 contact_9_16 1 0 0 0 1 101
+parameters sky130_fd_pr__pfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+node "S_uq0" 956 0 1710 0 pdif 0 0 0 0 0 0 0 0 0 0 17040 688 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S" 741 0 1494 0 pdif 0 0 0 0 0 0 0 0 0 0 22152 724 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq1" 741 0 1278 0 pdif 0 0 0 0 0 0 0 0 0 0 22152 724 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq2" 741 0 1062 0 pdif 0 0 0 0 0 0 0 0 0 0 22152 724 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq3" 741 0 846 0 pdif 0 0 0 0 0 0 0 0 0 0 22152 724 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq4" 741 0 630 0 pdif 0 0 0 0 0 0 0 0 0 0 22152 724 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq5" 741 0 414 0 pdif 0 0 0 0 0 0 0 0 0 0 22152 724 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq6" 741 0 198 0 pdif 0 0 0 0 0 0 0 0 0 0 22152 724 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "D" 9767 0 90 0 pdif 0 0 0 0 0 0 0 0 0 0 177216 5792 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 79764 4760 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq7" 956 0 0 0 pdif 0 0 0 0 0 0 0 0 0 0 17040 688 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "G" 11288 1578.92 60 -56 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 210780 14112 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_n59_58#" 8226 2213.57 -59 58 nw 0 0 0 0 737856 4560 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "S_uq0" "S_uq1" 5.52792
+cap "G" "D" 251.958
+cap "S" "S_uq2" 5.47236
+cap "S_uq3" "D" 152.239
+cap "D" "S_uq0" 38.7297
+cap "S_uq6" "S_uq4" 5.47236
+cap "S_uq5" "S_uq6" 11.967
+cap "S_uq7" "S_uq6" 12.236
+cap "S_uq2" "S_uq1" 11.967
+cap "S_uq3" "S_uq2" 11.967
+cap "D" "S_uq2" 152.239
+cap "S_uq3" "S_uq4" 11.967
+cap "D" "S_uq4" 152.239
+cap "S_uq3" "S_uq5" 5.47236
+cap "S_uq5" "D" 152.239
+cap "S_uq7" "D" 38.7297
+cap "S" "S_uq1" 11.967
+cap "S" "D" 144.728
+cap "S_uq2" "S_uq4" 5.47236
+cap "D" "S_uq6" 144.728
+cap "S" "S_uq0" 12.236
+cap "S_uq5" "S_uq4" 11.967
+cap "S_uq7" "S_uq5" 5.52792
+cap "D" "S_uq1" 152.239
+cap "S_uq3" "S_uq1" 5.47236
+device msubckt sky130_fd_pr__pfet_01v8 1680 0 1681 1 l=30 w=284 "w_n59_58#" "G" 60 0 "D" 284 0 "S_uq0" 284 0
+device msubckt sky130_fd_pr__pfet_01v8 1572 0 1573 1 l=30 w=284 "w_n59_58#" "G" 60 0 "S" 284 0 "D" 284 0
+device msubckt sky130_fd_pr__pfet_01v8 1464 0 1465 1 l=30 w=284 "w_n59_58#" "G" 60 0 "D" 284 0 "S" 284 0
+device msubckt sky130_fd_pr__pfet_01v8 1356 0 1357 1 l=30 w=284 "w_n59_58#" "G" 60 0 "S_uq1" 284 0 "D" 284 0
+device msubckt sky130_fd_pr__pfet_01v8 1248 0 1249 1 l=30 w=284 "w_n59_58#" "G" 60 0 "D" 284 0 "S_uq1" 284 0
+device msubckt sky130_fd_pr__pfet_01v8 1140 0 1141 1 l=30 w=284 "w_n59_58#" "G" 60 0 "S_uq2" 284 0 "D" 284 0
+device msubckt sky130_fd_pr__pfet_01v8 1032 0 1033 1 l=30 w=284 "w_n59_58#" "G" 60 0 "D" 284 0 "S_uq2" 284 0
+device msubckt sky130_fd_pr__pfet_01v8 924 0 925 1 l=30 w=284 "w_n59_58#" "G" 60 0 "S_uq3" 284 0 "D" 284 0
+device msubckt sky130_fd_pr__pfet_01v8 816 0 817 1 l=30 w=284 "w_n59_58#" "G" 60 0 "D" 284 0 "S_uq3" 284 0
+device msubckt sky130_fd_pr__pfet_01v8 708 0 709 1 l=30 w=284 "w_n59_58#" "G" 60 0 "S_uq4" 284 0 "D" 284 0
+device msubckt sky130_fd_pr__pfet_01v8 600 0 601 1 l=30 w=284 "w_n59_58#" "G" 60 0 "D" 284 0 "S_uq4" 284 0
+device msubckt sky130_fd_pr__pfet_01v8 492 0 493 1 l=30 w=284 "w_n59_58#" "G" 60 0 "S_uq5" 284 0 "D" 284 0
+device msubckt sky130_fd_pr__pfet_01v8 384 0 385 1 l=30 w=284 "w_n59_58#" "G" 60 0 "D" 284 0 "S_uq5" 284 0
+device msubckt sky130_fd_pr__pfet_01v8 276 0 277 1 l=30 w=284 "w_n59_58#" "G" 60 0 "S_uq6" 284 0 "D" 284 0
+device msubckt sky130_fd_pr__pfet_01v8 168 0 169 1 l=30 w=284 "w_n59_58#" "G" 60 0 "D" 284 0 "S_uq6" 284 0
+device msubckt sky130_fd_pr__pfet_01v8 60 0 61 1 l=30 w=284 "w_n59_58#" "G" 60 0 "S_uq7" 284 0 "D" 284 0
+merge "contact_9_4/gnd" "contact_9_5/gnd" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "contact_9_5/gnd" "contact_9_6/gnd"
+merge "contact_9_6/gnd" "contact_9_7/gnd"
+merge "contact_9_7/gnd" "contact_9_8/gnd"
+merge "contact_9_8/gnd" "contact_9_9/gnd"
+merge "contact_9_9/gnd" "contact_9_10/gnd"
+merge "contact_9_10/gnd" "contact_9_11/gnd"
+merge "contact_9_11/gnd" "contact_9_12/gnd"
+merge "contact_9_12/gnd" "contact_9_13/gnd"
+merge "contact_9_13/gnd" "contact_9_14/gnd"
+merge "contact_9_14/gnd" "contact_9_15/gnd"
+merge "contact_9_15/gnd" "gnd"

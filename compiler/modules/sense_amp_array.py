@@ -173,24 +173,28 @@ class sense_amp_array(design.design):
                 self.local_insts[index].place(offset=amp_position, mirror=mirror)
         else:
             precharge_width = cell.width
-
             if precharge_width > self.amp.width:
                 self.amp_spacing = precharge_width/(OPTS.num_r_ports)
             else:
                 self.amp_spacing = self.amp.width/(OPTS.num_r_ports)
             if not self.offsets:
                 self.offsets = []
-                for i in range(OPTS.num_r_ports*self.num_cols + self.num_spare_cols):
-                    if i % 2 == 0:
-                        self.offsets.append(i * self.amp_spacing)
-                    else:
-                        self.offsets.append(self.offsets[i-1] + 2 * self.m2_pitch)
-            for i, xoffset in enumerate(self.offsets[0:OPTS.num_r_ports*self.num_cols:self.words_per_row]):
+                if (self.words_per_row == 1):
+                    for i in range(OPTS.num_r_ports*self.num_cols + self.num_spare_cols):
+                        if i % 2 == 0:
+                            self.offsets.append(i * self.amp_spacing)
+                        else:
+                            self.offsets.append(self.offsets[i-1] + self.amp.width)
+                else:
+                    self.offsets.append(cell.width/2 - self.amp.width)
+                    for i in range(1, OPTS.num_r_ports*self.word_size):                        
+                        if i % 2 == 0:
+                            self.offsets.append(self.offsets[i-1] + self.words_per_row*cell.width - self.amp.width)
+                        else:
+                            self.offsets.append(self.offsets[i-1] + self.amp.width)
+            for i, xoffset in enumerate(self.offsets):
                 if self.bitcell.mirror.y and (i * self.words_per_row + self.column_offset) % 2:
                     mirror = "MY"
-                    if i == 0:
-                        xoffset = - max(cell.width, precharge_width)/(2*OPTS.num_r_ports)
-                    xoffset = xoffset + self.amp_spacing
                 else:
                     mirror = ""
                 amp_position = vector(xoffset, 0)

@@ -34,7 +34,7 @@ class pinv_dec(pinv.pinv):
 
         # Inputs to cells are on input layer
         # Outputs from cells are on output layer
-        if OPTS.tech_name == "sky130A":
+        if OPTS.tech_name == "sky130":
             self.supply_layer = "m1"
         else:
             self.supply_layer = "m2"

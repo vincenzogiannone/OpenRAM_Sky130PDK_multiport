@@ -1,34 +1,34 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1643678851
+timestamp 1644951705
 << checkpaint >>
-rect -1296 -1277 2025 2155
+rect -1296 -1277 2042 2155
 << locali >>
-rect 0 821 729 855
-rect 196 505 262 571
+rect 0 821 746 855
+rect 196 381 262 447
 rect 330 394 364 561
 rect 330 360 459 394
 rect 557 360 591 394
 rect 96 257 162 323
-rect 0 -17 729 17
+rect 0 -17 746 17
 use pdriver  pdriver_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 378 0 1 0
-box -36 -17 387 895
+box -36 -17 404 895
 use pnand2_0  pnand2_0_0
-timestamp 1643678851
+timestamp 1644951705
 transform 1 0 0 0 1 0
 box -36 -17 414 895
 << labels >>
 rlabel locali s 574 377 574 377 4 Z
 rlabel locali s 129 290 129 290 4 A
-rlabel locali s 229 538 229 538 4 B
-rlabel locali s 364 0 364 0 4 gnd
-rlabel locali s 364 838 364 838 4 vdd
+rlabel locali s 229 414 229 414 4 B
+rlabel locali s 373 0 373 0 4 gnd
+rlabel locali s 373 838 373 838 4 vdd
 << properties >>
-string FIXED_BBOX 0 0 729 838
+string FIXED_BBOX 0 0 746 838
 string GDS_FILE sram_0rw2r1w_16_128_sky130A.gds
-string GDS_END 1996550
-string GDS_START 1995418
+string GDS_END 1931524
+string GDS_START 1930392
 << end >>

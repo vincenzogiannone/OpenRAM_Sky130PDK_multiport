@@ -1,0 +1,255 @@
+timestamp 1644969368
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use contact_8 contact_8_0 1 0 6580 0 1 8
+use contact_8 contact_8_1 1 0 6476 0 1 8
+use contact_8 contact_8_2 1 0 6368 0 1 8
+use contact_8 contact_8_3 1 0 6260 0 1 8
+use contact_8 contact_8_4 1 0 6152 0 1 8
+use contact_8 contact_8_5 1 0 6044 0 1 8
+use contact_8 contact_8_6 1 0 5936 0 1 8
+use contact_8 contact_8_7 1 0 5828 0 1 8
+use contact_8 contact_8_8 1 0 5720 0 1 8
+use contact_8 contact_8_9 1 0 5612 0 1 8
+use contact_8 contact_8_10 1 0 5504 0 1 8
+use contact_8 contact_8_11 1 0 5396 0 1 8
+use contact_8 contact_8_12 1 0 5288 0 1 8
+use contact_8 contact_8_13 1 0 5180 0 1 8
+use contact_8 contact_8_14 1 0 5072 0 1 8
+use contact_8 contact_8_15 1 0 4964 0 1 8
+use contact_8 contact_8_16 1 0 4856 0 1 8
+use contact_8 contact_8_17 1 0 4748 0 1 8
+use contact_8 contact_8_18 1 0 4640 0 1 8
+use contact_8 contact_8_19 1 0 4532 0 1 8
+use contact_8 contact_8_20 1 0 4424 0 1 8
+use contact_8 contact_8_21 1 0 4316 0 1 8
+use contact_8 contact_8_22 1 0 4208 0 1 8
+use contact_8 contact_8_23 1 0 4100 0 1 8
+use contact_8 contact_8_24 1 0 3992 0 1 8
+use contact_8 contact_8_25 1 0 3884 0 1 8
+use contact_8 contact_8_26 1 0 3776 0 1 8
+use contact_8 contact_8_27 1 0 3668 0 1 8
+use contact_8 contact_8_28 1 0 3560 0 1 8
+use contact_8 contact_8_29 1 0 3452 0 1 8
+use contact_8 contact_8_30 1 0 3344 0 1 8
+use contact_8 contact_8_31 1 0 3236 0 1 8
+use contact_8 contact_8_32 1 0 3128 0 1 8
+use contact_8 contact_8_33 1 0 3020 0 1 8
+use contact_8 contact_8_34 1 0 2912 0 1 8
+use contact_8 contact_8_35 1 0 2804 0 1 8
+use contact_8 contact_8_36 1 0 2696 0 1 8
+use contact_8 contact_8_37 1 0 2588 0 1 8
+use contact_8 contact_8_38 1 0 2480 0 1 8
+use contact_8 contact_8_39 1 0 2372 0 1 8
+use contact_8 contact_8_40 1 0 2264 0 1 8
+use contact_8 contact_8_41 1 0 2156 0 1 8
+use contact_8 contact_8_42 1 0 2048 0 1 8
+use contact_8 contact_8_43 1 0 1940 0 1 8
+use contact_8 contact_8_44 1 0 1832 0 1 8
+use contact_8 contact_8_45 1 0 1724 0 1 8
+use contact_8 contact_8_46 1 0 1616 0 1 8
+use contact_8 contact_8_47 1 0 1508 0 1 8
+use contact_8 contact_8_48 1 0 1400 0 1 8
+use contact_8 contact_8_49 1 0 1292 0 1 8
+use contact_8 contact_8_50 1 0 1184 0 1 8
+use contact_8 contact_8_51 1 0 1076 0 1 8
+use contact_8 contact_8_52 1 0 968 0 1 8
+use contact_8 contact_8_53 1 0 860 0 1 8
+use contact_8 contact_8_54 1 0 752 0 1 8
+use contact_8 contact_8_55 1 0 644 0 1 8
+use contact_8 contact_8_56 1 0 536 0 1 8
+use contact_8 contact_8_57 1 0 428 0 1 8
+use contact_8 contact_8_58 1 0 320 0 1 8
+use contact_8 contact_8_59 1 0 212 0 1 8
+use contact_8 contact_8_60 1 0 104 0 1 8
+use contact_8 contact_8_61 1 0 0 0 1 8
+parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+node "S_uq0" 176 0 6462 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S" 176 0 6246 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq1" 176 0 6030 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq2" 176 0 5814 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq3" 176 0 5598 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq4" 176 0 5382 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq5" 176 0 5166 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq6" 176 0 4950 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq7" 176 0 4734 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq8" 176 0 4518 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq9" 176 0 4302 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq10" 176 0 4086 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq11" 176 0 3870 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq12" 176 0 3654 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq13" 176 0 3438 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq14" 176 0 3222 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq15" 176 0 3006 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq16" 176 0 2790 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq17" 176 0 2574 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq18" 176 0 2358 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq19" 176 0 2142 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq20" 176 0 1926 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq21" 176 0 1710 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq22" 176 0 1494 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq23" 176 0 1278 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq24" 176 0 1062 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq25" 176 0 846 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq26" 176 0 630 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq27" 176 0 414 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq28" 176 0 198 0 ndif 0 0 0 0 0 0 0 0 7722 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "D" 18313 1378.36 90 0 ndif 0 0 0 0 0 0 0 0 237600 10938 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 326740 19288 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq29" 222 0 0 0 ndif 0 0 0 0 0 0 0 0 5940 318 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "G" 25258 6111.32 60 -26 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 471630 31502 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "D" "S_uq24" 106.886
+cap "D" "S_uq15" 106.886
+cap "S_uq12" "S_uq10" 5.47236
+cap "S_uq8" "S_uq6" 5.47236
+cap "S_uq26" "S_uq27" 11.967
+cap "D" "S_uq20" 106.886
+cap "S_uq21" "S_uq20" 11.967
+cap "S_uq6" "S_uq5" 11.967
+cap "S_uq26" "S_uq25" 11.967
+cap "D" "S_uq27" 106.886
+cap "S" "S_uq0" 11.967
+cap "S_uq19" "S_uq18" 11.967
+cap "S_uq16" "S_uq15" 11.967
+cap "D" "S_uq25" 106.886
+cap "S_uq26" "S_uq28" 5.47236
+cap "S_uq6" "S_uq4" 5.47236
+cap "S_uq2" "S_uq1" 11.967
+cap "S_uq9" "S_uq11" 5.47236
+cap "D" "S_uq28" 99.3752
+cap "D" "S_uq1" 106.886
+cap "D" "S_uq17" 106.886
+cap "S_uq15" "S_uq13" 5.47236
+cap "S_uq24" "S_uq23" 11.967
+cap "S_uq3" "S_uq2" 11.967
+cap "S_uq16" "S_uq17" 11.967
+cap "S_uq20" "S_uq18" 5.47236
+cap "D" "S_uq3" 106.886
+cap "D" "S_uq9" 106.886
+cap "S_uq25" "S_uq23" 5.47236
+cap "S_uq1" "S" 11.967
+cap "S_uq7" "S_uq9" 5.47236
+cap "S_uq19" "S_uq20" 11.967
+cap "D" "S_uq14" 106.886
+cap "S_uq29" "S_uq27" 5.52792
+cap "S_uq17" "S_uq18" 11.967
+cap "D" "S_uq11" 106.886
+cap "S_uq8" "S_uq9" 11.967
+cap "S_uq16" "S_uq14" 5.47236
+cap "S_uq3" "S_uq5" 5.47236
+cap "D" "S_uq22" 106.886
+cap "S_uq21" "S_uq22" 11.967
+cap "S_uq29" "S_uq28" 12.236
+cap "D" "S_uq26" 106.886
+cap "D" "S_uq2" 106.886
+cap "S_uq17" "S_uq19" 5.47236
+cap "S_uq3" "S_uq4" 11.967
+cap "D" "S_uq21" 106.886
+cap "S_uq9" "S_uq10" 11.967
+cap "S_uq1" "S_uq0" 5.47236
+cap "S_uq24" "S_uq25" 11.967
+cap "D" "S_uq7" 106.886
+cap "S_uq14" "S_uq13" 11.967
+cap "S_uq12" "S_uq14" 5.47236
+cap "S_uq13" "S_uq11" 5.47236
+cap "D" "S_uq16" 106.886
+cap "S_uq12" "S_uq11" 11.967
+cap "S_uq27" "S_uq25" 5.47236
+cap "S_uq17" "S_uq15" 5.47236
+cap "S_uq2" "S" 5.47236
+cap "S_uq10" "S_uq11" 11.967
+cap "S_uq22" "S_uq23" 11.967
+cap "D" "S" 106.991
+cap "D" "S_uq8" 106.886
+cap "D" "S_uq5" 106.886
+cap "S_uq27" "S_uq28" 11.967
+cap "S_uq8" "S_uq7" 11.967
+cap "S_uq7" "S_uq5" 5.47236
+cap "D" "S_uq13" 106.886
+cap "S_uq2" "S_uq4" 5.47236
+cap "D" "S_uq23" 106.886
+cap "S_uq21" "S_uq23" 5.47236
+cap "D" "S_uq12" 106.886
+cap "D" "S_uq18" 106.886
+cap "D" "S_uq4" 106.886
+cap "D" "S_uq10" 106.886
+cap "S_uq14" "S_uq15" 11.967
+cap "S_uq16" "S_uq18" 5.47236
+cap "D" "S_uq29" 38.7297
+cap "D" "S_uq19" 106.886
+cap "S_uq21" "S_uq19" 5.47236
+cap "D" "S_uq6" 106.886
+cap "S_uq7" "S_uq6" 11.967
+cap "S_uq3" "S_uq1" 5.47236
+cap "D" "S_uq0" 101.057
+cap "S_uq24" "S_uq22" 5.47236
+cap "D" "G" 3291.43
+cap "S_uq8" "S_uq10" 5.47236
+cap "S_uq4" "S_uq5" 11.967
+cap "S_uq26" "S_uq24" 5.47236
+cap "S_uq12" "S_uq13" 11.967
+cap "S_uq20" "S_uq22" 5.47236
+device msubckt sky130_fd_pr__nfet_01v8 6540 0 6541 1 l=30 w=99 "gnd" "G" 60 0 "S_uq0" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 6432 0 6433 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq0" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 6324 0 6325 1 l=30 w=99 "gnd" "G" 60 0 "S" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 6216 0 6217 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 6108 0 6109 1 l=30 w=99 "gnd" "G" 60 0 "S_uq1" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 6000 0 6001 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq1" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 5892 0 5893 1 l=30 w=99 "gnd" "G" 60 0 "S_uq2" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 5784 0 5785 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq2" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 5676 0 5677 1 l=30 w=99 "gnd" "G" 60 0 "S_uq3" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 5568 0 5569 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq3" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 5460 0 5461 1 l=30 w=99 "gnd" "G" 60 0 "S_uq4" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 5352 0 5353 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq4" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 5244 0 5245 1 l=30 w=99 "gnd" "G" 60 0 "S_uq5" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 5136 0 5137 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq5" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 5028 0 5029 1 l=30 w=99 "gnd" "G" 60 0 "S_uq6" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 4920 0 4921 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq6" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 4812 0 4813 1 l=30 w=99 "gnd" "G" 60 0 "S_uq7" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 4704 0 4705 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq7" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 4596 0 4597 1 l=30 w=99 "gnd" "G" 60 0 "S_uq8" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 4488 0 4489 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq8" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 4380 0 4381 1 l=30 w=99 "gnd" "G" 60 0 "S_uq9" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 4272 0 4273 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq9" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 4164 0 4165 1 l=30 w=99 "gnd" "G" 60 0 "S_uq10" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 4056 0 4057 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq10" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 3948 0 3949 1 l=30 w=99 "gnd" "G" 60 0 "S_uq11" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 3840 0 3841 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq11" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 3732 0 3733 1 l=30 w=99 "gnd" "G" 60 0 "S_uq12" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 3624 0 3625 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq12" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 3516 0 3517 1 l=30 w=99 "gnd" "G" 60 0 "S_uq13" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 3408 0 3409 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq13" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 3300 0 3301 1 l=30 w=99 "gnd" "G" 60 0 "S_uq14" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 3192 0 3193 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq14" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 3084 0 3085 1 l=30 w=99 "gnd" "G" 60 0 "S_uq15" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 2976 0 2977 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq15" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 2868 0 2869 1 l=30 w=99 "gnd" "G" 60 0 "S_uq16" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 2760 0 2761 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq16" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 2652 0 2653 1 l=30 w=99 "gnd" "G" 60 0 "S_uq17" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 2544 0 2545 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq17" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 2436 0 2437 1 l=30 w=99 "gnd" "G" 60 0 "S_uq18" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 2328 0 2329 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq18" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 2220 0 2221 1 l=30 w=99 "gnd" "G" 60 0 "S_uq19" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 2112 0 2113 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq19" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 2004 0 2005 1 l=30 w=99 "gnd" "G" 60 0 "S_uq20" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 1896 0 1897 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq20" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 1788 0 1789 1 l=30 w=99 "gnd" "G" 60 0 "S_uq21" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 1680 0 1681 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq21" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 1572 0 1573 1 l=30 w=99 "gnd" "G" 60 0 "S_uq22" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 1464 0 1465 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq22" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 1356 0 1357 1 l=30 w=99 "gnd" "G" 60 0 "S_uq23" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 1248 0 1249 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq23" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 1140 0 1141 1 l=30 w=99 "gnd" "G" 60 0 "S_uq24" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 1032 0 1033 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq24" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 924 0 925 1 l=30 w=99 "gnd" "G" 60 0 "S_uq25" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 816 0 817 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq25" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 708 0 709 1 l=30 w=99 "gnd" "G" 60 0 "S_uq26" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 600 0 601 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq26" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 492 0 493 1 l=30 w=99 "gnd" "G" 60 0 "S_uq27" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 384 0 385 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq27" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 276 0 277 1 l=30 w=99 "gnd" "G" 60 0 "S_uq28" 99 0 "D" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 168 0 169 1 l=30 w=99 "gnd" "G" 60 0 "D" 99 0 "S_uq28" 99 0
+device msubckt sky130_fd_pr__nfet_01v8 60 0 61 1 l=30 w=99 "gnd" "G" 60 0 "S_uq29" 99 0 "D" 99 0

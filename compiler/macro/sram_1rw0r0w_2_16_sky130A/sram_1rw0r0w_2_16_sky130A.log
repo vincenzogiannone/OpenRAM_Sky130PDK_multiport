@@ -1,0 +1,73 @@
+|==============================================================================|
+|=========                      OpenRAM v1.1.18                       =========|
+|=========                                                            =========|
+|=========               VLSI Design and Automation Lab               =========|
+|=========        Computer Science and Engineering Department         =========|
+|=========            University of California Santa Cruz             =========|
+|=========                                                            =========|
+|=========          Usage help: openram-user-group@ucsc.edu           =========|
+|=========        Development help: openram-dev-group@ucsc.edu        =========|
+|=========     Temp dir: /tmp/openram_vincenzogiannone_8793_temp/     =========|
+|=========                See LICENSE for license info                =========|
+|==============================================================================|
+** Start: 02/21/2022 19:47:16
+Technology: sky130A
+Total size: 32 bits
+Word size: 2
+Words: 16
+Banks: 1
+Write size: None
+RW ports: 1
+R-only ports: 0
+W-only ports: 0
+DRC/LVS/PEX is only run on the top-level design to save run-time (inline_lvsdrc=True to do inline checking).
+Characterization is disabled (using analytical delay models) (analytical_delay=False to simulate).
+Words per row: 1
+Output files are: 
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_1rw0r0w_2_16_sky130A/sram_1rw0r0w_2_16_sky130A.lvs
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_1rw0r0w_2_16_sky130A/sram_1rw0r0w_2_16_sky130A.sp
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_1rw0r0w_2_16_sky130A/sram_1rw0r0w_2_16_sky130A.v
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_1rw0r0w_2_16_sky130A/sram_1rw0r0w_2_16_sky130A.lib
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_1rw0r0w_2_16_sky130A/sram_1rw0r0w_2_16_sky130A.py
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_1rw0r0w_2_16_sky130A/sram_1rw0r0w_2_16_sky130A.html
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_1rw0r0w_2_16_sky130A/sram_1rw0r0w_2_16_sky130A.log
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_1rw0r0w_2_16_sky130A/sram_1rw0r0w_2_16_sky130A.lef
+/home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_1rw0r0w_2_16_sky130A/sram_1rw0r0w_2_16_sky130A.gds
+** Submodules: 0.7 seconds
+** Placement: 0.0 seconds
+**** Retrieving pins: 0.0 seconds
+**** Analyzing pins: 0.0 seconds
+**** Finding blockages: 0.1 seconds
+**** Converting blockages: 0.0 seconds
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[0] layer=m3 ll=v[7.275,-12.895] ur=v[7.9350000000000005,-12.525])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (din0[1] layer=m3 ll=v[14.685,-12.895] ur=v[15.345,-12.525])
+
+WARNING: file pin_group.py: line 654:   Expanding conversion (addr0[0] layer=m3 ll=v[-7.545,72.145] ur=v[-6.885,72.515])
+
+**** Converting pins: 0.1 seconds
+**** Separating adjacent pins: 0.0 seconds
+**** Enclosing pins: 0.0 seconds
+*** Finding pins and blockages: 1.2 seconds
+*** Maze routing pins: 1.8 seconds
+**** Retrieving pins: 0.0 seconds
+**** Analyzing pins: 0.0 seconds
+**** Finding blockages: 0.2 seconds
+**** Converting blockages: 0.0 seconds
+WARNING: file pin_group.py: line 654:   Expanding conversion (vdd layer=m3 ll=v[19.775000000000002,17.945] ur=v[20.435,18.315])
+
+**** Converting pins: 0.2 seconds
+**** Separating adjacent pins: 0.0 seconds
+**** Enclosing pins: 0.1 seconds
+*** Finding pins and blockages: 1.8 seconds
+*** Maze routing supplies: 4.2 seconds
+** Routing: 17.2 seconds
+WARNING: file magic.py: line 239: DRC Errors sram_1rw0r0w_2_16_sky130A	1067
+
+ERROR: file magic.py: line 348: sram_1rw0r0w_2_16_sky130A	LVS mismatch (results in /tmp/openram_vincenzogiannone_8793_temp/sram_1rw0r0w_2_16_sky130A.lvs.report)
+
+** Verification: 8.2 seconds
+** SRAM creation: 26.1 seconds
+SP: Writing to /home/vincenzogiannone/Desktop/work_OpenRAM_multiport/compiler/macro/sram_1rw0r0w_2_16_sky130A/sram_1rw0r0w_2_16_sky130A.sp
+ERROR: file simulation.py: line 676: Could not find bl net in timing paths.
+

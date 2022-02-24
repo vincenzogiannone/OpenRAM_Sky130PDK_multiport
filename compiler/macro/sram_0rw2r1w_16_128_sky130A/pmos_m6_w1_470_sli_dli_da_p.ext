@@ -1,4 +1,4 @@
-timestamp 1643678852
+timestamp 1644951706
 version 8.3
 tech sky130A
 style ngspice()
@@ -20,16 +20,16 @@ node "S_uq2" 989 0 0 0 pdif 0 0 0 0 0 0 0 0 0 0 17640 708 0 0 0 0 0 0 0 0 0 0 0 
 node "G" 4251 571.719 60 -56 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 79380 5352 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_n59_63#" 3490 967.428 -59 63 nw 0 0 0 0 322476 2420 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 substrate "gnd" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "G" "D" 71.988
-cap "S" "S_uq2" 5.52792
-cap "S_uq0" "S_uq1" 5.52792
-cap "D" "S_uq1" 144.728
-cap "S" "S_uq0" 12.236
-cap "S" "D" 144.728
-cap "D" "S_uq2" 38.7297
-cap "S" "S_uq1" 11.967
-cap "S_uq2" "S_uq1" 12.236
-cap "S_uq0" "D" 38.7297
+cap "S_uq0" "S" 12.236
+cap "D" "S_uq0" 38.7297
+cap "S_uq2" "S" 5.52792
+cap "D" "S" 144.728
+cap "S_uq2" "D" 38.7297
+cap "D" "G" 71.988
+cap "S_uq1" "S_uq0" 5.52792
+cap "S_uq1" "S" 11.967
+cap "S_uq1" "S_uq2" 12.236
+cap "S_uq1" "D" 144.728
 device msubckt sky130_fd_pr__pfet_01v8 600 0 601 1 l=30 w=294 "w_n59_63#" "G" 60 0 "D" 294 0 "S_uq0" 294 0
 device msubckt sky130_fd_pr__pfet_01v8 492 0 493 1 l=30 w=294 "w_n59_63#" "G" 60 0 "S" 294 0 "D" 294 0
 device msubckt sky130_fd_pr__pfet_01v8 384 0 385 1 l=30 w=294 "w_n59_63#" "G" 60 0 "D" 294 0 "S" 294 0

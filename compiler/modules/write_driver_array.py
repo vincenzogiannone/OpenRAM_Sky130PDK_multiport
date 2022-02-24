@@ -216,6 +216,7 @@ class write_driver_array(design.design):
                                    self.en_name + "_{0}".format(i + offset), "vdd", "gnd"])
 
     def place_write_array(self):
+        cell=factory.create(module_type=OPTS.bitcell)
         if OPTS.RF_mode == False:
             if self.bitcell.width > self.driver.width:
                 self.driver_spacing = self.bitcell.width
@@ -257,10 +258,15 @@ class write_driver_array(design.design):
 
             if not self.offsets:
                 self.offsets = []
-                for i in range(OPTS.num_w_ports*self.columns + self.num_spare_cols):
-                    self.offsets.append(i * self.driver_spacing)
+                if (self.words_per_row == 1):
+                    for i in range(OPTS.num_w_ports*self.columns + self.num_spare_cols):
+                        self.offsets.append(i * self.driver_spacing)
+                else: 
+                    self.offsets.append(cell.width/2)
+                    for i in range(1, OPTS.num_w_ports*self.word_size):
+                        self.offsets.append(self.offsets[i-1] + self.words_per_row*cell.width)
 
-            for i, xoffset in enumerate(self.offsets[0:OPTS.num_w_ports*self.columns:self.words_per_row]):
+            for i, xoffset in enumerate(self.offsets):
                 if self.bitcell.mirror.y and (i * self.words_per_row + self.column_offset) % 2:
                     if i == 0:
                         xoffset = -max(self.driver_width, self.bitcell_width)/2*OPTS.num_w_ports
@@ -278,7 +284,6 @@ class write_driver_array(design.design):
 
                 if self.bitcell.mirror.y and (index + self.column_offset) % 2:
                     mirror = "MY"
-                    xoffset = xoffset + self.driver.width
                 else:
                     mirror = ""
 
@@ -381,7 +386,7 @@ class write_driver_array(design.design):
                 for n in ["vdd", "gnd"]:
                     pin_list = self.driver_insts[i].get_pins(n)
                     for pin in pin_list:
-                        self.copy_power_pin(pin, directions=("V", "V"))
+                        self.copy_power_pin(pin, directions=("H", "H"))
 
             if self.write_size:
                 for bit in range(self.num_wmasks):

@@ -1,4 +1,4 @@
-timestamp 1643678852
+timestamp 1644951706
 version 8.3
 tech sky130A
 style ngspice()
@@ -41,37 +41,37 @@ node "D" 6287 493.092 90 0 ndif 0 0 0 0 0 0 0 0 80640 3792 0 0 0 0 0 0 0 0 0 0 0
 node "S_uq9" 216 0 0 0 ndif 0 0 0 0 0 0 0 0 5760 312 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
 node "G" 8512 2082.52 60 -26 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 158940 10656 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 substrate "gnd" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "S_uq9" "S_uq8" 12.236
-cap "S_uq0" "D" 101.057
-cap "S_uq5" "S_uq4" 11.967
-cap "S_uq6" "D" 106.886
-cap "S_uq3" "D" 106.886
-cap "S_uq7" "S_uq6" 11.967
-cap "S" "D" 106.991
-cap "S_uq2" "D" 106.886
-cap "S_uq8" "D" 99.3752
-cap "S_uq1" "D" 106.886
-cap "S_uq7" "S_uq8" 11.967
-cap "S" "S_uq0" 11.967
-cap "S_uq5" "D" 106.886
-cap "S_uq5" "S_uq7" 5.47236
-cap "S_uq1" "S_uq0" 5.47236
-cap "S_uq8" "S_uq6" 5.47236
-cap "S_uq9" "D" 38.7297
-cap "S_uq4" "D" 106.886
-cap "S_uq2" "S_uq3" 11.967
-cap "S_uq2" "S" 5.47236
 cap "S_uq9" "S_uq7" 5.52792
-cap "S_uq5" "S_uq6" 11.967
-cap "S_uq1" "S_uq3" 5.47236
-cap "S_uq1" "S" 11.967
-cap "S_uq5" "S_uq3" 5.47236
-cap "S_uq2" "S_uq1" 11.967
-cap "S_uq6" "S_uq4" 5.47236
-cap "G" "D" 1095.05
-cap "S_uq3" "S_uq4" 11.967
-cap "S_uq7" "D" 106.886
+cap "S_uq3" "S_uq2" 11.967
 cap "S_uq2" "S_uq4" 5.47236
+cap "S_uq3" "S_uq4" 11.967
+cap "S_uq6" "S_uq4" 5.47236
+cap "S_uq8" "D" 99.3752
+cap "S_uq5" "S_uq7" 5.47236
+cap "D" "S_uq1" 106.886
+cap "S_uq1" "S" 11.967
+cap "D" "S_uq9" 38.7297
+cap "S_uq8" "S_uq6" 5.47236
+cap "D" "S_uq0" 101.057
+cap "D" "S_uq7" 106.886
+cap "S_uq1" "S_uq2" 11.967
+cap "S_uq0" "S" 11.967
+cap "S_uq1" "S_uq3" 5.47236
+cap "D" "S_uq5" 106.886
+cap "S_uq6" "S_uq7" 11.967
+cap "S_uq5" "S_uq3" 5.47236
+cap "G" "D" 1095.05
+cap "S_uq5" "S_uq4" 11.967
+cap "S_uq6" "S_uq5" 11.967
+cap "D" "S" 106.991
+cap "S_uq8" "S_uq9" 12.236
+cap "D" "S_uq2" 106.886
+cap "D" "S_uq3" 106.886
+cap "S_uq2" "S" 5.47236
+cap "S_uq8" "S_uq7" 11.967
+cap "D" "S_uq4" 106.886
+cap "S_uq6" "D" 106.886
+cap "S_uq1" "S_uq0" 5.47236
 device msubckt sky130_fd_pr__nfet_01v8 2220 0 2221 1 l=30 w=96 "gnd" "G" 60 0 "S_uq0" 96 0 "D" 96 0
 device msubckt sky130_fd_pr__nfet_01v8 2112 0 2113 1 l=30 w=96 "gnd" "G" 60 0 "D" 96 0 "S_uq0" 96 0
 device msubckt sky130_fd_pr__nfet_01v8 2004 0 2005 1 l=30 w=96 "gnd" "G" 60 0 "S" 96 0 "D" 96 0

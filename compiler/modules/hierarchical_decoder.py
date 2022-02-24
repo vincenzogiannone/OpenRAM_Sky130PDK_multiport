@@ -466,6 +466,7 @@ class hierarchical_decoder(design.design):
                     for j in range(len(self.predec_groups[1])):
                         output = len(self.predec_groups[0]) * j + i
                         if (output < self.num_outputs/OPTS.num_all_ports):
+                            
                             name = "dec_cell2_2r1w_{}".format(output)
                             self.dec_cell_inst.append(self.add_inst(name=name,
                                                                mod=self.dec_cell2_2r1w))
@@ -488,8 +489,7 @@ class hierarchical_decoder(design.design):
                         for k in range(len(self.predec_groups[2])):
                             output = (len(self.predec_groups[0]) * len(self.predec_groups[1])) * k \
                                      + len(self.predec_groups[0]) * j + i
-
-                            if (output < self.num_outputs):
+                            if (output < self.num_outputs/OPTS.num_all_ports):
                                 name = "dec_cell3_2r1w_{}".format(output)
                                 self.dec_cell_inst.append(self.add_inst(name=name,
                                                                    mod=self.dec_cell3_2r1w))
@@ -525,12 +525,12 @@ class hierarchical_decoder(design.design):
         if OPTS.RF_mode == False:
         # Row Decoder AND GATE array for address inputs <5.
             if (self.num_inputs == 4 or self.num_inputs == 5):
-                self.place_and_array(and_mod=self.and2)
+                self.place_and_array(mod=self.and2)
 
         # Row Decoder AND GATE array for address inputs >5.
         # FIXME: why this correct offset?)
             elif (self.num_inputs > 5):
-                self.place_and_array(and_mod=self.and3)
+                self.place_and_array(mod=self.and3)
         else:
             if (self.num_inputs == 4 or self.num_inputs == 5):
                 self.place_and_array(mod=self.dec_cell2_2r1w)
@@ -544,10 +544,10 @@ class hierarchical_decoder(design.design):
         if OPTS.RF_mode == False:
             for row in range(self.num_outputs):
                 if ((row % 2) == 0):
-                    y_off = and_mod.height * row
+                    y_off = mod.height * row
                     mirror = "R0"
                 else:
-                    y_off = and_mod.height * (row + 1)
+                    y_off = mod.height * (row + 1)
                     mirror = "MX"
 
                 x_off = self.internal_routing_width
@@ -572,7 +572,7 @@ class hierarchical_decoder(design.design):
             for row in range(self.num_outputs):
                 and_inst = self.and_inst[row]
                 self.copy_layout_pin(and_inst, "Z", "decode_{0}".format(row))
-        else:
+        else:            
             for row in range(int(self.num_outputs/OPTS.num_all_ports)):
                 for port in range(OPTS.num_all_ports):
                     dec_cell_inst = self.dec_cell_inst[row]
@@ -690,6 +690,7 @@ class hierarchical_decoder(design.design):
                             if num_iter == OPTS.num_all_ports:
                                 output_index = output_index + 1
                                 num_iter = 0
+                            
                             predecode_name = "predecode_{}".format(index_A)
                             self.route_predecode_bus_outputs(predecode_name,
                                                              self.dec_cell_inst[output_index].get_pin("A{0}".format(num_iter)),
@@ -698,18 +699,19 @@ class hierarchical_decoder(design.design):
                             self.route_predecode_bus_outputs(predecode_name,
                                                              self.dec_cell_inst[output_index].get_pin("B{0}".format(num_iter)),
                                                              output_index)
+                            
 
             elif (self.num_inputs > 5):
                 for index_C in self.predec_groups[2]:
                     for index_B in self.predec_groups[1]:
                         for index_A in self.predec_groups[0]:
                             num_iter +=1
-                            if (output_index >= self.num_outputs/OPTS.num_all_ports):
-                                break
-                            else:
-                                if num_iter == OPTS.num_all_ports:
+                            if num_iter == OPTS.num_all_ports:
                                     output_index = output_index + 1
                                     num_iter = 0
+                            if (output_index > self.num_outputs/OPTS.num_all_ports-1):
+                                break
+                            else:
                                 predecode_name = "predecode_{}".format(index_A)
                                 self.route_predecode_bus_outputs(predecode_name,
                                                                  self.dec_cell_inst[output_index].get_pin("A{0}".format(num_iter)),
@@ -753,7 +755,7 @@ class hierarchical_decoder(design.design):
                 xoffset = max(x.rx() for x in self.and_inst) + 0.5 * self.m1_space
             else:
                 xoffset = max(x.rx() for x in self.dec_cell_inst) + 0.5 * self.m1_space
-            for row in range(0, self.num_outputs):
+            for row in range(0, int(self.num_outputs/OPTS.num_all_ports)):
                 for pin_name in ["vdd", "gnd"]:
                     # The nand and inv are the same height rows...
                     if OPTS.RF_mode == False:

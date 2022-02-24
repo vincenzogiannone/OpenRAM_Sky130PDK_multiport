@@ -1,0 +1,66 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1644969367
+<< checkpaint >>
+rect -1296 -1260 2904 2970
+<< locali >>
+rect 0 1676 1644 1710
+rect 213 1299 925 1333
+rect 1135 1299 1169 1333
+rect 0 838 1644 872
+rect 64 377 98 411
+rect 213 377 466 411
+rect 568 377 942 411
+rect 1135 377 1169 411
+rect 0 0 1644 34
+<< viali >>
+rect 179 1299 213 1333
+rect 179 377 213 411
+<< metal1 >>
+rect 167 1333 225 1339
+rect 167 1299 179 1333
+rect 213 1299 225 1333
+rect 167 1293 225 1299
+rect 182 417 210 1293
+rect 167 411 225 417
+rect 167 377 179 411
+rect 213 377 225 411
+rect 167 371 225 377
+use contact_13  contact_13_0
+timestamp 1644969367
+transform 1 0 167 0 1 371
+box 0 0 1 1
+use contact_13  contact_13_1
+timestamp 1644969367
+transform 1 0 167 0 1 1293
+box 0 0 1 1
+use pinv_2  pinv_2_0
+timestamp 1644969367
+transform 1 0 844 0 -1 1693
+box -36 -17 728 895
+use pinv_2  pinv_2_1
+timestamp 1644969367
+transform 1 0 844 0 1 17
+box -36 -17 728 895
+use pinv_1  pinv_1_0
+timestamp 1644969367
+transform 1 0 368 0 1 17
+box -36 -17 512 895
+use pinv_0  pinv_0_0
+timestamp 1644969367
+transform 1 0 0 0 1 17
+box -36 -17 404 895
+<< labels >>
+rlabel locali s 822 855 822 855 4 vdd
+rlabel locali s 822 17 822 17 4 gnd
+rlabel locali s 822 1693 822 1693 4 gnd
+rlabel locali s 1152 1316 1152 1316 4 Z
+rlabel locali s 1152 394 1152 394 4 Zb
+rlabel locali s 81 394 81 394 4 A
+<< properties >>
+string FIXED_BBOX 0 0 1644 1693
+string GDS_FILE sram_0rw2r1w_32_128_sky130A.gds
+string GDS_END 3257654
+string GDS_START 3256060
+<< end >>

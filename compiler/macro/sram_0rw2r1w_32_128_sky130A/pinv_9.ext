@@ -1,0 +1,60 @@
+timestamp 1644969368
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use contact_12 contact_12_0 1 0 48 0 1 338
+use contact_11 contact_11_0 1 0 2418 0 1 51
+use contact_10 contact_10_0 1 0 2418 0 1 705
+use nmos_m21_w0_480_sli_dli_da_p nmos_m21_w0_480_sli_dli_da_p_0 1 0 54 0 1 51
+use pmos_m21_w1_440_sli_dli_da_p pmos_m21_w1_440_sli_dli_da_p_0 1 0 54 0 1 499
+node "Z" 153 270.702 1244 166 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14518 922 0 0 0 0 0 0 0 0 0 0 0 0
+node "A" 380 277.288 48 338 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11556 672 0 0 4356 264 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 10941 6540.4 -36 402 nw 0 0 0 0 1281800 6186 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 168538 9982 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 2418 51 pw 0 0 4100 264 0 0 0 0 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 107950 6418 0 0 0 0 0 0 0 0 0 0 0 0
+cap "vdd" "Z" 10.0519
+cap "A" "vdd" 5.4466
+subcap "vdd" -4469.8
+cap "vdd" "Z" 151.489
+cap "vdd" "pmos_m21_w1_440_sli_dli_da_p_0/w_n59_60#" -35.0371
+cap "Z" "gnd" 310.139
+cap "A" "Z" 23.7067
+cap "A" "gnd" 1.3216
+cap "pmos_m21_w1_440_sli_dli_da_p_0/w_n59_60#" "Z" -3.36515
+subcap "gnd" -1080.09
+cap "gnd" "Z" 295.826
+cap "vdd" "Z" 127.857
+cap "nmos_m21_w0_480_sli_dli_da_p_0/G" "pmos_m21_w1_440_sli_dli_da_p_0/G" 90.0833
+merge "pmos_m21_w1_440_sli_dli_da_p_0/D" "nmos_m21_w0_480_sli_dli_da_p_0/D" -93.6542 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3536 -272 0 0 0 0 0 0 0 0 0 0 0 0
+merge "nmos_m21_w0_480_sli_dli_da_p_0/D" "Z"
+merge "pmos_m21_w1_440_sli_dli_da_p_0/G" "nmos_m21_w0_480_sli_dli_da_p_0/G" -33 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -120 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "nmos_m21_w0_480_sli_dli_da_p_0/G" "A"
+merge "nmos_m21_w0_480_sli_dli_da_p_0/S_uq0" "nmos_m21_w0_480_sli_dli_da_p_0/S" -189.439 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -748 0 0 0 0 0 0 0 0 0 0 0 0
+merge "nmos_m21_w0_480_sli_dli_da_p_0/S" "nmos_m21_w0_480_sli_dli_da_p_0/S_uq1"
+merge "nmos_m21_w0_480_sli_dli_da_p_0/S_uq1" "contact_10_0/gnd"
+merge "contact_10_0/gnd" "contact_11_0/gnd"
+merge "contact_11_0/gnd" "pmos_m21_w1_440_sli_dli_da_p_0/gnd"
+merge "pmos_m21_w1_440_sli_dli_da_p_0/gnd" "nmos_m21_w0_480_sli_dli_da_p_0/gnd"
+merge "nmos_m21_w0_480_sli_dli_da_p_0/gnd" "nmos_m21_w0_480_sli_dli_da_p_0/S_uq2"
+merge "nmos_m21_w0_480_sli_dli_da_p_0/S_uq2" "nmos_m21_w0_480_sli_dli_da_p_0/S_uq3"
+merge "nmos_m21_w0_480_sli_dli_da_p_0/S_uq3" "nmos_m21_w0_480_sli_dli_da_p_0/S_uq4"
+merge "nmos_m21_w0_480_sli_dli_da_p_0/S_uq4" "nmos_m21_w0_480_sli_dli_da_p_0/S_uq5"
+merge "nmos_m21_w0_480_sli_dli_da_p_0/S_uq5" "nmos_m21_w0_480_sli_dli_da_p_0/S_uq6"
+merge "nmos_m21_w0_480_sli_dli_da_p_0/S_uq6" "nmos_m21_w0_480_sli_dli_da_p_0/S_uq7"
+merge "nmos_m21_w0_480_sli_dli_da_p_0/S_uq7" "nmos_m21_w0_480_sli_dli_da_p_0/S_uq8"
+merge "nmos_m21_w0_480_sli_dli_da_p_0/S_uq8" "nmos_m21_w0_480_sli_dli_da_p_0/S_uq9"
+merge "nmos_m21_w0_480_sli_dli_da_p_0/S_uq9" "contact_12_0/gnd"
+merge "contact_12_0/gnd" "gnd"
+merge "pmos_m21_w1_440_sli_dli_da_p_0/S_uq0" "pmos_m21_w1_440_sli_dli_da_p_0/S" -4017.68 0 0 0 0 -959208 -5648 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1584 -2200 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pmos_m21_w1_440_sli_dli_da_p_0/S" "pmos_m21_w1_440_sli_dli_da_p_0/S_uq1"
+merge "pmos_m21_w1_440_sli_dli_da_p_0/S_uq1" "pmos_m21_w1_440_sli_dli_da_p_0/S_uq2"
+merge "pmos_m21_w1_440_sli_dli_da_p_0/S_uq2" "pmos_m21_w1_440_sli_dli_da_p_0/S_uq3"
+merge "pmos_m21_w1_440_sli_dli_da_p_0/S_uq3" "pmos_m21_w1_440_sli_dli_da_p_0/S_uq4"
+merge "pmos_m21_w1_440_sli_dli_da_p_0/S_uq4" "pmos_m21_w1_440_sli_dli_da_p_0/S_uq5"
+merge "pmos_m21_w1_440_sli_dli_da_p_0/S_uq5" "pmos_m21_w1_440_sli_dli_da_p_0/S_uq6"
+merge "pmos_m21_w1_440_sli_dli_da_p_0/S_uq6" "pmos_m21_w1_440_sli_dli_da_p_0/S_uq7"
+merge "pmos_m21_w1_440_sli_dli_da_p_0/S_uq7" "pmos_m21_w1_440_sli_dli_da_p_0/S_uq8"
+merge "pmos_m21_w1_440_sli_dli_da_p_0/S_uq8" "pmos_m21_w1_440_sli_dli_da_p_0/S_uq9"
+merge "pmos_m21_w1_440_sli_dli_da_p_0/S_uq9" "pmos_m21_w1_440_sli_dli_da_p_0/w_n59_60#"
+merge "pmos_m21_w1_440_sli_dli_da_p_0/w_n59_60#" "vdd"

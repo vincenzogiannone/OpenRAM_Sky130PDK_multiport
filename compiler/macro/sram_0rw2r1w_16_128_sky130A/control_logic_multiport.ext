@@ -1,289 +1,333 @@
-timestamp 1643678852
+timestamp 1644951706
 version 8.3
 tech sky130A
 style ngspice()
 scale 1000 1 500000
 resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
-use contact_18 contact_18_6 1 0 2112 0 1 480
-use contact_18 contact_18_5 1 0 2577 0 1 208
-use contact_18 contact_18_4 1 0 2112 0 1 1130
-use contact_18 contact_18_3 1 0 2577 0 1 1402
-use pinv_1 pinv_1_0 1 0 3486 0 -1 2514
-use pand2_0 pand2_0_1 1 0 3837 0 -1 2514
-use contact_29 contact_29_9 1 0 3026 0 1 480
-use contact_29 contact_29_8 1 0 3094 0 1 208
-use contact_29 contact_29_7 1 0 3230 0 1 1130
-use contact_29 contact_29_6 1 0 3298 0 1 1402
-use contact_13 contact_13_10 1 0 3538 0 1 1192
-use contact_17 contact_17_10 1 0 3552 0 1 1200
-use contact_29 contact_29_4 1 0 3162 0 1 839
+use contact_18 contact_18_6 1 0 2120 0 1 544
+use contact_18 contact_18_5 1 0 2628 0 1 136
+use contact_18 contact_18_4 1 0 2120 0 1 1058
+use contact_18 contact_18_3 1 0 2628 0 1 1466
+use pinv_1 pinv_1_0 1 0 3648 0 -1 2514
+use pand2_0 pand2_0_1 1 0 4016 0 -1 2514
+use contact_29 contact_29_9 1 0 3092 0 1 544
+use contact_29 contact_29_8 1 0 3176 0 1 136
+use contact_29 contact_29_7 1 0 3344 0 1 1058
+use contact_29 contact_29_6 1 0 3428 0 1 1466
+use contact_13 contact_13_10 1 0 3700 0 1 1192
+use contact_17 contact_17_10 1 0 3697 0 1 1183
+use contact_29 contact_29_4 1 0 3260 0 1 835
 use dff_buf_array dff_buf_array_0 1 0 0 0 1 0
-use contact_17 contact_17_8 1 0 9422 0 1 1192
-use contact_13 contact_13_8 1 0 9408 0 1 1184
-use contact_17 contact_17_9 1 0 9422 0 1 1192
-use contact_13 contact_13_9 1 0 9408 0 1 1184
-use contact_29 contact_29_5 1 0 9371 0 1 839
-use pdriver_1 pdriver_1_0 1 0 3486 0 1 838
-use contact_29 contact_29_1 1 0 2890 0 1 1773
-use contact_17 contact_17_19 1 0 -1 0 1 3279
-use contact_29 contact_29_3 1 0 3230 0 1 1943
-use contact_17 contact_17_7 1 0 3213 0 1 2122
-use contact_13 contact_13_7 1 0 3538 0 1 2114
-use contact_18 contact_18_1 1 0 4000 0 1 1943
-use contact_17 contact_17_5 1 0 4051 0 1 1961
-use contact_13 contact_13_5 1 0 4037 0 1 1953
-use contact_18 contact_18_2 1 0 4000 0 1 1943
-use contact_17 contact_17_6 1 0 4051 0 1 1961
-use contact_13 contact_13_6 1 0 4037 0 1 1953
-use contact_17 contact_17_4 1 0 4938 0 1 2126
-use contact_13 contact_13_4 1 0 4924 0 1 2118
-use contact_29 contact_29_2 1 0 4887 0 1 1773
-use contact_29 contact_29_0 1 0 2958 0 1 2854
-use contact_17 contact_17_2 1 0 3281 0 1 3037
-use contact_17 contact_17_3 1 0 3213 0 1 2789
-use contact_17 contact_17_18 1 0 3213 0 1 3279
-use contact_13 contact_13_2 1 0 3686 0 1 3029
-use contact_13 contact_13_3 1 0 3586 0 1 2781
-use contact_17 contact_17_0 1 0 4587 0 1 2872
-use contact_13 contact_13_0 1 0 4573 0 1 2864
-use contact_18 contact_18_0 1 0 4536 0 1 2854
-use contact_17 contact_17_1 1 0 4587 0 1 2872
-use contact_13 contact_13_1 1 0 4573 0 1 2864
-use pand2_0 pand2_0_0 1 0 3486 0 1 2514
-use pand2_1 pand2_1_0 1 0 3486 0 -1 4190
-use contact_13 contact_13_12 1 0 3586 0 1 4457
-use contact_17 contact_17_12 1 0 3009 0 1 4465
-use contact_13 contact_13_14 1 0 3686 0 1 3629
-use contact_17 contact_17_14 1 0 2941 0 1 3637
-use contact_13 contact_13_15 1 0 3586 0 1 3877
-use contact_17 contact_17_15 1 0 3077 0 1 3885
-use pnand2_1 pnand2_1_0 1 0 3486 0 1 4190
-use pdriver_2 pdriver_2_0 1 0 3486 0 -1 5866
-use contact_17 contact_17_11 1 0 6687 0 1 4545
-use contact_13 contact_13_11 1 0 6673 0 1 4537
-use contact_17 contact_17_13 1 0 5127 0 1 3804
-use contact_13 contact_13_13 1 0 5113 0 1 3796
-use pdriver_4 pdriver_4_0 1 0 3937 0 1 4190
-use contact_17 contact_17_17 1 0 2941 0 1 5474
-use contact_13 contact_13_17 1 0 3538 0 1 5466
-use contact_13 contact_13_16 1 0 5466 0 1 5470
-use contact_17 contact_17_16 1 0 5480 0 1 5478
-node "gnd_uq0" 0 83.7936 -66 -33 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8712 396 0 0 0 0 0 0
-node "vdd" 0 83.7936 -66 805 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8712 396 0 0 0 0 0 0
-node "gnd" 0 77.7764 -66 1643 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8712 396 0 0 0 0 0 0
-node "m2_2615_213#" 27 2748.74 2615 213 v2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 170520 12180 40524 1442 0 0 0 0 0 0
+use contact_17 contact_17_8 1 0 9652 0 1 1175
+use contact_13 contact_13_8 1 0 9655 0 1 1184
+use contact_17 contact_17_9 1 0 9652 0 1 1175
+use contact_13 contact_13_9 1 0 9655 0 1 1184
+use contact_29 contact_29_5 1 0 9618 0 1 835
+use pdriver_1 pdriver_1_0 1 0 3648 0 1 838
+use contact_17 contact_17_19 1 0 -18 0 1 3240
+use contact_29 contact_29_1 1 0 2924 0 1 1769
+use contact_29 contact_29_3 1 0 3344 0 1 2063
+use contact_17 contact_17_7 1 0 3294 0 1 2105
+use contact_13 contact_13_7 1 0 3700 0 1 2114
+use contact_18 contact_18_1 1 0 4179 0 1 2063
+use contact_17 contact_17_5 1 0 4213 0 1 2068
+use contact_13 contact_13_5 1 0 4216 0 1 2077
+use contact_18 contact_18_2 1 0 4179 0 1 2063
+use contact_17 contact_17_6 1 0 4213 0 1 2068
+use contact_13 contact_13_6 1 0 4216 0 1 2077
+use contact_17 contact_17_4 1 0 5100 0 1 2109
+use contact_13 contact_13_4 1 0 5103 0 1 2118
+use contact_29 contact_29_2 1 0 5066 0 1 1769
+use contact_29 contact_29_0 1 0 3008 0 1 2850
+use contact_17 contact_17_2 1 0 3378 0 1 2896
+use contact_17 contact_17_3 1 0 3294 0 1 2772
+use contact_17 contact_17_18 1 0 3294 0 1 3240
+use contact_13 contact_13_2 1 0 3848 0 1 2905
+use contact_13 contact_13_3 1 0 3748 0 1 2781
+use contact_17 contact_17_0 1 0 4732 0 1 2855
+use contact_13 contact_13_0 1 0 4735 0 1 2864
+use contact_18 contact_18_0 1 0 4698 0 1 2850
+use contact_17 contact_17_1 1 0 4732 0 1 2855
+use contact_13 contact_13_1 1 0 4735 0 1 2864
+use pand2_0 pand2_0_0 1 0 3648 0 1 2514
+use pand2_1 pand2_1_0 1 0 3648 0 -1 4190
+use contact_13 contact_13_12 1 0 3748 0 1 4457
+use contact_17 contact_17_12 1 0 3042 0 1 4448
+use contact_13 contact_13_14 1 0 3848 0 1 3753
+use contact_17 contact_17_14 1 0 2958 0 1 3744
+use contact_13 contact_13_15 1 0 3748 0 1 3877
+use contact_17 contact_17_15 1 0 3126 0 1 3868
+use pnand2_1 pnand2_1_0 1 0 3648 0 1 4190
+use pdriver_2 pdriver_2_0 1 0 3648 0 -1 5866
+use contact_17 contact_17_11 1 0 6900 0 1 4528
+use contact_13 contact_13_11 1 0 6903 0 1 4537
+use contact_17 contact_17_13 1 0 5272 0 1 3787
+use contact_13 contact_13_13 1 0 5275 0 1 3796
+use pdriver_4 pdriver_4_0 1 0 4116 0 1 4190
+use contact_17 contact_17_17 1 0 2958 0 1 5457
+use contact_13 contact_13_17 1 0 3700 0 1 5466
+use contact_13 contact_13_16 1 0 5679 0 1 5470
+use contact_17 contact_17_16 1 0 5676 0 1 5461
+node "gnd_uq0" 0 87.3904 -66 -37 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9768 412 0 0 0 0 0 0
+node "vdd" 0 87.3904 -66 801 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9768 412 0 0 0 0 0 0
+node "gnd" 0 81.3396 -66 1639 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9768 412 0 0 0 0 0 0
+node "m2_2666_136#" 27 2748.52 2666 136 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 171584 12184 42384 1504 0 0 0 0 0 0
 node "web" 0 34.2626 180 232 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
-node "m2_2615_1407#" 28 2795.16 2615 1407 v2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 170520 12180 52764 1850 0 0 0 0 0 0
 node "csb" 0 34.2626 180 1416 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1512 164 0 0 0 0 0 0 0 0
-node "clk" 13 131.298 3550 1198 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 4570 326 2704 208 0 0 0 0 0 0 0 0
-node "li_3682_2120#" 139 244.303 3682 2120 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13192 844 0 0 0 0 0 0 0 0 0 0 0 0
-node "clk_buf" 192 9099.88 3550 2120 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3468 408 126506 8962 299904 21272 382044 12826 0 0 0 0 0 0
-node "li_3698_3035#" 103 3750.15 3698 3035 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2312 272 20134 1414 176952 12532 132288 4592 0 0 0 0 0 0
-node "w_en" 43 2957.86 5125 3802 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 4570 326 190752 13640 0 0 0 0 0 0 0 0
-node "li_3598_3883#" 43 3261.34 3598 3883 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 18476 1296 171768 12228 64344 2236 0 0 0 0 0 0
-node "li_3598_4463#" 103 3626.04 3598 4463 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2312 272 24950 1758 172248 12252 104184 3564 0 0 0 0 0 0
-node "p_en_bar" 36 2299.7 6685 4543 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 4570 326 147072 10520 0 0 0 0 0 0 0 0
-node "li_3833_4734#" 139 243.14 3833 4734 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13124 840 0 0 0 0 0 0 0 0 0 0 0 0
-node "wl_en" 41 2808.93 5478 5476 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 4570 326 180868 12934 0 0 0 0 0 0 0 0
-node "li_3550_5472#" 159 4421.27 3550 5472 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3468 408 50594 3566 183588 12990 129324 4402 0 0 0 0 0 0
+node "m2_2666_1466#" 28 2796.8 2666 1466 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 171584 12184 57504 2008 0 0 0 0 0 0
+node "clk" 13 113.946 3712 1198 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 3328 232 3328 232 0 0 0 0 0 0 0 0
+node "li_3844_2120#" 145 254.187 3844 2120 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13770 878 0 0 0 0 0 0 0 0 0 0 0 0
+node "clk_buf" 193 9202.29 3712 2120 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3468 408 133416 9368 303248 21336 390984 13124 0 0 0 0 0 0
+node "li_3860_2911#" 103 3654.24 3860 2911 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2312 272 20692 1428 179336 12548 142548 4934 0 0 0 0 0 0
+node "w_en" 43 3007.17 5287 3802 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 3328 232 195128 13932 0 0 0 0 0 0 0 0
+node "li_3760_3883#" 43 3301.09 3760 3883 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 21620 1500 173120 12232 67824 2352 0 0 0 0 0 0
+node "li_3760_4463#" 103 3564.09 3760 4463 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2312 272 27300 1900 173120 12232 110904 3788 0 0 0 0 0 0
+node "p_en_bar" 36 2320.32 6915 4543 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 3328 232 149544 10676 0 0 0 0 0 0 0 0
+node "li_3995_4734#" 145 253.024 3995 4734 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13702 874 0 0 0 0 0 0 0 0 0 0 0 0
+node "wl_en" 41 2836.72 5691 5476 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 3328 232 183816 13124 0 0 0 0 0 0 0 0
+node "li_3712_5472#" 159 4517.48 3712 5472 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3468 408 57432 4008 185432 12988 138024 4692 0 0 0 0 0 0
 substrate "gnd" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "li_3598_4463#" "m2_2615_1407#" 1092.53
-cap "m2_2615_1407#" "clk_buf" 2927.29
-cap "m2_2615_1407#" "li_3598_3883#" 1299.91
-cap "li_3698_3035#" "m2_2615_1407#" 7967.04
-cap "clk_buf" "clk" 8.69565
-cap "m2_2615_213#" "m2_2615_1407#" 1734.75
-cap "li_3698_3035#" "clk" 11.2833
-cap "m2_2615_213#" "clk" 7.08447
-cap "li_3598_4463#" "clk_buf" 1808.72
-cap "li_3598_4463#" "li_3598_3883#" 7674.8
-cap "m2_2615_1407#" "li_3550_5472#" 1069.34
-cap "li_3698_3035#" "li_3598_4463#" 1350.77
-cap "m2_2615_213#" "li_3598_4463#" 2894.71
-cap "clk_buf" "li_3598_3883#" 2831.08
-cap "li_3698_3035#" "clk_buf" 7983.87
-cap "li_3598_4463#" "li_3550_5472#" 7732.02
-cap "li_3698_3035#" "li_3598_3883#" 1773.11
-cap "m2_2615_213#" "clk_buf" 7691.73
-cap "m2_2615_213#" "li_3598_3883#" 7815.54
-cap "m2_2615_213#" "li_3698_3035#" 2805.87
-cap "clk_buf" "li_3550_5472#" 1416.49
-cap "li_3550_5472#" "li_3598_3883#" 3046.64
-cap "clk_buf" "li_3682_2120#" 11.449
-cap "li_3698_3035#" "li_3550_5472#" 1641.02
-cap "m2_2615_213#" "li_3550_5472#" 1866.51
-cap "m2_2615_1407#" "clk" 15.9509
-cap "gnd" "clk_buf" 32.4666
-subcap "m2_2615_213#" -2178.58
-subcap "m2_2615_1407#" -2724.13
-cap "dff_buf_array_0/dout_0" "li_3550_5472#" -8.88178e-16
-cap "li_3550_5472#" "dff_buf_array_0/dff_buf_0_1/pinv_3_0/gnd" -22.88
-cap "dff_buf_array_0/dout_bar_1" "dff_buf_array_0/dff_buf_0_1/pinv_3_0/vdd" 37.6048
-cap "dff_buf_array_0/clk" "li_3550_5472#" -49.92
-cap "dff_buf_array_0/dout_bar_0" "dff_buf_array_0/dff_buf_0_1/pinv_3_0/vdd" 37.6048
-cap "li_3550_5472#" "dff_buf_array_0/clk" -49.92
-cap "dff_buf_array_0/dout_0" "dff_buf_array_0/dout_bar_0" 58.4054
-cap "li_3550_5472#" "dff_buf_array_0/dff_buf_0_1/pinv_3_0/vdd" -22.88
-cap "dff_buf_array_0/dout_1" "dff_buf_array_0/dout_bar_1" 58.4054
-subcap "m2_2615_213#" -2142.9
-subcap "m2_2615_1407#" -2092.79
-cap "dff_buf_array_0/dff_buf_0_1/pinv_3_0/gnd" "li_3550_5472#" 5.78
-cap "dff_buf_array_0/dff_buf_0_1/pinv_3_0/gnd" "clk_buf" 298.206
-cap "clk_buf" "pdriver_1_0/pinv_0_0/A" 40.5736
-cap "dff_buf_array_0/dff_buf_0_1/pinv_3_0/vdd" "li_3598_3883#" 16.17
-cap "li_3698_3035#" "dff_buf_array_0/dff_buf_0_1/pinv_3_0/vdd" 16.17
-cap "li_3550_5472#" "dff_buf_array_0/clk" 17.25
-cap "li_3698_3035#" "dff_buf_array_0/dff_buf_0_0/pinv_3_0/A" -635.577
-cap "dff_buf_array_0/clk" "li_3550_5472#" 34.5
-cap "dff_buf_array_0/dff_buf_0_1/pinv_3_0/vdd" "li_3550_5472#" 34.7552
-cap "pdriver_1_0/pinv_7_0/A" "clk_buf" 23.7046
+cap "clk_buf" "clk" 8.81543
+cap "li_3860_2911#" "clk" 11.4695
+cap "m2_2666_136#" "clk_buf" 5398.84
+cap "li_3760_4463#" "clk_buf" 1443.01
+cap "li_3860_2911#" "clk_buf" 6105.82
+cap "m2_2666_136#" "li_3760_4463#" 2262.3
+cap "m2_2666_1466#" "clk" 16.4103
+cap "m2_2666_136#" "li_3860_2911#" 2169.85
+cap "li_3760_4463#" "li_3860_2911#" 1346.32
+cap "m2_2666_1466#" "clk_buf" 2290.46
+cap "m2_2666_136#" "m2_2666_1466#" 1370.12
+cap "li_3712_5472#" "clk_buf" 1116.11
+cap "m2_2666_1466#" "li_3760_4463#" 899.27
+cap "m2_2666_1466#" "li_3860_2911#" 5642.93
+cap "m2_2666_136#" "li_3712_5472#" 1505.57
+cap "clk_buf" "gnd" 34.4674
+cap "li_3712_5472#" "li_3760_4463#" 5483.28
+cap "li_3712_5472#" "li_3860_2911#" 1185.28
+cap "li_3712_5472#" "m2_2666_1466#" 349.188
+cap "clk_buf" "li_3844_2120#" 11.449
+cap "li_3760_3883#" "clk_buf" 2193.38
+cap "m2_2666_136#" "li_3760_3883#" 5525.67
+cap "li_3860_2911#" "li_3844_2120#" 54.1467
+cap "li_3760_3883#" "li_3760_4463#" 5482.48
+cap "li_3760_3883#" "li_3860_2911#" 1407.66
+cap "li_3760_3883#" "m2_2666_1466#" 1044.77
+cap "li_3712_5472#" "li_3760_3883#" 2616.31
+subcap "m2_2666_136#" -2290.64
+subcap "m2_2666_1466#" -2760.99
+cap "dff_buf_array_0/clk" "li_3712_5472#" -58.08
+cap "dff_buf_array_0/clk" "li_3712_5472#" -58.08
+cap "dff_buf_array_0/dout_0" "li_3712_5472#" -8.88178e-16
+cap "dff_buf_array_0/dout_bar_1" "dff_buf_array_0/dout_1" 135.879
+cap "dff_buf_array_0/dff_buf_0_1/pinv_3_0/vdd" "dff_buf_array_0/dout_bar_0" 75.0351
+cap "dff_buf_array_0/dout_bar_1" "dff_buf_array_0/dff_buf_0_1/pinv_3_0/vdd" 75.0351
+cap "li_3712_5472#" "dff_buf_array_0/dff_buf_0_1/pinv_3_0/gnd" -26.62
+cap "dff_buf_array_0/dff_buf_0_1/pinv_3_0/vdd" "li_3712_5472#" -26.62
+cap "dff_buf_array_0/dout_0" "dff_buf_array_0/dout_bar_0" 167.431
+subcap "m2_2666_136#" -2028.24
+subcap "m2_2666_1466#" -2193.25
+cap "dff_buf_array_0/dff_buf_0_1/pinv_3_0/A" "dff_buf_array_0/dout_0" -55.9478
+cap "li_3860_2911#" "dff_buf_array_0/dff_buf_0_1/pinv_3_0/vdd" 28.776
+cap "pdriver_1_0/pinv_0_0/A" "clk_buf" 25.6418
+cap "li_3760_3883#" "dff_buf_array_0/dff_buf_0_1/pinv_3_0/A" -495.651
 cap "clk" "clk_buf" 16.869
-cap "li_3598_3883#" "dff_buf_array_0/dff_buf_0_1/pinv_3_0/A" -635.577
-cap "pdriver_1_0/pinv_9_0/nmos_m14_w0_480_sli_dli_da_p_0/S_uq5" "clk_buf" 351.616
-cap "pdriver_1_0/pinv_7_0/A" "clk_buf" 33.738
-cap "pand2_0_1/pdriver_0_0/pinv_4_0/pmos_m11_w1_375_sli_dli_da_p_0/G" "pdriver_1_0/pinv_7_0/A" 0.877119
-cap "pdriver_1_0/pinv_8_0/A" "clk_buf" 111.81
-cap "pdriver_1_0/pinv_9_0/A" "clk_buf" 78.6342
-cap "pdriver_1_0/pinv_10_0/nmos_m40_w0_495_sli_dli_da_p_0/S_uq19" "clk_buf" 416.072
-cap "pdriver_1_0/pinv_10_0/A" "clk_buf" 111.135
-cap "pdriver_1_0/pinv_9_0/A" "clk_buf" 219.297
-cap "pdriver_1_0/pinv_9_0/nmos_m14_w0_480_sli_dli_da_p_0/D" "clk_buf" -79.2804
-cap "pdriver_1_0/pinv_10_0/A" "clk_buf" 168.69
-cap "pdriver_1_0/pinv_9_0/nmos_m14_w0_480_sli_dli_da_p_0/G" "clk_buf" 16.869
-cap "clk_buf" "pdriver_1_0/gnd" 522.991
-cap "pdriver_1_0/pinv_10_0/nmos_m40_w0_495_sli_dli_da_p_0/D" "clk_buf" 81.471
-cap "pdriver_1_0/pinv_10_0/nmos_m40_w0_495_sli_dli_da_p_0/G" "pdriver_1_0/Z" 212.918
-cap "pdriver_1_0/pinv_10_0/gnd" "pdriver_1_0/Z" 47.3744
-subcap "m2_2615_1407#" -2501.67
-cap "dff_buf_array_0/dout_1" "li_3550_5472#" -8.88178e-16
-cap "dff_buf_array_0/clk" "li_3550_5472#" -49.92
-cap "li_3550_5472#" "dff_buf_array_0/dff_buf_0_0/pinv_3_0/gnd" -22.88
-subcap "m2_2615_1407#" -1743.86
-subcap "clk" -258.349
-subcap "clk_buf" -7987.04
-subcap "li_3698_3035#" -3163.94
-cap "pand2_0_1/B" "pinv_1_0/Z" 88.3934
-cap "pand2_0_1/B" "pand2_0_0/pdriver_0_0/pinv_4_0/nmos_m11_w0_460_sli_dli_da_p_0/D" 4.30421
-cap "pinv_1_0/Z" "pinv_1_0/vdd" 17.0494
-cap "pinv_1_0/gnd" "pinv_1_0/Z" 50.8631
-cap "pand2_0_1/B" "pinv_1_0/A" 22.401
+cap "dff_buf_array_0/dff_buf_0_1/pinv_3_0/vdd" "li_3712_5472#" 34.7552
+cap "dff_buf_array_0/clk" "li_3712_5472#" 17.25
+cap "li_3760_3883#" "dff_buf_array_0/dff_buf_0_1/pinv_3_0/vdd" 28.776
+cap "dff_buf_array_0/clk" "li_3712_5472#" 34.5
+cap "dff_buf_array_0/dff_buf_0_1/pinv_3_0/gnd" "li_3712_5472#" 5.78
+cap "li_3860_2911#" "dff_buf_array_0/dff_buf_0_0/pinv_3_0/A" -495.651
+cap "dff_buf_array_0/dff_buf_0_1/pinv_3_0/gnd" "clk_buf" 230.054
+cap "clk_buf" "pdriver_1_0/pinv_0_0/A" -245.063
+cap "pand2_0_1/pdriver_0_0/pinv_4_0/pmos_m11_w1_375_sli_dli_da_p_0/G" "pdriver_1_0/pinv_8_0/A" 0.974576
+cap "pand2_0_1/pdriver_0_0/pinv_4_0/pmos_m11_w1_375_sli_dli_da_p_0/G" "pdriver_1_0/pinv_8_0/A" 0.974576
+cap "clk_buf" "pdriver_1_0/pinv_8_0/A" 111.81
+cap "pdriver_1_0/pinv_7_0/A" "clk_buf" 57.4426
+cap "clk_buf" "pdriver_1_0/pinv_9_0/A" 78.6342
+cap "pand2_0_1/pdriver_0_0/pinv_4_0/pmos_m11_w1_375_sli_dli_da_p_0/G" "pdriver_1_0/pinv_8_0/A" 0.974576
+cap "pand2_0_1/pdriver_0_0/pinv_4_0/pmos_m11_w1_375_sli_dli_da_p_0/G" "pdriver_1_0/pinv_7_0/A" 0.324859
+cap "pdriver_1_0/pinv_9_0/nmos_m14_w0_480_sli_dli_da_p_0/S_uq6" "clk_buf" 502.7
+cap "pand2_0_1/pdriver_0_0/pinv_4_0/pmos_m11_w1_375_sli_dli_da_p_0/G" "pdriver_1_0/pinv_8_0/A" 0.974576
+cap "pdriver_1_0/pinv_9_0/A" "clk_buf" 185.559
+cap "pdriver_1_0/pinv_9_0/Z" "clk_buf" 91.916
+cap "clk_buf" "pdriver_1_0/pinv_9_0/gnd" 516.069
+cap "clk_buf" "pdriver_1_0/pinv_9_0/nmos_m14_w0_480_sli_dli_da_p_0/G" 50.607
+cap "clk_buf" "pdriver_1_0/gnd" 512.727
+cap "clk_buf" "pdriver_1_0/pinv_10_0/A" 134.952
+cap "clk_buf" "pdriver_1_0/pinv_10_0/nmos_m40_w0_495_sli_dli_da_p_0/D" 65.1768
+cap "clk_buf" "pdriver_1_0/pinv_9_0/nmos_m14_w0_480_sli_dli_da_p_0/D" -60.0616
+cap "pdriver_1_0/pinv_10_0/gnd" "pdriver_1_0/Z" 339.824
+cap "pdriver_1_0/pinv_10_0/nmos_m40_w0_495_sli_dli_da_p_0/G" "pdriver_1_0/Z" 246.294
+cap "clk_buf" "pdriver_1_0/pinv_10_0/gnd" -202.866
+cap "clk_buf" "pdriver_1_0/pinv_10_0/nmos_m40_w0_495_sli_dli_da_p_0/G" -218.845
+subcap "m2_2666_1466#" -2653.48
+cap "dff_buf_array_0/dff_buf_0_0/pinv_3_0/gnd" "li_3712_5472#" -26.62
+cap "li_3712_5472#" "dff_buf_array_0/clk" -58.08
+cap "li_3712_5472#" "dff_buf_array_0/dout_1" -8.88178e-16
+cap "dff_buf_array_0/dout_1" "dff_buf_array_0/dout_bar_1" 31.5524
+subcap "m2_2666_1466#" -1676.97
+subcap "clk" -242.105
+subcap "clk_buf" -8078.44
+subcap "li_3860_2911#" -3477.47
+cap "pinv_1_0/Z" "pand2_0_0/pdriver_0_0/A" 0.126027
+cap "pinv_1_0/vdd" "pinv_1_0/Z" 16.3203
+cap "pinv_1_0/Z" "pand2_0_1/B" 29.0405
+cap "pinv_1_0/vdd" "pand2_0_1/B" 5.562
+cap "li_3712_5472#" "pinv_1_0/gnd" 11.56
 cap "pinv_1_0/gnd" "pinv_1_0/A" -1.77636e-15
-cap "pdriver_1_0/pinv_7_0/A" "pand2_0_1/B" 3.89583
-cap "li_3550_5472#" "pinv_1_0/Z" 64.7824
-cap "pand2_0_1/B" "pinv_1_0/vdd" 60.7865
-cap "pand2_0_1/B" "pinv_1_0/gnd" 2.42492
-cap "pinv_1_0/A" "li_3550_5472#" 26.04
-cap "pinv_1_0/A" "clk" 13.8
-cap "pinv_1_0/A" "pinv_1_0/Z" 17.7503
-cap "pand2_0_1/B" "li_3550_5472#" 69.0624
-cap "li_3550_5472#" "pinv_1_0/vdd" 180.33
-cap "dff_buf_array_0/clk" "li_3550_5472#" 34.5
-cap "pinv_1_0/gnd" "li_3550_5472#" 11.56
-cap "pdriver_1_0/pinv_0_0/A" "pinv_1_0/Z" 17.6958
-cap "pand2_0_1/Z" "pand2_0_1/B" 213.725
-cap "pand2_0_0/pdriver_0_0/A" "pand2_0_1/B" 81.8487
-cap "pand2_0_0/Z" "pand2_0_1/B" 5.77285
-cap "pdriver_1_0/pinv_8_0/A" "pand2_0_1/B" 69
-cap "pdriver_1_0/pinv_7_0/A" "pand2_0_1/B" 5.28433
-cap "pand2_0_1/A" "pand2_0_1/B" 4.40337
-cap "pand2_0_1/Z" "pdriver_1_0/pinv_8_0/A" 0.77
-cap "pand2_0_1/Z" "pand2_0_0/Z" 88.3654
-cap "pinv_1_0/vdd" "pand2_0_1/Z" 139.769
-cap "pand2_0_1/Z" "pdriver_1_0/pinv_9_0/A" 10.78
-subcap "li_3698_3035#" -1773.57
-subcap "li_3598_3883#" -2174.32
-subcap "li_3598_4463#" -3171.48
-cap "pnand2_1_0/A" "pand2_0_0/A" 19.32
-cap "pand2_1_0/pdriver_3_0/pinv_13_0/pmos_m21_w1_440_sli_dli_da_p_0/D" "pand2_0_0/pdriver_0_0/pinv_4_0/pmos_m11_w1_375_sli_dli_da_p_0/D" 3.5283
-cap "pand2_1_0/pdriver_3_0/pinv_13_0/vdd" "pand2_1_0/B" 2.4388
-cap "pand2_1_0/pdriver_3_0/pinv_13_0/vdd" "pand2_0_0/B" 2.4388
-cap "pand2_1_0/pdriver_3_0/pinv_13_0/vdd" "pand2_0_0/vdd" -20.3796
-cap "pand2_1_0/A" "pand2_1_0/B" 16.915
-cap "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/D" "pdriver_4_0/pinv_7_0/nmos_m2_w0_420_sli_dli_da_p_0/G" 2.4823
-cap "pand2_1_0/pdriver_3_0/pinv_13_0/vdd" "pnand2_1_0/A" 0.1482
-cap "pand2_1_0/B" "pnand2_1_0/nmos_m1_w0_840_sactive_dli_0/D" 2.75
-cap "pand2_1_0/A" "pnand2_1_0/A" 6.05263
-cap "pand2_1_0/B" "pand2_0_0/vdd" 12.963
-cap "pand2_1_0/B" "pand2_0_0/B" 45.2958
-cap "pand2_0_0/B" "pand2_0_0/vdd" 12.963
-cap "pand2_0_1/pnand2_0_0/nmos_m1_w0_840_sli_dactive_0/G" "pand2_0_0/B" 0.850685
+cap "li_3712_5472#" "pinv_1_0/Z" 42.2144
+cap "pinv_1_0/vdd" "li_3712_5472#" 132.513
+cap "pinv_1_0/Z" "pinv_1_0/A" 16.3009
+cap "pinv_1_0/Z" "pdriver_1_0/pinv_0_0/A" 5.73583
+cap "pand2_0_1/B" "pinv_1_0/A" 49.529
+cap "pand2_0_1/pdriver_0_0/A" "pinv_1_0/gnd" 1.15
+cap "li_3712_5472#" "pinv_1_0/A" 26.04
+cap "clk" "pinv_1_0/A" 13.8
+cap "pinv_1_0/Z" "pand2_0_1/pdriver_0_0/A" 11.6953
+cap "dff_buf_array_0/dout_1" "dff_buf_array_0/dff_buf_0_0/pinv_3_0/A" -55.9478
+cap "li_3712_5472#" "dff_buf_array_0/clk" 34.5
+cap "pinv_1_0/Z" "pinv_1_0/gnd" 51.5997
+subcap "li_3844_2120#" -231.712
+subcap "li_3860_2911#" -2709.79
+cap "pand2_0_0/Z" "pand2_0_1/pdriver_0_0/A" 10.0771
+cap "pand2_0_1/Z" "pinv_1_0/vdd" 437.937
+cap "pdriver_1_0/pinv_0_0/A" "pinv_1_0/Z" 11.96
+cap "pand2_0_0/pdriver_0_0/A" "pand2_0_1/B" 7.65402
+cap "pand2_0_1/B" "pinv_1_0/vdd" 1.2292
+cap "pand2_0_1/Z" "pinv_1_0/Z" -488.707
+cap "pand2_0_1/Z" "pand2_0_1/pdriver_0_0/A" 260.468
+cap "pinv_1_0/gnd" "pand2_0_1/pdriver_0_0/A" 1.15
+cap "pand2_0_1/B" "pinv_1_0/Z" -246.992
+cap "pdriver_1_0/pinv_8_0/A" "pand2_0_1/pdriver_0_0/A" 13.0495
+cap "pdriver_1_0/pinv_7_0/A" "pand2_0_1/pdriver_0_0/A" 23.2308
+cap "pinv_1_0/Z" "pinv_1_0/nmos_m1_w0_420_sli_dli_da_p_0/G" 11.231
+cap "pand2_0_1/Z" "pand2_0_0/Z" 86.655
+cap "pand2_0_0/pdriver_0_0/A" "pinv_1_0/Z" 10.2046
+cap "pand2_0_0/pdriver_0_0/A" "pand2_0_1/pdriver_0_0/A" 73.5955
+cap "pand2_0_1/Z" "pdriver_1_0/pinv_9_0/A" 0.44
+cap "pinv_1_0/Z" "pand2_0_1/pdriver_0_0/A" 11.6953
+cap "pand2_0_1/Z" "pand2_0_1/B" 26.04
+cap "pand2_0_1/Z" "pdriver_1_0/pinv_8_0/A" 2.64
+subcap "li_3860_2911#" -2675.02
+subcap "li_3760_3883#" -2185.67
+subcap "li_3760_4463#" -3279.4
+cap "pand2_0_1/pnand2_0_0/nmos_m1_w0_840_sli_dactive_0/G" "pand2_0_0/pdriver_0_0/A" 0.126027
+cap "pand2_1_0/pdriver_3_0/A" "pnand2_1_0/nmos_m1_w0_840_sactive_dli_0/D" 2.75
+cap "pnand2_1_0/A" "pand2_0_0/A" 19.284
+cap "pand2_1_0/pdriver_3_0/pinv_13_0/vdd" "pand2_0_0/B" 3.4138
+cap "pand2_0_0/pdriver_0_0/pinv_4_0/pmos_m11_w1_375_sli_dli_da_p_0/S_uq2" "pand2_1_0/pdriver_3_0/pinv_13_0/vdd" -15.2847
+cap "pand2_1_0/B" "pand2_0_0/B" 13.8
+cap "pand2_1_0/A" "pand2_1_0/B" 19.805
+cap "pand2_1_0/B" "pand2_1_0/pdriver_3_0/pinv_13_0/vdd" 3.4138
+cap "pand2_0_0/pdriver_0_0/A" "pnand2_1_0/A" 84.6977
+cap "pand2_0_0/B" "pand2_0_0/A" 19.805
 cap "pand2_1_0/A" "pand2_0_0/A" 13.8
 cap "pand2_1_0/B" "pnand2_1_0/nmos_m1_w0_840_sactive_dli_0/G" 6.05263
-cap "pnand2_1_0/A" "pand2_0_0/B" 141.137
-cap "pand2_1_0/B" "pdriver_4_0/pinv_0_0/nmos_m1_w0_420_sli_dli_da_p_0/G" 2.44588
-cap "pand2_0_0/B" "pand2_0_0/A" 16.915
-subcap "w_en" -2305.49
-cap "pand2_1_0/pdriver_3_0/A" "pand2_0_0/pdriver_0_0/A" 124.2
-cap "pand2_0_0/Z" "pand2_1_0/Z" 17.2264
-cap "pdriver_4_0/pinv_14_0/nmos_m6_w0_490_sli_dli_da_p_0/G" "pand2_1_0/Z" 3.98883
-cap "pand2_0_0/Z" "pand2_0_0/vdd" 0.3092
-cap "pdriver_4_0/pinv_7_0/nmos_m2_w0_420_sli_dli_da_p_0/G" "pand2_1_0/pdriver_3_0/A" 12.6933
-cap "pand2_1_0/Z" "pand2_0_0/vdd" -5.72875e-14
-cap "pand2_1_0/Z" "pdriver_4_0/pinv_14_0/nmos_m6_w0_490_sli_dli_da_p_0/D" 28.4633
-cap "pdriver_4_0/pinv_14_0/nmos_m6_w0_490_sli_dli_da_p_0/G" "pand2_1_0/pdriver_3_0/A" 35.5555
-subcap "p_en_bar" -2502.01
-cap "pdriver_4_0/pinv_15_0/nmos_m18_w0_490_sli_dli_da_p_0/D" "pand2_1_0/Z" 23.5048
-cap "pdriver_4_0/pinv_15_0/nmos_m18_w0_490_sli_dli_da_p_0/G" "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/G" 20.3874
-subcap "p_en_bar" -1908.95
-subcap "li_3598_3883#" -3017.4
-subcap "li_3598_4463#" -2485.44
-subcap "li_3550_5472#" -3341.27
-cap "pdriver_4_0/pinv_7_0/A" "pnand2_1_0/Z" 145.544
-cap "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/D" "pdriver_4_0/pinv_7_0/A" 2.4823
-cap "pand2_1_0/pdriver_3_0/A" "pnand2_1_0/Z" 5.92603
-cap "pdriver_4_0/pinv_7_0/A" "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/S_uq7" 10.0704
-cap "pnand2_1_0/Z" "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/S_uq7" 3.64977
-cap "pand2_1_0/A" "pnand2_1_0/A" 13.8
-cap "pdriver_2_0/pinv_0_0/A" "pnand2_1_0/Z" 3.89583
-cap "pdriver_2_0/A" "pnand2_1_0/A" 13.8
-cap "pnand2_1_0/A" "pnand2_1_0/Z" 4.27606
-cap "pnand2_1_0/Z" "pand2_1_0/pnand2_0_0/nmos_m1_w0_840_sactive_dli_0/G" 13.8
-cap "pdriver_4_0/pinv_7_0/A" "pnand2_1_0/vdd" 6.87066
-cap "pnand2_1_0/vdd" "pnand2_1_0/Z" 87.8492
-subcap "w_en" -3253.84
-subcap "li_3833_4734#" -492.672
-subcap "wl_en" -2442.9
-cap "pdriver_4_0/pinv_15_0/A" "pand2_1_0/Z" 28.4633
-cap "pdriver_4_0/pinv_14_0/A" "pand2_1_0/Z" 3.98883
-cap "pdriver_2_0/pinv_11_0/A" "pdriver_4_0/pinv_7_0/A" 21.7993
-cap "pdriver_2_0/pinv_12_0/A" "pdriver_4_0/pinv_14_0/A" 57.2923
-cap "pdriver_4_0/pinv_14_0/A" "pand2_1_0/pdriver_3_0/A" 58.862
-cap "pdriver_4_0/pinv_7_0/A" "pnand2_1_0/Z" 1.97535
-cap "pdriver_4_0/pinv_7_0/A" "pand2_1_0/pdriver_3_0/A" 24.5687
-subcap "p_en_bar" -1873.19
-subcap "wl_en" -2064.96
-cap "pdriver_4_0/pinv_15_0/A" "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/G" 28.4919
-cap "pdriver_4_0/pinv_15_0/A" "pdriver_2_0/pinv_12_0/pmos_m10_w1_385_sli_dli_da_p_0/G" 19.6931
-cap "pand2_1_0/Z" "pdriver_4_0/Z" 23.5048
-subcap "p_en_bar" -1516.03
-subcap "li_3550_5472#" -4222.86
-subcap "wl_en" -2342.98
-subcap "wl_en" -2431.09
-merge "pdriver_4_0/vdd" "pdriver_2_0/pinv_12_0/vdd" -1607.73 0 0 0 0 -158659 -4290 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -63070 -4138 0 0 0 0 0 0 0 0 0 0 0 0
-merge "pdriver_2_0/pinv_12_0/vdd" "pdriver_2_0/vdd"
-merge "pdriver_2_0/vdd" "pnand2_1_0/pmos_m1_w1_260_sli_dli_0/D"
-merge "contact_17_16/gnd" "contact_13_16/gnd" -7066.45 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 233527 -10076 -5432 -416 -11858 -8008 -299628 -11604 0 0 0 0 0 0
+cap "pnand2_1_0/A" "pand2_0_0/B" 41.3066
+cap "pand2_1_0/A" "pnand2_1_0/A" 6.05263
+cap "pand2_1_0/pdriver_3_0/pinv_13_0/vdd" "pnand2_1_0/A" 0.039
+cap "pand2_1_0/pdriver_3_0/A" "pand2_0_0/pdriver_0_0/A" 3.89583
+subcap "li_3860_2911#" -3824.94
+subcap "w_en" -2546.77
+subcap "li_3760_3883#" -3757.27
+subcap "li_3760_4463#" -604.842
+cap "pand2_1_0/Z" "pand2_0_0/Z" 20.7547
+cap "pdriver_4_0/pinv_14_0/nmos_m6_w0_490_sli_dli_da_p_0/D" "pand2_1_0/Z" 23.1084
+cap "pand2_0_0/pdriver_0_0/A" "pand2_1_0/pdriver_3_0/A" 151.8
+cap "pdriver_4_0/pinv_0_0/nmos_m1_w0_420_sli_dli_da_p_0/G" "pand2_1_0/pdriver_3_0/A" 3.65002
+cap "pand2_0_0/pdriver_0_0/A" "pand2_0_0/Z" -914.306
+cap "pand2_0_0/vdd" "pand2_1_0/Z" 0.0247
+cap "pand2_0_0/pdriver_0_0/A" "pand2_0_1/pnand2_0_0/nmos_m1_w0_840_sli_dactive_0/G" 0.189041
+cap "pdriver_4_0/pinv_7_0/nmos_m2_w0_420_sli_dli_da_p_0/G" "pand2_1_0/pdriver_3_0/A" 8.76909
+cap "pand2_1_0/pdriver_3_0/A" "pdriver_4_0/pinv_14_0/nmos_m6_w0_490_sli_dli_da_p_0/G" 22.4178
+cap "pdriver_4_0/pinv_7_0/nmos_m2_w0_420_sli_dli_da_p_0/G" "pand2_1_0/Z" 2.4823
+cap "pand2_1_0/Z" "pdriver_4_0/pinv_14_0/nmos_m6_w0_490_sli_dli_da_p_0/G" 2.94585
+cap "pand2_0_0/vdd" "pand2_0_0/Z" 0.4552
+subcap "w_en" -2155.43
+subcap "p_en_bar" -2380.42
+cap "pdriver_4_0/pinv_15_0/nmos_m18_w0_490_sli_dli_da_p_0/G" "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/G" 28.7388
+cap "pdriver_4_0/pinv_15_0/nmos_m18_w0_490_sli_dli_da_p_0/D" "pand2_1_0/Z" 20.1354
+cap "pdriver_4_0/pinv_15_0/nmos_m18_w0_490_sli_dli_da_p_0/G" "pand2_1_0/Z" 3.59691
+cap "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/G" "pdriver_4_0/pinv_14_0/nmos_m6_w0_490_sli_dli_da_p_0/G" 5.11146
+subcap "p_en_bar" -2685.18
+subcap "li_3760_3883#" -3086.59
+subcap "li_3760_4463#" -2388.24
+subcap "li_3995_4734#" -44.7243
+subcap "li_3712_5472#" -3939.46
+cap "pnand2_1_0/A" "pnand2_1_0/Z" 2.04032
+cap "pnand2_1_0/Z" "pdriver_2_0/pinv_0_0/A" 3.89583
+cap "pnand2_1_0/vdd" "pdriver_4_0/pinv_0_0/Z" 3.26048
+cap "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/S_uq7" "pdriver_4_0/pinv_0_0/Z" 4.66304
+cap "pnand2_1_0/Z" "pdriver_4_0/pinv_0_0/Z" 29.8355
+cap "pnand2_1_0/A" "pand2_1_0/A" 13.8
+cap "pnand2_1_0/A" "pand2_1_0/B" 13.8
+cap "pnand2_1_0/Z" "pnand2_1_0/B" 17.3683
+cap "pand2_1_0/B" "pand2_1_0/A" 1.13687e-13
+cap "pnand2_1_0/B" "pand2_1_0/B" 13.8
+cap "pnand2_1_0/B" "pdriver_4_0/pinv_0_0/Z" 2.95924
+cap "pnand2_1_0/Z" "pnand2_1_0/vdd" 5.35911
+cap "pand2_1_0/pdriver_3_0/A" "pnand2_1_0/Z" 2.75
+cap "pnand2_1_0/Z" "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/S_uq7" 1.69231
+subcap "w_en" -3241.65
+subcap "li_3760_3883#" -1003.35
+subcap "li_3760_4463#" -4026.62
+subcap "wl_en" -2754.91
+cap "pdriver_4_0/pinv_14_0/Z" "pand2_1_0/Z" 23.1084
+cap "pdriver_4_0/pinv_7_0/A" "pand2_1_0/gnd" 4.66304
+cap "pdriver_4_0/pinv_14_0/A" "pand2_1_0/Z" 2.94585
+cap "pnand2_1_0/B" "pnand2_1_0/Z" 17.3683
+cap "pdriver_4_0/pinv_7_0/A" "pdriver_2_0/pinv_11_0/A" 21.7993
+cap "pdriver_4_0/pinv_7_0/A" "pand2_1_0/Z" 2.4823
+cap "pnand2_1_0/Z" "pnand2_1_0/A" 2.04032
+cap "pdriver_4_0/pinv_7_0/A" "pnand2_1_0/Z" 112.565
+cap "pdriver_2_0/pinv_12_0/A" "pdriver_4_0/pinv_14_0/A" 45.3022
+cap "pnand2_1_0/B" "pdriver_4_0/pinv_7_0/A" 2.95924
+cap "pand2_1_0/pdriver_3_0/A" "pdriver_4_0/pinv_14_0/A" 30.3927
+cap "pand2_1_0/pdriver_3_0/A" "pnand2_1_0/Z" 6.93944
+cap "pnand2_1_0/Z" "pnand2_1_0/vdd" 62.9837
+cap "pand2_1_0/gnd" "pnand2_1_0/Z" 1.69231
+cap "pand2_1_0/pdriver_3_0/A" "pdriver_4_0/pinv_7_0/A" 13.3263
+cap "pdriver_4_0/pinv_7_0/A" "pnand2_1_0/vdd" 3.26048
+subcap "w_en" -2635.55
+subcap "p_en_bar" -2093.38
+subcap "wl_en" -2103.93
+cap "pdriver_2_0/pinv_12_0/A" "pdriver_4_0/pinv_14_0/pmos_m6_w1_470_sli_dli_da_p_0/G" 11.9901
+cap "pand2_1_0/Z" "pdriver_4_0/pinv_15_0/A" 3.59691
+cap "pdriver_4_0/pinv_14_0/nmos_m6_w0_490_sli_dli_da_p_0/G" "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/G" 6.89479
+cap "pdriver_2_0/Z" "pdriver_2_0/pinv_12_0/vdd" 0.0741
+cap "pand2_1_0/Z" "pdriver_4_0/Z" 20.1354
+cap "pdriver_4_0/pinv_15_0/A" "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/G" 54.7946
+cap "pdriver_2_0/pinv_12_0/A" "pdriver_4_0/pinv_15_0/A" 7.12601
+subcap "p_en_bar" -1305.58
+subcap "li_3712_5472#" -4334.04
+subcap "wl_en" -2442.64
+subcap "wl_en" -2505.74
+merge "pdriver_4_0/vdd" "pdriver_2_0/pinv_12_0/vdd" -808.406 0 0 0 0 -104652 -1950 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -29988 -1798 0 0 0 0 0 0 0 0 0 0 0 0
+merge "contact_17_16/gnd" "contact_13_16/gnd" -6595.69 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 287058 -10144 0 0 -91112 -6454 -297444 -11456 0 0 0 0 0 0
 merge "contact_13_16/gnd" "contact_13_17/gnd"
-merge "contact_13_17/gnd" "pdriver_2_0/gnd"
-merge "pdriver_2_0/gnd" "contact_17_17/gnd"
-merge "contact_17_17/gnd" "contact_13_11/gnd"
-merge "contact_13_11/gnd" "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/S"
-merge "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/S" "contact_17_11/gnd"
-merge "contact_17_11/gnd" "contact_13_13/gnd"
+merge "contact_13_17/gnd" "contact_17_17/gnd"
+merge "contact_17_17/gnd" "pdriver_2_0/gnd"
+merge "pdriver_2_0/gnd" "pdriver_4_0/pinv_15_0/gnd"
+merge "pdriver_4_0/pinv_15_0/gnd" "contact_13_11/gnd"
+merge "contact_13_11/gnd" "pand2_1_0/pdriver_3_0/gnd"
+merge "pand2_1_0/pdriver_3_0/gnd" "contact_17_11/gnd"
+merge "contact_17_11/gnd" "pdriver_4_0/pinv_14_0/gnd"
+merge "pdriver_4_0/pinv_14_0/gnd" "contact_13_13/gnd"
 merge "contact_13_13/gnd" "contact_17_13/gnd"
 merge "contact_17_13/gnd" "pdriver_4_0/gnd"
-merge "pdriver_4_0/gnd" "pdriver_4_0/pinv_7_0/gnd"
-merge "pdriver_4_0/pinv_7_0/gnd" "pnand2_1_0/gnd"
+merge "pdriver_4_0/gnd" "pdriver_4_0/pinv_0_0/gnd"
+merge "pdriver_4_0/pinv_0_0/gnd" "pnand2_1_0/gnd"
 merge "pnand2_1_0/gnd" "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/S_uq7"
-merge "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/S_uq7" "contact_13_15/gnd"
-merge "contact_13_15/gnd" "contact_13_14/gnd"
-merge "contact_13_14/gnd" "contact_13_12/gnd"
+merge "pand2_1_0/pdriver_3_0/pinv_13_0/nmos_m21_w0_480_sli_dli_da_p_0/S_uq7" "contact_17_15/gnd"
+merge "contact_17_15/gnd" "contact_13_15/gnd"
+merge "contact_13_15/gnd" "contact_17_14/gnd"
+merge "contact_17_14/gnd" "contact_13_14/gnd"
+merge "contact_13_14/gnd" "contact_17_12/gnd"
+merge "contact_17_12/gnd" "contact_13_12/gnd"
 merge "contact_13_12/gnd" "pand2_1_0/gnd"
 merge "pand2_1_0/gnd" "contact_17_18/gnd"
-merge "contact_17_18/gnd" "contact_17_15/gnd"
-merge "contact_17_15/gnd" "contact_17_14/gnd"
-merge "contact_17_14/gnd" "contact_17_12/gnd"
-merge "contact_17_12/gnd" "contact_17_19/gnd"
+merge "contact_17_18/gnd" "contact_17_19/gnd"
 merge "contact_17_19/gnd" "contact_13_1/gnd"
 merge "contact_13_1/gnd" "contact_17_1/gnd"
 merge "contact_17_1/gnd" "contact_18_0/gnd"
@@ -292,8 +336,10 @@ merge "contact_13_0/gnd" "contact_17_0/gnd"
 merge "contact_17_0/gnd" "contact_29_2/gnd"
 merge "contact_29_2/gnd" "contact_13_4/gnd"
 merge "contact_13_4/gnd" "contact_17_4/gnd"
-merge "contact_17_4/gnd" "pand2_0_0/gnd"
-merge "pand2_0_0/gnd" "pand2_0_0/A"
+merge "contact_17_4/gnd" "pinv_1_0/nmos_m1_w0_420_sli_dli_da_p_0/G"
+merge "pinv_1_0/nmos_m1_w0_420_sli_dli_da_p_0/G" "pand2_0_0/gnd"
+merge "pand2_0_0/gnd" "pand2_0_0/pdriver_0_0/pinv_4_0/nmos_m11_w0_460_sli_dli_da_p_0/S_uq2"
+merge "pand2_0_0/pdriver_0_0/pinv_4_0/nmos_m11_w0_460_sli_dli_da_p_0/S_uq2" "pand2_0_0/A"
 merge "pand2_0_0/A" "contact_13_3/gnd"
 merge "contact_13_3/gnd" "contact_13_2/gnd"
 merge "contact_13_2/gnd" "contact_17_3/gnd"
@@ -307,8 +353,8 @@ merge "contact_17_5/gnd" "contact_18_1/gnd"
 merge "contact_18_1/gnd" "contact_13_7/gnd"
 merge "contact_13_7/gnd" "contact_17_7/gnd"
 merge "contact_17_7/gnd" "contact_29_3/gnd"
-merge "contact_29_3/gnd" "pand2_0_1/pdriver_0_0/pinv_4_0/nmos_m11_w0_460_sli_dli_da_p_0/S_uq3"
-merge "pand2_0_1/pdriver_0_0/pinv_4_0/nmos_m11_w0_460_sli_dli_da_p_0/S_uq3" "pinv_1_0/A"
+merge "contact_29_3/gnd" "pand2_0_1/pdriver_0_0/pinv_4_0/nmos_m11_w0_460_sli_dli_da_p_0/S_uq4"
+merge "pand2_0_1/pdriver_0_0/pinv_4_0/nmos_m11_w0_460_sli_dli_da_p_0/S_uq4" "pinv_1_0/A"
 merge "pinv_1_0/A" "contact_29_0/gnd"
 merge "contact_29_0/gnd" "contact_29_1/gnd"
 merge "contact_29_1/gnd" "pdriver_1_0/Z"
@@ -323,10 +369,10 @@ merge "contact_29_4/gnd" "contact_17_10/gnd"
 merge "contact_17_10/gnd" "contact_13_10/gnd"
 merge "contact_13_10/gnd" "contact_29_6/gnd"
 merge "contact_29_6/gnd" "contact_29_7/gnd"
-merge "contact_29_7/gnd" "pand2_0_1/gnd"
+merge "contact_29_7/gnd" "contact_29_8/gnd"
+merge "contact_29_8/gnd" "pand2_0_1/gnd"
 merge "pand2_0_1/gnd" "pinv_1_0/gnd"
-merge "pinv_1_0/gnd" "contact_29_8/gnd"
-merge "contact_29_8/gnd" "contact_29_9/gnd"
+merge "pinv_1_0/gnd" "contact_29_9/gnd"
 merge "contact_29_9/gnd" "contact_18_3/gnd"
 merge "contact_18_3/gnd" "contact_18_4/gnd"
 merge "contact_18_4/gnd" "contact_18_5/gnd"
@@ -337,43 +383,48 @@ merge "dff_buf_array_0/vdd" "gnd_uq0"
 merge "gnd_uq0" "vdd"
 merge "vdd" "gnd"
 merge "gnd" "clk_buf"
-merge "pdriver_2_0/A" "pand2_1_0/B" -441.799 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1700 -408 30144 0 628676 0 0 0 0 0 0 0 0 0
+merge "pdriver_2_0/pinv_0_1/nmos_m1_w0_420_sli_dli_da_p_0/G" "pdriver_2_0/A" -618.067 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -62624 -408 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pdriver_2_0/A" "pand2_1_0/B"
 merge "pand2_1_0/B" "pand2_0_1/Z"
-merge "pand2_0_1/Z" "li_3550_5472#"
-merge "pand2_0_1/A" "pinv_1_0/Z" -71.6082 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2856 -270 0 0 0 0 0 0 0 0 0 0 0 0
-merge "pinv_1_0/Z" "li_3682_2120#"
-merge "pdriver_4_0/pinv_7_0/vdd" "pdriver_2_0/pinv_11_0/vdd" -724.866 0 0 0 0 -113472 -2612 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -22032 -1398 0 0 0 0 0 0 0 0 0 0 0 0
-merge "pdriver_2_0/pinv_11_0/vdd" "pnand2_1_0/vdd"
-merge "pand2_0_1/pdriver_0_0/pinv_4_0/pmos_m11_w1_375_sli_dli_da_p_0/S_uq3" "pand2_0_1/pdriver_0_0/pinv_4_0/pmos_m11_w1_375_sli_dli_da_p_0/S" -1323 0 0 0 0 -208548 -5822 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 497421 -4456 0 0 0 0 0 0 0 0 0 0 0 0
-merge "pand2_0_1/pdriver_0_0/pinv_4_0/pmos_m11_w1_375_sli_dli_da_p_0/S" "pdriver_1_0/pinv_10_0/pmos_m40_w1_480_sli_dli_da_p_0/S_uq19"
-merge "pdriver_1_0/pinv_10_0/pmos_m40_w1_480_sli_dli_da_p_0/S_uq19" "pdriver_1_0/pinv_9_0/pmos_m14_w1_440_sli_dli_da_p_0/S_uq5"
-merge "pdriver_1_0/pinv_9_0/pmos_m14_w1_440_sli_dli_da_p_0/S_uq5" "pand2_0_1/vdd"
-merge "pand2_0_1/vdd" "pdriver_1_0/pinv_7_0/vdd"
-merge "pdriver_1_0/pinv_7_0/vdd" "pand2_0_1/pnand2_0_0/vdd"
+merge "pand2_0_1/Z" "li_3712_5472#"
+merge "pand2_0_1/A" "pinv_1_0/Z" -67.7713 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7004 -270 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pinv_1_0/Z" "li_3844_2120#"
+merge "pand2_0_1/pdriver_0_0/pinv_4_0/pmos_m11_w1_375_sli_dli_da_p_0/S_uq4" "pand2_0_1/pdriver_0_0/pinv_4_0/pmos_m11_w1_375_sli_dli_da_p_0/S" -1618.11 0 0 0 0 -318578 -5890 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 554292 -4524 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pand2_0_1/pdriver_0_0/pinv_4_0/pmos_m11_w1_375_sli_dli_da_p_0/S" "pdriver_1_0/pinv_9_0/vdd"
+merge "pdriver_1_0/pinv_9_0/vdd" "pdriver_1_0/pinv_9_0/pmos_m14_w1_440_sli_dli_da_p_0/S_uq6"
+merge "pdriver_1_0/pinv_9_0/pmos_m14_w1_440_sli_dli_da_p_0/S_uq6" "pand2_0_1/vdd"
+merge "pand2_0_1/vdd" "pdriver_1_0/pinv_7_0/pmos_m2_w1_260_sli_dli_da_p_0/S"
+merge "pdriver_1_0/pinv_7_0/pmos_m2_w1_260_sli_dli_da_p_0/S" "pand2_0_1/pnand2_0_0/vdd"
 merge "pand2_0_1/pnand2_0_0/vdd" "pand2_0_1/pdriver_0_0/pinv_4_0/vdd"
 merge "pand2_0_1/pdriver_0_0/pinv_4_0/vdd" "pinv_1_0/vdd"
-merge "pdriver_4_0/Z" "pdriver_4_0/pinv_15_0/nmos_m18_w0_490_sli_dli_da_p_0/D" -1328.41 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23868 -136 0 0 443800 -7128 0 0 0 0 0 0 0 0
+merge "pdriver_4_0/Z" "pdriver_4_0/pinv_15_0/nmos_m18_w0_490_sli_dli_da_p_0/D" -875.438 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18603 -136 0 0 474712 -4920 0 0 0 0 0 0 0 0
 merge "pdriver_4_0/pinv_15_0/nmos_m18_w0_490_sli_dli_da_p_0/D" "p_en_bar"
-merge "pdriver_1_0/A" "clk" -209.317 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3128 -136 0 0 0 0 0 0 0 0 0 0 0 0
-merge "pand2_1_0/pdriver_3_0/pinv_13_0/pmos_m21_w1_440_sli_dli_da_p_0/S" "pand2_1_0/vdd" -1346.08 0 0 0 0 -113316 -2508 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -53380 -3686 0 0 0 0 0 0 0 0 0 0 0 0
-merge "pand2_1_0/vdd" "pand2_1_0/pdriver_3_0/pinv_13_0/vdd"
-merge "pand2_1_0/pdriver_3_0/pinv_13_0/vdd" "pand2_0_0/pdriver_0_0/pinv_4_0/vdd"
-merge "pand2_0_0/pdriver_0_0/pinv_4_0/vdd" "pand2_1_0/pdriver_3_0/pinv_13_0/pmos_m21_w1_440_sli_dli_da_p_0/S_uq7"
-merge "pand2_1_0/pdriver_3_0/pinv_13_0/pmos_m21_w1_440_sli_dli_da_p_0/S_uq7" "pand2_0_0/vdd"
-merge "pand2_0_0/B" "pand2_0_1/B" -2351.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16632 -272 -87750 0 -104740 -6564 -38472 -1328 0 0 0 0 0 0
-merge "pand2_0_1/B" "dff_buf_array_0/dout_bar_1"
-merge "dff_buf_array_0/dout_bar_1" "li_3698_3035#"
+merge "pdriver_1_0/pinv_0_1/pmos_m1_w1_260_sli_dli_da_p_0/G" "pdriver_1_0/pinv_0_1/nmos_m1_w0_420_sli_dli_da_p_0/G" -259.442 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -32568 -136 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pdriver_1_0/pinv_0_1/nmos_m1_w0_420_sli_dli_da_p_0/G" "pdriver_1_0/A"
+merge "pdriver_1_0/A" "clk"
+merge "pnand2_1_0/A" "pand2_0_0/Z" 253.578 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80274 -272 0 0 -9744 -724 0 0 0 0 0 0 0 0
+merge "pand2_0_0/Z" "li_3760_4463#"
+merge "pand2_1_0/vdd" "pand2_1_0/pdriver_3_0/pinv_13_0/vdd" -1216.94 0 0 0 0 -156864 -2866 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -45560 -2714 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pand2_1_0/pdriver_3_0/pinv_13_0/vdd" "pand2_0_0/vdd"
+merge "pand2_0_0/vdd" "pand2_0_0/pdriver_0_0/pinv_4_0/vdd"
 merge "dff_buf_array_0/din_0" "web" -34.2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1512 -164 0 0 0 0 0 0 0 0
+merge "pand2_0_0/pdriver_0_0/pinv_4_0/nmos_m11_w0_460_sli_dli_da_p_0/S_uq0" "pand2_0_1/pdriver_0_0/pinv_4_0/nmos_m11_w0_460_sli_dli_da_p_0/S" 3.441 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3720 0 0 0 0 0 0 0 0 0 0 0 0 0
 merge "dff_buf_array_0/din_1" "csb" -32.9315 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1620 -164 0 0 0 0 0 0 0 0
-merge "pnand2_1_0/A" "pand2_0_0/Z" -258.123 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11866 -272 -152896 0 687472 -756 47264 0 0 0 0 0 0 0
-merge "pand2_0_0/Z" "li_3598_4463#"
-merge "pdriver_4_0/A" "pnand2_1_0/Z" -125.598 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13152 -270 0 0 0 0 0 0 0 0 0 0 0 0
+merge "dff_buf_array_0/dout_1" "m2_2666_1466#" -1308.42 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -82662 -6556 0 0 0 0 0 0 0 0
+merge "pand2_0_0/B" "pand2_0_1/B" -2004.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -22474 -272 0 0 -82460 -6556 -45312 -1556 0 0 0 0 0 0
+merge "pand2_0_1/B" "dff_buf_array_0/dout_bar_1"
+merge "dff_buf_array_0/dout_bar_1" "li_3860_2911#"
+merge "pdriver_4_0/pinv_14_0/vdd" "pdriver_2_0/vdd" -1828.6 0 0 0 0 -254604 -5088 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -63512 -3874 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pdriver_2_0/vdd" "pdriver_4_0/pinv_0_0/vdd"
+merge "pdriver_4_0/pinv_0_0/vdd" "pdriver_2_0/pinv_11_0/pmos_m4_w1_260_sli_dli_da_p_0/S_uq1"
+merge "pdriver_2_0/pinv_11_0/pmos_m4_w1_260_sli_dli_da_p_0/S_uq1" "pnand2_1_0/vdd"
+merge "pdriver_4_0/A" "pnand2_1_0/Z" -92.4611 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -534 -270 0 0 0 0 0 0 0 0 0 0 0 0
 merge "pnand2_1_0/Z" "pdriver_4_0/pinv_0_0/nmos_m1_w0_420_sli_dli_da_p_0/G"
-merge "pdriver_4_0/pinv_0_0/nmos_m1_w0_420_sli_dli_da_p_0/G" "li_3833_4734#"
-merge "pand2_1_0/A" "dff_buf_array_0/dout_bar_0" -1326.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7038 -136 -142704 0 1302984 -6564 -26232 -920 0 0 0 0 0 0
-merge "dff_buf_array_0/dout_bar_0" "li_3598_3883#"
-merge "dff_buf_array_0/dout_1" "m2_2615_1407#" -1319.64 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -87683 -6564 0 0 0 0 0 0 0 0
-merge "pand2_1_0/Z" "w_en" -1478.81 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -98208 -136 0 0 355600 -7128 0 0 0 0 0 0 0 0
-merge "pdriver_2_0/Z" "wl_en" -1553.88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 952 -136 0 0 -36856 -7128 0 0 0 0 0 0 0 0
-merge "pand2_0_0/pdriver_0_0/pinv_4_0/gnd" "pand2_0_1/pdriver_0_0/pinv_4_0/nmos_m11_w0_460_sli_dli_da_p_0/S" -30.9986 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -33512 0 0 0 0 0 0 0 0 0 0 0 0 0
-merge "dff_buf_array_0/dout_0" "m2_2615_213#" -1926.23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -136580 -9364 0 0 0 0 0 0 0 0
+merge "pdriver_4_0/pinv_0_0/nmos_m1_w0_420_sli_dli_da_p_0/G" "li_3995_4734#"
+merge "pand2_1_0/pdriver_3_0/vdd" "pand2_0_0/pdriver_0_0/pinv_4_0/pmos_m11_w1_375_sli_dli_da_p_0/S_uq0" 10.095 0 0 0 0 2736 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2040 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pand2_1_0/pdriver_3_0/pinv_13_0/pmos_m21_w1_440_sli_dli_da_p_0/S_uq7" "pand2_0_0/pdriver_0_0/pinv_4_0/pmos_m11_w1_375_sli_dli_da_p_0/S_uq2" -276.65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16524 -1006 0 0 0 0 0 0 0 0 0 0 0 0
+merge "pand2_1_0/Z" "w_en" -1502.69 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19584 -136 0 0 347312 -7720 0 0 0 0 0 0 0 0
+merge "pand2_1_0/A" "dff_buf_array_0/dout_bar_0" -1948.34 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -63342 -136 0 0 -92368 -6556 -30192 -1052 0 0 0 0 0 0
+merge "dff_buf_array_0/dout_bar_0" "li_3760_3883#"
+merge "pdriver_2_0/Z" "wl_en" -1678.06 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 476 -136 0 0 -23688 -7720 0 0 0 0 0 0 0 0
+merge "dff_buf_array_0/dout_0" "m2_2666_136#" -1916.02 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -133936 -9356 0 0 0 0 0 0 0 0

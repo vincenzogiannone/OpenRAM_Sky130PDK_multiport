@@ -1,4 +1,4 @@
-timestamp 1643678852
+timestamp 1644951706
 version 8.3
 tech sky130A
 style ngspice()
@@ -11,22 +11,22 @@ use nmos_m18_w0_490_sli_dli_da_p nmos_m18_w0_490_sli_dli_da_p_0 1 0 54 0 1 51
 use pmos_m18_w1_470_sli_dli_da_p pmos_m18_w1_470_sli_dli_da_p_0 1 0 54 0 1 493
 node "Z" 152 268.425 1030 167 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14382 914 0 0 0 0 0 0 0 0 0 0 0 0
 node "A" 368 272.293 48 337 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11316 656 0 0 4356 264 0 0 0 0 0 0 0 0 0 0 0 0
-node "vdd" 9578 5748.96 -36 402 nw 0 0 0 0 1113687 5504 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 150790 8938 0 0 0 0 0 0 0 0 0 0 0 0
-substrate "gnd" 0 0 2094 51 pw 0 0 4100 264 0 0 0 0 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 95030 5658 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 9643 5783.45 -36 402 nw 0 0 0 0 1122068 5538 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 151368 8972 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 2094 51 pw 0 0 4100 264 0 0 0 0 0 0 4100 264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 95608 5692 0 0 0 0 0 0 0 0 0 0 0 0
+cap "vdd" "Z" 9.90214
 cap "A" "vdd" 5.5
-cap "Z" "vdd" 9.90214
-subcap "vdd" -3678.36
-cap "vdd" "Z" 149.277
-cap "vdd" "pmos_m18_w1_470_sli_dli_da_p_0/w_n59_63#" -35.631
-cap "Z" "gnd" 306.24
-cap "pmos_m18_w1_470_sli_dli_da_p_0/w_n59_63#" "Z" -3.4595
-cap "Z" "A" 24.3066
+subcap "vdd" -3712.85
 cap "gnd" "A" 1.34444
+cap "vdd" "Z" 149.277
+cap "pmos_m18_w1_470_sli_dli_da_p_0/w_n59_63#" "Z" -3.4595
+cap "A" "Z" 24.3066
+cap "gnd" "Z" 306.24
+cap "pmos_m18_w1_470_sli_dli_da_p_0/w_n59_63#" "vdd" -35.631
 subcap "Z" -89.7135
 subcap "gnd" -1068.01
-cap "gnd" "Z" 164.628
 cap "vdd" "Z" 71.9771
-cap "pmos_m18_w1_470_sli_dli_da_p_0/G" "nmos_m18_w0_490_sli_dli_da_p_0/G" 61.069
+cap "nmos_m18_w0_490_sli_dli_da_p_0/G" "pmos_m18_w1_470_sli_dli_da_p_0/G" 61.069
+cap "gnd" "Z" 164.628
 merge "pmos_m18_w1_470_sli_dli_da_p_0/G" "nmos_m18_w0_490_sli_dli_da_p_0/G" -33 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -120 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 merge "nmos_m18_w0_490_sli_dli_da_p_0/G" "A"
 merge "pmos_m18_w1_470_sli_dli_da_p_0/S_uq0" "pmos_m18_w1_470_sli_dli_da_p_0/S" -3580.26 0 0 0 0 -843468 -5012 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3828 -2000 0 0 0 0 0 0 0 0 0 0 0 0

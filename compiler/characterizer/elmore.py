@@ -80,8 +80,8 @@ class elmore(simulation):
             port = 0 #first read port
             self.graph.get_all_paths('{}'.format("clk"),
                                      '{}{}_{}'.format(self.dout_name, port, self.probe_data))
-            rbl_name = "read_bl_0_0"
-            rbl_path = [path for path in self.graph.all_paths if rbl_name in path][0]
+            rbl_name = self.get_bl_name_multiport(self.graph.all_paths)
+            rbl_path = [path for path in self.graph.all_paths if rbl_name[0] in path][0]
             port_data = self.get_empty_measure_data_dict()
             power = self.analytical_power(load_slews)
             debug.info(1, 'Slew, Load, Delay(ns), Slew(ns)')

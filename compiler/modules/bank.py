@@ -277,7 +277,7 @@ class bank(design.design):
         if OPTS.RF_mode == False:
             self.port_data_offsets[port] = vector(0, 0)
         else:
-            self.port_data_offsets = vector(0, -self.port_data_inst.height-self.m2_pitch)
+            self.port_data_offsets = vector(0, -self.port_data_inst.height-5*self.m2_pitch)
         # To the left of the bitcell array above the predecoders and control logic
         x_offset = self.m2_gap + self.port_address[-1].width
         self.port_address_offsets = vector(-x_offset,
@@ -986,7 +986,6 @@ class bank(design.design):
                     inst2_rbl_name.append("spare" + inst2.mod.get_rbl_names()[port] + "_{}".format(col))
                 for port in range(OPTS.num_w_ports):
                     inst2_wbl_name.append("spare" + inst2.mod.get_wbl_names()[port] + "_{}".format(col))
-
             self.connect_bitlines_multiport(inst1=inst1,
                                   inst2=inst2,
                                   inst1_rbl_name=inst1_rbl_name,

@@ -1,0 +1,36 @@
+timestamp 1644949024
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use contact_9 contact_9_0 1 0 532 0 1 85
+use contact_9 contact_9_1 1 0 428 0 1 85
+use contact_9 contact_9_2 1 0 320 0 1 85
+use contact_9 contact_9_3 1 0 212 0 1 85
+use contact_9 contact_9_4 1 0 104 0 1 85
+use contact_9 contact_9_5 1 0 0 0 1 85
+parameters sky130_fd_pr__pfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+node "S_uq0" 660 0 414 0 pdif 0 0 0 0 0 0 0 0 0 0 19656 660 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "S" 660 0 198 0 pdif 0 0 0 0 0 0 0 0 0 0 19656 660 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "D" 3286 0 90 0 pdif 0 0 0 0 0 0 0 0 0 0 54432 1944 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25908 1592 0 0 0 0 0 0 0 0 0 0 0 0
+node "S_uq1" 851 0 0 0 pdif 0 0 0 0 0 0 0 0 0 0 15120 624 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "G" 3184 470.999 60 -56 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 59460 4024 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_n59_42#" 3384 750.24 -59 42 nw 0 0 0 0 250080 2120 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "S_uq1" "S_uq0" 5.52792
+cap "G" "D" 71.988
+cap "S" "S_uq0" 11.967
+cap "D" "S_uq0" 146.41
+cap "S" "S_uq1" 12.236
+cap "D" "S_uq1" 38.7297
+cap "D" "S" 144.833
+device msubckt sky130_fd_pr__pfet_01v8 492 0 493 1 l=30 w=252 "w_n59_42#" "G" 60 0 "S_uq0" 252 0 "D" 252 0
+device msubckt sky130_fd_pr__pfet_01v8 384 0 385 1 l=30 w=252 "w_n59_42#" "G" 60 0 "D" 252 0 "S_uq0" 252 0
+device msubckt sky130_fd_pr__pfet_01v8 276 0 277 1 l=30 w=252 "w_n59_42#" "G" 60 0 "S" 252 0 "D" 252 0
+device msubckt sky130_fd_pr__pfet_01v8 168 0 169 1 l=30 w=252 "w_n59_42#" "G" 60 0 "D" 252 0 "S" 252 0
+device msubckt sky130_fd_pr__pfet_01v8 60 0 61 1 l=30 w=252 "w_n59_42#" "G" 60 0 "S_uq1" 252 0 "D" 252 0
+merge "contact_9_4/gnd" "contact_9_3/gnd" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "contact_9_3/gnd" "contact_9_2/gnd"
+merge "contact_9_2/gnd" "contact_9_1/gnd"
+merge "contact_9_1/gnd" "gnd"

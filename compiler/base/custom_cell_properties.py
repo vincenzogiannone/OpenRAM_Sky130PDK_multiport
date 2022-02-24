@@ -182,7 +182,7 @@ class cell_properties():
         self.names["row_cap_bitcell_2rw"] = "row_cap_cell_2rw"
         self.names["row_cap_bitcell_2r1w"] = "row_cap_cell_2r1w"
         self.use_strap = False
-        self._ptx = _ptx(model_is_subckt=False,
+        self._ptx = _ptx(model_is_subckt=True,
                          bin_spice_models=False)
 
         self._pgate = _pgate(add_implants=False)
