@@ -57,7 +57,7 @@ class precharge_array_multiport(design.design):
         for i in range(self.columns-1):
             # These are outputs from the precharge only
             for port in range(OPTS.num_r_ports):
-                self.add_pin("rbl{0}_{1}".format(port, i))      
+                self.add_pin("rbl{0}_{1}".format(port, i))
         self.add_pin("en_bar", "INPUT")
         self.add_pin("vdd", "POWER")
 
@@ -109,8 +109,7 @@ class precharge_array_multiport(design.design):
     def create_insts(self):
         """Creates a precharge array by horizontally tiling the precharge cell"""
         self.local_insts = []
-        
-        for i in range(self.columns):
+        for i in range(self.columns-1):
             name = "pre_column_{0}".format(i)
             offset = vector(self.pc_cell.width * i, 0)
             inst = self.add_inst(name=name,
@@ -123,8 +122,7 @@ class precharge_array_multiport(design.design):
         """ Places precharge array by horizontally tiling the precharge cell"""
         # Default to single spaced columns
         if not self.offsets:
-            self.offsets = [n * self.pc_cell.width for n in range(self.columns)]
-        
+            self.offsets = [n * self.pc_cell.width for n in range(self.columns-1)]
         for i, xoffset in enumerate(self.offsets):
             if i % 2 == True:
                 continue

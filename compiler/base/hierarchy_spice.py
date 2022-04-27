@@ -200,9 +200,9 @@ class spice():
         where we dynamically generate groups of connections after a
         group of modules are generated.
         """
+        
         num_pins = len(self.insts[-1].mod.pins)
         num_args = len(args)
-
         # Order the arguments if the hard cell has a custom port order
         ordered_args = self.get_ordered_inputs(args)
         
@@ -213,14 +213,14 @@ class spice():
             else:
                 arg_pins = ordered_args + [""] * (num_pins - num_args)
                 mod_pins = self.insts[-1].mod.pins
-            #print(self.insts[-1].mod)
+
             modpins_string = "\n".join(["{0} -> {1}".format(arg, mod) for (arg, mod) in zip(arg_pins, mod_pins)])
-            #self.insts[-1].mod.pins
             debug.error("Connection mismatch:\nInst ({0}) -> Mod ({1})\n{2}".format(num_args,
                                                                                     num_pins,
-                                                                                    modpins_string),1)
+                                                                                    modpins_string), 1)
 
         self.conns.append(ordered_args)
+
         # This checks if we don't have enough instance port connections for the number of insts
         if check and (len(self.insts)!=len(self.conns)):
             insts_string=pformat(self.insts)

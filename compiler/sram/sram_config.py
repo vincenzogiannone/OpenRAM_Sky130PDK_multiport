@@ -103,10 +103,7 @@ class sram_config:
         debug.info(1, "Rows: {} Cols: {}".format(self.num_rows_temp, self.num_cols))
 
         # Compute the address and bank sizes
-        if OPTS.RF_mode == False:
-            self.row_addr_size = ceil(log(self.num_rows, 2))
-        else:
-            self.row_addr_size = ceil(log(self.num_rows*OPTS.num_all_ports, 2))
+        self.row_addr_size = ceil(log(self.num_rows, 2))
         self.col_addr_size = int(log(self.words_per_row, 2))
         
         self.bank_addr_size = self.col_addr_size + self.row_addr_size

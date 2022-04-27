@@ -499,9 +499,14 @@ class simulation():
             for write_input in range(OPTS.num_w_ports):
                 for i in range(dbits):
                     pin_names.append("{0}{1}_{2}".format(din_name, write_input, i))
-
-            for i in range(abits):
-                pin_names.append("{0}_{1}".format(addr_name, i))
+                    
+            for port in range(OPTS.num_r_ports):
+                for i in range(abits):
+                    pin_names.append("read_addr{0}_{1}".format(port, i))
+                    
+            for port in range(OPTS.num_w_ports):
+                for i in range(abits):
+                    pin_names.append("write_addr{0}_{1}".format(port, i))
             pin_names.append("CSB")
             pin_names.append("WEB")
             pin_names.append("clk")
@@ -589,7 +594,8 @@ class simulation():
                 self.graph.get_all_paths('{}'.format("clk"),
                                          '{}{}_{}'.format(self.dout_name, port, self.probe_data))
                 column_addr = self.get_column_addr()
-                rbl0_name_port, rbl1_name_port = self.get_bl_name_multiport(self.graph.all_paths)
+                #rbl0_name_port, rbl1_name_port = self.get_bl_name_multiport(self.graph.all_paths)
+                rbl0_name_port = self.get_bl_name_multiport(self.graph.all_paths)
                 port_pos = -1 - len(str(column_addr)) - len(str(port))
                 
                 if rbl0_name_port.endswith(str(port) + "_" + str(self.bitline_column)): # single port SRAM case, bl will not be numbered eg bl_0
@@ -599,11 +605,11 @@ class simulation():
                     debug.warning("Error occurred while determining bitline names. Can cause faults in simulation.")
                     
                 port=1
-                if rbl1_name_port.endswith(str(port) + "_" + str(self.bitline_column)): # single port SRAM case, bl will not be numbered eg bl_0
-                    self.rbl1_name = rbl1_name_port
-                else:
-                    self.rbl1_name = rbl1_name_port
-                    debug.warning("Error occurred while determining bitline names. Can cause faults in simulation.")
+                #if rbl1_name_port.endswith(str(port) + "_" + str(self.bitline_column)): # single port SRAM case, bl will not be numbered eg bl_0
+                #    self.rbl1_name = rbl1_name_port
+                #else:
+                #    self.rbl1_name = rbl1_name_port
+                #    debug.warning("Error occurred while determining bitline names. Can cause faults in simulation.")
                 
             else:
                 self.graph.get_all_paths('{}{}'.format("clk", port),
@@ -661,7 +667,6 @@ class simulation():
         Finds a single alias for the internal_net in given paths.
         More or less hits cause an error
         """
-        print(self.sram_instance_name, self.pins, paths, internal_net, mod, exclusion_set)
         net_found = False
         for path in paths:
             aliases = self.sram.find_aliases(self.sram_instance_name, self.pins, path, internal_net, mod, exclusion_set)
@@ -701,23 +706,19 @@ class simulation():
     def get_bl_name_multiport(self, paths):
         
         cell_mod = factory.create(module_type=OPTS.bitcell)
-        cell_rbl = cell_mod.get_read_bl_names()
+        #cell_rbl = cell_mod.get_read_bl_names()
+        cell_rbl = ["rbl0"]
         cell_wbl = cell_mod.get_write_bl_names()
-        rbl_names = ["rbl0", "rbl1"]
+        rbl_names = []
         wbl_names = []
-        
        
-        #exclude_set = self.get_bl_name_search_exclusions()
-        #for int_net in [cell_rbl]:
-        #    rbl_names.append(self.get_alias_in_path(paths, int_net, cell_mod, exclude_set))
-        #for int_net in [cell_wbl]:
-        #    wbl_names.append(self.get_alias_in_path(paths, int_net, cell_mod, exclude_set))
-        #if OPTS.use_pex and OPTS.pex_exe[0] != "calibre":
-        #    for i in range(len(rbl_names)):
-        #        rbl_names[i] = rbl_names[i].split(OPTS.hier_seperator)[-1]
-        #    for i in range(len(wbl_names)):
-        #        wbl_names[i] = wbl_names[i].split(OPTS.hier_seperator)[-1]
-        return rbl_names[0], rbl_names[1]
+        exclude_set = None
+        for int_net in cell_rbl:
+            rbl_names.append(self.get_alias_in_path(paths, int_net, cell_mod, exclude_set))
+        if OPTS.use_pex and OPTS.pex_exe[0] != "calibre":
+            for i in range(len(rbl_names)):
+                rbl_names[i] = rbl_names[i].split(OPTS.hier_seperator)[-1]
+        return rbl_names[0]
 
     def get_empty_measure_data_dict(self):
         """Make a dict of lists for each type of delay and power measurement to append results to"""

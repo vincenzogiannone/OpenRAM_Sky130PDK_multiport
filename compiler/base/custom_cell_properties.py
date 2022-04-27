@@ -171,16 +171,12 @@ class cell_properties():
         self.names["bitcell_2r1w"] = "cell_2r1w"
         self.names["dummy_bitcell_1rw"] = "dummy_cell_1rw"
         self.names["dummy_bitcell_2rw"] = "dummy_cell_2rw"
-        self.names["dummy_bitcell_2r1w"] = "dummy_cell_2r1w"
         self.names["replica_bitcell_1rw"] = "replica_cell_1rw"
         self.names["replica_bitcell_2rw"] = "replica_cell_2rw"
-        self.names["replica_bitcell_2r1w"] = "replica_cell_2r1w"
         self.names["col_cap_bitcell_1rw"] = "col_cap_cell_1rw"
         self.names["col_cap_bitcell_2rw"] = "col_cap_cell_2rw"
-        self.names["col_cap_bitcell_2r1w"] = "col_cap_cell_2r1w"
         self.names["row_cap_bitcell_1rw"] = "row_cap_cell_1rw"
         self.names["row_cap_bitcell_2rw"] = "row_cap_cell_2rw"
-        self.names["row_cap_bitcell_2r1w"] = "row_cap_cell_2r1w"
         self.use_strap = False
         self._ptx = _ptx(model_is_subckt=True,
                          bin_spice_models=False)
@@ -243,12 +239,6 @@ class cell_properties():
 
         self._row_cap_2rw = bitcell(["wl0", "wl1", "gnd"],
                                        ["INPUT", "INPUT", "POWER", "GROUND"])
-                                       
-        self._col_cap_2r1w = bitcell(["rbl0", "rbl1", "wbl0", "vdd"],
-                                       ["OUTPUT", "OUTPUT", "INPUT", "POWER"])
-
-        self._row_cap_2r1w = bitcell(["rwl0", "rwl1", "wwl0", "vdd", "gnd"],
-                                       ["INPUT", "INPUT", "INPUT", "POWER", "GROUND"])
         
     @property
     def ptx(self):

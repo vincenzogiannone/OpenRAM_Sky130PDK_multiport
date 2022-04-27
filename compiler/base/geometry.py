@@ -110,6 +110,7 @@ class geometry:
             ur = ur.rotate_scale(1, -1)
         else:
             debug.error("Invalid rotation: {}".format(rotate), -1)
+
         self.boundary = [offset + ll, offset + ur]
         self.normalize()
 
@@ -247,6 +248,7 @@ class instance(geometry):
     def get_pin(self, name, index=-1):
         """ Return an absolute pin that is offset and transformed based on
         this instance location. Index will return one of several pins."""
+
         import copy
         if index == -1:
             pin = copy.deepcopy(self.mod.get_pin(name))

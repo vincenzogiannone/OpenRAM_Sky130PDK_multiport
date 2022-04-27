@@ -114,7 +114,10 @@ class control_logic(design.design):
         self.add_mod(self.rbl_driver)
 
         # clk_buf drives a flop for every address
-        addr_flops = math.log(self.num_words, 2) + math.log(self.words_per_row, 2)
+        if OPTS.RF_mode == False:
+            addr_flops = math.log(self.num_words, 2) + math.log(self.words_per_row, 2)
+        else:
+            addr_flops = math.log(OPTS.num_all_ports*self.num_words, 2) + math.log(self.words_per_row, 2)
         # plus data flops and control flops
         num_flops = addr_flops + self.word_size + self.num_spare_cols + self.num_control_signals
         # each flop internally has a FO 5 approximately
@@ -132,8 +135,8 @@ class control_logic(design.design):
 
         # wl_en drives every row in the bank
         self.wl_en_driver = factory.create(module_type="pdriver",
-                                           fanout=self.num_rows,
-                                           height=dff_height)
+                                               fanout=self.num_rows,
+                                               height=dff_height)
         self.add_mod(self.wl_en_driver)
 
         # w_en drives every write driver
@@ -308,7 +311,7 @@ class control_logic(design.design):
             self.input_list = ["web", "csb"]
             self.dff_output_list = ["we_bar", "w_en", "cs_bar", "cs"]
             # list of output control signals (for making a vertical bus)
-            self.internal_bus_list = ["gated_clk_bar", "gated_clk_buf", "w_en", "we_bar", "clk_buf", "cs", "cs_bar"]
+            self.internal_bus_list = ["gated_clk_bar", "w_en", "we_bar", "clk_buf", "cs", "cs_bar"]
             self.internal_bus_width = (len(self.internal_bus_list) + 1) * self.m2_pitch
 
         # Outputs to the bank
@@ -333,9 +336,9 @@ class control_logic(design.design):
         self.create_dffs()
         self.create_clk_buf_row()
         self.create_gated_clk_bar_row()
-        self.create_gated_clk_buf_row()
         self.create_wlen_row()
-        if OPTS.RF_mode == False:
+        if OPTS.RF_mode == False:  
+            self.create_gated_clk_buf_row()
             if (self.port_type == "rw") or (self.port_type == "w"):
                 self.create_rbl_delay_row()
                 self.create_wen_row()
@@ -364,9 +367,9 @@ class control_logic(design.design):
         row += 1
         self.place_gated_clk_bar_row(row)
         row += 1
-        self.place_gated_clk_buf_row(row)
-        row += 1
         if OPTS.RF_mode == False:
+            self.place_gated_clk_buf_row(row)
+            row += 1
             if (self.port_type == "rw") or (self.port_type == "r"):
                 self.place_sen_row(row)
                 row += 1
@@ -416,6 +419,7 @@ class control_logic(design.design):
         self.route_dffs()
         self.route_wlen()
         if OPTS.RF_mode == False:
+            self.route_gated_clk_buf()
             if (self.port_type == "rw") or (self.port_type == "w"):
                 self.route_rbl_delay()
                 self.route_wen()
@@ -427,7 +431,6 @@ class control_logic(design.design):
         self.route_pen()
         self.route_clk_buf()
         self.route_gated_clk_bar()
-        self.route_gated_clk_buf()
         self.route_supply()
 
     def create_delay(self):
@@ -480,15 +483,17 @@ class control_logic(design.design):
     def route_clk_buf(self):
         clk_pin = self.clk_buf_inst.get_pin("A")
         clk_pos = clk_pin.center()
+        clkbuf_map = zip(["A"], ["clk_buf"])
         self.add_layout_pin_rect_center(text="clk",
                                         layer="m2",
                                         offset=clk_pos)
         self.add_via_stack_center(from_layer=clk_pin.layer,
                                   to_layer="m2",
                                   offset=clk_pos)
+        self.connect_vertical_bus(clkbuf_map, self.clk_buf_inst, self.input_bus)
 
-        self.route_output_to_bus_jogged(self.clk_buf_inst,
-                                        "clk_buf")
+        #self.route_output_to_bus_jogged(self.clk_buf_inst,
+        #                                "clk_buf")
         self.connect_output(self.clk_buf_inst, "Z", "clk_buf")
 
     def create_gated_clk_bar_row(self):
@@ -581,30 +586,30 @@ class control_logic(design.design):
         self.row_end_inst.append(self.wl_en_inst)
 
     def route_wlen(self):
-        if OPTS.RF_mode == False:
-            wlen_map = zip(["A"], ["gated_clk_bar"])
-            self.connect_vertical_bus(wlen_map, self.wl_en_inst, self.input_bus)
-            self.connect_output(self.wl_en_inst, "Z", "wl_en")
-        else:
-            wlen_map = zip(["A"], ["gated_clk_bar"])
-            self.connect_vertical_bus(wlen_map, self.wl_en_inst, self.input_bus)
-            self.connect_output(self.wl_en_inst, "Z", "wl_en")
+        wlen_map = zip(["A"], ["gated_clk_bar"])
+        self.connect_vertical_bus(wlen_map, self.wl_en_inst, self.input_bus)
+        self.connect_output(self.wl_en_inst, "Z", "wl_en")
 
     def create_pen_row(self):
-        self.p_en_bar_nand_inst=self.add_inst(name="nand_p_en_bar",
-                                              mod=self.nand2)
+        if OPTS.RF_mode == False:
+            self.p_en_bar_nand_inst=self.add_inst(name="nand_p_en_bar",
+                                                  mod=self.nand2)
         # We use the rbl_bl_delay here to ensure that the p_en is only asserted when the
         # bitlines have already been discharged. Otherwise, it is a combination loop.
-        self.connect_inst(["gated_clk_buf", "rbl_bl_delay", "p_en_bar_unbuf", "vdd", "gnd"])
+            self.connect_inst(["gated_clk_buf", "rbl_bl_delay", "p_en_bar_unbuf", "vdd", "gnd"])
 
-        self.p_en_bar_driver_inst=self.add_inst(name="buf_p_en_bar",
-                                                mod=self.p_en_bar_driver)
-        self.connect_inst(["p_en_bar_unbuf", "p_en_bar", "vdd", "gnd"])
+            self.p_en_bar_driver_inst=self.add_inst(name="buf_p_en_bar",
+                                                    mod=self.p_en_bar_driver)
+            self.connect_inst(["p_en_bar_unbuf", "p_en_bar", "vdd", "gnd"])
+        else:
+            self.p_en_bar_driver_inst=self.add_inst(name="buf_p_en_bar",
+                                                    mod=self.p_en_bar_driver)
+            self.connect_inst(["p_en_bar_unbuf", "p_en_bar", "vdd", "gnd"])
 
     def place_pen_row(self, row):
         x_offset = self.control_x_offset
-
-        x_offset = self.place_util(self.p_en_bar_nand_inst, x_offset, row)
+        if OPTS.RF_mode == False:
+            x_offset = self.place_util(self.p_en_bar_nand_inst, x_offset, row)
         x_offset = self.place_util(self.p_en_bar_driver_inst, x_offset, row)
 
         self.row_end_inst.append(self.p_en_bar_driver_inst)
@@ -613,18 +618,18 @@ class control_logic(design.design):
         if OPTS.RF_mode == False:
             in_map = zip(["A", "B"], ["gated_clk_buf", "rbl_bl_delay"])
             self.connect_vertical_bus(in_map, self.p_en_bar_nand_inst, self.input_bus)
+            out_pin = self.p_en_bar_nand_inst.get_pin("Z")
+            out_pos = out_pin.center()
+            in_pin = self.p_en_bar_driver_inst.get_pin("A")
+            in_pos = in_pin.center()
+            mid1 = vector(in_pos.x, out_pos.y)
+            self.add_path(out_pin.layer, [out_pos, mid1, in_pos])
+            self.add_via_stack_center(from_layer=out_pin.layer,
+                                      to_layer=in_pin.layer,
+                                      offset=in_pin.center())
         else:
-            in_map = zip(["A"], ["gated_clk_buf"])
-            self.connect_vertical_bus(in_map, self.p_en_bar_nand_inst, self.input_bus)
-        out_pin = self.p_en_bar_nand_inst.get_pin("Z")
-        out_pos = out_pin.center()
-        in_pin = self.p_en_bar_driver_inst.get_pin("A")
-        in_pos = in_pin.center()
-        mid1 = vector(in_pos.x, out_pos.y)
-        self.add_path(out_pin.layer, [out_pos, mid1, in_pos])
-        self.add_via_stack_center(from_layer=out_pin.layer,
-                                  to_layer=in_pin.layer,
-                                  offset=in_pin.center())
+            in_map = zip(["A"], ["gated_clk_bar"])
+            self.connect_vertical_bus(in_map, self.p_en_bar_driver_inst, self.input_bus)
 
         self.connect_output(self.p_en_bar_driver_inst, "Z", "p_en_bar")
 
@@ -743,8 +748,7 @@ class control_logic(design.design):
             inst_pins.extend(self.dff_output_list)
             inst_pins.append("clk_buf")
             inst_pins.extend(self.supply_list)
-            self.connect_inst(inst_pins)
-            
+            self.connect_inst(inst_pins)            
 
     def place_dffs(self):
         self.ctrl_dff_inst.place(vector(0, 0))
@@ -778,7 +782,7 @@ class control_logic(design.design):
         # Connect the clock rail to the other clock rail
         # by routing in the supply rail track to avoid channel conflicts
             in_pos = self.ctrl_dff_inst.get_pin("clk").uc()
-            mid_pos = vector(in_pos.x, self.gated_clk_buf_inst.get_pin("vdd").cy() - self.m1_pitch)
+            mid_pos = vector(in_pos.x, 2*self.gated_clk_bar_inst.get_pin("vdd").cy() - self.m1_pitch)
             rail_pos = vector(self.input_bus["clk_buf"].cx(), mid_pos.y)
             self.add_wire(self.m1_stack, [in_pos, mid_pos, rail_pos])
             self.add_via_center(layers=self.m1_stack,

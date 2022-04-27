@@ -81,30 +81,30 @@ class elmore(simulation):
             self.graph.get_all_paths('{}'.format("clk"),
                                      '{}{}_{}'.format(self.dout_name, port, self.probe_data))
             rbl_name = self.get_bl_name_multiport(self.graph.all_paths)
-            rbl_path = [path for path in self.graph.all_paths if rbl_name[0] in path][0]
+            rbl_path = [path for path in self.graph.all_paths if rbl_name in path][0]
             port_data = self.get_empty_measure_data_dict()
             power = self.analytical_power(load_slews)
             debug.info(1, 'Slew, Load, Delay(ns), Slew(ns)')
             max_delay = 0.0
             for load,slew in load_slews:
                 # Calculate delay based on slew and load
-                #path_delays = self.graph.get_timing(rbl_path, self.corner, slew, load)
                 path_delays = self.graph.get_timing(rbl_path, self.corner, slew, load)
                 total_delay = self.sum_delays(path_delays)
-                #max_delay = max(max_delay, total_delay.delay)
-                max_delay = max(max_delay, total_delay)
+                max_delay = max(max_delay, total_delay.delay)
                 debug.info(1,
                            '{}, {}, {}, {}'.format(slew,
                                                    load,
-                                                   total_delay / 1e3,
-                                                   total_delay / 1e3))
+                                                   total_delay.delay / 1e3,
+                                                   total_delay.delay / 1e3))
             for mname in self.delay_meas_names + self.power_meas_names:
                 if "power" in mname:
-                    port_data[mname].append(power.dynamic)
-                elif "delay" in mname and port in self.read_ports:
-                    port_data[mname].append(total_delay / 1e3)
-                elif "slew" in mname and port in self.read_ports:
-                    port_data[mname].append(total_delay / 1e3)
+                    port_data[0][mname].append(power.dynamic)
+                elif "delay" in mname:
+                    for x in range(OPTS.num_all_ports):
+                        port_data[0][mname].append(total_delay.delay / 1e3)
+                elif "slew" in mname:
+                    for x in range(OPTS.num_all_ports):
+                        port_data[0][mname].append(total_delay.delay / 1e3)
 
         # Margin for error in period. Calculated by averaging required margin for a small and large 
         # memory. FIXME: margin is quite large, should be looked into.
@@ -114,7 +114,7 @@ class elmore(simulation):
 
         debug.info(2, "SRAM Data:\n{}".format(sram_data))
         debug.info(2, "Port Data:\n{}".format(port_data))
-
+        
         return (sram_data, port_data)
 
     def analytical_power(self, load_slews):

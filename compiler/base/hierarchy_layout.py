@@ -352,7 +352,7 @@ class layout():
         Return a pin list (instead of a single pin)
         """
         name = self.get_pin_name(text)
-       
+
         if name in self.pin_map.keys():
             return self.pin_map[name]
         else:
@@ -368,6 +368,7 @@ class layout():
 
     def get_pin_name(self, text):
         """ Return the custom cell pin name """
+
         if text in self.pin_names:
             return self.pin_names[text]
         else:
@@ -398,6 +399,7 @@ class layout():
         You can optionally rename the pin to a new name.
         """
         pins = instance.get_pins(pin_name)
+
         debug.check(len(pins) > 0,
                     "Could not find pin {}".format(pin_name))
 
@@ -542,7 +544,6 @@ class layout():
                                               0.5 * height))
 
     def add_label(self, text, layer, offset=[0, 0], zoom=None):
-        
         """Adds a text label on the given layer,offset, and zoom level"""
         debug.info(5, "add label " + str(text) + " " + layer + " " + str(offset))
         lpp = techlayer[layer]
@@ -1283,7 +1284,7 @@ class layout():
         Add a signle input or output pin up to metal 3.
         """
         pin = instance.get_pin(pin_name)
-        
+
         if not start_layer:
             start_layer = pin.layer
 

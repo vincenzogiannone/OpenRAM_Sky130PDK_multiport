@@ -1128,7 +1128,6 @@ class router(router_tech):
         (abs_ll, unused) = pin.rect
         pin = self.convert_track_to_pin(ur)
         (unused, abs_ur) = pin.rect
-
         pin = pin_layout(name, [abs_ll, abs_ur], layer)
 
         return pin

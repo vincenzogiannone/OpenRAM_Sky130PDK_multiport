@@ -59,18 +59,19 @@ class wordline_driver_array(design.design):
                 self.add_pin("wl_{0}".format(i), "OUTPUT")
             self.add_pin("en", "INPUT")
         else:
+            temp=[]
             for i in range(int(self.rows/OPTS.num_all_ports)):
                 for port in range(OPTS.num_r_ports):
                     self.add_pin("in{0}_{1}".format(port, i), "INPUT")
                 for port in range(OPTS.num_r_ports, OPTS.num_all_ports):
                     self.add_pin("in{0}_{1}".format(port, i), "INPUT")
-            self.add_pin("wl_en", "INPUT")
         # Outputs from wordline_driver.
             for i in range(int(self.rows/OPTS.num_all_ports)):
                 for port in range(OPTS.num_r_ports):
                     self.add_pin("rwl{0}_{1}".format(port, i), "OUTPUT")
-                for port in range(OPTS.num_r_ports, OPTS.num_all_ports):
+                for port in range(OPTS.num_w_ports):
                     self.add_pin("wwl{0}_{1}".format(port, i), "OUTPUT")
+            self.add_pin("wl_en", "INPUT")
         self.add_pin("vdd", "POWER")
         self.add_pin("gnd", "GROUND")
 
@@ -150,9 +151,9 @@ class wordline_driver_array(design.design):
                 name_cell = "wl_driver_and{}".format(row)
                 self.wld_inst.append(self.add_inst(name=name_cell,
                                               mod=self.wl_driver))
-                self.connect_inst(["in0_{0}".format(row),
-                                   "in1_{0}".format(row),
-                                   "in2_{0}".format(row),
+                self.connect_inst(["A0_{0}".format(row),
+                                   "A1_{0}".format(row),
+                                   "A2_{0}".format(row),
                                    "wl_en",
                                    "rwl0_{0}".format(row),
                                    "rwl1_{0}".format(row),

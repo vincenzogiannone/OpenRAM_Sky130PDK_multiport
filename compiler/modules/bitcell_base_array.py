@@ -39,17 +39,9 @@ class bitcell_base_array(design.design):
         self.all_read_bitline_names = []
         self.all_write_bitline_names = []
         self.rbl_bitline_names = [[] for port in self.all_ports]
-        self.rbl_read_bitline_names = [[] for port in self.read_ports]
-        self.rbl_write_bitline_names = [[] for port in self.write_ports]
         self.all_rbl_bitline_names = []
-        self.all_rbl_read_bitline_names = []
-        self.all_rbl_write_bitline_names = []
         self.rbl_wordline_names = [[] for port in self.read_ports]
-        self.rbl_read_wordline_names = [[] for port in self.read_ports]
-        self.rbl_write_wordline_names = [[] for port in self.write_ports]
         self.all_rbl_wordline_names = []
-        self.all_rbl_read_wordline_names = []
-        self.all_rbl_write_wordline_names = []
 
     def create_all_bitline_names(self):
         if OPTS.RF_mode == False:
@@ -94,13 +86,12 @@ class bitcell_base_array(design.design):
             for wl_name in self.get_wordline_names():
                 self.add_pin(wl_name, "INPUT")
         else:
-            for bl_name in self.get_read_bitline_names():
-                self.add_pin(bl_name, "INOUT")
-            for bl_name in self.get_write_bitline_names():
-                self.add_pin(bl_name, "INPUT")
-            for wl_name in self.get_read_wordline_names():
-                self.add_pin(wl_name, "INPUT")
-            for wl_name in self.get_write_wordline_names():
+            for bl_name in self.get_bitline_names():
+                if bl_name.startswith("rbl"):
+                    self.add_pin(bl_name, "INOUT")
+                else:
+                    self.add_pin(bl_name, "INPUT")
+            for wl_name in self.get_wordline_names():
                 self.add_pin(wl_name, "INPUT")
         self.add_pin("vdd", "POWER")
         self.add_pin("gnd", "GROUND")
@@ -111,9 +102,20 @@ class bitcell_base_array(design.design):
         indexed by column and row, for instance use in bitcell_array
         """
         bitcell_pins = []
-        for port in self.all_ports:
-            bitcell_pins.extend([x for x in self.get_bitline_names(port) if x.endswith("_{0}".format(col))])
-            bitcell_pins.extend([x for x in self.get_wordline_names(port) if x.endswith("_{0}".format(row))])
+        if OPTS.RF_mode == False:
+            for port in self.all_ports:
+                bitcell_pins.extend([x for x in self.get_bitline_names(port) if x.endswith("_{0}".format(col))])
+                bitcell_pins.extend([x for x in self.get_wordline_names(port) if x.endswith("_{0}".format(row))])
+        else:
+            for port in range(OPTS.num_r_ports):
+                bitcell_pins.extend([x for x in self.get_read_bitline_names(port) if x.endswith("_{0}".format(col))])
+            for port in range(OPTS.num_w_ports):
+                bitcell_pins.extend([x for x in self.get_write_bitline_names(port) if x.endswith("_{0}".format(col))])
+            for port in range(OPTS.num_r_ports):
+                bitcell_pins.extend([x for x in self.get_read_wordline_names(port) if x.endswith("_{0}".format(row))])
+            for port in range(OPTS.num_w_ports):
+                bitcell_pins.extend([x for x in self.get_write_wordline_names(port) if x.endswith("_{0}".format(row))])
+            
         bitcell_pins.append("vdd")
         bitcell_pins.append("gnd")
 

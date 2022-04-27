@@ -57,7 +57,6 @@ class dff_array(design.design):
         for row in range(self.rows):
             for col in range(self.columns):
                 self.add_pin(self.get_dout_name(row, col), "OUTPUT")
-       
         self.add_pin("clk", "INPUT")
         self.add_pin("vdd", "POWER")
         self.add_pin("gnd", "GROUND")
@@ -144,7 +143,7 @@ class dff_array(design.design):
         self.add_layout_pin_segment_center(text="clk",
                                            layer="m3",
                                            start=vector(0, clk_ypos),
-                                           end=vector(self.width, clk_ypos))
+                                           end=vector(0.1, clk_ypos))
         for col in range(self.columns):
             clk_pin = self.dff_insts[0, col].get_pin("clk")
             # Make a vertical strip for each column

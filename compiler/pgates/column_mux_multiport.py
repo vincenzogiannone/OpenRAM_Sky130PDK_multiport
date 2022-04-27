@@ -80,7 +80,6 @@ class column_mux_multiport(pgate.pgate):
 
     def add_ptx(self):
         self.bitcell = factory.create(module_type=OPTS.bitcell)
-
         # Adds nmos_lower,nmos_upper to the module
         self.ptx_width = self.tx_size * drc("minwidth_tx")
         self.nmos = factory.create(module_type="ptx",

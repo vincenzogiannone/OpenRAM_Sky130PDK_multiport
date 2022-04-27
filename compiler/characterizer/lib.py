@@ -59,6 +59,7 @@ class lib:
         if OPTS.use_specified_load_slew == None:
             self.load_scales = np.array(OPTS.load_scales)
             self.load = tech.spice["dff_in_cap"]
+            print(self.load_scales, self.load)
             self.loads = self.load_scales * self.load
 
 
@@ -449,24 +450,41 @@ class lib:
         self.lib.write("            timing_sense : non_unate; \n")
         if OPTS.RF_mode == False:
             self.lib.write("            related_pin : \"clk{0}\"; \n".format(read_port))
+            self.lib.write("            related_pin : \"clk\"; \n")
+            self.lib.write("            timing_type : falling_edge; \n")
+            self.lib.write("            cell_rise(CELL_TABLE) {\n")
+            self.write_values(self.char_port_results[read_port]["delay_lh"],len(self.loads),"            ")
+            self.lib.write("            }\n") # rise delay
+            self.lib.write("            cell_fall(CELL_TABLE) {\n")
+            self.write_values(self.char_port_results[read_port]["delay_hl"],len(self.loads),"            ")
+            self.lib.write("            }\n") # fall delay
+            self.lib.write("            rise_transition(CELL_TABLE) {\n")
+            self.write_values(self.char_port_results[read_port]["slew_lh"],len(self.loads),"            ")
+            self.lib.write("            }\n") # rise trans
+            self.lib.write("            fall_transition(CELL_TABLE) {\n")
+            self.write_values(self.char_port_results[read_port]["slew_hl"],len(self.loads),"            ")
+            self.lib.write("            }\n") # fall trans
+            self.lib.write("        }\n") # timing
+            self.lib.write("        }\n") # pin
+            self.lib.write("    }\n\n") # bus
         else:
             self.lib.write("            related_pin : \"clk\"; \n")
-        self.lib.write("            timing_type : falling_edge; \n")
-        self.lib.write("            cell_rise(CELL_TABLE) {\n")
-        self.write_values(self.char_port_results[read_port]["delay_lh"],len(self.loads),"            ")
-        self.lib.write("            }\n") # rise delay
-        self.lib.write("            cell_fall(CELL_TABLE) {\n")
-        self.write_values(self.char_port_results[read_port]["delay_hl"],len(self.loads),"            ")
-        self.lib.write("            }\n") # fall delay
-        self.lib.write("            rise_transition(CELL_TABLE) {\n")
-        self.write_values(self.char_port_results[read_port]["slew_lh"],len(self.loads),"            ")
-        self.lib.write("            }\n") # rise trans
-        self.lib.write("            fall_transition(CELL_TABLE) {\n")
-        self.write_values(self.char_port_results[read_port]["slew_hl"],len(self.loads),"            ")
-        self.lib.write("            }\n") # fall trans
-        self.lib.write("        }\n") # timing
-        self.lib.write("        }\n") # pin
-        self.lib.write("    }\n\n") # bus
+            self.lib.write("            timing_type : falling_edge; \n")
+            self.lib.write("            cell_rise(CELL_TABLE) {\n")
+            self.write_values(self.char_port_results[0]["delay_lh"],len(self.loads),"            ")
+            self.lib.write("            }\n") # rise delay
+            self.lib.write("            cell_fall(CELL_TABLE) {\n")
+            self.write_values(self.char_port_results[0]["delay_hl"],len(self.loads),"            ")
+            self.lib.write("            }\n") # fall delay
+            self.lib.write("            rise_transition(CELL_TABLE) {\n")
+            self.write_values(self.char_port_results[0]["slew_lh"],len(self.loads),"            ")
+            self.lib.write("            }\n") # rise trans
+            self.lib.write("            fall_transition(CELL_TABLE) {\n")
+            self.write_values(self.char_port_results[0]["slew_hl"],len(self.loads),"            ")
+            self.lib.write("            }\n") # fall trans
+            self.lib.write("        }\n") # timing
+            self.lib.write("        }\n") # pin
+            self.lib.write("    }\n\n") # bus
 
     def write_data_bus_input(self, write_port):
         """ Adds din data bus timing results."""
@@ -885,6 +903,7 @@ class lib:
                                     # "slew_hl")
             for port in range(OPTS.num_r_ports):
                 #dout timing
+                #print(round_time, self.char_port_results)
                 datasheet.write("{0},{1},{2},{3},{4},{5},{6},{7},{8},".format(
                         "dout{1}[{0}:0]".format(self.sram.word_size - 1, port),
                         min(list(map(round_time,self.char_port_results[0]["delay_lh"]))),
@@ -1117,10 +1136,10 @@ class lib:
                 datasheet.write("{0},{1},".format('read_fall_power_{}'.format(port), read0_power))
         else:
             for port in range(OPTS.num_r_ports):
-                datasheet.write("{0},{1},".format('cell_rise_{}'.format(port), self.char_port_results[port]["delay_lh"]))
-                datasheet.write("{0},{1},".format('cell_fall_{}'.format(port), self.char_port_results[port]["delay_hl"]))
-                datasheet.write("{0},{1},".format('rise_transition_{}'.format(port), self.char_port_results[port]["slew_lh"]))
-                datasheet.write("{0},{1},".format('fall_transition_{}'.format(port), self.char_port_results[port]["slew_hl"]))
+                datasheet.write("{0},{1},".format('cell_rise_{}'.format(port), self.char_port_results[0]["delay_lh"]))
+                datasheet.write("{0},{1},".format('cell_fall_{}'.format(port), self.char_port_results[0]["delay_hl"]))
+                datasheet.write("{0},{1},".format('rise_transition_{}'.format(port), self.char_port_results[0]["slew_lh"]))
+                datasheet.write("{0},{1},".format('fall_transition_{}'.format(port), self.char_port_results[0]["slew_hl"]))
 
             for port in range(OPTS.num_w_ports):
                 write1_power = np.mean(self.char_port_results[port]["write1_power"])

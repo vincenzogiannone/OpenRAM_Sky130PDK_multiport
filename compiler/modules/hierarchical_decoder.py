@@ -33,7 +33,10 @@ class hierarchical_decoder(design.design):
         self.cell_height = b.height
         self.predecode_bus_rail_pos = []
         self.num_outputs = num_outputs
-        self.num_inputs = math.ceil(math.log(self.num_outputs, 2))
+        if OPTS.RF_mode == False:
+            self.num_inputs = math.ceil(math.log(self.num_outputs, 2))
+        else:
+            self.num_inputs = math.ceil(math.log(self.num_outputs/OPTS.num_all_ports, 2))*OPTS.num_all_ports
         (self.no_of_pre2x4, self.no_of_pre3x8, self.no_of_pre4x16)=self.determine_predecodes(self.num_inputs)
 
         self.create_netlist()
@@ -63,7 +66,7 @@ class hierarchical_decoder(design.design):
         if OPTS.RF_mode == False:
             self.width = self.and_inst[0].rx() + 0.5 * self.m1_width
         else:
-            self.width = self.dec_cell_inst[0].rx() + 0.5 * self.m1_width
+            self.width = self.dec_cell_inst[0].rx() + 0.5 * self.m1_width 
 
         self.add_boundary()
         self.DRC_LVS()
@@ -93,23 +96,38 @@ class hierarchical_decoder(design.design):
 
     def add_decoders(self):
         """ Create the decoders based on the number of pre-decodes """
-        self.pre2_4 = factory.create(module_type="hierarchical_predecode2x4",
-                                     height=self.cell_height)
-        self.add_mod(self.pre2_4)
+        if OPTS.RF_mode == False:
+            self.pre2_4 = factory.create(module_type="hierarchical_predecode2x4",
+                                         height=self.cell_height)
+            self.add_mod(self.pre2_4)
 
-        self.pre3_8 = factory.create(module_type="hierarchical_predecode3x8",
-                                     height=self.cell_height)
-        self.add_mod(self.pre3_8)
+            self.pre3_8 = factory.create(module_type="hierarchical_predecode3x8",
+                                         height=self.cell_height)
+            self.add_mod(self.pre3_8)
 
-        self.pre4_16 = factory.create(module_type="hierarchical_predecode4x16",
-                                      height=self.cell_height)
-        self.add_mod(self.pre4_16)
+            self.pre4_16 = factory.create(module_type="hierarchical_predecode4x16",
+                                          height=self.cell_height)
+            self.add_mod(self.pre4_16)
+        else:
+            self.pre2_4 = factory.create(module_type="hierarchical_predecode2x4",
+                                         height=self.cell_height/2)
+            self.add_mod(self.pre2_4)
+
+            self.pre3_8 = factory.create(module_type="hierarchical_predecode3x8",
+                                         height=self.cell_height/2)
+            self.add_mod(self.pre3_8)
+
+            self.pre4_16 = factory.create(module_type="hierarchical_predecode4x16",
+                                          height=self.cell_height/2)
+            self.add_mod(self.pre4_16)
 
     def determine_predecodes(self, num_inputs):
         """
         Determines the number of 2:4, 3:8 and 4:16 pre-decoders
         needed based on the number of inputs
         """
+        if OPTS.RF_mode == True:
+            num_inputs = int(num_inputs / OPTS.num_all_ports)
         if (num_inputs == 2):
             return (1, 0, 0)
         elif (num_inputs == 3):
@@ -164,7 +182,7 @@ class hierarchical_decoder(design.design):
                 lines.append(index)
                 index = index + 1
             self.predec_groups.append(lines)
-
+            
     def setup_layout_constants(self):
         """ Calculate the overall dimensions of the hierarchical decoder """
 
@@ -191,10 +209,23 @@ class hierarchical_decoder(design.design):
             self.predecoder_spacing = 2 * self.and2.height
         else:
             self.predecoder_spacing = 2 * self.dec_cell2_2r1w.height
-        self.predecoder_height = self.pre2_4.height * self.no_of_pre2x4 \
-                                 + self.pre3_8.height * self.no_of_pre3x8 \
-                                 + self.pre4_16.height * self.no_of_pre4x16 \
-                                 + (self.no_of_pre2x4 + self.no_of_pre3x8 + self.no_of_pre4x16 - 1) * self.predecoder_spacing
+        if OPTS.RF_mode == False:
+            self.predecoder_height = self.pre2_4.height * self.no_of_pre2x4 \
+                                    + self.pre3_8.height * self.no_of_pre3x8 \
+                                    + self.pre4_16.height * self.no_of_pre4x16 \
+                                    + (self.no_of_pre2x4 + self.no_of_pre3x8 + self.no_of_pre4x16 - 1) * self.predecoder_spacing/4
+        else:
+            self.no_of_pre2x4 = self.no_of_pre2x4 * OPTS.num_all_ports
+            self.no_of_pre3x8 = self.no_of_pre3x8 * OPTS.num_all_ports
+            self.no_of_pre4x16 = self.no_of_pre4x16 * OPTS.num_all_ports
+            self.predecoder_height = self.pre2_4.height * self.no_of_pre2x4 \
+                                    + self.pre3_8.height * self.no_of_pre3x8 \
+                                    + self.pre4_16.height * self.no_of_pre4x16 \
+                                    + (self.no_of_pre2x4 + self.no_of_pre3x8 + self.no_of_pre4x16 - 1) * self.predecoder_spacing/4
+            self.no_of_pre2x4 = int(self.no_of_pre2x4 / OPTS.num_all_ports)
+            self.no_of_pre3x8 = int(self.no_of_pre3x8 / OPTS.num_all_ports)
+            self.no_of_pre4x16 = int(self.no_of_pre4x16 / OPTS.num_all_ports)
+                                    
 
         # Inputs to cells are on input layer
         # Outputs from cells are on output layer
@@ -207,14 +238,20 @@ class hierarchical_decoder(design.design):
         self.output_layer = layer_props.hierarchical_decoder.output_layer
         self.output_layer_pitch = getattr(self, self.output_layer + "_pitch")
 
-        # Two extra pitches between modules on left and right
-        self.internal_routing_width = self.total_number_of_predecoder_outputs * self.bus_pitch + self.bus_pitch
+        
         if OPTS.RF_mode == False:
+            # Two extra pitches between modules on left and right
+            self.internal_routing_width = self.total_number_of_predecoder_outputs * self.bus_pitch + self.bus_pitch
             self.row_decoder_height = self.and2.height * self.num_outputs
+            self.input_routing_width = self.num_inputs * self.bus_pitch + self.bus_space
         else:
-            self.row_decoder_height = self.dec_cell2_2r1w.height * self.num_outputs/OPTS.num_all_ports
+            # Two extra pitches between modules on left and right
+            self.internal_routing_width = self.total_number_of_predecoder_outputs * OPTS.num_all_ports * self.bus_pitch + self.bus_pitch
+            self.row_decoder_height = self.dec_cell2_2r1w.height * self.num_outputs/OPTS.num_all_ports            
         # Extra bus space for supply contacts
-        self.input_routing_width = self.num_inputs * self.bus_pitch + self.bus_space
+            self.num_inputs = self.num_inputs*OPTS.num_all_ports
+            self.input_routing_width = self.num_inputs * self.bus_pitch + self.bus_space
+            self.num_inputs = int(self.num_inputs/OPTS.num_all_ports)
 
     def route_inputs(self):
         """ Create input bus for the predecoders """
@@ -227,8 +264,16 @@ class hierarchical_decoder(design.design):
         if self.no_of_pre4x16 > 0:
             min_x = min(min_x, self.pre4x16_inst[0].lx())
         input_offset=vector(min_x - self.input_routing_width, 0)
-
-        input_bus_names = ["addr_{0}".format(i) for i in range(self.num_inputs)]
+        if OPTS.RF_mode == False:
+            input_bus_names = ["addr_{0}".format(i) for i in range(self.num_inputs)]
+        else:
+            input_bus_names = []
+            for port in range(OPTS.num_r_ports):
+                for i in range(int(self.num_inputs)):
+                    input_bus_names.append("read_addr{0}_{1}".format(port, i))
+            for port in range(OPTS.num_w_ports):
+                for i in range(int(self.num_inputs)):
+                    input_bus_names.append("write_addr{0}_{1}".format(port, i))
         self.input_bus = self.create_vertical_pin_bus(layer=self.bus_layer,
                                                       offset=input_offset,
                                                       names=input_bus_names,
@@ -238,47 +283,130 @@ class hierarchical_decoder(design.design):
 
     def route_input_to_predecodes(self):
         """ Route the vertical input rail to the predecoders """
-        for pre_num in range(self.no_of_pre2x4):
-            for i in range(2):
-                index = pre_num * 2 + i
+        if OPTS.RF_mode == False:
+            for pre_num in range(self.no_of_pre2x4):
+                for i in range(2):
+                    index = pre_num * 2 + i
 
-                input_pos = self.input_bus["addr_{}".format(index)].center()
+                    input_pos = self.input_bus["addr_{}".format(index)].center()
 
-                in_name = "in_{}".format(i)
-                decoder_pin = self.pre2x4_inst[pre_num].get_pin(in_name)
+                    in_name = "in_{}".format(i)
+                    decoder_pin = self.pre2x4_inst[pre_num].get_pin(in_name)
 
-                decoder_offset = decoder_pin.center()
-                input_offset = input_pos.scale(1, 0) + decoder_offset.scale(0, 1)
+                    decoder_offset = decoder_pin.center()
+                    input_offset = input_pos.scale(1, 0) + decoder_offset.scale(0, 1)
 
-                self.route_input_bus(decoder_offset, input_offset)
+                    self.route_input_bus(decoder_offset, input_offset)
 
-        for pre_num in range(self.no_of_pre3x8):
-            for i in range(3):
-                index = pre_num * 3 + i + self.no_of_pre2x4 * 2
+            for pre_num in range(self.no_of_pre3x8):
+                for i in range(3):
+                    index = pre_num * 3 + i + self.no_of_pre2x4 * 2
 
-                input_pos = self.input_bus["addr_{}".format(index)].center()
+                    input_pos = self.input_bus["addr_{}".format(index)].center()
 
-                in_name = "in_{}".format(i)
-                decoder_pin = self.pre3x8_inst[pre_num].get_pin(in_name)
+                    in_name = "in_{}".format(i)
+                    decoder_pin = self.pre3x8_inst[pre_num].get_pin(in_name)
 
-                decoder_offset = decoder_pin.center()
-                input_offset = input_pos.scale(1, 0) + decoder_offset.scale(0, 1)
+                    decoder_offset = decoder_pin.center()
+                    input_offset = input_pos.scale(1, 0) + decoder_offset.scale(0, 1)
 
-                self.route_input_bus(decoder_offset, input_offset)
+                    self.route_input_bus(decoder_offset, input_offset)
 
-        for pre_num in range(self.no_of_pre4x16):
-            for i in range(4):
-                index = pre_num * 4 + i + self.no_of_pre3x8 * 3 + self.no_of_pre2x4 * 2
+            for pre_num in range(self.no_of_pre4x16):
+                for i in range(4):
+                    index = pre_num * 4 + i + self.no_of_pre3x8 * 3 + self.no_of_pre2x4 * 2
 
-                input_pos = self.input_bus["addr_{}".format(index)].center()
+                    input_pos = self.input_bus["addr_{}".format(index)].center()
 
-                in_name = "in_{}".format(i)
-                decoder_pin = self.pre4x16_inst[pre_num].get_pin(in_name)
+                    in_name = "in_{}".format(i)
+                    decoder_pin = self.pre4x16_inst[pre_num].get_pin(in_name)
 
-                decoder_offset = decoder_pin.center()
-                input_offset = input_pos.scale(1, 0) + decoder_offset.scale(0, 1)
+                    decoder_offset = decoder_pin.center()
+                    input_offset = input_pos.scale(1, 0) + decoder_offset.scale(0, 1)
 
-                self.route_input_bus(decoder_offset, input_offset)
+                    self.route_input_bus(decoder_offset, input_offset)
+        else:
+            for port in range(OPTS.num_r_ports):
+                for pre_num in range(self.no_of_pre2x4):
+                    for i in range(2):
+                        index = pre_num * 2 + i
+
+                        input_pos = self.input_bus["read_addr{}_{}".format(port, index)].center()
+
+                        in_name = "in_{}".format(i)
+                        decoder_pin = self.pre2x4_inst[pre_num+port*OPTS.num_r_ports].get_pin(in_name)
+                        decoder_offset = decoder_pin.center()
+                        input_offset = input_pos.scale(1, 0) + decoder_offset.scale(0, 1)
+                        self.route_input_bus(decoder_offset, input_offset)
+
+                for pre_num in range(self.no_of_pre3x8):
+                    for i in range(3):
+                        index = pre_num * 3 + i + self.no_of_pre2x4 * 2
+
+                        input_pos = self.input_bus["read_addr{}_{}".format(port, index)].center()
+
+                        in_name = "in_{}".format(i)
+                        decoder_pin = self.pre3x8_inst[pre_num+port*OPTS.num_r_ports].get_pin(in_name)
+
+                        decoder_offset = decoder_pin.center()
+                        input_offset = input_pos.scale(1, 0) + decoder_offset.scale(0, 1)
+
+                        self.route_input_bus(decoder_offset, input_offset)
+
+                for pre_num in range(self.no_of_pre4x16):
+                    for i in range(4):
+                        index = pre_num * 4 + i + self.no_of_pre3x8 * 3 + self.no_of_pre2x4 * 2
+
+                        input_pos = self.input_bus["read_addr{}_{}".format(port, index)].center()
+
+                        in_name = "in_{}".format(i)
+                        decoder_pin = self.pre4x16_inst[pre_num+port*OPTS.num_r_ports].get_pin(in_name)
+
+                        decoder_offset = decoder_pin.center()
+                        input_offset = input_pos.scale(1, 0) + decoder_offset.scale(0, 1)
+
+                        self.route_input_bus(decoder_offset, input_offset)
+            for port in range(OPTS.num_w_ports):
+                for pre_num in range(self.no_of_pre2x4):
+                    for i in range(2):
+                        index = pre_num * 2 + i
+
+                        input_pos = self.input_bus["write_addr{}_{}".format(port, index)].center()
+
+                        in_name = "in_{}".format(i)
+                        decoder_pin = self.pre2x4_inst[pre_num+self.no_of_pre2x4*OPTS.num_r_ports+port].get_pin(in_name)
+                        decoder_offset = decoder_pin.center()
+                        input_offset = input_pos.scale(1, 0) + decoder_offset.scale(0, 1)
+
+                        self.route_input_bus(decoder_offset, input_offset)
+
+                for pre_num in range(self.no_of_pre3x8):
+                    for i in range(3):
+                        index = pre_num * 3 + i + self.no_of_pre2x4 * 2
+
+                        input_pos = self.input_bus["write_addr{}_{}".format(port, index)].center()
+
+                        in_name = "in_{}".format(i)
+                        decoder_pin = self.pre3x8_inst[pre_num+self.no_of_pre3x8*OPTS.num_r_ports+port].get_pin(in_name)
+
+                        decoder_offset = decoder_pin.center()
+                        input_offset = input_pos.scale(1, 0) + decoder_offset.scale(0, 1)
+
+                        self.route_input_bus(decoder_offset, input_offset)
+
+                for pre_num in range(self.no_of_pre4x16):
+                    for i in range(4):
+                        index = pre_num * 4 + i + self.no_of_pre3x8 * 3 + self.no_of_pre2x4 * 2
+
+                        input_pos = self.input_bus["write_addr{}_{}".format(port, index)].center()
+
+                        in_name = "in_{}".format(i)
+                        decoder_pin = self.pre4x16_inst[pre_num+self.no_of_pre4x16*OPTS.num_r_ports+port].get_pin(in_name)
+
+                        decoder_offset = decoder_pin.center()
+                        input_offset = input_pos.scale(1, 0) + decoder_offset.scale(0, 1)
+
+                        self.route_input_bus(decoder_offset, input_offset)
 
     def route_input_bus(self, input_offset, output_offset):
         """
@@ -297,17 +425,26 @@ class hierarchical_decoder(design.design):
 
     def add_pins(self):
         """ Add the module pins """
-        for i in range(self.num_inputs):
-            self.add_pin("addr_{0}".format(i), "INPUT")
-
-        for j in range(self.num_outputs):
-            self.add_pin("decode_{0}".format(j), "OUTPUT")
+        if OPTS.RF_mode == False:
+            for i in range(self.num_inputs):
+                self.add_pin("addr_{0}".format(i), "INPUT")
+            for j in range(self.num_outputs):
+                self.add_pin("decode_{0}".format(j), "OUTPUT")
+        else:
+            for port in range(OPTS.num_r_ports):
+                for i in range(int(self.num_inputs/OPTS.num_all_ports)):
+                    self.add_pin("read_addr{0}_{1}".format(port, i), "INPUT")
+            for port in range(OPTS.num_w_ports):
+                for i in range(int(self.num_inputs/OPTS.num_all_ports)):
+                    self.add_pin("write_addr{0}_{1}".format(port, i), "INPUT")
+            for j in range(int(self.num_outputs/OPTS.num_all_ports)):
+                for port in range(OPTS.num_all_ports):
+                    self.add_pin("decode{0}_{1}".format(port, j), "OUTPUT")
         self.add_pin("vdd", "POWER")
         self.add_pin("gnd", "GROUND")
 
     def create_pre_decoder(self):
         """ Creates pre-decoder and places labels input address [A] """
-
         for i in range(self.no_of_pre2x4):
             self.create_pre2x4(i)
 
@@ -327,15 +464,38 @@ class hierarchical_decoder(design.design):
             index_off2 = num * 4
 
         pins = []
-        for input_index in range(2):
-            pins.append("addr_{0}".format(input_index + index_off1))
-        for output_index in range(4):
-            pins.append("out_{0}".format(output_index + index_off2))
-        pins.extend(["vdd", "gnd"])
+        if OPTS.RF_mode == False:
+            for input_index in range(2):
+                pins.append("addr_{0}".format(input_index + index_off1))
+            for output_index in range(4):
+                pins.append("out_{0}".format(output_index + index_off2))
+            pins.extend(["vdd", "gnd"])
 
-        self.pre2x4_inst.append(self.add_inst(name="pre_{0}".format(num),
+            self.pre2x4_inst.append(self.add_inst(name="pre_{0}".format(num),
                                               mod=self.pre2_4))
-        self.connect_inst(pins)
+            self.connect_inst(pins)
+        else:
+            for port in range(OPTS.num_r_ports):
+                pins=[]
+                for input_index in range(2):
+                    pins.append("read_addr{0}_{1}".format(port, input_index + index_off1))
+                for output_index in range(4):
+                    pins.append("read_out{0}_{1}".format(port, output_index + index_off2))
+                pins.extend(["vdd", "gnd"])
+
+                self.pre2x4_inst.append(self.add_inst(name="read_pre{0}_{1}".format(port, num),
+                                              mod=self.pre2_4))
+                self.connect_inst(pins)
+            for port in range(OPTS.num_w_ports):
+                pins=[]
+                for input_index in range(2):
+                    pins.append("write_addr{0}_{1}".format(port, input_index + index_off1))
+                for output_index in range(4):
+                    pins.append("write_out{0}_{1}".format(port, output_index + index_off2))
+                pins.extend(["vdd", "gnd"])
+                self.pre2x4_inst.append(self.add_inst(name="write_pre{0}_{1}".format(port, num),
+                                              mod=self.pre2_4))
+                self.connect_inst(pins)
 
     def create_pre3x8(self, num):
         """ Add 3x8 predecoder to the left of the origin and above any 2x4 decoders """
@@ -345,15 +505,37 @@ class hierarchical_decoder(design.design):
         out_index_offset = num * 8 + self.no_of_pre2x4 * 4
 
         pins = []
-        for input_index in range(3):
-            pins.append("addr_{0}".format(input_index + in_index_offset))
-        for output_index in range(8):
-            pins.append("out_{0}".format(output_index + out_index_offset))
-        pins.extend(["vdd", "gnd"])
+        if OPTS.RF_mode == False:
+            for input_index in range(3):
+                pins.append("addr_{0}".format(input_index + in_index_offset))
+            for output_index in range(8):
+                pins.append("out_{0}".format(output_index + out_index_offset))
+            pins.extend(["vdd", "gnd"])
 
-        self.pre3x8_inst.append(self.add_inst(name="pre3x8_{0}".format(num),
+            self.pre3x8_inst.append(self.add_inst(name="pre3x8_{0}".format(num),
+                                                  mod=self.pre3_8))
+            self.connect_inst(pins)
+        else:
+            for port in range(OPTS.num_r_ports):
+                pins=[]
+                for input_index in range(3):
+                    pins.append("read_addr{0}_{1}".format(port, input_index + in_index_offset))
+                for output_index in range(8):
+                    pins.append("read_out{0}_{1}".format(port, output_index + out_index_offset))
+                pins.extend(["vdd", "gnd"])
+                self.pre3x8_inst.append(self.add_inst(name="read_pre3x8_{0}_{1}".format(port, num),
                                               mod=self.pre3_8))
-        self.connect_inst(pins)
+                self.connect_inst(pins)
+            for port in range(OPTS.num_w_ports):
+                pins=[]
+                for input_index in range(3):
+                    pins.append("write_addr{0}_{1}".format(port, input_index + in_index_offset))
+                for output_index in range(8):
+                    pins.append("write_out{0}_{1}".format(port, output_index + out_index_offset))
+                pins.extend(["vdd", "gnd"])
+                self.pre3x8_inst.append(self.add_inst(name="write_pre3x8_{0}_{1}".format(port, num),
+                                              mod=self.pre3_8))
+                self.connect_inst(pins)
 
     def create_pre4x16(self, num):
         """ Add 4x16 predecoder to the left of the origin and above any 3x8 decoders """
@@ -363,19 +545,48 @@ class hierarchical_decoder(design.design):
         out_index_offset = num * 16 + self.no_of_pre3x8 * 8 + self.no_of_pre2x4 * 4
 
         pins = []
-        for input_index in range(4):
-            pins.append("addr_{0}".format(input_index + in_index_offset))
-        for output_index in range(16):
-            pins.append("out_{0}".format(output_index + out_index_offset))
-        pins.extend(["vdd", "gnd"])
+        if OPTS.RF_mode == False:
+            for input_index in range(4):
+                pins.append("addr_{0}".format(input_index + in_index_offset))
+            for output_index in range(16):
+                pins.append("out_{0}".format(output_index + out_index_offset))
+            pins.extend(["vdd", "gnd"])
 
-        self.pre4x16_inst.append(self.add_inst(name="pre4x16_{0}".format(num),
-                                              mod=self.pre4_16))
-        self.connect_inst(pins)
+            self.pre4x16_inst.append(self.add_inst(name="pre4x16_{0}".format(num),
+                                                  mod=self.pre4_16))
+            self.connect_inst(pins)
+        else:
+            for port in range(OPTS.num_r_ports):
+                pins=[]
+                for input_index in range(4):
+                    pins.append("read_addr{0}_{1}".format(port, in_index_offset))
+                for output_index in range(16):
+                    pins.append("read_out{0}_{1}".format(port, out_index_offset))
+                pins.extend(["vdd", "gnd"])
+
+                self.pre4x16_inst.append(self.add_inst(name="read_pre4x16_{0}_{1}".format(port, num),
+                                              mod=self.pre3_8))
+                self.connect_inst(pins)
+            for port in range(OPTS.num_w_ports):
+                pins=[]
+                for input_index in range(4):
+                    pins.append("write_addr{0}_{1}".format(port, in_index_offset))
+                for output_index in range(16):
+                    pins.append("write_out{0}_{1}".format(port, out_index_offset))
+                pins.extend(["vdd", "gnd"])
+
+                self.pre4x16_inst.append(self.add_inst(name="write_pre4x16_{0}_{1}".format(port, num),
+                                              mod=self.pre3_8))
+                self.connect_inst(pins)
 
     def place_pre_decoder(self):
         """ Creates pre-decoder and places labels input address [A] """
-
+        
+        if OPTS.RF_mode == True:
+            self.no_of_pre2x4 = self.no_of_pre2x4 * OPTS.num_all_ports
+            self.no_of_pre3x8 = self.no_of_pre3x8 * OPTS.num_all_ports
+            self.no_of_pre4x16 = self.no_of_pre4x16 * OPTS.num_all_ports
+            
         for i in range(self.no_of_pre2x4):
             self.place_pre2x4(i)
 
@@ -384,7 +595,11 @@ class hierarchical_decoder(design.design):
 
         for i in range(self.no_of_pre4x16):
             self.place_pre4x16(i)
-
+            
+        if OPTS.RF_mode == True:
+            self.no_of_pre2x4 = int(self.no_of_pre2x4 / OPTS.num_all_ports)
+            self.no_of_pre3x8 = int(self.no_of_pre3x8 / OPTS.num_all_ports)
+            self.no_of_pre4x16 = int(self.no_of_pre4x16 / OPTS.num_all_ports)
         self.predecode_height = 0
         if self.no_of_pre2x4 > 0:
             self.predecode_height = self.pre2x4_inst[-1].uy()
@@ -395,22 +610,21 @@ class hierarchical_decoder(design.design):
 
     def place_pre2x4(self, num):
         """ Place 2x4 predecoder to the left of the origin """
-
-        base= vector(-self.pre2_4.width, num * (self.pre2_4.height + self.predecoder_spacing))
+        base= vector(-self.pre2_4.width, num * (self.pre2_4.height + self.predecoder_spacing/4))
         self.pre2x4_inst[num].place(base)
 
     def place_pre3x8(self, num):
         """ Place 3x8 predecoder to the left of the origin and above any 2x4 decoders """
-        height = self.no_of_pre2x4 * (self.pre2_4.height + self.predecoder_spacing) \
-                 + num * (self.pre3_8.height + self.predecoder_spacing)
+        height = self.no_of_pre2x4 * (self.pre2_4.height + self.predecoder_spacing/4) \
+                 + num * (self.pre3_8.height + self.predecoder_spacing/4)
         offset = vector(-self.pre3_8.width, height)
         self.pre3x8_inst[num].place(offset)
 
     def place_pre4x16(self, num):
         """ Place 3x8 predecoder to the left of the origin and above any 2x4 decoders """
-        height = self.no_of_pre2x4 * (self.pre2_4.height + self.predecoder_spacing) \
-                 + self.no_of_pre3x8 * (self.pre3_8.height + self.predecoder_spacing) \
-                 + num * (self.pre4_16.height + self.predecoder_spacing)
+        height = self.no_of_pre2x4 * (self.pre2_4.height + self.predecoder_spacing/4) \
+                 + self.no_of_pre3x8 * (self.pre3_8.height + self.predecoder_spacing/4) \
+                 + num * (self.pre4_16.height + self.predecoder_spacing/4)
         offset = vector(-self.pre4_16.width, height)
         self.pre4x16_inst[num].place(offset)
 
@@ -460,6 +674,7 @@ class hierarchical_decoder(design.design):
                                         "vdd", "gnd"]
                                 self.connect_inst(pins)
         else:
+            self.num_inputs = int(self.num_inputs/OPTS.num_all_ports)
             self.dec_cell_inst = []
             if (self.num_inputs == 4 or self.num_inputs == 5):
                 for i in range(len(self.predec_groups[0])):
@@ -508,6 +723,7 @@ class hierarchical_decoder(design.design):
                                         "decode2_{0}".format(output),
                                         "vdd", "gnd"]
                                 self.connect_inst(pins)
+         
             
     def place_row_decoder(self):
         """
@@ -582,18 +798,32 @@ class hierarchical_decoder(design.design):
         """
         Creates vertical metal 2 bus to connect predecoder and decoder stages.
         """
-
+        if OPTS.RF_mode == False:
         # This is not needed for inputs <4 since they have no pre/decode stages.
-        if (self.num_inputs >= 4):
+            if (self.num_inputs >= 4):
             # This leaves an offset for the predecoder output jogs
-            input_bus_names = ["predecode_{0}".format(i) for i in range(self.total_number_of_predecoder_outputs)]
-            self.predecode_bus = self.create_vertical_pin_bus(layer=self.bus_layer,
-                                                              pitch=self.bus_pitch,
-                                                              offset=vector(self.bus_pitch, 0),
-                                                              names=input_bus_names,
-                                                              length=self.height)
-            self.route_bus_to_decoder()
-            self.route_predecodes_to_bus()
+                input_bus_names = ["predecode_{0}".format(i) for i in range(self.total_number_of_predecoder_outputs)]
+                self.predecode_bus = self.create_vertical_pin_bus(layer=self.bus_layer,
+                                                                  pitch=self.bus_pitch,
+                                                                  offset=vector(self.bus_pitch, 0),
+                                                                  names=input_bus_names,
+                                                                  length=self.height)
+        else:
+            input_bus_names = []
+            
+            for port in range(OPTS.num_r_ports):
+                for i in range(int(self.total_number_of_predecoder_outputs)):
+                    input_bus_names.append("read_predecode{}_{}".format(port, i))
+            for port in range(OPTS.num_w_ports):
+                for i in range(int(self.total_number_of_predecoder_outputs)):
+                    input_bus_names.append("write_predecode{}_{}".format(port, i))
+                self.predecode_bus = self.create_vertical_pin_bus(layer=self.bus_layer,
+                                                                  pitch=self.bus_pitch,
+                                                                  offset=vector(self.bus_pitch, 0),
+                                                                  names=input_bus_names,
+                                                                  length=self.height)
+        self.route_bus_to_decoder()
+        self.route_predecodes_to_bus()
 
 
     def route_predecodes_to_bus(self):
@@ -601,35 +831,97 @@ class hierarchical_decoder(design.design):
         Iterates through all of the predecodes
         and connects to the rails including the offsets
         """
+        if OPTS.RF_mode == False:
         # FIXME: convert to connect_bus
-        for pre_num in range(self.no_of_pre2x4):
-            for i in range(4):
-                predecode_name = "predecode_{}".format(pre_num * 4 + i)
-                out_name = "out_{}".format(i)
-                pin = self.pre2x4_inst[pre_num].get_pin(out_name)
-                x_offset = self.pre2x4_inst[pre_num].rx() + self.output_layer_pitch
-                y_offset = self.pre2x4_inst[pre_num].by() + i * self.cell_height
-                self.route_predecode_bus_inputs(predecode_name, pin, x_offset, y_offset, "pre2x4")
+            for pre_num in range(self.no_of_pre2x4):
+                for i in range(4):
+                    predecode_name = "predecode_{}".format(pre_num * 4 + i)
+                    out_name = "out_{}".format(i)
+                    pin = self.pre2x4_inst[pre_num].get_pin(out_name)
+                    x_offset = self.pre2x4_inst[pre_num].rx() + self.output_layer_pitch
+                    y_offset = self.pre2x4_inst[pre_num].by() + i * self.cell_height
+                    self.route_predecode_bus_inputs(predecode_name, pin, x_offset, y_offset, "pre2x4")
 
         # FIXME: convert to connect_bus
-        for pre_num in range(self.no_of_pre3x8):
-            for i in range(8):
-                predecode_name = "predecode_{}".format(pre_num * 8 + i + self.no_of_pre2x4 * 4)
-                out_name = "out_{}".format(i)
-                pin = self.pre3x8_inst[pre_num].get_pin(out_name)
-                x_offset = self.pre3x8_inst[pre_num].rx() + self.output_layer_pitch
-                y_offset = self.pre3x8_inst[pre_num].by() + i * self.cell_height
-                self.route_predecode_bus_inputs(predecode_name, pin, x_offset, y_offset, "pre3x8")
+            for pre_num in range(self.no_of_pre3x8):
+                for i in range(8):
+                    predecode_name = "predecode_{}".format(pre_num * 8 + i + self.no_of_pre2x4 * 4)
+                    out_name = "out_{}".format(i)
+                    pin = self.pre3x8_inst[pre_num].get_pin(out_name)
+                    x_offset = self.pre3x8_inst[pre_num].rx() + self.output_layer_pitch
+                    y_offset = self.pre3x8_inst[pre_num].by() + i * self.cell_height
+                    self.route_predecode_bus_inputs(predecode_name, pin, x_offset, y_offset, "pre3x8")
 
         # FIXME: convert to connect_bus
-        for pre_num in range(self.no_of_pre4x16):
-            for i in range(16):
-                predecode_name = "predecode_{}".format(pre_num * 16 + i + self.no_of_pre3x8 * 8 + self.no_of_pre2x4 * 4)
-                out_name = "out_{}".format(i)
-                pin = self.pre4x16_inst[pre_num].get_pin(out_name)
-                x_offset = self.pre4x16_inst[pre_num].rx() + self.output_layer_pitch
-                y_offset = self.pre4x16_inst[pre_num].by() + i * self.cell_height
-                self.route_predecode_bus_inputs(predecode_name, pin, x_offset, y_offset, "pre4x16")
+            for pre_num in range(self.no_of_pre4x16):
+                for i in range(16):
+                    predecode_name = "predecode_{}".format(pre_num * 16 + i + self.no_of_pre3x8 * 8 + self.no_of_pre2x4 * 4)
+                    out_name = "out_{}".format(i)
+                    pin = self.pre4x16_inst[pre_num].get_pin(out_name)
+                    x_offset = self.pre4x16_inst[pre_num].rx() + self.output_layer_pitch
+                    y_offset = self.pre4x16_inst[pre_num].by() + i * self.cell_height
+                    self.route_predecode_bus_inputs(predecode_name, pin, x_offset, y_offset, "pre4x16")
+        else:
+            for port in range(OPTS.num_r_ports):
+                for pre_num in range(self.no_of_pre2x4):
+                    for i in range(4):
+                        predecode_name = "read_predecode{}_{}".format(port, pre_num * 4 + i)
+                        out_name = "out_{}".format(i)
+                        pin = self.pre2x4_inst[pre_num + port*OPTS.num_r_ports].get_pin(out_name)
+                        x_offset = self.pre2x4_inst[pre_num + port*OPTS.num_r_ports].rx() + self.output_layer_pitch
+                        y_offset = self.pre2x4_inst[pre_num + port*OPTS.num_r_ports].by() + \
+                                   self.pre2x4_inst[pre_num + port*OPTS.num_r_ports].height/8 + i * self.pre2x4_inst[pre_num + port*OPTS.num_r_ports].height/4
+                        self.route_predecode_bus_inputs(predecode_name, pin, x_offset, y_offset, "pre2x4")
+
+                for pre_num in range(self.no_of_pre3x8):
+                    for i in range(8):
+                        predecode_name = "read_predecode{}_{}".format(port, pre_num * 8 + i + self.no_of_pre2x4 * 4)
+                        out_name = "out_{}".format(i)
+                        pin = self.pre3x8_inst[pre_num + port*OPTS.num_r_ports].get_pin(out_name)
+                        x_offset = self.pre3x8_inst[pre_num + port*OPTS.num_r_ports].rx() + self.output_layer_pitch
+                        y_offset = self.pre3x8_inst[pre_num + port*OPTS.num_r_ports].by() + \
+                                   self.pre3x8_inst[pre_num + port*OPTS.num_r_ports].height/16 + i * self.pre3x8_inst[pre_num + port*OPTS.num_r_ports].height/8
+                        self.route_predecode_bus_inputs(predecode_name, pin, x_offset, y_offset, "pre3x8")
+
+                for pre_num in range(self.no_of_pre4x16):
+                    for i in range(16):
+                        predecode_name = "read_predecode{}_{}".format(port, pre_num * 16 + i + self.no_of_pre3x8 * 8 + self.no_of_pre2x4 * 4)
+                        out_name = "out_{}".format(i)
+                        pin = self.pre4x16_inst[pre_num + port*OPTS.num_r_ports].get_pin(out_name)
+                        x_offset = self.pre4x16_inst[pre_num + port*OPTS.num_r_ports].rx() + self.output_layer_pitch
+                        y_offset = self.pre4x16_inst[pre_num + port*OPTS.num_r_ports].by() + \
+                                   self.pre4x16_inst[pre_num + port*OPTS.num_r_ports].height/32 + i * self.pre4x16_inst[pre_num + port*OPTS.num_r_ports].height/16
+                        self.route_predecode_bus_inputs(predecode_name, pin, x_offset, y_offset, "pre4x16")
+            for port in range(OPTS.num_w_ports):
+                for pre_num in range(self.no_of_pre2x4):
+                    for i in range(4):
+                        predecode_name = "write_predecode{}_{}".format(port, pre_num * 4 + i)
+                        out_name = "out_{}".format(i)
+                        pin = self.pre2x4_inst[pre_num + port + self.no_of_pre2x4*OPTS.num_r_ports].get_pin(out_name)
+                        x_offset = self.pre2x4_inst[pre_num + port + self.no_of_pre2x4*OPTS.num_r_ports].rx() + self.output_layer_pitch
+                        y_offset = self.pre2x4_inst[pre_num + port + self.no_of_pre2x4*OPTS.num_r_ports].by() +\
+                                   self.pre2x4_inst[pre_num + port*OPTS.num_r_ports].height/8 + i * self.pre2x4_inst[pre_num + port*OPTS.num_r_ports].height/4
+                        self.route_predecode_bus_inputs(predecode_name, pin, x_offset, y_offset, "pre2x4")
+
+                for pre_num in range(self.no_of_pre3x8):
+                    for i in range(8):
+                        predecode_name = "write_predecode{}_{}".format(port, pre_num * 8 + i + self.no_of_pre2x4 * 4)
+                        out_name = "out_{}".format(i)
+                        pin = self.pre3x8_inst[pre_num + port + self.no_of_pre3x8*OPTS.num_r_ports].get_pin(out_name)
+                        x_offset = self.pre3x8_inst[pre_num + port + self.no_of_pre3x8*OPTS.num_r_ports].rx() + self.output_layer_pitch
+                        y_offset = self.pre3x8_inst[pre_num + port + self.no_of_pre3x8*OPTS.num_r_ports].by() +\
+                                   self.pre3x8_inst[pre_num + port*OPTS.num_r_ports].height/16 + i * self.pre3x8_inst[pre_num + port*OPTS.num_r_ports].height/8
+                        self.route_predecode_bus_inputs(predecode_name, pin, x_offset, y_offset, "pre3x8")
+
+                for pre_num in range(self.no_of_pre4x16):
+                    for i in range(16):
+                        predecode_name = "write_predecode{}_{}".format(port, pre_num * 16 + i + self.no_of_pre3x8 * 8 + self.no_of_pre2x4 * 4)
+                        out_name = "out_{}".format(i)
+                        pin = self.pre4x16_inst[pre_num + port + self.no_of_pre4x16*OPTS.num_r_ports].get_pin(out_name)
+                        x_offset = self.pre4x16_inst[pre_num + port + self.no_of_pre4x16*OPTS.num_r_ports].rx() + self.output_layer_pitch
+                        y_offset = self.pre4x16_inst[pre_num + port + self.no_of_pre4x16*OPTS.num_r_ports].by() + \
+                                   self.pre4x16_inst[pre_num + port*OPTS.num_r_ports].height/32 + i * self.pre4x16_inst[pre_num + port*OPTS.num_r_ports].height/16
+                        self.route_predecode_bus_inputs(predecode_name, pin, x_offset, y_offset, "pre4x16")
 
     def route_bus_to_decoder(self):
         """
@@ -679,51 +971,76 @@ class hierarchical_decoder(design.design):
                                                                  output_index)
                             output_index = output_index + 1
         else:
-            num_iter = 0
             if (self.num_inputs == 4 or self.num_inputs == 5):
-                for index_B in self.predec_groups[1]:
-                    for index_A in self.predec_groups[0]:
-                        num_iter +=1
-                        if (output_index >= self.num_outputs/OPTS.num_all_ports):
-                            break
-                        else:
-                            if num_iter == OPTS.num_all_ports:
-                                output_index = output_index + 1
-                                num_iter = 0
-                            
-                            predecode_name = "predecode_{}".format(index_A)
-                            self.route_predecode_bus_outputs(predecode_name,
-                                                             self.dec_cell_inst[output_index].get_pin("A{0}".format(num_iter)),
-                                                             output_index)
-                            predecode_name = "predecode_{}".format(index_B)
-                            self.route_predecode_bus_outputs(predecode_name,
-                                                             self.dec_cell_inst[output_index].get_pin("B{0}".format(num_iter)),
-                                                             output_index)
-                            
-
-            elif (self.num_inputs > 5):
-                for index_C in self.predec_groups[2]:
+                for port in range(OPTS.num_r_ports):
+                    output_index = int(self.num_outputs/OPTS.num_all_ports - 1)
                     for index_B in self.predec_groups[1]:
                         for index_A in self.predec_groups[0]:
-                            num_iter +=1
-                            if num_iter == OPTS.num_all_ports:
-                                    output_index = output_index + 1
-                                    num_iter = 0
-                            if (output_index > self.num_outputs/OPTS.num_all_ports-1):
-                                break
-                            else:
-                                predecode_name = "predecode_{}".format(index_A)
-                                self.route_predecode_bus_outputs(predecode_name,
-                                                                 self.dec_cell_inst[output_index].get_pin("A{0}".format(num_iter)),
-                                                                 output_index)
-                                predecode_name = "predecode_{}".format(index_B)
-                                self.route_predecode_bus_outputs(predecode_name,
-                                                                 self.dec_cell_inst[output_index].get_pin("B{0}".format(num_iter)),
-                                                                 output_index)
-                                predecode_name = "predecode_{}".format(index_C)
-                                self.route_predecode_bus_outputs(predecode_name,
-                                                                 self.dec_cell_inst[output_index].get_pin("C{0}".format(num_iter)),
-                                                                 output_index)
+                            if (output_index >= 0):
+                                    predecode_name = "read_predecode{}_{}".format(port, index_A)
+                                    self.route_predecode_bus_outputs(predecode_name,
+                                                                     self.dec_cell_inst[output_index].get_pin("A{0}".format(port)),
+                                                                     output_index)
+                                    predecode_name = "read_predecode{}_{}".format(port, index_B)
+                                    self.route_predecode_bus_outputs(predecode_name,
+                                                                     self.dec_cell_inst[output_index].get_pin("B{0}".format(port)),
+                                                                     output_index)
+                            output_index = output_index - 1
+                        
+                for port in range(OPTS.num_w_ports):
+                    output_index = int(self.num_outputs/OPTS.num_all_ports - 1)
+                    for index_B in self.predec_groups[1]:
+                        for index_A in self.predec_groups[0]:
+                            if (output_index >= 0):
+                                    predecode_name = "write_predecode{}_{}".format(port, index_A)
+                                    self.route_predecode_bus_outputs(predecode_name,
+                                                                     self.dec_cell_inst[output_index].get_pin("A{0}".format(port + OPTS.num_r_ports)),
+                                                                     output_index)
+                                    predecode_name = "write_predecode{}_{}".format(port, index_B)
+                                    self.route_predecode_bus_outputs(predecode_name,
+                                                                     self.dec_cell_inst[output_index].get_pin("B{0}".format(port + OPTS.num_r_ports)),
+                                                                     output_index)
+                            output_index = output_index -1
+
+            elif (self.num_inputs > 5):
+                for port in range(OPTS.num_r_ports):
+                    output_index = int(self.num_outputs/OPTS.num_all_ports - 1)
+                    for index_C in self.predec_groups[2]:
+                        for index_B in self.predec_groups[1]:
+                            for index_A in self.predec_groups[0]:
+                                if (output_index >= 0):
+                                        predecode_name = "read_predecode{}_{}".format(port, index_A)
+                                        self.route_predecode_bus_outputs(predecode_name,
+                                                                         self.dec_cell_inst[output_index].get_pin("A{0}".format(port)),
+                                                                         output_index)
+                                        predecode_name = "read_predecode{}_{}".format(port, index_B)
+                                        self.route_predecode_bus_outputs(predecode_name,
+                                                                         self.dec_cell_inst[output_index].get_pin("B{0}".format(port)),
+                                                                         output_index)
+                                        predecode_name = "read_predecode{}_{}".format(port, index_C)
+                                        self.route_predecode_bus_outputs(predecode_name,
+                                                                         self.dec_cell_inst[output_index].get_pin("C{0}".format(port)),
+                                                                         output_index)
+                                output_index = output_index - 1
+                for port in range(OPTS.num_w_ports):
+                    output_index = int(self.num_outputs/OPTS.num_all_ports - 1)
+                    for index_C in self.predec_groups[2]:
+                        for index_B in self.predec_groups[1]:
+                            for index_A in self.predec_groups[0]:
+                                if (output_index >= 0):
+                                        predecode_name = "write_predecode{}_{}".format(port, index_A)
+                                        self.route_predecode_bus_outputs(predecode_name,
+                                                                         self.dec_cell_inst[output_index].get_pin("A{0}".format(port + OPTS.num_r_ports)),
+                                                                         output_index)
+                                        predecode_name = "write_predecode{}_{}".format(port, index_B)
+                                        self.route_predecode_bus_outputs(predecode_name,
+                                                                         self.dec_cell_inst[output_index].get_pin("B{0}".format(port + OPTS.num_r_ports)),
+                                                                         output_index)
+                                        predecode_name = "write_predecode{}_{}".format(port, index_C)
+                                        self.route_predecode_bus_outputs(predecode_name,
+                                                                         self.dec_cell_inst[output_index].get_pin("C{0}".format(port + OPTS.num_r_ports)),
+                                                                         output_index)   
+                                output_index = output_index - 1
 
     def route_vdd_gnd(self):
         """

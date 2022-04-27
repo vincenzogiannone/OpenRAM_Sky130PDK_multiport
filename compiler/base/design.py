@@ -263,8 +263,6 @@ class design(hierarchy_design):
                 contact_width = contact1.first_layer_width
         layer_space = getattr(design, layer1 + "_space")
 
-        #print(layer_stack)
-        #print(contact1)
         pitch = contact_width + layer_space
 
         return utils.round_to_grid(pitch)

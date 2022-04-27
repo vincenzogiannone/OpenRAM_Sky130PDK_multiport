@@ -51,8 +51,10 @@ class sense_amp_array(design.design):
         return bl_name
         
     def get_rbl_name(self):
-        rbl_name = "rbl"
-        return rbl_name
+        rbl_names = []
+        rbl_names.append("rbl0")
+        rbl_names.append("rbl1")
+        return rbl_names
     
     def get_br_name(self):
         br_name = "br"
@@ -96,8 +98,9 @@ class sense_amp_array(design.design):
             self.add_pin("gnd", "GROUND")
         else:
             for i in range(0, self.word_size + self.num_spare_cols):
-                self.add_pin(self.data_name + "_{0}".format(i), "OUTPUT")
-                self.add_pin(self.get_rbl_name() + "_{0}".format(i), "INPUT")
+                for port in range(OPTS.num_r_ports):
+                    self.add_pin("dout{0}_{1}".format(port, i), "OUTPUT")
+                    self.add_pin(self.get_rbl_name()[port] + "_{}".format(i), "INPUT")
             self.add_pin("vdd", "POWER")
             self.add_pin("gnd", "GROUND")
 
@@ -129,8 +132,8 @@ class sense_amp_array(design.design):
                     name = "sa{1}_d{0}".format(i, port)
                     self.local_insts.append(self.add_inst(name=name,
                                                           mod=self.amp))
-                    self.connect_inst([self.get_rbl_name() + "{1}_{0}".format(i, port),
-                                       self.data_name + "{1}_{0}".format(i, port),
+                    self.connect_inst([self.get_rbl_name()[port] + "_{0}".format(i),
+                                       "dout{1}_{0}".format(i, port),
                                        "vdd", "gnd"])
 
     def place_sense_amp_array(self):
@@ -216,20 +219,21 @@ class sense_amp_array(design.design):
             #    self.local_insts[index].place(offset=amp_position, mirror=mirror)      
                          
     def add_layout_pins(self):
-        for i in range(len(self.local_insts)):
-            inst = self.local_insts[i]
+        if OPTS.RF_mode == False:
+            for i in range(len(self.local_insts)):
+                inst = self.local_insts[i]
 
-            for gnd_pin in inst.get_pins("gnd"):
-                self.copy_power_pin(gnd_pin)
+                for gnd_pin in inst.get_pins("gnd"):
+                    self.copy_power_pin(gnd_pin)
 
-            for vdd_pin in inst.get_pins("vdd"):
-                self.copy_power_pin(vdd_pin)
-
-            
-            dout_pin = inst.get_pin(inst.mod.dout_name)
+                for vdd_pin in inst.get_pins("vdd"):
+                    self.copy_power_pin(vdd_pin)
 
             
-            if OPTS.RF_mode == False:
+                dout_pin = inst.get_pin(inst.mod.dout_name)
+
+            
+            
                 bl_pin = inst.get_pin(inst.mod.get_bl_names())
                 br_pin = inst.get_pin(inst.mod.get_br_names())
                 self.add_layout_pin(text=self.get_bl_name() + "_{0}".format(i),
@@ -248,20 +252,32 @@ class sense_amp_array(design.design):
                                     offset=dout_pin.ll(),
                                     width=dout_pin.width(),
                                     height=dout_pin.height())
-            else:
-                rbl_pin = inst.get_pin(inst.mod.get_rbl_names())
-                self.add_layout_pin(text=self.get_rbl_name() + "_{0}".format(i),
-                                    layer=rbl_pin.layer,
-                                    offset=rbl_pin.ll(),
-                                    width=rbl_pin.width(),
-                                    height=rbl_pin.height())
+        else:
+            for i in range(self.word_size):
+                for port in range(OPTS.num_r_ports):
+                    x = 2*i + port
+                    inst = self.local_insts[x]
 
-                self.add_layout_pin(text=self.data_name + "_{0}".format(i),
-                                    layer=dout_pin.layer,
-                                    offset=dout_pin.ll(),
-                                    width=dout_pin.width(),
-                                    height=dout_pin.height())
+                    for gnd_pin in inst.get_pins("gnd"):
+                        self.copy_power_pin(gnd_pin)
 
+                    for vdd_pin in inst.get_pins("vdd"):
+                        self.copy_power_pin(vdd_pin)
+
+                    dout_pin = inst.get_pin(inst.mod.dout_name)
+                    rbl_pin = inst.get_pin(inst.mod.get_rbl_names())
+                    self.add_layout_pin(text=self.get_rbl_name()[port] + "_{0}".format(i),
+                                        layer=rbl_pin.layer,
+                                        offset=rbl_pin.ll(),
+                                        width=rbl_pin.width(),
+                                        height=rbl_pin.height())
+
+                    self.add_layout_pin(text=self.data_name + "{0}_{1}".format(port, i),
+                                        layer=dout_pin.layer,
+                                        offset=dout_pin.ll(),
+                                        width=dout_pin.width(),
+                                        height=dout_pin.height())
+                
     def route_rails(self):
         # Add enable across the array
         en_pin = self.amp.get_pin(self.amp.en_name)

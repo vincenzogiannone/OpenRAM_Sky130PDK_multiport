@@ -119,7 +119,7 @@ def write_drc_script(cell_name, gds_name, extract, final_verification, output_pa
     if final_verification and OPTS.route_supplies:
         f.write(pre + "extract unique all\n")
     # Hack to work around unit scales in SkyWater
-    if OPTS.tech_name=="sky130":
+    if OPTS.tech_name=="sky130A":
         f.write(pre + "extract style ngspice(si)\n")
     f.write(pre + "extract\n")
     f.write('puts "Finished extract"\n')
@@ -146,6 +146,10 @@ def write_drc_script(cell_name, gds_name, extract, final_verification, output_pa
     f.write("quit -noprompt\n")
     f.write("EOF\n")
     f.write("magic_retcode=$?\n")
+    f.write('mkdir ext\n')
+    f.write('mkdir mag\n')
+    f.write('mv ./*.mag ./mag\n')
+    f.write('mv ./*.ext ./ext\n')
     f.write('echo "$(date): Finished ($magic_retcode) GDS to MAG using Magic {}"\n'.format(OPTS.drc_exe[1]))
     f.write("exit $magic_retcode\n")
 

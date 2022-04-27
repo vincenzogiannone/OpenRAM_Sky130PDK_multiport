@@ -125,7 +125,7 @@ class pinv(pgate.pgate):
         # Subtract the poly space under the rail of the tx
         nmos_height_available = 0.5 * tx_height_available - 0.5 * self.poly_space
         pmos_height_available = 0.5 * tx_height_available - 0.5 * self.poly_space
-
+   
         debug.info(2,
                    "Height avail {0:.4f} PMOS {1:.4f} NMOS {2:.4f}".format(tx_height_available,
                                                                            nmos_height_available,
@@ -140,7 +140,6 @@ class pinv(pgate.pgate):
             pmos_required_mults = max(int(ceil(self.pmos_width / pmos_height_available)), 1)
             # The mults must be the same for easy connection of poly
             self.tx_mults = max(nmos_required_mults, pmos_required_mults)
-
             # Recompute each mult width and check it isn't too small
             # This could happen if the height is narrow and the size is small
             # User should pick a bigger size to fix it...

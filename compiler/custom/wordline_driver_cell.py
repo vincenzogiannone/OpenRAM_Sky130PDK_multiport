@@ -18,9 +18,14 @@ class wordline_driver_cell(design.design):
 
     def __init__(self, name="wordline_driver_cell", height=None):
         super().__init__(name, prop=props.wordline_driver_cell)
+        self.size = 0.55
+        self.cin = 2.31
+
+    
+    def input_load(self):
         
-
-
+        return 2.31
+    
     def get_stage_effort(self, cout, inp_is_rise=True):
         """
         Returns an object representing the parameters for delay in tau units.
@@ -28,6 +33,8 @@ class wordline_driver_cell(design.design):
         Input inverted by this stage.
         """
         parasitic_delay = 2
+        
+        
         return logical_effort.logical_effort(self.name,
                                              self.size,
                                              self.input_load(),

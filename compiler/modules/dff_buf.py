@@ -188,4 +188,4 @@ class dff_buf(design.design):
         a2_pin = self.inv2_inst.get_pin("A")
         self.add_via_stack_center(from_layer=a2_pin.layer,
                                   to_layer="m2",
-                                  offset=qb_pos)
+                                  offset=qb_pos - vector(0, 0.085)) # Displacement introduced to avoid a design rule violation on control logic

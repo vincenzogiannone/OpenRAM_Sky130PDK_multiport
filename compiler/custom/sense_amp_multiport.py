@@ -23,9 +23,6 @@ class sense_amp_multiport(design.design):
     def __init__(self, name="sense_amp"):
         super().__init__(name, prop=props.sense_amp_multiport)
         debug.info(2, "Create sense_amp")
-
-    def get_bl_names(self):
-        return "bl"
         
     def get_rbl_names(self):
         return "rbl"

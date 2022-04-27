@@ -78,8 +78,8 @@ class bank(design.design):
 
         # These are used for other placements (e.g. address flops)
         if OPTS.RF_mode == False:
-            self.predecoder_top = self.port_address[-1].predecoder_height + self.port_address_inst[-1].by()
-            self.predecoder_bottom = self.port_address_inst[-1].by()
+            self.predecoder_top = self.port_address[0].predecoder_height + self.port_address_inst[0].by()
+            self.predecoder_bottom = self.port_address_inst[0].by()
         else:
             self.predecoder_top = self.port_address[-1].predecoder_height + self.port_address_inst.by()
             self.predecoder_bottom = self.port_address_inst.by()
@@ -127,9 +127,12 @@ class bank(design.design):
             for bit in range(self.word_size + self.num_spare_cols):
                 for port in range(OPTS.num_w_ports):
                     self.add_pin("din{0}_{1}".format(port, bit), "INPUT")
-            for bit in range(self.addr_size):
-                    self.add_pin("addr{}".format(bit), "INPUT")
-
+            for port in range(OPTS.num_r_ports):
+                for bit in range(self.addr_size):
+                        self.add_pin("read_addr{}_{}".format(port, bit), "INPUT")
+            for port in range(OPTS.num_w_ports):
+                for bit in range(self.addr_size):
+                        self.add_pin("write_addr{}_{}".format(port, bit), "INPUT")
         # For more than one bank, we have a bank select and name
         # the signals gated_*.
             if self.num_banks > 1:
@@ -175,24 +178,23 @@ class bank(design.design):
         """ Route the rbl_bl and rbl_wl """
 
         # Connect the rbl to the port data pin
-        if OPTS.RF_mode == False:
-            bl_pin = self.port_data_inst[port].get_pin("rbl_bl")
-            if port % 2:
-                pin_pos = bl_pin.uc()
-                pin_offset = pin_pos + vector(0, self.m3_pitch)
-                left_right_offset = vector(self.max_x_offset, pin_offset.y)
-            else:
-                pin_pos = bl_pin.bc()
-                pin_offset = pin_pos - vector(0, self.m3_pitch)
-                left_right_offset = vector(self.min_x_offset, pin_offset.y)
-            self.add_via_stack_center(from_layer=bl_pin.layer,
-                                      to_layer="m3",
-                                      offset=pin_offset)
-            self.add_path(bl_pin.layer, [pin_offset, pin_pos])
-            self.add_layout_pin_segment_center(text="rbl_bl_{0}_{0}".format(port),
-                                               layer="m3",
-                                               start=left_right_offset,
-                                               end=pin_offset)
+        bl_pin = self.port_data_inst[port].get_pin("rbl_bl")
+        if port % 2:
+            pin_pos = bl_pin.uc()
+            pin_offset = pin_pos + vector(0, self.m3_pitch)
+            left_right_offset = vector(self.max_x_offset, pin_offset.y)
+        else:
+            pin_pos = bl_pin.bc()
+            pin_offset = pin_pos - vector(0, self.m3_pitch)
+            left_right_offset = vector(self.min_x_offset, pin_offset.y)
+        self.add_via_stack_center(from_layer=bl_pin.layer,
+                                  to_layer="m3",
+                                  offset=pin_offset)
+        self.add_path(bl_pin.layer, [pin_offset, pin_pos])
+        self.add_layout_pin_segment_center(text="rbl_bl_{0}_{0}".format(port),
+                                           layer="m3",
+                                           start=left_right_offset,
+                                           end=pin_offset)
 
     def route_bitlines(self, port):
         """ Route the bitlines depending on the port type rw, w, or r. """
@@ -279,7 +281,7 @@ class bank(design.design):
         else:
             self.port_data_offsets = vector(0, -self.port_data_inst.height-5*self.m2_pitch)
         # To the left of the bitcell array above the predecoders and control logic
-        x_offset = self.m2_gap + self.port_address[-1].width
+        x_offset = self.m2_gap + self.port_address[0].width
         self.port_address_offsets = vector(-x_offset,
                                                  self.main_bitcell_array_bottom)
 
@@ -289,7 +291,7 @@ class bank(design.design):
         # control logic to allow control signals to easily pass over in M3
         # by placing 1 1/4 a cell pitch down because both power connections and inputs/outputs
         # may be routed in M3 or M4
-        x_offset = self.central_bus_width[port] + self.port_address[-1].wordline_driver_array.width
+        x_offset = self.central_bus_width[port] + self.port_address[port].wordline_driver_array.width
         if self.col_addr_size > 0:
             x_offset += self.column_decoder.width + self.col_addr_bus_width
             y_offset = 1.25 * self.dff.height + self.column_decoder.height
@@ -301,7 +303,10 @@ class bank(design.design):
             self.column_decoder_offsets = vector(-x_offset, -y_offset)
         # Bank select gets placed below the column decoder (x_offset doesn't change)
         if self.col_addr_size > 0:
-            y_offset = min(self.column_decoder_offsets.y, self.port_data.column_mux_offset.y)
+            if OPTS.RF_mode == False:
+                y_offset = min(self.column_decoder_offsets[port].y, self.port_data[port].column_mux_offset.y)
+            else:
+                y_offset = min(self.column_decoder_offsets.y, self.port_data.column_mux_offset.y)
         else:
             y_offset = self.port_address_offsets[-1].y
         if self.num_banks > 1:
@@ -324,7 +329,9 @@ class bank(design.design):
 
         # LOWER RIGHT QUADRANT
         # To the right of the bitcell array
-        
+        x_offset = self.bitcell_array_right + self.port_address[port].width + self.m2_gap
+        self.port_address_offsets[port] = vector(x_offset,
+                                                 self.main_bitcell_array_bottom)
 
         # UPPER RIGHT QUADRANT
         # Place the col decoder right aligned with wordline driver
@@ -333,7 +340,7 @@ class bank(design.design):
         # control logic to allow control signals to easily pass over in M3
         # by placing 1 1/4 a cell pitch down because both power connections and inputs/outputs
         # may be routed in M3 or M4
-        x_offset = self.bitcell_array_right  + self.central_bus_width[port] + self.port_address[-1].wordline_driver_array.width
+        x_offset = self.bitcell_array_right  + self.central_bus_width[port] + self.port_address[port].wordline_driver_array.width
         if self.col_addr_size > 0:
             x_offset += self.column_decoder.width + self.col_addr_bus_width
             y_offset = self.bitcell_array_top + 1.25 * self.dff.height + self.column_decoder.height
@@ -346,7 +353,7 @@ class bank(design.design):
             y_offset = max(self.column_decoder_offsets[port].y + self.column_decoder.height,
                            self.port_data[port].column_mux_offset.y + self.port_data[port].column_mux_array.height)
         else:
-            y_offset = self.port_address_offsets[-1].y
+            y_offset = self.port_address_offsets[port].y
         self.bank_select_offsets[port] = vector(x_offset, y_offset)
 
     def place_instances(self):
@@ -368,10 +375,7 @@ class bank(design.design):
         self.num_cols = int(self.words_per_row * self.word_size)
         self.num_rows_temp = int(self.num_words / self.words_per_row)
         self.num_rows = self.num_rows_temp + self.num_spare_rows
-        if OPTS.RF_mode == False:
-            self.row_addr_size = ceil(log(self.num_rows, 2))
-        else:
-            self.row_addr_size = ceil(log(OPTS.num_all_ports*self.num_rows, 2))
+        self.row_addr_size = ceil(log(self.num_rows, 2))
         self.col_addr_size = int(log(self.words_per_row, 2))
         self.addr_size = self.col_addr_size + self.row_addr_size
 
@@ -392,7 +396,6 @@ class bank(design.design):
             for port in range(OPTS.num_r_ports):
                 self.input_control_signals.append(["p_en_bar{}".format(port_num), "s_en{}".format(port_num)])
                 port_num += 1
-
         # Number of control lines in the bus for each port
             self.num_control_lines = [len(x) for x in self.input_control_signals]
 
@@ -592,9 +595,9 @@ class bank(design.design):
             # Will be empty if no col addr lines
             sel_names = ["sel{0}_{1}".format(port, x) for x in range(self.num_col_addr_lines)]
             tmp.extend(sel_names)
-            tmp.append("p_en_bar{0}".format(port))
+            tmp.append("p_en_bar")
             for port in range(OPTS.num_w_ports):
-                tmp.append("w_en{0}".format(port))
+                tmp.append("w_en")
                 #for bit in range(self.num_wmasks):
                  #   temp.append("bank_wmask{0}_{1}".format(port, bit))#FIXME
                 #for bit in range(self.num_spare_cols):
@@ -637,8 +640,12 @@ class bank(design.design):
             self.port_address_inst = self.add_inst(name="port_address",
                                                    mod=self.port_address[-1])
             temp = []
-            for bit in range(self.row_addr_size):
-                temp.append("addr{}".format(bit + self.col_addr_size))
+            for port in range(OPTS.num_r_ports):
+                for bit in range(self.row_addr_size):
+                    temp.append("read_addr{}_{}".format(port, bit + self.col_addr_size))
+            for port in range(OPTS.num_w_ports):
+                for bit in range(self.row_addr_size):
+                    temp.append("write_addr{}_{}".format(port, bit + self.col_addr_size))
             temp.append("wl_en")
             wordline_names = self.bitcell_array.get_wordline_names()
             temp.extend(wordline_names)         
@@ -735,7 +742,7 @@ class bank(design.design):
 
             temp = []
             for bit in range(self.col_addr_size):
-                temp.append("addr{0}".format(bit))
+                temp.append("addr_{0}".format(bit))
             for bit in range(self.num_col_addr_lines):
                 temp.append("sel{0}".format(bit))
             temp.extend(["vdd", "gnd"])
@@ -972,15 +979,21 @@ class bank(design.design):
         else:
             inst2 = self.port_data_inst
             inst1 = self.bitcell_array_inst
-            inst1_rbl_name = [x for x in self.bitcell_array.get_read_bitline_names(port)]
-            inst1_wbl_name = [x for x in self.bitcell_array.get_write_bitline_names(port)]
+            inst1_rbl_name = []
+            inst1_wbl_name = []
             inst2_rbl_name = []
             inst2_wbl_name = []
+            temp=[]
+            for col in range(self.num_cols):
+                for port in range(OPTS.num_r_ports):
+                    inst1_rbl_name.append("rbl{}_{}".format(port, col))
+                for port in range(OPTS.num_w_ports):
+                    inst1_wbl_name.append("wbl{}_{}".format(port, col))
             for col in range(self.num_cols):
                 for port in range(OPTS.num_r_ports):
                     inst2_rbl_name.append(inst2.mod.get_rbl_names()[port] + "_{}".format(col))
                 for port in range(OPTS.num_w_ports):    
-                    inst2_wbl_name.append(inst2.mod.get_wbl_names()[port] + "_{}".format(col))
+                    inst2_wbl_name.append(inst2.mod.get_wbl_names() + "{}_{}".format(port, col))
             for col in range(self.num_spare_cols):
                 for port in range(OPTS.num_r_ports):
                     inst2_rbl_name.append("spare" + inst2.mod.get_rbl_names()[port] + "_{}".format(col))
@@ -1023,11 +1036,18 @@ class bank(design.design):
                 addr_name = "addr{0}_{1}".format(port, addr_idx)
                 self.copy_layout_pin(self.port_address_inst[port], decoder_name, addr_name)
         else:
-            for row in range(self.row_addr_size):
-                addr_idx = row + self.col_addr_size
-                decoder_name = "addr{}".format(row)
-                addr_name = "addr{0}".format(addr_idx)
-                self.copy_layout_pin(self.port_address_inst, decoder_name, addr_name)
+            for port in range(OPTS.num_r_ports):
+                for row in range(self.row_addr_size):
+                    addr_idx = row + self.col_addr_size
+                    decoder_name = "read_addr{}_{}".format(port, row)
+                    addr_name = "read_addr{}_{}".format(port, addr_idx)
+                    self.copy_layout_pin(self.port_address_inst, decoder_name, addr_name)
+            for port in range(OPTS.num_w_ports):
+                for row in range(self.row_addr_size):
+                    addr_idx = row + self.col_addr_size
+                    decoder_name = "write_addr{}_{}".format(port, row)
+                    addr_name = "write_addr{}_{}".format(port, addr_idx)
+                    self.copy_layout_pin(self.port_address_inst, decoder_name, addr_name)
 
     def route_port_data_in(self, port):
         """ Connecting port data in   """
@@ -1304,7 +1324,7 @@ class bank(design.design):
                     addr_name = "addr{0}".format(i)
                     self.copy_layout_pin(self.column_decoder_inst, decoder_name, addr_name)
 
-            offset = self.column_decoder_inst.ll() - vector((self.num_col_addr_lines + 1) * pitch, 0)
+            offset = self.column_decoder_inst.lr() + vector(pitch, 0)
 
             decode_pins = [self.column_decoder_inst.get_pin(x) for x in decode_names]
 

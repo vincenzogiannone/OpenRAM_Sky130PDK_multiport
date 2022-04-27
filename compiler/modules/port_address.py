@@ -21,10 +21,7 @@ class port_address(design.design):
     def __init__(self, cols, rows, port, name=""):
         self.num_cols = cols   
         self.port = port
-        if OPTS.RF_mode == False:
-            self.num_rows = rows     
-        else:
-            self.num_rows = rows*OPTS.num_all_ports     
+        self.num_rows = rows     
         self.addr_size = ceil(log(self.num_rows, 2))
         if name == "":
             name = "port_address_{0}_{1}".format(cols, rows)
@@ -66,10 +63,14 @@ class port_address(design.design):
                 self.add_pin("wl_{0}".format(bit), "OUTPUT")
             self.add_pin("rbl_wl", "OUTPUT")
         else:
-            for bit in range(self.addr_size):
-                self.add_pin("addr{}".format(bit), "INPUT")
+            for port in range(OPTS.num_r_ports):
+                for bit in range(self.addr_size):
+                    self.add_pin("read_addr{}_{}".format(port, bit), "INPUT")
+            for port in range(OPTS.num_w_ports):
+                for bit in range(self.addr_size):
+                    self.add_pin("write_addr{}_{}".format(port, bit), "INPUT")
             self.add_pin("wl_en", "INPUT")
-            for bit in range(int(self.num_rows/OPTS.num_all_ports)):
+            for bit in range(int(self.num_rows)):
                 for port in range(OPTS.num_r_ports):
                     self.add_pin("rwl{}_{}".format(port, bit))
                 for port in range(OPTS.num_w_ports):
@@ -93,6 +94,7 @@ class port_address(design.design):
             for inst in [self.wordline_driver_array_inst, self.row_decoder_inst]:
                 self.copy_power_pins(inst, "vdd")
                 self.copy_power_pins(inst, "gnd")
+
             for rbl_vdd_pin in self.rbl_driver_inst.get_pins("vdd"):
                 if layer_props.port_address.supply_offset:
                     self.copy_power_pin(rbl_vdd_pin)
@@ -117,10 +119,15 @@ class port_address(design.design):
                 self.copy_layout_pin(self.wordline_driver_array_inst, driver_name)
             self.copy_layout_pin(self.rbl_driver_inst, "Z", "rbl_wl")
         else:
-            for row in range(self.addr_size):
-                decoder_name = "addr{}".format(row)
-                self.copy_layout_pin(self.row_decoder_inst, "addr_{}".format(row), decoder_name)
-            for row in range(int(self.num_rows/OPTS.num_all_ports)):
+            for port in range(OPTS.num_r_ports):
+                for row in range(self.addr_size):
+                    decoder_name = "read_addr{}_{}".format(port, row)
+                    self.copy_layout_pin(self.row_decoder_inst, "read_addr{}_{}".format(port, row), decoder_name)
+            for port in range(OPTS.num_w_ports):
+                for row in range(self.addr_size):
+                    decoder_name = "write_addr{}_{}".format(port, row)
+                    self.copy_layout_pin(self.row_decoder_inst, "write_addr{}_{}".format(port, row), decoder_name)
+            for row in range(int(self.num_rows)):
                 for port in range(OPTS.num_r_ports):
                     driver_name = "rwl{}_{}".format(port, row)
                     self.copy_layout_pin(self.wordline_driver_array_inst, "rwl{}_{}".format(port, row), driver_name)
@@ -147,24 +154,24 @@ class port_address(design.design):
                                           offset=driver_in_pos)
 
         # Route the RBL from the enable input
-                en_pin = self.wordline_driver_array_inst.get_pin("en")
-                if self.port == 0:
-                    en_pos = en_pin.bc()
-                else:
-                    en_pos = en_pin.uc()
-                rbl_in_pin = self.rbl_driver_inst.get_pin("A")
-                rbl_in_pos = rbl_in_pin.center()
+            en_pin = self.wordline_driver_array_inst.get_pin("en")
+            if self.port == 0:
+                en_pos = en_pin.bc()
+            else:
+                en_pos = en_pin.uc()
+            rbl_in_pin = self.rbl_driver_inst.get_pin("A")
+            rbl_in_pos = rbl_in_pin.center()
 
-                self.add_via_stack_center(from_layer=rbl_in_pin.layer,
-                                          to_layer=en_pin.layer,
-                                          offset=rbl_in_pos)
-                self.add_zjog(layer=en_pin.layer,
-                              start=rbl_in_pos,
-                              end=en_pos,
-                              first_direction="V")
-                self.add_layout_pin_rect_center(text="wl_en",
-                                                layer=en_pin.layer,
-                                                offset=rbl_in_pos)
+            self.add_via_stack_center(from_layer=rbl_in_pin.layer,
+                                      to_layer=en_pin.layer,
+                                      offset=rbl_in_pos)
+            self.add_zjog(layer=en_pin.layer,
+                          start=rbl_in_pos,
+                          end=en_pos,
+                          first_direction="V")
+            self.add_layout_pin_rect_center(text="wl_en",
+                                            layer=en_pin.layer,
+                                            offset=rbl_in_pos)
         else:
             for row in range(int(self.num_rows/OPTS.num_all_ports)):
                 for port in range(OPTS.num_all_ports):
@@ -193,13 +200,17 @@ class port_address(design.design):
                                             offset=en_pos) 
 
     def add_modules(self):
-        self.row_decoder = factory.create(module_type="decoder",
-                                          num_outputs=self.num_rows)
+        if OPTS.RF_mode == False:
+            self.row_decoder = factory.create(module_type="decoder",
+                                              num_outputs=self.num_rows)
+        else:
+            self.row_decoder = factory.create(module_type="decoder",
+                                              num_outputs=self.num_rows*OPTS.num_all_ports)
         
         self.add_mod(self.row_decoder)
 
         self.wordline_driver_array = factory.create(module_type="wordline_driver_array",
-                                                    rows=self.num_rows,
+                                                    rows=self.num_rows*OPTS.num_all_ports,
                                                     cols=self.num_cols)
         self.add_mod(self.wordline_driver_array)
 
@@ -246,10 +257,15 @@ class port_address(design.design):
             self.row_decoder_inst = self.add_inst(name="row_decoder",
                                              mod=self.row_decoder)
             temp = []
-            for bit in range(self.addr_size):
-                temp.append("addr{}".format(bit))
-            for row in range(self.num_rows):
-                temp.append("dec_out{}".format(row))
+            for port in range(OPTS.num_r_ports):
+                for bit in range(self.addr_size):
+                    temp.append("read_addr{}_{}".format(port, bit))
+            for port in range(OPTS.num_w_ports):
+                for bit in range(self.addr_size):
+                    temp.append("write_addr{}_{}".format(port, bit))
+            for row in range(int(self.num_rows)):
+                for port in range(OPTS.num_all_ports):
+                    temp.append("decode{}_{}".format(port, row))
             temp.append("vdd")
             temp.append("gnd")
             self.connect_inst(temp)
@@ -279,7 +295,7 @@ class port_address(design.design):
             for row in range(self.num_rows):
                 temp.append("dec_out_{0}".format(row))
             for row in range(self.num_rows):
-                temp.append("wl{0}".format(row))
+                temp.append("wl_{0}".format(row))
             temp.append("wl_en")
             temp.append("vdd")
             temp.append("gnd")
@@ -290,9 +306,10 @@ class port_address(design.design):
                                                         mod=self.wordline_driver_array)
 
             temp = []
-            for row in range(self.num_rows):
-                temp.append("dec_out{}".format(row))
-            for row in range(int(self.num_rows/OPTS.num_all_ports)):
+            for row in range(int(self.num_rows)):
+                for port in range(OPTS.num_all_ports):
+                    temp.append("in{}_{}".format(port, row))
+            for row in range(int(self.num_rows)):
                 for port in range(OPTS.num_r_ports):
                     temp.append("rwl{}_{}".format(port, row))
                 for port in range(OPTS.num_w_ports):

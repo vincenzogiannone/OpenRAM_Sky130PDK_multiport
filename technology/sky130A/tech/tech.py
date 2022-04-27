@@ -1,4 +1,3 @@
-# Created by: ShoanT (taware.shon@gmail.com)
 # Saturday 06 March 2021 10∶52∶14 PM
 #
 import os
@@ -173,13 +172,13 @@ _lambda_ = 1
 #technology parameter
 parameter={}
 parameter["min_tx_size"] = 0.42
-parameter["beta"] = 3
+parameter["beta"] = 3.13
 
 # These 6T sizes are used in the parameterized bitcell.
 parameter["6T_inv_nmos_size"] = 1.26
 parameter["6T_inv_pmos_size"] = 0.55
 parameter["6T_access_size"] = 0.42
-parameter["cell2r1w_read_access_size"] = 0.42
+parameter["cell2r1w_read_access_size"] = 0.84
 parameter["cell2r1w_write_access_size"] = 0.84
 parameter["cell2r1w_inv_nmos_size"] = 0.42
 parameter["cell2r1w_inv_pmos_size"] = 0.84
@@ -392,7 +391,7 @@ drc.add_layer("m3",
 drc.add_enclosure("m3",
                   layer = "via2",
                   enclosure = 0.065,
-                  extension = 0.26)
+                  extension = 0.28)
 
 # 21.3 Minimum overlap by m3
 drc.add_enclosure("m3",

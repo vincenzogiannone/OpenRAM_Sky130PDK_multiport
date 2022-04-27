@@ -1,0 +1,111 @@
+* SPICE3 file created from dec_cell3_2r1w.ext - technology: sky130A
+
+.option scale=10000u
+
+.subckt dec_cell3_2r1w A0 B0 C0 A1 B1 C1 A2 B2 C2 OUT2 vdd gnd OUT0 OUT1
+X0 vdd A2 net9 vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X1 vdd net3 OUT1 vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=135 l=15
+X2 net7 B2 net8 gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=100 l=15
+X3 net4 A1 gnd gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=100 l=15
+X4 gnd C0 net1 gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=100 l=15
+X5 net8 A2 net9 gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=100 l=15
+X6 net3 B0 vdd vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X7 OUT2 net9 vdd vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=135 l=15
+X8 OUT0 net6 vdd vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=135 l=15
+X9 net6 C1 net5 gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=100 l=15
+X10 net1 B0 net2 gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=100 l=15
+X11 net5 B1 net4 gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=100 l=15
+X12 OUT0 net6 gnd gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X13 net2 A0 net3 gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=100 l=15
+X14 gnd net3 OUT1 gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X15 vdd C0 net3 vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X16 vdd B1 net6 vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X17 net9 B2 vdd vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X18 OUT2 net9 gnd gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X19 vdd A0 net3 vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X20 net6 A1 vdd vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X21 net6 C1 vdd vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X22 vdd C2 net9 vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X23 gnd C2 net7 gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=100 l=15
+C0 vdd OUT2 0.29fF
+C1 net9 net7 0.03fF
+C2 OUT2 C2 0.02fF
+C3 net3 C1 0.16fF
+C4 A1 C1 0.13fF
+C5 C2 C1 0.06fF
+C6 OUT1 net6 0.10fF
+C7 OUT0 net9 0.01fF
+C8 net6 net3 1.05fF
+C9 B1 net3 0.14fF
+C10 B2 OUT2 0.01fF
+C11 A1 net6 0.01fF
+C12 B1 A1 0.32fF
+C13 vdd net6 0.43fF
+C14 C2 net6 0.08fF
+C15 net8 net9 0.03fF
+C16 B1 A0 0.06fF
+C17 B0 C1 0.06fF
+C18 A2 net3 0.05fF
+C19 A2 A1 0.06fF
+C20 B2 C1 0.08fF
+C21 A2 C2 0.13fF
+C22 B0 B1 0.08fF
+C23 B2 net6 0.03fF
+C24 B2 B1 0.06fF
+C25 OUT2 net6 0.12fF
+C26 A2 B2 0.32fF
+C27 net3 C0 0.08fF
+C28 A1 C0 0.32fF
+C29 A2 OUT2 0.01fF
+C30 net6 C1 0.04fF
+C31 B1 C1 0.32fF
+C32 A0 C0 0.13fF
+C33 OUT0 OUT1 0.32fF
+C34 OUT0 net3 0.02fF
+C35 OUT1 net9 0.10fF
+C36 net3 net9 0.27fF
+C37 OUT0 vdd 0.21fF
+C38 vdd net9 0.33fF
+C39 B1 net6 0.03fF
+C40 A2 C1 0.12fF
+C41 C2 net9 0.38fF
+C42 B0 C0 0.32fF
+C43 A2 net6 0.08fF
+C44 A2 B1 0.08fF
+C45 B2 net9 0.17fF
+C46 OUT0 OUT2 0.21fF
+C47 OUT2 net9 0.32fF
+C48 C0 C1 0.08fF
+C49 net6 C0 0.01fF
+C50 B1 C0 0.13fF
+C51 net9 C1 0.01fF
+C52 OUT1 net3 0.20fF
+C53 vdd OUT1 0.28fF
+C54 OUT0 net6 0.06fF
+C55 A1 net3 0.08fF
+C56 vdd net3 0.33fF
+C57 OUT1 C2 0.01fF
+C58 net6 net9 0.67fF
+C59 C2 net3 0.10fF
+C60 A0 net3 0.09fF
+C61 A1 vdd 0.00fF
+C62 A0 A1 0.08fF
+C63 A0 vdd 0.01fF
+C64 A2 net9 0.13fF
+C65 B0 net3 0.07fF
+C66 B0 A1 0.13fF
+C67 B0 vdd 0.00fF
+C68 B2 OUT1 0.01fF
+C69 B2 net3 0.08fF
+C70 B0 A0 0.32fF
+C71 OUT2 OUT1 0.97fF
+C72 B2 C2 0.32fF
+C73 OUT2 net3 0.12fF
+C74 OUT0 gnd 0.79fF
+C75 OUT1 gnd 0.02fF
+C76 OUT2 gnd 0.01fF
+C77 vdd gnd 3.98fF
+C78 net6 gnd 1.52fF
+C79 net3 gnd 1.67fF
+C80 net9 gnd 0.06fF
+.ends

@@ -238,13 +238,16 @@ class replica_bitcell_array(bitcell_base_array):
             for port in self.right_rbl:
                 self.add_pin_list(self.rbl_bitline_names[port], "INOUT")
         else:
-           
 
             self.bitline_names = self.bitcell_array.bitline_names
-            self.all_bitline_names = [x for sl in (self.bitline_names) for x in sl]
-         
-            self.add_pin_list(self.all_bitline_names, "INOUT")
-
+            for col in range(self.column_size):
+                for port in self.all_ports:
+                    self.all_bitline_names.append(self.bitline_names[port][col])
+            for bl_name in self.all_bitline_names:
+                if bl_name.startswith("rbl"):
+                    self.add_pin(bl_name, "INOUT")
+                else:
+                    self.add_pin(bl_name, "INPUT")
 
     def add_wordline_pins(self):
 
@@ -280,10 +283,11 @@ class replica_bitcell_array(bitcell_base_array):
         else:
 
             self.wordline_names = self.bitcell_array.wordline_names
-            self.all_wordline_names = self.bitcell_array.all_wordline_names
+            for row in range(self.row_size):
+                for port in range(OPTS.num_all_ports):
+                    self.all_wordline_names.append(self.wordline_names[port][row])
             self.add_pin_list(self.all_wordline_names, "INPUT")
         
-                
     def create_instances(self):
         """ Create the module instances used in this design """
         if OPTS.RF_mode == False:
@@ -340,7 +344,7 @@ class replica_bitcell_array(bitcell_base_array):
 
         # Main array
             self.bitcell_array_inst=self.add_inst(name="bitcell_array",
-                                                    mod=self.bitcell_array)                                        
+                                                    mod=self.bitcell_array)
             self.connect_inst(self.all_bitline_names + self.all_wordline_names + self.supplies)
 
     def create_layout(self):

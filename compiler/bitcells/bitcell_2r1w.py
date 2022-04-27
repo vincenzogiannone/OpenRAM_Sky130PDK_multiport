@@ -81,6 +81,7 @@ class bitcell_2r1w(bitcell_base.bitcell_base):
     def build_graph(self, graph, inst_name, port_nets):
         """Adds edges to graph. Multiport bitcell timing graph is too complex
            to use the add_graph_edges function."""
+        print(self.get_original_pin_names())
         pin_dict = {pin: port for pin, port in zip(self.get_original_pin_names(), port_nets)}
         # Edges hardcoded here. Essentially wl->bl/br for both ports.
         # Port 0 edges

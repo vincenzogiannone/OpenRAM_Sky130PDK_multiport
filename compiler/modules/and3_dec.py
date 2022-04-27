@@ -86,19 +86,28 @@ class and3_dec(design.design):
 
     def route_supply_rails(self):
         """ Add vdd/gnd rails to the top, (middle), and bottom. """
-        if OPTS.tech_name == "sky130":
-            for name in ["vdd", "gnd"]:
-                for inst in [self.nand_inst, self.inv_inst]:
-                    self.copy_layout_pin(inst, name)
-        else:
-            self.add_layout_pin_rect_center(text="gnd",
+        # if OPTS.tech_name == "sky130":
+        #     for name in ["vdd", "gnd"]:
+        #         for inst in [self.nand_inst, self.inv_inst]:
+        #             self.copy_layout_pin(inst, name)
+        # else:
+        #     self.add_layout_pin_rect_center(text="gnd",
+        #                                     layer=self.route_layer,
+        #                                     offset=vector(0.5 * self.width, 0),
+        #                                     width=self.width)
+        #     self.add_layout_pin_rect_center(text="vdd",
+        #                                     layer=self.route_layer,
+        #                                     offset=vector(0.5 * self.width, self.height),
+        #                                     width=self.width)
+
+        self.add_layout_pin_rect_center(text="gnd",
                                             layer=self.route_layer,
                                             offset=vector(0.5 * self.width, 0),
                                             width=self.width)
-            self.add_layout_pin_rect_center(text="vdd",
-                                            layer=self.route_layer,
-                                            offset=vector(0.5 * self.width, self.height),
-                                            width=self.width)
+        self.add_layout_pin_rect_center(text="vdd",
+                                        layer=self.route_layer,
+                                        offset=vector(0.5 * self.width, self.height),
+                                        width=self.width)
 
     def add_wires(self):
         # nand Z to inv A

@@ -247,26 +247,33 @@ class precharge_multiport(design.design):
         Adds both bit-line and bit-line-bar to the module
         """
         layer_pitch = getattr(self, "{}_pitch".format(self.bitline_layer))
-
         # adds the RBL0
         self.rbl0_xoffset = layer_pitch
-        top_pos = vector(self.rbl0_xoffset, self.height)
-        pin_pos = vector(self.rbl0_xoffset, 0)
-        self.add_path(self.bitline_layer, [top_pos, pin_pos])
-        self.rbl0_pin = self.add_layout_pin_segment_center(text="rbl0",
-                                                         layer=self.bitline_layer,
-                                                         start=pin_pos,
-                                                         end=top_pos)
+        top_pos = vector(0.96 + 0.07, self.height)
+        pin_pos = vector(0.96 + 0.07, 0.07)
+        mid1_pos = vector(0.96 + 0.07, self.height - 0.18)
+        mid2_pos = vector(self.rbl0_xoffset, self.height - 0.18)
+        mid3_pos = vector(self.rbl0_xoffset, 0.18)
+        mid4_pos = vector(0.96 + 0.07, 0.18) 
+        self.add_path(self.bitline_layer, [top_pos, mid1_pos, mid2_pos, pin_pos])
+        self.rbl0_pin = self.add_layout_pin(text="rbl0",
+                                            layer=self.bitline_layer,
+                                            offset=vector(0.96, 0),
+                                            height=0.14)
 
         # adds the RBL1
         self.rbl1_xoffset = 2.73
-        top_pos = vector(self.rbl1_xoffset, self.height)
-        pin_pos = vector(self.rbl1_xoffset, 0)
-        self.add_path(self.bitline_layer, [top_pos, pin_pos])
-        self.rbl1_pin = self.add_layout_pin_segment_center(text="rbl1",
-                                                         layer=self.bitline_layer,
-                                                         start=pin_pos,
-                                                         end=top_pos)
+        top_pos = vector(0.96 + 1.12 + 0.14, self.height)
+        pin_pos = vector(0.96 + 1.12 + 0.14, 0.07)
+        mid1_pos = vector(0.96 + 1.12 + 0.14, self.height - 0.18)
+        mid2_pos = vector(self.rbl1_xoffset, self.height - 0.18)
+        mid3_pos = vector(self.rbl1_xoffset, 0.18)
+        mid4_pos = vector(0.96 + 1.12 + 0.14, 0.18) 
+        self.add_path(self.bitline_layer, [top_pos, mid1_pos, mid2_pos, pin_pos])
+        self.rbl1_pin = self.add_layout_pin(text="rbl1",
+                                            layer=self.bitline_layer,
+                                            offset=vector(0.96 + 1.12 + 0.14, 0),
+                                            height=0.14)
 
     def connect_to_bitlines(self):
         """
@@ -312,5 +319,5 @@ class precharge_multiport(design.design):
 
         self.add_path(self.bitline_layer,
                       [left_pos, right_pos],
-                      width=pmos_pin.height())
+                      width= 0.14)
 

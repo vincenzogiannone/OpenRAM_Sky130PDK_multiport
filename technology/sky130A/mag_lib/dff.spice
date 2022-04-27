@@ -1,0 +1,75 @@
+* SPICE3 file created from dff.ext - technology: sky130A
+
+.option scale=10000u
+
+.subckt dff clk vdd gnd D Q
+X0 net8 clk net6 vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=135 l=15
+X1 vdd net7 net8 vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=135 l=15
+X2 gnd clk clkb gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X3 vdd net3 net4 vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=135 l=15
+X4 net3 net2 vdd vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=135 l=15
+X5 net2 clk net1 vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=135 l=15
+X6 net4 clkb net2 vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=135 l=15
+X7 net7 net6 gnd gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X8 gnd net3 net5 gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X9 net9 clkb net6 gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X10 net1 D vdd vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=135 l=15
+X11 net2 clkb net1 gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X12 net3 net2 gnd gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X13 gnd net7 net9 gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X14 Q net7 gnd gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X15 net7 net6 vdd vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=135 l=15
+X16 net5 clk net2 gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X17 net6 clk net3 gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X18 Q net7 vdd vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=135 l=15
+X19 vdd clk clkb vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=135 l=15
+X20 net6 clkb net3 vdd sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=135 l=15
+X21 net1 D gnd gnd sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+C0 net6 net2 0.05fF
+C1 vdd net2 0.13fF
+C2 D vdd 0.00fF
+C3 Q clkb 0.01fF
+C4 net5 clk 0.02fF
+C5 net7 net2 0.03fF
+C6 net1 net3 0.04fF
+C7 clk net6 0.30fF
+C8 vdd clk 0.05fF
+C9 clk net7 0.12fF
+C10 vdd net6 0.15fF
+C11 clkb net3 0.37fF
+C12 net7 net6 0.45fF
+C13 vdd net7 0.43fF
+C14 Q clk 0.01fF
+C15 net3 net2 0.40fF
+C16 Q net6 0.01fF
+C17 D net3 0.03fF
+C18 Q vdd 0.22fF
+C19 clk net3 0.30fF
+C20 net1 clkb 0.31fF
+C21 Q net7 0.22fF
+C22 net3 net6 0.33fF
+C23 vdd net3 0.33fF
+C24 net7 net3 0.04fF
+C25 net1 net2 0.33fF
+C26 D net1 0.06fF
+C27 clkb net2 0.40fF
+C28 net1 clk 0.16fF
+C29 D clkb 0.21fF
+C30 vdd net1 0.21fF
+C31 clkb clk 1.34fF
+C32 clkb net6 0.27fF
+C33 vdd clkb 0.22fF
+C34 D net2 0.02fF
+C35 clkb net7 0.09fF
+C36 clk net2 0.34fF
+C37 D clk 0.36fF
+C38 Q gnd 0.59fF
+C39 clk gnd 1.12fF
+C40 vdd gnd 2.92fF
+C41 net1 gnd 0.22fF
+C42 net6 gnd 0.59fF
+C43 net7 gnd 0.64fF
+C44 net2 gnd 0.59fF
+C45 net3 gnd 0.51fF
+C46 clkb gnd 0.86fF
+.ends

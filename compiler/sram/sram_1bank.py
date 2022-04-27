@@ -147,12 +147,12 @@ class sram_1bank(sram_base):
                 y_offset = self.bank.predecoder_bottom
                 self.row_addr_pos[port] = vector(x_offset, y_offset)
                 self.row_addr_dff_insts[port].place(self.row_addr_pos[port], mirror="XY")
-        elif OPTS.num_r_ports == 2 and OPTS.num_w_ports == 1:
-            port = 0
-            x_offset = self.control_logic_insts.rx() - self.row_addr_dff_insts.width
-            y_offset = self.bank.predecoder_bottom + 2*self.m2_pitch
-            self.row_addr_pos = vector(x_offset, y_offset)
-            self.row_addr_dff_insts.place(self.row_addr_pos)
+        else:
+            for port in range(OPTS.num_all_ports):
+                x_offset = self.control_logic_insts.rx() - self.row_addr_dff_insts[0].width
+                y_offset = self.bank.predecoder_bottom + (port + 1) * 10 * self.m2_pitch + port * self.row_addr_dff_insts[port].height
+                self.row_addr_pos = vector(x_offset, y_offset)
+                self.row_addr_dff_insts[port].place(self.row_addr_pos)
 
     def place_control(self):
         if OPTS.RF_mode == False:
@@ -410,14 +410,23 @@ class sram_1bank(sram_base):
             for bit in range(self.col_addr_size):
                 self.add_io_pin(self.col_addr_dff_insts[-1],
                                 "din_{}".format(bit),
-                                "addr{0}".format(bit),
+                                "addr_{0}".format(bit),
                                 start_layer=pin_layer)
-
-            for bit in range(self.row_addr_size):
-                self.add_io_pin(self.row_addr_dff_insts,
-                                "din_{}".format(bit),
-                                "addr{0}[{1}]".format(port, bit + self.col_addr_size),
-                                start_layer=pin_layer)
+            for port in range(OPTS.num_r_ports):
+                for bit in range(self.row_addr_size):
+                    self.add_io_pin(self.row_addr_dff_insts[port],
+                                    "din_{}".format(bit),
+                                    "read_addr{0}_{1}".format(port, bit + self.col_addr_size),
+                                    start_layer=pin_layer)
+            
+            for port in range(OPTS.num_w_ports):
+                for bit in range(self.row_addr_size):
+                    self.add_io_pin(self.row_addr_dff_insts[port],
+                                    "din_{}".format(bit),
+                                    "write_addr{0}_{1}".format(port, bit + self.col_addr_size),
+                                    start_layer=pin_layer)
+                                    
+                                    
 
             if self.write_size:
                 for bit in range(self.num_wmasks):
@@ -549,7 +558,7 @@ class sram_1bank(sram_base):
             if self.col_addr_size > 0:
                 dff_names = ["dout_{}".format(x) for x in range(self.col_addr_size)]
                 dff_pins = [self.col_addr_dff_insts.get_pin(x) for x in dff_names]
-                bank_names = ["addr{0}".format(x) for x in range(self.col_addr_size)]
+                bank_names = ["addr_{0}".format(x) for x in range(self.col_addr_size)]
                 bank_pins = [self.bank_inst.get_pin(x) for x in bank_names]
                 route_map.extend(list(zip(bank_pins, dff_pins)))
             if len(route_map) > 0:
@@ -748,27 +757,27 @@ class sram_1bank(sram_base):
             # This is the actual input to the SRAM
             control_clk_buf_pin = self.control_logic_insts.get_pin("clk_buf")
             control_clk_buf_pos = control_clk_buf_pin.center()
+            for port in range(OPTS.num_all_ports):
             # Connect all of these clock pins to the clock in the central bus
             # This is something like a "spine" clock distribution. The two spines
             # are clk_buf and clk_buf_bar
             # This uses a metal2 track to the right (for port0) of the control/row addr DFF
             # to route vertically. For port1, it is to the left.
-            row_addr_clk_pin = self.row_addr_dff_insts.get_pin("clk")
-            control_clk_buf_pos = control_clk_buf_pin.lc()
-            row_addr_clk_pos = row_addr_clk_pin.lc()
-            mid1_pos = vector(self.row_addr_dff_insts.lx() - self.m2_pitch,
-                              row_addr_clk_pos.y)
+                row_addr_clk_pin = self.row_addr_dff_insts[port].get_pin("clk")
+                control_clk_buf_pos = control_clk_buf_pin.lc()
+                row_addr_clk_pos = row_addr_clk_pin.lc()
+                mid1_pos = vector(self.row_addr_dff_insts[port].lx() - self.m2_pitch,
+                                  row_addr_clk_pos.y)
 
             # This is the steiner point where the net branches out
-            clk_steiner_pos = vector(mid1_pos.x, control_clk_buf_pos.y)
-            self.add_path(control_clk_buf_pin.layer, [control_clk_buf_pos, clk_steiner_pos])
-            self.add_via_stack_center(from_layer=control_clk_buf_pin.layer,
-                                      to_layer="m2",
-                                      offset=clk_steiner_pos)
-
+                clk_steiner_pos = vector(mid1_pos.x, control_clk_buf_pos.y)
+                #self.add_path(control_clk_buf_pin.layer, [control_clk_buf_pos, clk_steiner_pos])
+                self.add_via_stack_center(from_layer=control_clk_buf_pin.layer,
+                                          to_layer="m2",
+                                          offset=clk_steiner_pos)
             # Note, the via to the control logic is taken care of above
-            self.add_wire(self.m2_stack[::-1],
-                          [row_addr_clk_pos, mid1_pos, clk_steiner_pos])
+                self.add_wire(self.m2_stack[::-1],
+                              [row_addr_clk_pos, mid1_pos, clk_steiner_pos])
 
             if self.col_addr_dff:
                 dff_clk_pin = self.col_addr_dff_insts[-1].get_pin("clk")
@@ -846,22 +855,44 @@ class sram_1bank(sram_base):
                                               offset=mid_pos)
                     self.add_path(bank_pin.layer, [mid_pos, bank_pos])
         else:
-            for bit in range(self.row_addr_size):
-                    flop_name = "dout_{}".format(bit)
-                    bank_name = "addr{0}".format(bit + self.col_addr_size)
-                    flop_pin = self.row_addr_dff_insts.get_pin(flop_name)
-                    bank_pin = self.bank_inst.get_pin(bank_name)
-                    flop_pos = flop_pin.center()
-                    bank_pos = bank_pin.center()
-                    mid_pos = vector(bank_pos.x, flop_pos.y)
-                    self.add_via_stack_center(from_layer=flop_pin.layer,
-                                              to_layer="m3",
-                                              offset=flop_pos)
-                    self.add_path("m3", [flop_pos, mid_pos])
-                    self.add_via_stack_center(from_layer=bank_pin.layer,
-                                              to_layer="m3",
-                                              offset=mid_pos)
-                    self.add_path(bank_pin.layer, [mid_pos, bank_pos])
+            for port in range(OPTS.num_r_ports):
+                for bit in range(self.row_addr_size):
+                        flop_name = "dout_{}".format(bit)
+                        bank_name = "read_addr{}_{}".format(port, bit + self.col_addr_size)
+                        flop_pin = self.row_addr_dff_insts[port].get_pin(flop_name)
+                        bank_pin = self.bank_inst.get_pin(bank_name)
+                        if port == 1:
+                            flop_pos = flop_pin.center()
+                            bank_pos = bank_pin.center()
+                        else:
+                            flop_pos = flop_pin.center() + vector(0, bit * self.dff.height)
+                            bank_pos = bank_pin.center() + vector(0, bit * self.dff.height)
+                        mid_pos = vector(bank_pos.x, flop_pos.y)
+                        self.add_via_stack_center(from_layer=flop_pin.layer,
+                                                  to_layer="m3",
+                                                  offset=flop_pos)
+                        self.add_path("m3", [flop_pos, mid_pos])
+                        self.add_via_stack_center(from_layer=bank_pin.layer,
+                                                  to_layer="m3",
+                                                  offset=mid_pos)
+                        self.add_path(bank_pin.layer, [mid_pos, bank_pos])
+            for port in range(OPTS.num_w_ports):
+                for bit in range(self.row_addr_size):
+                        flop_name = "dout_{}".format(bit)
+                        bank_name = "write_addr{}_{}".format(port, bit + self.col_addr_size)
+                        flop_pin = self.row_addr_dff_insts[port+OPTS.num_r_ports].get_pin(flop_name)
+                        bank_pin = self.bank_inst.get_pin(bank_name)
+                        flop_pos = flop_pin.center()
+                        bank_pos = bank_pin.center()
+                        mid_pos = vector(bank_pos.x, flop_pos.y)
+                        self.add_via_stack_center(from_layer=flop_pin.layer,
+                                                  to_layer="m3",
+                                                  offset=flop_pos)
+                        self.add_path("m3", [flop_pos, mid_pos])
+                        self.add_via_stack_center(from_layer=bank_pin.layer,
+                                                  to_layer="m3",
+                                                  offset=mid_pos)
+                        self.add_path(bank_pin.layer, [mid_pos, bank_pos])
 
     def add_lvs_correspondence_points(self):
         """
@@ -910,7 +941,8 @@ class sram_1bank(sram_base):
                 for inst in self.col_addr_dff_insts:
                     self.graph_inst_exclude.add(inst)
         else:
-            self.graph_inst_exclude.add(self.row_addr_dff_insts)
+            for inst in self.row_addr_dff_insts:
+                self.graph_inst_exclude.add(inst)
             if self.col_addr_dff:
                 self.graph_inst_exclude.add(self.col_addr_dff_insts[-1])            
 

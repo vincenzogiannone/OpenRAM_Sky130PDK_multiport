@@ -95,9 +95,13 @@ class sram_base(design, verilog, lef):
         else:
             for bit in range(self.word_size + self.num_spare_cols):
                 for port in range(OPTS.num_w_ports):
-                    self.add_pin("din{0}[{1}]".format(port, bit), "INPUT")
-            for bit in range(self.addr_size):
-                self.add_pin("addr[{}]".format(bit), "INPUT")
+                    self.add_pin("din{0}_{1}".format(port, bit), "INPUT")
+            for port in range(OPTS.num_r_ports):
+                for bit in range(self.addr_size):
+                    self.add_pin("read_addr{}_{}".format(port, bit), "INPUT")
+            for port in range(OPTS.num_w_ports):
+                for bit in range(self.addr_size):
+                    self.add_pin("write_addr{}_{}".format(port, bit), "INPUT")
             self.control_logic_inputs = []
             self.control_logic_outputs = []
             self.control_logic_inputs.extend(self.control_logic_multiport.get_inputs())
@@ -116,8 +120,7 @@ class sram_base(design, verilog, lef):
                                 self.add_pin("spare_wen{0}[{1}]".format(port, bit), "INPUT")
             for bit in range(self.word_size + self.num_spare_cols):
                 for port in range(OPTS.num_r_ports):
-                    self.add_pin("dout{0}[{1}]".format(port, bit), "OUTPUT")                    
-            
+                    self.add_pin("dout{0}_{1}".format(port, bit), "OUTPUT")
         # Standard supply and ground names
         try:
             self.vdd_name = spice["power"]
@@ -487,21 +490,27 @@ class sram_base(design, verilog, lef):
                     continue
                 if signal=="clk":
                     pins_to_route.append("{0}".format(signal))
+                else:
+                    pins_to_route.append("{0}".format(signal))
 
             for bit in range(self.word_size + self.num_spare_cols):
                 for port in range(OPTS.num_w_ports):
                     pins_to_route.append("din{0}[{1}]".format(port, bit))
 
             for bit in range(self.word_size + self.num_spare_cols):
-                for port in range(OPTS.num_w_ports):
+                for port in range(OPTS.num_r_ports):
                     pins_to_route.append("dout{0}[{1}]".format(port, bit))
 
             for bit in range(self.col_addr_size):
-                pins_to_route.append("addr{0}".format(bit))
-
-            for bit in range(self.row_addr_size):
-                for port in range(1,2):
-                    pins_to_route.append("addr{0}[{1}]".format(port, bit + self.col_addr_size))
+                pins_to_route.append("addr_{0}".format(bit))
+                
+            for port in range(OPTS.num_r_ports):
+                for bit in range(self.row_addr_size):
+                    pins_to_route.append("read_addr{}_{}".format(port, bit + self.col_addr_size))
+                    
+            #for port in range(OPTS.num_w_ports):
+             #   for bit in range(self.row_addr_size):
+              #      pins_to_route.append("write_addr{}_{}".format(port, bit + self.col_addr_size))
 
             if self.write_size:
                 for bit in range(self.num_wmasks):
@@ -515,6 +524,7 @@ class sram_base(design, verilog, lef):
                     for bit in range(self.num_spare_cols):
                         for port in range(OPTS.num_w_ports):
                             pins_to_route.append("spare_wen{0}[{1}]".format(port, bit))
+                            
 
         from signal_escape_router import signal_escape_router as router
         rtr=router(layers=self.m3_stack,
@@ -684,7 +694,7 @@ class sram_base(design, verilog, lef):
         if OPTS.RF_mode == False:
             self.row_addr_dff = factory.create("dff_array", module_name="row_addr_dff", rows=self.row_addr_size, columns=1)
         else:
-            self.row_addr_dff = factory.create("dff_array", module_name="row_addr_dff", rows=self.row_addr_size + round(log(OPTS.num_all_ports,2)), columns=1)
+            self.row_addr_dff = factory.create("dff_array", module_name="row_addr_dff", rows=self.row_addr_size, columns=1)
         self.add_mod(self.row_addr_dff)
         
         if self.col_addr_size > 0:
@@ -794,9 +804,13 @@ class sram_base(design, verilog, lef):
                     temp.append("dout{0}_{1}".format(port, bit))
             for bit in range(self.word_size + self.num_spare_cols):
                 for port in range(OPTS.num_w_ports):
-                    temp.append("bank_din{0}_{1}".format(port, bit))
-            for bit in range(self.addr_size):
-                temp.append("a{}".format(bit))
+                    temp.append("din{0}_{1}".format(port, bit))
+            for port in range(OPTS.num_r_ports):
+                for bit in range(self.addr_size):
+                    temp.append("read_addr{}_{}".format(port, bit))
+            for port in range(OPTS.num_w_ports):
+                for bit in range(self.addr_size):
+                    temp.append("write_addr{}_{}".format(port, bit))
             if(self.num_banks > 1):
                 for port in self.all_ports:
                     temp.append("bank_sel{0}_{1}".format(port, bank_num))
@@ -859,16 +873,27 @@ class sram_base(design, verilog, lef):
                 self.connect_inst(inputs + outputs + ["clk_buf{}".format(port)] + self.ext_supplies)
             return insts
         else:
-            insts.append(self.add_inst(name="row_address",
-                                           mod=self.row_addr_dff))
+            for port in range(OPTS.num_r_ports):
+                insts.append(self.add_inst(name="read_row_address{}".format(port),
+                                               mod=self.row_addr_dff))
             # inputs, outputs/output/bar
-            inputs = []
-            outputs = []
-            for bit in range(self.row_addr_size+round(log(OPTS.num_all_ports,2))):
-                    inputs.append("addr{}".format(bit + self.col_addr_size))
-                    outputs.append("a{}".format(bit + self.col_addr_size))
-            self.connect_inst(inputs + outputs + ["clk_buf"] + self.ext_supplies)
-            return insts[-1]
+                inputs = []
+                outputs = []
+                for bit in range(self.row_addr_size):
+                        inputs.append("read_addr{}_{}".format(port, bit + self.col_addr_size))
+                        outputs.append("read_addr{}_{}".format(port, bit + self.col_addr_size))
+                self.connect_inst(inputs + outputs + ["clk_buf"] + self.ext_supplies)
+            for port in range(OPTS.num_w_ports):
+                insts.append(self.add_inst(name="write_row_address{}".format(port),
+                                               mod=self.row_addr_dff))
+            # inputs, outputs/output/bar
+                inputs = []
+                outputs = []
+                for bit in range(self.row_addr_size):
+                        inputs.append("write_addr{}_{}".format(port, bit + self.col_addr_size))
+                        outputs.append("write_addr{}_{}".format(port, bit + self.col_addr_size))
+                self.connect_inst(inputs + outputs + ["clk_buf"] + self.ext_supplies)
+            return insts
 
     def create_col_addr_dff(self):
         """ Add and place all address flops for the column decoder """
@@ -892,8 +917,8 @@ class sram_base(design, verilog, lef):
             inputs = []
             outputs = []
             for bit in range(self.col_addr_size):
-                inputs.append("addr{}".format(bit))
-                outputs.append("a{}".format(bit))
+                inputs.append("addr_{}".format(bit))
+                outputs.append("addr_{}".format(bit))
             self.connect_inst(inputs + outputs + ["clk_buf"] + self.ext_supplies)
                 
           
@@ -1013,8 +1038,8 @@ class sram_base(design, verilog, lef):
             return ctrl_insts
         else:
             ctrl_inst=self.add_inst(name="control", mod=self.control_logic_multiport)
-            temp = ["csb"]
-            temp.append("web")
+            temp = ["web"]
+            temp.append("csb")
             temp.append("clk")
             temp.append("w_en")
             temp.append("p_en_bar")

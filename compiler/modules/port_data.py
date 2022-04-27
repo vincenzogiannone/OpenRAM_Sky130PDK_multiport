@@ -78,10 +78,10 @@ class port_data(design.design):
         return self.precharge.get_br_names()
         
     def get_rbl_name(self, port=0):
-        return "rbl_{}".format(port)
+        return "rbl{}".format(port)
 
     def get_wbl_name(self, port=0):
-        return "wbl_{}".format(port)    
+        return "wbl{}".format(port)    
 
     def get_bl_name(self, port=0):
         return "bl_{}".format(port)
@@ -159,19 +159,20 @@ class port_data(design.design):
                 for bit in range(self.num_spare_cols):
                     self.add_pin("bank_spare_wen{}".format(bit), "INPUT")
         else:
+            temp=[]
             for bit in range(self.num_cols):
                 for port in range(OPTS.num_r_ports):
-                    self.add_pin("rbl_{0}_{1}".format(port, bit), "INOUT")
+                    self.add_pin("rbl{0}_{1}".format(port, bit), "INOUT")
                 for port in range(OPTS.num_w_ports):
-                    self.add_pin("wbl_{0}_{1}".format(port, bit), "INPUT")
+                    self.add_pin("wbl{0}_{1}".format(port, bit), "INPUT")
             for bit in range(self.num_spare_cols):
                 for port in range(OPTS.num_r_ports):
-                    self.add_pin("spare_rbl_{0}_{1}".format(port, bit), "INOUT")
+                    self.add_pin("spare_rbl{0}_{1}".format(port, bit), "INOUT")
                 for port in range(OPTS.num_w_ports):
-                    self.add_pin("spare_wbl_{0}_{1}".format(port, bit), "INPUT")
+                    self.add_pin("spare_wbl{0}_{1}".format(port, bit), "INPUT")
             for bit in range(self.word_size + self.num_spare_cols):
                 for x in range(OPTS.num_r_ports):
-                    self.add_pin("dout_{0}_{1}".format(x, bit), "OUTPUT")
+                    self.add_pin("dout{0}_{1}".format(x, bit), "OUTPUT")
             for bit in range(self.word_size + self.num_spare_cols):
                 for x in range(OPTS.num_w_ports):
                     self.add_pin("din{0}_{1}".format(x, bit), "INPUT")
@@ -270,7 +271,7 @@ class port_data(design.design):
         else:
             self.precharge_array = factory.create(module_type="precharge_array_multiport",
                                                   columns=self.num_cols + self.num_spare_cols + 1,
-                                                  offsets=precharge_bit_offsets,
+                                                  offsets=None,
                                                   bitcell_rbl0=self.rbl_names[0],
                                                   bitcell_rbl1=self.rbl_names[1],
                                                   column_offset=0)             
@@ -414,8 +415,8 @@ class port_data(design.design):
                     temp.append("rbl{0}_{1}".format(port, bit))  
 
             for bit in range(self.num_spare_cols):
-                temp.append("sparebl_{0}".format(bit))
-                temp.append("sparebr_{0}".format(bit))
+                for port in range(OPTS.num_r_ports):
+                    temp.append("sparerbl{0}_{1}".format(port, bit))
             temp.extend(["p_en_bar", "vdd"])
             self.connect_inst(temp) 
 
@@ -443,9 +444,9 @@ class port_data(design.design):
                 temp.append("sel_{}".format(word))
             for bit in range(self.word_size):
                 for port in range(OPTS.num_r_ports):
-                    temp.append("rbl_out{0}_{1}".format(port, bit))
+                    temp.append("rbl{0}_out_{1}".format(port, bit))
                 for port in range(OPTS.num_w_ports):
-                    temp.append("wbl_out{0}_{1}".format(port, bit))
+                    temp.append("wbl{0}_out_{1}".format(port, bit))
         else:
             for col in range(self.num_cols):
                 temp.append("bl_{0}".format(col))
@@ -491,16 +492,14 @@ class port_data(design.design):
                                                       mod=self.sense_amp_array)
 
             for bit in range(self.word_size):
-                temp.append("dout_{}".format(bit))
-                if self.words_per_row == 1:
-                    temp.append("rbl_{0}".format(bit))
-                else:
-                    temp.append("rbl_out_{0}".format(bit))
+                for port in range(OPTS.num_r_ports):
+                    temp.append("dout{0}_{1}".format(port, bit))
+                    temp.append("rbl{0}_{1}".format(port, bit))
 
             for bit in range(self.num_spare_cols):
-                temp.append("dout_{}".format(self.word_size + bit))
-                temp.append("sparebl_{0}".format(bit))
-        
+                for port in range(OPTS.num_r_ports):
+                    temp.append("dout{}_{}".format(port, self.word_size + bit))
+                    temp.append("sparerbl{}_{}".format(port, bit))
         temp.extend(["vdd", "gnd"])
         self.connect_inst(temp)
 
@@ -548,15 +547,16 @@ class port_data(design.design):
                                                      mod=self.write_driver_array)
             temp = []
             for bit in range(self.word_size + self.num_spare_cols):
-                temp.append("din_{}".format(bit))
+                for port in range(OPTS.num_w_ports):
+                    temp.append("din{}_{}".format(port, bit))
+            temp.append("w_en")
             for bit in range(self.word_size):
-                if (self.words_per_row == 1):
-                    temp.append("wbl_{0}".format(bit))
-                else:
-                    temp.append("wbl_out_{0}".format(bit))
+                for port in range(OPTS.num_w_ports):
+                    temp.append("wbl{1}_{0}".format(bit, port))
 
             for bit in range(self.num_spare_cols):
-                temp.append("sparewbl_{0}".format(bit))
+                for port in range(OPTS.num_w_ports):
+                    temp.append("sparewbl{1}_{0}".format(bit, port))
 
             if self.write_size is not None:
                 for i in range(self.num_wmasks):
@@ -568,10 +568,7 @@ class port_data(design.design):
                 temp.append("w_en")
                 for i in range(self.num_spare_cols):
                     temp.append("bank_spare_wen{}".format(i))
-            else:
-                temp.append("w_en")
             temp.extend(["vdd", "gnd"])
-
         self.connect_inst(temp)
 
     def place_write_driver_array(self, offset):
@@ -657,7 +654,7 @@ class port_data(design.design):
         else:
             for bit in range(self.word_size + self.num_spare_cols):
                 for x in range(OPTS.num_r_ports):
-                    data_pin = self.sense_amp_array_inst.get_pin("data_{0}".format(bit))
+                    data_pin = self.sense_amp_array_inst.get_pin("data{0}_{1}".format(x, bit))
                     self.add_layout_pin_rect_center(text="dout{0}_{1}".format(x, bit),
                                                     layer=data_pin.layer,
                                                     offset=data_pin.center(),
@@ -674,7 +671,7 @@ class port_data(design.design):
         else:
             for row in range(self.word_size + self.num_spare_cols):
                 for port in range(OPTS.num_w_ports):
-                    data_name = "din_{}".format(row)
+                    data_name = "din{0}_{1}".format(port, row)
                     din_name = "din{0}_{1}".format(port, row)
                     self.copy_layout_pin(self.write_driver_array_inst, data_name, din_name)
     def route_write_mask_and_array_in(self, port):
@@ -936,8 +933,14 @@ class port_data(design.design):
                                              "rbl{0}_{1}".format(port, bit))
                 else:
                     debug.error("Didn't find precharge array.")
-            for bit in range(self.words_per_row):
-                if self.write_driver_array_inst:
+            if self.words_per_row > 1:
+                for bit in range(self.num_cols):
+                    for port in range(OPTS.num_w_ports):
+                        self.copy_layout_pin(self.column_mux_array_inst,
+                                             "wbl{0}_{1}".format(port, bit + bit_offset),
+                                             "wbl{0}_{1}".format(port, bit + bit_offset))
+            else:
+                for bit in range(self.num_cols):
                     for port in range(OPTS.num_w_ports):
                         self.copy_layout_pin(self.write_driver_array_inst,
                                              "wbl{0}_{1}".format(port, bit + bit_offset),
@@ -1223,23 +1226,26 @@ class port_data(design.design):
                     **{'inst': inst_group.rbl1_name,
                        'bit': inst_group.start_bit + bit}
                 )
-                #print(inst_group.inst.get_pin(full_rbl0_name),
-                #        inst_group.inst.get_pin(full_rbl1_name))
                 return (inst_group.inst.get_pin(full_rbl0_name),
                         inst_group.inst.get_pin(full_rbl1_name)) 
-            elif "write_driver_array" in str(inst_group):      
+            elif "write_driver" in str(inst_group):      
                 full_wbl_name = inst_group.bls_template.format(
                     **{'inst': inst_group.wbl_name,
                        'bit': inst_group.start_bit + bit}
                 )
                 #print(inst_group.inst.get_pin(full_wbl_name))  
                 return (inst_group.inst.get_pin(full_wbl_name)) 
-            elif "sense_amp" in str(inst_group):
-                full_rbl_name = inst_group.bls_template.format(
-                    **{'inst': inst_group.rbl_name,
+            elif "sense_amp_array" in str(inst_group):
+                full_rbl0_name = inst_group.bls_template.format(
+                    **{'inst': inst_group.rbl_name[0],
                        'bit': inst_group.start_bit + bit}
-                ) 
-                return (inst_group.inst.get_pin(full_rbl_name))  
+                )
+                full_rbl1_name = inst_group.bls_template.format(
+                    **{'inst': inst_group.rbl_name[1],
+                       'bit': inst_group.start_bit + bit}
+                )
+                return (inst_group.inst.get_pin(full_rbl0_name),
+                        inst_group.inst.get_pin(full_rbl1_name))  
             if "column_mux_array_multiport" in str(inst_group):
                 full_rbl0_name = inst_group.bls_template.format(
                     **{'inst': inst_group.rbl0_name,
